@@ -1,0 +1,6 @@
+# Versions exercised during extraction on Python 3.12/macOS arm64.
+Pillow==12.3.0
+numpy==2.3.5
+pytest==9.1.1
+setuptools==84.0.0
+wheel==0.48.0

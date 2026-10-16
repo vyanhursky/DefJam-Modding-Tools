@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "source_repository": "https://github.com/vyanhursky/DefJamFFNY-recomp",
+  "source_commit": "f71ab64f62e4f54bf35233c34b26c144bb3008f1",
+  "files": {
+    "scripts/hd_assets.py": "7400019a52ef1ea14b6da6fda6b535f2b341b87fb079d1f26c9a3116b5fc2cf7",
+    "scripts/hd_corpus.py": "937e8166b8933ee1a65eaffcaa7d62a152f699c45ad378a0f2d4f82d301e5527",
+    "scripts/hd_corpus.html": "fab3563b49ae75eb9c34256ce5c06e1455db0bc17a19daa81a1a0224d125bdd2",
+    "config/hd-runtime-aliases.json": "32fcd9212a42bfbef002ae96c6f6047b425f5b84e1fe8891dad76fc883379417"
+  },
+  "notes": "Authoring code extracted with package-relative imports and packaged resource paths. Recomp retains these exact setup-core bytes as a frozen compatibility snapshot. Existing corpus IDs/workspaces are read unchanged; new corpus recipe fingerprints may differ after packaging."
+}

@@ -1,0 +1,17 @@
+Restore fine material detail while preserving the original game's cartoonish,
+painted character, palette, shading and grit. Use the original atlas as the
+composition authority and the faithful enlargement as a readable reference.
+
+Keep every UV island, outline, placement, orientation, mirrored/split inscription
+and boundary. Preserve faces and likeness; specific damaged face details require
+separate owner review. Preserve original tattoo silhouettes, animal shapes/tree
+positions, handwriting paths, spacing and flourishes. Do not substitute a new
+font or composition just because the semantic subject has been identified.
+
+Use references for recognizable tattoos, writing and logos. Flag uncertainty for
+the owner instead of inventing content. Keep alpha/material channels separate.
+No added objects, perspective or lighting. Regional revisions must name their
+parent and precise edit boxes; protect other pixels technically during assembly.
+
+Return a complete flat atlas suitable for UV mapping, with source proportions.
+Every result is a new unapproved draft requiring visual review.

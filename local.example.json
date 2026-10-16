@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "dump": "/path/to/own/extracted-dump",
+  "corpus": "/path/to/existing/corpus",
+  "workspace": "/path/to/existing/texture-workshop",
+  "port": 8768
+}

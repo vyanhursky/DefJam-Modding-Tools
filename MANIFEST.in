@@ -1,0 +1,4 @@
+include provenance.json requirements-tested.txt AGENTS.md CLAUDE.md
+recursive-include docs *.md *.json
+recursive-include prompts *.md *.txt
+recursive-include src/defjam_tools/resources *
