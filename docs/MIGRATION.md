@@ -26,5 +26,5 @@ regression, runtime update, art generation or game data publication was performe
 
 Windows CI initially exposed default-codepage decoding of UTF-8 review JSON.
 All implicit module text reads now specify UTF-8; a simulated cp1252 roundtrip
-checks non-ASCII notes and queued prompts. Linux/Mac initial CI passed; rerun
-Windows after this fix.
+checks non-ASCII notes and queued prompts. Linux/macOS initial CI passed; the fix is covered by the three-platform CI
+regression suite. Source checkouts use LF to keep vendored hashes stable.

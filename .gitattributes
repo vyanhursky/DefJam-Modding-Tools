@@ -1,0 +1,2 @@
+# Source fingerprints and vendored dependency pins must match on every OS.
+* text=auto eol=lf
