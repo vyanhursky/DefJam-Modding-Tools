@@ -21,7 +21,7 @@ def read_profile(path):
     if not path:
         return {}
     path = Path(path).expanduser().resolve()
-    profile = json.loads(path.read_text())
+    profile = json.loads(path.read_text(encoding="utf8"))
     if not isinstance(profile, dict) or profile.get("schema") != 1 or set(profile) - {"schema", "dump", "corpus", "workspace", "port"}:
         raise ValueError("Expected a schema 1 local profile with dump/corpus/workspace/port")
     result = {}

@@ -11,7 +11,7 @@ def receipt(store, fighter):
     if fighter not in FIGHTERS:
         raise ValueError("Unknown preview fighter")
     root = store.root / "models" / fighter
-    data = json.loads((root / "index.json").read_text())
+    data = json.loads((root / "index.json").read_text(encoding="utf8"))
     if data.get("schema") != 1 or data.get("decoder") != 1 or data.get("source_id") != FIGHTERS[fighter][2]:
         raise ValueError("Incompatible model preview; rebuild it with defjam-tools model")
     return root, data
@@ -26,7 +26,7 @@ def catalog(store):
         models.append(dict(id=fighter, **data))
     file = store.root / "model-viewer.json"
     with store.lock:
-        state = json.loads(file.read_text()) if file.exists() else dict(schema=1, views={})
+        state = json.loads(file.read_text(encoding="utf8")) if file.exists() else dict(schema=1, views={})
     return dict(models=models, state=state)
 
 
@@ -49,7 +49,7 @@ def save_view(store, req, atomic_json):
         raise ValueError("Unknown material group")
     with store.lock:
         file = store.root / "model-viewer.json"
-        data = json.loads(file.read_text()) if file.exists() else dict(schema=1, views={})
+        data = json.loads(file.read_text(encoding="utf8")) if file.exists() else dict(schema=1, views={})
         data["views"][fighter] = copy.deepcopy(view)
         data["fighter"] = fighter
         atomic_json(file, data)

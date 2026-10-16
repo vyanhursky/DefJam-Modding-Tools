@@ -130,7 +130,7 @@ def render(root, assets):
         draw.text((x+10,y+174),asset["sample"]+" "+asset["category"],fill="white",font=font)
         draw.text((x+10,y+200),asset["label"][:27],fill="#aab6c6",font=small)
     overview.save(root / "overview.jpg",quality=94)
-    recipes = {model+":"+key: json.loads((root/"jobs"/model/key/"build.json").read_text())["recipe"]
+    recipes = {model+":"+key: json.loads((root/"jobs"/model/key/"build.json").read_text(encoding="utf8"))["recipe"]
                for model in MODELS for key in sorted({group_key(a) for a in assets})}
     fingerprint = dict(originals=[(a["source_id"],a["original_hash"]) for a in assets], recipes=recipes,
                        review_runner=hd.digest(Path(__file__).read_bytes()))

@@ -53,7 +53,7 @@ def generate(root, output, source, checkpoint):
         cuda=torch.version.cuda, device=torch.cuda.get_device_name(0))
     output.mkdir(parents=True, exist_ok=True)
     state_path = output / "build.json"
-    previous = json.loads(state_path.read_text()) if state_path.exists() else {}
+    previous = json.loads(state_path.read_text(encoding="utf8")) if state_path.exists() else {}
     cached = {a["id"]: a for a in previous.get("completed", [])} if previous.get("recipe") == recipe else {}
     completed = []
     torch.set_num_threads(4)

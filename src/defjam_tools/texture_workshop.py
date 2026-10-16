@@ -223,13 +223,13 @@ class Workshop:
         self.file = self.root / "workshop.json"
         if self.file.is_symlink(): raise Invalid("Review store must not be a symlink")
         self.lock = threading.RLock()
-        raw = json.loads((self.corpus_root / "corpus.json").read_text())
+        raw = json.loads((self.corpus_root / "corpus.json").read_text(encoding="utf8"))
         self.corpus_id = raw["corpus_id"]
         self.assets = {a["id"]: dict(a, **metadata(a), browse_categories=classify(a))
                        for a in raw["assets"] if not a.get("error")}
         self.categories = sorted({c for a in self.assets.values() for c in a["browse_categories"]})
         self.aliases = aliases or {}
-        self.data = (json.loads(self.file.read_text()) if self.file.exists() else
+        self.data = (json.loads(self.file.read_text(encoding="utf8")) if self.file.exists() else
                      dict(schema=1, corpus_id=self.corpus_id, reviews={}, candidates={}, requests=[], session={}))
         if self.data.get("schema") != 1 or self.data.get("corpus_id") != self.corpus_id:
             raise Invalid("This workspace belongs to another corpus. Preserve it and choose a separate workspace")
@@ -582,18 +582,18 @@ def main():
         payload=({"asset":args.asset,"image":base64.b64encode(args.image.read_bytes()).decode(),
                   "label":args.label,"style":args.style,"parent":args.parent,
                   "assembly":assembly,"request_id":args.request_id,
-                  "prompt":args.prompt_file.read_text() if args.prompt_file else ""} if args.action=="import" else {})
+                  "prompt":args.prompt_file.read_text(encoding="utf8") if args.prompt_file else ""} if args.action=="import" else {})
         request=Request(base+("/api/import" if args.action=="import" else "/api/export-pack"),
                         data=json.dumps(payload).encode(),headers={"Content-Type":"application/json","X-Workshop-Token":config["token"]})
         with urlopen(request,timeout=60) as response: print(response.read().decode())
         return
     if not args.corpus or not args.workspace: ap.error("--corpus and --workspace are required without --server")
-    aliases=json.loads((HERE/"profiles/hd-runtime-aliases.json").read_text())["aliases"]
+    aliases=json.loads((HERE/"profiles/hd-runtime-aliases.json").read_text(encoding="utf8"))["aliases"]
     with WorkspaceLock(args.workspace):
         store=Workshop(args.corpus,args.workspace,aliases)
         if args.action=="import":
             print(json.dumps(store.import_candidate(args.asset,args.image.read_bytes(),args.label,args.style,args.parent,
-                args.prompt_file.read_text() if args.prompt_file else "",assembly,args.request_id),indent=2)); return
+                args.prompt_file.read_text(encoding="utf8") if args.prompt_file else "",assembly,args.request_id),indent=2)); return
         if args.action=="export": print(json.dumps(store.export_pack(),indent=2)); return
         if not 1024<=args.port<=65535: ap.error("Choose a port from 1024 through 65535")
         server=ThreadingHTTPServer(("127.0.0.1",args.port),handler_for(store,secrets.token_urlsafe(32)))

@@ -49,6 +49,19 @@ class WorkshopTests(unittest.TestCase):
         self.assertEqual(reopened.data["session"]["zoom"],"2")
         self.assertEqual(reopened.catalog({"scope":["featured"]})["total"],1)
 
+    def test_utf8_review_and_prompt_survive_a_non_utf8_platform_default(self):
+        original=Path.read_text
+        def windows_default(path,*args,**kwargs):
+            kwargs.setdefault("encoding","cp1252")
+            return original(path,*args,**kwargs)
+        note="Preserve café lettering — do not redraw"
+        self.store.save_review(self.ident,"asset",dict(w.empty_review(),notes=note))
+        queued=self.store.queue_request(self.ident,"faithful","asset",note)
+        with patch.object(Path,"read_text",windows_default):
+            reopened=w.Workshop(self.corpus,self.work)
+            self.assertEqual(reopened.review(self.ident)["notes"],note)
+            self.assertEqual(reopened.data["requests"][0],queued)
+
     def test_conflicting_tab_cannot_overwrite_new_notes(self):
         first=w.empty_review();first["notes"]="Owner note"
         self.store.save_review(self.ident,"asset",first)

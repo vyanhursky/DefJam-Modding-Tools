@@ -336,7 +336,7 @@ def upscale(args):
                   runner_hash=digest(Path(__file__).read_bytes()))
     completed, entries = [], []
     prior_path = out / "build.json"
-    prior = json.loads(prior_path.read_text()) if prior_path.exists() else {}
+    prior = json.loads(prior_path.read_text(encoding="utf8")) if prior_path.exists() else {}
     old = {r["id"]: r for r in prior.get("completed", [])} if prior.get("recipe") == recipe else {}
     for path in inputs[:args.limit]:
         ident = path.stem.lower()
@@ -401,7 +401,7 @@ def batch(args):
     for record in inventory["records"]:
         if "source_id" in record: by_id.setdefault(record["source_id"],[]).append(record)
         if "decoded_id" in record: by_decoded.setdefault(record["decoded_id"],[]).append(record)
-    captured={r["id"]:r for line in (runtime/"textures.jsonl").read_text().splitlines() if (r:=json.loads(line))}
+    captured={r["id"]:r for line in (runtime/"textures.jsonl").read_text(encoding="utf8").splitlines() if (r:=json.loads(line))}
     groups,review={},[]
     for ident,record in captured.items():
         if len(ident)!=64 or any(c not in "0123456789abcdef" for c in ident):

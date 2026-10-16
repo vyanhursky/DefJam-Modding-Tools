@@ -227,7 +227,7 @@ def build(args):
         collect(True)
     if seen != set(by_source) or len(completed) != len(chosen):
         raise ValueError("Incomplete source coverage: " + str(set(by_source)-seen))
-    known = json.loads(args.selection.read_text())["assets"] if args.selection else []
+    known = json.loads(args.selection.read_text(encoding="utf8"))["assets"] if args.selection else []
     labels = {a["source_id"]: a["label"] for a in known}
     assets = []
     for r in completed:
@@ -254,11 +254,11 @@ def build(args):
 def serve(args):
     from PIL import Image
     out = args.output.resolve()
-    corpus = json.loads((out / "corpus.json").read_text())
+    corpus = json.loads((out / "corpus.json").read_text(encoding="utf8"))
     assets = {a["id"]: a for a in corpus["assets"]}
     lock = threading.Lock()
     review_file = out / "reviews.json"
-    reviews = json.loads(review_file.read_text()) if review_file.exists() else dict(schema=1, corpus_id=corpus["corpus_id"], reviews={})
+    reviews = json.loads(review_file.read_text(encoding="utf8")) if review_file.exists() else dict(schema=1, corpus_id=corpus["corpus_id"], reviews={})
     if reviews["corpus_id"] != corpus["corpus_id"]:
         raise ValueError("Existing review belongs to a different corpus; preserve and inspect")
     cache = OrderedDict()

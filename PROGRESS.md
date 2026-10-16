@@ -8,7 +8,7 @@
   instructions, source hygiene and three-platform synthetic CI configured.
 - Live gallery/model viewer now runs from this checkout at 127.0.0.1:8768.
   Existing private corpus, reviews, candidates and model caches stay in place.
-- 55 tests + 12 subtests pass in the final checkout and an independent fresh
+- 56 tests + 12 subtests pass in the final checkout and an independent fresh
   clone. Installed wheel imports/resources/browser preview also pass.
 - Real-workspace compatibility: catalog/details equal, seven GLBs byte-identical
   (three original/faithful pairs plus Trejo v4), selected pack keys/images/channel
@@ -62,3 +62,8 @@ config/hd-tools-core-snapshot.json; deliberately review future synchronization.
 
 Next work is owner art/model review, then targeted Rich Original Detail revisions.
 Run focused tests for changes; keep source and private artwork backups separate.
+
+Windows CI initially exposed default-codepage decoding of UTF-8 review JSON.
+All implicit module text reads now specify UTF-8; a simulated cp1252 roundtrip
+checks non-ASCII notes and queued prompts. Linux/Mac initial CI passed; rerun
+Windows after this fix.
