@@ -2,13 +2,23 @@
 
 ## Current status
 
+- 2026-10-16: owner-approved Trejo v4 color pilot completed. Two new unapproved
+  child drafts: Gentle r-8125b0d8196d4f61 and Source palette r-342bd7dadb964b67.
+  Original v4 and all 11 prior candidate files/records/reviews preserved;
+  13 total candidates, 13 imagegen requests unchanged, zero queued.
+  67 tests +12 subtests pass. Browser Face/Chest, rear/arms, source comparison
+  and studio checks pass; zero console errors. Source palette visibly reduces
+  the neck color break; requires owner review, no game installation/acceptance.
+  Recipe/masks/input/processor hashes and pre-import review backup retained in
+  private experiments/trejo-color-v4-20261016-202427/. No new imagegen call.
+
 - 2026-10-16: verified model viewer source is on origin/main at e938889; all
   three CI platforms passed. Added Face/Pants/Shoe detail camera presets; all
   nine fighter/preset combinations visually checked in the live browser, with
   synchronized framing and saved Nyne shoe view verified after reload.
   56 tests + 12 subtests, JavaScript syntax and source/whitespace checks pass.
   Investigated owner-reported warm body/face seam; see docs/color-preservation.md.
-  Color processing remains a proposed next pilot; all 11 art files unchanged.
+  This investigation led to the subsequent Trejo pilot above.
 
 - Standalone version 0.1.0 established from DefJamFFNY-recomp `f71ab64`.
 - Repository: https://github.com/vyanhursky/DefJam-Modding-Tools (private).
@@ -36,14 +46,18 @@
 - 2026-10-16: Vlad requested Face, Pants and Shoe detail presets and confirmed
   publishing the viewer source. Added body-scaled, aspect-aware synchronized
   crops. Source-side skin/seam correction is proposed for owner review; current
-  pixels and art approvals stay unchanged.
+  pixels and art approvals stayed unchanged at that stage.
+- 2026-10-16: Vlad approved the deterministic Trejo color trial using existing
+  v4 pixels. Retain two strengths as child drafts, keep face/alpha/other materials
+  exact, guard only proven neck UV edges, and preserve all old reviews. Suggest
+  Source palette for visual review; no automatic approval or rollout to others.
 - New art is Rich Original Detail only; older stylized drafts remain history.
   Faces/protected pixels/alpha stay unchanged unless specifically approved.
 
 ## Art review
 
-Blaze, Nyne, Trejo are the pilot; 11 retained drafts, 13 request records,
-0 queued at migration. Trejo A source-guided v4 `r-a74be693951f4617` awaits
+Blaze, Nyne, Trejo are the pilot; 13 retained drafts (11 imagegen, two deterministic
+color trials), 13 imagegen request records, zero queued. Trejo A source-guided v4 `r-a74be693951f4617` awaits
 owner review of tattoo script/stroke paths, animal/tree/buckle placement and
 skin seams. Original script guidance: "Debbie Danielle". Exact exterior/face/alpha
 checks do not establish interior authenticity. No art is automatically approved.
@@ -72,8 +86,16 @@ generated, installed or published. No game runtime/save/installer behavior chang
 The port's frozen core hashes are recorded in provenance.json and in its
 config/hd-tools-core-snapshot.json; deliberately review future synchronization.
 
-Next work is owner art/model review, then a controlled skin-color/seam pilot
-using docs/color-preservation.md and targeted Rich Original Detail revisions.
+Next: compare Trejo color-trial Source palette (r-342bd7dadb964b67) with parent
+v4 (r-a74be693951f4617), Gentle (r-8125b0d8196d4f61) and Faithful HD, using Face/
+Chest presets and unlit RGB. Review/notes still bind to the selected right draft.
+Model tab9 is left v4/right Source palette; the owner's other model tab is intact.
+Private experiment experiments/trejo-color-v4-20261016-202427/ has receipt.json,
+verification.json, import-receipt.json, recipe text, masks and review-backup/.
+No art is approved/selected or installed. Tune after owner feedback, then in-game
+acceptance; extend to Blaze/Nyne only after their mask/seam checks. See
+ docs/color-preservation.md for exact parameters and CLI. Keep source changes in
+this repo; the recomp's frozen HD setup helpers are unchanged.
 Run focused tests for changes; keep source and private artwork backups separate.
 
 Windows CI initially exposed default-codepage decoding of UTF-8 review JSON.
