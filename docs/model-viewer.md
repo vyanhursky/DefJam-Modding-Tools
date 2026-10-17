@@ -17,8 +17,10 @@ original rest pose before choosing a revision for an in-game test.
    the latest Rich Original Detail candidate. Both selectors also offer Faithful
    HD and earlier revisions. Stylized drafts remain labelled as history.
 2. Drag either pane to orbit, scroll to zoom, right-drag to pan. Both cameras
-   follow the same target and position. Front, Back, Fit model, Chest detail and
-   Belt detail provide repeatable starting views.
+   follow the same target and position. Front, Back, Fit model, Face detail,
+   Chest detail, Belt detail, Pants detail and Shoe detail provide repeatable
+   starting views. The new detail crops scale with fighter height and viewport
+   aspect; the shoe view looks slightly downward to show laces and toe details.
 3. Hide material groups to inspect clothing, skin or jewelry separately. Use
    Texture RGB for art review. Studio adds approximate lighting to show surface
    shape; Wireframe reveals the original triangles.
@@ -39,6 +41,9 @@ Save notes commits immediately; switching fighter or right revision also saves
 pending notes first. A browser draft and navigation warning protect other
 unsaved changes. Conflicting edits from another tab are rejected, leaving the
 draft available for merging after reload.
+
+For body/face color mismatches, see the proposed
+[color-preservation workflow](color-preservation.md).
 
 ## Build the private models
 
@@ -132,6 +137,11 @@ changing owner notes. Ten synthetic decoder/export/HTTP/state tests and the
 19 existing gallery tests cover bounds, parity, UVs, embedded images, material
 alpha, checksum refusal, authentication, stale reviews and separate persistence.
 There was no runtime, renderer, save, installer or game modpack change.
+
+Face, Pants and Shoe detail presets were subsequently checked visually on all
+three fighters (nine crops), including synchronized framing and a saved Nyne
+shoe camera after reload. The complete standalone suite passes 56 tests plus
+12 subtests. JavaScript syntax and source hygiene also pass.
 
 Browser dependencies are MIT-licensed Three.js **r180 / 0.180.0**, vendored with
 upstream URLs and SHA-256 values in `src/defjam_tools/resources/vendor/three/provenance.json`. Bare module

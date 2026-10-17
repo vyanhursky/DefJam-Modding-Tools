@@ -63,7 +63,16 @@ function preset(kind){
   let sign=kind==='back'?-1:1;
   if(kind==='chest'){center.set(0,height*.71,1);distance=11;}
   if(kind==='belt'){center.set(0,height*.535,1);distance=8;}
-  v.controls.target.copy(center);v.camera.position.copy(center).add(new THREE.Vector3(0,0,distance*sign));v.controls.update();syncCamera(v);
+  // Body proportions keep these review crops useful across the three fighters.
+  // Fit both dimensions so a narrow viewport does not cut off the shoes.
+  const detail={face:{y:.91,h:.20,w:.18},pants:{y:.30,h:.56,w:.38},shoes:{y:.065,h:.19,w:.36}}[kind];
+  const direction=new THREE.Vector3(0,0,sign);
+  if(detail){
+    center.set((min[0]+max[0])/2,min[1]+height*detail.y,(min[2]+max[2])/2);
+    distance=Math.max(height*detail.h,height*detail.w/v.camera.aspect)/2/Math.tan(THREE.MathUtils.degToRad(v.camera.fov/2))*1.15;
+    if(kind==='shoes')direction.set(0,.22,1).normalize();
+  }
+  v.controls.target.copy(center);v.camera.position.copy(center).add(direction.multiplyScalar(distance));v.controls.update();syncCamera(v);
 }
 async function getTexture(revision){
   const key=state.asset.id+':'+revision;
@@ -160,7 +169,7 @@ async function init(){
     try{if(previous){$('right').value=previous;await saveNotes();}$('right').value=next;await paint(state.views[1]);loadReview();state.reviewRevision=next;}catch(e){$('right').value=previous;error(e);}
   }).catch(error));
   $('lighting').addEventListener('change',()=>Promise.all(state.views.map(paint)).catch(error));$('wireframe').addEventListener('change',updateView);
-  for(const kind of ['front','back','fit','chest','belt'])$(kind).addEventListener('click',()=>preset(kind));
+  for(const kind of ['front','back','fit','face','chest','belt','pants','shoes'])$(kind).addEventListener('click',()=>preset(kind));
   $('hold').addEventListener('pointerdown',e=>{e.preventDefault();$('hold').setPointerCapture(e.pointerId);state.hold=true;paint(state.views[1]).catch(error);});
   for(const name of ['pointerup','pointercancel','lostpointercapture'])$('hold').addEventListener(name,()=>{if(state.hold){state.hold=false;paint(state.views[1]).catch(error);}});
   $('hold').addEventListener('keydown',e=>{if(e.code==='Space'||e.code==='Enter'){e.preventDefault();state.hold=true;paint(state.views[1]).catch(error);}});

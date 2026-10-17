@@ -2,6 +2,14 @@
 
 ## Current status
 
+- 2026-10-16: verified model viewer source is on origin/main at e938889; all
+  three CI platforms passed. Added Face/Pants/Shoe detail camera presets; all
+  nine fighter/preset combinations visually checked in the live browser, with
+  synchronized framing and saved Nyne shoe view verified after reload.
+  56 tests + 12 subtests, JavaScript syntax and source/whitespace checks pass.
+  Investigated owner-reported warm body/face seam; see docs/color-preservation.md.
+  Color processing remains a proposed next pilot; all 11 art files unchanged.
+
 - Standalone version 0.1.0 established from DefJamFFNY-recomp `f71ab64`.
 - Repository: https://github.com/vyanhursky/DefJam-Modding-Tools (private).
 - Local Python package/CLI/resources, prompts, documentation, focused agent
@@ -25,6 +33,10 @@
   HD core remains a frozen byte-identical snapshot. One owner for new core work.
 - Existing private data stays in place. Preserve IDs, hashes, review versions,
   schemas, relative image paths, browser origin and single-writer lock.
+- 2026-10-16: Vlad requested Face, Pants and Shoe detail presets and confirmed
+  publishing the viewer source. Added body-scaled, aspect-aware synchronized
+  crops. Source-side skin/seam correction is proposed for owner review; current
+  pixels and art approvals stay unchanged.
 - New art is Rich Original Detail only; older stylized drafts remain history.
   Faces/protected pixels/alpha stay unchanged unless specifically approved.
 
@@ -60,7 +72,8 @@ generated, installed or published. No game runtime/save/installer behavior chang
 The port's frozen core hashes are recorded in provenance.json and in its
 config/hd-tools-core-snapshot.json; deliberately review future synchronization.
 
-Next work is owner art/model review, then targeted Rich Original Detail revisions.
+Next work is owner art/model review, then a controlled skin-color/seam pilot
+using docs/color-preservation.md and targeted Rich Original Detail revisions.
 Run focused tests for changes; keep source and private artwork backups separate.
 
 Windows CI initially exposed default-codepage decoding of UTF-8 review JSON.
