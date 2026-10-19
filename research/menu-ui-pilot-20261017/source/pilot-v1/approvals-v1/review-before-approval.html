@@ -1,0 +1,100 @@
+<!doctype html><meta charset="utf-8"><title>Def Jam — Menu art pilot</title>
+<style>
+:root{color-scheme:dark;font:15px system-ui;background:#111310;color:#e7e9df}body{max-width:1500px;margin:28px auto;padding:0 24px}h1{font-size:28px}h2{font-size:20px;margin-top:32px}p{max-width:1050px;line-height:1.5;color:#bec3b6}.tag{color:#e4ed99}button,select{font:inherit;background:#252b20;color:#e7e9df;border:1px solid #59634b;border-radius:6px;padding:9px 15px;margin:0 6px 10px 0}button[aria-pressed=true]{background:#d8e592;color:#10140c}img{display:block;width:100%;height:auto;background:#000}.frame{position:relative;background:black;border:1px solid #46503c}.safe{pointer-events:none;position:absolute;top:0;bottom:0;border-inline:2px dashed #dbe890;box-sizing:border-box;display:none}.frame.show .safe{display:block}.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#191d16;padding:14px;border:1px solid #36402e;border-radius:8px}.card img{max-height:600px;object-fit:contain}.caption{font-size:13px;color:#b8bfac;margin:8px 0}.metrics{font-variant-numeric:tabular-nums;color:#e4d19d}a{color:#e4ed99}summary{cursor:pointer}pre{white-space:pre-wrap;max-height:300px;overflow:auto;background:#070907;padding:15px}@media(max-width:750px){.row{grid-template-columns:1fr}}
+
+.study-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.study-card{min-width:0}.study-card strong{display:block;margin:0 0 9px}
+#study-wipe{display:none;position:relative}.study-over{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+.study-divider{position:absolute;left:50%;top:0;bottom:0;border-left:2px solid #e4ed99;pointer-events:none}
+.study-wipe-labels{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;pointer-events:none}
+.study-wipe-labels span{background:#111d;padding:6px 10px;border-radius:4px}
+#study-comparison[data-mode="wipe"] .study-grid{display:none}
+#study-comparison[data-mode="wipe"] #study-wipe{display:block}
+#study-comparison[data-mode="draft"] .study-original-card{display:none}
+#study-comparison[data-mode="draft"] .study-grid{grid-template-columns:1fr}
+#wipe-controls{max-width:650px;margin:12px auto}#study-divider-input{width:100%;accent-color:#d8e592}
+#wipe-controls label{display:block}#study-links a{margin-right:15px}
+@media(max-width:750px){.study-grid{grid-template-columns:1fr}}
+</style>
+<h1>Def Jam · Menu artwork pilot</h1>
+<p class="tag">Restrained cleanup · original palette · centered layout · through32:9</p>
+<p>The isolated skyline v3 is owner-approved artwork. The new background studies below are unapproved. Nothing is installed or presented as a game capture. The approved reference remains available separately below; new title studies combine it with the city and water-tower layers.</p>
+<h2>Next background studies · unapproved</h2>
+<p>New city and water-tower/roof layers, plus the mode-select environment. Original alpha and padding are protected in the restoration trials; generated side alpha needs art review. Title studies omit the shield, title logo and Press Start sticker. Mode-select is an approximate authored idle layout with dark/lit lighting envelopes, without its animated spotlight, selected-mode emblem or menu text.</p>
+<select id="study" aria-label="Background study"><option value="title-layers">Title · skyline + city + water tower</option><option value="title-middle">Title · city over approved skyline</option><option value="title-tower">Title · tower over approved skyline</option><option value="mode-environment">Mode select · dark wall envelope</option><option value="mode-environment-lit">Mode select · lit wall envelope</option></select>
+<select id="study-aspect" aria-label="Study aspect"><option value="32x9">32:9</option><option value="21x9">21:9</option><option value="16x9">16:9</option><option value="16x10">16:10</option><option value="4x3">4:3</option></select>
+<select id="study-view" aria-label="Comparison view"><option value="side">Side by side</option><option value="wipe">Wipe comparison</option><option value="draft">Draft only</option></select>
+<select id="study-framing" aria-label="Comparison framing"><option value="full">Full selected aspect</option><option value="center">Original 4:3 center · close comparison</option></select>
+<button id="study-bounds" aria-pressed="false">Show original 4:3 area</button>
+<p>Left: original native textures, enlarged with linear sampling in the same layer layout. Black side margins mark where the original 4:3 image ends. Right: the current restoration and scenery draft. Choose the4:3 center to compare original detail at the same scale.</p>
+<div id="study-comparison" data-mode="side">
+<div class="study-grid">
+<div class="study-card study-original-card"><strong>Original textures</strong><div class="frame" id="study-original-frame"><img id="study-original" alt="Original native textures in the matching layer layout"><div class="safe" id="study-original-area"></div></div></div>
+<div class="study-card"><strong>Current draft</strong><div class="frame" id="study-frame"><img id="study-image" alt="Current layered background draft"><div class="safe" id="study-area"></div></div></div>
+</div>
+<div class="frame" id="study-wipe"><img id="study-wipe-original" alt="Original textures beneath comparison wipe"><img class="study-over" id="study-wipe-draft" alt="Current draft revealed by comparison wipe"><div class="study-divider" id="study-divider-line"></div><div class="safe" id="study-wipe-area"></div><div class="study-wipe-labels"><span>Original</span><span>Current draft</span></div></div>
+<div id="wipe-controls" hidden><label for="study-divider-input">Original / current draft divider · <output id="study-divider-value">50%</output></label><input id="study-divider-input" type="range" min="0" max="100" value="50" aria-label="Original versus draft divider"></div>
+</div>
+<p id="study-caption"></p><p id="study-links"><a id="study-original-link" target="_blank" rel="noopener">Open original PNG</a><a id="study-draft-link" target="_blank" rel="noopener">Open current PNG</a> · <a href="comparison-v1/receipt.json">Original-reference provenance</a></p>
+<details><summary>Full-height boundary checks and production records</summary>
+<p>The approved skyline is unchanged. Center checks pass for all five aspects in each study. The roof's generated right contour was registered to the source plane; the mode wall's duplicated side posters were removed before this preview. Mode-select reuses original offstage wall art through logical x828.63, so16:9's right extension can use original scenery.</p>
+<p><a href="skyline-approval.json">Skyline approval and pinned hashes</a> · <a href="batch2/menu-art-workflow.md">Complete approved recipe and reusable production rules</a> · <a href="batch2/generations.json">All nine new prompts, inputs and raw outputs</a> · <a href="batch2/restoration-receipt.json">Restoration color/alpha checks</a> · <a href="batch2/wide-receipt.json">Wide assembly and protected-context checks</a></p>
+<p>Full-height PNGs: <a href="batch2/title-middle-left-full-height.png">City left</a> · <a href="batch2/title-middle-right-full-height.png">City right</a> · <a href="batch2/title-tower-left-full-height.png">Tower left</a> · <a href="batch2/title-tower-right-full-height.png">Tower right</a> · <a href="batch2/mode-environment-left-full-height.png">Mode left</a> · <a href="batch2/mode-environment-right-full-height.png">Mode right</a></p>
+</details>
+<h2>Approved skyline reference · choose aspect</h2><div id="ratios"></div>
+<select id="wide-version" aria-label="Widescreen revision"><option value="refined">Refined cloud joins · full height</option><option value="previous">Previous repair · upper sky</option><option value="initial">Initial extension</option></select>
+<button id="safe" aria-pressed="false">Show original 4:3 bounds</button>
+<div class="frame" id="frame"><img id="wide" alt="Isolated skyline layer with generated side scenery"><div class="safe" id="bounds"></div></div>
+<p id="wide-caption"></p><p>The current version keeps the accepted left join and extends the right repair through the lower clouds and horizon haze. The original 4:3 center and everything outside those bands are unchanged. Switch to Initial extension to compare. Original-center equality: <strong>5/5 checks pass</strong>.</p>
+<h2>Cloud joins · before / after</h2>
+<select id="seam-side" aria-label="Cloud join"><option value="right">Right edge of original 4:3</option><option value="left">Left edge of original 4:3</option></select>
+<div class="row"><div class="card"><strong>Initial extension</strong><img id="seam-before" alt="Cloud join before refinement"></div><div class="card"><strong>Refined cloud continuity</strong><img id="seam-after" alt="Cloud join after refinement"></div></div>
+<p>Each close-up crosses the original boundary at its midpoint. The current full-height skyline version is approved artwork; earlier versions are retained as history. In-game validation and the other layers remain separate.</p>
+<h2>Restoration trials · original color remains the authority</h2>
+<p>The conservative palette trials keep the faithful image's spatial color and broad lighting, allowing only tiny fine-detail brightness changes. Protected poster graphics, alpha, padding and tile seams are byte-identical. Four split-tile trials are now in the existing workshop, unapproved and unselected. The raw versions remain available to show the original color drift; nothing is installed.</p>
+<select id="asset" aria-label="Texture sample"><option value="title-skyline">Retail title skyline</option><option value="mode-wall-dark">Mode-select dark poster wall</option><option value="batch2/title-middle">Title city layer</option><option value="batch2/title-tower">Title water-tower layer</option><option value="batch2/mode-wall-lit">Mode lit wall · shared detail</option><option value="batch2/mode-shutter">Mode rolling shutter</option><option value="batch2/mode-surround">Mode door surround</option></select>
+<select id="baseline-mode" aria-label="Texture reference"><option value="source">Original native texture</option><option value="faithful">Faithful HD baseline</option></select>
+<select id="version" aria-label="Generation revision"><option value="palette">Source-palette trial · restrained</option><option value="v2">Raw color revision2</option><option value="v1">Initial raw draft1</option><option value="batchraw" disabled>Raw new-batch generation</option></select>
+<div class="row"><div class="card"><strong id="baseline-label">Original native texture</strong><img id="baseline" alt="Original native texture reference"></div><div class="card"><strong id="draft-label">Unapproved source-palette trial</strong><img id="draft" alt="Unapproved generated restoration"><div class="caption metrics" id="metrics"></div></div></div>
+<p>Raw drafts are checked at source resolution; palette trials are checked against faithful HD at4x. L is lightness, a is red/green, b is yellow/blue. Quantization and shape changes affect these statistics; they support color checks, not authenticity or in-game appearance.</p>
+<details><summary>Provenance and full PNGs</summary><p><a href="generations.json">Six initial generations</a> · <a href="seam-v2/generations.json">Two focused bridge edits and exact prompts</a> · <a href="seam-v2/assembly-receipt.json">Refinement assembly and preservation checks</a> · <a href="seam-v2/left-bridge-prompt.txt">Left repair prompt</a> · <a href="seam-v2/right-bridge-prompt.txt">Right repair prompt</a> · <a href="raw-color-check.json">Raw color measurements</a> · <a href="palette-proof-receipt.json">Palette constraints and exact pixel checks</a> · <a href="http://127.0.0.1:8768">Existing Texture Workshop</a> · <a href="wide-assembly-receipt.json">Initial wide assembly</a> · <a href="seam-v3/title-skyline-wide-master-v3.png">Current5120×1536 texture master</a> · <a href="seam-v3/receipt.json">Full-height right repair: prompt and checks</a> · <a href="seam-v3/right-join-before-after.png">Previous/current right join</a></p><p id="png-links"></p></details>
+<script>
+const sizes={'4x3':1920,'16x10':2304,'16x9':2560,'21x9':3360,'32x9':5120};const labels={'4x3':'4:3','16x10':'16:10','16x9':'16:9','21x9':'21:9','32x9':'32:9'};let ratio='32x9',data;
+for(const id of Object.keys(sizes)){const b=document.createElement('button');b.textContent=labels[id];b.dataset.ratio=id;b.onclick=()=>setRatio(id);document.querySelector('#ratios').append(b)}
+function setRatio(id){ratio=id;const refined=document.querySelector('#wide-version').value==='refined';document.querySelector('#wide').src=refined?'seam-v3/title-skyline-'+id+'-v3.png':document.querySelector('#wide-version').value==='previous'?'seam-v2/title-skyline-'+id+'-refined.png':'title-skyline-'+id+'-layer-preview.png';for(const b of document.querySelectorAll('[data-ratio]'))b.setAttribute('aria-pressed',String(b.dataset.ratio===id));const pct=1920/sizes[id]*100;Object.assign(document.querySelector('#bounds').style,{width:pct+'%',left:(100-pct)/2+'%'});document.querySelector('#wide-caption').textContent=labels[id]+' · '+sizes[id]+'×1440 · '+document.querySelector('#wide-version').selectedOptions[0].textContent+' · original center1920×1440 · skyline layer only'}
+document.querySelector('#wide-version').onchange=()=>setRatio(ratio);
+function seamComparison(){const side=document.querySelector('#seam-side').value;document.querySelector('#seam-before').src='seam-v3/'+side+'-initial-close.png';document.querySelector('#seam-after').src='seam-v3/'+side+'-current-close.png'}
+document.querySelector('#seam-side').onchange=seamComparison;seamComparison();
+document.querySelector('#safe').onclick=e=>{const show=document.querySelector('#frame').classList.toggle('show');e.target.setAttribute('aria-pressed',String(show))};
+function comparison(){const a=document.querySelector('#asset').value,sel=document.querySelector('#version'),batch=a.startsWith('batch2/');for(const o of sel.options)o.disabled=o.value==='batchraw'?(!batch||a.endsWith('mode-wall-lit')):batch&&o.value!=='palette';if(sel.selectedOptions[0].disabled)sel.value='palette';const v=sel.value;const ref=document.querySelector('#baseline-mode').value;document.querySelector('#baseline').src=a+'-'+ref+'.png';document.querySelector('#baseline-label').textContent=ref==='source'?'Original native texture':'Faithful HD baseline';document.querySelector('#baseline').alt=ref==='source'?'Original native texture reference':'Faithful HD enlargement of original texture';document.querySelector('#draft').src=batch?a+(v==='batchraw'?'-raw.png':'-restrained.png'):a+(v==='palette'?'-palette-constrained-trial.png':'-raw-'+v+'.png');document.querySelector('#draft-label').textContent=v==='palette'?'Unapproved source-palette trial':'Unapproved raw imagegen draft';const d=data?.[a+(v==='palette'?'-palette':v==='v2'?'-v2':'')];document.querySelector('#metrics').textContent=d?'Median ΔLab: '+d.median_Lab_drift.map(n=>(n>=0?'+':'')+n.toFixed(2)).join(' / '):''}
+function setStudyWipe(){
+  const value=document.querySelector('#study-divider-input').value;
+  document.querySelector('#study-wipe-draft').style.clipPath='inset(0 0 0 '+value+'%)';
+  document.querySelector('#study-divider-line').style.left=value+'%';
+  document.querySelector('#study-divider-value').value=value+'%';
+}
+function study(){
+  const id=document.querySelector('#study').value,focus=document.querySelector('#study-framing').value==='center';
+  const r=focus?'4x3':document.querySelector('#study-aspect').value;
+  const original='comparison-v1/'+id+'-'+r+'-original.png',draft='batch2/'+id+'-'+r+'-preview.png';
+  document.querySelector('#study-original').src=original;document.querySelector('#study-wipe-original').src=original;
+  document.querySelector('#study-image').src=draft;document.querySelector('#study-wipe-draft').src=draft;
+  document.querySelector('#study-original-link').href=original;document.querySelector('#study-draft-link').href=draft;
+  document.querySelector('#study-aspect').disabled=focus;
+  const pct=1920/sizes[r]*100;
+  for(const id of ['study-area','study-original-area','study-wipe-area'])Object.assign(document.getElementById(id).style,{width:pct+'%',left:(100-pct)/2+'%'});
+  const view=document.querySelector('#study-view').value;
+  document.querySelector('#study-comparison').dataset.mode=view;document.querySelector('#wipe-controls').hidden=view!=='wipe';
+  document.querySelector('#study-caption').textContent=document.querySelector('#study').selectedOptions[0].textContent+' · '+labels[r]+' · '+sizes[r]+'×1440'+(focus?' · matching original 4:3 center':' · centered original versus wide draft')+' · layer-layout study';
+  setStudyWipe();
+}
+for(const id of ['study','study-aspect','study-view','study-framing'])document.getElementById(id).onchange=study;
+document.querySelector('#study-divider-input').oninput=setStudyWipe;
+document.querySelector('#study-bounds').onclick=e=>{
+  const show=!document.querySelector('#study-frame').classList.contains('show');
+  for(const id of ['study-frame','study-original-frame','study-wipe'])document.getElementById(id).classList.toggle('show',show);
+  e.target.setAttribute('aria-pressed',String(show));
+};study();
+
+document.querySelector('#baseline-mode').onchange=comparison;document.querySelector('#asset').onchange=comparison;document.querySelector('#version').onchange=comparison;Promise.all([fetch('raw-color-check.json').then(r=>r.json()),fetch('palette-proof-receipt.json').then(r=>r.json()),fetch('batch2/restoration-receipt.json').then(r=>r.json())]).then(([d,p,b])=>{data=d;for(const row of p.records)data[row.label+'-palette']=row;for(const row of b.records)data['batch2/'+row.label+'-palette']={median_Lab_drift:row.median_Lab};comparison()});for(const id of Object.keys(sizes)){const a=document.createElement('a');a.href='seam-v3/title-skyline-'+id+'-v3.png';a.textContent=labels[id]+' refined PNG';document.querySelector('#png-links').append(a,' · ')}setRatio('32x9');comparison();
+</script>

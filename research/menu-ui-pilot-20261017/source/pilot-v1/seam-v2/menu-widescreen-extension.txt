@@ -1,0 +1,32 @@
+Use case: precise-object-edit
+Asset type: widescreen scenery layer for an existing game menu.
+Primary request: extend or repair the supplied final assembled background in place, preserving its original composition and palette.
+
+Input images:
+1. EDIT TARGET: the exact final composite/crop, including the real protected original and the retained generated scenery.
+2. GUIDE ONLY: same-sized annotation identifying the protected region and permitted edit area. Do not render guide marks.
+3. REFERENCE ONLY: wider unannotated composite for the trajectory and scale of large features.
+
+Geometry (fill with coordinates from the supplied edit target; use half-open pixel intervals):
+Canvas: {width} x {height}. Protected original: {protected_rectangle}.
+Edit only: {allowed_rectangle_or_mask}. Join line: x={local_join_x}.
+Protected side of this join: {left_or_right}. Retained outer context: {outer_context_rectangle}.
+The left extension's RIGHT edge meets the original's left edge. The right extension's LEFT edge meets the original's right edge.
+Return the full target canvas at the same crop, scale, registration and horizon. No crop, zoom, shift or aspect change.
+
+Continuity:
+Treat the real original and retained outer scenery as fixed boundary conditions.
+Continue EACH existing bright cloud ridge, dark channel and luminous cloud mass across the join at its current height, direction/tangent, curvature, thickness, softness and opacity. Carry those same shapes through the editable band into the outer context; do not replace them with a generally similar cloud field.
+For other materials, replace the cloud clause with concrete features to continue: roof/horizon lines, masonry courses, poster edges, grain direction or large light/shadow shapes. Preserve scale, perspective and ordering.
+No vertical cutoff, restarted pattern, duplicate/mirrored feature, bent horizon, ghosting, new bright area or uniform blur stripe. Both the inner and outer edges of the edit must join naturally.
+
+Color and preservation:
+Restrained cleanup only. Match the already accepted local source palette, broad lighting, contrast and softness. No warming, yellow/orange cast, new bloom or contrast boost.
+The original region is immutable context, not an invitation to redraw it. Keep unedited context, existing objects, lettering/branding, black padding and alpha behavior unchanged. Do not add objects or text.
+
+Assembly and review (operator instructions, not an image-tool pixel-lock guarantee):
+Use actual pixels from the FINAL composite as edit context. A source-only reference can be redrawn by the model and cease to match after the true center is copied back.
+Reject unrequested registration/dimension changes; never silently resize a repair crop.
+Composite only the permitted region and restore all protected pixels exactly. If needed, match residual boundary values/gradients on the generated side after the cloud structures align; blending alone cannot repair incompatible shapes.
+Inspect the FINAL assembled image at both edges of every repair band, at native and coarse scales with original bounds hidden. Trace the same features across each join. Check every supported aspect crop and require an unchanged 4:3 center.
+Retain exact prompts, references, guides/masks, raw outputs, coordinate transforms, assembly recipe and hashes. Prompt compliance and small edge differences alone do not establish visual continuity.

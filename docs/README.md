@@ -18,3 +18,10 @@
 - [trejo pose material layout](research/trejo-pose-material-layout.md)
 - [imagegen texture restoration plan](research/imagegen-texture-restoration-plan.md)
 - [imagegen existing pipeline review](research/imagegen-existing-pipeline-review.md)
+
+- [Widescreen menu scenery and seam review](widescreen-backgrounds.md)
+
+- [Menu art production and approved skyline recipe](menu-art-workflow.md)
+
+- [Paused menu artwork: modpack implementation handover](menu-ui-modpack-handover.md)
+- [Menu session recipe/prompt source archive](../research/menu-ui-pilot-20261017/README.md)

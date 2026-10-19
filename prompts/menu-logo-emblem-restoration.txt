@@ -1,0 +1,27 @@
+Use case: precise-object-edit / background-extraction
+Asset: source-faithful menu logo/emblem restoration; Rich Original Detail.
+Input1: original RGBA or liked draft EDIT TARGET. Preserve exact artwork,
+wording, silhouette, placement, wear, colors and neutral/cool palette.
+Input2: original RGBA displayed over magenta, COVERAGE REFERENCE only.
+Input3: independent original grayscale ALPHA: black0 clear, gray partial,
+white255 opaque. These are coverage values, not surface colors to paint.
+Primary request: restrained cleanup, or change ONLY alpha for a repair.
+Transparency: genuine RGBA, including interior holes and translucent ink.
+Title FIGHT interiors are partial coverage (~129/255), not opaque black and
+not completely empty. Opaque gray/dark distress must remain material.
+Do not infer coverage from black/green RGB or a flat dark composite. Source
+transparent padding may contain green/pink/black RGB. Preserve independent alpha.
+Avoid: matte, gradient backdrop, checker pattern, halo, bevel, cast shadow,
+new holes/fonts/words/anatomy, shape drift, reframing, warmer/yellower colors.
+
+Acceptance is technical as well as visual. The prompt does not lock alpha.
+Save each exact prompt, every reference and every untouched built-in result.
+Compare source, faithful, raw and final on checker/light/dark and alpha-only.
+Probe fully clear holes, partial ink, opaque material/dark distress and padding.
+For source-shaped game assets, register RGB to authoritative source geometry
+and retain source alpha exactly, including graded edges, split seams and UVs.
+If auditioning an existing generated canvas, document local source-coverage
+registration independently; preserve liked RGB, retain transforms and label it
+as an unapproved audition pending source-shaped integration. Never apply a
+global black/green key, resize alpha independently without registration, or
+promote a bbox-only match. Inspect small holes and full contours after assembly.

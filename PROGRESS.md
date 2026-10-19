@@ -2,6 +2,20 @@
 
 ## Current status
 
+- 2026-10-19 D157/UI — RESTORATION PAUSED at owner request until credits return.
+  Do not generate/repaint or advance Extras/phone queue. Engineering handover:
+  game repo docs/menu-ui-modpack-handover.md;71sourceIDs(63approved+8conditional),
+  226pinnedartfiles/12scopes,101historicalcalls. Native-shaped sparse testpack first,
+  widescreengeometry/UV/scissor separately. Brandingv2approvedrawcanvases need
+  native-shape registration;do not use unapproved old source-safe alternate.
+  Fullprivate snapshot <data>/scratch/menu-ui-restoration-paused-20261019/
+  session/pilot-v1,manifest-bound. Existing8768writer/17candidates/Trejo untouched.
+  Source-only recipes/prompts/reviewcode preservedin research/menu-ui-pilot-20261017;
+  publicbranch codex/menu-ui-art-source;gamerepobranch codex/menu-ui-modpack-handoff.
+  Art/arrays/reviewJSON/captures staylocal. No newgeneration/import/install/game/
+  build/runtime change. Nextagent implementsplaytestpack;restoration resumes only
+  onVlad's explicitrequest. Previousstatusblocks beloware historical.
+
 - 2026-10-16: owner-approved Trejo v4 color pilot completed. Two new unapproved
   child drafts: Gentle r-8125b0d8196d4f61 and Source palette r-342bd7dadb964b67.
   Original v4 and all 11 prior candidate files/records/reviews preserved;
@@ -56,8 +70,8 @@
 
 ## Art review
 
-Blaze, Nyne, Trejo are the pilot; 13 retained drafts (11 imagegen, two deterministic
-color trials), 13 imagegen request records, zero queued. Trejo A source-guided v4 `r-a74be693951f4617` awaits
+The fighter pilot (Blaze, Nyne, Trejo) retains13drafts plus4menu trials,17workshop candidates total. The13fighter drafts comprise11imagegen and two deterministic
+color trials;13imagegen request records, zero queued. Wide-art drafts are separate private experiments. Trejo A source-guided v4 `r-a74be693951f4617` awaits
 owner review of tattoo script/stroke paths, animal/tree/buckle placement and
 skin seams. Original script guidance: "Debbie Danielle". Exact exterior/face/alpha
 checks do not establish interior authenticity. No art is automatically approved.

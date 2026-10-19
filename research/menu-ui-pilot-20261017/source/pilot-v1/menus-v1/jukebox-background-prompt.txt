@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset: Def Jam menu texture restoration, Rich Original Detail.
+Input1 is original RGBA EDIT TARGET; input2 its faithful4x REFERENCE.
+Request: restrained cleanup/upscale of this same artwork, retaining exact composition, full canvas registration, original local colors, broad lighting and deliberate grit. Jukebox brick wall behind a large weathered paper song-list board, narrow dark header and small red tab. Keep the paper outline, thin frame/rules, red tab and every mark in place. These are blank backing panels; all actual menu words and controls are separate live game layers. Bottom32rows are unused padding.
+Preserve typography/graphics/strokes/shapes, tile alignment, alpha and stored padding. Keep native gray/cream/brown/olive values without making them warmer, yellower, brighter, whiter or more saturated. No added bevel, glow, cast shadows, sharpening halos, objects or words. Remove only compression/muddy surface artifacts with subtle believable detail. No reframing/crop/zoom/rotation/perspective change. True RGBA; do not paint black or green into clear regions. No background matte.
+Final assembly will retain independent original alpha, protected graphics and unused texels exactly.

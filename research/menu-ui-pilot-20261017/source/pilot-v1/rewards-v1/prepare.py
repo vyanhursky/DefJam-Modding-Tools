@@ -1,0 +1,9 @@
+"""Assemble shared Rewards wall; retain source alpha and actual per-screen offsets."""
+from pathlib import Path
+from PIL import Image
+import numpy as np,json,hashlib,shutil
+p=Path(__file__).resolve().parent;r=p.parent;sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest();(p/'before-hashes.json').write_text(json.dumps({str(f.relative_to(r)):sha(f) for f in r.rglob('*.png') if p not in f.parents},indent=2)+'\n');shutil.copy2(r/'review.html',p/'review-before.html')
+meta=json.loads((r.parent/'next-scope/rewards-background-metadata.json').read_text());parts=[x for x in meta[0]['shapes'][0]['parts'] if x['image'] in [2,1]];im=Image.new('RGBA',(699,512));refs=[]
+for part in sorted(parts,key=lambda x:x['part']):
+ f=Path(part['original']);a=Image.open(f).convert('RGBA');label='wall-'+str(part['part']);shutil.copy2(f,p/(label+'-source.png'));im.paste(a.crop((0,0,512 if part['part']==0 else 188,512)),(0 if part['part']==0 else 511,0));refs.append(dict(part=part['part'],id=part['source_id'],original=str(f),sha256=sha(f),size=list(a.size),source_seam_x=511,used_width=512 if part['part']==0 else 188))
+im.save(p/'wall-source.png');im.resize((2796,2048),Image.Resampling.LANCZOS).save(p/'wall-faithful.png');rgba=im.crop((0,0,699,480));bg=Image.new('RGBA',rgba.size,'black');bg.alpha_composite(rgba);bg.convert('RGB').save(p/'wall-source-on-black.png');rgba.getchannel('A').save(p/'wall-source-alpha.png');(p/'references.json').write_text(json.dumps(dict(shared_screens=['buyrewards','unlockchar','unlockven'],stored_mosaic=[699,512],active=[699,480],parts=refs,stage_size=[640,480],stage_crop_x=dict(buyrewards=29,unlockchar=50.4,unlockven=50.4),note='Shared image IDs, different authored wall offsets; unlock shapes contain additional frame pieces kept separate. Native alpha52..255 must remain authoritative.'),indent=2)+'\n');print('Shared wall699x480,alpha retained;Rewards crop29,Unlock crop50.4')

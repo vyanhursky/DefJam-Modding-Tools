@@ -1,0 +1,5 @@
+Use case: precise-object-edit, palette correction only.
+Input1 is the generated restoration draft to revise. Input2 is the exact original texture and input3 its faithful HD enlargement; INPUTS2/3 are the COLOR AND BRIGHTNESS AUTHORITY.
+The first draft has median CIELAB lightness +4.64 relative to the source at corresponding visible texels: it is too bright. Return the original darker paper/wall luminance and the original local olive/gray chroma.
+Correct ONLY input1 color and brightness back to inputs2/3. Preserve the original source's gritty, dark artwork. Match original local hue, saturation, white balance, contrast and local brightness exactly. Retain the source's EXISTING olive tint without adding or removing warmth/yellowness. Do not neutralize it or make a new grade. No warmer/yellower areas, sepia/orange/golden glow, lifted shadows or extra bloom.
+Do not enhance or redraw any more detail. Preserve all original positions, architecture, texture boundaries, masks, logos, lettering, original black margins and canvas proportions. Keep the full frame and no border. No new objects or text. Return only the corrected texture as a PNG.

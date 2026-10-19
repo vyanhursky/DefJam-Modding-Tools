@@ -1,0 +1,4 @@
+from pathlib import Path
+from PIL import Image,ImageDraw
+import json,hashlib,shutil
+p=Path(__file__).resolve().parent;root=p.parent;sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest();shutil.copy2(root/'review.html',p/'review-before.html');im=Image.open(root/'options-door-v3/options-wide-v3.png').convert('RGB');im.crop((3040,0,5120,1440)).save(p/'softness-target.png');guide=im.crop((3040,0,5120,1440));d=ImageDraw.Draw(guide);d.line((480,0,480,1439),fill='cyan',width=4);d.rectangle((480,0,2079,1439),outline='magenta',width=4);guide.save(p/'softness-guide.png');im.crop((3180,0,3520,1440)).save(p/'original-softness-reference.png');(p/'before-hashes.json').write_text(json.dumps({str(f.relative_to(root)):sha(f) for name in ['menus-v1','menus-seams-v2','options-door-v3','transparency-v2','batch2'] for f in (root/name).glob('*.png')},indent=2)+'\n')

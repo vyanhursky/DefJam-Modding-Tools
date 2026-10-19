@@ -1,0 +1,28 @@
+"""Source-palette restoration and full-height, blank-side outpaint scaffolds."""
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFilter
+import json,hashlib,shutil,numpy as np
+from defjam_tools.color_trial import rgb_to_lab,lab_to_rgb,box_blur
+p=Path(__file__).resolve().parent;sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest();jobs=json.loads((p/'generations.json').read_text())['calls'];refs=json.loads((p/'references.json').read_text());records=[];outjobs=[]
+for row in refs:
+ label=row['label'];job=next(j for j in jobs if j['label']==label);shutil.copy2(job['path'],p/(label+'-raw.png'));job['raw_sha256']=sha(p/(label+'-raw.png'));job['inputs']=[dict(path=f,sha256=sha(Path(f))) for f in job['referenced_image_paths']]
+ base=Image.open(p/(label+'-faithful.png')).convert('RGBA');a=np.array(base);rgb=a[:,:,:3];lab=rgb_to_lab(rgb);raw=Image.open(p/(label+'-raw.png')).convert('RGB');rl=rgb_to_lab(np.array(raw.resize(base.size,Image.Resampling.LANCZOS)))[:,:,0];L=lab[:,:,0];detail=np.clip(.25*((rl-box_blur(rl,8))-(L-box_blur(L,8))),-1,1)
+ h,w=a.shape[:2];held=np.zeros((h,w),bool);held[:16]=held[-16:]=True;held[:,:16]=held[:,-16:]=True;held[1920:]=True;held[:,2032:2064]=True
+ # Protect original paper, insets and irregular frame edges as one conservative
+ # bounding region; live portrait alignment never depends on AI registration.
+ if label!='cmtype':held[55*4:451*4,17*4:622*4]=True
+ else:
+  for x,y,bw,bh in [(80,155,260,205),(165,55,325,35),(75,0,80,150),(135,390,40,40),(525,360,55,85)]:held[y*4:(y+bh)*4,x*4:(x+bw)*4]=True
+ held|=(rgb.max(2)<=16);allowed=box_blur((~held).astype(float),4)*(~held);nl=lab.copy();nl[:,:,0]+=detail*allowed;new,clip=lab_to_rgb(nl);new[held|clip]=rgb[held|clip];out=np.dstack([new,a[:,:,3]]);assert np.array_equal(out[:,:,3],a[:,:,3]);assert np.array_equal(out[held],a[held]);im=Image.fromarray(out);im.save(p/(label+'-restrained.png'));Image.fromarray(held.astype('uint8')*255).save(p/(label+'-protected.png'))
+ for i,t in enumerate(row['tiles']):im.crop((i*2048,0,i*2048+t['size'][0]*4,2048)).save(p/(t['name']+'-restrained.png'))
+ center=im.crop((0,0,2560,1920)).resize((1920,1440),Image.Resampling.LANCZOS);center.save(p/(label+'-center.png'));records.append(dict(label=label,alpha_exact=True,protected_exact=True,padding_exact=True,changed_rgb_pixels=int(np.any(new!=rgb,2).sum()),max_fine_L=1,strength=.25,median_Lab=np.median(rgb_to_lab(new)-lab,axis=(0,1)).tolist(),raw_size=list(raw.size),restored_sha256=sha(p/(label+'-restrained.png'))))
+ for side in ['left','right']:
+  target=Image.new('RGB',(2320,1440));crop=center.convert('RGB').crop((0,0,720,1440) if side=='left' else (1200,0,1920,1440));pos=(1600,0) if side=='left' else (0,0);target.paste(crop,pos);name=label+'-'+side;target.save(p/(name+'-target.png'));guide=target.copy();d=ImageDraw.Draw(guide);rect=(0,0,1599,1439) if side=='left' else (720,0,2319,1439);d.rectangle(rect,outline='#ff40d0',width=5);d.line((1600 if side=='left' else 720,0,1600 if side=='left' else 720,1439),fill='#40ffff',width=4);guide.save(p/(name+'-guide.png'))
+  scene='Continue the blue-green room and floor. At LEFT continue existing brick courses and ceiling/floor plane; no extra room corner. At RIGHT continue same plaster wall, upper band and floor plane.' if label=='cmtype' else 'Continue ONLY the blue-green rough plaster wall. The paper/portrait frames stop within original center: absolutely no additional sheets, portrait frames, black inset panels, posters, portraits, writing or logos in the new side. Wall remains one flat continuous plane.'
+  prompt=f'''Use case: precise-object-edit
+Asset type: centered widescreen Def Jam menu background, {label}, {side.upper()} scenery extension.
+Image1 EDIT TARGET is2320x1440. Original fixed context occupies {'RIGHT720columns x1600..2320' if side=='left' else 'LEFT720columns x0..720'}; black {'LEFT1600' if side=='left' else 'RIGHT1600'} columns are EMPTY OUTPAINT SPACE, not a dark wall. Image2 GUIDE ONLY pink rectangle is permitted new region and cyan vertical line is join. Image3 REFERENCE ONLY is entire original4:3composition.
+Fill ONLY black empty region with continuous matching scenery. {scene}
+CRITICAL BOTH BORDER LESSONS: Continuations must line up at EVERY HEIGHT along original boundary, including material grain/stains, brick course heights and mortar paths, ceiling band and floor horizon. Trace crossing lines from original into new space with identical direction/width/phase. No vertical edge, duplicate wall corner, seam, detached brickwork, copied poster or abrupt light/dark band. Match source soft focus/depth of field and low-resolution grain; do not make generated half crisper. Retain exact dark blue-green/cyan gray, cream/dark values and lighting of context; NO warm/yellowcast, neutralization, exposure/contrast/saturation change. Extend natural mild lighting falloff smoothly without a boundary or bright spotlight. No new objects, text or decorative panels. Fixed context position stays exact; no reframing,crop,rotation,zoom,perspective change. Full2320x1440sameaspect opaque output WITHOUT colored guides. The original center will be restored exactly in assembly.'''
+  outjobs.append(dict(label=name,menu=label,side=side,kind='outpaint',prompt=prompt,referenced_image_paths=[str(p/(name+'-target.png')),str(p/(name+'-guide.png')),str(p/(label+'-center.png'))],transparent_background=False))
+(p/'generations.json').write_text(json.dumps(dict(calls=jobs),indent=2)+'\n');(p/'restoration-receipt.json').write_text(json.dumps(dict(records=records,processor_sha256=sha(Path(__file__))),indent=2)+'\n');(p/'outpaint-jobs.json').write_text(json.dumps(outjobs,indent=2)+'\n');print('4source-locked restorations,8tile splits,8full-height targets')

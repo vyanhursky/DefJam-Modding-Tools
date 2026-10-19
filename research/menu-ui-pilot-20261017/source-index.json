@@ -1,0 +1,1232 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "source/batch2/title_layer_metadata.py",
+      "sha256": "a3f83f4af7cfc05528d861c2d1392976533d5c13f18111108405ef87989f5094",
+      "bytes": 6072
+    },
+    {
+      "path": "source/emblem-audit/audit.py",
+      "sha256": "d2ee3fa4a146b88e9babb0e1c31390de16fc6bfaaa5e1d540f170c2c86559a7c",
+      "bytes": 3656
+    },
+    {
+      "path": "source/inventory.py",
+      "sha256": "237bbb17943b3ea98e18c0f6285ab7c6a0951eaa7c4b6fa2d6bd158001639345",
+      "bytes": 4940
+    },
+    {
+      "path": "source/logo-audit/audit.py",
+      "sha256": "1c3eb630c93206b101f087f9eda93e47edfa7e6d355f99099cc1ea40878c8d15",
+      "bytes": 4025
+    },
+    {
+      "path": "source/next-scope/audit-battle-backgrounds.py",
+      "sha256": "1c77832d33791822b65a120c66942997e9b8a32e968e97b4e2ffb02eb9b82b1d",
+      "bytes": 4308
+    },
+    {
+      "path": "source/next-scope/audit-hiscores-backgrounds.py",
+      "sha256": "9d572f01efa90e0994c966b16d546e521d069cf4c5ed516a71b69087c2a6a2dc",
+      "bytes": 4312
+    },
+    {
+      "path": "source/next-scope/audit-options-jukebox.py",
+      "sha256": "1454627c2bc0407aef2be6447fbb5d6aa7efae5701a64a9a82ceba97bf5353dc",
+      "bytes": 5283
+    },
+    {
+      "path": "source/next-scope/audit-result-panels.py",
+      "sha256": "364dda1b53d2d24e16ee97c54730f5995d7afec18af689dafe97b8cf7f156fd4",
+      "bytes": 4424
+    },
+    {
+      "path": "source/next-scope/audit-rewards-backgrounds.py",
+      "sha256": "cb24c1bcd5d68905926453fc024d5d175553993b8293922912dd50f2563b2558",
+      "bytes": 4356
+    },
+    {
+      "path": "source/pilot-v1/approvals-v1/review-before-approval.html",
+      "sha256": "76ed812a8cefe38a96b40e3479ca5e9de5403b6e0cc1cb11eb7a8464cd82d41f",
+      "bytes": 18058
+    },
+    {
+      "path": "source/pilot-v1/batch2/assemble-restorations.py",
+      "sha256": "ae434bd0817f02f6e4d47f5d657aaa463cd82cba119d7a9b4c79159d2be7535e",
+      "bytes": 4781
+    },
+    {
+      "path": "source/pilot-v1/batch2/assemble-wide-proposals.py",
+      "sha256": "3b3e4186c584ed0c8cc545bace576e9421b486d306e08914e79839d40ecf7348",
+      "bytes": 1293
+    },
+    {
+      "path": "source/pilot-v1/batch2/build-review.py",
+      "sha256": "d4ef658877412da33f0da9131f389626d40391d72219b7e7f25f571f96ddc4ce",
+      "bytes": 8514
+    },
+    {
+      "path": "source/pilot-v1/batch2/finalize-wide.py",
+      "sha256": "0ef96763d13c108c2336a79402da9a30cbf7796f0e56c954c3f41e97db14492d",
+      "bytes": 8397
+    },
+    {
+      "path": "source/pilot-v1/batch2/finish-state.py",
+      "sha256": "e7e66fdbe7fcc559ee56e14eee24b73e6061a0a6d380e9f8670f10d1827b698a",
+      "bytes": 4603
+    },
+    {
+      "path": "source/pilot-v1/batch2/freeze-packages.py",
+      "sha256": "234885e18c96cd59ff86edf16512433da2aee76145696a645f583854ab7bfa56",
+      "bytes": 2690
+    },
+    {
+      "path": "source/pilot-v1/batch2/menu-art-workflow.md",
+      "sha256": "dfac22d639e2c233ae9fee75ef4dbc3eb0527ca989247e98e1ac554f9cd90da0",
+      "bytes": 6849
+    },
+    {
+      "path": "source/pilot-v1/batch2/mode-environment-left-bridge-prompt.txt",
+      "sha256": "ecdcdc167592566363515325026d8a6d30720eb40dc9c19f1e527283c44c1270",
+      "bytes": 1638
+    },
+    {
+      "path": "source/pilot-v1/batch2/mode-environment-outpaint-prompt.txt",
+      "sha256": "8a6e6e4e4c556f96ac2f06d8359188b42ac1a64cbd4a5f38bf8ee90d9a652b62",
+      "bytes": 2474
+    },
+    {
+      "path": "source/pilot-v1/batch2/mode-shutter-restoration-prompt.txt",
+      "sha256": "161d6bb95c6a19d5d3449b9b9ca2a94e3a57bb770d3a9abe9b6ec28cb6c97900",
+      "bytes": 1283
+    },
+    {
+      "path": "source/pilot-v1/batch2/mode-surround-restoration-prompt.txt",
+      "sha256": "6bc404dc78b014e30b983fcf9d085089a9ef86d270e58d7b30a335c44d1cc1f2",
+      "bytes": 1327
+    },
+    {
+      "path": "source/pilot-v1/batch2/persist-production.py",
+      "sha256": "6b9e3c27702fb2b9ca132fca1e9e22b9238eb588fcdb24d870b695eddfa8ea1c",
+      "bytes": 8397
+    },
+    {
+      "path": "source/pilot-v1/batch2/prepare-bridge.py",
+      "sha256": "6440de4f1e2fa57477f8ca37b683239b70fce470c7dbc7d75ab037d8ae3513b9",
+      "bytes": 3696
+    },
+    {
+      "path": "source/pilot-v1/batch2/prepare-restoration-prompts.py",
+      "sha256": "0790a738a20bfe95c328a0e622e532f3da2bece01167b02f87bf51fb6f095221",
+      "bytes": 2483
+    },
+    {
+      "path": "source/pilot-v1/batch2/prepare-wide.py",
+      "sha256": "74f87dba4d15528dcf76d4c9cc165c1230068cf68ab29e47f26de380b5b58e83",
+      "bytes": 6071
+    },
+    {
+      "path": "source/pilot-v1/batch2/review-before-batch2.html",
+      "sha256": "32230561ec8391ead65b345d8d0df4c56d7ed7586b7925f12d510b1a2f595fe0",
+      "bytes": 8738
+    },
+    {
+      "path": "source/pilot-v1/batch2/title-middle-outpaint-prompt.txt",
+      "sha256": "828debfd4bdc12b63cc2d8c383e720991fb3eb173bbd6d1fc22d670a0ef16670",
+      "bytes": 2263
+    },
+    {
+      "path": "source/pilot-v1/batch2/title-middle-restoration-prompt.txt",
+      "sha256": "ef7b7da3ca3ea36ddb2ce39b26e59bc2776e176bb9da2fc3d4575f25d2d82364",
+      "bytes": 1308
+    },
+    {
+      "path": "source/pilot-v1/batch2/title-tower-outpaint-prompt.txt",
+      "sha256": "c827a41b5a2a086fe2faeeedec8521b1a13e4f6a5c3b84949a6b3c68ab583b14",
+      "bytes": 2386
+    },
+    {
+      "path": "source/pilot-v1/batch2/title-tower-restoration-prompt.txt",
+      "sha256": "e440efac78e1cd5fc19458e5b2564ca97a5cf5fd5763f9df1fa95e946ef81441",
+      "bytes": 1283
+    },
+    {
+      "path": "source/pilot-v1/batch2/title-tower-right-bridge-prompt.txt",
+      "sha256": "d1227d2ed6ddeedaaa51eae1452fe1def4e51aa296d55aa3545766d211a063fc",
+      "bytes": 1548
+    },
+    {
+      "path": "source/pilot-v1/batch2/verify-final.py",
+      "sha256": "4b4405a35cc176c7df165f4176376fa7acc19a7584807820e1f20a466899a558",
+      "bytes": 3115
+    },
+    {
+      "path": "source/pilot-v1/batch2/worklog-entry.md",
+      "sha256": "cc6a5413e1740046eb70ff6f64e012fc421e9071b39585dc2b352ae51275b1b4",
+      "bytes": 985
+    },
+    {
+      "path": "source/pilot-v1/battle-approved-v5/approve.py",
+      "sha256": "fe5d33245e02556007440d8fafc7147bf1a25c349a5637cb2238f2fc1cfed062",
+      "bytes": 2575
+    },
+    {
+      "path": "source/pilot-v1/battle-approved-v5/review-before.html",
+      "sha256": "c9f9691ea71fbd69a1e020a3e66503399ab9c1655332c81fc8a363c1f7994bad",
+      "bytes": 55563
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/archive-and-sync.py",
+      "sha256": "7a3d011dd76b2215efbb178c33525201885a7fafadd73849e6d4e791bc80d94a",
+      "bytes": 3114
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/assemble.py",
+      "sha256": "f3a8c2de9047c8a2ec97ba68891ab666a13cbaea1a1bd49533c15f7658346a7a",
+      "bytes": 4192
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/prepare.py",
+      "sha256": "25a10ff6b405c124495a0cbbd3a85ae1002e5f4a325dcf144e5e1b4c428448ac",
+      "bytes": 721
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/prompt.txt",
+      "sha256": "efeed82cfaf6665865c19cb31bf48a890ad7abc05ff7e96f969abe79717a49ee",
+      "bytes": 1571
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/review-before.html",
+      "sha256": "8eca114886ae28231909e8a7f5ab4653797740ed3d2657b1fd439c91cdfcef03",
+      "bytes": 54239
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/update-review.py",
+      "sha256": "677040265918e2306557199377015f3c32e74c9aaae1de1a6c4be18204724a62",
+      "bytes": 3615
+    },
+    {
+      "path": "source/pilot-v1/battle-left-light-v5/workflow.md",
+      "sha256": "fb01a8c9ea05003a59bc3d68e74e847af3475aab113e5bb2c54818af6b7e9c60",
+      "bytes": 1358
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/assemble-quantile-rejected.py",
+      "sha256": "be34a2a27dbe299b625c3a8f84095df08ddf1c76393ebcd5fc55ae1ebce4b854",
+      "bytes": 6374
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/assemble.py",
+      "sha256": "867c09e5f25e14c94830761aff239314492f4a7178de6d2a64ece0e29c94bbd0",
+      "bytes": 4092
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/edge-material-study.py",
+      "sha256": "fd1b7a84e2256b8fdc68713e0f08ee0a1624d132b79aec2ed65869eff4a49ba5",
+      "bytes": 1843
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/material-study.py",
+      "sha256": "7ed9cade6836c35d07bdc886c22cfc3c2ff3dee8f13f4e4506c46c1e2b21b9b0",
+      "bytes": 1684
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/prepare.py",
+      "sha256": "6aa8b7ecfd4fae72b8d8828d5e9ad6253f2faccc222dffc0d749ffcefc5909d7",
+      "bytes": 3355
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/prompt.txt",
+      "sha256": "fbd7f972745a2a66157ed947cf7c62e4c9521bbc2ff2af8ed77d79e536a05ac3",
+      "bytes": 1940
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/review-before.html",
+      "sha256": "1af9fc4cdc8d97a6ae15e7d6b3c237449e9526d2ae53d4df3e0373048eea4b28",
+      "bytes": 51882
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/spectrum-study.py",
+      "sha256": "ccb14e82b5a615e4b1d59ff7ac1619fd3b831d02a1f9dbc789432764dd2324e1",
+      "bytes": 3072
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/update-review.py",
+      "sha256": "4d3a342f298a6c143485b7f468c3515828a4c112ece23c598fb8faad27eeb728",
+      "bytes": 4225
+    },
+    {
+      "path": "source/pilot-v1/battle-left-v3/workflow.md",
+      "sha256": "b1c8c579dcd3bceff4e215e076c8500abcca4e2a4a78f9f9772cbaae00d506d7",
+      "bytes": 2329
+    },
+    {
+      "path": "source/pilot-v1/battle-right-light-v4/assemble.py",
+      "sha256": "1cc7d16493c8b3bb35c1eb56d5ea19640611037ebca30b4d733a8e494767f85a",
+      "bytes": 4915
+    },
+    {
+      "path": "source/pilot-v1/battle-right-light-v4/prepare.py",
+      "sha256": "4f6e55ab076de820d1b8c71f877d25b85e65e264f2c0f5b81da469195a39220f",
+      "bytes": 676
+    },
+    {
+      "path": "source/pilot-v1/battle-right-light-v4/prompt.txt",
+      "sha256": "f7ab475faa778b1dc2f5b1281681b6bf49492c22779023e8390ca6a9fa557e25",
+      "bytes": 1285
+    },
+    {
+      "path": "source/pilot-v1/battle-right-light-v4/review-before.html",
+      "sha256": "15fa1ad53d3ac4d6318820050b74fbf8499e2a7b896063df0b433018baa0c5db",
+      "bytes": 53057
+    },
+    {
+      "path": "source/pilot-v1/battle-right-light-v4/update-review.py",
+      "sha256": "b82fe595a5bd11fe37995041836a1fc9d1db970afcf79ec290b93dfd1b6da18b",
+      "bytes": 2839
+    },
+    {
+      "path": "source/pilot-v1/battle-right-light-v4/workflow.md",
+      "sha256": "aceb51b942b21a7934ea175d625367b4b28eaefd02ad8beda6cb6058ed25593f",
+      "bytes": 1596
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/assemble.py",
+      "sha256": "94bafc15d7949b967699dbcd98ba649bd79abbe36971db719710668f06e36a0c",
+      "bytes": 5716
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/left-gap-prompt.txt",
+      "sha256": "f809e071d33cff5f422058808dac537d9d76c5c6ca0175db270d58235716ccf0",
+      "bytes": 1560
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/left-material-prompt.txt",
+      "sha256": "4275b80a7164ed7c0fa7f886d4648719373412f502e31c50e1f8a40d6c17d8a5",
+      "bytes": 1768
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/prepare.py",
+      "sha256": "cb18b5d569f3561a0cad5e61271c6161e71a7f53bdc07ec48671e30eab8c71d7",
+      "bytes": 5907
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/review-before.html",
+      "sha256": "7292fb4aa05cd9306b5515b7d4ea21d4adc40eaa45ebc8b8f470b37efdc35f9e",
+      "bytes": 49898
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/right-ceiling-prompt.txt",
+      "sha256": "4f8dbbf275fef45abdce2d89144b9d67bdd7eae8b7223bb36a0d9436e4759a4b",
+      "bytes": 1308
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/update-review.py",
+      "sha256": "b2c969626b126168c12d77f135e89f07b77447b033bbdd20289160ed6f81e5c7",
+      "bytes": 4757
+    },
+    {
+      "path": "source/pilot-v1/battle-setup-v2/workflow.md",
+      "sha256": "6edff8197d502c489801c42591f0157b16f1498f617e64f7385e259eb89c7ec9",
+      "bytes": 2346
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/assemble.py",
+      "sha256": "620e9d7f1a7692e78c03869d1fae3004b36d97fce1422a4c95bf7c8e598ab814",
+      "bytes": 6256
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF2-left-bridge-prompt.txt",
+      "sha256": "982ff5304e05a1d413f7e81b3893d611d4352434cf27c008e8642cddfae21bd4",
+      "bytes": 1348
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF2-left-prompt.txt",
+      "sha256": "402165ef56ffc2b3192877d8f24cbeca147d20bfb7ea15e527cc6fd3326eaf3f",
+      "bytes": 1748
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF2-right-bridge-prompt.txt",
+      "sha256": "dffc940c6eecc13d58a733b349df963bce47c25b90af376475f8b1a58c0eb987",
+      "bytes": 1349
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF2-right-prompt.txt",
+      "sha256": "bde49eea4ba72865712ed75b4f385a7633d911086c8c25a4951b8be8bdbaa732",
+      "bytes": 1745
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF3-left-bridge-prompt.txt",
+      "sha256": "7fa37190852b62eec072f14372ab3e7335c361db838cc50f10e9f18fd7c8cb02",
+      "bytes": 1348
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF3-left-prompt.txt",
+      "sha256": "26ba1f01d9db506c7f8fc8378ecc131c2743a835e248ccf2907b54c8c576f3ee",
+      "bytes": 1748
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF3-right-bridge-prompt.txt",
+      "sha256": "cf8698279be80694a98a4aed335c95f9f3439975ee50ce155527a2d7e8bdf24f",
+      "bytes": 1349
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF3-right-prompt.txt",
+      "sha256": "f485f243685e2236fb122f6927cf13a8f762bbace3f617e8ba53cb799a57bdee",
+      "bytes": 1745
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF4-left-bridge-prompt.txt",
+      "sha256": "cdba6ca7003d3aa3a5a5a9aa975097ea4e2691529c68a932a2623957864dcec6",
+      "bytes": 1348
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF4-left-prompt.txt",
+      "sha256": "c37f3a2a469b689ad1d61ff2a0fc0aa71af1c6f0afecdaabfb744fc6e71da7b3",
+      "bytes": 1748
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF4-right-bridge-prompt.txt",
+      "sha256": "c23305c365e6c3a516a834240d7e14b6ab9a3cc977a8b93b97f100c00097507f",
+      "bytes": 1349
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/chooseF4-right-prompt.txt",
+      "sha256": "48574e473d54dd57448bc5671f9b293f042372fe76115d67c9748143b3fa6125",
+      "bytes": 1745
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/cmtype-left-brick-retry-prompt.txt",
+      "sha256": "cf81b278366a74890cdac497d270040f0fb240dc4ceb1215806f6dbf23a9d0c7",
+      "bytes": 1479
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/cmtype-left-bridge-prompt.txt",
+      "sha256": "6703e42232ebf032e38af15e0bb5b54e9cc8db3d9e0dbaea4830f4a040c8f05a",
+      "bytes": 1564
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/cmtype-left-course-retry-prompt.txt",
+      "sha256": "d7801ed08ace78af2e5ffe6ec757eb28261a66681d150c6de185671d1df0cfac",
+      "bytes": 1537
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/cmtype-left-prompt.txt",
+      "sha256": "3ccc22e76dddd9c07fb644c21b3c9fb25ed9c5e4ef7445ba921e023bef03ae35",
+      "bytes": 1670
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/cmtype-right-bridge-prompt.txt",
+      "sha256": "20ad7cb7ac86d12093b0cd0d4ab3ee311c6750faeb244ad82ac4793b3888d211",
+      "bytes": 1397
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/cmtype-right-prompt.txt",
+      "sha256": "9bbe94730e09d5a2c5a998cfccb9b145bf29baf02b02bc4d56923a3978edaf7b",
+      "bytes": 1667
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/finish-bridges.py",
+      "sha256": "018fe9fc76093d9163260a8b6af85f2119d3d10ffd0000761e05d1c66950cd44",
+      "bytes": 4974
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/finish-course-retry.py",
+      "sha256": "cfe84d8b765c3b3c22766bdaf8d827c0ccbce2c52602c9578adc932e25edf70b",
+      "bytes": 3917
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/make-restoration-jobs.py",
+      "sha256": "75d2070868c63afc8e1f6936e19aaf7f0569e836f11639ae3327c8b0b24d8820",
+      "bytes": 2241
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/prepare-brick-retry.py",
+      "sha256": "cdfb970834a4e1ffec98a9eefa89a01312c42d5666137850e6f4bca62bc46c91",
+      "bytes": 2298,
+      "original_sha256": "af04f1d49db5ea0c0a7632e0718d78f7596e1532d7273380ea5f1cb1d4673cf4",
+      "publication_change": "Removed trailing whitespace outside the prompt string; original private recipe retained unchanged."
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/prepare-bridges.py",
+      "sha256": "b43ec2fe93041275f83bf8a7b349a46d69c89baa84a982b0a75e0c7a4650b02e",
+      "bytes": 3185
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/prepare-course-retry.py",
+      "sha256": "9b07ed48428abbdcf7e3917f9671d2b736ecaefc7b07fb8e919580ec689e1b68",
+      "bytes": 2476
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/prepare.py",
+      "sha256": "f2eadf2edbf61b79d911fe33acd5090d9dc2dfbe470c4d43207a12463324d763",
+      "bytes": 1882
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/restore-and-targets.py",
+      "sha256": "1f8d850e47d1bfaf960aeedbb1562aab806d10ee1858a6bb424904658e7a58ab",
+      "bytes": 5739
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/review-before.html",
+      "sha256": "9db239a20b448103193fff3f44221ad0d21ab15daf721d24c14c5710780bf382",
+      "bytes": 40673
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/update-review.py",
+      "sha256": "3a646c642b1c33949d1bbf9e5d1f4068f81000b392d9094f6b4c5ea5853fa20a",
+      "bytes": 9715
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/verify.py",
+      "sha256": "fbf885fe140f1060421fda8801994644db388d909804dd60a4fbff02b75e253e",
+      "bytes": 3153
+    },
+    {
+      "path": "source/pilot-v1/battle-v1/workflow.md",
+      "sha256": "7b13c3dfec186b61d5be8a754f84b59450a7eccb32712792026be5542a64f11b",
+      "bytes": 2737
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/README.md",
+      "sha256": "571c23f10044b649a6aa6fe3ca2275d5d3fea758dfc4f4f6cfebfee53bd718d7",
+      "bytes": 1819
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/color_trial-runtime-snapshot.py",
+      "sha256": "be74c22e65ca14af19ac91c634ca3f7355cc7201dec603176488bf961b9014f9",
+      "bytes": 17791
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-battle-prompt.txt",
+      "sha256": "3930a4d76d15e6d7fae9198f5a6f9f2b5f99eeaf7cc20b680dc5e7c709bfa100",
+      "bytes": 1470
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-credits-prompt.txt",
+      "sha256": "82b132901fab9393054cf5b043811f58f5f7ad2cfd0301664006e11b7dd4f07c",
+      "bytes": 1477
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-extras-prompt.txt",
+      "sha256": "4df6ce06993b0cb4bf8056cd65a86ecebc7f33a7177de03286e6c7627785190a",
+      "bytes": 1464
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-high-scores-prompt.txt",
+      "sha256": "3f11d460d3d39ca93f053ba3d2461c2316971380c6eeeb4db0150fe7917ccfd1",
+      "bytes": 1530
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-jukebox-prompt.txt",
+      "sha256": "44947af72d7b5ea00e27f0595f5fc2b0b692ac80864397016c3e508ecb4fc1ad",
+      "bytes": 1463
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-options-prompt.txt",
+      "sha256": "64e43750e266de04ed7f6fe9c0e7e6fe9ce83baa183bf53ac98010f767f2dbb8",
+      "bytes": 1474
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-rewards-prompt.txt",
+      "sha256": "295fe11e2fce421e8e949f371fbe9a64047de05424f972b89f12a81dd33faef1",
+      "bytes": 1461
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/emblem-story-prompt.txt",
+      "sha256": "7a7ca34cf88ed7f0ef2828eaaf95416baead7e9659ab94fe035986dc3047d0fc",
+      "bytes": 1473
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/prepare-emblems.py",
+      "sha256": "7448e3c86169541152e614e5648a101f2e51abdf866fec98f088aa329c47f611",
+      "bytes": 2311
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/prepare-native-references.py",
+      "sha256": "e9b690a187aa2deb193ba0599e5c46d7920c43dea4fb9ecb8408de27c08aae3d",
+      "bytes": 2546
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/restore-branding.py",
+      "sha256": "0bde72ecd7babe8cc4f2383940bb84ded21fdd8549e1b9651fa0e284db179744",
+      "bytes": 5880
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/review-before-branding.html",
+      "sha256": "6bf38fc371b8db4864310c79e6c363ed87f79afef66aee9bfc09e05c2015d181",
+      "bytes": 19423
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/title-logo-prompt.txt",
+      "sha256": "6a3979c5a4697cc78a66232f57afd722103530cf8355a8aa9a7a799046535338",
+      "bytes": 1522
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/update-review.py",
+      "sha256": "87253b5145abc0de64b810337d881f21a018045bce7081101b22fa3aeb163165",
+      "bytes": 6413
+    },
+    {
+      "path": "source/pilot-v1/branding-v1/verify-branding.py",
+      "sha256": "0647caae0a94ca61746684031bd09341f429c684a0d5f7848bf102d5b1b8296a",
+      "bytes": 2960
+    },
+    {
+      "path": "source/pilot-v1/comparison-v1/build-originals.py",
+      "sha256": "afd09ca439eea14444588fb05396452ebe4eeac1621bfa0418eea6a4589bc47c",
+      "bytes": 4458
+    },
+    {
+      "path": "source/pilot-v1/comparison-v1/review-before-comparison.html",
+      "sha256": "ee07ec20473e97851346dafd16fae06dad0ecdf08a3ab1eedf18dd4b282e4e86",
+      "bytes": 13001
+    },
+    {
+      "path": "source/pilot-v1/comparison-v1/update-review.py",
+      "sha256": "4ce4cf6388a6b4ee1b43940ee4b83844eef76006ae4c2220551e399a065ce6d2",
+      "bytes": 7927
+    },
+    {
+      "path": "source/pilot-v1/finalize-private-artifacts.py",
+      "sha256": "ed83044fc33ab43e546b387320141cc7b4f7b38d6a3c59a6c3b70333fd81faff",
+      "bytes": 3514
+    },
+    {
+      "path": "source/pilot-v1/hiscores-approved-v1/approve.py",
+      "sha256": "a083fb836c3f1973cdbff49048c9ed678e006cf3e000798bc68931b4f9161f35",
+      "bytes": 2091
+    },
+    {
+      "path": "source/pilot-v1/hiscores-approved-v1/review-before.html",
+      "sha256": "35040158e7134007e060fee2cea6c8a71344c94a91c4ede494aaf0859920b9e4",
+      "bytes": 68019
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/archive-and-sync.py",
+      "sha256": "c1fd8e8ca85b9451cd09f6476c4b35fbb5c37198b339cb734632738cb34c8a7a",
+      "bytes": 4018
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/assemble.py",
+      "sha256": "80e483f5033aec75a30214fdbada4f4d6946c8463abd7237f2e72d3a6da498c8",
+      "bytes": 4682
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/prepare.py",
+      "sha256": "efab1d1b939b85236bdf9a5fcedaef5e597e28d530bc1049bdc39df63f2c0106",
+      "bytes": 1411
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/restore-and-targets.py",
+      "sha256": "b5b7bb4300b27e4f82d199929e14289abf644521cb89ad7e3abe65e7bbad3eb6",
+      "bytes": 2123
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/review-before.html",
+      "sha256": "f814575fac0c08b5f5dd0828055d0a7d15f378ad872a69b937a992c3d79f07f5",
+      "bytes": 62350
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/update-review.py",
+      "sha256": "6b3caae1470398b06a1e39a44a5339076f3ef34a155ab5442f79b2a44ddc31be",
+      "bytes": 6148
+    },
+    {
+      "path": "source/pilot-v1/hiscores-v1/workflow.md",
+      "sha256": "f487e964a9f2764361d443c81a2f4458ae4ac806283e27aaef8e5bb81759ee21",
+      "bytes": 1787
+    },
+    {
+      "path": "source/pilot-v1/import-menu-trials.py",
+      "sha256": "7150ab1304ab74dd102ae2cab00b4d6bd4a34f1463653b192f62f614c81313cf",
+      "bytes": 4295
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/assemble.py",
+      "sha256": "a38d3d0b390630db2488c3000b7258d0481dab35c594e750ac9a657a55b25143",
+      "bytes": 1060
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/finish.py",
+      "sha256": "0c992513850793ac09c35a9d7667a01186568df16b8d858a34bb054341af62a3",
+      "bytes": 2752
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/jukebox-left-courses-prompt.txt",
+      "sha256": "72922538bbbe2c3fb931497cc2be3289756ec4cf6d36d0207ff556dab5b9f9eb",
+      "bytes": 1885
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/jukebox-left-prompt.txt",
+      "sha256": "0b572011627a28b6ce2dc0d5bcc3b91454540b186f5f96876285f5d7f6e07c1e",
+      "bytes": 1998
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/jukebox-right-courses-prompt.txt",
+      "sha256": "6c92fb49ab0cebe89ec25919d95310b77ab3581ed1f28fe2f43610a8b8c5918d",
+      "bytes": 1882
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/jukebox-right-prompt.txt",
+      "sha256": "d29a7690ef122ee67e6b876ffd0281689e31d39b635ee9c872a7def1a8025a4b",
+      "bytes": 1995
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/mortar-guide.py",
+      "sha256": "2b110c625e0ce92363fa5a48dd28a668fb77e715854986860efc95cf50bc436f",
+      "bytes": 931
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/options-right-prompt.txt",
+      "sha256": "9775df64085302799528ebcc4ea8e7bbd2a500a3859b36e211074de37889ea2a",
+      "bytes": 2117
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/prepare-masonry.py",
+      "sha256": "5160b4b3ca8064f20730117d9f10d10235ff27d0c60f87df8ecf19d95d947d3d",
+      "bytes": 928
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/prepare.py",
+      "sha256": "442f9b09d9531378238b1865236b08e30251f1b2d6f9bb44d0aa50e29f87f832",
+      "bytes": 1436
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/review-before.html",
+      "sha256": "3cce57954d5e0cb964f232ba830a76d60cd0d72e2d38fa0887c82b360ecca589",
+      "bytes": 36943
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/update-review.py",
+      "sha256": "5be38932f698ac8d5711457cb78e7c23b8be0c3afe3a03a31c631d29302f1a62",
+      "bytes": 3797
+    },
+    {
+      "path": "source/pilot-v1/menus-seams-v2/verify.py",
+      "sha256": "43f7f1e339ef9377106c7cac658467fb613d7cef554c1a78f414130009f48660",
+      "bytes": 1906
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/assemble-wide.py",
+      "sha256": "eabb2b77aaa94fbc9eb729219420060fc3342fed03b3f02e327cbcdb0a1028b9",
+      "bytes": 4162
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/finish-bridges.py",
+      "sha256": "a9bd082d69bd8c49605dcfa6a5c77355982ffe34ce15cefbf1512f7e17d0da77",
+      "bytes": 4005
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/jukebox-background-prompt.txt",
+      "sha256": "fe7be2546b33c65619d0dce503d4534c9f4f4280cd3784062fd60b3b29fe6abe",
+      "bytes": 1233
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/jukebox-left-bridge-prompt.txt",
+      "sha256": "d2b64e00871767c2453147694ebc07883c36b2765fb531165a904bead449f25a",
+      "bytes": 1842
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/jukebox-left-prompt.txt",
+      "sha256": "375b30ecad9051c5bf1ee1cd79bd64f86748de91357efa2b2af2f6f483dcb8f1",
+      "bytes": 1962
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/jukebox-outpaint-prompt.txt",
+      "sha256": "7e644eda6e4ace2b03ed1e37d8955ee4a71c44a281075d581373779f01610502",
+      "bytes": 2278
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/jukebox-right-bridge-prompt.txt",
+      "sha256": "8e039a3f797d79b8941ee982aed8a2f20e379f666d94859fe8e25d180999a033",
+      "bytes": 1842
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/jukebox-right-prompt.txt",
+      "sha256": "597e0b0a5d8f1c1a3f74f0d2e8b84b098f47934ca36b507a0f9f5b80fcea7c64",
+      "bytes": 1957
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-left-bridge-prompt.txt",
+      "sha256": "d2b64e00871767c2453147694ebc07883c36b2765fb531165a904bead449f25a",
+      "bytes": 1842
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-left-prompt.txt",
+      "sha256": "375b30ecad9051c5bf1ee1cd79bd64f86748de91357efa2b2af2f6f483dcb8f1",
+      "bytes": 1962
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-outpaint-prompt.txt",
+      "sha256": "9d196133da1a7354ac03165b8ff3c1e16fca9b30fd630098718345bf67cf6719",
+      "bytes": 2437
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-panel-prompt.txt",
+      "sha256": "8a72bf028ab33f9c781965ac4f1a97af07cfb054508e394161d72394c88f1fbf",
+      "bytes": 1197
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-right-bridge-prompt.txt",
+      "sha256": "6d0a44a3d9f7ebcd7560382b5e64338c5ee48fc6c12e76cf8f614b05b32c95eb",
+      "bytes": 1762
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-right-prompt.txt",
+      "sha256": "a01c4cfc2bc887e7744d3df5c4a68a60814a1d465be14dec0327ce2c22c97235",
+      "bytes": 1946
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/options-wall-prompt.txt",
+      "sha256": "bc692177a3c5672593ce06e98ed5ec13d1e15232cd4ef28aa80d3597f8f80257",
+      "bytes": 1188
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/prepare.py",
+      "sha256": "42d7f690e7ce8a419b279322229ce88ab75db33bcfb4bfd7091c875f073c1f7a",
+      "bytes": 3189
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/refine-transitions.py",
+      "sha256": "cfd10dc4c870a73e42b00537a15c3a38228954273b83b40d3e3a585910aa3443",
+      "bytes": 2241
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/restore-and-layout.py",
+      "sha256": "6b9bcc6aab90d9ac4eca8ad98691c41fc8cb4255e60ce51e152f884a44b02ee2",
+      "bytes": 6342
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/review-before-menus.html",
+      "sha256": "0805beb0df5440481085acb50a54eb6fc2b6a6f6cf7669f9d044f08da31ca2d7",
+      "bytes": 26928
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/update-review.py",
+      "sha256": "fc49bdc74fd473efb299188b9a2dd3273ba85a9cfc276a3d3b29c523cc61e22b",
+      "bytes": 11327
+    },
+    {
+      "path": "source/pilot-v1/menus-v1/verify.py",
+      "sha256": "242c5c29799a1686d99b95369a1f31ffe88ca54f4a8f45c85d87b0dd35536e7b",
+      "bytes": 3529
+    },
+    {
+      "path": "source/pilot-v1/mode-wall-dark-color-revision-prompt.txt",
+      "sha256": "1ff804c0f2db71eb931f33f0b512e7e34bd6f7075edc2b3cfed7aeedbd04ab62",
+      "bytes": 1150
+    },
+    {
+      "path": "source/pilot-v1/mode-wall-dark-tile-4-import-provenance.txt",
+      "sha256": "73c097a9a8e2717aa2835f1a49949a53d1cd02af3866db990a4898e4768b4836",
+      "bytes": 4531
+    },
+    {
+      "path": "source/pilot-v1/mode-wall-dark-tile-5-import-provenance.txt",
+      "sha256": "83637f367aceeb6b5fe1013b9afbdea7c5b5f5090225cf90f6d9e0f48bbf753b",
+      "bytes": 4531
+    },
+    {
+      "path": "source/pilot-v1/mode-wall-restoration-prompt.txt",
+      "sha256": "604471090d9d5333941b7cebf8b8ab67598ad31447a193fb98d19cef2f7a2963",
+      "bytes": 2047
+    },
+    {
+      "path": "source/pilot-v1/options-approval-20261018/review-before.html",
+      "sha256": "02d23f47fa2e1b5f228e1b44db302e3c9307b8375865cb62e40ddd539aedee75",
+      "bytes": 40570
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/assemble.py",
+      "sha256": "3f22017f91731a26bc0e77b175dccf1fe1dcc0d58c278f408946c60481219d3a",
+      "bytes": 2426
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/bridge-prompt.txt",
+      "sha256": "4d7668ecd8103329a9e156ffd050788da765605b100ac5a6e4f77778a350b6d7",
+      "bytes": 1655
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/door-prompt.txt",
+      "sha256": "3be78b1066eea45a81fd5fab8faf7355b624918b3817888eca0cfe7f02ca774b",
+      "bytes": 2654
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/finish-bridge.py",
+      "sha256": "4772418c99bbd7ec0a8908d8cb5199b8c27ca283dac71c2c33b22e3f80b1035d",
+      "bytes": 1837
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/prepare.py",
+      "sha256": "330346cfdde8821ac4148e3cd81f0586782e25ed22552d8f36a4728a67676fbd",
+      "bytes": 2641
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/review-before.html",
+      "sha256": "e494cc13838e26658a1123e88cfd661283239196ead3d93d4a1b30019bb1d3bf",
+      "bytes": 39111
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/update-review.py",
+      "sha256": "399125b03c265d17a96fd6374467d50c3b282644c72409e23a3047fb89392abf",
+      "bytes": 4754
+    },
+    {
+      "path": "source/pilot-v1/options-door-v3/verify.py",
+      "sha256": "8d72c7f9566387952bfc9c2c74760dbc6f8ef3eade10e80672b4fbdaac7e7c6d",
+      "bytes": 1540
+    },
+    {
+      "path": "source/pilot-v1/options-softness-v4/assemble.py",
+      "sha256": "e66b97cbd996f5a32990f16e2abe88a704c4a8be7f6625ece00cfaab7a26d6fa",
+      "bytes": 3416
+    },
+    {
+      "path": "source/pilot-v1/options-softness-v4/prepare.py",
+      "sha256": "264a4179387604c65ad29336c6e4b0979b635ec92eb0bafd6f49de4d413460d3",
+      "bytes": 859
+    },
+    {
+      "path": "source/pilot-v1/options-softness-v4/review-before.html",
+      "sha256": "f09f7619bd61e93d00a8a865154d35a5bcb65d9bac576ae388c274134b3ee1ae",
+      "bytes": 39972
+    },
+    {
+      "path": "source/pilot-v1/options-softness-v4/softness-prompt.txt",
+      "sha256": "ee8800b19af059a65748ffe1c7ce034d7af5f672ddb5ddbac95d2c554cd77a2f",
+      "bytes": 1438
+    },
+    {
+      "path": "source/pilot-v1/options-softness-v4/update-review.py",
+      "sha256": "33f63aa719648c50debd47242cb3d804c976b6fb42aacc3e2db5cb75b6ef3328",
+      "bytes": 2514
+    },
+    {
+      "path": "source/pilot-v1/palette-proof.py",
+      "sha256": "f5565812155463f13e3cea4c09ebefd8a67345e61b003c40c9ef3f67b7fc429a",
+      "bytes": 5311
+    },
+    {
+      "path": "source/pilot-v1/prepare-next-batch.py",
+      "sha256": "0213eadb770da805f657054b7a3654a3a52b3728dacf48e3efe487cd305e4d63",
+      "bytes": 3959
+    },
+    {
+      "path": "source/pilot-v1/remaining-menus-v1/inventory.py",
+      "sha256": "89f6f223dfba16cd85076b3d6753a587f28937e313c2d602b97ebaca4064172d",
+      "bytes": 1730
+    },
+    {
+      "path": "source/pilot-v1/results-approved-v1/archive-and-sync.py",
+      "sha256": "0e49aa5ee4c3a702e5188882e8effe10a129776a99f3b694433965b134ce81bd",
+      "bytes": 4016
+    },
+    {
+      "path": "source/pilot-v1/results-approved-v1/record-and-count.py",
+      "sha256": "837e325ede59006ea8f35370eb770193a077ec0be26164c48557f432cbacca20",
+      "bytes": 6936
+    },
+    {
+      "path": "source/pilot-v1/results-approved-v1/review-before.html",
+      "sha256": "06a29ccf51e4606340c1285ccc82c246e5643c9cd39412df7c6027577f41fde0",
+      "bytes": 75574
+    },
+    {
+      "path": "source/pilot-v1/results-v1/archive-and-sync.py",
+      "sha256": "cdcb2594dd5e1e8fab7dd28f5a88bfeb8276e7fb27b20f7f4f3b275e9fc150f9",
+      "bytes": 4236
+    },
+    {
+      "path": "source/pilot-v1/results-v1/assemble.py",
+      "sha256": "9adee6196a0e2fbf39530f8741a9294bf09787a9acaaad2f0f9a1210f2a5af9e",
+      "bytes": 8137
+    },
+    {
+      "path": "source/pilot-v1/results-v1/prepare.py",
+      "sha256": "9b0151d3a6a513fbb719345f88d6f5765d011b2cbe323956c0bd5b051d691c3c",
+      "bytes": 3077
+    },
+    {
+      "path": "source/pilot-v1/results-v1/review-before.html",
+      "sha256": "985c9023578d22ff5df3785c6c0d45809e9a258f53926fc3816020753e32f962",
+      "bytes": 68128
+    },
+    {
+      "path": "source/pilot-v1/results-v1/update-review.py",
+      "sha256": "3d6c8105c7166188f3d3c203f012b0b7395676911a1335ea72128329b4b7dc40",
+      "bytes": 7950
+    },
+    {
+      "path": "source/pilot-v1/results-v1/workflow.md",
+      "sha256": "c4ffc347029e8ba99ae3408d059669899c274ff18da40fdd647bba95e9f5617f",
+      "bytes": 4217
+    },
+    {
+      "path": "source/pilot-v1/review.html",
+      "sha256": "8d32a9325b6806ec07402ff8552a5173dc27de136763eca8f4754010951044c9",
+      "bytes": 75763
+    },
+    {
+      "path": "source/pilot-v1/rewards-approved-v1/approve.py",
+      "sha256": "4381fd656c4041aa4c0a32554a2cc9d6b0adfecaca50b1ef32f708c3dfea0221",
+      "bytes": 2306
+    },
+    {
+      "path": "source/pilot-v1/rewards-approved-v1/review-before.html",
+      "sha256": "f665fd6df7e50a938aaab5b370dcca6f3144c0872da38bf41c102c867812310a",
+      "bytes": 62194
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/archive-and-sync.py",
+      "sha256": "ce2a726893a1c2b771c67a834f698b7dd1f1b540412dae6529620f0f7114d28f",
+      "bytes": 4107
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/assemble.py",
+      "sha256": "382effef1ad203a1e7f133e1d40aa3321c86ff7da01ce115ebd90311d8a5f354",
+      "bytes": 7916
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/prepare.py",
+      "sha256": "54febf3a168c359014cdf1a0ac38f3c218e6588da4fda63b8e3e2cacf0a12ad9",
+      "bytes": 1908
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/restore-and-targets.py",
+      "sha256": "764b167e8c86fd278aaabcd2c10fae3d927a4182575ea8c5716b5329374128e1",
+      "bytes": 3177
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/review-before.html",
+      "sha256": "5ebf735c8ebf002dfe0aa8a6476fc188cb9414b18869cbf9fad383252ee144f3",
+      "bytes": 55688
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/update-review.py",
+      "sha256": "c03f2f5d6c3643e6c1965f880c345ee45848b4a009a9bd2579571e8e9bfe47e5",
+      "bytes": 6978
+    },
+    {
+      "path": "source/pilot-v1/rewards-v1/workflow.md",
+      "sha256": "832275bdc8b331a17b6b87f0dedb71baae46d3210cab3f0f6a7b00a578b58377",
+      "bytes": 2023
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/assemble-bridges.py",
+      "sha256": "775f7d22fef9f694283c718fee3d54cd13596ed34201a19bb91ce4e5fec0195b",
+      "bytes": 6322
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/finalize-evidence.py",
+      "sha256": "9a2cc9ba0f01d75ba6a792aa837d241a51fbc1b995b355d8a0cd74f80709e984",
+      "bytes": 2261
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/left-bridge-prompt.txt",
+      "sha256": "238c9d403187d44afc3b38790f236a226b8a8c3d53cafc6700ba549092997250",
+      "bytes": 2120
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/menu-widescreen-extension.txt",
+      "sha256": "7c7601360dcde5491a9395c1100d2bf0073ef4604eba688b6b5318b714030df9",
+      "bytes": 3411
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/persist-authoring.py",
+      "sha256": "36f1c5239ad57dab2676f0064879a8666eb43c0576b124d86badf0f66706ae73",
+      "bytes": 4382
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/right-bridge-prompt.txt",
+      "sha256": "1d3d1e556f82f268b5a49eb0b1be460835002f839387845c201497eb85a9a899",
+      "bytes": 2120
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/update-handoff.py",
+      "sha256": "055e12618496a9300452462966f02929ee65d37c8f124e68b47c6207d3eeb8b6",
+      "bytes": 2674
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/widescreen-backgrounds.md",
+      "sha256": "a20b8e81faaee58e62c4ea3c5a88773ef85d136b5fb08972695a7fd8d8fbcfb7",
+      "bytes": 3141
+    },
+    {
+      "path": "source/pilot-v1/seam-v2/worklog-entry.md",
+      "sha256": "ef402dd4cbc5d82e93970b16569aff8a4959d1e52e33c814aee3f494ea5809f6",
+      "bytes": 863
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/assemble.py",
+      "sha256": "e98c27f5a1e17210194090a633362c0d2d62e5c3a3f02c24fa3c99fcfe260895",
+      "bytes": 4170
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/handoff.py",
+      "sha256": "71e5fa6a3e6f91c1df7b063f21b156a81042104ac93dd7872423f1c71a33bf5a",
+      "bytes": 2767
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/persist-state.py",
+      "sha256": "ea58324a627205d2191e30be3b68fd7b80c500749c4c757649677aeabd8c3352",
+      "bytes": 3641
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/prepare.py",
+      "sha256": "7c89c8a840f0240ef8dd99f3e244b507db23b3773a3f032d8d8ceb80debdeba2",
+      "bytes": 869
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/review-before-v3.html",
+      "sha256": "52aaa8c3fa88ee15a704ba99188a17b776ff3d3b75b04c9c98231360e78261d1",
+      "bytes": 8353
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/right-full-height-prompt.txt",
+      "sha256": "e4f75f2a2394553f01ff81726bb57873037fdb6169797175071bf138194e9432",
+      "bytes": 2268
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/update-review.py",
+      "sha256": "1a1f7476706847f36372c8d812427b0fe81147a7131fadbd16d992f753916c1e",
+      "bytes": 2343
+    },
+    {
+      "path": "source/pilot-v1/seam-v3/worklog-entry.md",
+      "sha256": "f8a745c053fff9320ee18a460e357a8d3750b3cb9e6648eebe9203b0ef080304",
+      "bytes": 816
+    },
+    {
+      "path": "source/pilot-v1/title-restoration-prompt.txt",
+      "sha256": "97f2c5462a3e2548fdde3875d5201524c18a6e0c3bf9eb0aac398814b2ee01c0",
+      "bytes": 1871
+    },
+    {
+      "path": "source/pilot-v1/title-skyline-color-revision-prompt.txt",
+      "sha256": "c6b3a1eb4ca0365ece79d25021f39e228107eeeb51e3b73cf63a2950258ca634",
+      "bytes": 1131
+    },
+    {
+      "path": "source/pilot-v1/title-skyline-tile-1-import-provenance.txt",
+      "sha256": "0f516275fdd2bee1d039d296934d60ff115e949abf628f5b90654b5fbfec0a45",
+      "bytes": 4334
+    },
+    {
+      "path": "source/pilot-v1/title-skyline-tile-2-import-provenance.txt",
+      "sha256": "d89e50ab33339d5416f13d6bf7e7f8b8e14258d5baa4a38bfa494acb126fc518",
+      "bytes": 4334
+    },
+    {
+      "path": "source/pilot-v1/title-wide-left-prompt.txt",
+      "sha256": "1e6f6708656229fd898ef5c9daf385a18e0136132b839fa1a2e382cb68cf5a99",
+      "bytes": 2148
+    },
+    {
+      "path": "source/pilot-v1/title-wide-right-prompt.txt",
+      "sha256": "3e05333e60ac0545aabaff4ad3443d0e145ad9492c71cabc87ef9332b4cfd35a",
+      "bytes": 2140
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/assemble-revisions.py",
+      "sha256": "fb284dccd4273f911766781ae630a37ba6f63cafe71f3ab2edafa614d5fc0ecb",
+      "bytes": 3650
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-battle-prompt.txt",
+      "sha256": "dd833339b62503968e40c472c3b584d61d4d8576d6e886a29f2b90e65c169d52",
+      "bytes": 1543
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-credits-prompt.txt",
+      "sha256": "9efb208bccb83847acc48f91190dcc26f081ade10e23b03ff5b6c489bcd9f419",
+      "bytes": 1544
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-extras-prompt.txt",
+      "sha256": "56d05212f39a1ff209969a974982c30a606830605d9ac3d05203ba025ae36410",
+      "bytes": 1539
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-high-scores-prompt.txt",
+      "sha256": "e9d946504290fc102aadb9827d3f44b5952333bff12d65d27a4a0f019604efd8",
+      "bytes": 1583
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-jukebox-prompt.txt",
+      "sha256": "4c42ff7e78314fcd1ec2ecd9c75ffe3427ef352e5c7ad22b2b730593cfd70d25",
+      "bytes": 1544
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-options-prompt.txt",
+      "sha256": "a35f16b69476b4dd5288e71528cd848a1e295123abb2cc6c911848cf5ed2fd3a",
+      "bytes": 1536
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-rewards-prompt.txt",
+      "sha256": "c708568b6ca9fdbfdfde202671c82db1c519b715dc5b18a8861d5c8b17e970aa",
+      "bytes": 1544
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/emblem-story-prompt.txt",
+      "sha256": "40a283e947fd915fc9b14910fbee9f665dae0402a2e9871acca03a9b63a08575",
+      "bytes": 1542
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/menu-art-workflow.md",
+      "sha256": "3236de39ce8cd023f138f35fdd20a2ca1db105fdde62caa2de29e32f22f6eefd",
+      "bytes": 11012
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/prepare-guides.py",
+      "sha256": "f4dbe9056a7c1d57b9edffc9e83e3873f58153c4c0844f6cb1d03fd81d7ac2ea",
+      "bytes": 1856
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/register-alpha.py",
+      "sha256": "8d467818e726d63ea2cd03ec0276c70aa05131f910efbf108b916bae4fbb95ed",
+      "bytes": 2975
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/reusable-prompt.txt",
+      "sha256": "c1918a1c48667974024116abe8f40255cf358909dc280bc7e17c277d6fca524c",
+      "bytes": 1951
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/review-before-transparency.html",
+      "sha256": "a72e519125b51f19ea3c17362687ca8aafb20833dcb272eff78c6d735ec42b9c",
+      "bytes": 25396
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/title-logo-prompt.txt",
+      "sha256": "253029b5854cb5bc2911de317256c872f9faa7ec9e4933c269d242181a2ead11",
+      "bytes": 1659
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/update-review.py",
+      "sha256": "80dc8f7aea2fa6ea89eba180c630a8ed82618bd0e863aa1fc2e4f29f702ce58a",
+      "bytes": 3680
+    },
+    {
+      "path": "source/pilot-v1/transparency-v2/verify-revisions.py",
+      "sha256": "b5ef5fcfa36f7bbe668a8bfac75a2f0713409368a04843c3d3bf486dd5080a13",
+      "bytes": 3989
+    },
+    {
+      "path": "source/pilot-v1/worklog-entry.md",
+      "sha256": "85c707e1e50fcdaf17c5978c53f504c269389de5fdd9f75ddd23491a889e99ed",
+      "bytes": 921
+    },
+    {
+      "path": "source/uv-audit/audit_pilot_uv.py",
+      "sha256": "09c7675ddd6a6e7f4cb73f34bd0dad00de295442ce876552d345a87690fcce11",
+      "bytes": 5424
+    },
+    {
+      "path": "source/worklog-entry.md",
+      "sha256": "ef0e1750c1ac463188a73765f446a0ccb611d07fcc49570f8c86da7a2299683d",
+      "bytes": 773
+    }
+  ]
+}

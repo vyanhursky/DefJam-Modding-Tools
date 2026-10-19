@@ -1,0 +1,9 @@
+from pathlib import Path
+from PIL import Image,ImageFilter
+import numpy as np,importlib.util,json,hashlib
+p=Path(__file__).resolve().parent;sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest();spec=importlib.util.spec_from_file_location('seams',p.parent/'seam-v2/assemble-bridges.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);old=np.array(Image.open(p/'options-prebridge.png').convert('RGB'));out=old.copy();im=Image.open(p/'bridge-normalized.png').convert('RGB');gen=np.array(im)[:,480:736].astype(float);soft=np.array(im.filter(ImageFilter.GaussianBlur(2)))[:,480:736].astype(float);t=np.linspace(1,0,256);gen+=(soft-gen)*t[None,:,None];fixed=gen.copy();fixed[:,0]=np.clip(2*old[:,3519].astype(float)-old[:,3518],0,255);fixed[:,-1]=np.clip(2*old[:,3776].astype(float)-old[:,3777],0,255);u=np.linspace(0,1,256)[:,None]
+for y in [0,-1]:fixed[y]=gen[y]+(fixed[y,0]-gen[y,0])*(1-u)+(fixed[y,-1]-gen[y,-1])*u
+matched,res=m.boundary_match(gen,fixed);out[:,3520:3776]=np.rint(matched).clip(0,255).astype('uint8');assert np.array_equal(old[:,:3520],out[:,:3520]);assert np.array_equal(old[:,3776:],out[:,3776:]);Image.fromarray(out).save(p/'options-wide-v3.png');Image.fromarray(out).crop((3100,0,5120,1440)).save(p/'options-door-complete.png')
+for side,edge in [('left',1600),('right',3520)]:Image.fromarray(out).crop((edge-384,0,edge+384,1440)).save(p/('options-'+side+'-join.png'))
+for r,w in [('4x3',1920),('16x10',2304),('16x9',2560),('21x9',3360),('32x9',5120)]:x=(5120-w)//2;Image.fromarray(out).crop((x,0,x+w,1440)).save(p/('options-'+r+'-v3.png'))
+(p/'bridge-receipt.json').write_text(json.dumps(dict(domain=[3520,0,256,1440],source_and_outer_exact=True,softness_radius=2,residual=res,calls=2,pilot_total=56,processor_sha256=sha(Path(__file__)),master_sha256=sha(p/'options-wide-v3.png')),indent=2)+'\n')
