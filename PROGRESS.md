@@ -3,6 +3,7 @@
 ## Current status
 
 - 2026-10-19 D157/UI — RESTORATION PAUSED at owner request until credits return.
+  Published source-only draftPR1(initialcommit3b0a0a2);gamehandover draftPR62(a130cfe). Remoteheads verified;14game focusedtests/226artpins and451game/319tools sourcechecks passed.
   Do not generate/repaint or advance Extras/phone queue. Engineering handover:
   game repo docs/menu-ui-modpack-handover.md;71sourceIDs(63approved+8conditional),
   226pinnedartfiles/12scopes,101historicalcalls. Native-shaped sparse testpack first,
