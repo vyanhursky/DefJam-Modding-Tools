@@ -1,0 +1,60 @@
+[
+  {
+    "path": "source/annotate-wall-policy.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/annotate-wall-policy.py",
+    "sha256": "72a98748ef6b8149d33543ec8c4164a4e3618d42158abb22eeec9b8fe3f87850"
+  },
+  {
+    "path": "source/assemble-wide-v2.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/assemble-wide-v2.py",
+    "sha256": "6cc286903c737079e2e25e2891e49f8a9446a2cc829b49d5009470ae996bbdfd"
+  },
+  {
+    "path": "source/assemble-wide-v3.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/assemble-wide-v3.py",
+    "sha256": "c43fcc3877f27a445327460d79b1651502af25efdb36f7d98e36497a16f03959"
+  },
+  {
+    "path": "source/assemble.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/assemble.py",
+    "sha256": "f1ced77ffdbe289de5ff098c9b0472bd923d2cf816da74b47a51de0615074400"
+  },
+  {
+    "path": "source/update-review.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/update-review.py",
+    "sha256": "a73756f4571d8988bde5e7ae676752b65c19783853eaf909cba3ac2b124dac26"
+  },
+  {
+    "path": "source/prepare-popup-survey.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-popup-survey.py",
+    "sha256": "ba4d8697f97f7e8dcc0db5ec576b9e040965467d5b979b561176e2880aec8d20"
+  },
+  {
+    "path": "source/prepare-popup-panels.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-popup-panels.py",
+    "sha256": "71bf0c7b56d18b9a42af08326646824f118c4b13672eecde44660fd4aef2633d"
+  },
+  {
+    "path": "source/prepare-profile-wall-bridges.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-profile-wall-bridges.py",
+    "sha256": "aced66d53ad60224b3c25b5f5b2c4fbaed4549b47e1364dffa7e03df66f162cd"
+  },
+  {
+    "path": "source/map-shared-popup-assets-20261020.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/map-shared-popup-assets-20261020.py",
+    "sha256": "517c0bc127bdad256437a1f53af39876e13cc93830f4504d92b6bbb3a229b89b"
+  },
+  {
+    "path": "source/map-profile-autosave-assets-20261020.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/map-profile-autosave-assets-20261020.py",
+    "sha256": "6b1f50141eae520e4687d21d9eb69818abe33e39d43411994975e1cbcc36a455"
+  },
+  {
+    "path": "source/review.html",
+    "sha256": "90566c1a1b17c94b2256e563c5a58925faf6623d8d6e8ae9fd512fa4878cee60"
+  },
+  {
+    "path": "source/workflow.md",
+    "sha256": "e3767197a0ce5fe43fd85ea3fce3112a1dd3a90649ab1f9196185b32c2c8321b"
+  }
+]

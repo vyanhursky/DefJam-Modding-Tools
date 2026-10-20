@@ -2,6 +2,37 @@
 
 ## Current status
 
+**Source publication pending:** Both commits are local; pushes failed because
+macOS Git credentials were inaccessible and GitHub CLI reports an invalid token.
+Renew sign-in with `gh auth login -h github.com`, then push the existing game
+and authoring branches; PR62 description still needs the new batch update.
+The local review and verified artwork archive are ready.
+
+- 2026-10-20 D170/UI–D171/UI — Two batches pending; popup/profile first.
+  Vlad explicitly leaves the previous16-item/19-source batch for review. No
+  approval/pin/export inferred; all prior pixels unchanged. Catalogue343pins/
+  92reviewed IDs remains74unconditional+8Mode+10transition conditional.
+  New15-item/22-source popup/profile/autosave batch: ten paper restorations,
+  original-core widened profile wall, four Faithful stamps/effects.15new
+  built-in calls/142historical. Native wall admitted zero generated pixels;
+  source core, baked paper/emblem exact. Wide wall v3 repairs both128nativepx
+  joins, then fineLcontrast match(.625left/.885right median); v1/v2 retained.
+  Native UVs, header stretch, negative offsets, platform/language/live text
+  remain separate. PS2 French is under PS2bkg50, GC uses A/B, Xbox independent.
+  All343pins/2,044previousPNGs,22tilealpha/graphics/guards/padding,75centers exact.
+  Browser60reference/channelcases+75aspectpairs loadedafterrevisit,3BG/modes,
+  75%bounds,3wallversions/bothjoins,nooverflow/errors;22focused tests pass.
+  All15new studies UNAPPROVED, notinstalled/exported. Phone/Extras approved
+  source4xexports ready/uninstalled; ladder conditional pendingnativepan.
+  Running game untouched. Preserve8768writer/17candidates/Trejo.
+  Review51738: newbatch above previous16, original/Faithful/alpha/overview/
+  five ratios/bothjoins/history. Source-only bundle
+  research/menu-ui-popup-profile-20261020/; private additive archive
+  <data>/scratch/menu-ui-popup-profile-v1-pending-20261020/.
+  Next: explicit feedback on bothbatches, then bounded remaining Story/widget/
+  map classification. Native validation when serial game testing available.
+  Historical records below.
+
 - 2026-10-20 D168/UI–D169/UI — Phone APPROVED; sixteen-item Menu/UI batch IN REVIEW.
   Phone frozen10files/2IDs; game catalogue343pins/92reviewed IDs(74approved+
   8Modeconditional+10transitionconditional). Separate2tile4xexport exact,

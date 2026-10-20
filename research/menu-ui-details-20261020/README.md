@@ -1,5 +1,10 @@
 # Menu details review batch and phone approval — 2026-10-20
 
+**Later same-day direction:** Vlad says these look good but explicitly leaves
+all16forreview(D170/UI); no approval/pins/export. See
+`../menu-ui-popup-profile-20261020/` for the next unapproved batch.
+
+
 Read current PROGRESS.md and copied game reports. Phone APPROVED,10pins/2IDs;
 separate two-tile source4xexport prepared/uninstalled. Catalogue343pins/92reviewed
 IDs. Ladder v4 remains conditional pending native pan playtest; no geometry or
