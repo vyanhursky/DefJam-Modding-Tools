@@ -2,6 +2,24 @@
 
 ## Current status
 
+- 2026-10-20 D163/UI–D165/UI — Extras APPROVED; fire-escape v4 IN REVIEW.
+  Six Extras studies/nine source IDs/51newpins; game catalogue277pins,80IDs
+  (72approved+8conditionalMode). Separate9-tile4xexport pixel-identical,notinstalled.
+  Owner says leave launcher-redesign game running; no further game launch/stop.
+  Transition ten-tile texel reconstruction,11new builtin calls/117historical;
+  rejected coarse material/framing retained. Source-guided bridges plus v4
+  L-only contrast matching; original/restored center,tilealpha/guards/padding
+  exact. Bitmap9 placement differs from texel reconstruction; keepFaithful-only
+  and defer actualpan/geometry/wideregistration. Alltransitionart UNAPPROVED.
+  Review51738 first:5aspects/play/scrub/wipe/bounds/bothjoins; browser30states/
+  3joinpairs pass,nooverflow/zeroerrors. 1,445oldPNGs/277pins exact,22focused
+  game-side tests pass. Existingpacks/defaults/8768writer/17candidates/Trejo
+  unchanged. Private archive menu-ui-transition-v4-extras-approved-20261020;
+  source recipes/prompts/review in research/menu-ui-transition-20261020/.
+  Next: transition art feedback/refinement, then guarded livepan/bitmap9 checks
+  when serial game testing is available. Old23-source shortlist now19; Story
+  phone/venueframes/Startgraphics remain. Historical blocks below.
+
 - 2026-10-20 D161/UI–D162/UI — RESTORATION RESUMED explicitly by Vlad.
   PR62 already implements HD/wide menus and contains PR73's settings fix;
   combined toolkit dd63e17. Owner playtest: menus/ultrawide look good.

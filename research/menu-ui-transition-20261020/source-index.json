@@ -1,0 +1,65 @@
+[
+  {
+    "path": "source/assemble-v2.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/transition-v1-20261020/assemble-v2.py",
+    "sha256": "8ef9ffdf4253064c7d28145d288251828689debdc7542b3d9d2fed64f14d7d89"
+  },
+  {
+    "path": "source/assemble-v3.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/transition-v1-20261020/assemble-v3.py",
+    "sha256": "d483ee7dca00d1ff6dadc88bd85f55316735e3813cd0bb59132dabdd7b5c1c5f"
+  },
+  {
+    "path": "source/assemble-v4.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/transition-v1-20261020/assemble-v4.py",
+    "sha256": "4e07005fd98d9fa1f69e5770c58038ed71986776c7d5874193c7a4bb2a82605e"
+  },
+  {
+    "path": "source/assemble.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/transition-v1-20261020/assemble.py",
+    "sha256": "f5ab15c13e13fc0b5e204e26794afb42c6e31f1031edf75ebb5aec7e431888a4"
+  },
+  {
+    "path": "source/update-review.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/transition-v1-20261020/update-review.py",
+    "sha256": "638f2f3f710ba16077e8b349f4976ccb2882fd0b27c8364816ed9920fe468758"
+  },
+  {
+    "path": "source/audit-transition.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/audit-transition.py",
+    "sha256": "6423e93fc1a833ab84302621386b5551b6868215f202668760aeb873cec78396"
+  },
+  {
+    "path": "source/inspect-transition-links.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/inspect-transition-links.py",
+    "sha256": "900948b06a4e4971d0827d0a1eda02aa7d48f959208baa4539b6b81793eab11b"
+  },
+  {
+    "path": "source/prepare-transition-art.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-transition-art.py",
+    "sha256": "dee495ff7a702a961d7d50167fa1e0713047159d03c4224c7162c09431381482"
+  },
+  {
+    "path": "source/prepare-transition-retry.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-transition-retry.py",
+    "sha256": "b720114631d4c7a37c56e17c2e7d369c4ff41a81361557705e969561a9bd3a93"
+  },
+  {
+    "path": "source/prepare-transition-bridges.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-transition-bridges.py",
+    "sha256": "f05f0b3f31a3f38556c514bd2d8c7e6c4a9a0a0faf4399b92d31e6a79c711032"
+  },
+  {
+    "path": "source/approve-extras.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/approve-extras.py",
+    "sha256": "9fde57792f6163cde429cd2160f9a85d5c75719b0efd3e4b9fce6bd89bfd8851"
+  },
+  {
+    "path": "source/review.html",
+    "sha256": "6c8588c568ef789f711e9e8945c9028608e1a531a5ce479161aa81f53d7088f6"
+  },
+  {
+    "path": "source/workflow.md",
+    "sha256": "96df5f69b06154eeef96e75c372a4df85dab97829f10638fcb20569d11f5dba3"
+  }
+]

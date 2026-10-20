@@ -1,5 +1,9 @@
 # Resumed menu/UI source preservation — 2026-10-20
 
+**Later same-day update:** Vlad approved all six Extras studies. See
+`../menu-ui-transition-20261020/` and current PROGRESS.md; keep the draft
+recipes below as historical evidence.
+
 Six new unapproved Extras studies / nine native source tiles; five built-in
 imagegen requests,106 historical total. Read the coordinating game repository's
 `docs/research/menu-extras-restoration-2026-10-20.md` and transition mapping.
