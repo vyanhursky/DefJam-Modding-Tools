@@ -2,6 +2,27 @@
 
 ## Current status
 
+- 2026-10-20 D168/UI–D169/UI — Phone APPROVED; sixteen-item Menu/UI batch IN REVIEW.
+  Phone frozen10files/2IDs; game catalogue343pins/92reviewed IDs(74approved+
+  8Modeconditional+10transitionconditional). Separate2tile4xexport exact,
+  uninstalled. Ladder v4 conditional pending native moving-pan playtest.
+  Larger batch16items/19sources:3venuecards+4Startstickers restrained papers;
+  6supporticons+2shadows+radialeffect Faithful-only. Two raw icon proposals
+  invented dots/halftone and rejected; no pixels adopted.9new built-in calls,
+  127historical. Sourcealpha/ink/geometry/UVguards/padding exact;343pins and
+  1,751priorPNGs unchanged.80isolated aspectpairs retain graphic size; not
+  game placements. Browser64ref/channelcases+80aspectpairs loaded,3BG/3modes,
+  75%bounds,nooverflow/zeroerrors.22focused game-side tests pass. All16batch
+  candidates UNAPPROVED, notcatalogued/exported/installed. Phone remains frozen.
+  Leave launcher-redesign game running; no game/build/runtime/default/pack edit.
+  Review51738 batch first, overview/selector/native/Faithful/alpha/wipe/5ratios.
+  Artwork/history local; source bundle research/menu-ui-details-20261020/.
+  Private additive archive <data>/scratch/menu-ui-details-v1-phone-approved-20261020/;
+  earlier complete/Extras/transition/phone archives immutable. Preserve8768/
+  17candidates/Trejo. Next: explicit batch feedback, then remaining UI
+  classification beyond17-ID prioritylist; native validation when serial game
+  testing available. Historical blocks below.
+
 - 2026-10-20 D166/UI–D167/UI — Transition v4 CONDITIONAL; Story phone v1 IN REVIEW.
   Owner likes ladder art; full approval pending native moving-pan playtest.
   Freeze56files/10IDs; catalogue333pins/90reviewed IDs(72approved+8Modeconditional

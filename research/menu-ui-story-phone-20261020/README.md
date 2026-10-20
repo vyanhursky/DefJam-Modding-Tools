@@ -1,5 +1,10 @@
 # Story phone draft and conditional ladder approval — 2026-10-20
 
+**Later same-day update:** Vlad approves phone v1(D168/UI). See
+`../menu-ui-details-20261020/` and current PROGRESS.md. Production notes below
+retain their pre-approval wording as history.
+
+
 Read current PROGRESS.md and game reports here. Ladder transition v4 artwork
 is conditionally approved,56frozen files/10IDs; full approval requires native
 moving-pan playtest. No runtime registrations or geometry changes. Bitmap9
