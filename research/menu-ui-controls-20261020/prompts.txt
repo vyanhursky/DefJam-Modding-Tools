@@ -1,0 +1,18 @@
+# Exact built-in imagegen prompts — 2026-10-20
+2new calls /144historical. Final alpha/palette/geometry are technically restored; raw proposals are not finals.
+
+gym-paper
+transparent_background: true
+reference: gym-paper-edit-input.png
+reference_sha256: 0649f75a0f0e28924623f78f496fa2a6dddbb17758eb138ebc2b221821f798fc
+raw: gym-paper-raw.png
+raw_sha256: f7bf3c26cbf8d718c732251310a7eb73c0ab1986394a2930bf2a8baf762d9960
+Restrained archival restoration of this exact Def Jam Fight for NY Gym folded-paper UI texture. Preserve composition, exact native palette, neutral cream/gray paper, muted ochre header, dark printed bands, all folds, damage, border proportions, and transparency. Clean pixel stair-stepping and add only delicate original-scale paper grain. Do not warm/yellow/regrade, brighten, sharpen aggressively, invent text or marks, move folds, redraw the header or silhouette. Keep the entire same canvas and alignment. The 4-tile joins at source x256 and y256 must remain seamless in paper grain, folds, color and focus. Transparent margin stays transparent; no black matte. Reference is authoritative.
+
+popup-texP
+transparent_background: true
+reference: popup-texP-edit-input.png
+reference_sha256: 86a5e224833e20ea96fe2e1ab8e8fd91fa3872ecd2ef1a963975ab3622a5daf2
+raw: popup-texP-raw.png
+raw_sha256: 1c9511ef8d01b381da7e67ac8629ec686f1a1340e4f518281f13b87f5cf34ea3
+Restrained archival cleanup of this exact crumpled-paper menu popup texture from Def Jam Fight for NY. Keep the exact square canvas, paper silhouette, folds, dents, gray/cream/olive palette, stains, dark edges and source alpha. Add only subtle paper fiber definition to reduce pixelation. No warming or yellowing, exposure or contrast grade, invented lettering, graphics, holes or folds. No thicker edge or cleaner/new-paper redesign. Transparent surroundings must stay transparent, never an opaque black matte. Keep original orientation and proportions. The original reference controls everything.

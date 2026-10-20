@@ -772,3 +772,25 @@ Keep v1/v2 as history, v3 for review. Fivewallratios preserve centered source;
 other isolated source-footprint studies are not native positions/gamecaptures.
 No install/default/runtime/build/game change. Source recipes require restored
 private session layout; do not run historical scripts against live archives.
+
+
+## 2026-10-20: linked menu review and Gym batch
+
+- 2026-10-20 D172/UI–D174/UI — Popup/profile15studies/22sources APPROVED.
+  Frozen130newpins/473total,114reviewedIDs(96unconditional+18conditional).
+  Separate22tile4xexport exact/uninstalled. Prior16/19remains pending.
+  New15Gym/controlstudies/22sources pending:2restrainedpapers+13Faithful;
+  complete Gymshapes50/60/64 with3narrowcompanions.2calls/144historical.
+  Originalalpha/marks/UVguards/padding exact,maxRGBdelta4;473pins/2439oldPNGs
+  unchanged;75isolatedaspectpairs. Review51738 nowlinkedmousewheel/drag/fit
+  on105images46groups, including legacy/wipe/tallpan.60refcases/75aspects
+  loaded,zerooverflow/errors,4Node+22gamefocusedtests pass. Game untouched.
+  Source resources under src/defjam_tools/resources/review_navigation.*;
+  recipe/prompt bundle research/menu-ui-controls-20261020/. Private additive
+  archive <data>/scratch/menu-ui-controls-v1-popup-approved-20261020/.
+  Native placement/clip/pan/platform validation remains pending; preserve8768,
+  17workshop/Trejo and existingpacks. GitHubauthstillinvalid; commitlocal and
+  publish existing branches after sign-in, then update PR62description.
+
+
+Scroll over either image to zoom about the cursor; drag to pan both. Fit, double-click or Home resets. View/background changes retain framing; source changes reset. Before/after/wipe and bounds move together. Keep `review_navigation.mjs`/CSS in the private serving root synchronized with packaged source. Run four Node tests and verify actual mouse interaction after page changes.

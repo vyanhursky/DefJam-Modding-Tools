@@ -8,6 +8,24 @@ Renew sign-in with `gh auth login -h github.com`, then push the existing game
 and authoring branches; PR62 description still needs the new batch update.
 The local review and verified artwork archive are ready.
 
+- 2026-10-20 D172/UI–D174/UI — Popup/profile15studies/22sources APPROVED.
+  Frozen130newpins/473total,114reviewedIDs(96unconditional+18conditional).
+  Separate22tile4xexport exact/uninstalled. Prior16/19remains pending.
+  New15Gym/controlstudies/22sources pending:2restrainedpapers+13Faithful;
+  complete Gymshapes50/60/64 with3narrowcompanions.2calls/144historical.
+  Originalalpha/marks/UVguards/padding exact,maxRGBdelta4;473pins/2439oldPNGs
+  unchanged;75isolatedaspectpairs. Review51738 nowlinkedmousewheel/drag/fit
+  on105images46groups, including legacy/wipe/tallpan.60refcases/75aspects
+  loaded,zerooverflow/errors,4Node+22gamefocusedtests pass. Authoring67tests
+  and12subtests pass (HTTP tests retried outside restricted loopback sandbox).
+  Game untouched.
+  Source resources under src/defjam_tools/resources/review_navigation.*;
+  recipe/prompt bundle research/menu-ui-controls-20261020/. Private additive
+  archive <data>/scratch/menu-ui-controls-v1-popup-approved-20261020/.
+  Native placement/clip/pan/platform validation remains pending; preserve8768,
+  17workshop/Trejo and existingpacks. GitHubauthstillinvalid; commitlocal and
+  publish existing branches after sign-in, then update PR62description.
+
 - 2026-10-20 D170/UI–D171/UI — Two batches pending; popup/profile first.
   Vlad explicitly leaves the previous16-item/19-source batch for review. No
   approval/pin/export inferred; all prior pixels unchanged. Catalogue343pins/
