@@ -1,0 +1,46 @@
+{
+  "built_in_calls": 5,
+  "historical_total": 106,
+  "requests": [
+    {
+      "label": "list-paper",
+      "prompt": "Use case: precise-object-edit.\nAsset: Def Jam Fight for NY Extras UI paper, restrained Rich Original Detail restoration.\nInput image1: original assembled RGBA EDIT TARGET, not a style suggestion. Tall aged menu panel with a pale olive/cream paper frame, thin dark ruled border and the original dark mottled inset. Keep the inset dark and its exact stains/creases; no scene, window, lettering or objects may be invented.\nRestore/upscale this same entire panel with only subtle paper fiber/crease compression cleanup. Keep original gray/white/cream/olive colors and broad original shadows, exposure and softness exactly. No warming/yellowing, sepia, white-balance/exposure/contrast/saturation shifts, bleached paper, shiny texture, strong new grain or relighting. Preserve exact aspect, positions, proportions, all original printed marks, outlines, wear, holes and partial transparency. No new text, letters, arrow, line, ornament, score or frame. The game draws menu text separately; blank regions must remain blank.\nThe bright green stored RGB at transparent/unused edge texels is not green paint; keep actual source alpha/geometry, do not propagate green onto paper or fill clear areas black. Output real transparency, same complete canvas, no crop/zoom/rotation/perspective or new backdrop. Final source-aligned assembly retains original alpha, arrow/red ink, border edges, stored padding and tile guards exactly; only tiny fine brightness detail inside safe material may be used.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/list-paper-source.png"
+      ],
+      "transparent_background": true
+    },
+    {
+      "label": "note-37",
+      "prompt": "Use case: precise-object-edit.\nAsset: Def Jam Fight for NY Extras UI paper, restrained Rich Original Detail restoration.\nInput image1: original assembled RGBA EDIT TARGET, not a style suggestion. Square folded white-gray paper with a hand-drawn BLACK ARROW near the bottom. Keep exactly the same arrow path, width, slant and placement. Arrow is protected in final assembly; no new handwriting.\nRestore/upscale this same entire panel with only subtle paper fiber/crease compression cleanup. Keep original gray/white/cream/olive colors and broad original shadows, exposure and softness exactly. No warming/yellowing, sepia, white-balance/exposure/contrast/saturation shifts, bleached paper, shiny texture, strong new grain or relighting. Preserve exact aspect, positions, proportions, all original printed marks, outlines, wear, holes and partial transparency. No new text, letters, arrow, line, ornament, score or frame. The game draws menu text separately; blank regions must remain blank.\nThe bright green stored RGB at transparent/unused edge texels is not green paint; keep actual source alpha/geometry, do not propagate green onto paper or fill clear areas black. Output real transparency, same complete canvas, no crop/zoom/rotation/perspective or new backdrop. Final source-aligned assembly retains original alpha, arrow/red ink, border edges, stored padding and tile guards exactly; only tiny fine brightness detail inside safe material may be used.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/note-37-source.png"
+      ],
+      "transparent_background": true
+    },
+    {
+      "label": "note-42",
+      "prompt": "Use case: precise-object-edit.\nAsset: Def Jam Fight for NY Extras UI paper, restrained Rich Original Detail restoration.\nInput image1: original assembled RGBA EDIT TARGET, not a style suggestion. Tall folded white-gray paper with asymmetric worn corners and broad original crossed fold shadows. It is blank. Keep it blank, with precisely the same fold paths and torn silhouette.\nRestore/upscale this same entire panel with only subtle paper fiber/crease compression cleanup. Keep original gray/white/cream/olive colors and broad original shadows, exposure and softness exactly. No warming/yellowing, sepia, white-balance/exposure/contrast/saturation shifts, bleached paper, shiny texture, strong new grain or relighting. Preserve exact aspect, positions, proportions, all original printed marks, outlines, wear, holes and partial transparency. No new text, letters, arrow, line, ornament, score or frame. The game draws menu text separately; blank regions must remain blank.\nThe bright green stored RGB at transparent/unused edge texels is not green paint; keep actual source alpha/geometry, do not propagate green onto paper or fill clear areas black. Output real transparency, same complete canvas, no crop/zoom/rotation/perspective or new backdrop. Final source-aligned assembly retains original alpha, arrow/red ink, border edges, stored padding and tile guards exactly; only tiny fine brightness detail inside safe material may be used.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/note-42-source.png"
+      ],
+      "transparent_background": true
+    },
+    {
+      "label": "note-48",
+      "prompt": "Use case: precise-object-edit.\nAsset: Def Jam Fight for NY Extras UI paper, restrained Rich Original Detail restoration.\nInput image1: original assembled RGBA EDIT TARGET, not a style suggestion. Square folded white-gray paper with the original thin RED UNDERLINE across the lower area. Preserve exact line path, width, color and placement. It is protected in assembly; no handwriting.\nRestore/upscale this same entire panel with only subtle paper fiber/crease compression cleanup. Keep original gray/white/cream/olive colors and broad original shadows, exposure and softness exactly. No warming/yellowing, sepia, white-balance/exposure/contrast/saturation shifts, bleached paper, shiny texture, strong new grain or relighting. Preserve exact aspect, positions, proportions, all original printed marks, outlines, wear, holes and partial transparency. No new text, letters, arrow, line, ornament, score or frame. The game draws menu text separately; blank regions must remain blank.\nThe bright green stored RGB at transparent/unused edge texels is not green paint; keep actual source alpha/geometry, do not propagate green onto paper or fill clear areas black. Output real transparency, same complete canvas, no crop/zoom/rotation/perspective or new backdrop. Final source-aligned assembly retains original alpha, arrow/red ink, border edges, stored padding and tile guards exactly; only tiny fine brightness detail inside safe material may be used.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/note-48-source.png"
+      ],
+      "transparent_background": true
+    },
+    {
+      "label": "note-52",
+      "prompt": "Use case: precise-object-edit.\nAsset: Def Jam Fight for NY Extras UI paper, restrained Rich Original Detail restoration.\nInput image1: original assembled RGBA EDIT TARGET, not a style suggestion. Square folded white-gray paper, blank, with its own original crossed folds, lower-right shadow and edge silhouette. Preserve this specific sheet's folds; do not substitute another paper.\nRestore/upscale this same entire panel with only subtle paper fiber/crease compression cleanup. Keep original gray/white/cream/olive colors and broad original shadows, exposure and softness exactly. No warming/yellowing, sepia, white-balance/exposure/contrast/saturation shifts, bleached paper, shiny texture, strong new grain or relighting. Preserve exact aspect, positions, proportions, all original printed marks, outlines, wear, holes and partial transparency. No new text, letters, arrow, line, ornament, score or frame. The game draws menu text separately; blank regions must remain blank.\nThe bright green stored RGB at transparent/unused edge texels is not green paint; keep actual source alpha/geometry, do not propagate green onto paper or fill clear areas black. Output real transparency, same complete canvas, no crop/zoom/rotation/perspective or new backdrop. Final source-aligned assembly retains original alpha, arrow/red ink, border edges, stored padding and tile guards exactly; only tiny fine brightness detail inside safe material may be used.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/note-52-source.png"
+      ],
+      "transparent_background": true
+    }
+  ]
+}

@@ -2,6 +2,25 @@
 
 ## Current status
 
+- 2026-10-20 D161/UI–D162/UI — RESTORATION RESUMED explicitly by Vlad.
+  PR62 already implements HD/wide menus and contains PR73's settings fix;
+  combined toolkit dd63e17. Owner playtest: menus/ultrawide look good.
+  New Extras batch: six unapproved studies over nine tiles (five generated
+  papers plus Faithful-only ribbon); 106 historical imagegen calls. Native
+  alpha/graphics/folds/UV padding/tile guards protected; at most four RGB levels
+  of fine detail. All 1,314 prior PNGs/226 approved pins unchanged. Browser24
+  reference/channel cases and30 five-aspect placement pairs pass. Review51738.
+  Game-side22 focused tests/226 artpins pass; new private overlay185files,
+  199,746,134bytes. No runtime changes in this iteration.
+  Existing tested packs, 8768 writer and17workshop/Trejo candidates unchanged.
+  Fire-escape transition: ten trans/t1 tiles, continuous master needed; no fix
+  delivered. First guarded32:9 probe missed actual pan, saves restored. Other
+  checkout's game active; owner asked before closing it for serial checks.
+  Source recipes/prompts/review: research/menu-ui-extras-20261020/. Private
+  overlay <data>/scratch/menu-ui-extras-v1-20261020/; old paused full snapshot
+  immutable. Next: Extras feedback and pan measurement/restoration; Story
+  phone/frames/Start graphics queue remains. Historical blocks below.
+
 - 2026-10-19 D157/UI — RESTORATION PAUSED at owner request until credits return.
   Published source-only draftPR1(initialcommit3b0a0a2);gamehandover draftPR62(a130cfe). Remoteheads verified;14game focusedtests/226artpins and451game/319tools sourcechecks passed.
   Do not generate/repaint or advance Extras/phone queue. Engineering handover:

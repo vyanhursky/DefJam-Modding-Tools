@@ -1,6 +1,7 @@
 # Menu/UI restoration session source — 2026-10-17 through 2026-10-19
 
-**Restoration paused by Vlad. No new generations or repainting until he resumes.**
+**Historical snapshot of the October19 pause. Vlad resumed on October20; see
+`../menu-ui-extras-20261020/` for the next batch. Keep this snapshot unchanged.**
 This is source-only preservation of the historical local art session, not an
 installed tool or a ready modpack. Start with the game repository's
 `docs/menu-ui-modpack-handover.md` on `codex/menu-ui-modpack-handoff`.
