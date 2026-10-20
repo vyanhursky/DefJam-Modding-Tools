@@ -2,6 +2,26 @@
 
 ## Current status
 
+- 2026-10-20 D166/UI–D167/UI — Transition v4 CONDITIONAL; Story phone v1 IN REVIEW.
+  Owner likes ladder art; full approval pending native moving-pan playtest.
+  Freeze56files/10IDs; catalogue333pins/90reviewed IDs(72approved+8Modeconditional
+  +10transitionconditional). No transition registrations/pack changes; bitmap9
+  stays Faithful-only. Leave launcher-redesign game running; no launch/stop.
+  Phone two native tiles, one built-in call/118historical; fine casing L only,
+  exact LCD/branding/keycaps/alpha136..255/UVguards/padding. Wide studies extend
+  identical native outer RGBA row profile, keep native device scale through32:9.
+  Phone UNAPPROVED, notcatalogued/exported/installed. Offstagepart2/live text
+  and actual clipping require game checks. Review51738 phone first with native/
+  Faithful/RGBA/alpha,4backgrounds,3modes,5layouts. Browser controls pass,nooverflow
+  at662px/zeroerrors; screenshot in private batch.333pins/1,725priorPNGs exact,
+  22focused game-side tests pass. Extras stays approved, separate9tile export
+  ready/uninstalled. Existingpacks/defaults/8768writer/17candidates/Trejo unchanged.
+  Source bundle research/menu-ui-story-phone-20261020/; private additive archive
+  <data>/scratch/menu-ui-story-phone-v1-transition-conditional-20261020/.
+  Next: phone feedback, then venueframes/Start/support art after mapping;
+  native transition and phone checks when serial game testing available.
+  Historical blocks below.
+
 - 2026-10-20 D163/UI–D165/UI — Extras APPROVED; fire-escape v4 IN REVIEW.
   Six Extras studies/nine source IDs/51newpins; game catalogue277pins,80IDs
   (72approved+8conditionalMode). Separate9-tile4xexport pixel-identical,notinstalled.

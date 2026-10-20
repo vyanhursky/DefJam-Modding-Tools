@@ -1,0 +1,35 @@
+[
+  {
+    "path": "source/assemble.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/story-phone-v1-20261020/assemble.py",
+    "sha256": "4f68056026d341d25f8508b89bd9f3017ce0c9fca41c36c04011a7d7bfe18562"
+  },
+  {
+    "path": "source/update-review.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/story-phone-v1-20261020/update-review.py",
+    "sha256": "13b0d4584c42a402f87168ac5ac320a600f9c0a37c163830c155476e849f7457"
+  },
+  {
+    "path": "source/audit-phone.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/audit-phone.py",
+    "sha256": "59881bd6106c8185577003b8cd2f0af3b1d808950fbbb3fb9319a80c430e4adf"
+  },
+  {
+    "path": "source/prepare-phone.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-phone.py",
+    "sha256": "c5000d8f8427330f369e6a44c58e282c62578c4d3a21d75dc114c8eb1f382f6c"
+  },
+  {
+    "path": "source/approve-transition-conditional.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/approve-transition-conditional.py",
+    "sha256": "dd3a50599facc4e3911ed3cf3d011e19fbfb220a2b055e783beb445fb4594e1d"
+  },
+  {
+    "path": "source/review.html",
+    "sha256": "63db34bfda70e8e0f21a5f8f9b678d7d674a20b82526143c5f9073cb2155588f"
+  },
+  {
+    "path": "source/workflow.md",
+    "sha256": "1a3c634c9a047a9e3a18d9a9164a739c9f2693008ea10300b07fe133f90a69f8"
+  }
+]

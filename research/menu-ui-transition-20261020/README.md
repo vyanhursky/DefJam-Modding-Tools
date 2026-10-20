@@ -1,5 +1,10 @@
 # Extras approval and fire-escape transition source — 2026-10-20
 
+**Later same-day update:** Vlad conditionally accepts v4 pending native pan
+playtest. See `../menu-ui-story-phone-20261020/` and current PROGRESS.md.
+Older variants and pre-approval wording below remain historical.
+
+
 Read current PROGRESS.md and the coordinating game reports copied here. Extras
 is approved (51new pins/nine IDs), with a separate source4x sparse export ready
 for later playtest. Transition v4 is UNAPPROVED artwork, not a working game fix.
