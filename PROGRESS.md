@@ -7,6 +7,21 @@ branches are published, including the previously blocked commits; current galler
 navigation and census source is on the same branches/draftPRs. Artwork, index
 JSON/CSV, captures and owner shortlist data stay local.
 
+- 2026-10-20 D182–D185/UI — Separate menu-only RC2 tested on this Mac after
+  optional Faithful (library unbundled).157native/164slabs/62wideentries,
+  421.6MBZIP/423.4MBinstalled; all670artpins intact/zeroimggen. Actualloader4paper
+  variants/8technicalIDs registered from approved exterior, originalcores exact.
+  Native1v1loadingall5ratios,FFA4/menu-only/Options/Jukebox/HighScores/charDec32:9
+  pass; save guardsrestore, no runtime fault checks. Nested disposableAAAfixture
+  resolvesintro namecollision. Transitionblackfirsttile alsoinFaithful/original
+  controls; Crib/GF/partner/Tips/3-player/team coverage andowner signoffremain.
+  Diskfull recoveredbyteidentically inisolatedsave; nativeharnessAPFSclone/fallback
+  tested534unitpasses(2sandboxblockedchecks rerunwithhostaccess),32skip/1slowheld.
+  20run nativegallery, framebuttons/keys/zoom/fullwidth/nooverflow/load verified.
+  Source research/menu-ui-native-release-20261020/, privatefullarchive11716files/
+  5552616413B, manifestf93b80f023bee2b5d1e43348aa4a67327244017ad0e96f9e08d38e01054da3e6.
+  Ordinarygame/save/8768workshop unchanged; no public asset upload.
+
 - 2026-10-20 D181/UI — All7widebackgroundscenes APPROVED.70newpins/670total,
   149reviewedsourceIDs(131unconditional+18conditional), registered121/core145.
   No more new-art batch requiredforv1; held19detailIDs/shopdrafts deferred.
