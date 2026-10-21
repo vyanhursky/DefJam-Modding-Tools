@@ -1,5 +1,7 @@
 # First-release widescreen scenery candidates — 2026-10-20
 
+Current checkpoint D181/UI: all seven scenes approved,70newpins/670total,149reviewedsourceIDs. Artwork scope forv1 is complete; pack integration/native acceptance remain. Earlier preparation below is historical.
+
 Seven unapproved background candidates /13new source identities,15built-in imagegen
 calls, historical162. Original/Faithful4:3cores exact, centered scenery through
 32:9. Crib right door reuses approved artwork. Tips bothjoins repaired and grain

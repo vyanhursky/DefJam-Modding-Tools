@@ -7,6 +7,15 @@ branches are published, including the previously blocked commits; current galler
 navigation and census source is on the same branches/draftPRs. Artwork, index
 JSON/CSV, captures and owner shortlist data stay local.
 
+- 2026-10-20 D181/UI — All7widebackgroundscenes APPROVED.70newpins/670total,
+  149reviewedsourceIDs(131unconditional+18conditional), registered121/core145.
+  No more new-art batch requiredforv1; held19detailIDs/shopdrafts deferred.
+  Review/inventorymarksartapproved, isolatedpackintegration/nativechecks pending.
+  Existing600pins unchanged; no generation/pixel/activepack/gamechange. Native
+  loadingroutes/live layers, fullpan/Mode/brandingderivatives/fiveaspects remain.
+  Approvaloverlay <data>/scratch/menu-ui-wide-backgrounds-approved-20261020/;
+  source approvalrecipe andcurrentreview preservedinwidebackgroundbundle.
+
 - 2026-10-20 D179/UI–D180/UI — Owner scopes first menu-mod release to mainmenus,
   approved artwork and widescreen scenery/loading; leave other review candidates
   held. Seven background drafts13newIDs through32:9,15builtin calls/162historical.
