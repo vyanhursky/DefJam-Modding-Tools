@@ -794,3 +794,27 @@ private session layout; do not run historical scripts against live archives.
 
 
 Scroll over either image to zoom about the cursor; drag to pan both. Fit, double-click or Home resets. View/background changes retain framing; source changes reset. Before/after/wipe and bounds move together. Keep `review_navigation.mjs`/CSS in the private serving root synchronized with packaged source. Run four Node tests and verify actual mouse interaction after page changes.
+
+
+## Full image inventory and owner-selected widescreen work
+
+- 2026-10-20 D175/UI–D178/UI — Scope changes to widescreen backgrounds and
+  owner-selected exceptions; stop routinepanel/button imagegen. Gym15/22
+  approved127newpins/600total/136IDs,22tile4xexport exact/uninstalled. Prior16/19
+  pending. Prepared30studies57sources deferred;3inflight rawshopproposals held,
+  noassembly/adoption,147historicalcalls. Sevenotherplannedcalls notstarted.
+  Fullimagebrowser51738/inventory.html:1323registered(115reviewed/1208outside),
+  optional1834core(132reviewed/1702outside). Original/Faithful/status/customwhere
+  available, search/screen/size/backgroundfilter, zoom/pan, Prev/Next/keys,
+  localshortlistnotes/download. Fiveknownwidegroups10tiles; nativeuse/clipunknown.
+  All1323IDs paginatedonce/28pages; comparison/mouse/arrow/shortlistreload pass,
+  zerooverflow/errors.8Node+22gamefocusedtests/600pins pass. Game/packs/saves/
+  8768writer/17workshop/Trejo untouched. Source research/menu-ui-inventory-20261020/,
+  privateoverlay <data>/scratch/menu-ui-inventory-widescreen-focus-20261020/.
+  Preserve browser selections, previousimmutablearchives and conditionalpan/Mode
+  checks. No moregenerationbeforeownerchoices. GitHubauthstillblocks publishing.
+
+
+Shortlist keydefjam-menu-inventory-shortlist-v1 at51738. Do not clear owner selections. The gallery is static; notes stay local and may be downloaded. Backgroundfilter includesunregisteredStoryassets throughcore scope. No art/reviewJSON/CSV entersGit.
+
+GitHub sign-in recovered at finalization; source-only game and authoring branches are published. All historical auth-failure notes above describe earlier attempts. Private publication-status.json records verified remote heads.

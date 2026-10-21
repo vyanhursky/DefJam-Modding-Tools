@@ -35,7 +35,7 @@ export function attachReviewNavigation(root = document) {
   function reset(g){g.state={z:1,x:0,y:0};paint(g);}
   function scan() {
     for(const img of root.querySelectorAll('img:not([data-no-navigation])')) {
-      if(seen.has(img))continue;seen.add(img);
+      if(seen.has(img)||img.closest('.review-viewport'))continue;seen.add(img);
       // A wipe's two overlapping images and bounds overlay move as one layer.
       const wipe=img.closest('.frame,[class$="-frame"]') || img.closest('[class*="-wipe"],.wipe');
       let viewport=wipe || (img.parentElement.classList.contains('frame')?img.parentElement:null);

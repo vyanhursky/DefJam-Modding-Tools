@@ -13,3 +13,6 @@
  .row:has(.review-viewport),.study-grid,.next-grid,.battle-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  [data-view=draft] .row,[data-mode=draft] [class$="-grid"]{grid-template-columns:1fr}
 }
+.review-sequence{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 8px 10px 0}
+.review-sequence button{font-size:13px;padding:7px 10px;margin:0}.review-sequence output{min-width:52px;text-align:center;font-size:13px;font-variant-numeric:tabular-nums}
+.review-sequence button:disabled{opacity:.4;cursor:default}

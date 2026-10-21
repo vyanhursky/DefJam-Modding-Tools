@@ -2,11 +2,26 @@
 
 ## Current status
 
-**Source publication pending:** Both commits are local; pushes failed because
-macOS Git credentials were inaccessible and GitHub CLI reports an invalid token.
-Renew sign-in with `gh auth login -h github.com`, then push the existing game
-and authoring branches; PR62 description still needs the new batch update.
-The local review and verified artwork archive are ready.
+**Source publication restored:** GitHub sign-in recovered. Existing source-only
+branches are published, including the previously blocked commits; current gallery,
+navigation and census source is on the same branches/draftPRs. Artwork, index
+JSON/CSV, captures and owner shortlist data stay local.
+
+- 2026-10-20 D175/UI–D178/UI — Scope changes to widescreen backgrounds and
+  owner-selected exceptions; stop routinepanel/button imagegen. Gym15/22
+  approved127newpins/600total/136IDs,22tile4xexport exact/uninstalled. Prior16/19
+  pending. Prepared30studies57sources deferred;3inflight rawshopproposals held,
+  noassembly/adoption,147historicalcalls. Sevenotherplannedcalls notstarted.
+  Fullimagebrowser51738/inventory.html:1323registered(115reviewed/1208outside),
+  optional1834core(132reviewed/1702outside). Original/Faithful/status/customwhere
+  available, search/screen/size/backgroundfilter, zoom/pan, Prev/Next/keys,
+  localshortlistnotes/download. Fiveknownwidegroups10tiles; nativeuse/clipunknown.
+  All1323IDs paginatedonce/28pages; comparison/mouse/arrow/shortlistreload pass,
+  zerooverflow/errors.8Node+22gamefocusedtests/600pins pass. Game/packs/saves/
+  8768writer/17workshop/Trejo untouched. Source research/menu-ui-inventory-20261020/,
+  privateoverlay <data>/scratch/menu-ui-inventory-widescreen-focus-20261020/.
+  Preserve browser selections, previousimmutablearchives and conditionalpan/Mode
+  checks. No moregenerationbeforeownerchoices. GitHub sign-in recovered; source-only branch/draftPR published.
 
 - 2026-10-20 D172/UI–D174/UI — Popup/profile15studies/22sources APPROVED.
   Frozen130newpins/473total,114reviewedIDs(96unconditional+18conditional).

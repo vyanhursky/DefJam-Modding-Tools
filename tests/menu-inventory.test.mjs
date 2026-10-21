@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {filterAssets} from '../src/defjam_tools/resources/menu_inventory.mjs';
+import {stepIndex} from '../src/defjam_tools/resources/review_sequence.mjs';
+const a=[{id:'a',registered:true,search:'story gym paper a',screens:['story/gym'],review_state:'approved',treatment:'faithful-retained',width:256,height:128},{id:'b',registered:false,search:'story partner wall b',screens:['story/partner'],review_state:'unreviewed',background_gap:true,width:512,height:512},{id:'c',registered:true,search:'title c',screens:['title'],review_state:'pending',width:32,height:32}];
+test('scope and approval are independent of whether Faithful was kept',()=>{assert.deepEqual(filterAssets(a,{}).map(x=>x.id),['a','c']);assert.deepEqual(filterAssets(a,{scope:'core',status:'outside'}).map(x=>x.id),['b','c']);assert.deepEqual(filterAssets(a,{status:'faithful'}).map(x=>x.id),['a']);});
+test('background, size, search and screen filters combine',()=>{assert.deepEqual(filterAssets(a,{scope:'core',status:'backgrounds',q:' WALL ',screen:'story/partner',size:'large'}).map(x=>x.id),['b']);assert.deepEqual(filterAssets(a,{status:'outside',size:'large'}),[]);});
+test('shortlist filtering preserves source identities and input data',()=>{assert.deepEqual(filterAssets(a,{selectedOnly:true},{c:{note:'x'}}).map(x=>x.id),['c']);assert.equal(a.length,3);});
+test('texture stepping respects first, last and empty groups',()=>{assert.equal(stepIndex(0,-1,15),0);assert.equal(stepIndex(14,1,15),14);assert.equal(stepIndex(4,1,15),5);assert.equal(stepIndex(0,1,0),-1);});
