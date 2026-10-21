@@ -7,6 +7,20 @@ branches are published, including the previously blocked commits; current galler
 navigation and census source is on the same branches/draftPRs. Artwork, index
 JSON/CSV, captures and owner shortlist data stay local.
 
+- 2026-10-20 D179/UI–D180/UI — Owner scopes first menu-mod release to mainmenus,
+  approved artwork and widescreen scenery/loading; leave other review candidates
+  held. Seven background drafts13newIDs through32:9,15builtin calls/162historical.
+  Exact35Faithful4:3cores;Cribdoorparent469.4/reusesapprovedrightscenery; tipsv3
+  both128pxjoins+Lgrainmatched. Loaderplate/tips mapped separatelyfrom portraits/
+  livetext/vignette; oldMLoad dynamicvenue remainsunprovenactive. Newreview
+  wide-backgrounds.html withOriginal/Faithful,5ratios,joincloseups,linkednavigation,
+  Prev/Next/keys/browsernotes, linkedfrominventory/artreviews. All600priorpins/
+  136approvedIDs unchanged; newartUNAPPROVED/uninstalled. Existingdetail19IDs/
+  shopraws held; currentgame/packs/saves/8768/workshop/Trejo untouched. Source
+  research/menu-ui-wide-backgrounds-20261020/, private additivearchive
+  <data>/scratch/menu-ui-wide-backgrounds-v1-20261020/. Nativeactive loading routes,
+  masks/fades/fiveaspects/fullmovingpan and priorModecondition remainreleasegates.
+
 - 2026-10-20 D175/UI–D178/UI — Scope changes to widescreen backgrounds and
   owner-selected exceptions; stop routinepanel/button imagegen. Gym15/22
   approved127newpins/600total/136IDs,22tile4xexport exact/uninstalled. Prior16/19

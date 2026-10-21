@@ -1,0 +1,10 @@
+from PIL import Image
+from pathlib import Path
+import json,hashlib
+p=Path('logs/ui-restoration-20261017/pilot-v1/wide-backgrounds-v1-20261020');base=Image.open(p/'tips-wide-v1.png').convert('RGB');jobs=[]
+for side in ['left','right']:
+ x0,x1=(1216,1600) if side=='left' else (3520,3904);target=Image.new('RGB',(384,480),'#808080');target.paste(base.crop((x0-384,0,x0,1440)).resize((128,480),Image.Resampling.LANCZOS),(0,0));target.paste(base.crop((x1,0,x1+384,1440)).resize((128,480),Image.Resampling.LANCZOS),(256,0));f=p/f'tips-{side}-bridge-target.png';target.save(f)
+ prompt=f'''Use case: precise-object-edit. Repair the {side.upper()} seam of this Def Jam tips-menu dark blue-gray plaster wall. Image1 is the exact384x480 EDIT TARGET. Fill ONLY the gray middle128columns x128..256, smoothly joining BOTH fixed contexts. The {'RIGHT' if side=='left' else 'LEFT'} context is the ORIGINAL GAME wall and is the strict authority for its dim exposure and soft mottled texture. Preserve both contexts unchanged; no crop, zoom, reframing or geometry changes.
+Continue the same dark desaturated blue-gray worn plaster, soft rough grain and broad, diffuse illumination. The new gap must meet each fixed edge over the entire image height with no vertical line, stripe, dark band, brighter strip, texture contrast or focus change. Pay special attention to the very dark original boundary: carry its illumination naturally outward into the gap, without making a new rectangular vignette. No added signs, paper, bulb symbols, letters, doors, lights, bricks, props or repeating/mirrored strips. Original neutral/cool palette stays exact; no warmth, yellow, increased contrast or saturation. Final assembly retains the REAL context pixels and adopts only your new middle gap, so match the ORIGINAL edges precisely.'''
+ jobs.append(dict(key='tips-'+side+'-bridge',side=side,prompt=prompt,referenced_image_paths=[str(f.resolve())],transparent_background=False,input_sha256=hashlib.sha256(f.read_bytes()).hexdigest()))
+(p/'bridge-jobs.json').write_text(json.dumps(jobs,indent=2)+'\n')
