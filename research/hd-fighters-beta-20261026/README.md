@@ -1,5 +1,9 @@
 # HD Fighters 0.1 beta publication
 
+Update 2026-10-27: the owner reports a successful pack playtest and authorizes
+continuation. See [the next-batch handoff](NEXT-BATCH.md); publication-time
+validation and remaining itemized art checks below are retained as history.
+
 The owner requested publication on 2026-10-26 before further fighter revisions.
 This release packages three existing candidates byte-for-byte, preserving their
 unapproved review state. It introduces no image generation, new art correction,

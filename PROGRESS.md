@@ -2,6 +2,17 @@
 
 ## Current status
 
+**Fighter continuation (2026-10-27):** Vlad reports HD Fighters 0.1 looks great
+in his playtest and authorizes continued work on Blaze, Nyne and Trejo plus more
+fighters. The playtest gate is satisfied at pack level; the report did not name
+which fighters/outfits were exercised, so no per-revision face/channel/authenticity
+flags were changed. Preserve public 0.1 and its exact three selections as the
+known-good comparison baseline. Prepare targeted child revisions and the next
+small fighter batch; names and priorities have been requested. See
+`research/hd-fighters-beta-20261026/NEXT-BATCH.md`. Gallery 8768 remains offline
+with a stale retired corpus path; reconnect safely before visual review, keeping
+all reviews, browser drafts, source IDs and prior candidates intact.
+
 **HD Fighters beta publication (2026-10-26):** owner requested a public first
 fighter pilot before further revisions. Separate source branch
 `codex/hd-fighters-beta` preserves the ongoing menu branch. Recipe/pins and
@@ -18,8 +29,9 @@ Publication: https://github.com/vyanhursky/DefJamFFNY-mods/pull/6; successful
 workflow run 40453784754. No publishing blockers.
 Local checks: released v0.12.1 + catalogue unpackers agree, source identities
 verified against dump, public full download/hash/range verified; 14 catalogue
-and 67 authoring tests +12 subtests /8 Node checks pass. Owner Trejo playtest
-and art acceptance remain pending. Stop fighter revisions until that feedback.
+and 67 authoring tests +12 subtests /8 Node checks pass. The owner subsequently
+reported a successful pack playtest on 2026-10-27 and authorized continuation;
+individual detail-review flags remain unchanged.
 
 **Source publication restored:** GitHub sign-in recovered. Existing source-only
 branches are published, including the previously blocked commits; current gallery,
@@ -251,6 +263,11 @@ JSON/CSV, captures and owner shortlist data stay local.
 
 ## Decisions
 
+- 2026-10-27: Vlad reports the published HD Fighters 0.1 beta looks great in
+  playtesting and lifts the hold on fighter work. Continue the same three and
+  expand to a small next batch. Keep 0.1 immutable and distinguish this reported
+  pack playtest from itemized authenticity/face/channel review. Requested next
+  fighter names and existing-fighter priorities before generating new artwork.
 - 2026-10-26: Vlad authorized packaging the existing three-fighter pilot as
   HD Fighters 0.1 (beta), uploading to Cloudflare and registering with the mods
   catalogue using the HD-Menu workflow. Use SemVer `0.1.0-beta.1` on the testing
@@ -293,7 +310,9 @@ Optional legacy auditions retain Windows font / isolated CUDA requirements.
 
 ## Validation and handoff
 
-Latest fighter handoff (2026-10-26): follow the beta publication report above
+Latest fighter handoff (2026-10-27): owner pack playtest passed; continuation
+authorized, next fighter names/priorities pending. Use NEXT-BATCH.md.
+Publication handoff (2026-10-26): follow the beta publication report above
 before the older session notes below. The exact private release/receipts are in
 `<data>/scratch/hd-fighters-v0.1-beta1-published-20261026/`. The release recipe
 needs no running gallery. At publication time port 8768 had no listener and the
