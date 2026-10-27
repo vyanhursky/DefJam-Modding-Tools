@@ -2,6 +2,25 @@
 
 ## Current status
 
+**HD Fighters beta publication (2026-10-26):** owner requested a public first
+fighter pilot before further revisions. Separate source branch
+`codex/hd-fighters-beta` preserves the ongoing menu branch. Recipe/pins and
+publication evidence: `research/hd-fighters-beta-20261026/README.md`.
+Three existing 2048px atlases: Blaze/Nyne Rich Original Detail v1 and Trejo v4
+Source palette trial; faces/material alpha exact, no new generation or review
+approval. Cloudflare immutable ZIP is 19,432,340 bytes, six files, SHA-256
+`bcba0164c1821f4121bba1089e806db4bf7111961a68cbef647d1c2991dfc62a`.
+Catalogue PR #6 merged; protected scan/sign/deploy succeeded, live signed
+catalogue revision 6 verified by the exact released v0.12.1 helper, public
+download/managed install passed with all six file hashes exact. Stable channel
+correctly excludes this beta. No active game/settings/save or review changes.
+Publication: https://github.com/vyanhursky/DefJamFFNY-mods/pull/6; successful
+workflow run 40453784754. No publishing blockers.
+Local checks: released v0.12.1 + catalogue unpackers agree, source identities
+verified against dump, public full download/hash/range verified; 14 catalogue
+and 67 authoring tests +12 subtests /8 Node checks pass. Owner Trejo playtest
+and art acceptance remain pending. Stop fighter revisions until that feedback.
+
 **Source publication restored:** GitHub sign-in recovered. Existing source-only
 branches are published, including the previously blocked commits; current gallery,
 navigation and census source is on the same branches/draftPRs. Artwork, index
@@ -232,6 +251,13 @@ JSON/CSV, captures and owner shortlist data stay local.
 
 ## Decisions
 
+- 2026-10-26: Vlad authorized packaging the existing three-fighter pilot as
+  HD Fighters 0.1 (beta), uploading to Cloudflare and registering with the mods
+  catalogue using the HD-Menu workflow. Use SemVer `0.1.0-beta.1` on the testing
+  channel; ship Trejo Source palette and Blaze/Nyne Rich Original Detail v1,
+  preserve reviews, and defer new revisions until his Trejo playtest. Beta
+  publication is separate from stable art approval. No extra aliases are added
+  without observed runtime evidence; the three canonical IDs match the dump.
 - 2026-10-16: Vlad approved setting up this dedicated repository and will resume
   texture/model review afterward. Initial remote is private and code-only.
 - Authoring lives here; runtime/mod-manager/setup stay in the recomp. Its shared
@@ -266,6 +292,18 @@ validate in Khronos; Blender itself was unavailable for a native import test.
 Optional legacy auditions retain Windows font / isolated CUDA requirements.
 
 ## Validation and handoff
+
+Latest fighter handoff (2026-10-26): follow the beta publication report above
+before the older session notes below. The exact private release/receipts are in
+`<data>/scratch/hd-fighters-v0.1-beta1-published-20261026/`. The release recipe
+needs no running gallery. At publication time port 8768 had no listener and the
+old DefJamPR19-20 corpus path in local.json no longer existed; the workshop and
+candidate files were intact, and baseline PNG hashes matched the currently
+installed Faithful channels pack. Do not restart a server against stale paths
+or overwrite browser drafts. Repair/reconnect the authoring session separately
+after the owner's Trejo playtest, preserving all review JSON and candidate IDs.
+The original tools checkout/menu source branch is unchanged by this isolated
+publication worktree. Active game settings and save were not modified.
 
 Read AGENTS.md, docs/WORKFLOW.md, docs/texture-workshop.md and docs/model-viewer.md.
 Resume the existing session with `.venv/bin/defjam-tools serve` from this checkout;

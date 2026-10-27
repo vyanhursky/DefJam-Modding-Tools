@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "hd-fighters",
+  "name": "HD Fighters",
+  "display_name": "HD Fighters 0.1 (beta)",
+  "version": "0.1.0-beta.1",
+  "channel": "prerelease",
+  "min_recomp": "0.12.1",
+  "publication_authorized": "2026-10-26",
+  "status": "Owner-authorized beta for playtesting; in-game art acceptance pending",
+  "selections": [
+    {
+      "fighter": "Blaze",
+      "source_member": "V2IP_113A.xsh",
+      "source_id": "5c9b3229151c2853656113a8df7e3f91effdef5ae68c9bdd567e5a71bbe9c91a",
+      "revision": "r-af704d282bab415a",
+      "label": "Rich Original Detail v1",
+      "sha256": "bf4fc96102a630fa856bc61b84df1298d5beb0a3c4f5f7e07f829a8d78f0d7c4",
+      "baseline_sha256": "b864679d7aa6abeec2475320c1088cdab1a7962f446a7c569a08e9f183dba5fb",
+      "protected_pixel_boxes": [[1024, 0, 2048, 1024]]
+    },
+    {
+      "fighter": "Nyne",
+      "source_member": "V2IP_009A.xsh",
+      "source_id": "a25c4fdd4998993c94d18ad0f5169c7ad6e6b898c711482777303c7ba3a18517",
+      "revision": "r-f90e9080f10840a3",
+      "label": "Rich Original Detail v1",
+      "sha256": "ef2ce56053769ffba93e7b2a6327e1dfd356e6ef2e0ef33f66249a69a1bf1378",
+      "baseline_sha256": "35b8f74c9391a39ad812d9fc58908eb0ca0eaa98b94decc2fdeac888e348bc45",
+      "protected_pixel_boxes": [[1024, 0, 2048, 1044]]
+    },
+    {
+      "fighter": "Trejo",
+      "source_member": "V2IP_112A.xsh",
+      "source_id": "1900051b32443a33a745c088a08231d039d80c9eb96483f4b43456a2a3f68f24",
+      "revision": "r-342bd7dadb964b67",
+      "label": "Source palette correction of Rich Original Detail v4",
+      "sha256": "b9f4a2dad9bdb34163adfceb5d7ae595d6c29db02a9bfc874d2c56bc0509803b",
+      "baseline_sha256": "6a94e2fc6f357e319a2bdba7a0fed8708a3e11beb2be1b0ea3e9cff4a3a544be",
+      "protected_pixel_boxes": [[1004, 0, 2048, 1044]]
+    }
+  ]
+}
