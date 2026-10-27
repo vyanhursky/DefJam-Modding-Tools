@@ -2,6 +2,19 @@
 
 ## Current status
 
+**2026-10-27 — Public repository approved and enabled.** Vlad explicitly authorized
+making DefJam-Modding-Tools public for community access. GitHub visibility is now
+PUBLIC; anonymous API and main-branch texture/model guide requests return HTTP200.
+Publication audit covered all5mirrored refs (3heads plus2PR refs),20commits,
+475historical paths and523text blobs/5,797,431bytes: zero blocked asset paths,
+binary blobs or targeted credential-pattern matches. Current source policy472/0;
+no releases, Actions artifacts or PR attachments. Audit receipt remains private
+in the game checkout logs/mod-tools-public-audit-20261027.json. This changes source
+visibility only; local.json, corpus, artwork, models, reviews and live8768writer
+remain untouched. Both GitHub Wikis remain disabled; existing Markdown guides
+are public. Next documentation improvement: a public first-texture-pack entry
+point connecting these guides to the game's loader/install instructions.
+
 **Source publication restored:** GitHub sign-in recovered. Existing source-only
 branches are published, including the previously blocked commits; current gallery,
 navigation and census source is on the same branches/draftPRs. Artwork, index
@@ -216,7 +229,7 @@ JSON/CSV, captures and owner shortlist data stay local.
   This investigation led to the subsequent Trejo pilot above.
 
 - Standalone version 0.1.0 established from DefJamFFNY-recomp `f71ab64`.
-- Repository: https://github.com/vyanhursky/DefJam-Modding-Tools (private).
+- Repository: https://github.com/vyanhursky/DefJam-Modding-Tools (public since2026-10-27, explicitly approved by Vlad).
 - Local Python package/CLI/resources, prompts, documentation, focused agent
   instructions, source hygiene and three-platform synthetic CI configured.
 - Live gallery/model viewer now runs from this checkout at 127.0.0.1:8768.
@@ -231,6 +244,11 @@ JSON/CSV, captures and owner shortlist data stay local.
   authoring copies are retired there. Its focused HD/setup/pin/agent checks34/34.
 
 ## Decisions
+
+- 2026-10-27: Vlad explicitly authorizes public visibility. Source/history and
+  repository artifact checks pass; visibility changed and anonymous access to
+  the repository and main-branch authoring guides verified. Local artwork and
+  review workspaces stay private; no asset publication or server change.
 
 - 2026-10-16: Vlad approved setting up this dedicated repository and will resume
   texture/model review afterward. Initial remote is private and code-only.
