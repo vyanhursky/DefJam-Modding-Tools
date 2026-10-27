@@ -6,7 +6,9 @@ It reads exported models from the workshop's private data folder. The original
 game archives, faithful corpus, reviews and candidate images are not modified
 by conversion. The viewer needs no running game or external service.
 
-The first supported fighters are **Trejo, Blaze and Nyne**, main outfits only.
+Supported fighters are **Trejo, Blaze, Nyne, Redman and Henry Rollins**, main
+outfits only. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
+(`V2IP_131A`). Use `--fighter redman` or `--fighter rollins` when exporting them.
 Their original geometry, UV islands, normals and material partitions are used;
 this is not a generated replacement body. Textures can be compared in their
 original rest pose before choosing a revision for an in-game test.
@@ -83,8 +85,11 @@ format. Texture modpack export remains the separate gallery workflow.
 
 [Blender's glTF importer documentation](https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html)
 describes the import and embedded-material workflow. Blender itself was not
-installed on the authoring Mac for this validation; the files were checked with
-Khronos' validator and the browser's glTF loader.
+installed on the authoring Mac for the initial three-fighter validation; those
+files were checked with Khronos' validator and the browser's glTF loader.
+The subsequent Redman/Rollins additions passed source-identity, model export and
+HTTP/GLB structure checks; fresh browser visual checks were blocked by URL policy
+and remain pending owner review.
 
 ## What is decoded, and what is approximated
 

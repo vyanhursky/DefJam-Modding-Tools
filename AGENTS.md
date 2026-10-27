@@ -28,8 +28,10 @@ missing decisions and preserve an active review session during changes.
 ## Art direction
 
 - New generations are Rich Original Detail only. Keep earlier stylized drafts
-  as history. Preserve faces/likeness unless Vlad specifically approves fixing a
-  demonstrated low-resolution defect.
+  as history. Preserve likeness/proportions/expression. On 2026-10-27 Vlad
+  explicitly authorized face/headwear texture-detail restoration for Blaze, Nyne
+  and Trejo, alongside body/face color matching. Keep these as unapproved child
+  revisions; protect other faces unless he authorizes a similar exception.
 - Original atlases and faithful enlargements control composition, UVs, animal
   silhouettes, tree positions and handwriting paths. Semantic descriptions do
   not authorize redesign. Use references; have Vlad approve uncertain detail.
@@ -56,7 +58,8 @@ missing decisions and preserve an active review session during changes.
   deliberately with setup tests; do not maintain independent evolving copies.
 - New corpus builds fingerprint code and may produce a new recipe identity.
   Reading an existing corpus/workspace must not change it.
-- Model viewer currently decodes three static main-outfit fighter meshes only.
+- Model viewer decodes five static main-outfit fighter meshes: Blaze, Nyne,
+  Trejo, Redman (internal Doc) and Henry Rollins (internal ROLINS).
   Preserve source geometry/UVs/normals/material partitions; label lighting
   approximations and omitted effects. No rig, venue or game reimport claim.
 - Read-only independent investigations can be delegated while the main agent

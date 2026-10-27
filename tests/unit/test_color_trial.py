@@ -114,3 +114,14 @@ def test_explicit_neck_region_excludes_other_welded_skin_edges():
     assert len(c.geometry_masks(g,64,BOXES,[.4,.6],.26)[2])==1
     assert len(c.geometry_masks(g,64,BOXES,[.7,.9],.26)[2])==0
     assert len(c.geometry_masks(g,64,BOXES,[.4,.6],.1)[2])==0
+
+
+def test_palette_only_mode_does_not_claim_a_missing_seam_guard():
+    ref,raw,g=fixture()
+    g['meshes'][1]['positions']=[[10,1,0],[11,1,0],[10,2,0]]
+    out,report,masks,seams=c.correct(ref,raw,g,BOXES,'source-palette',64,require_seams=False)
+    assert not seams and report['seam_edges']==0 and not report['seam_guard_applied']
+    assert 'seam_core_exact' not in report['checks']
+    assert all(report['checks'].values())
+    assert not np.asarray(masks['seam_guard']).any()
+    assert not np.array_equal(np.asarray(out),np.asarray(raw))

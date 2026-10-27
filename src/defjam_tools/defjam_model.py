@@ -19,6 +19,8 @@ from .hd_assets import archive_entries, unpack_refpack, MAX_BLOB
 
 VERSION = 1
 FIGHTERS = {
+    "redman": ("Redman", "V2IP_109A", "61ca4a5526f266aa676e52bff3ac615eff3bb85f8d32f6375e81cce2da374c6b"),
+    "rollins": ("Henry Rollins", "V2IP_131A", "4f1b25d80e683f2a80e7071d5a50c576066ec49831419048f5ff7f15dccdd31d"),
     "trejo": ("Trejo", "V2IP_112A", "1900051b32443a33a745c088a08231d039d80c9eb96483f4b43456a2a3f68f24"),
     "blaze": ("Blaze", "V2IP_113A", "5c9b3229151c2853656113a8df7e3f91effdef5ae68c9bdd567e5a71bbe9c91a"),
     "nyne": ("Nyne", "V2IP_009A", "a25c4fdd4998993c94d18ad0f5169c7ad6e6b898c711482777303c7ba3a18517"),

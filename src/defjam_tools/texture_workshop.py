@@ -33,6 +33,8 @@ HERE = Path(__file__).resolve().parent / "resources"
 MAX_UPLOAD = 24 * 1024 * 1024
 STYLES = {"faithful": "Rich original detail", "remaster": "Stylized remaster"}
 PILOT = {
+    "v2ip_109a.xsh": ("Redman", "Main", True),
+    "v2ip_131a.xsh": ("Henry Rollins", "Main", True),
     "v2ip_113a.xsh": ("Blaze", "Battle", True),
     "v2ip_113b.xsh": ("Blaze", "Story variant", False),
     "v2ip_113c.xsh": ("Blaze", "Bloody Blaze", False),
@@ -83,7 +85,7 @@ def brief(asset, style, note="", regions=(), parent=None):
             + ("Input: selected candidate revision "+parent["id"]+" as edit target; original atlas and faithful HD as references.\nParent SHA-256: "+parent["sha256"]+"\n" if parent else
                "Input: original texture atlas as edit target; faithful HD as comparison.\n") + direction + "\n"
             "Preserve every UV island, orientation, mirrored/split lettering, borders and atlas proportions. "
-            "Preserve faces and likeness; do not beautify or redesign faces. Apparent low-resolution face damage needs a separate reviewed request. "
+            "Preserve faces and likeness; do not beautify or redesign faces. Face-detail editing requires an explicit owner-authorized request below; even then preserve proportions and expression. "
             "Use references for tattoos, logos and clothing words. Flag uncertain details for Vlad instead of inventing inscriptions. "
             "Keep original alpha/material channels separately; do not reinterpret their meaning. "
             "No additional logos, objects, lighting or perspective.\n"

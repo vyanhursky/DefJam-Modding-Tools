@@ -2,16 +2,35 @@
 
 ## Current status
 
+**Wave two ready for review (2026-10-27):** owner selected Redman and Henry
+Rollins, prioritizing body/face color matching, face/headwear improvement, then
+final tattoo/clothing review on Blaze/Nyne/Trejo. Explicit face-detail exception
+recorded in AGENTS/CLAUDE; preserve likeness, proportions and expression.
+Gallery recovered at 127.0.0.1:8768 after owner confirmed no unsaved browser notes.
+Versioned corpus rebind backed up metadata and preserved workspace path, all17
+old candidates, old reviews/requests and cameras. Current workspace has23drafts,
+19requests (including2new blocked Rollins calls), five main-outfit models.
+New drafts: Blaze/Nyne Source palette + face/headwear children; Trejo Source
+palette face/headwear child; Redman Rich Original Detail with held face/alpha
+and source-palette assembly. Rollins original/Faithful model available; both
+new imagegen attempts rejected by service output moderation, no substitution.
+74tests +12subtests /8Node checks pass,16model GLB HTTP endpoints and6candidate
+hashes verified. Browser visual checks blocked by URL security policy; no bypass.
+Private inputs/prompts/raw/recipes/reports retained under workshop experiments/
+`fighters-wave2-20261027/`; source report/recipes in research/fighters-wave2-20261027/.
+No new draft approved/selected, no game install or new catalogue publication.
+Public0.1 remains immutable. Next: owner reviews Face/Chest/Back/Belt/Pants/Shoe
+views, likeness/headwear, skin joins and original tattoo/script/material fidelity.
+
 **Fighter continuation (2026-10-27):** Vlad reports HD Fighters 0.1 looks great
 in his playtest and authorizes continued work on Blaze, Nyne and Trejo plus more
 fighters. The playtest gate is satisfied at pack level; the report did not name
 which fighters/outfits were exercised, so no per-revision face/channel/authenticity
 flags were changed. Preserve public 0.1 and its exact three selections as the
 known-good comparison baseline. Prepare targeted child revisions and the next
-small fighter batch; names and priorities have been requested. See
-`research/hd-fighters-beta-20261026/NEXT-BATCH.md`. Gallery 8768 remains offline
-with a stale retired corpus path; reconnect safely before visual review, keeping
-all reviews, browser drafts, source IDs and prior candidates intact.
+small fighter batch; names/priorities were then supplied (see wave two above). See
+`research/hd-fighters-beta-20261026/NEXT-BATCH.md`. The gallery was subsequently recovered with a backed-up corpus rebind after
+the owner confirmed saved notes; see the latest wave-two report above.
 
 **HD Fighters beta publication (2026-10-26):** owner requested a public first
 fighter pilot before further revisions. Separate source branch
@@ -263,6 +282,18 @@ JSON/CSV, captures and owner shortlist data stay local.
 
 ## Decisions
 
+- 2026-10-27: Next fighters are Redman and Henry Rollins. Owner prioritizes
+  body/face color matching, face/headwear restoration and tattoo/clothing final
+  review for the original three. This explicitly permits targeted face detail
+  changes while locking likeness/proportions/expression. Keep new drafts and
+  0.1 separate. Rollins service rejections are retained as blocked attempts;
+  do not substitute artwork or change generation service without authorization.
+- 2026-10-27: Owner confirmed no unsaved browser notes and requested reconnect.
+  All recorded baseline hashes match the current corpus. Use an explicit backed-up
+  schema1 binding migration receipt v1; preserve original reviews/candidates/requests,
+  cameras and workspace path. No paired skin UV seam exists for Blaze in this
+  decoded model, so his color pass reports palette-only matching. Derive other
+  masks/paired guards from each fighter's own geometry, without a guessed seam.
 - 2026-10-27: Vlad reports the published HD Fighters 0.1 beta looks great in
   playtesting and lifts the hold on fighter work. Continue the same three and
   expand to a small next batch. Keep 0.1 immutable and distinguish this reported
@@ -309,6 +340,15 @@ validate in Khronos; Blender itself was unavailable for a native import test.
 Optional legacy auditions retain Windows font / isolated CUDA requirements.
 
 ## Validation and handoff
+
+Latest wave-two handoff: see research/fighters-wave2-20261027/README.md. Single
+writer PID67499 / exec69909, running from this isolated source worktree on8768.
+The original tools checkout/menu branch is untouched; local.json now points to
+the validated current corpus. Use the isolated worktree source when restarting
+so all five model IDs are supported. Machine paths are in ignored .local-handoff.md.
+Backups: workshop/backups/fighters-wave2-rebind-20261027/. Do not undo the rebind
+or overwrite owner notes. Review all six new drafts; Rollins generation remains
+service-blocked. No automatic art approvals, installation or publication.
 
 Latest fighter handoff (2026-10-27): owner pack playtest passed; continuation
 authorized, next fighter names/priorities pending. Use NEXT-BATCH.md.
