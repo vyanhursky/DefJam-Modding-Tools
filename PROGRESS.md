@@ -2,7 +2,32 @@
 
 ## Current status
 
-**Latest regional studies,2026-10-28:** owner asks to start and try different
+**Latest chest-only correction,2026-10-29:** owner prefers v5A and requests chest
+skin/tattoo restoration. New unapproved v6 r-5304b94c634a4fa9 is a child of
+r-a6ca883293734644; output SHA256
+b0992fd40cf4c73bc430002c4e509992712f93ce57be7f57b2d61e7453d06760.
+New built-in CREEPY CRAWL tattoo edit succeeded. Direct chest-skin output was
+moderation-blocked (48ea5469-0b56-4d61-a6f3-0a84c7da63e6); no such image imported.
+Skin instead uses the successful prior material study at finer512HDtile scale,
+bounded L residual RMS1.2/cap3, and gentle original luminance sharpening. Keeps
+source diffuse color/anatomy/shading. Initial coarse-pore QA stage not adopted.
+
+Actual model/UV triangle clipping isolates93,104HDmain chest pixels plus50,256
+separate chest-tattoo pixels; all143,360allowed pixels stay skin-only.16paired
+seam cores and inner-boundary feather hold current parent. Changed74,068skin/
+44,853tattoo pixels; all v5A outside chest, head/hair/arms/back/clothes/boots and
+alpha verified exact. User preference recorded on v5A with chest work pending;
+new child remains UNAPPROVED/unselected. Live PNG hash/GLB RGBA and all33previous
+candidate metadata/files verified; unaffected reviews/cameras/preferences held.
+34candidates/30requests, same8768writer PID23344/exec99295, no restart/reload or
+game/pack/publication change.92tests+15subtests pass. Source report/recipes:
+research/rollins-chest-v6-20261029/. Private final stage: experiments/
+rollins-chest-v6-20261029/assembled-v3/; earlier stages are QA history only.
+Next: owner saves notes, refreshes, chooses Latest restoration/Chest detail,
+checks chest skin/oval/lettering/joins against v5A. Bulk recipe stays provisional.
+
+
+**Prior regional studies,2026-10-28:** owner asks to start and try different
 localized approaches. Five built-in edits succeeded: sun/caption, arm art,
 plain skin-material sample, transparent decal and small emblem. Two new2048RGBA
 Rollins children are imported and UNAPPROVED: v5A r-a6ca883293734644 (localized
@@ -72,7 +97,7 @@ No blocked body output imported and no alternate generation service used.
 | Trejo |r-a41e97bb2dc3445f|Owner visually accepted; unchanged|
 | Redman |r-615ab80f98c34738|v4 visually approved; unchanged|
 | Blaze |r-75cda6b939fc4c88|v4 visually approved; unchanged|
-| Henry Rollins |v5A r-a6ca883293734644 / v5B r-48b6674ae55e409c|Body drafts await review; v4 head/clothes retained|
+| Henry Rollins |v6 r-5304b94c634a4fa9|Preferred v5A with chest-only correction; awaiting review|
 
 Live8768 single writer PID23344/exec99295, same isolated source/profile.
 31candidates/27live request records,5models,17archived old choices. Twelve
@@ -110,6 +135,11 @@ The authoring repository is vyanhursky/DefJam-Modding-Tools; runtime/loader/setu
 remain in DefJamFFNY-recomp with the frozen compatibility snapshot.
 
 ## Decisions
+
+- 2026-10-29: owner prefers v5A and asks for chest skin/tattoo correction. Limit
+  child to model-space chest plus its separate UV emblem; retain v5A elsewhere.
+  Use successful tattoo edit and frequency-calibrated prior material detail
+  after direct chest-skin rejection. Preference is not new-child approval.
 
 - 2026-10-28: owner authorizes regional studies and different approaches. Compare
   localized tattoo interpretation against source-contour ink/skin detail. Adopt
@@ -201,11 +231,11 @@ five-fighter checks verify pixel embedding/identity, not native Blender import.
    Redman/Blaze/Rollins. A page already open can flush its old saved choice on
    reload; use the revision ID/Older texture notice to verify the actual draft.
    Do not force reload or discard drafts. Concurrent notes cause409, not data loss.
-3. Review Rollins v5A versus v5B (Latest restoration defaults A). Regional body
-   generations now succeeded; former whole-atlas failure is historical. Check
-   skin/neck join, sun face/rays/caption and arm designs. Tiny uncertain words
-   remain original and small emblem conservative. Hold all four other approved
-   fighters. Only after owner accepts a body result may bulk calibration freeze.
+3. Review Rollins v6 (Latest restoration) at Chest detail versus preferred v5A.
+   Tattoo is newly restored; skin uses finer prior generated material detail
+   after direct anatomical crop failed. Check oval/strokes/lettering, grain scale
+   and joins. All v5A outside chest and four other fighters stay exact. Freeze
+   bulk calibration only after the owner accepts the new chest/body result.
 4. Private experiment has before-workshop/models, before-clothing backups,
    assembly/import/verification receipts, immutable prompts/raw and frozen
    processor versions. Show archived revisions recovers earlier comparisons;

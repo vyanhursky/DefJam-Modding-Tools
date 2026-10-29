@@ -49,6 +49,10 @@ missing decisions and preserve an active review session during changes.
   A uses localized sun/arm restoration; B retains source contours with generated
   skin/ink grain. Tiny uncertain letters are held. Direct decal/emblem redraws
   are studies only. The former full-atlas service blocker is historical.
+  On2026-10-29 owner prefers v5A but requests chest work. New v6 is chest-only:
+  regenerated CREEPY CRAWL tattoo plus calibrated existing generated skin-material
+  detail; direct chest-skin generation was blocked. All v5A outside chest stays
+  exact. Neither preference nor parent approval approves this new child.
   Bulk calibration stays draft until all five pass. Check displayed revision IDs:
   saved views may show older
   baselines. Use actual material UV masks, not broad eye/mouth rectangles that

@@ -6,6 +6,9 @@ boots are also accepted. New v5A/v5B regional body studies await owner review;
 five localized built-in generations succeeded. A uses richer localized tattoo
 restoration, B retains source contours with generated skin/ink grain. Tiny
 uncertain lettering stays original; the small emblem remains conservative.
+On2026-10-29 the owner chose v5A's direction and requested chest correction.
+The v6 child restores the chest emblem and uses finer material-derived chest
+skin detail, retaining v5A outside anatomical chest coverage. Final review remains.
 Freeze the five-fighter reference set only after these remaining gates close.
 This document records the working method and the failures to avoid meanwhile.
 
@@ -83,6 +86,12 @@ and isolated curve continuity after applying holds, before importing.
 See research/rollins-region-studies-20261028/ for source recipes and measured
 parameters. Compare richer and contour-preserving children; do not present subtle
 ink grain as reconstructed lettering or authenticate a tattoo from sharpness.
+For chest-local work, clip source triangles against anatomical model-space and
+UV bounds rather than choosing entire triangles by their centroids. Explicitly
+union separate tattoo islands. The atlas may be rotated or nearby islands may
+belong to hands/neck rather than chest. Calibrate generated grain's spatial
+frequency as well as amplitude; whole-swatch enlargement can produce oversized
+pores. See research/rollins-chest-v6-20261029/ for the measured Rollins example.
 
 ## Review and freeze
 
