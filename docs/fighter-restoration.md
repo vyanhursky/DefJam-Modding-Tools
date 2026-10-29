@@ -1,9 +1,9 @@
 # Fighter restoration calibration — draft
 
-**Not yet a bulk-approved recipe.** Nyne and Trejo v3 were visually accepted by
-Vlad on2026-10-28. Redman and Blaze v4 need another review. Rollins has a restored
-head and restored trousers/boots but incomplete body skin/tattoos; the latest
-body generation was service-blocked.
+**Not yet a bulk-approved recipe.** Nyne/Trejo v3 and Redman/Blaze v4 were
+visually accepted by Vlad on2026-10-28. Rollins' restored head/hair and trousers/
+boots are also accepted. His body skin/tattoos remain incomplete: the expressly
+requested imagegen retry was again blocked at output moderation.
 Freeze the five-fighter reference set only after these remaining gates close.
 This document records the working method and the failures to avoid meanwhile.
 

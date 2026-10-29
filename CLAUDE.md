@@ -43,8 +43,9 @@ missing decisions and preserve an active review session during changes.
   Current/shared stale notes may be reconciled to explicit owner feedback only
   with an exact private prior-notes backup and optimistic review-version checks.
 - On2026-10-28 the owner visually accepted Nyne/Trejo v3. Keep those bytes.
-  Redman/Blaze v4 headwear repairs need review. Rollins v4 adds trousers/boots to
-  his restored head; body skin/tattoos remain service-blocked, not restored.
+  The owner's next feedback also accepts Redman/Blaze v4 and Rollins' existing
+  head/hair/trousers/boots. Keep those pixels. Rollins body skin/tattoos remain
+  incomplete: the explicitly requested retry was again output-moderation blocked.
   Bulk calibration stays draft until all five pass. Check displayed revision IDs:
   saved views may show older
   baselines. Use actual material UV masks, not broad eye/mouth rectangles that

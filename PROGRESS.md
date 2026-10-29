@@ -2,6 +2,21 @@
 
 ## Current status
 
+**Latest approval/retry,2026-10-28:** owner says everything else is good and
+approved, and explicitly requests retrying Rollins skin/tattoos. Redman/Blaze
+exact v4 are now visually approved; Rollins v4 head/hair/clothes/boots accepted
+as components, with the whole fighter still incomplete. Nyne/Trejo accepted
+bytes retained. Built-in retry used the v4 atlas with a nonsexual technical
+restoration prompt, preserving existing tattoo shapes and SEARCH & DESTROY
+lettering. Service again rejected the generated output (sexual); request ID
+9623d88c-f2a4-44aa-ac83-dea47e1aefe8. No image returned or imported. Exact prompt,
+error, prior notes and approval receipts are private under experiments/
+rollins-skin-retry-20261028/. Six current/shared reviews reconciled through live
+API; all31candidate metadata/PNGs, requests and model-view state verified exact.
+No restart, new provider, game install, publication or approval of unseen skin.
+Only remaining pilot art gate: generate and owner-review Rollins skin/tattoos.
+Bulk method remains provisional. Source report: research/rollins-skin-retry-20261028/.
+
 **Wave four,2026-10-28:** owner accepts Nyne/Trejo, requests Redman headwear gap,
 Rollins missing body detail, and Blaze head/palette rework, then a bulk method
 once all five are accepted. Nyne/Trejo exact v3 bytes retained and visually
@@ -28,9 +43,9 @@ No blocked body output imported and no alternate generation service used.
 |---|---|---|
 | Nyne |r-c781fcc1ff7e43e9|Owner visually accepted; unchanged|
 | Trejo |r-a41e97bb2dc3445f|Owner visually accepted; unchanged|
-| Redman |r-615ab80f98c34738|v4 headwear repair; needs review|
-| Blaze |r-75cda6b939fc4c88|v4 restored head/source palette + cap repair; needs review|
-| Henry Rollins |r-0ca085cea9db4beb|v4 head + clothes; body skin/tattoos blocked/incomplete|
+| Redman |r-615ab80f98c34738|v4 visually approved; unchanged|
+| Blaze |r-75cda6b939fc4c88|v4 visually approved; unchanged|
+| Henry Rollins |r-0ca085cea9db4beb|v4 head/clothes approved; body skin/tattoos incomplete|
 
 Live8768 single writer PID23344/exec99295, same isolated source/profile.
 31candidates/27live request records,5models,17archived old choices. Twelve
@@ -48,7 +63,7 @@ retained. Browser visual check remains blocked by URL policy; no bypass.
 Private prompts/raw/recipes/masks/receipts/backup and review index:
 workshop/experiments/fighters-wave4-20261028/. Source report/recipes:
 research/fighters-wave4-20261028/. Bulk guide/template in docs/ is explicitly
-DRAFT until remaining three and all intended material coverage are accepted.
+DRAFT until Rollins skin/tattoos are restored and owner accepted.
 
 **Known-good publication:** HD Fighters0.1(beta),0.1.0-beta.1, published2026-10-26
 via Cloudflare immutable object and DefJamFFNY-mods PR6; signed catalogue rev6,
@@ -69,6 +84,11 @@ remain in DefJamFFNY-recomp with the frozen compatibility snapshot.
 
 ## Decisions
 
+- 2026-10-28: owner explicitly approves everything except the unfinished Rollins
+  skin/tattoos and requests a new built-in attempt. Record whole-draft approval
+  for Redman/Blaze, component acceptance for Rollins; preserve all approved art.
+  The retry failed at service output moderation. No returned image means no new
+  revision, generation-complete claim or bulk-calibration signoff.
 - 2026-10-28: exact Nyne/Trejo v3 visually accepted by owner; keep bytes. Rework
  remaining three locally. Bulk calibration is conditional on all five passing.
 - 2026-10-28: repair overly broad protection holds by material geometry, reusing
@@ -149,9 +169,10 @@ five-fighter checks verify pixel embedding/identity, not native Blender import.
    Redman/Blaze/Rollins. A page already open can flush its old saved choice on
    reload; use the revision ID/Older texture notice to verify the actual draft.
    Do not force reload or discard drafts. Concurrent notes cause409, not data loss.
-3. Review repaired cap/panel/strips, Blaze likeness/skin/clothes/neck and Rollins
-   trouser/boot detail. Nyne/Trejo are held accepted. Rollins skin/tattoos remain
-   a service blocker. Do not claim all five complete or freeze the bulk recipe.
+3. All existing restored areas are now owner accepted. Keep their exact bytes.
+   Rollins skin/tattoos are the sole outstanding art gate; explicitly requested
+   retry again failed at output moderation. Do not call all five complete or
+   freeze the bulk recipe. Exact prompt/error request ID is in the retry bundle.
 4. Private experiment has before-workshop/models, before-clothing backups,
    assembly/import/verification receipts, immutable prompts/raw and frozen
    processor versions. Show archived revisions recovers earlier comparisons;

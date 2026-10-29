@@ -19,8 +19,9 @@ All review decisions, exact prompts, images and exports remain in the private
 workspace. Back it up with the matching corpus. The source repository retains
 templates, tooling, tests and technical research, not those assets.
 
-Current pilot: Blaze, Nyne, Trejo, Redman, Henry Rollins. Nyne/Trejo v3 are
-visually accepted; Redman/Blaze v4 need review and Rollins' body is incomplete.
+Current pilot: Blaze, Nyne, Trejo, Redman, Henry Rollins. Nyne/Trejo v3 and
+Redman/Blaze v4 are visually accepted, as are Rollins' head/hair/clothes/boots.
+Rollins' skin/tattoos remain incomplete after the owner-requested retry was blocked.
 See [fighter restoration calibration](fighter-restoration.md) before extending
 the batch. Static model previews are available; animation, venues and mesh
 reimport are future work.
