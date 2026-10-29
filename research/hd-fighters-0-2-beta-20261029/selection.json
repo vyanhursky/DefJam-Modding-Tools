@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "id": "hd-fighters",
+  "name": "HD Fighters",
+  "display_name": "HD Fighters 0.2 (beta)",
+  "version": "0.2.0-beta.1",
+  "channel": "prerelease",
+  "min_recomp": "0.12.1",
+  "publication_authorized": "2026-10-29",
+  "status": "Five complete main-outfit models visually approved by owner; beta native playtest pending",
+  "selections": [
+    {
+      "fighter": "Blaze",
+      "source_member": "V2IP_113A.xsh",
+      "source_id": "5c9b3229151c2853656113a8df7e3f91effdef5ae68c9bdd567e5a71bbe9c91a",
+      "revision": "r-75cda6b939fc4c88",
+      "label": "Blaze \u00b7 v4 \u00b7 Restored headwear gaps + source palette",
+      "sha256": "6eca31d3ae20fe355b89d4bcf304507502cc395a828a8164b3e17a7a7e5c33cc",
+      "baseline_sha256": "b864679d7aa6abeec2475320c1088cdab1a7962f446a7c569a08e9f183dba5fb",
+      "face_policy": "Owner-approved restored face/head/hair; exact accepted revision",
+      "approval": "Owner explicitly approved all five models on 2026-10-29"
+    },
+    {
+      "fighter": "Nyne",
+      "source_member": "V2IP_009A.xsh",
+      "source_id": "a25c4fdd4998993c94d18ad0f5169c7ad6e6b898c711482777303c7ba3a18517",
+      "revision": "r-c781fcc1ff7e43e9",
+      "label": "Nyne \u00b7 v3 \u00b7 Natural head + original clothing palette",
+      "sha256": "aa5a15fc484d048bd9af96a72116b7da9c401d5d73b8f1526db3f48ae96da256",
+      "baseline_sha256": "35b8f74c9391a39ad812d9fc58908eb0ca0eaa98b94decc2fdeac888e348bc45",
+      "face_policy": "Owner-approved restored face/head/hair; exact accepted revision",
+      "approval": "Owner explicitly approved all five models on 2026-10-29"
+    },
+    {
+      "fighter": "Trejo",
+      "source_member": "V2IP_112A.xsh",
+      "source_id": "1900051b32443a33a745c088a08231d039d80c9eb96483f4b43456a2a3f68f24",
+      "revision": "r-a41e97bb2dc3445f",
+      "label": "Trejo \u00b7 v3 \u00b7 Natural head + original clothing palette",
+      "sha256": "2be79d70548c0fdc8b55f13de9f9d93c9ff3bc8537df14b47a66e682dbff4e1f",
+      "baseline_sha256": "6a94e2fc6f357e319a2bdba7a0fed8708a3e11beb2be1b0ea3e9cff4a3a544be",
+      "face_policy": "Owner-approved restored face/head/hair; exact accepted revision",
+      "approval": "Owner explicitly approved all five models on 2026-10-29"
+    },
+    {
+      "fighter": "Redman",
+      "source_member": "V2IP_109A.xsh",
+      "source_id": "61ca4a5526f266aa676e52bff3ac615eff3bb85f8d32f6375e81cce2da374c6b",
+      "revision": "r-615ab80f98c34738",
+      "label": "Redman \u00b7 v4 \u00b7 Restored headwear gaps + source palette",
+      "sha256": "3523d499a85a8b89ba9f95e5301e842d5f3d19450f2f6e880f5a2e0b3601833c",
+      "baseline_sha256": "447d1e684a943d3117f587bc76748c17f269e9f7cd5d578714f8ba4a449f430d",
+      "face_policy": "Owner-approved restored face/head/hair; exact accepted revision",
+      "approval": "Owner explicitly approved all five models on 2026-10-29"
+    },
+    {
+      "fighter": "Henry Rollins",
+      "source_member": "V2IP_131A.xsh",
+      "source_id": "4f1b25d80e683f2a80e7071d5a50c576066ec49831419048f5ff7f15dccdd31d",
+      "revision": "r-5304b94c634a4fa9",
+      "label": "Henry Rollins \u00b7 v6 \u00b7 Chest skin + CREEPY CRAWL \u00b7 v5A base",
+      "sha256": "b0992fd40cf4c73bc430002c4e509992712f93ce57be7f57b2d61e7453d06760",
+      "baseline_sha256": "ad736d692f72aca2ea58549d57401fad21fe26681462d7f1007d6975f1b0800f",
+      "face_policy": "Owner-approved restored face/head/hair; exact accepted revision",
+      "approval": "Owner explicitly approved all five models on 2026-10-29"
+    }
+  ]
+}

@@ -6,8 +6,9 @@ It reads exported models from the workshop's private data folder. The original
 game archives, faithful corpus, reviews and candidate images are not modified
 by conversion. The viewer needs no running game or external service.
 
-Supported fighters are **Trejo, Blaze, Nyne, Redman and Henry Rollins**, main
-outfits only. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
+Supported main-outfit fighters are **Trejo, Blaze, Nyne, Redman, Henry Rollins,
+D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack, Flava Flav, WC
+and Warren G**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
 (`V2IP_131A`). Use `--fighter redman` or `--fighter rollins` when exporting them.
 Their original geometry, UV islands, normals and material partitions are used;
 this is not a generated replacement body. Textures can be compared in their
@@ -165,3 +166,9 @@ Models, decoded arrays, generated PNGs, `.blend` files and screenshots must rema
 private. Only tooling, upstream library code/license, synthetic fixtures and
 metadata documentation belong in source. The source checker and ignore rules now
 also reject common exported model formats.
+
+The2026-10-29 ten-fighter extension retains the decoder unchanged. All ten source
+models exported and backend GLBs embed exact selected PNG RGBA. Atlas contact
+sheets were inspected; no additional browser visual pass was performed under
+the current browser URL policy. New drafts remain unapproved. See
+[batch recipe](../research/fighters-batch10-20261029/README.md).

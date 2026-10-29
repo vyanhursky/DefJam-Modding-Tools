@@ -71,7 +71,7 @@ function preset(kind){
   let sign=kind==='back'?-1:1;
   if(kind==='chest'){center.set(0,height*.71,1);distance=11;}
   if(kind==='belt'){center.set(0,height*.535,1);distance=8;}
-  // Body proportions keep these review crops useful across the three fighters.
+  // Body proportions keep these review crops useful across supported fighters.
   // Fit both dimensions so a narrow viewport does not cut off the shoes.
   const detail={face:{y:.91,h:.20,w:.18},pants:{y:.30,h:.56,w:.38},shoes:{y:.065,h:.19,w:.36}}[kind];
   const direction=new THREE.Vector3(0,0,sign);

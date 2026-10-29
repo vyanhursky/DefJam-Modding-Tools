@@ -1,4 +1,4 @@
-FIGHTER RESTORATION PROMPTS — DRAFT, PILOT CALIBRATION INCOMPLETE
+FIGHTER RESTORATION PROMPTS — FIVE-FIGHTER CALIBRATION APPROVED 2026-10-29
 
 Fill every bracket before submission. Keep actual submitted text privately with
 the inputs/raw output. Coordinates and hold masks come from that fighter's UVs.

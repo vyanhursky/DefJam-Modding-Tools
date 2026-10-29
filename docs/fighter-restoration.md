@@ -1,16 +1,12 @@
-# Fighter restoration calibration — draft
+# Fighter restoration — calibrated workflow
 
-**Not yet a bulk-approved recipe.** Nyne/Trejo v3 and Redman/Blaze v4 were
-visually accepted by Vlad on2026-10-28. Rollins' restored head/hair and trousers/
-boots are also accepted. New v5A/v5B regional body studies await owner review;
-five localized built-in generations succeeded. A uses richer localized tattoo
-restoration, B retains source contours with generated skin/ink grain. Tiny
-uncertain lettering stays original; the small emblem remains conservative.
-On2026-10-29 the owner chose v5A's direction and requested chest correction.
-The v6 child restores the chest emblem and uses finer material-derived chest
-skin detail, retaining v5A outside anatomical chest coverage. Final review remains.
-Freeze the five-fighter reference set only after these remaining gates close.
-This document records the working method and the failures to avoid meanwhile.
+The owner approved the complete five-fighter reference set on2026-10-29:
+Blaze v4, Nyne/Trejo v3, Redman v4 and Henry Rollins v6. Exact revision/output
+hashes are pinned in research/hd-fighters-0-2-beta-20261029/selection.json;
+actual artwork, prompts, references and processor evidence remain private.
+HD Fighters0.2(beta) packages only this approved set. Native0.2 playtesting
+remains pending. The owner now authorizes ten new main-outfit review drafts;
+those remain unapproved/unselected and excluded from the release.
 
 ## Prepare each fighter
 
@@ -125,8 +121,22 @@ Before calling a fighter complete, retain evidence for:
 - Native playtest recorded for the resulting pack;0.1's prior playtest does not
   verify later face/headwear revisions.
 
-Once all five pass, freeze a private calibration manifest with their exact IDs,
-hashes, prompts, references, processors, exceptions and review evidence. Validate
-the method on a small new batch before increasing batch size. Bulk generation
-can be queued; approval, uncertain lettering and local game acceptance remain
-review gates. Publish only through a newly requested versioned modpack release.
+The approved five now form the frozen private calibration reference. Their
+methods are examples, not reusable atlas coordinates. Whole-atlas generation
+suits mostly clothed fighters; Rollins required localized tattoo/material work.
+The owner's current new batch size is ten. Individual approval, uncertain marks
+and native playtesting remain review gates for every future release.
+
+For bulk assembly see research/fighters-batch10-20261029/assemble.py. It derives
+actual opaque-material coverage, holds eyes/alpha/unknown groups plus one source
+texel, records both sides of distinct paired skin UV edges, and subtracts local
+source Lab drift. It then matches clothing separately, including cloth1, and
+restores declared source holds and seam cores after that last pass. Per-material
+connected-component coverage flags omissions. The private per-fighter plan
+records inspected mouth/inscription/emblem holds. No head quadrant, anatomical
+plane, Rollins seam count or watch/glyph rectangle is a generic default.
+
+Do not apply color_trial.correct with a newly restored protected head: that
+function requires protected parent pixels equal Faithful. Use reference-matched
+regional assembly instead. Grain transfer is an optional localized method;
+calibrate spatial frequency and amplitude, not merely the overall output size.

@@ -40,6 +40,16 @@ PILOT = {
     "v2ip_113c.xsh": ("Blaze", "Bloody Blaze", False),
     "v2ip_009a.xsh": ("Nyne", "Main", True),
     "v2ip_112a.xsh": ("Trejo", "Main", True),
+    'v2ip_014a.xsh': ('D-Mob', 'Main', True),
+    'v2ip_114a.xsh': ('Sticky Fingaz', 'Main', True),
+    'v2ip_123a.xsh': ('Ludacris', 'Main', True),
+    'v2ip_132a.xsh': ('Ice-T', 'Main', True),
+    'v2ip_126a.xsh': ('Crow', 'Main', True),
+    'v2ip_125a.xsh': ('Sean Paul', 'Main', True),
+    'v2ip_106a.xsh': ('Crack', 'Main', True),
+    'v2ip_110a.xsh': ('Flava Flav', 'Main', True),
+    'v2ip_303a.xsh': ('WC', 'Main', True),
+    'v2ip_306a.xsh': ('Warren G', 'Main', True),
 }
 
 

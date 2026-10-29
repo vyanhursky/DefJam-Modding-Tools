@@ -42,21 +42,17 @@ missing decisions and preserve an active review session during changes.
   visible; never silently delete art or change approval flags.
   Current/shared stale notes may be reconciled to explicit owner feedback only
   with an exact private prior-notes backup and optimistic review-version checks.
-- On2026-10-28 the owner visually accepted Nyne/Trejo v3. Keep those bytes.
-  The owner's next feedback also accepts Redman/Blaze v4 and Rollins' existing
-  head/hair/trousers/boots. Keep those pixels. Rollins v5A/v5B regional body
-  studies now exist after five successful built-in edits; neither is approved.
-  A uses localized sun/arm restoration; B retains source contours with generated
-  skin/ink grain. Tiny uncertain letters are held. Direct decal/emblem redraws
-  are studies only. The former full-atlas service blocker is historical.
-  On2026-10-29 owner prefers v5A but requests chest work. New v6 is chest-only:
-  regenerated CREEPY CRAWL tattoo plus calibrated existing generated skin-material
-  detail; direct chest-skin generation was blocked. All v5A outside chest stays
-  exact. Neither preference nor parent approval approves this new child.
-  Bulk calibration stays draft until all five pass. Check displayed revision IDs:
-  saved views may show older
-  baselines. Use actual material UV masks, not broad eye/mouth rectangles that
-  suppress neighboring headwear. See docs/fighter-restoration.md.
+- On2026-10-29 owner approved all five complete models, including Rollins v6,
+  and authorized HD Fighters0.2(beta) publication plus ten new fighters using
+  the calibrated method. Preserve exact approved bytes: Blaze/Redman v4,
+  Nyne/Trejo v3, Rollins v6. The new ten remain unapproved and outside0.2.
+  The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
+  retained as history; final v6 used successful regional art/material inputs.
+  Never infer new-child approval from a parent's acceptance. Check displayed
+  revision IDs; use actual material UV masks and inspected narrow tile holds,
+  not copied pilot head quadrants/eye/mouth rectangles or Rollins seam counts.
+  Source-palette matching must include clothing/headwear/footwear as well as skin.
+  See docs/fighter-restoration.md and its calibrated prompt template.
 - Exact prompts/reference notes/raw outputs belong to immutable candidate
   history. Every import is a new revision. Keep alpha separate and technically
   restore protected pixels; a prompt alone is not a pixel lock.
@@ -81,8 +77,9 @@ missing decisions and preserve an active review session during changes.
   deliberately with setup tests; do not maintain independent evolving copies.
 - New corpus builds fingerprint code and may produce a new recipe identity.
   Reading an existing corpus/workspace must not change it.
-- Model viewer decodes five static main-outfit fighter meshes: Blaze, Nyne,
-  Trejo, Redman (internal Doc) and Henry Rollins (internal ROLINS).
+- Model viewer decodes fifteen static main-outfit fighter meshes: the accepted
+  five plus D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack,
+  Flava Flav, WC and Warren G.
   Preserve source geometry/UVs/normals/material partitions; label lighting
   approximations and omitted effects. No rig, venue or game reimport claim.
 - Read-only independent investigations can be delegated while the main agent

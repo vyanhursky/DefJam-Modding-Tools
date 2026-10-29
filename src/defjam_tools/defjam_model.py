@@ -24,6 +24,16 @@ FIGHTERS = {
     "trejo": ("Trejo", "V2IP_112A", "1900051b32443a33a745c088a08231d039d80c9eb96483f4b43456a2a3f68f24"),
     "blaze": ("Blaze", "V2IP_113A", "5c9b3229151c2853656113a8df7e3f91effdef5ae68c9bdd567e5a71bbe9c91a"),
     "nyne": ("Nyne", "V2IP_009A", "a25c4fdd4998993c94d18ad0f5169c7ad6e6b898c711482777303c7ba3a18517"),
+    'd-mob': ('D-Mob', 'V2IP_014A', '0463ab7e782b97c6de0232b2f3382e22769010e4ffccb6b4f651184382aa4969'),
+    'sticky-fingaz': ('Sticky Fingaz', 'V2IP_114A', '3a81ec057bec2cbd5e853a670b102cb77111a9aef6ce88d10a8daefc3348f9a7'),
+    'ludacris': ('Ludacris', 'V2IP_123A', '949af9177d65df1880bfadc753b63a9e35c3ec3594510134766ab86c2bf07476'),
+    'ice-t': ('Ice-T', 'V2IP_132A', 'c967f154df41f21005d5432660f8b2f04dcbf13df4360cbc5b1ba088463867a9'),
+    'crow': ('Crow', 'V2IP_126A', '250a7396a0e3d7ef8b45d09b5abdfe5e1b7eabd3ffe18dde018121f4a9a94713'),
+    'sean-paul': ('Sean Paul', 'V2IP_125A', '7e73c842a6ad6b252e7762c4f58823011d1b35573855aa14f31ed0359da9d33b'),
+    'crack': ('Crack', 'V2IP_106A', '6c14e433f615b6401295670c238b92e24994dd38ea37ab0ab7cc06c192f87f51'),
+    'flava-flav': ('Flava Flav', 'V2IP_110A', 'f58429a6b89a6a31ec5038dc852d3e7dc029585cc06a2c329f49955d46345cc7'),
+    'wc': ('WC', 'V2IP_303A', '26048b0205f6f35bc6716bbc5dfb37fe6543ccdec70be2d59e80269f641ca41f'),
+    'warren-g': ('Warren G', 'V2IP_306A', '2eb0820cba3e88633bca5012077c74e7c16781ee6484f8a6871772ba2b0b5c83'),
 }
 
 
