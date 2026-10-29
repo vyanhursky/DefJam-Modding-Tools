@@ -17,6 +17,14 @@ async function exclusive(action){
   try{return await action();}finally{state.busy=false;document.querySelectorAll('select,button,input,textarea').forEach(e=>e.disabled=!state.ready&&e.id!=='fighter');}
 }
 function textureLabel(rev){return rev==='original'?'Original':rev==='faithful'?'Faithful HD · Lanczos 4×':state.asset.candidates.find(c=>c.id===rev)?.label||rev;}
+function latestRestoration(){return state.asset.candidates.filter(c=>c.style==='faithful'&&!c.review.tags?.includes('archived')).at(-1);}
+function showRevisionNotice(revision){
+  const latest=latestRestoration(),candidate=state.asset.candidates.find(c=>c.id===revision);
+  const older=latest&&revision!==latest.id;
+  $('revision-notice').hidden=!older;
+  $('revision-notice').textContent=older?'Older texture on the right. Latest restoration: '+latest.label+' · '+latest.id+'. Use Latest restoration to review it.':'';
+  return candidate?' · '+candidate.id+' · '+candidate.review.status.replaceAll('_',' '):'';
+}
 function groupLabel(raw){const base=raw.split('~')[0].replace('_MatAlph','');return ({emc1_eye:'Eyes',emc2_skin:'Skin',emc3_jewelry:'Jewelry',emc4_cloth:'Clothing',emc3_jewelry_ALPHA:'Jewelry · transparent',eyelid_ALPHA:'Eyelids · transparent',nospec:'Unlit',nospec_ALPHA:'Unlit · transparent'})[base]||base;}
 function revisionTarget(){return ['original','faithful'].includes($('right').value)?'asset':$('right').value;}
 function draftKey(){return 'defjam-3d-draft:'+state.config.workspace+':'+state.asset.id+':'+revisionTarget();}
@@ -94,7 +102,7 @@ async function paint(v){
     const material=$('lighting').value==='studio'?new THREE.MeshStandardMaterial({...parameters,metalness:0,roughness:.8}):new THREE.MeshBasicMaterial(parameters);
     o.material.dispose();o.material=material;
   });
-  $('label-'+v.side).textContent=textureLabel(revision)+' · '+texture.image.width+' × '+texture.image.height;
+  $('label-'+v.side).textContent=textureLabel(revision)+' · '+texture.image.width+' × '+texture.image.height+(v.side==='right'?showRevisionNotice(revision):'');
   if(v.side==='right'){
     $('download').href='/api/model/'+state.fighter+'/model.glb?revision='+encodeURIComponent($('right').value);
     $('download').download=state.fighter+'-'+$('right').value+'.glb';
@@ -106,7 +114,7 @@ function loadReview(){
   const target=revisionTarget(),candidate=state.asset.candidates.find(c=>c.id===target);
   state.review=structuredClone(candidate?candidate.review:state.asset.review);state.dirty=false;state.reviewRevision=$('right').value;
   $('notes').value=state.review.notes;$('flag').checked=state.review.flag;
-  $('review-label').textContent=textureLabel($('right').value);
+  $('review-label').textContent=textureLabel($('right').value)+(candidate?' · '+candidate.id+' · '+candidate.review.status.replaceAll('_',' '):'');
   $('review-status').textContent='Saved notes loaded';$('restore-draft').hidden=!localStorage.getItem(draftKey());
 }
 function reviewChanged(){state.dirty=true;$('review-status').textContent='Unsaved · browser draft retained';localStorage.setItem(draftKey(),JSON.stringify({notes:$('notes').value,flag:$('flag').checked}));}
@@ -171,7 +179,7 @@ async function init(){
     const next=$('right').value;
     try{if(previous){$('right').value=previous;await saveNotes();}$('right').value=next;await paint(state.views[1]);loadReview();state.reviewRevision=next;}catch(e){$('right').value=previous;error(e);}
   }).catch(error));
-  $('latest').addEventListener('click',()=>exclusive(async()=>{await saveNotes();const candidate=state.asset.candidates.filter(c=>c.style==='faithful'&&!c.review.tags?.includes('archived')).at(-1);if(candidate){$('right').value=candidate.id;await paint(state.views[1]);loadReview();}}).catch(error));
+  $('latest').addEventListener('click',()=>exclusive(async()=>{await saveNotes();const candidate=latestRestoration();if(candidate){$('right').value=candidate.id;await paint(state.views[1]);loadReview();}}).catch(error));
   $('lighting').addEventListener('change',()=>Promise.all(state.views.map(paint)).catch(error));$('wireframe').addEventListener('change',updateView);
   for(const kind of ['front','back','fit','face','chest','belt','pants','shoes'])$(kind).addEventListener('click',()=>preset(kind));
   $('hold').addEventListener('pointerdown',e=>{e.preventDefault();$('hold').setPointerCapture(e.pointerId);state.hold=true;paint(state.views[1]).catch(error);});

@@ -40,12 +40,22 @@ missing decisions and preserve an active review session during changes.
   archived revisions controls. Keep all PNGs, notes, prompts, parent links and
   hashes. Published0.1, approved/selected and saved comparison choices stay
   visible; never silently delete art or change approval flags.
+  Current/shared stale notes may be reconciled to explicit owner feedback only
+  with an exact private prior-notes backup and optimistic review-version checks.
+- On2026-10-28 the owner visually accepted Nyne/Trejo v3. Keep those bytes.
+  Redman/Blaze v4 headwear repairs need review. Rollins v4 adds trousers/boots to
+  his restored head; body skin/tattoos remain service-blocked, not restored.
+  Bulk calibration stays draft until all five pass. Check displayed revision IDs:
+  saved views may show older
+  baselines. Use actual material UV masks, not broad eye/mouth rectangles that
+  suppress neighboring headwear. See docs/fighter-restoration.md.
 - Exact prompts/reference notes/raw outputs belong to immutable candidate
   history. Every import is a new revision. Keep alpha separate and technically
   restore protected pixels; a prompt alone is not a pixel lock.
 - Trejo caption: owner says "Debbie Danielle". Buckle: bear left, deer right,
-  smaller deer middle. Latest v4 is a review draft; fidelity still needs owner
-  approval. No automatic selection, approval, game verification or installation.
+  smaller deer middle. Current v3 child retains the earlier tattoo work and is
+  visually accepted. Do not infer new-child approval, pack selection, game
+  verification or installation from that acceptance.
 
 ## Engineering
 

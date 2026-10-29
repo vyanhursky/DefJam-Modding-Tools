@@ -19,9 +19,12 @@ original rest pose before choosing a revision for an in-game test.
    after saving pending notes. **Show archived revisions** includes superseded
    choices; their PNGs, notes and provenance remain intact. Published baselines
    and saved comparison choices stay available. The left pane starts with
-   Original, the right pane with
+   Original, the right pane restores its saved choice or defaults to
    the latest Rich Original Detail candidate. Both selectors also offer Faithful
    HD and earlier revisions. Stylized drafts remain labelled as history.
+   The right caption and notes show the exact revision ID and review status.
+   An **Older texture** notice identifies a newer active restoration; saved
+   baseline comparisons are intentionally retained until you change them.
 2. Drag either pane to orbit, scroll to zoom, right-drag to pan. Both cameras
    follow the same target and position. Front, Back, Fit model, Face detail,
    Chest detail, Belt detail, Pants detail and Shoe detail provide repeatable

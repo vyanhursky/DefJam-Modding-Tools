@@ -1,0 +1,47 @@
+FIGHTER RESTORATION PROMPTS — DRAFT, PILOT CALIBRATION INCOMPLETE
+
+Fill every bracket before submission. Keep actual submitted text privately with
+the inputs/raw output. Coordinates and hold masks come from that fighter's UVs.
+
+PRIMARY RESTORATION
+Use case: identity-preserve
+Asset type: [fighter/outfit] game UV texture [atlas/crop], Rich Original Detail.
+Input1: edit target, exact current accepted [revision/hash].
+Input2: original/Faithful source of the same region, layout/palette authority.
+Additional references: [specific detail and role, or none].
+Restore only [explicit coverage]. Retain the original game's illustrated look,
+with slightly more realistic skin/hair and clear fine material detail.
+Keep every UV island's shape, position, orientation and scale, the same framing,
+likeness, expression, anatomy and baked lighting. Keep original broad skin hue,
+garment color and restrained contrast; no warmer skin or brighter clothing.
+Improve [observed pores/hair strands/fabric weave/seams/laces/engraving/ink edges].
+Exact source inscription: [verbatim text and original handwriting path/location].
+Uncertain detail: [marks to hold and questions for owner; no invented lettering].
+Preserve tattoo silhouettes and existing animal/tree/line positions. Clarifying
+detail must not redesign a tattoo or change the source handwriting geometry.
+Hold [actual verified tiles/regions and approved parent areas]. Alpha is restored
+from source during assembly. Output the same flat atlas/crop; no render, montage,
+new objects, island rearrangement, labels, borders or watermark.
+
+LOCAL REVISION
+Use case: precise-object-edit
+Input1: current accepted [fighter/revision] region, edit target.
+Input2: original matching region, layout/palette authority.
+Change only [specific defect] within [verified region]. Preserve [already accepted
+details] exactly in design and position. Match existing source hue and shading.
+Keep [tattoo silhouettes/script paths/UV edges/likeness] unchanged. Restore
+[specific missing material detail] without adding other designs or lettering.
+Return the identical crop layout. Assembly will hold every parent pixel outside
+the verified edit mask and preserve material alpha exactly.
+
+REFERENCE RECORD (PRIVATE, PER FIGHTER)
+fighter / outfit / source_id / original_sha256 / faithful_sha256
+parent_revision / parent_sha256 / geometry_sha256
+inputs with roles + hashes / exact submitted prompt / output or error
+per-region coverage: head, hair, headwear, torso, arms/tattoos, garments, shoes,
+jewelry, eyes/mouth; restored/held/missing/blocked/pending + reason
+known text + source / uncertain detail + owner decision
+actual edit masks / paired seam evidence / palette diagnostics
+processor hashes + parameters / output_sha256 / child revision
+displayed left/right IDs / visual acceptance / unresolved notes
+channel/face checks / pack selection / native test / publication version

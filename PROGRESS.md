@@ -2,313 +2,81 @@
 
 ## Current status
 
-**Wave three ready for review (2026-10-28):** owner expands head/face/hair/
-headwear restoration to all five, requests slightly more realistic skin/hair,
-original clothing palette, and permits cleanup. Five new built-in imagegen head
-edits succeeded, including Rollins. v3 drafts combine .8-strength palette-held
-head detail and source-guided cloth/shoe/headwear Lab correction, preserving
-matched skin outside the head patch, alpha and held eye/mouth/tattoo tiles.
-Median cloth chroma source/before/after: Blaze12.17/15.10/10.85,
-Nyne10.02/11.70/10.12, Trejo8.37/17.02/9.03, Redman7.00/10.71/7.83;
-Rollins0.59/0.59/0.59 (clothes were already original). All safe cloth coverage
-uses source triangles minus other-material coverage plus1sourcepx guard;
-Blaze/Nyne shared UVs remain held to preserve skin. No geometry/UV changes.
-Live at8768, PID23344/exec99295,28candidates/24request records.12older fighter
-revisions soft-archived via tags; all PNGs/notes/parents/hashes retained,0.1 and
-saved/approved/selected choices kept visible. New Show archived revisions and
-Latest restoration controls are served without a restart or forced tab reload.
-81tests+12subtests/8Node checks and JS syntax pass; five new PNG hashes and model
-GLB endpoints checked; saved cameras and old notes intact. Browser visual check
-remains blocked by URL policy. New drafts unapproved/unselected;0.1 unchanged.
-Exact prompts/raw/reports/recoverable archive receipt: private workshop
-experiments/fighters-wave3-20261028/; source research/fighters-wave3-20261028/.
-Next: owner saves any notes, refreshes viewer, presses Latest restoration for
-all five, and checks skin/hair/headwear, less vivid clothes, seams and likeness.
+**Wave four,2026-10-28:** owner accepts Nyne/Trejo, requests Redman headwear gap,
+Rollins missing body detail, and Blaze head/palette rework, then a bulk method
+once all five are accepted. Nyne/Trejo exact v3 bytes retained and visually
+approved from that feedback; no face/channel/game/selection flags inferred.
 
-- 2026-10-28: owner-requested viewer restart completed at127.0.0.1:8768.
-  All five model exports, viewer scripts/style and23drafts respond; saved review
-  and camera JSON hashes unchanged. Single writer PID23344 / exec99295.
-  Same five-fighter source worktree/profile; no art, install or publication change.
+Redman v3 broad eye/mouth/nipple holds accidentally excluded two complete
+headwear strips and part of a white panel; Blaze had a small held cap corner.
+Actual cloth UV masks minus guarded other-material coverage recover saved raw
+v3 detail locally: Redman39,119changed/39,200safe px, Blaze4,707/4,720.
+All nonmask pixels and alpha are exact v3. No new generation needed for these.
+Blaze's saved viewer right was published v1, explaining its unrestored head and
+vibrant old body despite v3 existing. New right captions show revision ID/status
+and warn when a newer active restoration exists; manual baselines stay supported.
 
-**Wave two ready for review (2026-10-27):** owner selected Redman and Henry
-Rollins, prioritizing body/face color matching, face/headwear improvement, then
-final tattoo/clothing review on Blaze/Nyne/Trejo. Explicit face-detail exception
-recorded in AGENTS/CLAUDE; preserve likeness, proportions and expression.
-Gallery recovered at 127.0.0.1:8768 after owner confirmed no unsaved browser notes.
-Versioned corpus rebind backed up metadata and preserved workspace path, all17
-old candidates, old reviews/requests and cameras. Current workspace has23drafts,
-19requests (including2new blocked Rollins calls), five main-outfit models.
-New drafts: Blaze/Nyne Source palette + face/headwear children; Trejo Source
-palette face/headwear child; Redman Rich Original Detail with held face/alpha
-and source-palette assembly. Rollins original/Faithful model available; both
-new imagegen attempts rejected by service output moderation, no substitution.
-74tests +12subtests /8Node checks pass,16model GLB HTTP endpoints and6candidate
-hashes verified. Browser visual checks blocked by URL security policy; no bypass.
-Private inputs/prompts/raw/recipes/reports retained under workshop experiments/
-`fighters-wave2-20261027/`; source report/recipes in research/fighters-wave2-20261027/.
-No new draft approved/selected, no game install or new catalogue publication.
-Public0.1 remains immutable. Next: owner reviews Face/Chest/Back/Belt/Pants/Shoe
-views, likeness/headwear, skin joins and original tattoo/script/material fidelity.
+One built-in Rollins body attempt was output-moderation blocked; exact prompt,
+error and request ID retained privately. A distinct clothing-only request
+succeeded with all head/skin/tattoos excluded from its input/edit scope. New v4
+restores trousers/boots under actual cloth UVs and source-palette matching:
+943,831changed/951,008safe pixels, all other v3 pixels and alpha exact. His head
+is retained restored; body skin/tattoos are STILL Faithful HD, incomplete.
+No blocked body output imported and no alternate generation service used.
 
-**Fighter continuation (2026-10-27):** Vlad reports HD Fighters 0.1 looks great
-in his playtest and authorizes continued work on Blaze, Nyne and Trejo plus more
-fighters. The playtest gate is satisfied at pack level; the report did not name
-which fighters/outfits were exercised, so no per-revision face/channel/authenticity
-flags were changed. Preserve public 0.1 and its exact three selections as the
-known-good comparison baseline. Prepare targeted child revisions and the next
-small fighter batch; names/priorities were then supplied (see wave two above). See
-`research/hd-fighters-beta-20261026/NEXT-BATCH.md`. The gallery was subsequently recovered with a backed-up corpus rebind after
-the owner confirmed saved notes; see the latest wave-two report above.
+| Fighter | Current right revision | State |
+|---|---|---|
+| Nyne |r-c781fcc1ff7e43e9|Owner visually accepted; unchanged|
+| Trejo |r-a41e97bb2dc3445f|Owner visually accepted; unchanged|
+| Redman |r-615ab80f98c34738|v4 headwear repair; needs review|
+| Blaze |r-75cda6b939fc4c88|v4 restored head/source palette + cap repair; needs review|
+| Henry Rollins |r-0ca085cea9db4beb|v4 head + clothes; body skin/tattoos blocked/incomplete|
 
-**HD Fighters beta publication (2026-10-26):** owner requested a public first
-fighter pilot before further revisions. Separate source branch
-`codex/hd-fighters-beta` preserves the ongoing menu branch. Recipe/pins and
-publication evidence: `research/hd-fighters-beta-20261026/README.md`.
-Three existing 2048px atlases: Blaze/Nyne Rich Original Detail v1 and Trejo v4
-Source palette trial; faces/material alpha exact, no new generation or review
-approval. Cloudflare immutable ZIP is 19,432,340 bytes, six files, SHA-256
-`bcba0164c1821f4121bba1089e806db4bf7111961a68cbef647d1c2991dfc62a`.
-Catalogue PR #6 merged; protected scan/sign/deploy succeeded, live signed
-catalogue revision 6 verified by the exact released v0.12.1 helper, public
-download/managed install passed with all six file hashes exact. Stable channel
-correctly excludes this beta. No active game/settings/save or review changes.
-Publication: https://github.com/vyanhursky/DefJamFFNY-mods/pull/6; successful
-workflow run 40453784754. No publishing blockers.
-Local checks: released v0.12.1 + catalogue unpackers agree, source identities
-verified against dump, public full download/hash/range verified; 14 catalogue
-and 67 authoring tests +12 subtests /8 Node checks pass. The owner subsequently
-reported a successful pack playtest on 2026-10-27 and authorized continuation;
-individual detail-review flags remain unchanged.
+Live8768 single writer PID23344/exec99295, same isolated source/profile.
+31candidates/27live request records,5models,17archived old choices. Twelve
+current/shared reviews reconciled before the Rollins clothing addition; exact
+old notes in before-workshop.json and before-clothing-workshop.json. Five more
+old revisions archived reversibly; every prior PNG/ID/prompt/parent retained.
+Shared stale face-protection guidance updated to the newer likeness-preserving
+head authorization. Cameras, left choices, lighting/groups and active fighter
+preserved; only Redman/Blaze/Rollins right choices changed. No server restart,
+forced tab reload, game install or publication. Public0.1 stays immutable.
 
-**Source publication restored:** GitHub sign-in recovered. Existing source-only
-branches are published, including the previously blocked commits; current gallery,
-navigation and census source is on the same branches/draftPRs. Artwork, index
-JSON/CSV, captures and owner shortlist data stay local.
+83tests+15subtests,8Node tests and JS syntax pass. Five live PNG hashes, exact
+alpha and embedded GLB RGBA verified; old28candidate files/metadata and requests
+retained. Browser visual check remains blocked by URL policy; no bypass.
+Private prompts/raw/recipes/masks/receipts/backup and review index:
+workshop/experiments/fighters-wave4-20261028/. Source report/recipes:
+research/fighters-wave4-20261028/. Bulk guide/template in docs/ is explicitly
+DRAFT until remaining three and all intended material coverage are accepted.
 
-- 2026-10-20 D182–D185/UI — Separate menu-only RC2 tested on this Mac after
-  optional Faithful (library unbundled).157native/164slabs/62wideentries,
-  421.6MBZIP/423.4MBinstalled; all670artpins intact/zeroimggen. Actualloader4paper
-  variants/8technicalIDs registered from approved exterior, originalcores exact.
-  Native1v1loadingall5ratios,FFA4/menu-only/Options/Jukebox/HighScores/charDec32:9
-  pass; save guardsrestore, no runtime fault checks. Nested disposableAAAfixture
-  resolvesintro namecollision. Transitionblackfirsttile alsoinFaithful/original
-  controls; Crib/GF/partner/Tips/3-player/team coverage andowner signoffremain.
-  Diskfull recoveredbyteidentically inisolatedsave; nativeharnessAPFSclone/fallback
-  tested534unitpasses(2sandboxblockedchecks rerunwithhostaccess),32skip/1slowheld.
-  20run nativegallery, framebuttons/keys/zoom/fullwidth/nooverflow/load verified.
-  Source research/menu-ui-native-release-20261020/, privatefullarchive11716files/
-  5552616413B, manifestf93b80f023bee2b5d1e43348aa4a67327244017ad0e96f9e08d38e01054da3e6.
-  Ordinarygame/save/8768workshop unchanged; no public asset upload.
+**Known-good publication:** HD Fighters0.1(beta),0.1.0-beta.1, published2026-10-26
+via Cloudflare immutable object and DefJamFFNY-mods PR6; signed catalogue rev6,
+workflow40453784754. Three2048RGBA atlases: Blaze/Nyne Rich Original Detail v1,
+Trejo Source palette. ZIP19,432,340B,6files, SHA256
+bcba0164c1821f4121bba1089e806db4bf7111961a68cbef647d1c2991dfc62a.
+Owner reported successful pack playtest2026-10-27, permitting continuation;
+that does not verify later head/restoration revisions. Publication recipe:
+research/hd-fighters-beta-20261026/README.md. No new release requested now.
 
-- 2026-10-20 D181/UI — All7widebackgroundscenes APPROVED.70newpins/670total,
-  149reviewedsourceIDs(131unconditional+18conditional), registered121/core145.
-  No more new-art batch requiredforv1; held19detailIDs/shopdrafts deferred.
-  Review/inventorymarksartapproved, isolatedpackintegration/nativechecks pending.
-  Existing600pins unchanged; no generation/pixel/activepack/gamechange. Native
-  loadingroutes/live layers, fullpan/Mode/brandingderivatives/fiveaspects remain.
-  Approvaloverlay <data>/scratch/menu-ui-wide-backgrounds-approved-20261020/;
-  source approvalrecipe andcurrentreview preservedinwidebackgroundbundle.
-
-- 2026-10-20 D179/UI–D180/UI — Owner scopes first menu-mod release to mainmenus,
-  approved artwork and widescreen scenery/loading; leave other review candidates
-  held. Seven background drafts13newIDs through32:9,15builtin calls/162historical.
-  Exact35Faithful4:3cores;Cribdoorparent469.4/reusesapprovedrightscenery; tipsv3
-  both128pxjoins+Lgrainmatched. Loaderplate/tips mapped separatelyfrom portraits/
-  livetext/vignette; oldMLoad dynamicvenue remainsunprovenactive. Newreview
-  wide-backgrounds.html withOriginal/Faithful,5ratios,joincloseups,linkednavigation,
-  Prev/Next/keys/browsernotes, linkedfrominventory/artreviews. All600priorpins/
-  136approvedIDs unchanged; newartUNAPPROVED/uninstalled. Existingdetail19IDs/
-  shopraws held; currentgame/packs/saves/8768/workshop/Trejo untouched. Source
-  research/menu-ui-wide-backgrounds-20261020/, private additivearchive
-  <data>/scratch/menu-ui-wide-backgrounds-v1-20261020/. Nativeactive loading routes,
-  masks/fades/fiveaspects/fullmovingpan and priorModecondition remainreleasegates.
-
-- 2026-10-20 D175/UI–D178/UI — Scope changes to widescreen backgrounds and
-  owner-selected exceptions; stop routinepanel/button imagegen. Gym15/22
-  approved127newpins/600total/136IDs,22tile4xexport exact/uninstalled. Prior16/19
-  pending. Prepared30studies57sources deferred;3inflight rawshopproposals held,
-  noassembly/adoption,147historicalcalls. Sevenotherplannedcalls notstarted.
-  Fullimagebrowser51738/inventory.html:1323registered(115reviewed/1208outside),
-  optional1834core(132reviewed/1702outside). Original/Faithful/status/customwhere
-  available, search/screen/size/backgroundfilter, zoom/pan, Prev/Next/keys,
-  localshortlistnotes/download. Fiveknownwidegroups10tiles; nativeuse/clipunknown.
-  All1323IDs paginatedonce/28pages; comparison/mouse/arrow/shortlistreload pass,
-  zerooverflow/errors.8Node+22gamefocusedtests/600pins pass. Game/packs/saves/
-  8768writer/17workshop/Trejo untouched. Source research/menu-ui-inventory-20261020/,
-  privateoverlay <data>/scratch/menu-ui-inventory-widescreen-focus-20261020/.
-  Preserve browser selections, previousimmutablearchives and conditionalpan/Mode
-  checks. No moregenerationbeforeownerchoices. GitHub sign-in recovered; source-only branch/draftPR published.
-
-- 2026-10-20 D172/UI–D174/UI — Popup/profile15studies/22sources APPROVED.
-  Frozen130newpins/473total,114reviewedIDs(96unconditional+18conditional).
-  Separate22tile4xexport exact/uninstalled. Prior16/19remains pending.
-  New15Gym/controlstudies/22sources pending:2restrainedpapers+13Faithful;
-  complete Gymshapes50/60/64 with3narrowcompanions.2calls/144historical.
-  Originalalpha/marks/UVguards/padding exact,maxRGBdelta4;473pins/2439oldPNGs
-  unchanged;75isolatedaspectpairs. Review51738 nowlinkedmousewheel/drag/fit
-  on105images46groups, including legacy/wipe/tallpan.60refcases/75aspects
-  loaded,zerooverflow/errors,4Node+22gamefocusedtests pass. Authoring67tests
-  and12subtests pass (HTTP tests retried outside restricted loopback sandbox).
-  Game untouched.
-  Source resources under src/defjam_tools/resources/review_navigation.*;
-  recipe/prompt bundle research/menu-ui-controls-20261020/. Private additive
-  archive <data>/scratch/menu-ui-controls-v1-popup-approved-20261020/.
-  Native placement/clip/pan/platform validation remains pending; preserve8768,
-  17workshop/Trejo and existingpacks. GitHubauthstillinvalid; commitlocal and
-  publish existing branches after sign-in, then update PR62description.
-
-- 2026-10-20 D170/UI–D171/UI — Two batches pending; popup/profile first.
-  Vlad explicitly leaves the previous16-item/19-source batch for review. No
-  approval/pin/export inferred; all prior pixels unchanged. Catalogue343pins/
-  92reviewed IDs remains74unconditional+8Mode+10transition conditional.
-  New15-item/22-source popup/profile/autosave batch: ten paper restorations,
-  original-core widened profile wall, four Faithful stamps/effects.15new
-  built-in calls/142historical. Native wall admitted zero generated pixels;
-  source core, baked paper/emblem exact. Wide wall v3 repairs both128nativepx
-  joins, then fineLcontrast match(.625left/.885right median); v1/v2 retained.
-  Native UVs, header stretch, negative offsets, platform/language/live text
-  remain separate. PS2 French is under PS2bkg50, GC uses A/B, Xbox independent.
-  All343pins/2,044previousPNGs,22tilealpha/graphics/guards/padding,75centers exact.
-  Browser60reference/channelcases+75aspectpairs loadedafterrevisit,3BG/modes,
-  75%bounds,3wallversions/bothjoins,nooverflow/errors;22focused tests pass.
-  All15new studies UNAPPROVED, notinstalled/exported. Phone/Extras approved
-  source4xexports ready/uninstalled; ladder conditional pendingnativepan.
-  Running game untouched. Preserve8768writer/17candidates/Trejo.
-  Review51738: newbatch above previous16, original/Faithful/alpha/overview/
-  five ratios/bothjoins/history. Source-only bundle
-  research/menu-ui-popup-profile-20261020/; private additive archive
-  <data>/scratch/menu-ui-popup-profile-v1-pending-20261020/.
-  Next: explicit feedback on bothbatches, then bounded remaining Story/widget/
-  map classification. Native validation when serial game testing available.
-  Historical records below.
-
-- 2026-10-20 D168/UI–D169/UI — Phone APPROVED; sixteen-item Menu/UI batch IN REVIEW.
-  Phone frozen10files/2IDs; game catalogue343pins/92reviewed IDs(74approved+
-  8Modeconditional+10transitionconditional). Separate2tile4xexport exact,
-  uninstalled. Ladder v4 conditional pending native moving-pan playtest.
-  Larger batch16items/19sources:3venuecards+4Startstickers restrained papers;
-  6supporticons+2shadows+radialeffect Faithful-only. Two raw icon proposals
-  invented dots/halftone and rejected; no pixels adopted.9new built-in calls,
-  127historical. Sourcealpha/ink/geometry/UVguards/padding exact;343pins and
-  1,751priorPNGs unchanged.80isolated aspectpairs retain graphic size; not
-  game placements. Browser64ref/channelcases+80aspectpairs loaded,3BG/3modes,
-  75%bounds,nooverflow/zeroerrors.22focused game-side tests pass. All16batch
-  candidates UNAPPROVED, notcatalogued/exported/installed. Phone remains frozen.
-  Leave launcher-redesign game running; no game/build/runtime/default/pack edit.
-  Review51738 batch first, overview/selector/native/Faithful/alpha/wipe/5ratios.
-  Artwork/history local; source bundle research/menu-ui-details-20261020/.
-  Private additive archive <data>/scratch/menu-ui-details-v1-phone-approved-20261020/;
-  earlier complete/Extras/transition/phone archives immutable. Preserve8768/
-  17candidates/Trejo. Next: explicit batch feedback, then remaining UI
-  classification beyond17-ID prioritylist; native validation when serial game
-  testing available. Historical blocks below.
-
-- 2026-10-20 D166/UI–D167/UI — Transition v4 CONDITIONAL; Story phone v1 IN REVIEW.
-  Owner likes ladder art; full approval pending native moving-pan playtest.
-  Freeze56files/10IDs; catalogue333pins/90reviewed IDs(72approved+8Modeconditional
-  +10transitionconditional). No transition registrations/pack changes; bitmap9
-  stays Faithful-only. Leave launcher-redesign game running; no launch/stop.
-  Phone two native tiles, one built-in call/118historical; fine casing L only,
-  exact LCD/branding/keycaps/alpha136..255/UVguards/padding. Wide studies extend
-  identical native outer RGBA row profile, keep native device scale through32:9.
-  Phone UNAPPROVED, notcatalogued/exported/installed. Offstagepart2/live text
-  and actual clipping require game checks. Review51738 phone first with native/
-  Faithful/RGBA/alpha,4backgrounds,3modes,5layouts. Browser controls pass,nooverflow
-  at662px/zeroerrors; screenshot in private batch.333pins/1,725priorPNGs exact,
-  22focused game-side tests pass. Extras stays approved, separate9tile export
-  ready/uninstalled. Existingpacks/defaults/8768writer/17candidates/Trejo unchanged.
-  Source bundle research/menu-ui-story-phone-20261020/; private additive archive
-  <data>/scratch/menu-ui-story-phone-v1-transition-conditional-20261020/.
-  Next: phone feedback, then venueframes/Start/support art after mapping;
-  native transition and phone checks when serial game testing available.
-  Historical blocks below.
-
-- 2026-10-20 D163/UI–D165/UI — Extras APPROVED; fire-escape v4 IN REVIEW.
-  Six Extras studies/nine source IDs/51newpins; game catalogue277pins,80IDs
-  (72approved+8conditionalMode). Separate9-tile4xexport pixel-identical,notinstalled.
-  Owner says leave launcher-redesign game running; no further game launch/stop.
-  Transition ten-tile texel reconstruction,11new builtin calls/117historical;
-  rejected coarse material/framing retained. Source-guided bridges plus v4
-  L-only contrast matching; original/restored center,tilealpha/guards/padding
-  exact. Bitmap9 placement differs from texel reconstruction; keepFaithful-only
-  and defer actualpan/geometry/wideregistration. Alltransitionart UNAPPROVED.
-  Review51738 first:5aspects/play/scrub/wipe/bounds/bothjoins; browser30states/
-  3joinpairs pass,nooverflow/zeroerrors. 1,445oldPNGs/277pins exact,22focused
-  game-side tests pass. Existingpacks/defaults/8768writer/17candidates/Trejo
-  unchanged. Private archive menu-ui-transition-v4-extras-approved-20261020;
-  source recipes/prompts/review in research/menu-ui-transition-20261020/.
-  Next: transition art feedback/refinement, then guarded livepan/bitmap9 checks
-  when serial game testing is available. Old23-source shortlist now19; Story
-  phone/venueframes/Startgraphics remain. Historical blocks below.
-
-- 2026-10-20 D161/UI–D162/UI — RESTORATION RESUMED explicitly by Vlad.
-  PR62 already implements HD/wide menus and contains PR73's settings fix;
-  combined toolkit dd63e17. Owner playtest: menus/ultrawide look good.
-  New Extras batch: six unapproved studies over nine tiles (five generated
-  papers plus Faithful-only ribbon); 106 historical imagegen calls. Native
-  alpha/graphics/folds/UV padding/tile guards protected; at most four RGB levels
-  of fine detail. All 1,314 prior PNGs/226 approved pins unchanged. Browser24
-  reference/channel cases and30 five-aspect placement pairs pass. Review51738.
-  Game-side22 focused tests/226 artpins pass; new private overlay185files,
-  199,746,134bytes. No runtime changes in this iteration.
-  Existing tested packs, 8768 writer and17workshop/Trejo candidates unchanged.
-  Fire-escape transition: ten trans/t1 tiles, continuous master needed; no fix
-  delivered. First guarded32:9 probe missed actual pan, saves restored. Other
-  checkout's game active; owner asked before closing it for serial checks.
-  Source recipes/prompts/review: research/menu-ui-extras-20261020/. Private
-  overlay <data>/scratch/menu-ui-extras-v1-20261020/; old paused full snapshot
-  immutable. Next: Extras feedback and pan measurement/restoration; Story
-  phone/frames/Start graphics queue remains. Historical blocks below.
-
-- 2026-10-19 D157/UI — RESTORATION PAUSED at owner request until credits return.
-  Published source-only draftPR1(initialcommit3b0a0a2);gamehandover draftPR62(a130cfe). Remoteheads verified;14game focusedtests/226artpins and451game/319tools sourcechecks passed.
-  Do not generate/repaint or advance Extras/phone queue. Engineering handover:
-  game repo docs/menu-ui-modpack-handover.md;71sourceIDs(63approved+8conditional),
-  226pinnedartfiles/12scopes,101historicalcalls. Native-shaped sparse testpack first,
-  widescreengeometry/UV/scissor separately. Brandingv2approvedrawcanvases need
-  native-shape registration;do not use unapproved old source-safe alternate.
-  Fullprivate snapshot <data>/scratch/menu-ui-restoration-paused-20261019/
-  session/pilot-v1,manifest-bound. Existing8768writer/17candidates/Trejo untouched.
-  Source-only recipes/prompts/reviewcode preservedin research/menu-ui-pilot-20261017;
-  publicbranch codex/menu-ui-art-source;gamerepobranch codex/menu-ui-modpack-handoff.
-  Art/arrays/reviewJSON/captures staylocal. No newgeneration/import/install/game/
-  build/runtime change. Nextagent implementsplaytestpack;restoration resumes only
-  onVlad's explicitrequest. Previousstatusblocks beloware historical.
-
-- 2026-10-16: owner-approved Trejo v4 color pilot completed. Two new unapproved
-  child drafts: Gentle r-8125b0d8196d4f61 and Source palette r-342bd7dadb964b67.
-  Original v4 and all 11 prior candidate files/records/reviews preserved;
-  13 total candidates, 13 imagegen requests unchanged, zero queued.
-  67 tests +12 subtests pass. Browser Face/Chest, rear/arms, source comparison
-  and studio checks pass; zero console errors. Source palette visibly reduces
-  the neck color break; requires owner review, no game installation/acceptance.
-  Recipe/masks/input/processor hashes and pre-import review backup retained in
-  private experiments/trejo-color-v4-20261016-202427/. No new imagegen call.
-
-- 2026-10-16: verified model viewer source is on origin/main at e938889; all
-  three CI platforms passed. Added Face/Pants/Shoe detail camera presets; all
-  nine fighter/preset combinations visually checked in the live browser, with
-  synchronized framing and saved Nyne shoe view verified after reload.
-  56 tests + 12 subtests, JavaScript syntax and source/whitespace checks pass.
-  Investigated owner-reported warm body/face seam; see docs/color-preservation.md.
-  This investigation led to the subsequent Trejo pilot above.
-
-- Standalone version 0.1.0 established from DefJamFFNY-recomp `f71ab64`.
-- Repository: https://github.com/vyanhursky/DefJam-Modding-Tools (private).
-- Local Python package/CLI/resources, prompts, documentation, focused agent
-  instructions, source hygiene and three-platform synthetic CI configured.
-- Live gallery/model viewer now runs from this checkout at 127.0.0.1:8768.
-  Existing private corpus, reviews, candidates and model caches stay in place.
-- 56 tests + 12 subtests pass in the final checkout and an independent fresh
-  clone. Installed wheel imports/resources/browser preview also pass.
-- Real-workspace compatibility: catalog/details equal, seven GLBs byte-identical
-  (three original/faithful pairs plus Trejo v4), selected pack keys/images/channel
-  policies identical. Review/camera files byte-identical immediately after
-  cutover; all 11 candidate hashes match. Browser confirms v4 and saved notes.
-- Recomp retains frozen offline HD setup helpers and runtime/mod-manager work;
-  authoring copies are retired there. Its focused HD/setup/pin/agent checks34/34.
+**Other work:** menu authoring remains on its separate original-checkout branch;
+its prior review/registration work and private experiment archives are unchanged.
+Detailed earlier status is archived unchanged under ignored docs/worklog/
+fighter-progress-before-wave4-20261028.md. Source publication previously recovered;
+current fighter continuation commits remain local until Vlad requests a push.
+The authoring repository is vyanhursky/DefJam-Modding-Tools; runtime/loader/setup
+remain in DefJamFFNY-recomp with the frozen compatibility snapshot.
 
 ## Decisions
+
+- 2026-10-28: exact Nyne/Trejo v3 visually accepted by owner; keep bytes. Rework
+ remaining three locally. Bulk calibration is conditional on all five passing.
+- 2026-10-28: repair overly broad protection holds by material geometry, reusing
+ existing raw detail. Preserve accepted areas exactly; never copy pilot UV
+ rectangles as universal fighter masks. Distinguish enlargement from restoration.
+- 2026-10-28: reconcile stale current/shared notes through the live API with exact
+ private backups and review versions. Archive history, never remove art. Show
+ actual displayed revision IDs and warn on older saved comparisons.
 
 - 2026-10-28: Vlad requests face/hair/head/headwear restoration on all five,
   slightly more realistic skin/hair, source-matched clothing color and cleanup.
@@ -360,81 +128,40 @@ JSON/CSV, captures and owner shortlist data stay local.
 - New art is Rich Original Detail only; older stylized drafts remain history.
   Faces/protected pixels/alpha stay unchanged unless specifically approved.
 
-## Art review
+## Art review and technical limits
 
-The fighter pilot (Blaze, Nyne, Trejo) retains13drafts plus4menu trials,17workshop candidates total. The13fighter drafts comprise11imagegen and two deterministic
-color trials;13imagegen request records, zero queued. Wide-art drafts are separate private experiments. Trejo A source-guided v4 `r-a74be693951f4617` awaits
-owner review of tattoo script/stroke paths, animal/tree/buckle placement and
-skin seams. Original script guidance: "Debbie Danielle". Exact exterior/face/alpha
-checks do not establish interior authenticity. No art is automatically approved.
+Only Rich Original Detail for new art. Original/Faithful controls layout/palette;
+likeness/proportions/expression stay fixed. Slightly more realistic face/hair is
+now authorized. Uncertain tattoo/logo/script interpretations need owner review.
+Trejo caption: Debbie Danielle; buckle bear left, deer right, smaller deer middle.
 
-## Technical limits
-
-Three static main-outfit fighter meshes; original geometry, UVs, source normals
-and material partitions. Game lighting/reflections and sparkle effects are not
-reproduced. No rig/animation, venue decoder or game mesh replacement yet. GLBs
-validate in Khronos; Blender itself was unavailable for a native import test.
-Optional legacy auditions retain Windows font / isolated CUDA requirements.
+Five static main-outfit meshes retain original geometry/UVs/normals/materials.
+No rig, animation, venue decoder, mesh reimport or game effects parity claim.
+Historical three-fighter GLBs passed Khronos with0errors/0warnings; recent
+five-fighter checks verify pixel embedding/identity, not native Blender import.
 
 ## Validation and handoff
 
-Latest wave-three handoff: source research/fighters-wave3-20261028/README.md;
-private experiments/fighters-wave3-20261028/review-index.md. Same writer
-PID23344/exec99295 on8768, no restart. Refresh only after saving browser notes.
-Use Latest restoration and Show archived revisions; archives can be restored
-by removing the archived tag in the2Dreview. All five latest v3 drafts need
-owner visual/likeness/material review before any new pack. No0.1change.
+1. Keep current writer live at http://127.0.0.1:8768/model-viewer. Source is the
+   isolated codex/hd-fighters-beta worktree; exact paths/command in ignored
+   .local-handoff.md. Original menu checkout source remains unchanged.
+2. Owner saves browser notes, refreshes and presses Latest restoration for
+   Redman/Blaze/Rollins. A page already open can flush its old saved choice on
+   reload; use the revision ID/Older texture notice to verify the actual draft.
+   Do not force reload or discard drafts. Concurrent notes cause409, not data loss.
+3. Review repaired cap/panel/strips, Blaze likeness/skin/clothes/neck and Rollins
+   trouser/boot detail. Nyne/Trejo are held accepted. Rollins skin/tattoos remain
+   a service blocker. Do not claim all five complete or freeze the bulk recipe.
+4. Private experiment has before-workshop/models, before-clothing backups,
+   assembly/import/verification receipts, immutable prompts/raw and frozen
+   processor versions. Show archived revisions recovers earlier comparisons;
+   removing archived in2D restores a draft. No old art was deleted.
+5. Continue targeted revisions from exact current parent hashes; after all five
+   pass, freeze private calibration/reference manifest and finalize docs/
+   fighter-restoration.md + prompts for a small new batch. Publish only on a
+   separately requested versioned release;0.1 remains the playtested baseline.
 
-Latest wave-two handoff: see research/fighters-wave2-20261027/README.md. Single
-writer PID23344 / exec99295, running from this isolated source worktree on8768.
-The original tools checkout/menu branch is untouched; local.json now points to
-the validated current corpus. Use the isolated worktree source when restarting
-so all five model IDs are supported. Machine paths are in ignored .local-handoff.md.
-Backups: workshop/backups/fighters-wave2-rebind-20261027/. Do not undo the rebind
-or overwrite owner notes. Review all six new drafts; Rollins generation remains
-service-blocked. No automatic art approvals, installation or publication.
-
-Latest fighter handoff (2026-10-27): owner pack playtest passed; continuation
-authorized, next fighter names/priorities pending. Use NEXT-BATCH.md.
-Publication handoff (2026-10-26): follow the beta publication report above
-before the older session notes below. The exact private release/receipts are in
-`<data>/scratch/hd-fighters-v0.1-beta1-published-20261026/`. The release recipe
-needs no running gallery. At publication time port 8768 had no listener and the
-old DefJamPR19-20 corpus path in local.json no longer existed; the workshop and
-candidate files were intact, and baseline PNG hashes matched the currently
-installed Faithful channels pack. Do not restart a server against stale paths
-or overwrite browser drafts. Repair/reconnect the authoring session separately
-after the owner's Trejo playtest, preserving all review JSON and candidate IDs.
-The original tools checkout/menu source branch is unchanged by this isolated
-publication worktree. Active game settings and save were not modified.
-
-Read AGENTS.md, docs/WORKFLOW.md, docs/texture-workshop.md and docs/model-viewer.md.
-Resume the existing session with `.venv/bin/defjam-tools serve` from this checkout;
-local.json (ignored) contains exact machine paths. If the server is already live,
-use its browser or `workshop import --server http://127.0.0.1:8768`.
-Live owned PID10791 / exec54009; verify current ownership before stopping it.
-Machine-specific paths/backup location are in .local-handoff.md (ignored).
-
-A metadata backup was written under the private workspace's backups/ before
-cutover. Migration probes only approved/exported a disposable copied workspace;
-owner review data and all production approval flags were preserved. No art was
-generated, installed or published. No game runtime/save/installer behavior changed.
-The port's frozen core hashes are recorded in provenance.json and in its
-config/hd-tools-core-snapshot.json; deliberately review future synchronization.
-
-Next: compare Trejo color-trial Source palette (r-342bd7dadb964b67) with parent
-v4 (r-a74be693951f4617), Gentle (r-8125b0d8196d4f61) and Faithful HD, using Face/
-Chest presets and unlit RGB. Review/notes still bind to the selected right draft.
-Model tab9 is left v4/right Source palette; the owner's other model tab is intact.
-Private experiment experiments/trejo-color-v4-20261016-202427/ has receipt.json,
-verification.json, import-receipt.json, recipe text, masks and review-backup/.
-No art is approved/selected or installed. Tune after owner feedback, then in-game
-acceptance; extend to Blaze/Nyne only after their mask/seam checks. See
- docs/color-preservation.md for exact parameters and CLI. Keep source changes in
-this repo; the recomp's frozen HD setup helpers are unchanged.
-Run focused tests for changes; keep source and private artwork backups separate.
-
-Windows CI initially exposed default-codepage decoding of UTF-8 review JSON.
-All implicit module text reads now specify UTF-8; a simulated cp1252 roundtrip
-checks non-ASCII notes and queued prompts. Linux/macOS initial CI passed; the fix is covered by the three-platform CI
-regression suite. Source checkouts use LF to keep vendored hashes stable.
+Checks: PYTHONPATH=src <tools-venv>/bin/python -m pytest -q;
+<bundled-node> --test tests/*.test.mjs; --check model_viewer.js;
+python scripts/check-source-tree.py. Source-only staging/dry-run before commit;
+never track private images/models/review JSON. AGENTS/CLAUDE must match.
