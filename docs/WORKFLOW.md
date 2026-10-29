@@ -21,7 +21,9 @@ templates, tooling, tests and technical research, not those assets.
 
 Current pilot: Blaze, Nyne, Trejo, Redman, Henry Rollins. Nyne/Trejo v3 and
 Redman/Blaze v4 are visually accepted, as are Rollins' head/hair/clothes/boots.
-Rollins' skin/tattoos remain incomplete after the owner-requested retry was blocked.
+Rollins v5A/v5B regional skin/tattoo studies now await review after five successful
+localized generations. Shared notes distinguish these from the earlier blocked
+whole-atlas attempts; neither new body draft is approved.
 See [fighter restoration calibration](fighter-restoration.md) before extending
 the batch. Static model previews are available; animation, venues and mesh
 reimport are future work.

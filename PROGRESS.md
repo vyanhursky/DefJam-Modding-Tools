@@ -2,7 +2,34 @@
 
 ## Current status
 
-**Latest approval/retry,2026-10-28:** owner says everything else is good and
+**Latest regional studies,2026-10-28:** owner asks to start and try different
+localized approaches. Five built-in edits succeeded: sun/caption, arm art,
+plain skin-material sample, transparent decal and small emblem. Two new2048RGBA
+Rollins children are imported and UNAPPROVED: v5A r-a6ca883293734644 (localized
+sun/arm detail + skin grain, SHA256 a5d773e7da306230d4b1627630fdadb517e8aa484fe998964f372f23c1d33695)
+and v5B r-48b6674ae55e409c (source contours + generated skin/ink grain, SHA256
+261513e9273f4e8dd2f6a206f4b057c77262c6908a203d7e38d5c0daa165fe86).
+A changes1,499,830bodypixels; B1,274,009. Source body Lab distance1.138/.703.
+Exact approved v4 head/hair/clothes/boots, non-skin, alpha and16paired seam cores
+held. Tiny uncertain arm/emblem lettering stays source; B also holds the sun
+caption. A's known SEARCH & DESTROY caption/design interpretation needs review.
+Raw arm output guessed words; those were not adopted. Transparent decal/direct
+emblem changed art too much, retained as studies only. Emblem uses source
+contours in both; earlier QA's hard-cut redraw is not in either imported atlas.
+
+Live writer unchanged PID23344/exec99295 at8768.33candidates/29live request/
+assembly records,17archived; all31previous candidate metadata/PNGs and existing
+revision reviews/approvals retained. Current Rollins shared notes now describe
+successful regional drafts; old blocked requests remain history. Saved right
+is A; other view fields/fighters stay exact.88tests+15subtests pass; two PNG
+hashes/alpha/nonbody and GLB pixels verified. No browser visual test (prior URL
+policy), restart, forced reload, new game install, publication or0.1change.
+Private experiment: rollins-region-studies-20261028/, final assembled-v2/.
+Source report: research/rollins-region-studies-20261028/. Freeze bulk method only
+after owner accepts a body result. All four other fighters stay approved/unchanged.
+
+
+**Prior whole-atlas approval/retry,2026-10-28:** owner says everything else is good and
 approved, and explicitly requests retrying Rollins skin/tattoos. Redman/Blaze
 exact v4 are now visually approved; Rollins v4 head/hair/clothes/boots accepted
 as components, with the whole fighter still incomplete. Nyne/Trejo accepted
@@ -45,7 +72,7 @@ No blocked body output imported and no alternate generation service used.
 | Trejo |r-a41e97bb2dc3445f|Owner visually accepted; unchanged|
 | Redman |r-615ab80f98c34738|v4 visually approved; unchanged|
 | Blaze |r-75cda6b939fc4c88|v4 visually approved; unchanged|
-| Henry Rollins |r-0ca085cea9db4beb|v4 head/clothes approved; body skin/tattoos incomplete|
+| Henry Rollins |v5A r-a6ca883293734644 / v5B r-48b6674ae55e409c|Body drafts await review; v4 head/clothes retained|
 
 Live8768 single writer PID23344/exec99295, same isolated source/profile.
 31candidates/27live request records,5models,17archived old choices. Twelve
@@ -63,7 +90,7 @@ retained. Browser visual check remains blocked by URL policy; no bypass.
 Private prompts/raw/recipes/masks/receipts/backup and review index:
 workshop/experiments/fighters-wave4-20261028/. Source report/recipes:
 research/fighters-wave4-20261028/. Bulk guide/template in docs/ is explicitly
-DRAFT until Rollins skin/tattoos are restored and owner accepted.
+DRAFT until the owner accepts a Rollins regional body result.
 
 **Known-good publication:** HD Fighters0.1(beta),0.1.0-beta.1, published2026-10-26
 via Cloudflare immutable object and DefJamFFNY-mods PR6; signed catalogue rev6,
@@ -83,6 +110,11 @@ The authoring repository is vyanhursky/DefJam-Modding-Tools; runtime/loader/setu
 remain in DefJamFFNY-recomp with the frozen compatibility snapshot.
 
 ## Decisions
+
+- 2026-10-28: owner authorizes regional studies and different approaches. Compare
+  localized tattoo interpretation against source-contour ink/skin detail. Adopt
+  only source-letter-held drafts; keep unfaithful decal/emblem interpretations as
+  studies. Regional generations succeeded; previous whole-atlas block is history.
 
 - 2026-10-28: owner explicitly approves everything except the unfinished Rollins
   skin/tattoos and requests a new built-in attempt. Record whole-draft approval
@@ -169,10 +201,11 @@ five-fighter checks verify pixel embedding/identity, not native Blender import.
    Redman/Blaze/Rollins. A page already open can flush its old saved choice on
    reload; use the revision ID/Older texture notice to verify the actual draft.
    Do not force reload or discard drafts. Concurrent notes cause409, not data loss.
-3. All existing restored areas are now owner accepted. Keep their exact bytes.
-   Rollins skin/tattoos are the sole outstanding art gate; explicitly requested
-   retry again failed at output moderation. Do not call all five complete or
-   freeze the bulk recipe. Exact prompt/error request ID is in the retry bundle.
+3. Review Rollins v5A versus v5B (Latest restoration defaults A). Regional body
+   generations now succeeded; former whole-atlas failure is historical. Check
+   skin/neck join, sun face/rays/caption and arm designs. Tiny uncertain words
+   remain original and small emblem conservative. Hold all four other approved
+   fighters. Only after owner accepts a body result may bulk calibration freeze.
 4. Private experiment has before-workshop/models, before-clothing backups,
    assembly/import/verification receipts, immutable prompts/raw and frozen
    processor versions. Show archived revisions recovers earlier comparisons;

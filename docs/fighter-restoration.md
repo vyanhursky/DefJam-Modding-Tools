@@ -2,8 +2,10 @@
 
 **Not yet a bulk-approved recipe.** Nyne/Trejo v3 and Redman/Blaze v4 were
 visually accepted by Vlad on2026-10-28. Rollins' restored head/hair and trousers/
-boots are also accepted. His body skin/tattoos remain incomplete: the expressly
-requested imagegen retry was again blocked at output moderation.
+boots are also accepted. New v5A/v5B regional body studies await owner review;
+five localized built-in generations succeeded. A uses richer localized tattoo
+restoration, B retains source contours with generated skin/ink grain. Tiny
+uncertain lettering stays original; the small emblem remains conservative.
 Freeze the five-fighter reference set only after these remaining gates close.
 This document records the working method and the failures to avoid meanwhile.
 
@@ -59,6 +61,28 @@ It does not establish likeness or tattoo authenticity.
 If generation is blocked or fails, record the request/error and leave that
 coverage incomplete. Do not substitute an original enlargement and call it
 restored, nor automatically repeat a blocked request through other providers.
+
+## Regional study method
+
+For separate artwork/material tasks, inspect matching original crops first.
+Rollins' successful studies independently restored a sun/known caption, arm
+illustrations, a small emblem, a plain non-anatomical skin swatch and a transparent
+decal. The decal and direct emblem redraw did not meet fidelity needs and remain
+studies only. Generation success is not an adoption criterion.
+
+Transfer a plain material sample's fine luminance residual only; retain the
+atlas's original coarse color, baked shading and anatomy. Derive skin-only UV
+coverage and actual head/body seam guards from the current fighter's geometry.
+Hold current-parent seams, approved head/clothes and full alpha exactly.
+Use direct crop detail only where interpretation is acceptable; otherwise
+restrict generated residuals to original ink interiors and keep contours.
+Protect uncertain source words technically even when the raw looks more legible:
+the arm study guessed text despite a preservation prompt. Check source letters
+and isolated curve continuity after applying holds, before importing.
+
+See research/rollins-region-studies-20261028/ for source recipes and measured
+parameters. Compare richer and contour-preserving children; do not present subtle
+ink grain as reconstructed lettering or authenticate a tattoo from sharpness.
 
 ## Review and freeze
 

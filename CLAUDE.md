@@ -44,8 +44,11 @@ missing decisions and preserve an active review session during changes.
   with an exact private prior-notes backup and optimistic review-version checks.
 - On2026-10-28 the owner visually accepted Nyne/Trejo v3. Keep those bytes.
   The owner's next feedback also accepts Redman/Blaze v4 and Rollins' existing
-  head/hair/trousers/boots. Keep those pixels. Rollins body skin/tattoos remain
-  incomplete: the explicitly requested retry was again output-moderation blocked.
+  head/hair/trousers/boots. Keep those pixels. Rollins v5A/v5B regional body
+  studies now exist after five successful built-in edits; neither is approved.
+  A uses localized sun/arm restoration; B retains source contours with generated
+  skin/ink grain. Tiny uncertain letters are held. Direct decal/emblem redraws
+  are studies only. The former full-atlas service blocker is historical.
   Bulk calibration stays draft until all five pass. Check displayed revision IDs:
   saved views may show older
   baselines. Use actual material UV masks, not broad eye/mouth rectangles that
