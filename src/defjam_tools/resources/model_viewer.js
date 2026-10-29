@@ -129,8 +129,9 @@ async function chooseFighter(fighter){
     if(previousView){await api('/api/model-view',{fighter:previous,view:previousView});state.saved.views[previous]=previousView;}
     state.fighter=fighter;
     state.model=state.models.find(m=>m.id===fighter);state.asset=await api('/api/asset/'+state.model.source_id);
-    const rich=state.asset.candidates.filter(c=>c.style==='faithful'),history=state.asset.candidates.filter(c=>c.style!=='faithful');
-    const choices=[['original','Original'],['faithful','Faithful HD · Lanczos 4×'],...[...rich].reverse().map(c=>[c.id,c.label]),...[...history].reverse().map(c=>[c.id,c.label+' · history'])];
+    const visible=state.asset.candidates.filter(c=>$('show-history').checked||!c.review.tags?.includes('archived'));
+    const rich=visible.filter(c=>c.style==='faithful'),history=visible.filter(c=>c.style!=='faithful');
+    const choices=[['original','Original'],['faithful','Faithful HD · Lanczos 4×'],...[...rich].reverse().map(c=>[c.id,c.label+(c.review.tags?.includes('archived')?' · archived':'')]),...[...history].reverse().map(c=>[c.id,c.label+' · history'])];
     for(const side of ['left','right'])$(side).replaceChildren(...choices.map(([value,label])=>new Option(label,value)));
     const saved=state.saved.views[fighter];
     $('left').value=choices.some(([v])=>v===saved?.left)?saved.left:'original';
@@ -160,6 +161,8 @@ async function init(){
   $('fighter').replaceChildren(...state.models.map(m=>new Option(m.name,m.id)));
   state.views=['left','right'].map(createViewport);
   function render(){requestAnimationFrame(render);for(const v of state.views)v.renderer.render(v.scene,v.camera);}render();
+  $('show-history').checked=localStorage.getItem('defjam-show-archived')==='true';
+  $('show-history').addEventListener('change',()=>{localStorage.setItem('defjam-show-archived',String($('show-history').checked));chooseFighter(state.fighter).catch(error);});
   $('fighter').addEventListener('change',()=>chooseFighter($('fighter').value).catch(error));
   $('left').addEventListener('change',()=>paint(state.views[0]).catch(error));
   $('right').addEventListener('change',()=>exclusive(async()=>{
@@ -168,6 +171,7 @@ async function init(){
     const next=$('right').value;
     try{if(previous){$('right').value=previous;await saveNotes();}$('right').value=next;await paint(state.views[1]);loadReview();state.reviewRevision=next;}catch(e){$('right').value=previous;error(e);}
   }).catch(error));
+  $('latest').addEventListener('click',()=>exclusive(async()=>{await saveNotes();const candidate=state.asset.candidates.filter(c=>c.style==='faithful'&&!c.review.tags?.includes('archived')).at(-1);if(candidate){$('right').value=candidate.id;await paint(state.views[1]);loadReview();}}).catch(error));
   $('lighting').addEventListener('change',()=>Promise.all(state.views.map(paint)).catch(error));$('wireframe').addEventListener('change',updateView);
   for(const kind of ['front','back','fit','face','chest','belt','pants','shoes'])$(kind).addEventListener('click',()=>preset(kind));
   $('hold').addEventListener('pointerdown',e=>{e.preventDefault();$('hold').setPointerCapture(e.pointerId);state.hold=true;paint(state.views[1]).catch(error);});

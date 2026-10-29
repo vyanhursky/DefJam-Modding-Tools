@@ -118,8 +118,9 @@ async function loadAsset(ident,options={}){
   $('original-link').href=a.original;$('faithful-link').href=a.faithful;
   const reviewSelect=$('review-target');reviewSelect.replaceChildren(new Option('Texture / original','asset'));
   const parent=$('import-parent');parent.replaceChildren(new Option('Original / faithful baseline',''));
-  for(const c of a.candidates){reviewSelect.add(new Option(c.label,c.id));parent.add(new Option(c.label,c.id));}
-  for(const style of ['faithful','remaster']){const select=$('candidate-'+style),items=a.candidates.filter(c=>c.style===style);
+  const visible=a.candidates.filter(c=>$('show-history').checked||!c.review.tags?.includes('archived'));
+  for(const c of visible){reviewSelect.add(new Option(c.label,c.id));parent.add(new Option(c.label,c.id));}
+  for(const style of ['faithful','remaster']){const select=$('candidate-'+style),items=visible.filter(c=>c.style===style);
     select.replaceChildren(new Option(items.length?'Choose revision':'No candidate imported',''));
     for(const c of [...items].reverse())select.add(new Option(c.label+(c.review.selected?' · selected':''),c.id));
     const wanted=options.lanes?.[style]||state.lanes[style];state.lanes[style]=items.some(c=>c.id===wanted)?wanted:(items.at(-1)?.id||'');select.value=state.lanes[style];
@@ -129,7 +130,7 @@ async function loadAsset(ident,options={}){
     a.candidates.map(c=>c.label+' · '+c.style+' · '+c.width+'×'+c.height+'\nRevision '+c.id+'\nSHA-256 '+c.sha256+'\nParent '+(c.parent||'original/baseline')+'\n'+
       (c.assembly?'Assembly: raw '+c.assembly.raw_size.join('×')+' → '+c.width+'×'+c.height+'; baseline alpha '+(c.assembly.preserve_alpha?'restored':'not restored')+'; '+c.assembly.protected_regions.length+' protected region(s) copied exactly.\n'+
         (c.assembly.edited_regions?.length?'Regional revision: '+c.assembly.edited_regions.length+' edit box(es); remaining pixels retained from parent, with the explicit baseline alpha/protection above.\nParent SHA-256 '+c.assembly.parent_sha256+'\n':'')+'Raw SHA-256 '+c.assembly.raw_sha256+'\n':'')+c.prompt).join('\n\n');
-  setReview(options.target||'asset');await loadImages();
+  setReview(visible.some(c=>c.id===options.target)?options.target:'asset');await loadImages();
   document.querySelectorAll('.asset-card').forEach(b=>b.classList.toggle('active',b.dataset.asset===ident));
 }
 async function loadImages(){
@@ -182,6 +183,8 @@ $('region-dialog').addEventListener('close',()=>{if($('region-dialog').returnVal
 $('mark-region').onclick=()=>{state.marking=!state.marking;$('mark-region').setAttribute('aria-pressed',String(state.marking));draw();};
 $('reset-view').onclick=()=>{state.pan=[0,0];$('zoom').value='fit';draw();saveSession();};
 for(const id of ['zoom','background'])$(id).onchange=()=>{draw();saveSession();};
+$('show-history').checked=localStorage.getItem('defjam-show-archived')==='true';
+$('show-history').onchange=()=>exclusive(async()=>{try{localStorage.setItem('defjam-show-archived',String($('show-history').checked));if(state.asset)await loadAsset(state.asset.id,{target:state.target,pan:state.pan,lanes:state.lanes});}catch(e){message(e.message,true);}});
 $('channel').onchange=()=>loadImages().catch(e=>message(e.message,true));
 function stopBlink(){state.blink=false;draw();}
 $('blink').onpointerdown=()=>{state.blink=true;draw();};$('blink').onpointerup=$('blink').onpointerleave=stopBlink;

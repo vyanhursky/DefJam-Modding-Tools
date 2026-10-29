@@ -28,13 +28,18 @@ missing decisions and preserve an active review session during changes.
 ## Art direction
 
 - New generations are Rich Original Detail only. Keep earlier stylized drafts
-  as history. Preserve likeness/proportions/expression. On 2026-10-27 Vlad
-  explicitly authorized face/headwear texture-detail restoration for Blaze, Nyne
-  and Trejo, alongside body/face color matching. Keep these as unapproved child
-  revisions; protect other faces unless he authorizes a similar exception.
+  as history. Preserve likeness/proportions/expression. On 2026-10-28 Vlad
+  explicitly included face, hair, head and headwear restoration for all five
+  fighters, aiming for slightly more realistic skin/hair. Keep child drafts
+  unapproved until reviewed. Match clothing, footwear and headwear color to the
+  original after generation, preserving restored fine detail and matched skin.
 - Original atlases and faithful enlargements control composition, UVs, animal
   silhouettes, tree positions and handwriting paths. Semantic descriptions do
   not authorize redesign. Use references; have Vlad approve uncertain detail.
+- Owner-authorized cleanup uses the existing archived review tag and Show
+  archived revisions controls. Keep all PNGs, notes, prompts, parent links and
+  hashes. Published0.1, approved/selected and saved comparison choices stay
+  visible; never silently delete art or change approval flags.
 - Exact prompts/reference notes/raw outputs belong to immutable candidate
   history. Every import is a new revision. Keep alpha separate and technically
   restore protected pixels; a prompt alone is not a pixel lock.

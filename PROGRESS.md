@@ -2,6 +2,34 @@
 
 ## Current status
 
+**Wave three ready for review (2026-10-28):** owner expands head/face/hair/
+headwear restoration to all five, requests slightly more realistic skin/hair,
+original clothing palette, and permits cleanup. Five new built-in imagegen head
+edits succeeded, including Rollins. v3 drafts combine .8-strength palette-held
+head detail and source-guided cloth/shoe/headwear Lab correction, preserving
+matched skin outside the head patch, alpha and held eye/mouth/tattoo tiles.
+Median cloth chroma source/before/after: Blaze12.17/15.10/10.85,
+Nyne10.02/11.70/10.12, Trejo8.37/17.02/9.03, Redman7.00/10.71/7.83;
+Rollins0.59/0.59/0.59 (clothes were already original). All safe cloth coverage
+uses source triangles minus other-material coverage plus1sourcepx guard;
+Blaze/Nyne shared UVs remain held to preserve skin. No geometry/UV changes.
+Live at8768, PID23344/exec99295,28candidates/24request records.12older fighter
+revisions soft-archived via tags; all PNGs/notes/parents/hashes retained,0.1 and
+saved/approved/selected choices kept visible. New Show archived revisions and
+Latest restoration controls are served without a restart or forced tab reload.
+81tests+12subtests/8Node checks and JS syntax pass; five new PNG hashes and model
+GLB endpoints checked; saved cameras and old notes intact. Browser visual check
+remains blocked by URL policy. New drafts unapproved/unselected;0.1 unchanged.
+Exact prompts/raw/reports/recoverable archive receipt: private workshop
+experiments/fighters-wave3-20261028/; source research/fighters-wave3-20261028/.
+Next: owner saves any notes, refreshes viewer, presses Latest restoration for
+all five, and checks skin/hair/headwear, less vivid clothes, seams and likeness.
+
+- 2026-10-28: owner-requested viewer restart completed at127.0.0.1:8768.
+  All five model exports, viewer scripts/style and23drafts respond; saved review
+  and camera JSON hashes unchanged. Single writer PID23344 / exec99295.
+  Same five-fighter source worktree/profile; no art, install or publication change.
+
 **Wave two ready for review (2026-10-27):** owner selected Redman and Henry
 Rollins, prioritizing body/face color matching, face/headwear improvement, then
 final tattoo/clothing review on Blaze/Nyne/Trejo. Explicit face-detail exception
@@ -282,6 +310,15 @@ JSON/CSV, captures and owner shortlist data stay local.
 
 ## Decisions
 
+- 2026-10-28: Vlad requests face/hair/head/headwear restoration on all five,
+  slightly more realistic skin/hair, source-matched clothing color and cleanup.
+  Use original diffuse palette/low-frequency shading as authority, retain fine
+  generated texture and existing skin match, and apply cloth correction after
+  head assembly. All new art stays as unapproved child revisions.
+- 2026-10-28: Cleanup is reversible review-tag archiving, with default pickers
+  hiding archived choices and an explicit Show archived revisions control.
+  Keep published0.1, approved/selected and saved comparisons; preserve all PNGs,
+  notes, prompts, IDs and lineage. No new schema or destructive asset migration.
 - 2026-10-27: Next fighters are Redman and Henry Rollins. Owner prioritizes
   body/face color matching, face/headwear restoration and tattoo/clothing final
   review for the original three. This explicitly permits targeted face detail
@@ -341,8 +378,15 @@ Optional legacy auditions retain Windows font / isolated CUDA requirements.
 
 ## Validation and handoff
 
+Latest wave-three handoff: source research/fighters-wave3-20261028/README.md;
+private experiments/fighters-wave3-20261028/review-index.md. Same writer
+PID23344/exec99295 on8768, no restart. Refresh only after saving browser notes.
+Use Latest restoration and Show archived revisions; archives can be restored
+by removing the archived tag in the2Dreview. All five latest v3 drafts need
+owner visual/likeness/material review before any new pack. No0.1change.
+
 Latest wave-two handoff: see research/fighters-wave2-20261027/README.md. Single
-writer PID67499 / exec69909, running from this isolated source worktree on8768.
+writer PID23344 / exec99295, running from this isolated source worktree on8768.
 The original tools checkout/menu branch is untouched; local.json now points to
 the validated current corpus. Use the isolated worktree source when restarting
 so all five model IDs are supported. Machine paths are in ignored .local-handoff.md.

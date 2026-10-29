@@ -15,7 +15,11 @@ original rest pose before choosing a revision for an in-game test.
 
 ## Use it
 
-1. Choose the fighter. The left pane starts with Original, the right pane with
+1. Choose the fighter. **Latest restoration** jumps to the newest active draft
+   after saving pending notes. **Show archived revisions** includes superseded
+   choices; their PNGs, notes and provenance remain intact. Published baselines
+   and saved comparison choices stay available. The left pane starts with
+   Original, the right pane with
    the latest Rich Original Detail candidate. Both selectors also offer Faithful
    HD and earlier revisions. Stylized drafts remain labelled as history.
 2. Drag either pane to orbit, scroll to zoom, right-drag to pan. Both cameras
