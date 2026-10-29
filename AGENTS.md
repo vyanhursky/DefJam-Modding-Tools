@@ -45,7 +45,13 @@ missing decisions and preserve an active review session during changes.
 - On2026-10-29 owner approved all five complete models, including Rollins v6,
   and authorized HD Fighters0.2(beta) publication plus ten new fighters using
   the calibrated method. Preserve exact approved bytes: Blaze/Redman v4,
-  Nyne/Trejo v3, Rollins v6. The new ten remain unapproved and outside0.2.
+  Nyne/Trejo v3, Rollins v6. New ten stay outside0.2. On the next feedback the
+  owner approved seven complete new models and all other components of Ludacris,
+  Flava Flav and Warren G, requesting only their shirt logo/clock/jacket script
+  repairs. The three new feature children require review; keep accepted pixels
+  outside their masks exact. Name and check focal chest details individually.
+  Broad source holds leave a logo/prop pending, not restored; tiny uncertain
+  marks alone may stay held. See the focused prompt and source-specific recipe.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed

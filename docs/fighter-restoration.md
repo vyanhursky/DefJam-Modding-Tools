@@ -5,8 +5,9 @@ Blaze v4, Nyne/Trejo v3, Redman v4 and Henry Rollins v6. Exact revision/output
 hashes are pinned in research/hd-fighters-0-2-beta-20261029/selection.json;
 actual artwork, prompts, references and processor evidence remain private.
 HD Fighters0.2(beta) packages only this approved set. Native0.2 playtesting
-remains pending. The owner now authorizes ten new main-outfit review drafts;
-those remain unapproved/unselected and excluded from the release.
+remains pending. The next ten main-outfit drafts are excluded from that release. The owner has
+now accepted seven complete models and all other components of Ludacris, Flava
+Flav and Warren G; three new chest-feature children remain unapproved.
 
 ## Prepare each fighter
 
@@ -27,6 +28,31 @@ Broad eye/mouth holds excluded Redman's headwear strips/panel and Blaze's cap
 corner. Check those small islands explicitly before importing a full atlas.
 Subtract shared material coverage and its guard; ambiguous overlaps require
 inspection. Keep source alpha separate throughout the process.
+
+## Named chest details are separate review targets
+
+The first ten-fighter batch exposed a specific failure: source holds kept the
+Ludacris shirt print, Flava Flav clock dial and Warren G script low-resolution,
+even though their garments/props had generated detail. This was an assembly
+omission, not proof that imagegen missed all chest details. The owner accepted
+everything else and requested these three repairs on2026-10-29.
+
+Inventory each visible chest logo, wordmark, pendant, clock and important tattoo
+by name and source bounds. Record restored, pending or explicitly owner-accepted
+held. An uncertain small inscription can be held; a broad whole-logo/prop hold
+leaves that feature pending. A high global/material-component changed count does
+not prove that a named feature was restored. Compare its own final crop against
+source and parent after all holds and palette correction, at100/200%.
+
+Use a dedicated focused crop for a missed feature. Spell known words and line
+breaks explicitly, preserve original handwriting paths, bounds and split UV
+islands, and request reconstruction rather than retaining pixel blur. For clock
+props name hand angles, marker layout and case/dial geometry. Unknown microtext
+must not become a guessed brand. Keep the rest of the accepted atlas exact.
+`feature_detail.restore` applies source-palette control inside a material/feature
+mask without an extra rectangular edge hold; alpha and parent pixels elsewhere
+stay exact. See research/chest-details-20261029/ for measured source-specific
+masks and the three focused repairs. Those coordinates are examples only.
 
 ## Generate and assemble
 

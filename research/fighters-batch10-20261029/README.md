@@ -2,7 +2,10 @@
 
 After approving the first five models and HD Fighters0.2(beta), the owner asked
 for ten new fighters using the same prompts/guidelines. All ten built-in edits
-succeeded. Each new2048RGBA draft remains unapproved/unselected and outside0.2.
+succeeded. Each initial2048RGBA draft entered review unapproved/unselected and
+outside0.2. Subsequent owner feedback accepts seven complete models and all
+other components of Ludacris/Flava/Warren. Their three new feature children await
+review; see [focused repairs](../chest-details-20261029/README.md).
 
 | Fighter | Main stem | Model vertices | Triangles |
 |---|---|---:|---:|
