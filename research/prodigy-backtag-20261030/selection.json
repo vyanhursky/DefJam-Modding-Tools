@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "source_id": "3a5c8f7b441aa4e23018a341ae05049f124c0ecabe0cdaaca286f0702b472253",
+  "parent_revision": "r-259a96c52b75405e",
+  "parent_sha256": "6653c60a72304e8c35d4ddbd7194cf82a16b7cd878e8b73335e6a9245e58c3ff",
+  "revision": "r-edd1c1c84d3e43f3",
+  "sha256": "032ad8a91723fbdab344b1d2f3e4ddc84afb283057db961581b98e8122325864",
+  "header_source_box": [
+    156,
+    32,
+    190,
+    40
+  ],
+  "changed_pixels": 4336,
+  "outside_header_exact": true,
+  "alpha_exact": true,
+  "approved": false,
+  "selected": false,
+  "game_verified": false
+}

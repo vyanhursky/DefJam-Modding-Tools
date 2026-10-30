@@ -75,8 +75,23 @@ missing decisions and preserve an active review session during changes.
   must remain visible limitations, never non-use/restoration claims. Source alpha
   and all other mapped holds remain exact; use narrow audited mixed-alpha hair
   regions and bounded canvas clipping only. No synthetic normal repair adopted.
-  Supplemental injury atlases remain original; static preview cannot verify damage
-  transitions. Bonecrusher playtest reminder remains for NEXT test-pack preparation.
+  On2026-10-30 owner chose supplemental damage/injury restoration after roster
+  exhaustion. Private40texture/20fighter drafts use own256head sources,1024finals
+  and measured registration to each512main head quarter. Reuse exact clean HD
+  detail plus original state RGB difference; generated bounded luminance only in
+  source change support. Preserve own per-slot Faithful alpha and actual auxiliary
+  holds, never borrow sibling alpha. No guessed new injury marks or severity;
+  reject raw drift through technical masks. Record clipping and original mark
+  boundary limits. Exact clean RGB outside declared transition/holds. Do not hold
+  an entire previously restored garment/logo as an auxiliary tile. Runtime br01/02
+  switching, UV transforms and shader/alpha meaning remain unverified; separate
+  2D source-bound review first. Do not count injury maps as new fighters or replace
+  a whole512main atlas with a256head. Five output-rejected pairs remain held;
+  five distinct restored fighters fill the adopted twenty without retries.
+  Owner approved19batch60 outfits; Prodigy other components accepted, MOBBDEEP
+  back-neck header repaired in a new unapproved child. Preserve original care
+  marks, hem label, accepted parent elsewhere and fullalpha exactly. Do not infer
+  approval of this child or injury drafts. Bonecrusher reminder remains NEXT pack.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed

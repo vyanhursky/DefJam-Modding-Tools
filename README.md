@@ -53,6 +53,10 @@ Generation runs through ImageGen in the authoring conversation. The gallery
 saves briefs and imports results; queueing a request does not generate an image.
 See [the workflow](docs/WORKFLOW.md), [texture guide](docs/texture-workshop.md),
 [model guide](docs/model-viewer.md) and [prompt policy](prompts/README.md).
+The [supplemental injury workflow](docs/damage-restoration.md) reuses restored
+clean-head detail while preserving source injury placement and per-state channels.
+Its 2D studies and labeled synthetic projections require separate native
+damage-transition verification before release.
 
 Static mesh export has no rig, animation or game mesh replacement path. Lighting
 is approximate. Venue decoding is future work. Optional legacy audition commands

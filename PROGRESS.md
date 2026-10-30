@@ -2,91 +2,80 @@
 
 ## Current status
 
-**2026-10-30: next requested batch in roster audit; expansion choice pending.**
-Owner authorizes starting the next batch and any necessary closure/restart.
-Prepared private fighters-batch80-20261030/ with exact starting workshop/model
-API snapshots; no current approval inferred. Three independent read-only audits
-cover remaining roster/costumes, reusable recipe and strict decoder failures.
-Current 65-outfit / 61-fighter viewer stays available with one writer.
-Source corpus has 70 standard main A atlases including the created-player999
-fixture: 69 fixed identities, of which61 have drafts. Remaining six generation
-holds plus Shaniqua decoder failure and intentional-shadow Suspect cannot be
-counted as twenty compatible fresh fighters. Final audit finds no twenty fresh compatible outfits. Carmen401B/Cindy403B use
-the same wardrobe; cinematic D-Mob014D/Magic128B and Blaze113C add injuries. Crow
-variants fail strict normals. Separate pointer/count checks found no supported
-decoder interpretation fix; no normal synthesis/guard relaxation adopted.
-Asked owner whether to prioritize damage variants, unsupported models or venues;
-answer pending. Recommend injury continuity. Source audit: research/fighters-batch80-20261030/README.md.
-Private snapshots/reports preserve exact evidence. No new generation or import.
+**2026-10-30: forty injury textures imported for twenty fighters; Prodigy tag fixed.**
+Owner chose damage/injury variants after the compatible ordinary roster was
+exhausted and authorized needed closure/restarts. The existing writer remained
+available throughout; no restart or migration was needed. Live gallery/model
+origin stays http://127.0.0.1:8768, PID88661 / exec45300.65 static outfit previews
+cover61 distinct fighters. Other private customization work remains active and
+was preserved. Source checkout /private/tmp/defjam-tools-hd-fighters-20261026,
+branch codex/hd-fighters-beta; source commits local until push requested.
 
+### Injury batch
 
-**2026-10-30: viewer restarted; all 65 outfit previews live (61 distinct fighters).**
-Owner confirmed all notes saved and authorized restart. Old writer stopped before
-one replacement started at the same origin/profile; final stopped JSON backed up.
-All 20 new live PNGs and embedded GLB RGBA/revision identities verified exact.
-Owner approved the other 19 prior drafts, exact displayed IDs checked and reviews
-updated with optimistic versions/private backups. Starks's accepted components
-stay exact outside lettering. New child r-aeba1996ca364784, SHA256
-82dc1699d7e0c0c715572307ba3cd2902e48262db09a66e245c4a7e7e8a7ecc5,
-5016 changed pixels, exact full alpha/outside mask. CITY/POLICE final text checked;
-child unapproved/unselected/not game verified. Earlier request/notes preserved.
+Adopted both br01/br02 for Blaze, Nyne, Trejo, Redman, Henry Rollins, Ludacris,
+Ice-T, Crow, Flava Flav, WC, Warren G, Freeway, Magic, Bonecrusher, Capone,
+N.O.R.E., Mack10, Scarface, Elephant Man and Bless:40 distinct supplemental IDs,
+not new fighters/costumes. All40 unapproved/unselected/not game verified.
+Fifty independent built-in ImageGen calls produced45raw studies and5output
+moderation failures. D-Mob02, Sticky02, SeanPaul01, Crack02 and Bubba02 remain
+held without retries/provider switch. Five successful siblings retained privately
+but not imported; five different existing fighters supplied complete pairs.
 
-New 16: Cruz, Meca, Kimora, Shawnna, Cindy J, Carmen Electra, Lauren, Teck, Dan-G,
-Baby Chris, Ghostface Killah, Joe Budden, Jervis, Lil Kim, Manny, Prodigy. Owner
-explicitly authorized filling missing slots with alternate outfits: D-Mob B/C,
-Blaze B, Sticky Fingaz B.65 supported outfits cover 61 distinct fighters. New 20
-remain unapproved/unselected/not native verified/outside public 0.2. Three agents
-assisted mapping/decoder investigation, disjoint builtin generation and final QA;
-root owned code, tests, assembly and all live API writes/cutover.
+Each source256-square head map independently registers to the own512 main atlas
+head quarter, with native RGB correspondence and direct source inspection.
+Final1024 density matches main2048. Exact clean-restored detail plus own original
+state RGB differences preserve likeness/layout. New generated fine luminance is
+bounded to±3LabL at0.8 strength inside exact source change support. Raw invented
+or stronger marks/chroma were not copied. Own Faithful alpha and inspected actual
+auxiliary/unknown-script holds exact; clean RGB outside the declared2-native-texel
+transition/holds exact. Trejo slots have differing alpha; no sibling alpha reuse.
 
-All 20 raw outputs are 1254 square built-in edits; final 2048 RGBA, calibrated Rich Original Detail.
-Face/hair/headwear/skin/clothes/shoes/jewelry restored, both skin and cloth source
-palette matched.215 named final crops checked:211 detail-present requiring review,
-4 pending-held. Prodigy uncertain tattoo paths stay source-contour locked, generated
-fine ink residual only; no guessed words adopted. Four low-change components are
-exact flat black source material (Meca/Cindy/Carmen/LilKim), not missing detail.
-Cruz/Meca chains/cross, Kimora cross, Joe crest/Jervis button zero-UV padding
-finished; never override mapped holds or infer runtime non-use. Neighboring
-editable feather edges can change<= 1 RGB level, not byte-identical claims.
+Forty final hashes, masks, holds, source/reference/processor pins pass independent
+pixel audit. Three agents inspected80comparison/detail sheets and selected full
+PNGs. No blocking visible defect found. Scarface final v2 narrows an overbroad
+hold so his restored jacket/P stays HD; face/injury unchanged from v1, actual
+auxiliary and unknown neck words still source-held. Both stages retained.
+Baseline clipping22662 and generated gamut clipping46728 events recorded; counts
+may overlap. Original mark boundary resolution/color speckle remains in places.
+No exact original injury-color or fully recovered wound geometry claim.
 
-Jervis initial mirrored final E fixed using already-generated correct POLICE
-lower-band lettering:2255 pixels changed, every other draft pixel/full alpha exact,
-own palette/ornament retained. Final v3 PNG equals inspected v2 with complete
-processing provenance. Cindy actual four buttons, Teck three crosses, Manny actual
-laces and BLAZE/31 all copies checked after palette/masks. Original prompt wording
-immutable when later feature labels/bounds corrected. Tiny watch/ID/tattoo details
-remain interpretations/source-held, owner review needed. No new approval inferred.
+All40 live PNG hashes exact; Full-library search damage-batch20-20261030 finds40.
+All434 prior candidate metadata/files, reviews, session, requests and model-view
+choices exact through import;474total at verification. Other active art retained.
+Private experiments/damage-batch20-20261030/ contains plan-v4.json,
+final-stages-v1.json, imports.json, technical-audit-v2.json, live-verification.json,
+review-index.md, all50submitted prompts/raw or error receipts, frozen processors,
+independent reports and pre/post snapshots. No artwork/review/model bytes in Git.
 
-Decoder 2 adds verified direct index layout, validating first VB count/pointer and
-all bounds/strip winding. Existing decoder 1 caches remain readable.45 adopted model
-arrays and files untouched; source vertex/UV/normal/color/index arrays compared
-exact. New 20 have 1000 retained primary-atlas mesh parts. External tape near-mouth
-meshes omitted for Kimora/Cindy/Carmen/LilKim; Shawnna primary A406 mouth auxiliary
-also explicitly omitted due unresolved UV/shader semantics. Not disposable/non-use
-claims. Shared art untouched. No normal synthesis: Shaniqua still unsupported.
-Suspect is playable but not adopted. Injury alternatives remain original; native
-damage transitions unverified. Studio/hair transparency remain approximations.
+Static models bind primary atlases; no inspected path proves runtime br01/br02
+switching, UV transforms or alpha/material response. Review in2D first. Private
+synthetic head-quarter CPU projections are labeled diagnostics; they ignore alpha,
+shaders and eyelid animation, and are never imported as main-atlas replacements.
+Native transition/draw-identity work remains required before release.
 
-Exact audited hair, Cruz alpha-skin and narrow mixed-alpha RGB regions enabled;
-full source alpha, all mapped holds and seam cores exact. Small<=2 native-texel
-UV overshoots rasterize with canvas clipping only; original UVs untouched. Local
-ABM_BLEND source state enables blend despite missing_ALPHA label. Parent shader
-inheritance remains approximate.113 pytest tests + 21 subtests pass. No JS/UI changes.
+### Latest fighter feedback
 
-All 282 pre-import candidates/files retained;
-302 total at import verification (includes unrelated customization).
-All prior reviews/session/requests/cameras/choices exact;30 requests. One writer,
-same http://127.0.0.1:8768/model-viewer. No browser policy bypass/fresh browser visual
-test; source/final crops and CPU UV projections inspected, API images/offline GLB
-embedding checked separately. Live catalogue and all 20 new GLB texture/revision
-checks passed after cutover; this does not establish browser/native visual parity.
-Private final plan-v6/stages-v6, exactprompts/raw/frozenprocessors/receipts/backups
-and independent reports live under experiments/fighters-batch60-20261029/.
+Owner approved19 of batch60 and accepted Prodigy apart from the back-neck tag,
+which must say MOBBDEEP. Exact saved right IDs checked; Shawnna had the unambiguous
+default latest restoration. Both asset/candidate review updates used optimistic
+versions and private prior-note backups. No pack/native acceptance inferred.
+Prodigy parent r-259a96c52b75405e retained; new tag-only child
+r-edd1c1c84d3e43f3, SHA256
+032ad8a91723fbdab344b1d2f3e4ddc84afb283057db961581b98e8122325864.
+4336pixels changed in source header[156,32,190,40]; every other parent pixel and
+full alpha exact. Red MOBBDEEP reads correctly in final crop/back-neck UV view.
+Live PNG/embedded GLB RGBA/revision verified. Child pending/unselected/not native
+verified; original care marks, separate hem label and parent notes retained.
+Private experiments/prodigy-backtag-20261030/ has exact prompt/raw/processor pins,
+mask/receipt/review snapshots/import/live-verification. Choose Latest restoration.
 
-Bonecrusher NEXT test-pack playtest reminder unchanged, native verified false.
-Mack10/Scarface lettering remains reference-needed. Warren complete-back-P child
-still pending. Original five/public 0.2 immutable; no pack/manifest/install/runtime/
-settings/save/frozen snapshot changes. Source commits local until push requested.
+Earlier Warren complete-back-P child r-a2b301c58a8c4680 and Starks CITY/POLICE child
+r-aeba1996ca364784 remain pending; do not infer approval from batch60 feedback.
+Bonecrusher NEXT test-pack playtest reminder retained, native verified false.
+Mack10/Scarface uncertain tattoo words still require references, not guessed text.
+Original approved five/public0.2 remain immutable. No new pack, manifest, install,
+runtime, saves/settings or frozen compatibility-snapshot changes.
 
 ## Published baseline
 
@@ -105,66 +94,60 @@ settings/save/frozen snapshot changes. Source commits local until push requested
 
 ## Decisions
 
--2026-10-30: next batch authorized, including necessary restarts. No twenty fresh
-  compatible outfits remain. Ask for next asset scope; do not substitute injury
-  copies/new labels or retry prior generation holds. Viewer stays running.
+-2026-10-30: owner chooses damage/injury variants for the next batch after the
+  roster audit found no twenty unused compatible ordinary outfits. Existing
+  restart/closure authorization applies; preserve one writer/latest notes.
+-2026-10-30: one built-in edit per source state. Reject raw severity/mark drift
+  through source-support assembly, retain failed requests and use different
+  existing fighters for complete pairs. Never count damage maps as new fighters.
+-2026-10-30: source-registered clean-detail reuse with exact own alpha and real
+  auxiliary holds; record RGB/gamut clipping and unresolved boundary resolution.
+  Narrow Scarface's broad lower hold to preserve accepted clothing/logo detail.
+-2026-10-30: owner approves19batch60 models; Prodigy otherwise accepted with
+  exact MOBBDEEP back-neck correction. New lettering child needs review.
+- Runtime damage binding unproven: use2D review and labeled synthetic diagnostics,
+  not guessed game shader/UV behavior or unverified publication claims.
+- Bonecrusher reminder is NEXT test-pack preparation, not a timed automation.
 
--2026-10-30: owner confirmed all browser notes saved; restart completed at the
-  existing origin/profile with pre-stop and final-stopped backups. No migration.
+## Validation and source boundaries
 
--2026-10-29: owner approves19of previous 20; Starks CITY POLICE lettering only
-  needs repair, keep other accepted parent pixels exact. New child needs review.
--2026-10-29: next 20requested; Santos/Xzibit/Banner output moderation rejections
-  saved, no retries/provider switch. Owner explicitly chooses alternate outfits
-  for shortfalls.16 new fighters+4 real costumes, never disguised damage/alias copies.
-  Prior House/Bo/LilFlip failures remain held. Blaze C injury copy excluded;
-  Crow B invalid normals excluded. No unsupported output counted as restored.
--2026-10-29: direct-index decoder 2 and exact material/UV permissions are narrowly
-  source-audited. Preserve old caches/schema/source arrays. Explicit mouth-tape
-  omissions remain limitations; not proof unused. No synthetic normals adopted.
--2026-10-29: source-contour ink for uncertain Prodigy art, strict zero-UV feature
-  padding where justified, exact alpha/holds/seams. Final semantic crops beat
-  global change counts; tiny metadata/word claims remain qualified.
-- Owner wants Bonecrusher reminder at NEXT pack preparation, not a timed alarm.
-  Native verification remains false. Keep public 0.2 exact and no new release here.
-
-## Validation and evidence
-
--113 pytest tests + 21 subtests pass; new index bounds/tape/blend/compatibility,
-  overscan/hair/mixed-alpha guard tests. No runtime/frozen snapshot changes.
--20 finalPNG hashes, source alpha/declared holds/paired seam cores, geometry and
-  frozen processing hashes exact.215 namedcrops,40 RGBUVFront/Back,20 comparisons
-  reviewed by independent agents. No new browser visual test under prior policy.
-- Four low-change components are exact black source, guards not weakened. All
-  1000 retained newparts bind own main/costume atlas; omissions explicitly recorded.
-- All pre-import images/metadata/reviews/session/requests/views retained. Prior
-  archive:docs/worklog/2026-10-29-before-batch60.md (ignored), exact private backups.
-- Source hygiene: 540 tracked text files, zero policy failures; mirror/diff checks pass. No art,
-  models, reviews, raw/frozen private processors or generated game code in Git.
--2026-10-30 live cutover verification: 65 outfits / 61 fighters, 331 candidates
-  retained including unrelated work. Workshop bytes match final stopped backup;
-  model-view state exact. All 20 new live PNG hashes and GLB embedded RGBA/revision
-  IDs exact. Existing reviews/session/requests/views retained; all new 20 remain
-  unapproved/unselected/not game verified. Private live-verification.json and
-  cutover-backup/ record the evidence; no simultaneous writer.
+-117 tests +21subtests pass, including four new synthetic injury invariants:
+  own state alpha/holds, exact clean exterior, generated mark exclusion outside
+  support, registration/shape/hold validation. Full loopback tests passed after
+  sandbox-only socket binding restriction; no remaining test failures.
+- Source checker, instruction mirror and diff checks required before source-only
+  commit. No game texture/model/review/raw art or built executable tracked.
+- Existing decoder2 source geometry/UVs/normals/material arrays unchanged. Legacy
+  decoder1 caches still readable.65adopted model cache files retained.
+- Static preview omissions/approximation remain: external shared mouth tape for
+  four models, unresolved Shawnna mouth auxiliary, hair/studio shader behavior,
+  no animation/rig/game reimport. No synthetic normal fixes adopted.
+- Remaining ordinary fixed identities: six generation holds, Shaniqua normal
+  failure, intentional-shadow Suspect. Carmen/Cindy B same wardrobes; extra
+  cinematic/damage copies do not provide twenty new outfits. Audit archived at
+  research/fighters-batch80-20261030/. No held clean request retry.
+- Prior handoff/history archived in ignored docs/worklog/2026-10-30-before-damage20.md;
+  previous batch/cutover metadata and raw art remain private and immutable.
 
 ## Handoff
 
-1. Source checkout /private/tmp/defjam-tools-hd-fighters-20261026, branch
-   codex/hd-fighters-beta. Live writer PID88661 / exec45300 at8768 unchanged.
-   Restart authorized if needed; preserve latest state and one writer regardless.
-2. Next requested batch has no new art yet: remaining-roster audit completed.
-   Owner question pending: injury variants vs unsupported models vs venues.
-   See research/fighters-batch80-20261030/README.md. Do not claim twenty generated.
-3. Private experiments/fighters-batch80-20261030/ contains exact starting workshop
-   and model API snapshots plus reports/roster-audit.md/.json, recipe-audit.md and
-   decode-limits.md. Prepared plans/raw/assembled folders are empty intentionally.
-4. Existing65 previews /61fighters still available. Batch60 exact IDs/hashes in
-   experiments/fighters-batch60-20261029/imports.json, final-v6 plans/stages and
-   live-verification.json. Latest20 and Starks CITY/POLICE child remain pending
-   owner review. No new approval inferred from permission to start another batch.
-5. Bonecrusher reminder at NEXT HD Fighters test pack preparation remains; read
-   fighter-feedback-20261029/next-test-pack-checklist.json. Native verified false.
-   Mack10/Scarface words need references; Warren latest P child pending.
-6. No release/install/push requested; public0.2 immutable. Source-only audit status
-   commit local. Previous state archived docs/worklog/2026-10-30-before-batch80.md.
+1. Active source /private/tmp/defjam-tools-hd-fighters-20261026, branch
+   codex/hd-fighters-beta. Check .local-handoff.md for current commit/PID/session.
+   Live writer PID88661 / exec45300; same profile local.json and8768origin.
+   Never start another writer for this workspace. No restart needed for imports.
+2. Injury review: http://127.0.0.1:8768/ → Full texture library → clear fighter/
+   category/review filters → search damage-batch20-20261030. RGB view avoids
+   interpreting alpha as opacity. Notes/flags use existing durable gallery.
+   Exact40IDs/PNGs/comparisons/labeled head diagnostics/prompts:
+   /Users/vlad/Code/defjam-data/hd-work/texture-workshop/experiments/damage-batch20-20261030/review-index.md
+3. Canonical injury plan-v4.json / final-stages-v1.json / imports.json. All40pending.
+   Five failed states + five unused sibling studies retained, no retry by default.
+   Docs: docs/damage-restoration.md; source recipe research/damage-batch20-20261030/.
+4. Prodigy Latest restoration r-edd1c1c84d3e43f3 needs owner review; saved choice
+   preserved, so an older-texture notice may show. Other19batch60 approved.
+   Prior Warren/Starks repaired children still pending. Do not silently reapprove.
+5. Before any damage-enabled pack, verify actual runtime draw/source identity,
+   state switching/UV/material-alpha/mip behavior and continuity in a fight. At
+   NEXT HD Fighters test-pack preparation remind Vlad to playtest Bonecrusher;
+   read fighter-feedback-20261029/next-test-pack-checklist.json. Nativefalse until
+   tested. No new release/install/push requested; public0.2 immutable.
