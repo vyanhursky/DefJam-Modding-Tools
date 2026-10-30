@@ -11,7 +11,10 @@ D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack, Flava Flav, WC,
 Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone, N.O.R.E., Mack 10,
 Scarface, Elephant Man, Bless, Havoc, Fam-Lay, Slick Rick, Memphis Bleek, Comp,
 O.E., Jacob, Crazy Legs, Erick Sermon, Pockets, Starks, Trick, Skull, Solo, Chiang,
-Masa, Baxter, Rome, Snowman and Stingray**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
+Masa, Baxter, Rome, Snowman and Stingray**, plus **Cruz, Meca, Kimora, Shawnna, Cindy J,
+Carmen Electra, Lauren, Teck, Dan-G, Baby Chris, Ghostface Killah, Joe Budden,
+Jervis, Lil Kim, Manny and Prodigy**. D-Mob B/C, Blaze B and Sticky Fingaz B
+are explicitly labeled alternate costumes: **65 outfits covering 61 fighters**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
 (`V2IP_131A`). Use `--fighter redman` or `--fighter rollins` when exporting them.
 Their original geometry, UV islands, normals and material partitions are used;
 this is not a generated replacement body. Textures can be compared in their
@@ -192,3 +195,16 @@ damage-state switching remains unverified. A clean static preview cannot establi
 complete restoration through damage transitions; include that in native playtests.
 Original meshes/UVs and source alpha remain exact. See the
 [twenty-fighter recipe](../research/fighters-batch40-20261029/README.md).
+
+
+Sixteen additional main outfits and four owner-authorized alternate costumes now
+bring the catalogue to65outfit previews (61 distinct fighters). Decoder 2 adds an
+audited direct-index layout with vertex count/pointer validation; decoder 1 caches
+remain accepted without migration. Retained source vertices, UVs, normals and
+indices stay unchanged. Exact external tape meshes, plus Shawnna's unresolved
+mouth-tape auxiliary, are omitted and labeled; they are not proven unused in game.
+Their shared art remains original. Explicit local source blend state is detected;
+hair transparency and studio lighting still approximate source shaders. Small
+source clamp-sampler overshoots clip only during mask rasterization, never by
+changing UVs. Full source alpha and overlapping mapped holds remain protected.
+See [batch evidence](../research/fighters-batch60-20261029/README.md).

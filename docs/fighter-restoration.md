@@ -233,3 +233,41 @@ Do not apply color_trial.correct with a newly restored protected head: that
 function requires protected parent pixels equal Faithful. Use reference-matched
 regional assembly instead. Grain transfer is an optional localized method;
 calibrate spatial frequency and amplitude, not merely the overall output size.
+
+
+## Direct-index resources and female hair
+
+The [next twenty restorations](../research/fighters-batch60-20261029/README.md)
+contain16new fighters and4explicitly authorized alternate costumes. Do not call
+alternate or damage copies new characters. Retain blocked requests honestly;
+ask before substituting outfit work when the remaining unique roster is exhausted.
+No provider switch or disguised retry. Source identity and complete final feature
+checks apply to every costume independently.
+
+Inspect actual texture bindings before deriving main-atlas masks. Some female
+mouth-tape meshes use shared external art; Shawnna uses unresolved primary-atlas
+mouth-tape semantics. The static decoder omits these exact audited cases with
+visible limitations. Do not let their broad UVs hold most of the body atlas or
+pretend their appearance was restored. All retained meshes bind their own atlas.
+
+Hair needs exact audited group permissions, including spelling variants ASym_Hair
+and L_Hair. Some alpha groups mix eyelashes and rear hair: use a declared narrow
+material/box intersection, leaving other components and overlapping holds intact.
+Source alpha remains exact. Alpha-looking pixels alone do not prove source blend
+mode. Preserve actual UV overshoots; bounded canvas clipping reflects the current
+clamp preview, not universal game sampler parity.
+
+Named feature checks must sample the actual mark: Cindy buttons, Manny laces,
+Teck three bandages and every BLAZE/31 fragment exposed mistaken inventory bounds.
+Correct metadata without rewriting submitted prompts. Strict zero-UV padding may
+finish source-looking outer cross/chain/crest copies, never mapped holds. Tiny
+already-editable feather boundaries can change by1RGB level between stages;
+do not claim all mapped pixels byte-identical. Genuine flat black components do
+not need invented texture to satisfy a change percentage.
+
+If raw tattoo contours or words drift, retain source paths and add only generated
+fine ink residual, as in Prodigy. This is not decoded text or full reconstructed
+tattoo imagery. Keep uncertain areas pending and record their actual scope.
+Known CITY/POLICE lettering was verified after final masking; Jervis's mirrored
+last E was corrected with already-generated correct lettering under a narrow
+lower-band mask, retaining his own palette and all other parent pixels exactly.

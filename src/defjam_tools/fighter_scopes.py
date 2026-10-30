@@ -4,15 +4,40 @@ Explicit alpha-cloth/jewelry RGB opt-in keeps source alpha separate. Other alpha
 materials remain held. All paired UV seam evidence is per original geometry.
 """
 from collections import defaultdict
+import re
 import numpy as np
 from PIL import Image,ImageDraw,ImageFilter
 
-def scopes(geometry, size, editable_alpha_groups=(), editable_extra_groups=()):
+HAIR_GROUP=re.compile(r'(?:A[Ss]ym_Hair\d*|Back_Hair\d+|[LR]_?Hair\d+|A_HairCap|HeadCap|[LR]?Bang\d*|Hair(?:Cap|\d+)|HairCentre\d(?:_1bitALPHA)?|HairLoose_Bang\d*|hair\d+)')
+
+def bounded_uv_triangle(points,size):
+    """Validate two-texel clamp-sampler overscan without changing source UVs.
+
+    Pillow clips the polygon at the canvas edge. Clamping individual vertices
+    would change intersections, so return the original points unchanged.
+    This matches the preview's clamp sampler, not proof of runtime shader parity.
+    """
+    points=np.asarray(points,dtype=float)
+    if points.shape!=(3,2) or not np.isfinite(points).all() or np.any((points < -2/size)|(points > 1+2/size)):
+        raise ValueError('Invalid or excessive source UV overscan')
+    return points
+
+def scopes(geometry, size, editable_alpha_groups=(), editable_extra_groups=(), editable_alpha_regions=()):
     actual={m['group'] for m in geometry['meshes']}
-    if any(g not in actual or not g.startswith(('emc4_cloth','emc3_jewelry')) for g in editable_alpha_groups):
-        raise ValueError('Only explicit existing cloth/jewelry alpha groups may restore RGB')
-    if any(g not in actual or g!='others' for g in editable_extra_groups):
-        raise ValueError('Only the explicitly audited existing opaque others group may opt in')
+    if any(g not in actual or not (g.startswith(('emc4_cloth','emc3_jewelry','emc2_skin')) or HAIR_GROUP.fullmatch(g)) for g in editable_alpha_groups):
+        raise ValueError('Only explicit existing cloth/jewelry/skin or audited hair groups may restore RGB')
+    if any(g not in actual or not (g=='others' or HAIR_GROUP.fullmatch(g)) for g in editable_extra_groups):
+        raise ValueError('Only existing audited others or hair groups may opt in')
+    regions=defaultdict(list)
+    for region in editable_alpha_regions:
+        group=region.get('group');box=region.get('source_box',[])
+        if (group not in actual or not group.startswith(('nospec_ALPHA','others_ALPHA'))
+                or not region.get('reason') or len(box)!=4
+                or any(type(v)!=int for v in box)):
+            raise ValueError('Declare an existing mixed alpha group, exact source box and audit reason')
+        x0,y0,x1,y1=box
+        if not 0<=x0<x1<=size or not 0<=y0<y1<=size:raise ValueError('Alpha region outside atlas')
+        regions[group].append(box)
     groups={}
     edges=defaultdict(list)
     for mesh in geometry['meshes']:
@@ -20,9 +45,7 @@ def scopes(geometry, size, editable_alpha_groups=(), editable_extra_groups=()):
         draw=ImageDraw.Draw(canvas);uv=mesh['uv'];pos=mesh['positions'];indices=mesh['indices']
         for at in range(0,len(indices),3):
             ids=indices[at:at+3]
-            points=np.asarray([uv[i] for i in ids])
-            if len(ids)!=3 or np.any(~np.isfinite(points)) or np.any((points<0)|(points>1)):
-                raise ValueError('Invalid triangle UVs')
+            points=bounded_uv_triangle([uv[i] for i in ids],size)
             draw.polygon([tuple(p*size) for p in points],fill=255)
             if not group.startswith('emc2_skin'):continue
             for a,b in zip(ids,ids[1:]+ids[:1]):
@@ -36,8 +59,10 @@ def scopes(geometry, size, editable_alpha_groups=(), editable_extra_groups=()):
         masks[group]=np.asarray(canvas)>0
         known=group.startswith(('emc2_skin','emc4_cloth','emc3_jewelry','nospec')) or group in editable_extra_groups
         alpha='ALPHA' in group.upper() or 'MATALPH' in group.upper()
-        target=allowed if known and (not alpha or group in editable_alpha_groups) else held
-        target.paste(255,mask=canvas)
+        safe=masks[group].copy() if known and (not alpha or group in editable_alpha_groups) else np.zeros((size,size),bool)
+        for x0,y0,x1,y1 in regions[group]:safe[y0:y1,x0:x1]|=masks[group][y0:y1,x0:x1]
+        allowed.paste(255,mask=Image.fromarray(safe.astype('uint8')*255))
+        held.paste(255,mask=Image.fromarray((masks[group]&~safe).astype('uint8')*255))
     # Material boundaries/eye-mouth-alpha tiles retain their source plus one
     # native texel. All unknown materials remain explicitly held.
     mask=(np.asarray(allowed)>0)&~(np.asarray(held.filter(ImageFilter.MaxFilter(3)))>0)

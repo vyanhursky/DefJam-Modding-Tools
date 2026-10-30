@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "source_id": "936b7b65f2ecb08346302b6dcab16c3db1d48ab673bdae22d4efe128b937d50c",
+  "parent_revision": "r-b2fb84012922429a",
+  "revision": "r-aeba1996ca364784",
+  "output_sha256": "82dc1699d7e0c0c715572307ba3cd2902e48262db09a66e245c4a7e7e8a7ecc5",
+  "changed_pixels": 5016,
+  "exact_text": [
+    "CITY",
+    "POLICE"
+  ],
+  "approved": false,
+  "selected": false,
+  "game_verified": false
+}

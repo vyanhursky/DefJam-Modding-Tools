@@ -56,14 +56,25 @@ missing decisions and preserve an active review session during changes.
   Warren's new both-fragment back-P child still requires review. A feature can
   span distant UV islands: check every copy/fragment and assembled Front/Back,
   not just one crop or global change counts. Ten additional drafts bring the
-  static model total to25. They remain unapproved and outside public0.2.
+  static model total to25. They remain unapproved and outside public 0.2.
   The owner then approved Freeway's repaired1972 child and Elephant Man's figurine
   child, and requested twenty MORE, explicitly authorizing parallel subagents.
-  Forty-five static models are supported. New twenty stay unapproved/outside0.2.
+  The first twenty remain outside0.2. On subsequent feedback the owner approved
+  nineteen; Starks badge needs CITY POLICE. Child r-aeba1996ca364784 fixes only
+  lettering and remains unapproved. Owner requests 20 more and explicitly permits
+  alternate costumes to fill shortfalls. Source supports 65 outfit previews over
+  61 fighters:16 new identities plus D-Mob B/C, Blaze B, Sticky Fingaz B. All new
+  twenty stay unapproved/outside0.2. Do not count costumes as new characters.
   Keep one live writer; delegate disjoint private art/QA tasks only. Record every
   result independently. Keep rejected requests honest and choose other compatible
   fighters when selection was delegated. Alpha jewelry RGB and an opaque others
   group require exact audited opt-ins; keep full source alpha and other holds.
+  Decoder 2 direct headers validate actual vertex count/pointer; old decoder 1
+  caches remain readable without rewriting. Retained source arrays/UVs/normals
+  stay exact. Explicit audited external tape and Shawnna mouth-tape omissions
+  must remain visible limitations, never non-use/restoration claims. Source alpha
+  and all other mapped holds remain exact; use narrow audited mixed-alpha hair
+  regions and bounded canvas clipping only. No synthetic normal repair adopted.
   Supplemental injury atlases remain original; static preview cannot verify damage
   transitions. Bonecrusher playtest reminder remains for NEXT test-pack preparation.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
@@ -97,12 +108,14 @@ missing decisions and preserve an active review session during changes.
   deliberately with setup tests; do not maintain independent evolving copies.
 - New corpus builds fingerprint code and may produce a new recipe identity.
   Reading an existing corpus/workspace must not change it.
-- Model viewer decodes forty-five static main-outfit fighter meshes: the accepted
+- Model viewer supports 65static outfit previews covering61fighters: the accepted
   five plus D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack,
   Flava Flav, WC, Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone,
   N.O.R.E., Mack 10, Scarface, Elephant Man, Bless, Havoc, Fam-Lay, Slick Rick,
   Memphis Bleek, Comp, O.E., Jacob, Crazy Legs, Erick Sermon, Pockets, Starks,
-  Trick, Skull, Solo, Chiang, Masa, Baxter, Rome, Snowman and Stingray.
+  Trick, Skull, Solo, Chiang, Masa, Baxter, Rome, Snowman and Stingray; plus Cruz,
+  Meca, Kimora, Shawnna, Cindy J, Carmen Electra, Lauren, Teck, Dan-G, Baby Chris,
+  Ghostface Killah, Joe Budden, Jervis, Lil Kim, Manny, Prodigy and the four costumes.
   Preserve source geometry/UVs/normals/material partitions; label lighting
   approximations and omitted effects. No rig, venue or game reimport claim.
 - Read-only independent investigations can be delegated while the main agent

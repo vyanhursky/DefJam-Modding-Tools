@@ -1,0 +1,1096 @@
+{
+  "schema": 1,
+  "date": "2026-10-29",
+  "new_unique_fighters": 16,
+  "alternate_costumes": 4,
+  "status": "Twenty unapproved drafts outside published0.2",
+  "fighters": [
+    {
+      "fighter": "Cruz",
+      "slug": "cruz",
+      "stem": "V2IP_007A",
+      "source_id": "ed4a82ec39715339682b716a869da76185ff2c93542776cf88ccff153e0e5cc4",
+      "revision": "r-238aa783251f423d",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "b6dc1357e5258ea6a8760bcf9a45f3f72c5ae253292c8bf12e053dab931380f9",
+      "faithful_sha256": "ad0e83a2ccc3d3e59132f2a53289a44f0d76919725c43ebcd01b4b0f42ffa97d",
+      "geometry_sha256": "c098c74d17451aea1a4154e30cb780a36fcae60ead504918a31057f2654f4b37",
+      "raw_sha256": "b658aa03961f59b71c98e0c6159aec6586a3893b96ef36e257fab64b029d781e",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "d21353f2c25947fb4e518f8b6a5d8bb69679af7a69cc7f61522ed82d9f603ff0",
+      "changed_pixels": 3073943,
+      "feature_count": 9,
+      "source_seam_edges": 108,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 34,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 38,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 39,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3",
+        "emc2_skin_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin2"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Meca",
+      "slug": "meca",
+      "stem": "V2IP_201A",
+      "source_id": "80583d125d979983f258c5e30d16f463abfe0b10cb497219d8f348d32b8ae08e",
+      "revision": "r-3e423ed54f3b4d8f",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "77e6e823298ed71c7e5156717db5d94ff5c24981bbde89a4d9784e5d2d2d24a7",
+      "faithful_sha256": "7e442c3db7cdee44cc7d12127c81767b55bbc7d766f23ce474b15b63bc6f10dc",
+      "geometry_sha256": "79b05bb3917b47c694ab6ad840418b45e02aca7dbe2d12c85afc4208646d9fde",
+      "raw_sha256": "e56021ce620cd8aceb170e63624e7898728850af2a4ecabf98d574846d7e3c12",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "0b81a57e0f7c51a791103c3be930eee6b3641f557dc964e619bd8d8100c70d7c",
+      "changed_pixels": 3271042,
+      "feature_count": 8,
+      "source_seam_edges": 270,
+      "preview_omissions": [
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 57,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 58,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [
+        "others"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Kimora",
+      "slug": "kimora",
+      "stem": "V2IP_407A",
+      "source_id": "0c233032698b57f1455149737e01551ee87b2625f487313af2815cce9c1e80de",
+      "revision": "r-ebeb95655dbf4497",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "b28b2a4e768fc99b5a150aea7bb7a9864e99705a09f1ce0fb287cb77a88d1ecf",
+      "faithful_sha256": "6b222353c43c6abe45fb2404d6ecf5a91a3799791bdfb7d29a8763f3d7f8baca",
+      "geometry_sha256": "48b94087cfbe6fa10925e37047fcc846ba7f72a367d5f66d41711b67f3d87179",
+      "raw_sha256": "7f77d30512116bfb618386c08003969464f0ddbcd4be16bed5d4d921afdd3b7f",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "624b72ad2040cd5d52f97cb6465b43959df6f9fd510f55800a1b6773e530a9bf",
+      "changed_pixels": 3180497,
+      "feature_count": 12,
+      "source_seam_edges": 345,
+      "preview_omissions": [
+        {
+          "group": "tape",
+          "rm": 20,
+          "texture_ref": "tape,1",
+          "reason": "External shared tape texture; omitted from primary-atlas preview, game use unverified"
+        },
+        {
+          "group": "Direction",
+          "rm": 65,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 69,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 70,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [
+        "Asym_Hair4",
+        "Asym_Hair5",
+        "Asym_Hair6",
+        "Back_Hair1",
+        "Back_Hair2",
+        "Back_Hair3",
+        "HeadCap",
+        "LBang",
+        "LHair1",
+        "LHair2",
+        "LHair3",
+        "LHair5",
+        "LHair6",
+        "RBang",
+        "RHair1",
+        "RHair2",
+        "RHair3",
+        "RHair4",
+        "RHair5"
+      ],
+      "editable_alpha_regions": [
+        {
+          "group": "others_ALPHA_MatAlph",
+          "source_box": [
+            103,
+            407,
+            139,
+            512
+          ],
+          "reason": "Inspected separate lower-garment alpha fringe; full source alpha retained"
+        }
+      ],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Shawnna",
+      "slug": "shawnna",
+      "stem": "V2IP_406A",
+      "source_id": "fb0cd2babfc0dbed20604db7587e22f51471a2e44ff0987fdc1a1b4c43d2563a",
+      "revision": "r-7cde240229f84bfe",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "fafe7562418f6454920e6b3160b09a64aafcda887faed7c9f727d8b5bf55616a",
+      "faithful_sha256": "159c630b193a260d035378a5a43d968427c869cf05b1bce35dca68175e4fb8fa",
+      "geometry_sha256": "eea8a67ea4d78124ca7b5efa16574a59193f525e6ada493439b65ca5cbd37649",
+      "raw_sha256": "92a86d603140005eefedf35d82699776fb34ca506417247cdf48dd8d98af8eda",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "a3937e7f870cd78bc4ff0d36724894ef6ae16f07b255b8b42b5a55c9df4f740b",
+      "changed_pixels": 3226390,
+      "feature_count": 10,
+      "source_seam_edges": 332,
+      "preview_omissions": [
+        {
+          "group": "tape",
+          "rm": 20,
+          "texture_ref": "A406,1",
+          "reason": "Audited Shawnna mouth-tape auxiliary mesh; UV/shader use unresolved, omitted from static preview"
+        },
+        {
+          "group": "Direction",
+          "rm": 62,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 65,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 66,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 67,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [
+        "hair1",
+        "hair10",
+        "hair11",
+        "hair12",
+        "hair13",
+        "hair14",
+        "hair15",
+        "hair16",
+        "hair17",
+        "hair18",
+        "hair19",
+        "hair2",
+        "hair3",
+        "hair4",
+        "hair5",
+        "hair6",
+        "hair7",
+        "hair8",
+        "hair9"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Cindy J",
+      "slug": "cindy-j",
+      "stem": "V2IP_403A",
+      "source_id": "ce13dde34046b73540217690840b80a7ba6fd901bbdec3a928ef7b58f3b23659",
+      "revision": "r-24f3dfe403664cac",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "ccd9481076c128c387543be55f0618e35e252c965a9f3b00de9b8f70caa0dab4",
+      "faithful_sha256": "431432eaec10fd2fb068d8c2578e7193ec9e2549ca294fd5792d94650d4cb99e",
+      "geometry_sha256": "d9fd6f6262cc868e8a78238e3c72b2b874ff88d9652a6bd5365d5d5f6da46fe6",
+      "raw_sha256": "04cdc8a73a71bc5eb1c402ab9f405e49ff1702169fec136508e151820cf285fb",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "48e3a20b84ddcc972526a2f050ed088675f915e84b50ab286f8965d4ed892c21",
+      "changed_pixels": 2979749,
+      "feature_count": 12,
+      "source_seam_edges": 682,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 0,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "tape",
+          "rm": 1,
+          "texture_ref": "tape,1",
+          "reason": "External shared tape texture; omitted from primary-atlas preview, game use unverified"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 49,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 50,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling2_gold_MatAlph~DJFXSparkle_Skin",
+          "rm": 51,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [
+        "others"
+      ],
+      "editable_alpha_regions": [
+        {
+          "group": "nospec_ALPHA_MatAlph",
+          "source_box": [
+            251,
+            441,
+            289,
+            512
+          ],
+          "reason": "Audited separate rear-head hair component; eyelash components outside this box remain held"
+        }
+      ],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Carmen Electra",
+      "slug": "carmen-electra",
+      "stem": "V2IP_401A",
+      "source_id": "12c99396e3f3b286292af53ae56869a27b5bc1ce562b2adffd31273596dbea11",
+      "revision": "r-4db931d3cd6646b3",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "5e3db1c424a9d870a83bb366b3794a051e6b585deae41ba216db580e20b7b99f",
+      "faithful_sha256": "3519e9bc000321e0be0bcba870c3272ba795f6cbf9b25e8a2c45315bbed20068",
+      "geometry_sha256": "3a6b3f6e0baf79d87e528e84d56deeff4392e4a470b752192ddbcbdf973a0001",
+      "raw_sha256": "681d814584f1d8c4c21c011470b843421dbe4f2b7eb56c4f1c4982d198bfdb18",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "56d340a6d1dde3e13353a178273f7ee7994e5c35a934e52dc810fb8fbe34df60",
+      "changed_pixels": 2944046,
+      "feature_count": 9,
+      "source_seam_edges": 370,
+      "preview_omissions": [
+        {
+          "group": "tape",
+          "rm": 25,
+          "texture_ref": "tape,1",
+          "reason": "External shared tape texture; omitted from primary-atlas preview, game use unverified"
+        },
+        {
+          "group": "Direction",
+          "rm": 63,
+          "reason": "Untextured direction helper"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [
+        "A_HairCap",
+        "Asym_Hair",
+        "Asym_Hair1",
+        "Asym_Hair2",
+        "Asym_Hair3",
+        "Back_Hair1",
+        "Back_Hair2",
+        "Bang1",
+        "Bang2",
+        "Bang3",
+        "Bang4",
+        "LHair1",
+        "LHair10",
+        "LHair12",
+        "LHair14",
+        "LHair2",
+        "LHair3",
+        "LHair4",
+        "LHair5",
+        "LHair6",
+        "LHair8",
+        "LHair9",
+        "RHair10",
+        "RHair2",
+        "RHair7"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Lauren",
+      "slug": "lauren",
+      "stem": "V2IP_405A",
+      "source_id": "598868911b428ea846e0f6fc6ce3d6eb4a0cf94004307f2484498620a4c49373",
+      "revision": "r-36ccdaf73e564749",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "81ea7a7e9546adddec8d402e232b632804f221bf9db9f1eecae37bb323099d70",
+      "faithful_sha256": "b5332088c8721fce18c9d5ec21eb4520cb753c5ddfab95740c25bd598667e472",
+      "geometry_sha256": "a868de7b1438519a15bef223a51657ed06ff6773a2c4db33666ff1c0c7752cb3",
+      "raw_sha256": "8df87275a8baa68ea6bee00bb89034cdc4aed44b8f9a3d9ef10fc53df9c86ecf",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "4b341dba16e8ecfdbeda9d80d7375db21481e5a9076163b96892b5fb337f0c62",
+      "changed_pixels": 3443130,
+      "feature_count": 10,
+      "source_seam_edges": 210,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 58,
+          "reason": "Untextured direction helper"
+        }
+      ],
+      "editable_alpha_groups": [
+        "HairCentre1_1bitALPHA",
+        "HairCentre3_1bitALPHA",
+        "HairCentre6_1bitALPHA",
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [
+        "Hair1",
+        "Hair10",
+        "Hair2",
+        "Hair3",
+        "Hair4",
+        "Hair5",
+        "Hair6",
+        "Hair7",
+        "Hair8",
+        "Hair9",
+        "HairCap",
+        "HairCentre1_1bitALPHA",
+        "HairCentre2",
+        "HairCentre3_1bitALPHA",
+        "HairCentre4",
+        "HairCentre5",
+        "HairCentre6_1bitALPHA",
+        "HairLoose_Bang",
+        "HairLoose_Bang1",
+        "HairLoose_Bang2",
+        "HairLoose_Bang3"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Teck",
+      "slug": "teck",
+      "stem": "V2IP_305A",
+      "source_id": "da8db4a6a832e85d22b1b2f6017136f8176c9544d558e7392a8bd8125d7100bc",
+      "revision": "r-53b22996a45d49f6",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "37ed5ce44cd128843e9a756ed2ae36fe85f54fd7c6b059cef222c36e2f38b4d4",
+      "faithful_sha256": "ed073770d6d3733bf893778d1c5b9608c28a0b658fcb3d6f3dd029dcc9e82d7a",
+      "geometry_sha256": "4c5a6941e56bd6c86feffaa6a0e180ba065793c5fe4763ddc14f11ffe2398be0",
+      "raw_sha256": "39bc67f4c81a00a3767ebd803583eda982e18908d161fcd004300676cc9b9267",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "e2d254bdb5d10f3ef710c6ba3f087001190dedcfe2e817b98697280e8e4b2dfa",
+      "changed_pixels": 3413701,
+      "feature_count": 10,
+      "source_seam_edges": 90,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 47,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 49,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [
+        "others"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Dan-G",
+      "slug": "dan-g",
+      "stem": "V2IP_004A",
+      "source_id": "4ad1c317e29b8e13ec983e93b0a6caa6ad64852c5825dafd9a3a50035ec75544",
+      "revision": "r-d9fdae63bbea4d38",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "a86d4aa6b3675be3aed7990f596d90df521b7fd493957c3eb8e67c9cbe65eab1",
+      "faithful_sha256": "a53ea34d1bf78332c83f27b7acdf4c478e44e0cb6a8d5b365c2bffcea47899df",
+      "geometry_sha256": "5e5b7225d2be22dd7a5fb573337f4e3bc96dc1039895fda05ebc18225dd3ed46",
+      "raw_sha256": "dc8a473c77be47290131ac4d4d1da0ba9673801ae8ca1fc252539869b61adcf6",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "8c0c65a119c13672fedc68357a5569d0b13523e5162d422c5ecaaaa0acef2081",
+      "changed_pixels": 3244695,
+      "feature_count": 12,
+      "source_seam_edges": 282,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 29,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 32,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling2_gold_MatAlph~DJFXSparkle_Skin",
+          "rm": 33,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Baby Chris",
+      "slug": "chris",
+      "stem": "V2IP_122A",
+      "source_id": "c22970480d8e2e06c6400b47207a38613cb5e134e17f54574bb671975ef93a38",
+      "revision": "r-633c50f546934ad9",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "d9b5b79bbb27b56150fe126ab7ec1061d065888fb67523d4fc453a27907e0884",
+      "faithful_sha256": "3b6cdadb46d4d89303021d2acd33da300a8feead3b235c7081b49b7ab7a2273f",
+      "geometry_sha256": "479098184e3edd22d24957d2f517843b41787a0610fa23220aee69d7d288858e",
+      "raw_sha256": "c7fa22dd7bb6f9ee8d3e75486d95f3db4748b90b022e4b24463d064439d71918",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "f75b4c7bfdb84e8fc3b64a4bf8b0aa992d7391b912119d5ba9c48b1d545126d6",
+      "changed_pixels": 3256909,
+      "feature_count": 11,
+      "source_seam_edges": 304,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 37,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling3_platinum1_MatAlph~DJFXSparkle_Skin",
+          "rm": 40,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Ghostface Killah",
+      "slug": "ghostface",
+      "stem": "V2IP_108A",
+      "source_id": "1db2188a2573b0fc6163e90760e24dab2d1f9c55708bd8bcdd8d64e7316c6574",
+      "revision": "r-43eb5b1b77704af6",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "decd8cc430054e597ddbaa0882e56e26e2b8a9c745a9e1f16e077f67d22a2610",
+      "faithful_sha256": "fda1c16eab3ed313fa39bb4efa65f02b76ca38af1a2a8bae9621bba1f82bab5d",
+      "geometry_sha256": "ae6dd955357cedcafae3915fa85f42a441846f32549113b257315bff8b70d2a5",
+      "raw_sha256": "8b7f473eefe9dca89e99ac62416d78a2e6da61c039a1394c526144d6554e587d",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "b2b2d0cba3e05180543b8b63249b5f367dce983125bed9b425811e6085d695cf",
+      "changed_pixels": 3033685,
+      "feature_count": 9,
+      "source_seam_edges": 263,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 34,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 37,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling2_gold_MatAlph~DJFXSparkle_Skin",
+          "rm": 38,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling4_diamond1_MatAlph~DJFXSparkle_Skin",
+          "rm": 39,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Joe Budden",
+      "slug": "joe-budden",
+      "stem": "V2IP_302A",
+      "source_id": "7757c9bd6b5c016e226836b62f2e0aaa02e64ec49a108864c58fd65ede498f44",
+      "revision": "r-53a8ff0354654ef4",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "ad5be9dd4a2035c160b13f026332af64d0b3695e7eab3f2efaaddec93f28901e",
+      "faithful_sha256": "f54a4d5f60dce42493ce7951a2f7ef27b8827fc83b4eec202960560bd57c60f0",
+      "geometry_sha256": "902ecda07d6cb00844918705aee99736d32f32a1a2219b00d053efc4bcfea654",
+      "raw_sha256": "b0ef5357df898b55e6efecfb6fa3367842b9928796b343098bd5988246d2bf8c",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "25ff0620c3b80f0baa678f9f4125e824ff1251df678a7558692e078ce0ae2f17",
+      "changed_pixels": 3123100,
+      "feature_count": 8,
+      "source_seam_edges": 270,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 0,
+          "reason": "Untextured direction helper"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Jervis",
+      "slug": "jervis",
+      "stem": "V2IP_202A",
+      "source_id": "b4f1087429773408acdc7daef6c90659b401aafcbcf3300d5c99801f7343505b",
+      "revision": "r-514bac26d4854e0d",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "76db4956c7f6a82ff0377ba471bbf59a8954535169d59a110e4ce9677fa3b7cf",
+      "faithful_sha256": "6eaedafc3b2c1379854a4664f6630aca645e2ef214d5ddf0dc4752ca7b6fcc74",
+      "geometry_sha256": "82e2c3ada34847c26bea5965a17c2cf49a47eafbed21e38ad1d97b90256286af",
+      "raw_sha256": "42bc081ee5ce64cac10baa2b648dd33273beb35daaaf91175523c0088196cb93",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "17374e238f70729a4217242b8c845fa5b916572a469459cca34a1942e4852132",
+      "changed_pixels": 3056173,
+      "feature_count": 11,
+      "source_seam_edges": 274,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 0,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling2_gold_MatAlph~DJFXSparkle_Skin",
+          "rm": 72,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [
+        "others"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Lil Kim",
+      "slug": "lil-kim",
+      "stem": "V2IP_404A",
+      "source_id": "44d7b4fc03d64580146c9f45393044cd400d28efa4bbf2c08ff8acc5ccfef336",
+      "revision": "r-6e8a5dfbcae84c8b",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "84fce79d78a5a4f28cd6105ea5a1a61f6e9a9e276d2468e599b5a4f13d53a77c",
+      "faithful_sha256": "772c7ea9843b095d18e6f9f9fc54b277a075621e3496d43450be62c59f2ed40a",
+      "geometry_sha256": "4223fc1e01db303bfc636b601fe3ea0d8020b81eea484cc2663aaaa47d130785",
+      "raw_sha256": "542b2c9f086bc953bdb27420a8b04bafb0296b827304fa0b81bd1b4201e35703",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "2c6fa15c718a55778c8bba95669813a3cdadf6bb9e12f9625b92e35d90938c6e",
+      "changed_pixels": 2681811,
+      "feature_count": 9,
+      "source_seam_edges": 180,
+      "preview_omissions": [
+        {
+          "group": "tape",
+          "rm": 20,
+          "texture_ref": "tape,1",
+          "reason": "External shared tape texture; omitted from primary-atlas preview, game use unverified"
+        },
+        {
+          "group": "Direction",
+          "rm": 66,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 69,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 70,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling2_gold_MatAlph~DJFXSparkle_Skin",
+          "rm": 71,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [
+        "ASym_Hair1",
+        "ASym_Hair10",
+        "ASym_Hair2",
+        "ASym_Hair4",
+        "ASym_Hair5",
+        "ASym_Hair7",
+        "ASym_Hair8",
+        "ASym_Hair9",
+        "L_Hair11",
+        "L_Hair12",
+        "L_Hair2",
+        "L_Hair3",
+        "L_Hair4",
+        "L_Hair5",
+        "L_Hair6",
+        "L_Hair7",
+        "L_Hair8",
+        "L_Hair9",
+        "R_Hair5",
+        "R_Hair6"
+      ],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Manny",
+      "slug": "manny",
+      "stem": "V2IP_008A",
+      "source_id": "d7d3dff45cc77f6efc0fb2690f72e3d5634ac574abb7498c875707b1a7ec7682",
+      "revision": "r-78182410fd904a83",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "1e95f15687a6f3e541e5321339fd1a8ef8bbdf4d6155b5af81d614d15f856d20",
+      "faithful_sha256": "19284fd5c42f6f1b93b189db4c74ebd1ea00982225c123e9d54273d62c3d97c6",
+      "geometry_sha256": "2cc87d7e739a0cfecde3add1e13bbcab5653f470417f8d1ffbaa01fb66c57c16",
+      "raw_sha256": "03bd8a454e8866d734d0d967a3e5bd13234c161f35c26e5b41caf64effe35bfc",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "055ce04ce73727f2c2d38b12b6ef20d920f4ef8e1723f35b64473d5f1bf7ec7a",
+      "changed_pixels": 3112432,
+      "feature_count": 20,
+      "source_seam_edges": 434,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 39,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 42,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 43,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Prodigy",
+      "slug": "prodigy",
+      "stem": "V2IP_119A",
+      "source_id": "3a5c8f7b441aa4e23018a341ae05049f124c0ecabe0cdaaca286f0702b472253",
+      "revision": "r-259a96c52b75405e",
+      "is_alternate_outfit": false,
+      "costume": null,
+      "original_sha256": "de5545c8ee28864566e17389b0a358d9c0989208aae5337a856878ed082a895c",
+      "faithful_sha256": "99f2c00d977cd3eb2fc1002c1b2c915fdf8084a2c6dcd6072c065883613c1c4c",
+      "geometry_sha256": "c7321558373fdbe7b421a1edfa237f936721a2847a7319cf99b5b0b77366b356",
+      "raw_sha256": "0e3979b777461bae8671f1b04fbfd88045b445e3ea7b2fdd136d4fa4c9ffb6a1",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "6653c60a72304e8c35d4ddbd7194cf82a16b7cd878e8b73335e6a9245e58c3ff",
+      "changed_pixels": 2828213,
+      "feature_count": 9,
+      "source_seam_edges": 361,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 43,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 46,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 47,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [
+        {
+          "name": "Original tattoo contour 1",
+          "source_box": [
+            251,
+            178,
+            364,
+            257
+          ]
+        },
+        {
+          "name": "Original tattoo contour 2",
+          "source_box": [
+            253,
+            449,
+            371,
+            512
+          ]
+        },
+        {
+          "name": "Original tattoo contour 3",
+          "source_box": [
+            374,
+            449,
+            477,
+            512
+          ]
+        },
+        {
+          "name": "Original tattoo contour 4",
+          "source_box": [
+            477,
+            389,
+            512,
+            512
+          ]
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "D-Mob \u2014 Costume B",
+      "slug": "d-mob-b",
+      "stem": "V2IP_014B",
+      "source_id": "7dfa2af4c0005258aeefcff3ef52427b8906d511b9858c5f2bbf48ede7ab5f2a",
+      "revision": "r-469c54ada4974a5b",
+      "is_alternate_outfit": true,
+      "costume": "B",
+      "original_sha256": "c1cdbaa573e215e1f5df03ca8d814a389e5d1cdf446d0262099e108dd1a4a036",
+      "faithful_sha256": "d3aeb65d81dadf4dc60c581e6ce04653a21133812e5a4910f2b7876f92fa13d2",
+      "geometry_sha256": "553521567c944c0ed47d5a5773fe8727aa221372455f937943681b97661ff3ee",
+      "raw_sha256": "36a9cef8c335194f57b865667e7a2ce1c2e3a01f13c8f6556510e8d19db33517",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "296947a497cfabd3108c3f244cf451f6a24c6859cccb5477b8c77793934e85b1",
+      "changed_pixels": 2894844,
+      "feature_count": 8,
+      "source_seam_edges": 276,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 46,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 48,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "D-Mob \u2014 Costume C",
+      "slug": "d-mob-c",
+      "stem": "V2IP_014C",
+      "source_id": "e25435681ff9a692bf052051fd1bc04de5dbb07cf88d0ad299db0a3f9b0bff42",
+      "revision": "r-d72b4f50a3a3416f",
+      "is_alternate_outfit": true,
+      "costume": "C",
+      "original_sha256": "bf648165d1574539af4500bdbcb8359245696ebd546fd77003f9af560bfb0b67",
+      "faithful_sha256": "e2f6454f864e65b7c30c424490bd45c64968805a78c51898ceb53dad40a48092",
+      "geometry_sha256": "4d68619dafc842c1a4afca2684fb8da5c248b2c497d98bafdb40d8bfa7624d93",
+      "raw_sha256": "848ffdb04328a5cf9aea83972102f02804aff9e63f1314d9ae757b28b59b1d6c",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "030461ff3b830e0b03df8bd814d4ef808e22b6414fc4c0a07925ccd8d6e4ac10",
+      "changed_pixels": 2986710,
+      "feature_count": 8,
+      "source_seam_edges": 240,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 42,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling1_silver_MatAlph~DJFXSparkle_Skin",
+          "rm": 44,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Blaze \u2014 Costume B",
+      "slug": "blaze-b",
+      "stem": "V2IP_113B",
+      "source_id": "df031556e345c259b1d1c0ce054a04eda28fc96b356e849c3af3cd116236e52b",
+      "revision": "r-29da836a7fd04eeb",
+      "is_alternate_outfit": true,
+      "costume": "B",
+      "original_sha256": "805994250c665779f268dd27a97dafbeed07c9ff7d9a74cf8535aa107e4edd4b",
+      "faithful_sha256": "73e5741e235bc9b6c6c2663b6abb3a04a5baa085ef840ecd70aed7a8ac28af32",
+      "geometry_sha256": "b6a7ca5686ebed4b378239654fae64f928861db070381eaa77ae0430042ada54",
+      "raw_sha256": "a4f6c0d235d547dd1ceaa6d938445cb3b62c2fd8c97f1b294e60df10a118b91d",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "5532d1afdf1da25e762d30d8fb1669bee9d78ee2008bc0c81a3a3fd90cfdac97",
+      "changed_pixels": 3286602,
+      "feature_count": 18,
+      "source_seam_edges": 102,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 40,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling3_platinum_MatAlph~DJFXSparkle_Skin",
+          "rm": 43,
+          "reason": "Point-sprite sparkle"
+        },
+        {
+          "group": "bling4_diamond_MatAlph~DJFXSparkle_Skin",
+          "rm": 44,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Sticky Fingaz \u2014 Costume B",
+      "slug": "sticky-fingaz-b",
+      "stem": "V2IP_114B",
+      "source_id": "7a0450588f199e1d379890739bbaafae99d00e20210d62883a4809a516dcfd58",
+      "revision": "r-8d42bdc3652b4a88",
+      "is_alternate_outfit": true,
+      "costume": "B",
+      "original_sha256": "5294a063ae415680129ef05435272795a3fa2f564834ca8f920a0ff00ffe875b",
+      "faithful_sha256": "10a996e88821aa21b7f636da80cef79213184b1abbba43b5fe1e9063341d23e2",
+      "geometry_sha256": "f2b6c6f470a49ae45ee4d40e6c18f1ab44bdfe22eec477dff4cbfb63ebb68f18",
+      "raw_sha256": "898208e73f5ec26712abe5fa514175d93c8ccf289f22e297b2ae27c418083dcf",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "ded5d9a63ae8e06d33cd5f8d99d76aecd9f611380a6a5d042dc1cc2475545638",
+      "changed_pixels": 2943707,
+      "feature_count": 12,
+      "source_seam_edges": 323,
+      "preview_omissions": [
+        {
+          "group": "Direction",
+          "rm": 36,
+          "reason": "Untextured direction helper"
+        },
+        {
+          "group": "bling2_gold_MatAlph~DJFXSparkle_Skin",
+          "rm": 38,
+          "reason": "Point-sprite sparkle"
+        }
+      ],
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "editable_alpha_regions": [],
+      "source_contour_features": [],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    }
+  ]
+}

@@ -7,6 +7,7 @@ retaining fine generated texture. No skin calibration heuristics are reused.
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 from .color_trial import rgb_to_lab, lab_to_rgb, box_blur, components, resize_float
+from .fighter_scopes import bounded_uv_triangle
 
 VERSION=1
 
@@ -23,9 +24,7 @@ def clothing_mask(geometry,size):
         for at in range(0,len(indices),3):
             tri=indices[at:at+3]
             if any(type(i)!=int or not 0<=i<len(uv) for i in tri):raise ValueError('Bad UV index')
-            points=np.asarray([uv[i] for i in tri],dtype=float)
-            if points.shape!=(3,2) or not np.isfinite(points).all() or np.any((points<0)|(points>1)):
-                raise ValueError('Invalid source UV')
+            points=bounded_uv_triangle([uv[i] for i in tri],size)
             draw.polygon([tuple(p*size) for p in points],fill=255)
     if not found:raise ValueError('No source clothing material')
     coverage=np.asarray(cloth)>0;held=np.asarray(other.filter(ImageFilter.MaxFilter(3)))>0

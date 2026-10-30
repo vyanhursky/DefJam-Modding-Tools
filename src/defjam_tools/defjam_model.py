@@ -17,7 +17,7 @@ import struct
 from PIL import Image
 from .hd_assets import archive_entries, unpack_refpack, MAX_BLOB
 
-VERSION = 1
+VERSION = 2
 FIGHTERS = {
     "redman": ("Redman", "V2IP_109A", "61ca4a5526f266aa676e52bff3ac615eff3bb85f8d32f6375e81cce2da374c6b"),
     "rollins": ("Henry Rollins", "V2IP_131A", "4f1b25d80e683f2a80e7071d5a50c576066ec49831419048f5ff7f15dccdd31d"),
@@ -64,6 +64,26 @@ FIGHTERS = {
     'pockets': ('Pockets', 'V2IP_001A', '61a41808040bafc000925d2404d1b55b28cd027ba012515e31fd93a3ad5d825d'),
     'starks': ('Starks', 'V2IP_203A', '936b7b65f2ecb08346302b6dcab16c3db1d48ab673bdae22d4efe128b937d50c'),
     'jacob': ('Jacob', 'V2IP_129A', 'c26a16a8374d050a8a091f1df8000a19df3775cfa73fbd4d21a885b3861873de'),
+    'cruz': ('Cruz', 'V2IP_007A', 'ed4a82ec39715339682b716a869da76185ff2c93542776cf88ccff153e0e5cc4'),
+    'meca': ('Meca', 'V2IP_201A', '80583d125d979983f258c5e30d16f463abfe0b10cb497219d8f348d32b8ae08e'),
+    'kimora': ('Kimora', 'V2IP_407A', '0c233032698b57f1455149737e01551ee87b2625f487313af2815cce9c1e80de'),
+    'shawnna': ('Shawnna', 'V2IP_406A', 'fb0cd2babfc0dbed20604db7587e22f51471a2e44ff0987fdc1a1b4c43d2563a'),
+    'cindy-j': ('Cindy J', 'V2IP_403A', 'ce13dde34046b73540217690840b80a7ba6fd901bbdec3a928ef7b58f3b23659'),
+    'carmen-electra': ('Carmen Electra', 'V2IP_401A', '12c99396e3f3b286292af53ae56869a27b5bc1ce562b2adffd31273596dbea11'),
+    'lauren': ('Lauren', 'V2IP_405A', '598868911b428ea846e0f6fc6ce3d6eb4a0cf94004307f2484498620a4c49373'),
+    'teck': ('Teck', 'V2IP_305A', 'da8db4a6a832e85d22b1b2f6017136f8176c9544d558e7392a8bd8125d7100bc'),
+    'dan-g': ('Dan-G', 'V2IP_004A', '4ad1c317e29b8e13ec983e93b0a6caa6ad64852c5825dafd9a3a50035ec75544'),
+    'chris': ('Baby Chris', 'V2IP_122A', 'c22970480d8e2e06c6400b47207a38613cb5e134e17f54574bb671975ef93a38'),
+    'ghostface': ('Ghostface Killah', 'V2IP_108A', '1db2188a2573b0fc6163e90760e24dab2d1f9c55708bd8bcdd8d64e7316c6574'),
+    'joe-budden': ('Joe Budden', 'V2IP_302A', '7757c9bd6b5c016e226836b62f2e0aaa02e64ec49a108864c58fd65ede498f44'),
+    'jervis': ('Jervis', 'V2IP_202A', 'b4f1087429773408acdc7daef6c90659b401aafcbcf3300d5c99801f7343505b'),
+    'lil-kim': ('Lil Kim', 'V2IP_404A', '44d7b4fc03d64580146c9f45393044cd400d28efa4bbf2c08ff8acc5ccfef336'),
+    'manny': ('Manny', 'V2IP_008A', 'd7d3dff45cc77f6efc0fb2690f72e3d5634ac574abb7498c875707b1a7ec7682'),
+    'prodigy': ('Prodigy', 'V2IP_119A', '3a5c8f7b441aa4e23018a341ae05049f124c0ecabe0cdaaca286f0702b472253'),
+    'd-mob-b': ('D-Mob — Costume B', 'V2IP_014B', '7dfa2af4c0005258aeefcff3ef52427b8906d511b9858c5f2bbf48ede7ab5f2a'),
+    'd-mob-c': ('D-Mob — Costume C', 'V2IP_014C', 'e25435681ff9a692bf052051fd1bc04de5dbb07cf88d0ad299db0a3f9b0bff42'),
+    'blaze-b': ('Blaze — Costume B', 'V2IP_113B', 'df031556e345c259b1d1c0ce054a04eda28fc96b356e849c3af3cd116236e52b'),
+    'sticky-fingaz-b': ('Sticky Fingaz — Costume B', 'V2IP_114B', '7a0450588f199e1d379890739bbaafae99d00e20210d62883a4809a516dcfd58'),
 }
 
 
@@ -175,6 +195,28 @@ def triangles_from_strip(strip, count):
     return out
 
 
+def index_stream(e, at, vertex_count, first_vertex_array):
+    """Read the two audited strip layouts after an animation-buffer binding.
+
+    Long layout: one draw-count entry, total indices, index pointer.
+    Direct layout: index count/pointer, followed immediately by vertex fields.
+    Verify those vertex fields to reject arbitrary or multi-draw layouts rather
+    than interpreting unknown parameter bytes as index data.
+    """
+    tag=e.u(at+4)
+    if tag==1:
+        n,ip=e.u(at+12),e.ptr(at+16)
+        if e.u(e.ptr(at+8))!=n:
+            raise ModelError("Unsupported index header")
+    else:
+        n,ip=tag,e.ptr(at+8)
+        if e.u(at+12)!=vertex_count or e.ptr(at+16)!=first_vertex_array:
+            raise ModelError("Unsupported direct index header")
+    if not 3<=n<=1_000_000:
+        raise ModelError("Invalid index count")
+    return list(e.unpack("<"+str(n)+"H",ip))
+
+
 def decode(blob, name, source_id):
     e = ElfData(blob)
     vb = {}
@@ -216,6 +258,18 @@ def decode(blob, name, source_id):
         if parent == "ParentRM_DJFXSparkle_Skin" or label == "Direction":
             skipped.append(dict(group=label, rm=number, reason="Point-sprite sparkle" if "Sparkle" in parent else "Untextured direction helper"))
             continue
+        textures={match[1] for _,ref in refs
+                  if (match:=re.search(r"^__EAGL::TAR:::.*;SHAPENAME=([^;]+);",ref))}
+        if label=="tape" and textures=={"tape,1"}:
+            skipped.append(dict(group=label,rm=number,texture_ref="tape,1",
+                                reason="External shared tape texture; omitted from primary-atlas preview, game use unverified"))
+            continue
+        if label=="tape" and textures=={"A406,1"}:
+            skipped.append(dict(group=label,rm=number,texture_ref="A406,1",
+                                reason="Audited Shawnna mouth-tape auxiliary mesh; UV/shader use unresolved, omitted from static preview"))
+            continue
+        if len(textures)>1:
+            raise ModelError("Ambiguous primary texture binding")
         if parent not in ("ParentRM_IrradTexture_Skin", *("ParentRM_DJIrradTextureEnvmap_Skin" + str(i) for i in range(1, 5))):
             raise ModelError("Unsupported material shader: " + parent)
         state = next((s for _, s in refs if "SetPrimitiveType=" in s), "")
@@ -245,10 +299,7 @@ def decode(blob, name, source_id):
         if len(animation) != 1:
             raise ModelError("Expected one animation-buffer binding")
         at = animation[0]
-        n, ip = e.u(at + 12), e.ptr(at + 16)
-        if n > 1_000_000 or e.u(at + 4) != 1 or e.u(e.ptr(at + 8)) != n:
-            raise ModelError("Unsupported index header")
-        indices = triangles_from_strip(list(e.unpack("<" + str(n) + "H", ip)), count)
+        indices = triangles_from_strip(index_stream(e, at, count, arrays[0]), count)
         for i in range(0, len(indices), 3):
             indices[i], indices[i + 1] = indices[i + 1], indices[i]
         if not indices or any(not math.isfinite(v) or abs(v) > 10000 for a in positions + uv for v in a):
@@ -257,14 +308,20 @@ def decode(blob, name, source_id):
         # once for glTF CCW; keep coordinates and top-left UV convention.
         meshes.append(dict(name=label + " / RM" + str(number), group=label, rm=number,
                            positions=positions, uv=uv, normals=normals, colors=colors,
-                           indices=indices, transparent="_ALPHA" in label))
+                           indices=indices, transparent="_ALPHA" in label or any("ABM_BLEND" in ref for _,ref in refs)))
+        if textures:meshes[-1]['texture_ref']=next(iter(textures))
     all_pos = [p for m in meshes for p in m["positions"]]
+    if not all_pos:raise ModelError("No retained primary-atlas meshes")
     bounds = [[min(p[i] for p in all_pos) for i in range(3)], [max(p[i] for p in all_pos) for i in range(3)]]
     return dict(schema=1, decoder=VERSION, name=name, source_id=source_id, source_sha256=sha(blob),
                 meshes=meshes, bounds=bounds, skipped=skipped,
                 vertices=len(all_pos), triangles=sum(len(m["indices"]) // 3 for m in meshes),
                 limitations=["Static source rest pose; no animation or rig export", "Unlit RGB reference; studio lighting is approximate",
-                             "Game specular/irradiance shaders and sparkle effects are not reproduced"])
+                             "Game specular/irradiance shaders and sparkle effects are not reproduced"]+
+                            (["External shared tape mesh is omitted; its game appearance cannot be reviewed here"]
+                             if any(s.get('texture_ref')=='tape,1' for s in skipped) else [])+
+                            (["Shawnna mouth-tape auxiliary mesh is omitted; primary texture is retained, runtime mouth effect unverified"]
+                             if any(s.get('texture_ref')=='A406,1' for s in skipped) else []))
 
 
 def make_glb(model, image, revision="original"):

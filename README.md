@@ -7,7 +7,7 @@ Fight for NY (Xbox)**. This is the authoring companion to
 - Browse and categorize a texture corpus; compare original, faithful HD and
   immutable restoration revisions with synchronized 25–400% atlas zoom.
 - Save flags, notes, regional instructions, approvals and revision requests.
-- Inspect forty-five supported main-outfit fighters on their original static meshes, with synchronized
+- Inspect 65 supported outfit previews covering 61 fighters on their original static meshes, with synchronized
   3D cameras, material isolation and private Blender GLB downloads.
 - Preserve protected pixels/alpha during assembly and export selected schema 1
   texture packs for later testing in the game.

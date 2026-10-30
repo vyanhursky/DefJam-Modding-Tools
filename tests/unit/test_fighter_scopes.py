@@ -8,6 +8,14 @@ def tri(group):return dict(group=group,positions=[[0,0,0],[1,0,0],[0,1,0]],uv=[[
 
 
 class FighterScopeTests(unittest.TestCase):
+    def test_two_texel_sampler_overscan_rasterizes_without_mutating_source(self):
+        import copy
+        g=dict(meshes=[tri('emc4_cloth')]);g['meshes'][0]['uv'][0]=[-1.1/64,0]
+        prior=copy.deepcopy(g)
+        self.assertTrue(scopes(g,64)[0][2,0]);self.assertEqual(g,prior)
+        g['meshes'][0]['uv'][0]=[-2.1/64,0]
+        with self.assertRaises(ValueError):scopes(g,64)
+
     def test_alpha_cloth_needs_explicit_rgb_optin(self):
         group='emc4_cloth_ALPHA_MatAlph';g=dict(meshes=[tri(group)])
         self.assertFalse(scopes(g,64)[0].any());self.assertTrue(scopes(g,64,[group])[0][2,2])
@@ -34,6 +42,25 @@ class FighterScopeTests(unittest.TestCase):
         self.assertTrue(scopes(g,64,editable_extra_groups=['others'])[0][2,2])
         with self.assertRaises(ValueError):scopes(g,64,editable_extra_groups=['hair'])
         with self.assertRaises(ValueError):scopes(dict(meshes=[tri('unknown')]),64,editable_extra_groups=['unknown'])
+
+    def test_named_hair_and_skin_alpha_are_explicit_and_other_alpha_holds_win(self):
+        hair='HairCentre1_1bitALPHA';g=dict(meshes=[tri(hair)])
+        self.assertFalse(scopes(g,64,editable_extra_groups=[hair])[0].any())
+        self.assertTrue(scopes(g,64,[hair],[hair])[0][2,2])
+        skin='emc2_skin_ALPHA_MatAlph';g=dict(meshes=[tri(skin)])
+        self.assertTrue(scopes(g,64,[skin])[0][2,2])
+        g['meshes'].append(tri('nospec_ALPHA_MatAlph'))
+        self.assertFalse(scopes(g,64,[skin])[0].any())
+        with self.assertRaises(ValueError):scopes(g,64,['nospec_ALPHA_MatAlph'])
+
+    def test_mixed_alpha_hair_region_cannot_unlock_eyelashes_or_other_material_holds(self):
+        group='nospec_ALPHA_MatAlph';g=dict(meshes=[tri(group)])
+        region=dict(group=group,source_box=[0,24,12,48],reason='Audited separate rear-hair UV island')
+        allowed=scopes(g,64,editable_alpha_regions=[region])[0]
+        self.assertTrue(allowed[30,3]);self.assertFalse(allowed[3,3])
+        g['meshes'].append(tri('emc1_eye'))
+        self.assertFalse(scopes(g,64,editable_alpha_regions=[region])[0].any())
+        with self.assertRaises(ValueError):scopes(g,64,editable_alpha_regions=[dict(region,group='emc1_eye')])
 
     def test_global_changes_cannot_hide_one_unrestored_logo_half(self):
         before=np.zeros((32,32,4),dtype='uint8');after=before.copy();after[:16,:,0]=200
