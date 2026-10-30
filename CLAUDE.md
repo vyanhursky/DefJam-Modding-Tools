@@ -91,7 +91,12 @@ missing decisions and preserve an active review session during changes.
   Owner approved19batch60 outfits; Prodigy other components accepted, MOBBDEEP
   back-neck header repaired in a new unapproved child. Preserve original care
   marks, hem label, accepted parent elsewhere and fullalpha exactly. Do not infer
-  approval of this child or injury drafts. Bonecrusher reminder remains NEXT pack.
+  approval of this child. On2026-10-30 owner visually approves all40 injury maps;
+  native/selection remain unchanged. Scope now every fighter-used texture: main/
+  outfit/Story states, injury maps, shared materials and created-player dependencies.
+  Count source IDs, not aliases; core213 is not an all-material grandtotal. Read
+  research/fighter-coverage-20261030/README.md before choosing more work.
+  Bonecrusher reminder remains NEXT pack.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed

@@ -2,7 +2,7 @@
 
 ## Current status
 
-**2026-10-30: forty injury textures imported for twenty fighters; Prodigy tag fixed.**
+**2026-10-30: forty injury maps visually approved; full fighter coverage audited.**
 Owner chose damage/injury variants after the compatible ordinary roster was
 exhausted and authorized needed closure/restarts. The existing writer remained
 available throughout; no restart or migration was needed. Live gallery/model
@@ -16,7 +16,7 @@ branch codex/hd-fighters-beta; source commits local until push requested.
 Adopted both br01/br02 for Blaze, Nyne, Trejo, Redman, Henry Rollins, Ludacris,
 Ice-T, Crow, Flava Flav, WC, Warren G, Freeway, Magic, Bonecrusher, Capone,
 N.O.R.E., Mack10, Scarface, Elephant Man and Bless:40 distinct supplemental IDs,
-not new fighters/costumes. All40 unapproved/unselected/not game verified.
+not new fighters/costumes. All40 owner-visually-approved; still unselected/not game verified.
 Fifty independent built-in ImageGen calls produced45raw studies and5output
 moderation failures. D-Mob02, Sticky02, SeanPaul01, Crack02 and Bubba02 remain
 held without retries/provider switch. Five successful siblings retained privately
@@ -77,6 +77,35 @@ Mack10/Scarface uncertain tattoo words still require references, not guessed tex
 Original approved five/public0.2 remain immutable. No new pack, manifest, install,
 runtime, saves/settings or frozen compatibility-snapshot changes.
 
+## Full coverage audit and current scope
+
+Owner requests every texture used by all fighters. Fixed gameplay/cinematic core:
+80 unique main/state atlases,65 drafted/15 remaining;133 unique fixed secondary
+maps,40 approved/93 remaining. Core213,105 drafts/108 without. Four additional
+created-player injury IDs make137 total br01/br02 corpus IDs; Carmen br03 aliases
+an existing ID. Existing Faithful HD baselines cover all corpus sources.
+
+Eight prior accepted batch20 review statuses reconciled with exact prior backups;
+latest main62 approved/3 pending corrected children (Warren, Starks, Prodigy).
+The40 injury approval receipts preserve exact IDs/hashes and untouched selection/
+native flags; unrelated reviews/views/requests/art retained. No restart/generation.
+
+Five concrete external sparkle/tape images have no restoration children; four
+spectexture inputs and shadow routes still need runtime identity resolution.
+Eye/dental/uncertain microdetails remain documented atlas regions. Created-player
+customization is a separate active4988-ID stream: dated snapshot462 candidate IDs,
+247 latest approved/215 pending. Do not overwrite concurrent work or infer full
+restoration from candidate presence; no exact all-dependency grandtotal yet.
+
+Cinematic53 fixed main IDs:50 shared with gameplay,40 covered,13 unrestored;
+3 cinematic-exclusive.271 archive records rehashed;40 supported retained mesh/UV
+counterparts match. Content-based loader should share overrides; native Story
+and injury-transition acceptance still needed. Prerecorded movies are separate.
+Full remaining15/source limitations and next steps:
+research/fighter-coverage-20261030/README.md. Private per-ID ledger/snapshots:
+experiments/fighter-completeness-20261030/. Approval record:
+research/damage-batch20-20261030/approval-20261030.md.
+
 ## Published baseline
 
 - HD Fighters0.2.0-beta.1: testing/prerelease, min game0.12.1. Only approved five:
@@ -93,6 +122,10 @@ runtime, saves/settings or frozen compatibility-snapshot changes.
   subsequent ten-fighter batch is included. No approved five bytes changed.
 
 ## Decisions
+
+-2026-10-30: owner visually approves all40 injury maps and sets scope to every
+  fighter-used texture, including Story aliases/states, shared materials and
+  created-player dependencies. Keep native/selection separate and count unique IDs.
 
 -2026-10-30: owner chooses damage/injury variants for the next batch after the
   roster audit found no twenty unused compatible ordinary outfits. Existing
@@ -115,8 +148,10 @@ runtime, saves/settings or frozen compatibility-snapshot changes.
   own state alpha/holds, exact clean exterior, generated mark exclusion outside
   support, registration/shape/hold validation. Full loopback tests passed after
   sandbox-only socket binding restriction; no remaining test failures.
-- Source checker, instruction mirror and diff checks required before source-only
-  commit. No game texture/model/review/raw art or built executable tracked.
+- Documentation-only coverage update:553 source files/0 policy failures; mirrored
+  instructions and staged whitespace checks pass. No implementation changed, so
+  prior117 tests/21subtests remain the code baseline; no redundant full rerun.
+  No game texture/model/review/raw art or built executable tracked.
 - Existing decoder2 source geometry/UVs/normals/material arrays unchanged. Legacy
   decoder1 caches still readable.65adopted model cache files retained.
 - Static preview omissions/approximation remain: external shared mouth tape for
@@ -140,7 +175,10 @@ runtime, saves/settings or frozen compatibility-snapshot changes.
    interpreting alpha as opacity. Notes/flags use existing durable gallery.
    Exact40IDs/PNGs/comparisons/labeled head diagnostics/prompts:
    /Users/vlad/Code/defjam-data/hd-work/texture-workshop/experiments/damage-batch20-20261030/review-index.md
-3. Canonical injury plan-v4.json / final-stages-v1.json / imports.json. All40pending.
+3. Coverage: research/fighter-coverage-20261030/README.md and private
+   experiments/fighter-completeness-20261030/. Next recommend native injury/Story
+   routing test before93 more fixed supplements; no new batch requested yet.
+   Canonical injury plan-v4.json / final-stages-v1.json / imports.json. All40 visually approved; selection/native flags unchanged.
    Five failed states + five unused sibling studies retained, no retry by default.
    Docs: docs/damage-restoration.md; source recipe research/damage-batch20-20261030/.
 4. Prodigy Latest restoration r-edd1c1c84d3e43f3 needs owner review; saved choice
