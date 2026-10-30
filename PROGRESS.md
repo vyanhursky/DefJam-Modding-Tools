@@ -2,6 +2,24 @@
 
 ## Current status
 
+**2026-10-30: next requested batch in roster audit; expansion choice pending.**
+Owner authorizes starting the next batch and any necessary closure/restart.
+Prepared private fighters-batch80-20261030/ with exact starting workshop/model
+API snapshots; no current approval inferred. Three independent read-only audits
+cover remaining roster/costumes, reusable recipe and strict decoder failures.
+Current 65-outfit / 61-fighter viewer stays available with one writer.
+Source corpus has 70 standard main A atlases including the created-player999
+fixture: 69 fixed identities, of which61 have drafts. Remaining six generation
+holds plus Shaniqua decoder failure and intentional-shadow Suspect cannot be
+counted as twenty compatible fresh fighters. Final audit finds no twenty fresh compatible outfits. Carmen401B/Cindy403B use
+the same wardrobe; cinematic D-Mob014D/Magic128B and Blaze113C add injuries. Crow
+variants fail strict normals. Separate pointer/count checks found no supported
+decoder interpretation fix; no normal synthesis/guard relaxation adopted.
+Asked owner whether to prioritize damage variants, unsupported models or venues;
+answer pending. Recommend injury continuity. Source audit: research/fighters-batch80-20261030/README.md.
+Private snapshots/reports preserve exact evidence. No new generation or import.
+
+
 **2026-10-30: viewer restarted; all 65 outfit previews live (61 distinct fighters).**
 Owner confirmed all notes saved and authorized restart. Old writer stopped before
 one replacement started at the same origin/profile; final stopped JSON backed up.
@@ -87,6 +105,10 @@ settings/save/frozen snapshot changes. Source commits local until push requested
 
 ## Decisions
 
+-2026-10-30: next batch authorized, including necessary restarts. No twenty fresh
+  compatible outfits remain. Ask for next asset scope; do not substitute injury
+  copies/new labels or retry prior generation holds. Viewer stays running.
+
 -2026-10-30: owner confirmed all browser notes saved; restart completed at the
   existing origin/profile with pre-stop and final-stopped backups. No migration.
 
@@ -129,21 +151,20 @@ settings/save/frozen snapshot changes. Source commits local until push requested
 ## Handoff
 
 1. Source checkout /private/tmp/defjam-tools-hd-fighters-20261026, branch
-   codex/hd-fighters-beta. Live writer PID88661 / exec45300, origin8768.
-   Check .local-handoff.md for latest status before action. Never two writers.
-2. Viewer http://127.0.0.1:8768/model-viewer now serves 65 outfits / 61 fighters.
-   Refresh and choose Latest restoration to review the new twenty. No forced
-   browser reload. Saved reviews, camera/view state and all 331 candidates retained.
-3. Exact new IDs/hashes: experiments/fighters-batch60-20261029/imports.json.
-   Canonical plan-final-v6.json/final-stages-v6.json; live-verification.json and
-   cutover-backup/ prove the cutover checks. Private review links:
-   /Users/vlad/Code/defjam-data/hd-work/texture-workshop/experiments/fighters-batch60-20261029/review-index.md
-4. Starks CITY/POLICE child r-aeba1996ca364784 already imported, pending review;
-   other 19 prior drafts approved. New 20 all pending. Mouth-tape omissions, damage
-   transitions and approximate hair/studio shading still need native checks.
-5. At NEXT HD Fighters pack preparation remind Vlad to playtest Bonecrusher and
-   read fighter-feedback-20261029/next-test-pack-checklist.json. Keep native false
-   until tested. Mack10/Scarface words need references; Warren latest P pending.
-6. No publication/install requested. Public0.2 immutable; source push only on
-   request. Private plans/images/notes and unrelated customization work retained.
-   Previous handoff archived in docs/worklog/2026-10-30-before-batch60-cutover.md.
+   codex/hd-fighters-beta. Live writer PID88661 / exec45300 at8768 unchanged.
+   Restart authorized if needed; preserve latest state and one writer regardless.
+2. Next requested batch has no new art yet: remaining-roster audit completed.
+   Owner question pending: injury variants vs unsupported models vs venues.
+   See research/fighters-batch80-20261030/README.md. Do not claim twenty generated.
+3. Private experiments/fighters-batch80-20261030/ contains exact starting workshop
+   and model API snapshots plus reports/roster-audit.md/.json, recipe-audit.md and
+   decode-limits.md. Prepared plans/raw/assembled folders are empty intentionally.
+4. Existing65 previews /61fighters still available. Batch60 exact IDs/hashes in
+   experiments/fighters-batch60-20261029/imports.json, final-v6 plans/stages and
+   live-verification.json. Latest20 and Starks CITY/POLICE child remain pending
+   owner review. No new approval inferred from permission to start another batch.
+5. Bonecrusher reminder at NEXT HD Fighters test pack preparation remains; read
+   fighter-feedback-20261029/next-test-pack-checklist.json. Native verified false.
+   Mack10/Scarface words need references; Warren latest P child pending.
+6. No release/install/push requested; public0.2 immutable. Source-only audit status
+   commit local. Previous state archived docs/worklog/2026-10-30-before-batch80.md.
