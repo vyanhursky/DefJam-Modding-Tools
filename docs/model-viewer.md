@@ -7,8 +7,9 @@ game archives, faithful corpus, reviews and candidate images are not modified
 by conversion. The viewer needs no running game or external service.
 
 Supported main-outfit fighters are **Trejo, Blaze, Nyne, Redman, Henry Rollins,
-D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack, Flava Flav, WC
-and Warren G**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
+D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack, Flava Flav, WC,
+Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone, N.O.R.E., Mack 10,
+Scarface, Elephant Man and Bless**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
 (`V2IP_131A`). Use `--fighter redman` or `--fighter rollins` when exporting them.
 Their original geometry, UV islands, normals and material partitions are used;
 this is not a generated replacement body. Textures can be compared in their
@@ -172,3 +173,12 @@ models exported and backend GLBs embed exact selected PNG RGBA. Atlas contact
 sheets were inspected; no additional browser visual pass was performed under
 the current browser URL policy. New drafts remain unapproved. See
 [batch recipe](../research/fighters-batch10-20261029/README.md).
+
+The second ten-fighter extension brings the supported total to25, using the same
+static decoder and persistent review workspace. Its named-feature checks include
+rotated and repeated numbers/crests, jewelry and headwear. Bonecrusher's alpha
+cloth group explicitly permits RGB restoration while retaining the full source
+alpha. N.O.R.E.'s flag tile has no UV coverage in this static decode; restored
+RGB is reviewable in the atlas, while game usage remains unproven. Offline RGB
+UV diagnostics ignore alpha and game lighting; they are not browser/game parity
+tests. See [second batch recipe](../research/fighters-batch20-20261029/README.md).

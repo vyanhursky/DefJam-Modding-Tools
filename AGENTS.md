@@ -52,6 +52,11 @@ missing decisions and preserve an active review session during changes.
   outside their masks exact. Name and check focal chest details individually.
   Broad source holds leave a logo/prop pending, not restored; tiny uncertain
   marks alone may stay held. See the focused prompt and source-specific recipe.
+  The owner subsequently approved the repaired Ludacris and Flava Flav children;
+  Warren's new both-fragment back-P child still requires review. A feature can
+  span distant UV islands: check every copy/fragment and assembled Front/Back,
+  not just one crop or global change counts. Ten additional drafts bring the
+  static model total to25. They remain unapproved and outside public0.2.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed
@@ -83,9 +88,10 @@ missing decisions and preserve an active review session during changes.
   deliberately with setup tests; do not maintain independent evolving copies.
 - New corpus builds fingerprint code and may produce a new recipe identity.
   Reading an existing corpus/workspace must not change it.
-- Model viewer decodes fifteen static main-outfit fighter meshes: the accepted
+- Model viewer decodes twenty-five static main-outfit fighter meshes: the accepted
   five plus D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack,
-  Flava Flav, WC and Warren G.
+  Flava Flav, WC, Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone,
+  N.O.R.E., Mack 10, Scarface, Elephant Man and Bless.
   Preserve source geometry/UVs/normals/material partitions; label lighting
   approximations and omitted effects. No rig, venue or game reimport claim.
 - Read-only independent investigations can be delegated while the main agent

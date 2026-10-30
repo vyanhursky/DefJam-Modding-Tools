@@ -50,6 +50,16 @@ PILOT = {
     'v2ip_110a.xsh': ('Flava Flav', 'Main', True),
     'v2ip_303a.xsh': ('WC', 'Main', True),
     'v2ip_306a.xsh': ('Warren G', 'Main', True),
+    'v2ip_301a.xsh': ('Freeway', 'Main', True),
+    'v2ip_128a.xsh': ('Magic', 'Main', True),
+    'v2ip_111a.xsh': ('Bonecrusher', 'Main', True),
+    'v2ip_107a.xsh': ('Bubba Sparxxx', 'Main', True),
+    'v2ip_105a.xsh': ('Capone', 'Main', True),
+    'v2ip_104a.xsh': ('N.O.R.E.', 'Main', True),
+    'v2ip_117a.xsh': ('Mack 10', 'Main', True),
+    'v2ip_116a.xsh': ('Scarface', 'Main', True),
+    'v2ip_127a.xsh': ('Elephant Man', 'Main', True),
+    'v2ip_101a.xsh': ('Bless', 'Main', True),
 }
 
 

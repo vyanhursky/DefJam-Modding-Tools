@@ -10,7 +10,8 @@ Input1: edit target, exact current accepted [revision/hash].
 Input2: original/Faithful source of the same region, layout/palette authority.
 Additional references: [specific detail and role, or none].
 Restore only [explicit coverage]. Required focal details: [each chest logo,
-script, pendant/clock, tattoo or prop, individually named]. Reconstruct visible
+script, pendant/clock, tattoo or prop, individually named; all repeated,
+rotated/mirrored copies and disconnected front/back UV fragments]. Reconstruct visible
 high-resolution feature detail; preserve design and placement, not pixel blur.
 Do not leave a named feature low-resolution because it contains lettering.
 Retain the original game's illustrated look,
@@ -48,6 +49,8 @@ Keep the source feature bounds, typography paths, relative positions, scale,
 hand angles/tick placements, muted palette and baked shading. Preserve design,
 not the old pixel blur. Do not redesign, move, widen, merge UV islands or guess
 new words/brands. Hold only [small undecipherable marks], not the whole feature.
+Treat every split UV fragment as required; restore them consistently so the
+assembled design has no half-old/half-new boundary. Keep their source geometry.
 All accepted surrounding material/face/skin stays locked during masked assembly.
 Return the same crop framing, without a render, comparison or labels.
 
@@ -56,6 +59,7 @@ fighter / outfit / source_id / original_sha256 / faithful_sha256
 parent_revision / parent_sha256 / geometry_sha256
 inputs with roles + hashes / exact submitted prompt / output or error
 named focal-feature inventory with source/crop bounds + final detail comparison;
+every disconnected/repeated/rotated fragment + assembled Front/Back inspection;
 required feature restored/pending/owner-accepted-held (with exact reason)
 per-region coverage: head, hair, headwear, torso, arms/tattoos, garments, shoes,
 jewelry, eyes/mouth; restored/held/missing/blocked/pending + reason

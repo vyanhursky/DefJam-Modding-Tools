@@ -34,6 +34,16 @@ FIGHTERS = {
     'flava-flav': ('Flava Flav', 'V2IP_110A', 'f58429a6b89a6a31ec5038dc852d3e7dc029585cc06a2c329f49955d46345cc7'),
     'wc': ('WC', 'V2IP_303A', '26048b0205f6f35bc6716bbc5dfb37fe6543ccdec70be2d59e80269f641ca41f'),
     'warren-g': ('Warren G', 'V2IP_306A', '2eb0820cba3e88633bca5012077c74e7c16781ee6484f8a6871772ba2b0b5c83'),
+    'freeway': ('Freeway', 'V2IP_301A', '0e3909a900505ab99904b464fe40d08496300b2c5cdd02251ddd2e6496a05b49'),
+    'magic': ('Magic', 'V2IP_128A', 'abf06932e051feaeeff4bc4e9c5122067f4829465e629bae3b4194f3c6914146'),
+    'bonecrusher': ('Bonecrusher', 'V2IP_111A', 'c0a248ffa6105d05980cee7e437f91567a3e4c6aaf9d1a420c053d2b80a489dd'),
+    'bubba-sparxxx': ('Bubba Sparxxx', 'V2IP_107A', '5a973af22d60c16de7e13ba911bf9a7e9dcd4e932803eeab918fef4bdd0d5f42'),
+    'capone': ('Capone', 'V2IP_105A', '8c8a131c7c9a0c4cb924aa3abdcb372f0ca1c5c872580c480f9a55a872f48d79'),
+    'nore': ('N.O.R.E.', 'V2IP_104A', '28798df3dc3cedd0e3ddd17c55340e2545fae47be1019303538a4415c25e25db'),
+    'mack-10': ('Mack 10', 'V2IP_117A', '4530b6dfa373113e81e35039755e9d061a9c8a75a5f72a853c9d590777c9a9b3'),
+    'scarface': ('Scarface', 'V2IP_116A', '31ff1fe0325562b59bccba33c4108d5ccdd6c27ccd32bc74fc46e8bc71a3741e'),
+    'elephant-man': ('Elephant Man', 'V2IP_127A', '9420e8b7ef3b7dc42c28b0a17d6370516d2042a41eb556855fb551cda4529eca'),
+    'bless': ('Bless', 'V2IP_101A', 'd24f625333ec870323ec5b5a185684c69bfcb7e32ba47641fb69e22352956707'),
 }
 
 

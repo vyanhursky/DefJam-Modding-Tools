@@ -6,8 +6,9 @@ hashes are pinned in research/hd-fighters-0-2-beta-20261029/selection.json;
 actual artwork, prompts, references and processor evidence remain private.
 HD Fighters0.2(beta) packages only this approved set. Native0.2 playtesting
 remains pending. The next ten main-outfit drafts are excluded from that release. The owner has
-now accepted seven complete models and all other components of Ludacris, Flava
-Flav and Warren G; three new chest-feature children remain unapproved.
+now accepted nine complete models, including the repaired Ludacris and Flava
+Flav children. Warren G's latest complete back-crest repair requires review.
+The second ten-fighter batch also remains unapproved and outside0.2.
 
 ## Prepare each fighter
 
@@ -53,6 +54,14 @@ must not become a guessed brand. Keep the rest of the accepted atlas exact.
 mask without an extra rectangular edge hold; alpha and parent pixels elsewhere
 stay exact. See research/chest-details-20261029/ for measured source-specific
 masks and the three focused repairs. Those coordinates are examples only.
+
+Warren's back crest also spans two distant atlas fragments. One repaired half
+does not close the feature. Inventory every fragment/copy, including back,
+rotated and mirrored islands; inspect final assembled Front AND Back views.
+Clip source triangles to UV and model-space bounds when identifying fragments.
+The RGB UV diagnostic helps inspect their junction but ignores alpha and game
+shaders. Keep actual source geometry unchanged. See the
+[split back-crest repair](../research/warren-back-logo-20261029/README.md).
 
 ## Generate and assemble
 
@@ -161,6 +170,18 @@ restores declared source holds and seam cores after that last pass. Per-material
 connected-component coverage flags omissions. The private per-fighter plan
 records inspected mouth/inscription/emblem holds. No head quadrant, anatomical
 plane, Rollins seam count or watch/glyph rectangle is a generic default.
+
+The [second batch recipe](../research/fighters-batch20-20261029/README.md) uses
+`fighter_scopes` and measures each named feature after ALL assembly holds and
+palette correction. A missing required feature fails even when overall coverage
+is high. A declared held feature is pending. This detects omission, not design
+authenticity; inspect the final crops as well. Repeated fragments need separate
+checks and assembled views. Alpha material names alone do not mean RGB must be
+held: an audited cloth group can opt in while alpha remains exact. An explicitly
+identified source RGB tile absent from ALL static UV coverage can be restored
+separately; this must never override a mapped held material or imply non-use in
+the game. Record the reason and limitations. Keep prompt history immutable when
+later inspection corrects a feature's shorthand description.
 
 Do not apply color_trial.correct with a newly restored protected head: that
 function requires protected parent pixels equal Faithful. Use reference-matched

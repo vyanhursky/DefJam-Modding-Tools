@@ -1,0 +1,523 @@
+{
+  "schema": 1,
+  "date": "2026-10-29",
+  "status": "unapproved review drafts; outside published0.2",
+  "fighters": [
+    {
+      "fighter": "Freeway",
+      "slug": "freeway",
+      "stem": "V2IP_301A",
+      "source_id": "0e3909a900505ab99904b464fe40d08496300b2c5cdd02251ddd2e6496a05b49",
+      "original_sha256": "558f805f550c266906a5f89aeb4d2e2d529da575a0e94989f565c3c10057061b",
+      "faithful_sha256": "a40bed5fa9447cfee1bddc4baa2ff61bf15d760db401c63ad00a1220a2ce17a2",
+      "geometry_sha256": "c0eeb2a903a74372c4ccd737cd0a12b027888352279f195c8e91a2f5abd07d25",
+      "raw_sha256": "ffa86126223c671311a155a7efc6660425ac23bd48de372d498171049a40c7b2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-2436393d909b4317",
+      "output_sha256": "dc1324a13c58186c992056d4498120085dc10da783934515c50e33c287d2a90a",
+      "changed_pixels": 3191762,
+      "source_seam_edges": 363,
+      "features": [
+        {
+          "name": "pendant emblem",
+          "source_box": [
+            432,
+            257,
+            512,
+            330
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.6341930650684932
+        },
+        {
+          "name": "coat collar and seams",
+          "source_box": [
+            0,
+            0,
+            254,
+            216
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8392707421988918
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Magic",
+      "slug": "magic",
+      "stem": "V2IP_128A",
+      "source_id": "abf06932e051feaeeff4bc4e9c5122067f4829465e629bae3b4194f3c6914146",
+      "original_sha256": "568e7c75edfc0140cb4dc65f2e400d425352e92b03c1244924a208480507525e",
+      "faithful_sha256": "66ba84f1236489f334b4f5c34066e16ad8194d8b1372025d2f51a4d780c1b554",
+      "geometry_sha256": "23ca26f327d818964ac43dddfe818a0072fd2a2660f07225d5864c280e984fbc",
+      "raw_sha256": "a1bab15ec45da080ddcb1059e998437f4b46048bd682a29b4fd40152da4a69f7",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-7a66be3f2ed74a7b",
+      "output_sha256": "e05e49c46f88d1bb12918d14ceb2ec3093a9deef9e0429d490b8a835ecc0ab8e",
+      "changed_pixels": 2996958,
+      "source_seam_edges": 639,
+      "features": [
+        {
+          "name": "arm tattoo left",
+          "source_box": [
+            256,
+            352,
+            378,
+            512
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8331935194672131
+        },
+        {
+          "name": "arm tattoo right",
+          "source_box": [
+            378,
+            352,
+            512,
+            512
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8111240671641791
+        },
+        {
+          "name": "chest medallion",
+          "source_box": [
+            105,
+            64,
+            148,
+            110
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.5695146612740142
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Bonecrusher",
+      "slug": "bonecrusher",
+      "stem": "V2IP_111A",
+      "source_id": "c0a248ffa6105d05980cee7e437f91567a3e4c6aaf9d1a420c053d2b80a489dd",
+      "original_sha256": "a0d3715dd8d6741759bf8046386881e09ae8e42eb08f506dc8fe6e9901b0282b",
+      "faithful_sha256": "c46a25d60ef308ec65f9f198567aa5b05a6e6630dd079ca63335a522fc6ebf04",
+      "geometry_sha256": "c9b73e0284fbedcf8c265c8d918f061da4b39ae4f6a3c429140e82b500292d92",
+      "raw_sha256": "01ceead03ee8a40c6fe141a07ed6aef0178d8a0a85a74bd0e804e5c063b933c8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-ea740e0041cb4e30",
+      "output_sha256": "62c6eddf970974824093841a68675dbced10ffcb47b4f428ba4d3b6f5e04a4ca",
+      "changed_pixels": 3132740,
+      "source_seam_edges": 440,
+      "features": [
+        {
+          "name": "denim shorts pockets and seams",
+          "source_box": [
+            0,
+            284,
+            256,
+            512
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7994534676535088
+        },
+        {
+          "name": "head hair",
+          "source_box": [
+            255,
+            0,
+            512,
+            212
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7870234839585933
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Bubba Sparxxx",
+      "slug": "bubba-sparxxx",
+      "stem": "V2IP_107A",
+      "source_id": "5a973af22d60c16de7e13ba911bf9a7e9dcd4e932803eeab918fef4bdd0d5f42",
+      "original_sha256": "33f8c1236953670ea135d8df420d9f4b63ae453fd41f76d125c5378843ce6e28",
+      "faithful_sha256": "ed67e6394a26a9a71318d9444fd6e87f13c4e01326049c1c10d40be88f69eb0f",
+      "geometry_sha256": "bd6b8a6843354923e57981e94085fb24162576963bdfc10c6a8da70a5fad87b7",
+      "raw_sha256": "7e349765a84acc56a72737bcd4654a758410e2a0669954cbcf21a558d9fec132",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-d799f10b0aac4e8d",
+      "output_sha256": "46d24f7999ddd77057f6128f3a7a9f00b6787bd056e91e385c70cab0c5b905c6",
+      "changed_pixels": 3152898,
+      "source_seam_edges": 444,
+      "features": [
+        {
+          "name": "vest hardware and camouflage",
+          "source_box": [
+            0,
+            0,
+            254,
+            320
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.735503813976378
+        },
+        {
+          "name": "tattoo symbol upper",
+          "source_box": [
+            295,
+            316,
+            407,
+            376
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.5776878720238096
+        },
+        {
+          "name": "tattoo symbol lower",
+          "source_box": [
+            295,
+            390,
+            407,
+            438
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7103445870535714
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Capone",
+      "slug": "capone",
+      "stem": "V2IP_105A",
+      "source_id": "8c8a131c7c9a0c4cb924aa3abdcb372f0ca1c5c872580c480f9a55a872f48d79",
+      "original_sha256": "7fab44c4bb9f92777dd00b5bddba6df4ef66456e62fd2396230023e7e24a55a0",
+      "faithful_sha256": "f2f769e8f15eb483ba5900d4abd38bc5c9b1f31bb59a9f8f27c41b3cc57e1c7c",
+      "geometry_sha256": "258ec92aa9b76d9efbadd8d2fb73f66ddb297f6edc04204c15d96a7ca04717f1",
+      "raw_sha256": "7ad0f2eb5b9cb88358e5b4515ba05b7356ca41a83d7040e7478c253ba0e2aaec",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-55a78390d3ca407b",
+      "output_sha256": "b26f2579497288df75fe035172e055acc35a4114be679da15f6e25f82401c7d8",
+      "changed_pixels": 3224890,
+      "source_seam_edges": 277,
+      "features": [
+        {
+          "name": "8952 chest numbers both copies",
+          "source_box": [
+            14,
+            42,
+            170,
+            103
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8711315153425809
+        },
+        {
+          "name": "inverted8952 garment copy",
+          "source_box": [
+            332,
+            376,
+            389,
+            420
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.9941686602870813
+        },
+        {
+          "name": "chain letter pendant",
+          "source_box": [
+            128,
+            316,
+            257,
+            409
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7748291239476536
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "N.O.R.E.",
+      "slug": "nore",
+      "stem": "V2IP_104A",
+      "source_id": "28798df3dc3cedd0e3ddd17c55340e2545fae47be1019303538a4415c25e25db",
+      "original_sha256": "a1bcd7698b1a394d1808930cce6b79f715c82d9e3ed78280706b05b79073f2d0",
+      "faithful_sha256": "323e401d98391b66ad887a4eb0df14f77244a37d4bb8db4fc5d2e62279720ff5",
+      "geometry_sha256": "45cc7f10b20c53c4b81d8c02682dab469b29e51d37b74ca69562b76aa7b6ff42",
+      "raw_sha256": "8de6f553f9b0da7d98b55d92c830aafcd15b49e3e9635b3ccf7cc6417d5fa2b8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-7150676d076a472a",
+      "output_sha256": "51ceef4039cf5c115d650a11a0c8d9d7dcfdc3057ebbe09595f8735ba08873d2",
+      "changed_pixels": 2846549,
+      "source_seam_edges": 194,
+      "features": [
+        {
+          "name": "flag sleeve patch",
+          "source_box": [
+            255,
+            470,
+            320,
+            512
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.9924679487179487
+        },
+        {
+          "name": "headwear camouflage",
+          "source_box": [
+            256,
+            0,
+            512,
+            65
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7495004507211539
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Mack 10",
+      "slug": "mack-10",
+      "stem": "V2IP_117A",
+      "source_id": "4530b6dfa373113e81e35039755e9d061a9c8a75a5f72a853c9d590777c9a9b3",
+      "original_sha256": "bc20a86024a411d1747345bbc49a7a3e611a5732c99e7b302ef2f7fa097f60cc",
+      "faithful_sha256": "1337a4d66d5df407d9b5add8f1a7101d8d7c9dcd7daaf8c097b0e8adb28ad7d0",
+      "geometry_sha256": "1dd200d1ccdf6a94f05030939610a95d4067c3360e62f5170649155ffa863865",
+      "raw_sha256": "db10193f1eec1bf6c897b6ca3561a0e162ca9ecb3d2efd9b1e25f71d3204f184",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-cd79ab965d6d443c",
+      "output_sha256": "757c1cdffe49245818792148540aa2d190af30b571498f08f1a2722255aec871",
+      "changed_pixels": 3151349,
+      "source_seam_edges": 272,
+      "features": [
+        {
+          "name": "W pendant",
+          "source_box": [
+            302,
+            212,
+            368,
+            258
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.47379364295125165
+        },
+        {
+          "name": "plaid shirt front",
+          "source_box": [
+            0,
+            0,
+            255,
+            171
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8116959064327486
+        },
+        {
+          "name": "plaid shirt back",
+          "source_box": [
+            298,
+            348,
+            512,
+            418
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.9201602136181576
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Scarface",
+      "slug": "scarface",
+      "stem": "V2IP_116A",
+      "source_id": "31ff1fe0325562b59bccba33c4108d5ccdd6c27ccd32bc74fc46e8bc71a3741e",
+      "original_sha256": "807cfc4c4adec00456d5d86f8209765d882698b589ce7c704b00972cf0227596",
+      "faithful_sha256": "f110447328d8a93e6a1170725b3335147da3083186dc96a8196826114deaa823",
+      "geometry_sha256": "965b8ca573a2d487400d41e87b706fb3be89df75af1eea0d989962893f0f2b7a",
+      "raw_sha256": "7d37f0bdd675a109c77c4ef720462923b80b8e479a47dbf31e636605dfb954ce",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-7b4aeb059e684898",
+      "output_sha256": "b054da8be60e9365287f810c456b9bf18353665bb48f69fc5ba2c47f985d0628",
+      "changed_pixels": 3061481,
+      "source_seam_edges": 309,
+      "features": [
+        {
+          "name": "cap P crest first",
+          "source_box": [
+            333,
+            150,
+            394,
+            218
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.905345949855352
+        },
+        {
+          "name": "cap P crest second",
+          "source_box": [
+            169,
+            229,
+            255,
+            310
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8120962532299741
+        },
+        {
+          "name": "gold cross",
+          "source_box": [
+            405,
+            253,
+            512,
+            362
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.6418910228929092
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Elephant Man",
+      "slug": "elephant-man",
+      "stem": "V2IP_127A",
+      "source_id": "9420e8b7ef3b7dc42c28b0a17d6370516d2042a41eb556855fb551cda4529eca",
+      "original_sha256": "f05bf059c6fa287f3dee6e9dd8fcaaa200e943431d9cc14cff0ecc6ff5ce030c",
+      "faithful_sha256": "f88b667dc6a9d46eed65baa56a84ff3de5d743aa28ebeed8cba16141d0d7b76a",
+      "geometry_sha256": "57b18af3de0e7cc454631622db39b5065ba7e6b912f1dc31a20ba669774c7d4e",
+      "raw_sha256": "b14d8f48d247ea069c19c99b16dcab26e1f98769cad830adb9e1aaf035b976ca",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-83ef708e60d1426b",
+      "output_sha256": "68ac87b8d1929d69d727b1993b2d1ed7e6abf17a5936a3f91884bca39241e905",
+      "changed_pixels": 3193415,
+      "source_seam_edges": 409,
+      "features": [
+        {
+          "name": "yellow hair tile",
+          "source_box": [
+            255,
+            0,
+            512,
+            100
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7744820038910506
+        },
+        {
+          "name": "red hair tile",
+          "source_box": [
+            455,
+            171,
+            512,
+            218
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.8180524449421426
+        },
+        {
+          "name": "rotated source jewelry lettering",
+          "source_box": [
+            312,
+            432,
+            366,
+            512
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.7122974537037037
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Bless",
+      "slug": "bless",
+      "stem": "V2IP_101A",
+      "source_id": "d24f625333ec870323ec5b5a185684c69bfcb7e32ba47641fb69e22352956707",
+      "original_sha256": "4340af355b98b8b3161dac64f1341f0a42c49ea8aacf08cf84c01e5a79a985cb",
+      "faithful_sha256": "76596ed4c27c7e970e9e4e90001c89cd3236328147f94cd6d8da1a133634872a",
+      "geometry_sha256": "b5e21a56fe68b28b43b31621a2e39eafd0aa6d5a93b572ceda4105cc5433ae8b",
+      "raw_sha256": "1ffb7070964d9ac35e3c1810e96ca375836ba888737bada71d8cd9972ba5e7f1",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "revision": "r-8080f4a836484d80",
+      "output_sha256": "d3b3c1823aca9a665edb064591bec63ef532ac458534d137441df1dc3d8191a2",
+      "changed_pixels": 3234728,
+      "source_seam_edges": 350,
+      "features": [
+        {
+          "name": "circular animal/fence chest crest",
+          "source_box": [
+            25,
+            167,
+            98,
+            247
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.9992829623287671
+        },
+        {
+          "name": "Bless buckle script",
+          "source_box": [
+            425,
+            311,
+            505,
+            351
+          ],
+          "status": "detail-present-needs-review",
+          "changed_fraction": 0.94587890625
+        }
+      ],
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    }
+  ]
+}
