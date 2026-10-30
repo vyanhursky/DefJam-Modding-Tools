@@ -2,8 +2,10 @@
 
 ## Current status
 
-**2026-10-29: Starks badge fixed; 20 more drafts imported (16 new fighters + 4 costumes).**
-Source 65 outfit catalogue validated; live writer still 45 pending saved-notes confirmation.
+**2026-10-30: viewer restarted; all 65 outfit previews live (61 distinct fighters).**
+Owner confirmed all notes saved and authorized restart. Old writer stopped before
+one replacement started at the same origin/profile; final stopped JSON backed up.
+All 20 new live PNGs and embedded GLB RGBA/revision identities verified exact.
 Owner approved the other 19 prior drafts, exact displayed IDs checked and reviews
 updated with optimistic versions/private backups. Starks's accepted components
 stay exact outside lettering. New child r-aeba1996ca364784, SHA256
@@ -58,7 +60,8 @@ All 282 pre-import candidates/files retained;
 All prior reviews/session/requests/cameras/choices exact;30 requests. One writer,
 same http://127.0.0.1:8768/model-viewer. No browser policy bypass/fresh browser visual
 test; source/final crops and CPU UV projections inspected, API images/offline GLB
-embedding checked separately. Do not claim live65GLB checks until cutover verified.
+embedding checked separately. Live catalogue and all 20 new GLB texture/revision
+checks passed after cutover; this does not establish browser/native visual parity.
 Private final plan-v6/stages-v6, exactprompts/raw/frozenprocessors/receipts/backups
 and independent reports live under experiments/fighters-batch60-20261029/.
 
@@ -83,6 +86,9 @@ settings/save/frozen snapshot changes. Source commits local until push requested
   subsequent ten-fighter batch is included. No approved five bytes changed.
 
 ## Decisions
+
+-2026-10-30: owner confirmed all browser notes saved; restart completed at the
+  existing origin/profile with pre-stop and final-stopped backups. No migration.
 
 -2026-10-29: owner approves19of previous 20; Starks CITY POLICE lettering only
   needs repair, keep other accepted parent pixels exact. New child needs review.
@@ -113,30 +119,31 @@ settings/save/frozen snapshot changes. Source commits local until push requested
   archive:docs/worklog/2026-10-29-before-batch60.md (ignored), exact private backups.
 - Source hygiene: 540 tracked text files, zero policy failures; mirror/diff checks pass. No art,
   models, reviews, raw/frozen private processors or generated game code in Git.
-- Latest pre-cutover verification: 331 candidates (additional unrelated art after
-  our import), all earlier reviews/session/requests/cameras exact. All 20 live PNG
-  hashes and offline GLB embedded RGBA/revision IDs exact; live Starks PNG/GLB exact.
-  New 20 remain unapproved/unselected/not game verified. Live model selector still
-  45 until saved-notes confirmation and same-origin cutover. No second writer.
+-2026-10-30 live cutover verification: 65 outfits / 61 fighters, 331 candidates
+  retained including unrelated work. Workshop bytes match final stopped backup;
+  model-view state exact. All 20 new live PNG hashes and GLB embedded RGBA/revision
+  IDs exact. Existing reviews/session/requests/views retained; all new 20 remain
+  unapproved/unselected/not game verified. Private live-verification.json and
+  cutover-backup/ record the evidence; no simultaneous writer.
 
 ## Handoff
 
 1. Source checkout /private/tmp/defjam-tools-hd-fighters-20261026, branch
-   codex/hd-fighters-beta. Current writer originallyPID59111/exec8401, origin8768.
-   Check .local-handoff.md for latest PID/status before action. Never two writers.
-2. Final 20imported, IDs/hashes/paths in experiments/fighters-batch60-20261029/imports.json.
-   Canonical selection plan-final-v6.json/final-stages-v6.json. Review links:
+   codex/hd-fighters-beta. Live writer PID88661 / exec45300, origin8768.
+   Check .local-handoff.md for latest status before action. Never two writers.
+2. Viewer http://127.0.0.1:8768/model-viewer now serves 65 outfits / 61 fighters.
+   Refresh and choose Latest restoration to review the new twenty. No forced
+   browser reload. Saved reviews, camera/view state and all 331 candidates retained.
+3. Exact new IDs/hashes: experiments/fighters-batch60-20261029/imports.json.
+   Canonical plan-final-v6.json/final-stages-v6.json; live-verification.json and
+   cutover-backup/ prove the cutover checks. Private review links:
    /Users/vlad/Code/defjam-data/hd-work/texture-workshop/experiments/fighters-batch60-20261029/review-index.md
-3. Saved-notes confirmation requested before restart, still pending unless later
-   cutover receipt says complete. Preserve exact current workshop/model-view bytes,
-   validate schema/corpus/candidate/model pins, stop only dedicated writer, restart
-   same8768/profile and verify65live PNG/GLB IDs/RGBA plus old reviews/views exact.
-   New source catalogue validated offline. Never bypass browser URL policy.
-4. Starks exact CITY/POLICE child r-aeba1996ca364784 is already imported. Review
-   Latest after saving notes; other 19approved. New 20allpending owner review.
-   Shared/unresolved mouth tape/damage/hair shader appearance needs native checks.
+4. Starks CITY/POLICE child r-aeba1996ca364784 already imported, pending review;
+   other 19 prior drafts approved. New 20 all pending. Mouth-tape omissions, damage
+   transitions and approximate hair/studio shading still need native checks.
 5. At NEXT HD Fighters pack preparation remind Vlad to playtest Bonecrusher and
-   read fighter-feedback-20261029/next-test-pack-checklist.json. Keep nativefalse
-   until tested. Mack10/Scarface words need references, Warren latestP pending.
-6. No publication/install requested. Public0.2 immutable, source push only on
+   read fighter-feedback-20261029/next-test-pack-checklist.json. Keep native false
+   until tested. Mack10/Scarface words need references; Warren latest P pending.
+6. No publication/install requested. Public0.2 immutable; source push only on
    request. Private plans/images/notes and unrelated customization work retained.
+   Previous handoff archived in docs/worklog/2026-10-30-before-batch60-cutover.md.

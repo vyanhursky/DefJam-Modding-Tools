@@ -120,3 +120,10 @@ saved with optimistic versions and exact prior backups. Starks remains pending.
 No pack/manifest/runtime/install/save/settings/frozen snapshot changes. Public0.2
 approved five immutable. Bonecrusher NEXT test-pack playtest reminder retained.
 Source commits local until owner requests push. No private artwork/models in Git.
+
+On 2026-10-30 the owner confirmed browser notes saved and authorized restart.
+The same-origin viewer now exposes 65 outfits across 61 fighters. Pre-stop and
+final-stopped JSON backups retained; workshop bytes and saved model-view state
+match the stopped snapshot. All 20 new live PNG hashes and GLB embedded RGBA and
+revision identities pass; all 331 current candidates retained. This verifies
+backend delivery and persistence, not browser/native visual parity.
