@@ -9,7 +9,9 @@ by conversion. The viewer needs no running game or external service.
 Supported main-outfit fighters are **Trejo, Blaze, Nyne, Redman, Henry Rollins,
 D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack, Flava Flav, WC,
 Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone, N.O.R.E., Mack 10,
-Scarface, Elephant Man and Bless**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
+Scarface, Elephant Man, Bless, Havoc, Fam-Lay, Slick Rick, Memphis Bleek, Comp,
+O.E., Jacob, Crazy Legs, Erick Sermon, Pockets, Starks, Trick, Skull, Solo, Chiang,
+Masa, Baxter, Rome, Snowman and Stingray**. Redman is internally Doc (`V2IP_109A`); Rollins is ROLINS
 (`V2IP_131A`). Use `--fighter redman` or `--fighter rollins` when exporting them.
 Their original geometry, UV islands, normals and material partitions are used;
 this is not a generated replacement body. Textures can be compared in their
@@ -182,3 +184,11 @@ alpha. N.O.R.E.'s flag tile has no UV coverage in this static decode; restored
 RGB is reviewable in the atlas, while game usage remains unproven. Offline RGB
 UV diagnostics ignore alpha and game lighting; they are not browser/game parity
 tests. See [second batch recipe](../research/fighters-batch20-20261029/README.md).
+
+The next twenty main outfits bring the total to45. All retained render meshes
+in this batch reference their own primary A### atlas; br01/br02 do not bind as
+static primary materials. Supplemental injury textures stay original and runtime
+damage-state switching remains unverified. A clean static preview cannot establish
+complete restoration through damage transitions; include that in native playtests.
+Original meshes/UVs and source alpha remain exact. See the
+[twenty-fighter recipe](../research/fighters-batch40-20261029/README.md).

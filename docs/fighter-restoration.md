@@ -180,7 +180,7 @@ Before calling a fighter complete, retain evidence for:
 The approved five now form the frozen private calibration reference. Their
 methods are examples, not reusable atlas coordinates. Whole-atlas generation
 suits mostly clothed fighters; Rollins required localized tattoo/material work.
-The owner's current new batch size is ten. Individual approval, uncertain marks
+The owner requested twenty more in the latest batch. Individual approval, uncertain marks
 and native playtesting remain review gates for every future release.
 
 For bulk assembly see research/fighters-batch10-20261029/assemble.py. It derives
@@ -198,11 +198,36 @@ palette correction. A missing required feature fails even when overall coverage
 is high. A declared held feature is pending. This detects omission, not design
 authenticity; inspect the final crops as well. Repeated fragments need separate
 checks and assembled views. Alpha material names alone do not mean RGB must be
-held: an audited cloth group can opt in while alpha remains exact. An explicitly
+held: an audited cloth or jewelry group can opt in while alpha remains exact. An explicitly
 identified source RGB tile absent from ALL static UV coverage can be restored
 separately; this must never override a mapped held material or imply non-use in
 the game. Record the reason and limitations. Keep prompt history immutable when
 later inspection corrects a feature's shorthand description.
+
+The [twenty-fighter recipe](../research/fighters-batch40-20261029/README.md)
+adds explicit audited jewelry RGB opt-ins and Comp's opaque `others` head/hair
+group. Other unknown and eye materials remain held. Source alpha stays exact.
+Verify the source role through actual UV coverage; the group name alone is not
+evidence. Named-feature padding can be restored via strictly zero-UV-covered
+runs, never by overriding mapped holds. Skull's lettering, Havoc's lace tile and
+Solo's tiny pendant exposed source-held unmapped remainders. Their padding was
+finished using existing raw detail. Static absence still does not prove game
+non-use. Preserve genuine skin seam guards even when small crown components
+show low change; unchanged plain black or collapsed UV pixels need interpretation.
+
+For parallel batches, assign disjoint private plans/raw files and keep one import/
+review/cutover owner. Persist each exact submitted prompt before generation and
+capture every result independently with `Promise.allSettled`, so one rejection
+does not lose another result. Keep failures and uncertain attribution honest.
+When fighter choice is delegated, a rejected input may be replaced by a distinct
+compatible fighter; do not claim a rejected enlargement is restored or silently
+switch providers. Preserve input/output hashes and original prompt wording when
+later inspection corrects a feature label or anatomical location.
+
+Inventory supplementary texture slots too. In this batch every retained static
+mesh binds its primary A### atlas; br01/br02 resemble injury alternatives and are
+outside clean-atlas restoration. Runtime triggers are unproven. Check damage
+transitions in the game for detail/palette breaks before considering them complete.
 
 Do not apply color_trial.correct with a newly restored protected head: that
 function requires protected parent pixels equal Faithful. Use reference-matched

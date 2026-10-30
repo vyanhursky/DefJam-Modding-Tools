@@ -1,16 +1,18 @@
 """Measured fighter material/UV scopes and named-feature omission checks.
 
-Explicit alpha-cloth RGB opt-in keeps source alpha separate. Other alpha/unknown
+Explicit alpha-cloth/jewelry RGB opt-in keeps source alpha separate. Other alpha/unknown
 materials remain held. All paired UV seam evidence is per original geometry.
 """
 from collections import defaultdict
 import numpy as np
 from PIL import Image,ImageDraw,ImageFilter
 
-def scopes(geometry, size, editable_alpha_groups=()):
+def scopes(geometry, size, editable_alpha_groups=(), editable_extra_groups=()):
     actual={m['group'] for m in geometry['meshes']}
-    if any(g not in actual or not g.startswith('emc4_cloth') for g in editable_alpha_groups):
-        raise ValueError('Only explicit existing cloth alpha groups may restore RGB')
+    if any(g not in actual or not g.startswith(('emc4_cloth','emc3_jewelry')) for g in editable_alpha_groups):
+        raise ValueError('Only explicit existing cloth/jewelry alpha groups may restore RGB')
+    if any(g not in actual or g!='others' for g in editable_extra_groups):
+        raise ValueError('Only the explicitly audited existing opaque others group may opt in')
     groups={}
     edges=defaultdict(list)
     for mesh in geometry['meshes']:
@@ -32,7 +34,7 @@ def scopes(geometry, size, editable_alpha_groups=()):
     allowed=Image.new('L',(size,size));held=Image.new('L',(size,size));masks={}
     for group,canvas in groups.items():
         masks[group]=np.asarray(canvas)>0
-        known=group.startswith(('emc2_skin','emc4_cloth','emc3_jewelry','nospec'))
+        known=group.startswith(('emc2_skin','emc4_cloth','emc3_jewelry','nospec')) or group in editable_extra_groups
         alpha='ALPHA' in group.upper() or 'MATALPH' in group.upper()
         target=allowed if known and (not alpha or group in editable_alpha_groups) else held
         target.paste(255,mask=canvas)

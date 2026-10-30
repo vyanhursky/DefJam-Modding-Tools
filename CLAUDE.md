@@ -57,6 +57,15 @@ missing decisions and preserve an active review session during changes.
   span distant UV islands: check every copy/fragment and assembled Front/Back,
   not just one crop or global change counts. Ten additional drafts bring the
   static model total to25. They remain unapproved and outside public0.2.
+  The owner then approved Freeway's repaired1972 child and Elephant Man's figurine
+  child, and requested twenty MORE, explicitly authorizing parallel subagents.
+  Forty-five static models are supported. New twenty stay unapproved/outside0.2.
+  Keep one live writer; delegate disjoint private art/QA tasks only. Record every
+  result independently. Keep rejected requests honest and choose other compatible
+  fighters when selection was delegated. Alpha jewelry RGB and an opaque others
+  group require exact audited opt-ins; keep full source alpha and other holds.
+  Supplemental injury atlases remain original; static preview cannot verify damage
+  transitions. Bonecrusher playtest reminder remains for NEXT test-pack preparation.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed
@@ -88,10 +97,12 @@ missing decisions and preserve an active review session during changes.
   deliberately with setup tests; do not maintain independent evolving copies.
 - New corpus builds fingerprint code and may produce a new recipe identity.
   Reading an existing corpus/workspace must not change it.
-- Model viewer decodes twenty-five static main-outfit fighter meshes: the accepted
+- Model viewer decodes forty-five static main-outfit fighter meshes: the accepted
   five plus D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack,
   Flava Flav, WC, Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone,
-  N.O.R.E., Mack 10, Scarface, Elephant Man and Bless.
+  N.O.R.E., Mack 10, Scarface, Elephant Man, Bless, Havoc, Fam-Lay, Slick Rick,
+  Memphis Bleek, Comp, O.E., Jacob, Crazy Legs, Erick Sermon, Pockets, Starks,
+  Trick, Skull, Solo, Chiang, Masa, Baxter, Rome, Snowman and Stingray.
   Preserve source geometry/UVs/normals/material partitions; label lighting
   approximations and omitted effects. No rig, venue or game reimport claim.
 - Read-only independent investigations can be delegated while the main agent

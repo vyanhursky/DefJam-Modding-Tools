@@ -19,6 +19,22 @@ class FighterScopeTests(unittest.TestCase):
         out=include_unmapped_features(allowed,{'eye':covered},[row]);self.assertTrue(out[18,18]);self.assertFalse(out[2,2])
         with self.assertRaises(ValueError):include_unmapped_features(allowed,{'eye':covered},[dict(row,source_box=[0,0,8,8])])
 
+    def test_jewelry_rgb_optin_still_holds_overlapping_eye_material(self):
+        group='emc3_jewelry_ALPHA_MatAlph';jewelry=tri(group)
+        eye=tri('emc1_eye_ALPHA');eye['uv']=[[0,0],[.25,0],[0,.25]]
+        g=dict(meshes=[jewelry,eye])
+        allowed=scopes(g,64,[group])[0]
+        self.assertFalse(allowed[2,2]);self.assertTrue(allowed[24,2])
+        self.assertFalse(scopes(g,64)[0].any())
+        with self.assertRaises(ValueError):scopes(g,64,['nospec_ALPHA'])
+
+    def test_audited_opaque_others_optin_does_not_enable_arbitrary_unknowns(self):
+        g=dict(meshes=[tri('others')])
+        self.assertFalse(scopes(g,64)[0].any())
+        self.assertTrue(scopes(g,64,editable_extra_groups=['others'])[0][2,2])
+        with self.assertRaises(ValueError):scopes(g,64,editable_extra_groups=['hair'])
+        with self.assertRaises(ValueError):scopes(dict(meshes=[tri('unknown')]),64,editable_extra_groups=['unknown'])
+
     def test_global_changes_cannot_hide_one_unrestored_logo_half(self):
         before=np.zeros((32,32,4),dtype='uint8');after=before.copy();after[:16,:,0]=200
         features=[dict(name='left half',source_box=[0,0,16,16]),dict(name='right half',source_box=[0,16,16,32])]

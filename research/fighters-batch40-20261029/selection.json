@@ -1,0 +1,531 @@
+{
+  "schema": 1,
+  "date": "2026-10-29",
+  "status": "Twenty unapproved clean main-atlas drafts; outside published0.2",
+  "fighters": [
+    {
+      "fighter": "Havoc",
+      "slug": "havoc",
+      "stem": "V2IP_118A",
+      "source_id": "43c403d1fb85ae45808b51ae4288d7f07f73501b4e2954e831a70cb1f9f62ada",
+      "revision": "r-6e8e9972acb041d1",
+      "original_sha256": "0b1c52b1a2436f20ac6b80e654b8920c1f4efb6cc8d4327f57755b8494ef7a09",
+      "faithful_sha256": "f6de6ecf6d45133defba32638d952f70076372c80911805fd2e88a9e9948a787",
+      "geometry_sha256": "7cbf3f3c1b79fc081487856d0db27f75709956fe88b35013a852c88f8725c68d",
+      "raw_sha256": "8898bbf2beaaee0f8e08d4047d3dbad880ace7d2c0968e786286d1d03aab8548",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "4a8b08f990dad898b89856c5448060e126d42e79c68a341740ded9ca8015a19e",
+      "changed_pixels": 3408385,
+      "source_seam_edges": 340,
+      "feature_count": 5,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 77,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Fam-Lay",
+      "slug": "fam-lay",
+      "stem": "V2IP_120A",
+      "source_id": "947f1d84cd0fa57f5126b1f01240591f2e0aa49a198d3f4dfc349a1641fef42f",
+      "revision": "r-aa038444d9cc4d68",
+      "original_sha256": "174251c34fd9610be629e217626bb2fda0ce885bae46c7ba93b1774502a946dd",
+      "faithful_sha256": "8f88993b190c5bd4eedc85608de4eeef495e1d0a8add4079ada97b3628ab5c69",
+      "geometry_sha256": "7665e55d68827ba65ac8d7487e40b812993fc00e932c8625ae2b544cf588c5c8",
+      "raw_sha256": "19217e801f24de07b7cfe357656d80e401f9d5c8340aa1ffd61c389f5c38a5b3",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "3255b964bf002846ea2e42be05b7cc9b439c595ff90c004d479f603f1090b1b2",
+      "changed_pixels": 3430163,
+      "source_seam_edges": 382,
+      "feature_count": 7,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Slick Rick",
+      "slug": "slick-rick",
+      "stem": "V2IP_130A",
+      "source_id": "a95a975591bad4fbcfbae8eb42f41915690d776d557f2f2704c732dca2eb1615",
+      "revision": "r-e6fc23b1495e4e82",
+      "original_sha256": "a24d484e0a863d051c53a693c5dfb3359f826f8022bb72aaab8b3cadd297a2fd",
+      "faithful_sha256": "595850223b628304f5af5473cee12dd7cf6cd733d09eff7c80f4f8f61d137fa7",
+      "geometry_sha256": "4e4282e06c5d4af6a993cc5fbeceab3c0e257d37cd3c9496b339c385429df22e",
+      "raw_sha256": "c483d92d8abea6037732e42a078b0f2f29cb5ea8e3254ee13f437b9850373ba8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "06024b3e9b4e20338a1cf33038c68bd79cb40e47115f6db0b5f48159a795639a",
+      "changed_pixels": 3415988,
+      "source_seam_edges": 268,
+      "feature_count": 6,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Memphis Bleek",
+      "slug": "memphis-bleek",
+      "stem": "V2IP_103A",
+      "source_id": "65cb1cc4a81fe427bb929837ca0e16dc1702e1fd0dbae698e6789272da0710d1",
+      "revision": "r-d395bd585dd94b9e",
+      "original_sha256": "39046c78308ff811626ecb735606fc768a5c7d439892fa0cee5adbcd0b6c1bbb",
+      "faithful_sha256": "8b7e85d8d6ef43fb5e10c8c9f2f1f8a1dde00ef329984f06261ac268cba11aa8",
+      "geometry_sha256": "daf26e6cc6eb185b5050792b6f0f6ed8025978d4b06c5605f3a3847ecac173c1",
+      "raw_sha256": "2fd9804053c9e15f1da8b87dc3a8a928e05ecc0139840d888177bb36e34e2dc4",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "38bcf27e4c0b90c4a2c0ebf8dbb123eda4d02c2a72e10e15b1869a3462a422c9",
+      "changed_pixels": 2890450,
+      "source_seam_edges": 414,
+      "feature_count": 6,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Comp",
+      "slug": "comp",
+      "stem": "V2IP_304A",
+      "source_id": "7a905ee4d0212c43ee603111d40ff26932c1e244e0d325a531dee9f93b00b77e",
+      "revision": "r-966116539aca4811",
+      "original_sha256": "b4dad5dd6a93fc6e796d92f3e1a759d84970452191f59ee9a14b0043c516bf8f",
+      "faithful_sha256": "a64d7c46f2edc76c67d1531b4d2006be7c031da250347534c1e1b2c258d71f7f",
+      "geometry_sha256": "4da247957134812182e71756591a697823149a0dc055e14502c23726b37a1ace",
+      "raw_sha256": "0ba949420cefb042255bf364d432115f763b85c8acf3a864f0522f07bf8339f8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "b947cb8cc442f8bae39f43a1262650e68b8c3cc648cbd75fd16aacbeb60c8ec7",
+      "changed_pixels": 3273196,
+      "source_seam_edges": 249,
+      "feature_count": 6,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [
+        "others"
+      ],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "O.E.",
+      "slug": "oe",
+      "stem": "V2IP_308A",
+      "source_id": "93a5512f8fcbbfcc417d352c07cde196c42039ec38e24847dcb650962e15bf3d",
+      "revision": "r-627594c32a384f5d",
+      "original_sha256": "49ef1c4f54832c5e37eb96698ea14048a043b1de40dfccbf594615d4a1b5ff1a",
+      "faithful_sha256": "bece166d105ae4499337f22cdf58025fc4cae00ab5b76ca72d7ccaf474dd9df4",
+      "geometry_sha256": "9aa276ead7af021f31fee3fea1fae4f94f16b38a33e3091c488bb02355bb892c",
+      "raw_sha256": "ba37fc55cc7ef971d23e243ac6c9078b3160f14b49327e4573439ca5fb7a8f76",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "c3075e3c51ad4bffc0ab9eada0f7dea1be3bda299a05d827a75c1ad3a31d27e4",
+      "changed_pixels": 3415429,
+      "source_seam_edges": 427,
+      "feature_count": 9,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Jacob",
+      "slug": "jacob",
+      "stem": "V2IP_129A",
+      "source_id": "c26a16a8374d050a8a091f1df8000a19df3775cfa73fbd4d21a885b3861873de",
+      "revision": "r-3ad4f1a94e69414f",
+      "original_sha256": "d053d33f3c4d1b0c671623b4726ed91b7dda595aee0ab44f72fbd92d8662dcc8",
+      "faithful_sha256": "cf639185ffc50082569e881050b5c7093a7e1d1e1a4bb9341bf77d40a4f3d25d",
+      "geometry_sha256": "32dc2958e2c92526c9dcfe846c49df3d31ce4eb733d635e8ea856c924ea011f3",
+      "raw_sha256": "726095fca54ffa30158e0c8ee00152f2f76d0beee4c2ed1f236172620eb0c7a8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "a37a2cc0227b702c31e9e731bd42032802c7f8c792c18b9a902003fe38093f50",
+      "changed_pixels": 3269871,
+      "source_seam_edges": 320,
+      "feature_count": 9,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Crazy Legs",
+      "slug": "crazy-legs",
+      "stem": "V2IP_121A",
+      "source_id": "75ff0e46b2f0558f74c5f5bf0eaa5bc56d926a8e2d9caf52082a611c837894fe",
+      "revision": "r-4a398ccfafbd4408",
+      "original_sha256": "af695243f72e4ef902dbfc92d92b54c868d1d3d8e0467860d8f234ec60240911",
+      "faithful_sha256": "7360db3a42cf57deeb978b3480aeffce21aaae98b3927fa72cc01d3ad2d76322",
+      "geometry_sha256": "f06da14907fd1d15e788d108269826ac94cc37e3f1a37ea0f454ef172d94021f",
+      "raw_sha256": "c6c1ceef82fb98c6637bed236129a6224b166d42260d90cbec40143ad766621d",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "9dd6d13af3503d3c710f169a6be642bbe4241b62ce9dcd5617b1ea6e8369e55c",
+      "changed_pixels": 3159317,
+      "source_seam_edges": 250,
+      "feature_count": 14,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Erick Sermon",
+      "slug": "erick-sermon",
+      "stem": "V2IP_102A",
+      "source_id": "54eec9f0ddb8a147d6a1474a9e6aa2f97df4bb3396f68485a92d497d5297f436",
+      "revision": "r-fae0cdcc06c34cfb",
+      "original_sha256": "32bd7d8264eebec1ab5a95766354f954306f146fecb1f9a8b93ce89a8c8833aa",
+      "faithful_sha256": "241b827b7c64ddf29a6a9d86136008c9254d262fc64b655dbef5c11a613cd4df",
+      "geometry_sha256": "f0f2e8fc5b142bbc48ca2e0734f84ee2e9a3d943778aaa84be9e8cdbed236964",
+      "raw_sha256": "6619c30453411392df8acebce918bf5c04716469c586097089cdd1e1ea984bc6",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "04ff5b220980c56682acde09d7e4d1a2e1499646454f7cbcef90834a5cccd901",
+      "changed_pixels": 3370417,
+      "source_seam_edges": 250,
+      "feature_count": 7,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Pockets",
+      "slug": "pockets",
+      "stem": "V2IP_001A",
+      "source_id": "61a41808040bafc000925d2404d1b55b28cd027ba012515e31fd93a3ad5d825d",
+      "revision": "r-1dabacc113f34da4",
+      "original_sha256": "f5ed4397b3845859e552e970cbf5e7def330a2c15202cccc2386e14ebfac3dde",
+      "faithful_sha256": "06bfebdc8115a765ba5a15aed140f81d99508fc536a270a9e149e7c78bd7e817",
+      "geometry_sha256": "50a4c70bb94b91b3bc0e5340421e51ca41c47ec7c866e9b04906b73a850618c6",
+      "raw_sha256": "54c7b065519a2a2a3152e63094a7815bdf48622f0fee3fb58112dda90941adc2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "006bb7d97a52b9c0f4bc067c23ea1502aa10e36e8fdc5d4c0f4a625616de01a7",
+      "changed_pixels": 3287552,
+      "source_seam_edges": 288,
+      "feature_count": 12,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Starks",
+      "slug": "starks",
+      "stem": "V2IP_203A",
+      "source_id": "936b7b65f2ecb08346302b6dcab16c3db1d48ab673bdae22d4efe128b937d50c",
+      "revision": "r-b2fb84012922429a",
+      "original_sha256": "a39d19af4f7834b2296ca3e44b2f1a8315ff07cec921b3851318192a243af0f6",
+      "faithful_sha256": "5adc56b4e4d22c728a9c62f444938eaa32761905c6536f8e8d066a753ad47776",
+      "geometry_sha256": "0426184b14d78e2e3190dc58b4093d2d3c3371cc76f5eb65907602cbd3cc7fbb",
+      "raw_sha256": "896812a18419d0d3dcf5affd74d229ce49c351938172c8c3714690fd57b0a595",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "c812089f0165d7348c01e02f496d5afb759ff1fd9858ef160af1107cb112754c",
+      "changed_pixels": 3177930,
+      "source_seam_edges": 248,
+      "feature_count": 13,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Trick",
+      "slug": "trick",
+      "stem": "V2IP_013A",
+      "source_id": "12c1fcf2ac0b8f6abdcbcc91676e068c12e7247ef53d76de3fa075b0f77b1c26",
+      "revision": "r-85323871493841fe",
+      "original_sha256": "f694b8c0aef198ac982e5e08af662625bda4b776c36e3cd7eae86576ad30b80e",
+      "faithful_sha256": "e010248ce162ad9e0a1bcba5b3151503c5e9b5383c0d2be2b9e08af9231c7c31",
+      "geometry_sha256": "435d27e567b26b7b466ac24fa85fbf85669105af1c8cc544eb46c9f0f86cdb85",
+      "raw_sha256": "744b87003c04e194211b82ea728b9c47c0b77d52af317625a356b1c475ae0296",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "9a029f0b18557043f98eeecc6188c0fbf2ca3da5395b7df0e5a2cdc13ef14b70",
+      "changed_pixels": 2979358,
+      "source_seam_edges": 208,
+      "feature_count": 13,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Skull",
+      "slug": "skull",
+      "stem": "V2IP_018A",
+      "source_id": "d8c60b8e0549510641a705daef5b7c4b904bad670db04d8862c640bf091e5ca2",
+      "revision": "r-614d53db596f45b0",
+      "original_sha256": "6c0c7ba36ee7c54e97089cc98ff6fa50e104a2e9b05ec1bf47bca4863d13aa0c",
+      "faithful_sha256": "2ca40282b1deb026770d19b8f7f020fb546ab112ae918cfcb0869432451d3db8",
+      "geometry_sha256": "9685cc6f8955d962d26a77646014e123c623d05842ce6626930cd5aea9319d21",
+      "raw_sha256": "8ec33db85daf79085dd88dab05e1f9147a4a43371877990cd7adb6d2518b1c11",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "dc2463c8790428afbb5e7325d268a6879d2e3e58a2938de51429160f923b948c",
+      "changed_pixels": 3145757,
+      "source_seam_edges": 515,
+      "feature_count": 16,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 34,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Solo",
+      "slug": "solo",
+      "stem": "V2IP_011A",
+      "source_id": "a7338171f0627969a8b73264682ff2294508c4eea7705beeffd0b921ed0fd5d1",
+      "revision": "r-841f12718d3549ff",
+      "original_sha256": "28145f26031c89b3ea09fe84b0f9f62bd1f6c2354c0ffa80da994b458b899804",
+      "faithful_sha256": "5403dc22e844e51888bfe13e5aaf3b269088027275f2e80125a96f4ed6ffdf37",
+      "geometry_sha256": "b9b9e77671effc3254c3d71375565de536fff2ee854e73934cb7214e5cf42f6b",
+      "raw_sha256": "d968fb274ae5e4eac9bd43d761ac2a41dbc5b2bfce57b42a7092a9d1ad94f464",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "6c61aa6f84237a0ff2cc393bcba5924e8a2bf96707025cd4c88817146ea9c8ae",
+      "changed_pixels": 2821766,
+      "source_seam_edges": 808,
+      "feature_count": 13,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 53,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Chiang",
+      "slug": "chiang",
+      "stem": "V2IP_006A",
+      "source_id": "f3460794f3fa9bf3b33f3722be4907845a80034946a533e98df9c4242b1d782e",
+      "revision": "r-629db34f0c8741da",
+      "original_sha256": "aac359965ce103d5a3b57de1e0202e5a031b6f11c466336ebdfd6212e3d76d2d",
+      "faithful_sha256": "195772cf38d237c4e12286b9642adf12cd900dd1bea4229725fc846da9a2daf7",
+      "geometry_sha256": "af6b9f3ef7c66836a9756d36ace166bbb5809ee2003a2434360922e3dfa94654",
+      "raw_sha256": "fa421ccce1114da47158407e21123b22008d69b31500f96ae44040a5baee2fc3",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "ba9b815a0d38d52ddf9e2576a695e1753a92190d821043c4da10b01daa1a35fa",
+      "changed_pixels": 3028267,
+      "source_seam_edges": 343,
+      "feature_count": 5,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Masa",
+      "slug": "masa",
+      "stem": "V2IP_005A",
+      "source_id": "cdfd7978607c31a38d4761390a57462e031c509aa5f04d2555f14e51817b97cd",
+      "revision": "r-bc83ee0f91224dbb",
+      "original_sha256": "0f753aa24e55b64ba15d8888271b336dc3e21d1572d5d52a457116c40c3fced1",
+      "faithful_sha256": "a1c56977076d6a88e7854b31b7f03e4e5f842e60e944804ef30f348282344cb0",
+      "geometry_sha256": "0bf1759471cad958da82173d1a1bf27a52849974c0511ce56d1d361fadf86801",
+      "raw_sha256": "9161889a92881a3fa492b42750ad3451950e51debee67ace05a03f26283fe9b9",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "2c884612d18ce03fd90b756a746d23bba743652b20fcdb586050c91b5bfa7bf6",
+      "changed_pixels": 3220087,
+      "source_seam_edges": 482,
+      "feature_count": 10,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Baxter",
+      "slug": "baxter",
+      "stem": "V2IP_015A",
+      "source_id": "fdaa8f07bf7596c66a5a73d5e6f6adc4289caebb2d99103185e1f123617e040e",
+      "revision": "r-dbb927a70a014520",
+      "original_sha256": "2c030ba396e7f7188a94a83a349618b2d70ca48fe77d76c133042b5f3d51fb07",
+      "faithful_sha256": "d1c780fbbab9397448ea2c48807af7b6382a2384ae99a6013041ea36c8f672e3",
+      "geometry_sha256": "0b9f242ff0fd4e6578fc8cf773e3b43820df23c94c17478aab11f4174c18f80f",
+      "raw_sha256": "3193466c6aa0f48c2126067dbc04b97366ce6d214c8340b27c4afca201ca94c2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "6837f529d0b30526e18ed6a3da32d0f5998fd042e0782c050e17089295ef6d57",
+      "changed_pixels": 3257701,
+      "source_seam_edges": 244,
+      "feature_count": 5,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Rome",
+      "slug": "rome",
+      "stem": "V2IP_010A",
+      "source_id": "cd4ff188371a50644224a4cba0f7ae310c1e8a561a4eae82d0f8b365226640a6",
+      "revision": "r-2608ca77abcd4efc",
+      "original_sha256": "7ceb9228af93b5707c6509b7f6c70d68ce884fb143c928c27f1a789f45269146",
+      "faithful_sha256": "2f8bcd1dbaa491e923d9c5a15942a95664148fb330e910468ab3994b30ab74cd",
+      "geometry_sha256": "36dd8a089959f936bf6eed6699390eda60a053597f190f2f7f4c706b5c2744a0",
+      "raw_sha256": "1b2316de6d381d4ec45fd524a3c638fbc0922ce7f92b4363c1da9245a8a580f3",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "884e4da5a8737452be9573ac1ad18c44c594944aba02110316dd5b1cfb5734af",
+      "changed_pixels": 3039281,
+      "source_seam_edges": 811,
+      "feature_count": 6,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Snowman",
+      "slug": "snowman",
+      "stem": "V2IP_002A",
+      "source_id": "dd29023eebaab22449199a521ec09d11071e7675f4e35dc25129726cc45366cb",
+      "revision": "r-79c1dbc961f347df",
+      "original_sha256": "7f95673d79a0e38bc41c017589f50d116fec7919f3c3b77c76b5b3ca056aa9ac",
+      "faithful_sha256": "d9579dc580f5ef8286590087748e1dd96f2409418ffd6b409a5ba85196e914a8",
+      "geometry_sha256": "0b92566936d92b428bca5a762cc33b1bd6203363d95679af1f719482db62027a",
+      "raw_sha256": "6aedb0a377ac07fbc39f40fa07b3bad67429e504285962d8547824c73fee1430",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "e2ba07d1fff9731be9fdc44265d30c1376fd3ece64efebddb00fc5e3952c2290",
+      "changed_pixels": 2934121,
+      "source_seam_edges": 276,
+      "feature_count": 7,
+      "editable_alpha_groups": [],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "fighter": "Stingray",
+      "slug": "stingray",
+      "stem": "V2IP_016A",
+      "source_id": "bbafd1c4bafcc37407973f5891815a3f12126d89e8ccc1fe73c936506af07e0a",
+      "revision": "r-8408d671dc9e4d24",
+      "original_sha256": "a5644b92f7ffac14648b9f148026f6b6759868ca8972251e4a040e7001f018da",
+      "faithful_sha256": "1e624dc5d24725054ad55d31babcfd123cecd6949737de298cdd6cd2b8cf55b9",
+      "geometry_sha256": "3bdd9e4dda1c81314383d7c61d979b0f19bccae14929f59319f4e8dd80e99c60",
+      "raw_sha256": "dc3b2a03cce41bd7f74c669663996c1543cb65c2b4541892dbb524ae160a511a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "output_sha256": "dbbf2b2122a6005eb093007fa9fc23d59e41d5c1d4f08c7250a915fd94b90fce",
+      "changed_pixels": 3015033,
+      "source_seam_edges": 269,
+      "feature_count": 6,
+      "editable_alpha_groups": [
+        "emc3_jewelry_ALPHA_MatAlph~DJIrradTextureEnvmap_Skin3"
+      ],
+      "editable_extra_groups": [],
+      "unmapped_padding_run_count": 0,
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    }
+  ]
+}
