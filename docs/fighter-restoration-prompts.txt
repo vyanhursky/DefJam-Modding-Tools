@@ -14,6 +14,11 @@ script, pendant/clock, tattoo or prop, individually named; all repeated,
 rotated/mirrored copies and disconnected front/back UV fragments]. Reconstruct visible
 high-resolution feature detail; preserve design and placement, not pixel blur.
 Do not leave a named feature low-resolution because it contains lettering.
+Existing readable marks that MUST survive: [cap digits, garment words, repeated
+copies and any other source-confirmed inscriptions]. Keep all digits/letters at
+their source scale, spacing and seam positions; do not erase them while adding
+fabric detail. Prop identity: [actual observed figurine/watch/emblem], separately
+from any neighboring lettered jewelry tile. Do not substitute a different prop.
 Retain the original game's illustrated look,
 with slightly more realistic skin/hair and clear fine material detail.
 Keep every UV island's shape, position, orientation and scale, the same framing,
@@ -64,6 +69,8 @@ required feature restored/pending/owner-accepted-held (with exact reason)
 per-region coverage: head, hair, headwear, torso, arms/tattoos, garments, shoes,
 jewelry, eyes/mouth; restored/held/missing/blocked/pending + reason
 known text + source / uncertain detail + owner decision
+source feature survives final assembly: legible marks/prop identity, not just
+changed pixels; matching photo/video evidence for any interpreted tattoo words
 actual edit masks / paired seam evidence / palette diagnostics
 processor hashes + parameters / output_sha256 / child revision
 displayed left/right IDs / visual acceptance / unresolved notes

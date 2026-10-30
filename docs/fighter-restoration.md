@@ -137,6 +137,27 @@ restoration; inspect any Older texture notice. Record the exact right revision
 and output hash with the feedback. Never infer approval of an unseen child from
 a comment about its parent.
 
+Compare the source's semantic features as well as sharpness: Freeway's cap digits
+were erased despite new cloth detail, and Elephant Man's figurine became jeweled
+letters. Inventory legible headwear inscriptions and the actual type of each prop.
+Keep every existing readable mark, including text split by a seam. Changed pixels
+do not prove that the original content survived. Do not let shorthand for another
+jewelry tile become the figurine's design instruction. For a reference-assisted
+repair, use the original tile as layout authority and photographs only for the
+specified sculptural/material detail; preserve the rest of the parent exactly.
+
+Unresolved tattoo wording requires evidence. Preserve the source's strokes, spacing
+and placement; a contour-preserving cleanup can make ink cleaner but cannot verify
+the intended words. Avoid adopting generated or OCR transcriptions as reference.
+Record the uncertainty and seek a matching period photo/video or higher-resolution
+version of the same art. Owner approval is needed for a proposed interpretation.
+
+Keep playtest reminders distinct from visual acceptance. On2026-10-29 the owner
+found Bonecrusher visually OK and requested a reminder when preparing the next
+HD Fighters test pack. The private revision review carries `playtest-next-pack`;
+include that reminder in the next pack's test instructions. Native verification
+stays false until the owner actually tests it.
+
 Compare Original/current/parent at25/50/100/200% in2D, then unlit model Front,
 Back, Face, Chest, Belt, Pants and Shoes; orbit both sides of the head and neck.
 Check skin continuity, restrained original cloth color, visible small islands,

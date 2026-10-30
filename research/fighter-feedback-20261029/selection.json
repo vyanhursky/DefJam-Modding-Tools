@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "date": "2026-10-29",
+  "status": "New children unapproved/unselected; no publication",
+  "revisions": [
+    {
+      "slug": "freeway",
+      "fighter": "Freeway",
+      "source_id": "0e3909a900505ab99904b464fe40d08496300b2c5cdd02251ddd2e6496a05b49",
+      "revision": "r-147f669c58b940a3",
+      "parent": "r-2436393d909b4317",
+      "sha256": "ee4caf285052abf161f783eda07522765b959396526c3632e7cb1ae22aa428bf",
+      "path": "candidates/0e3909a900505ab99904b464fe40d08496300b2c5cdd02251ddd2e6496a05b49/r-147f669c58b940a3.png",
+      "alpha_exact": true,
+      "outside_feature_exact": true,
+      "changed_pixels": 5085,
+      "original_sha256": "558f805f550c266906a5f89aeb4d2e2d529da575a0e94989f565c3c10057061b",
+      "geometry_sha256": "c0eeb2a903a74372c4ccd737cd0a12b027888352279f195c8e91a2f5abd07d25",
+      "regions": [
+        {
+          "name": "19 left of original seam",
+          "source_box": [
+            138,
+            269,
+            149,
+            283
+          ],
+          "safe_pixels": 2464,
+          "changed_pixels": 2438,
+          "changed_fraction": 0.989448051948052
+        },
+        {
+          "name": "72 right of original seam",
+          "source_box": [
+            152,
+            269,
+            164,
+            283
+          ],
+          "safe_pixels": 2688,
+          "changed_pixels": 2647,
+          "changed_fraction": 0.9847470238095238
+        }
+      ]
+    },
+    {
+      "slug": "elephant-man",
+      "fighter": "Elephant Man",
+      "source_id": "9420e8b7ef3b7dc42c28b0a17d6370516d2042a41eb556855fb551cda4529eca",
+      "revision": "r-c3a6e6f47f6c4cf8",
+      "parent": "r-83ef708e60d1426b",
+      "sha256": "02b35d36bbb6c2ee7e5b5420ccaae125576973ad0bd349648cd7b291e1ee8808",
+      "path": "candidates/9420e8b7ef3b7dc42c28b0a17d6370516d2042a41eb556855fb551cda4529eca/r-c3a6e6f47f6c4cf8.png",
+      "alpha_exact": true,
+      "outside_feature_exact": true,
+      "changed_pixels": 96400,
+      "original_sha256": "f05bf059c6fa287f3dee6e9dd8fcaaa200e943431d9cc14cff0ecc6ff5ce030c",
+      "geometry_sha256": "57b18af3de0e7cc454631622db39b5065ba7e6b912f1dc31a20ba669774c7d4e",
+      "regions": [
+        {
+          "name": "sculptural figurine and tile padding",
+          "source_box": [
+            0,
+            194,
+            100,
+            256
+          ],
+          "safe_pixels": 99200,
+          "changed_pixels": 96400,
+          "changed_fraction": 0.9717741935483871
+        }
+      ]
+    }
+  ],
+  "next_test_pack_reminder": {
+    "fighter": "Bonecrusher",
+    "revision": "r-ea740e0041cb4e30",
+    "state": "pending native playtest",
+    "trigger": "Next HD Fighters test-pack preparation"
+  },
+  "tattoo_lettering": {
+    "fighters": [
+      "Mack 10",
+      "Scarface"
+    ],
+    "decision": "Retain source stroke paths; no guessed words or new tattoo art. Unknown wording awaits evidence or explicit owner interpretation approval."
+  }
+}
