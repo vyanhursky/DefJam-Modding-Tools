@@ -2,6 +2,20 @@
 
 ## Current status
 
+**2026-10-31 — Tooling PR1 approved for merge.** Vlad requested merging the
+menu review/native registration/lossless PNG tooling into `main`. The reviewed
+source passed macOS, Windows and Linux CI (88 Python tests / 12 subtests), wheel
+and source-policy checks. HD Widescreen Menus 1.4.0 is now published on Cloudflare
+and signed catalogue revision 9; the unchanged released 0.12.1 helper passed a real
+network 1.3→1.4 update and rollback with exact installed/backup hashes and untouched
+isolated saves. Publication records are in game PR152; catalogue PR9 is merged.
+PR1 retains milestone v0.12.2. This merge introduces source and synthetic fixtures
+only; no live 8768 server restart, workspace migration or artwork modification.
+Earlier pending-upload/local-only statements below are historical and superseded.
+Continue authoring in the existing private workspace; the reusable procedures are
+[lossless PNG staging](docs/lossless-png.md) and
+[native registration](docs/menu-native-registration.md).
+
 **2026-10-30 — Combined menu pack native assembly.** Vlad approved the final four
 held corrections and requested the combined release, exact size before Cloudflare
 upload, and all necessary PRs. `menu_native` adds shared-master registration,
