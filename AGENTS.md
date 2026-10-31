@@ -107,6 +107,14 @@ missing decisions and preserve an active review session during changes.
   Live viewer76models;4additionalatlases2Donly,blockedmainsoriginalpreviewonly.
   Seven immutable main receipts have a malformed editable_hair_groups metadata
   field; actual pinned masks/plans/geometry/override define scope. Keep errata.
+  On2026-10-30/31 owner accepts conventional LOCAL upscaling/cleanup comparison
+  for14 remaining IDs. This authorizes own-source local model processing of the
+  3blocked mains and11injury maps; zero newImageGenrequests, no bypass/fragment
+  generation.14local drafts pending, original errors/studies retained. Keep model
+  weights/Torch env separate/private; own alpha/holds/skinseams exact, source
+  chroma/shading retained. Banner flag exactFaithful. All213fixedIDs have comparison
+  candidates, not automatic full-restoration/approval/native/pack completeness.
+  Combinedcompletiontag108; localtag14. Preserve prior1131 candidates/notes/views.
   Bonecrusher reminder remains NEXT pack.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.

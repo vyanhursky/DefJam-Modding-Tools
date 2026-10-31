@@ -1,5 +1,11 @@
 # Remaining fixed fighter texture restoration — 2026-10-30
 
+**2026-10-31 follow-up:** [local comparison pass](../fighters-local-restoration-20261030/README.md)
+adds14 unreviewed local candidates, with zero new ImageGen calls. All213 fixed-core
+IDs now have comparison candidates and the completion tag finds108 results.
+Earlier refusal/partial counts below are historical; they remain preserved.
+Candidate availability does not establish approval or full detail recovery.
+
 Owner scope: the 108 source IDs without restoration children in the audited fixed
 core: 15 main/state atlases and 93 secondary maps. New outputs require final owner
 review before HD Fighters 1.0 packaging. No new package, upload, manifest update,

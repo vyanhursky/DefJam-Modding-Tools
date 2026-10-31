@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "status": "local comparison drafts; owner review pending",
+  "imagegen_calls": 0,
+  "method": "local RealESRNet_x4plus FP32 + source-palette/alpha/hold assembly",
+  "checkpoint_sha256": "a820b9bde89a874d7599d545567308ce6c128fc8754a53208eda016d40aa81df",
+  "textures": [
+    {
+      "source_id": "1916eac6bcb3a1fcc183ba0be464bf385275543dcab889eb2ae7512809433d08",
+      "revision": "r-b724cf49c874477a",
+      "sha256": "55c823703d31ff103315388b62f7df8dbb1d2aa2a7d1019fe9a25392992bb7d0",
+      "kind": "main-state",
+      "label": "Carmen Electra State B \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b01045e0decbb534592cc6378412496742b00f2ae135e31b35763b3fbf793ef0",
+      "revision": "r-f1fdaf7e2cb14da7",
+      "sha256": "be1c2ae75fb8d8f79501b535bd688c153e5cb20921d3235a2b81679bf4e82be5",
+      "kind": "main-state",
+      "label": "David Banner \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "93a8060dcf706b6328f124a58073c335313ba022bbdc9047f7a1596bf95b6d25",
+      "revision": "r-649d83d8c1bd4f04",
+      "sha256": "bc9ae3fad48e811ba03adba8e81566117cf8a239244a04bcdacd96a6418c8a99",
+      "kind": "main-state",
+      "label": "Xzibit \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "d67be9b5b1c0f9673fbd8c975e03809037e1d4df7ca434ac17f62a6d355136ab",
+      "revision": "r-a9924059ee9a4bd4",
+      "sha256": "2c1f4628578db4a31017d9dfb09e78c894afe5df89e90e6b01220a9b0a14381e",
+      "kind": "injury-source",
+      "label": "Blaze injury state C \u00b7 br01 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e7488160472144aea7ae48062272c1e44eb17f7c0c5dd3f19724802889a41ce8",
+      "revision": "r-4780dad527244498",
+      "sha256": "1b525dbf01da4e5971edce39454e0be98e4e534c6dc7da6bc4a9e8b070af9f59",
+      "kind": "injury-source",
+      "label": "Blaze injury state C \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "de0bf389e1c320248c70d49a2546c76a50861a943d1d7ef607098c91ea54e58b",
+      "revision": "r-3a55a65a3c954e9d",
+      "sha256": "cfd629fc0072d88953f3354666d15f36dd1f1fa1b7b1339e2418a989ada471ca",
+      "kind": "injury-source",
+      "label": "D-Mob \u2014 Costume C \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "33c37f8d92a7e1e8e4f1ebf165241e18efdda37dfaf600c03f3dc4f1b7a7d307",
+      "revision": "r-2ac85844b63541a8",
+      "sha256": "c86865a5b49613bd02d5e1fe1c86f6c4d06f6f734b0be87d4b2869925cd9c9fb",
+      "kind": "injury-source",
+      "label": "David Banner \u00b7 br01 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5522f5217a8596a5b482d2e391d85b1972e9841e9fa7faef2fc0e57d34a874dd",
+      "revision": "r-191911d8dc724965",
+      "sha256": "44f1d28889ebc2c8a1b768ea273dc5d4082c89b511c8a3d4a5d21e835d4b6a78",
+      "kind": "injury-source",
+      "label": "David Banner \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "525094982717d874e7bfb4bccefd9b08f0c685b04f87e0c41a8c8f7a526b10da",
+      "revision": "r-7b68ed5fb4094347",
+      "sha256": "38ee1244273f78dd7b5fb470e17e94f1bdb36e78993eb11c3a2354aedc5d9ab2",
+      "kind": "injury-source",
+      "label": "Memphis Bleek \u00b7 br01 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "8ba669cf8b530255f9f046010354e2afc56910837109f7c9dfa9f9a0f35676c7",
+      "revision": "r-0d7f16c742af4b89",
+      "sha256": "b5f854c734d7a5f426c94b3ea779f525407700aa137bbd538e34d7c7f78d5891",
+      "kind": "injury-source",
+      "label": "Memphis Bleek \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "c3ccb012a59f8f6babf6262abdc67c2f4c131a71b470e03dbd6ceb1b6e469e42",
+      "revision": "r-de1f436365c24f16",
+      "sha256": "b8a49a185ace989b871d7a18bbd46dfa7ca7f3481d74b390cd8ef7c1d223b6bc",
+      "kind": "injury-source",
+      "label": "Sticky Fingaz \u2014 Costume B \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "197c467fc6d09cf6e2b439a109e88c164b5316aa7167dde77af618b9ed3dcf62",
+      "revision": "r-e3f783ae2753493c",
+      "sha256": "0f146b94abdc778af50c501cb964ddc26a61218faf87dcc05ddabb89269ab804",
+      "kind": "injury-source",
+      "label": "Sticky Fingaz \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b63c654567977f7681cdb629b092057c501e53f276e2d267ea20f894bb72c5bc",
+      "revision": "r-49eee0846a3540da",
+      "sha256": "acf6885fd0dd16ae21bbb25d82681067ef7bb13d2a15654e61096809f61742c3",
+      "kind": "injury-source",
+      "label": "Xzibit \u00b7 br01 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "9e59987296a335da0537e94d7553573c09194618feb9bd3bbd16d56d72d35a05",
+      "revision": "r-8625854511c04cfa",
+      "sha256": "f4603225c28d58a2e656e2d89bdd7533b38892f4e4cb06c38f5a691aa78b9f4d",
+      "kind": "injury-source",
+      "label": "Xzibit \u00b7 br02 \u00b7 Local RealESRNet \u00b7 source palette",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    }
+  ]
+}

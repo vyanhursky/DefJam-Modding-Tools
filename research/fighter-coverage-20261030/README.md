@@ -1,5 +1,11 @@
 # Fighter texture coverage — 2026-10-30
 
+**2026-10-31 follow-up:** [local comparison pass](../fighters-local-restoration-20261030/README.md)
+adds14 unreviewed local candidates, with zero new ImageGen calls. All213 fixed-core
+IDs now have comparison candidates and the completion tag finds108 results.
+Earlier refusal/partial counts below are historical; they remain preserved.
+Candidate availability does not establish approval or full detail recovery.
+
 Owner scope: every texture used by all game fighters, including main outfits,
 Story variants, supplemental injury states, shared materials and the created
 Story player. This is a deduplicated source inventory and work checklist;

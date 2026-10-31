@@ -2,6 +2,28 @@
 
 ## Current status
 
+**2026-10-31:14 local-upscale comparison drafts staged; final review pending.**
+Owner accepted local upscaling/manual cleanup as the comparison path for the
+10refusals+4partial studies. Own-source RealESRNet FP32/MPS run locally in an
+isolated venv, no newImageGenrequests/uploads.14new unapproved candidates (3main,
+11injury) cover those source IDs for comparison. Combined completiontag108;
+localtag fighters-local-restoration-20261030 finds14. All213fixedcore IDs now have
+comparison candidates, not confirmed recovery/approval/native completeness.
+Bannerflag and all ownalpha/holds exact; source chroma/shading/skinseams retained.
+Xzibit/Banner visibly smoother/lessdetailed than ImageGen peers; source mark edges/
+colorflecks remain. Independent pixel checks14pass.124tests+23subtests pass with PYTHONPATH=src
+(shared venv otherwise imports original checkout);562sourcefiles/0policyfailures.
+14livePNG and3GLBRGBA exact;1131priorcandidatefiles/metadata/reviews/session/views
+preserved through import. Recovery writer PID41733 / exec63770; same origin/profile/workspace, no migration.
+Temporary checkout cleanup removed457 older tracked files; shared Git history and
+private art/reviews intact. Persistent checkout restored only missing HEAD files.
+124tests rerun passed. Browser verified14results/25%/50%, Banner candidate, Xzibit
+Face local preview; intentional view/filter changes only, saved reviews unchanged.
+Private experiments/fighters-local-restoration-20261030/review-index.md is new
+entrypoint. Source report research/fighters-local-restoration-20261030/README.md.
+No release/push/approval. Original preceding pass below is historical evidence.
+
+
 **2026-10-30: completion108 pass staged for final review;14 sources incomplete.**
 Owner requested all108 missing fixed-core texture IDs, followed by final review
 and separate HD Fighters1.0 packaging approval.94 new restoration drafts are live:
@@ -143,25 +165,31 @@ immutable plans/masks/geometry/override pins remain scope authority, all pixels 
 Erratum retained in private index/source report; no receipt rewritten.
 Source checker555files/0policy failures; mirrored AGENTS/CLAUDE and staged
 whitespace checks pass for the local source-only commit. No artwork/model/reviewJSON/rawoutputs/captures tracked.
-Source checkout /private/tmp/defjam-tools-hd-fighters-20261026,
+Historical source checkout was /private/tmp/defjam-tools-hd-fighters-20261026;
+current persistent checkout /Users/vlad/Code/DefJam-Modding-Tools-hd-fighters,
 branch codex/hd-fighters-beta. Original tools checkout and recomp frozen snapshot
 untouched. Prior complete state/handoffs archived under ignored docs/worklog/.
 
 ## Handoff
 
-1. Read .local-handoff.md and AGENTS.md. One live writer PID24349 / exec58748,
- same local.json/8768 origin. Never start another workspace writer or reset notes.
-2. Final review: http://127.0.0.1:8768/ → Full texture library → clear otherfilters
- → search fighters-completion108-20261030 (94results). RGB comparison useful;
- sourcealpha is material data. Modelviewer /model-viewer has76options. New main
- finals use Latest restoration. Injury maps are2D source-bound maps, not whole
- main replacements; static br01/br02 render switching remains unimplemented.
-3. Exact finals/prompts/gaps: private
- /Users/vlad/Code/defjam-data/hd-work/texture-workshop/experiments/fighters-completion108-20261030/review-index.md
- New94 pending;10 rejected+4partial need owner disposition before claiming core
- complete. Preserve failures and do not silently retry through alternateproviders.
-4. Review earlier Warren/Starks/Prodigy correction children separately. Preserve
- all40 prior injury approvals and719 baseline candidate files/reviewmetadata.
-5. Before1.0, owner finalreview/pack approval, then native draw-identity/injury
- transition/Story/alpha/mip continuity acceptance. Remind Bonecrusher at NEXT
- testpack. No1.0 package, Cloudflare upload, manifests, install or push yet.
+1. Read .local-handoff.md and AGENTS.md. Persistent checkout is
+ /Users/vlad/Code/DefJam-Modding-Tools-hd-fighters, codex/hd-fighters-beta.
+ One live writer PID41733 / exec63770 at http://127.0.0.1:8768 with same local.json.
+ Preserve saved notes and writer lock; no second writer. Private source-recovery.json
+ and persistent-environment.json document recovery after temporary-file cleanup.
+2. Review local14: Full texture library, clear filters, search
+ fighters-local-restoration-20261030. Three mains are available as Latest restoration
+ in model viewer (76models); eleven injury maps remain2D source-bound.
+ New14 unapproved/unselected/nativefalse. Combined completion tag now108results.
+ All213fixedcore have comparison candidates, not proof of full detail recovery.
+3. Private entrypoint:
+ /Users/vlad/Code/defjam-data/hd-work/texture-workshop/experiments/fighters-local-restoration-20261030/review-index.md
+ Original108 generation records/errors/partial studies remain unchanged in the
+ preceding completion108 batch. No newImageGenrequests. Model checkpoint/env private.
+4. Review Warren/Starks/Prodigy corrected children separately. Preserve prior40
+ injury approvals and all1131 baseline candidate files/metadata/reviews. Current
+ UI saved only intentional XzibitFace/local and gallery local/Banner/RGB/50% choices.
+5. Before1.0 need owner finalreview/pack approval and native draw-identity/injury
+ transitions/Story/alpha/mip acceptance. Remind Bonecrusher at NEXT testpack.
+ Shared material/spec dependencies and separate created-player work remain outside
+ core213. No1.0 pack, Cloudflare upload, manifest change, install or push this turn.
