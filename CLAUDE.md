@@ -128,6 +128,10 @@ missing decisions and preserve an active review session during changes.
   No CAP/customization/portrait/menu/video completeness claim. Keep runtime/native
   flags honest and remind Bonecrusher at this pack. Exact218recipe hashes authority;
   bulk packageapproval receipt separate from historical per-candidate review flags.
+  Published1.0.0 stable via cataloguePR10/mergeab9dc9e, protectedrun41223718965,
+  signedrevision10. ZIP669255742B/221files/SHA1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f.
+  Released-key stable managedinstall verified; real game install untouched. Native
+  injury/Story/alpha/mips and Bonecrusher playtest still pending. Prior versions retained.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed

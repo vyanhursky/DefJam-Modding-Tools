@@ -1,5 +1,10 @@
 # Owner texture dispositions — 2026-10-31
 
+Final follow-up: owner explicitly approved Xzibit and HD Fighters1.0 publication.
+The [1.0 release](../hd-fighters-1-0-20261031/README.md) is published and verified.
+Draft/import-time statuses below and selection.json are historical receipts;
+the1.0 exact release selection is current packaging authority.
+
 Owner disliked detail loss in the local-neural trials. Explicit baseline choices
 supersede those nine local candidates for future packaging: Carmen B stays at its
 original native512 texture (no upscale), and seven injury maps use exact accepted

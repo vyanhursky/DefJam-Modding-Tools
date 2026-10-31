@@ -40,8 +40,23 @@ Immutable private evidence: <data>/scratch/hd-fighters-v1.0.0-published-20261031
 Private approval snapshots: texture-workshop/experiments/release10-approval-20261031.
 Artwork/checkpoints/reviews/captures/package bytes remain outside Git.
 
-Publication: R2 immutable upload/public-size/hash/range checks running. Catalogue
-PR and protected signed publication follow only after verified upload. Use normal
-bootstrap=false history verification and the existing protected environment.
-Do not mark published until signed index and a disposable stable-channel managed
-install with the released key have succeeded. Earlier0.1/0.2/menu records retained.
+## Published and verified
+
+- [Immutable Cloudflare download](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.0.0/1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f/hd-fighters-v1.0.0.zip).
+- [CataloguePR10](https://github.com/vyanhursky/DefJamFFNY-mods/pull/10), merged
+  ab9dc9ea39b9738b065ab05db8cd570475bc424a.
+- [Protected publication41223718965](https://github.com/vyanhursky/DefJamFFNY-mods/actions/runs/41223718965)
+  succeeded with bootstrap=false, normal gate approval and all protections retained.
+- Signed catalogue revision10; full public ZIP SHA/size and206range pass.
+- Fresh disposable managed install with released0.12.1 key verifies signature,
+  exact reviewed catalogue source, stable1.0 selection,221file hashes/218IDs.
+  FaithfulHD absent and testingversionsoff; synthetic settings/save sentinels exact.
+- Earlier0.1/0.2/menu versions retained. No active game install changed.
+- Builder/selection source commit6b00297;567sourcefiles/0policyfailures. Xzibit's
+  explicit owner approval reconciled in gallery; all other historical reviewflags
+  retained. Immutable releaseapproval/selection does not manufacture native checks.
+
+Install: Mods → Refresh catalogue → HD Fighters1.0.0 → Install/Update. Enable and
+load after optional FaithfulHD; restart game. No testingversions toggle required.
+**Playtest Bonecrusher with this pack.** Native injury/Story/alpha/mip acceptance
+remains pending and is separate from successful publication/installer verification.
