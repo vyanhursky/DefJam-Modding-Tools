@@ -1,0 +1,88 @@
+{
+  "tool": "built-in image_gen",
+  "new_calls": 9,
+  "historical_total": 127,
+  "calls": [
+    {
+      "key": "venue-wear",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY original venue-selection UI paper texture, Rich Original Detail restrained restoration.\nInput: supplied 256x256 RGBA is the EDIT TARGET and sole authority, including original square canvas and padding.\nPrimary request: The original tilted white photo-paper wear overlay. Preserve every mottled pale-gray scuff cluster and the rectangular inset line; keep the same opacity pattern and exact leaning outline. Do not add a photo or turn the worn overlay into clean blank paper.\nRestore only subtle low-resolution paper material detail. Keep original cool white/gray palette and broad light EXACT, no warming/yellowing, exposure lift, stronger contrast, new shadows or saturation. Preserve all original shape/geometry, alpha including partial coverage and distress holes, frame lines and source soft focus. Output genuine transparency, never black/white/checkerboard backdrop. Preserve the entire original canvas with exactly the same frame size, rotation, crop and position. No text, objects, badges, new cracks or decorative wear. Technical final assembly retains source alpha, edge paths, inset geometry and joins; proposal supplies fine paper brightness detail only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/asset-67f3756e5540-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    },
+    {
+      "key": "venue-frame",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY original venue-selection UI paper texture, Rich Original Detail restrained restoration.\nInput: supplied 256x256 RGBA is the EDIT TARGET and sole authority, including original square canvas and padding.\nPrimary request: The original tilted white photo frame with pale blue-gray empty inset, gray inner shadow and worn left rim. Preserve the empty pale inset, all original wear shapes, leaning outline and rounded lower corners. Do not add a photo or straighten the frame.\nRestore only subtle low-resolution paper material detail. Keep original cool white/gray palette and broad light EXACT, no warming/yellowing, exposure lift, stronger contrast, new shadows or saturation. Preserve all original shape/geometry, alpha including partial coverage and distress holes, frame lines and source soft focus. Output genuine transparency, never black/white/checkerboard backdrop. Preserve the entire original canvas with exactly the same frame size, rotation, crop and position. No text, objects, badges, new cracks or decorative wear. Technical final assembly retains source alpha, edge paths, inset geometry and joins; proposal supplies fine paper brightness detail only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/asset-c2599d14439c-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    },
+    {
+      "key": "venue-card3",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY source UI texture, Rich Original Detail restrained restoration.\nInput image is the EDIT TARGET, original 256x256 RGBA canvas.\nSubject: Original slightly tilted pale gray third photo-paper card, empty gray inset, dark inner rim, worn gray scuffs on left and bottom.\nRestore only subtle low-resolution material/ink surface detail. KEEP the exact source silhouette, all printed paths, original position/size/rotation and unused canvas. Do not center or enlarge the small icon within the canvas. Source RGB in alpha-zero areas may be green or black; these are hidden storage bytes, not an opaque background or new design element. Output genuine alpha with original partial coverage/holes and clear unused area, no checkerboard or opaque green/black replacement. Keep original cool white/gray colors, existing blur/lighting/contrast, no warm/yellow/exposure shift. Do not invent text, marks, extra cracks, holes or highlights. Final technical assembly retains original alpha and geometry and adopts only restrained interior fine brightness detail.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/asset-8b094269e171-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    },
+    {
+      "key": "support-shield",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY source UI texture, Rich Original Detail restrained restoration.\nInput image is the EDIT TARGET, original 256x256 RGBA canvas.\nSubject: Original small upper-left white distressed shield/crest emblem. Preserve its exact three-letter monogram strokes, clear holes and distressed ink edges. Its authored alpha maximum is212; keep its translucent ink.\nRestore only subtle low-resolution material/ink surface detail. KEEP the exact source silhouette, all printed paths, original position/size/rotation and unused canvas. Do not center or enlarge the small icon within the canvas. Source RGB in alpha-zero areas may be green or black; these are hidden storage bytes, not an opaque background or new design element. Output genuine alpha with original partial coverage/holes and clear unused area, no checkerboard or opaque green/black replacement. Keep original cool white/gray colors, existing blur/lighting/contrast, no warm/yellow/exposure shift. Do not invent text, marks, extra cracks, holes or highlights. Final technical assembly retains original alpha and geometry and adopts only restrained interior fine brightness detail.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/asset-e9ad5bba3390-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Rejected: invented dotted/halftone material; candidate stays FaithfulHD"
+    },
+    {
+      "key": "support-fist",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY source UI texture, Rich Original Detail restrained restoration.\nInput image is the EDIT TARGET, original 256x256 RGBA canvas.\nSubject: Original small upper-left white clenched fist icon. Preserve exact knuckles, thumb, black/clear grooves and distress, without adding fingers or changing the silhouette.\nRestore only subtle low-resolution material/ink surface detail. KEEP the exact source silhouette, all printed paths, original position/size/rotation and unused canvas. Do not center or enlarge the small icon within the canvas. Source RGB in alpha-zero areas may be green or black; these are hidden storage bytes, not an opaque background or new design element. Output genuine alpha with original partial coverage/holes and clear unused area, no checkerboard or opaque green/black replacement. Keep original cool white/gray colors, existing blur/lighting/contrast, no warm/yellow/exposure shift. Do not invent text, marks, extra cracks, holes or highlights. Final technical assembly retains original alpha and geometry and adopts only restrained interior fine brightness detail.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/asset-14c02269ec35-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Rejected: invented dotted/halftone material; candidate stays FaithfulHD"
+    },
+    {
+      "key": "start-short",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY red paper Press Start UI sticker, restrained Rich Original Detail restoration.\nInput is exact1024x512 RGBA EDIT TARGET. Preserve the whole2:1canvas and transparent margins; the sticker stays at precisely its supplied location/size. Only restore subtle red paper grain with original low-resolution scuff distribution. Text verbatim: \"Press START\". All original white glyph paths, kerning, black shadows and placement must stay EXACT, no retyping/redesign. Keep original deep cool red and pale scuff colors, original broad light/contrast, no warmer/yellower grading or exposure/saturation changes. Preserve torn edges, original softness and genuine alpha/clear space. Green RGB at alpha-zero edge texels is hidden source padding; do not turn it into visible paint. No new objects/text/texture beyond paper. Technical final assembly protects every source letter, alpha, tile seam and padding; only tiny interior red-paper brightness detail may be adopted. Do not zoom/crop/rotate or center the sticker differently.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/start-short-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    },
+    {
+      "key": "start-french-short",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY red paper Press Start UI sticker, restrained Rich Original Detail restoration.\nInput is exact1024x512 RGBA EDIT TARGET. Preserve the whole2:1canvas and transparent margins; the sticker stays at precisely its supplied location/size. Only restore subtle red paper grain with original low-resolution scuff distribution. Text verbatim: \"Appuie sur START\". All original white glyph paths, kerning, black shadows and placement must stay EXACT, no retyping/redesign. Keep original deep cool red and pale scuff colors, original broad light/contrast, no warmer/yellower grading or exposure/saturation changes. Preserve torn edges, original softness and genuine alpha/clear space. Green RGB at alpha-zero edge texels is hidden source padding; do not turn it into visible paint. No new objects/text/texture beyond paper. Technical final assembly protects every source letter, alpha, tile seam and padding; only tiny interior red-paper brightness detail may be adopted. Do not zoom/crop/rotate or center the sticker differently.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/start-french-short-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    },
+    {
+      "key": "start-button",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY red paper Press Start UI sticker, restrained Rich Original Detail restoration.\nInput is exact1024x512 RGBA EDIT TARGET. Preserve the whole2:1canvas and transparent margins; the sticker stays at precisely its supplied location/size. Only restore subtle red paper grain with original low-resolution scuff distribution. Text verbatim: \"Press START button\". All original white glyph paths, kerning, black shadows and placement must stay EXACT, no retyping/redesign. Keep original deep cool red and pale scuff colors, original broad light/contrast, no warmer/yellower grading or exposure/saturation changes. Preserve torn edges, original softness and genuine alpha/clear space. Green RGB at alpha-zero edge texels is hidden source padding; do not turn it into visible paint. No new objects/text/texture beyond paper. Technical final assembly protects every source letter, alpha, tile seam and padding; only tiny interior red-paper brightness detail may be adopted. Do not zoom/crop/rotate or center the sticker differently.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/start-button-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    },
+    {
+      "key": "start-french-long",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY red paper Press Start UI sticker, restrained Rich Original Detail restoration.\nInput is exact1024x512 RGBA EDIT TARGET. Preserve the whole2:1canvas and transparent margins; the sticker stays at precisely its supplied location/size. Only restore subtle red paper grain with original low-resolution scuff distribution. Text verbatim: \"Appuie sur la touche START\". All original white glyph paths, kerning, black shadows and placement must stay EXACT, no retyping/redesign. Keep original deep cool red and pale scuff colors, original broad light/contrast, no warmer/yellower grading or exposure/saturation changes. Preserve torn edges, original softness and genuine alpha/clear space. Green RGB at alpha-zero edge texels is hidden source padding; do not turn it into visible paint. No new objects/text/texture beyond paper. Technical final assembly protects every source letter, alpha, tile seam and padding; only tiny interior red-paper brightness detail may be adopted. Do not zoom/crop/rotate or center the sticker differently.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/start-french-long-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Bounded fine brightness only; source geometry/alpha/graphics authoritative"
+    }
+  ]
+}

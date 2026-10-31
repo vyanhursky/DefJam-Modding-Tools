@@ -1,0 +1,40 @@
+[
+  {
+    "path": "source/assemble.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/assemble.py",
+    "sha256": "7a085f7ab5735846202abc2d9f97b29d4bbf36bd3973fe51c1408ced6213a553"
+  },
+  {
+    "path": "source/update-review.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/menu-details-v1-20261020/update-review.py",
+    "sha256": "afa87b8069179de9fa77ddf9e2a23971074992a165936afc75c5ba423fe49142"
+  },
+  {
+    "path": "source/approve-phone.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/approve-phone.py",
+    "sha256": "cf57168afc979fe0d23337a265cd7bdb0c7e338c8f345c705015434e25a78d3c"
+  },
+  {
+    "path": "source/prepare-large-menu-batch.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-large-menu-batch.py",
+    "sha256": "528bbf5cea9be4583bc9f95a3ba0a6312b219c97c6562058d355f3c50fb574a9"
+  },
+  {
+    "path": "source/prepare-companion-and-sticker-inputs.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-companion-and-sticker-inputs.py",
+    "sha256": "97416c1605677780d8a1310ba3c97f2aaceda926b7933760ef291bec2ac274bc"
+  },
+  {
+    "path": "source/audit-venue-frame-20261020.py",
+    "source": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/audit-venue-frame-20261020.py",
+    "sha256": "dff1c0b29843f5bc11def11c2bd4c09015465730734c7b0e40e63088600f5052"
+  },
+  {
+    "path": "source/review.html",
+    "sha256": "565ba8be7e64cfa33c62b480c98b8f98d87fce7affb1d2eb8a73117ee77260ba"
+  },
+  {
+    "path": "source/workflow.md",
+    "sha256": "6ece6ac6d1aab988731400faafd78600cd5e791e5b4126723633ffce5ed65268"
+  }
+]

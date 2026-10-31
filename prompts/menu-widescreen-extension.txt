@@ -1,0 +1,86 @@
+Use case: precise-object-edit
+Asset type: widescreen scenery layer for an existing game menu.
+Primary request: extend or repair the supplied final assembled background in place, preserving its original composition and palette.
+
+Input images:
+1. EDIT TARGET: the exact final composite/crop, including the real protected original and the retained generated scenery.
+2. GUIDE ONLY: same-sized annotation identifying the protected region and permitted edit area. Do not render guide marks.
+3. REFERENCE ONLY: wider unannotated composite for the trajectory and scale of large features.
+
+Geometry (fill with coordinates from the supplied edit target; use half-open pixel intervals):
+Canvas: {width} x {height}. Protected original: {protected_rectangle}.
+Edit only: {allowed_rectangle_or_mask}. Join line: x={local_join_x}.
+Protected side of this join: {left_or_right}. Retained outer context: {outer_context_rectangle}.
+The left extension's RIGHT edge meets the original's left edge. The right extension's LEFT edge meets the original's right edge.
+Return the full target canvas at the same crop, scale, registration and horizon. No crop, zoom, shift or aspect change.
+
+Continuity:
+Treat the real original and retained outer scenery as fixed boundary conditions.
+Continue EACH existing bright cloud ridge, dark channel and luminous cloud mass across the join at its current height, direction/tangent, curvature, thickness, softness and opacity. Carry those same shapes through the editable band into the outer context; do not replace them with a generally similar cloud field.
+For other materials, replace the cloud clause with concrete features to continue: roof/horizon lines, masonry courses, poster edges, grain direction or large light/shadow shapes. Preserve scale, perspective and ordering.
+No vertical cutoff, restarted pattern, duplicate/mirrored feature, bent horizon, ghosting, new bright area or uniform blur stripe. Both the inner and outer edges of the edit must join naturally.
+
+Color and preservation:
+Restrained cleanup only. Match the already accepted local source palette, broad lighting, contrast and softness. No warming, yellow/orange cast, new bloom or contrast boost.
+The original region is immutable context, not an invitation to redraw it. Keep unedited context, existing objects, lettering/branding, black padding and alpha behavior unchanged. Do not add objects or text.
+
+Assembly and review (operator instructions, not an image-tool pixel-lock guarantee):
+Use actual pixels from the FINAL composite as edit context. A source-only reference can be redrawn by the model and cease to match after the true center is copied back.
+Reject crop/aspect or landmark registration drift. A full-canvas resolution change may be normalized uniformly only when aspect and fixed landmarks agree; record raw/target dimensions and the transform. Never silently resize or stretch a repair crop.
+Composite only the permitted region and restore all protected pixels exactly. If needed, match residual boundary values/gradients on the generated side after the cloud structures align; blending alone cannot repair incompatible shapes.
+Inspect the FINAL assembled image at both edges of every repair band, at native and coarse scales with original bounds hidden. Trace the same features across each join. Check every supported aspect crop and require an unchanged 4:3 center.
+Retain exact prompts, references, guides/masks, raw outputs, coordinate transforms, assembly recipe and hashes. Prompt compliance and small edge differences alone do not establish visual continuity.
+
+Full-height coverage: the repair region and review crops must include EVERY
+visible cloud band down through the horizon haze, then into stable padding.
+Do not stop at an arbitrary upper-sky rectangle. Check upper, middle and lower
+join regions separately, and inspect the whole height; a passing upper-sky
+edge metric can hide a lower seam. Preserve an owner-accepted opposite join.
+
+Full-height material targets (Options/Jukebox follow-up):
+Use fully active target canvases. Exclude unused stored texture padding from
+widescreen generation targets, retaining it separately for source-shaped output.
+A prompt to leave padding unchanged is insufficient if the model fills it and
+rescales active scenery. Reject that output rather than stretching it to fit.
+Prefer separate left/right full-height targets with real fixed source context,
+then a narrow bridge with BOTH real original and retained outer material shown.
+Trace mortar/slat lines and match local grain softness across both edges. A
+pixel-exact inner boundary or automated blur choice is not proof of continuity.
+Do not use reflected/clamped source strips that create mirrored motifs/streaks.
+Inspect the final assembly at full height and every ratio, label residual art
+issues honestly, and preserve rejected attempts with their exact prompts.
+
+Masonry-row correction learned from Jukebox:
+If the existing added wall has the wrong row count/heights, do not keep showing
+that faulty field as structural context. Blank ONLY the editable added side,
+retain the actual original edge, and supply a separate guide of the original
+mortar-bed trajectories and approximate course count/heights. Continue each
+partial brick from the source through the added side. Regenerate the whole
+permitted side if necessary, then restore source exactly and inspect the actual
+assembled rows before residual color/grain matching. Fixed center equality does
+not mean the brick grid aligns. Preserve an owner-accepted opposite extension.
+Architecture completion learned from Options:
+Provide the game's complete doorway as a REFERENCE ONLY: finish one normal-width
+door with a right jamb,threshold and surrounding masonry. Specify what not to
+copy (other menu's poster,emblem,lamp or illumination). The actual target source
+controls registration,palette and protected content. Do not continue a shutter
+indefinitely across the entire wide extension.
+
+Door reference fidelity after Options v2 rejection:
+A complete rectangle alone is not enough. Extract reference frame proportions
+and panel material;place the reference at NATURAL SCALE into the editable layout
+before generation. Specify left/right jamb coordinates,width/height ratio and
+wall field beyond the right jamb. A verbal approximate right-jamb request can
+still yield an excessively wide garage shutter. Preserve dense rib spacing,
+large worn/stained paint patterns and source-soft surface. Avoid generic clean
+large panels and invented long silver/orange rails. Complete existing original
+hardware locally. Once width/material are right,repair only the narrow join
+against ACTUAL original and retained outer art;keep accepted opposite scenery.
+
+When only optical softness remains:
+Specify blur-only,exact geometry/texture registration and no repaint/global grade.
+Keep real source context and ease effect onset solely in generated pixels. If
+model output reinterprets liked material,use it as a softness reference and
+project the requested filter onto existing pixels instead of adopting repaint.
+Retain reference/raw plus exact radius/resolution/mask/ramp recipe;inspect joins
+and all aspect crops. This is a texture effect,not runtime depth-of-field support.

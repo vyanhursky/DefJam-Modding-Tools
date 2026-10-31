@@ -1,0 +1,26 @@
+# Three in-flight proposals retained without adoption
+Owner changed scope: do not continue routine panel/button generations. Historical total147; no final assembly or approval.
+
+clothing
+transparent_background: true
+reference: clothing-edit-input.png
+reference_sha256: 82b12c18840c130038c68e61ed88ba6e01f74a119c37f57e5467ee68e8e146d0
+raw: clothing-raw-paused.png
+raw_sha256: c58bdf0bc772f7cdfef66a693d8c9aa60b43423ccd1ed79001b2ad23e3c3a47d
+Restrained archival restoration of this exact Def Jam Fight for NY menu paper texture. Preserve exact canvas, source palette and neutral cream/gray colors; no warmer/yellower tone, exposure or contrast grade. Keep the exact paper outline, partial transparency, folds, stains, edge damage, printed dark bands and all colored headers or graphics. Clean pixelation with only delicate paper fiber detail; no new text, icons, folds, dots, holes, borders or redesign. The source is authoritative. Every internal tile join (near source x256 and y256 where present) must stay continuous in color, material, focus and illumination, through its full length. Transparent margins stay transparent, never a black matte. Keep original alignment and proportions. Red header must remain the same muted red.
+
+barber
+transparent_background: true
+reference: barber-edit-input.png
+reference_sha256: de4e87baa2bf96083d62a690e59fb51f618a0e23ac2d1d425730149db04eb642
+raw: barber-raw-paused.png
+raw_sha256: 408b456469ab79953d033873eb40a6fed1d6d18c0f446cebfa8dcf203d3a6a9b
+Restrained archival restoration of this exact Def Jam Fight for NY menu paper texture. Preserve exact canvas, source palette and neutral cream/gray colors; no warmer/yellower tone, exposure or contrast grade. Keep the exact paper outline, partial transparency, folds, stains, edge damage, printed dark bands and all colored headers or graphics. Clean pixelation with only delicate paper fiber detail; no new text, icons, folds, dots, holes, borders or redesign. The source is authoritative. Every internal tile join (near source x256 and y256 where present) must stay continuous in color, material, focus and illumination, through its full length. Transparent margins stay transparent, never a black matte. Keep original alignment and proportions. Blue header must remain the same blue.
+
+jeweller
+transparent_background: true
+reference: jeweller-edit-input.png
+reference_sha256: d181e5b5e251afe29bc410f0e3c332dd7aa5e78fda1520a4bb91ea054aaa2e86
+raw: jeweller-raw-paused.png
+raw_sha256: ff8f11f37e21b8abc7e0a9300e38accf2a9dc0ae0e6cf13e8de0773622b0892b
+Restrained archival restoration of this exact Def Jam Fight for NY menu paper texture. Preserve exact canvas, source palette and neutral cream/gray colors; no warmer/yellower tone, exposure or contrast grade. Keep the exact paper outline, partial transparency, folds, stains, edge damage, printed dark bands and all colored headers or graphics. Clean pixelation with only delicate paper fiber detail; no new text, icons, folds, dots, holes, borders or redesign. The source is authoritative. Every internal tile join (near source x256 and y256 where present) must stay continuous in color, material, focus and illumination, through its full length. Transparent margins stay transparent, never a black matte. Keep original alignment and proportions. Purple header must remain the same purple.

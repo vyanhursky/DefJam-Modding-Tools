@@ -1,0 +1,41 @@
+[
+  {
+    "path": "source/assemble.py",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/assemble.py",
+    "sha256": "bc541692c215e7207328ddd0c14780978ff8d039455c218c18f11ccee90b92d3"
+  },
+  {
+    "path": "source/update-review.py",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/update-review.py",
+    "sha256": "de8a6c593d7b1ab6e2adee0c5cf9f427c8e5c325b79c21ec6da8ba6000c1e1a9"
+  },
+  {
+    "path": "source/workflow.md",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/extras-v1-20261020/workflow.md",
+    "sha256": "a76d2aed71de0b70ebbd623125acab92c7c66a2b3f0dbab17d9da2136c14d4c0"
+  },
+  {
+    "path": "source/audit-extras.py",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/audit-extras.py",
+    "sha256": "1c73fe0ac8a03b7c0f99146620dcd51ff741f3688de029e9fb0614c1577ec770"
+  },
+  {
+    "path": "source/prepare-extras.py",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/prepare-extras.py",
+    "sha256": "70a40ec1669dc6c2d289981a0104ae9ce97c5f53fb0056fa83f7547eef9bc443"
+  },
+  {
+    "path": "source/probe-transition.py",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/probe-transition.py",
+    "sha256": "76c7ff18b0af9acd9c854ecc01dec069002ad932864474b92139f410e3aef98b"
+  },
+  {
+    "path": "source/probe-transition-pan.py",
+    "original": "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261020/probe-transition-pan.py",
+    "sha256": "39eaca9aa2f272fe0eb8bdbb256ca98b3884bf7d772e3e91ef0c8f640e500c7f"
+  },
+  {
+    "path": "source/review.html",
+    "sha256": "724d8ec0d38fb10eaa5d506833d736ab1bddd93f52f9127121e8868ab3395ed1"
+  }
+]

@@ -1,0 +1,463 @@
+{
+  "schema": 1,
+  "status": "unapproved source mapping; not runtime placement acceptance",
+  "groups": [
+    {
+      "key": "choosGF2",
+      "label": "Story \u00b7 girlfriend selection \u00b7 brick shield wall",
+      "parts": [
+        {
+          "id": "ba60f610a2911adafc27adaa9555c092751ac272c0ffbe2f65fb14ec7454af3d",
+          "crop": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            512.0,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            512.0,
+            480.0
+          ]
+        },
+        {
+          "id": "bfb532b238b18aa0f3fe26cd486f4246756e2f24cdde428c7c9e929fbcda931b",
+          "crop": [
+            0,
+            0,
+            128,
+            480
+          ],
+          "xy": [
+            512,
+            0,
+            640,
+            480
+          ],
+          "uv_exact": [
+            0.03125,
+            0.0,
+            128.0,
+            480.0
+          ],
+          "geometry_exact": [
+            512.03125,
+            0.0,
+            640.0,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "key": "choosGF4",
+      "label": "Story \u00b7 girlfriend selection \u00b7 alternate wall",
+      "parts": [
+        {
+          "id": "7d0ce1a845a682f0a59b787a9cc5d90b1e83955036b60edb160d1acb930840fd",
+          "crop": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "xy": [
+            128,
+            0,
+            640,
+            480
+          ],
+          "uv_exact": [
+            0.046875,
+            0.0,
+            512.0,
+            480.0
+          ],
+          "geometry_exact": [
+            128.046875,
+            0.0,
+            640.0,
+            480.0
+          ]
+        },
+        {
+          "id": "42290375eda4db531edda2434ab77796cffbdff6a8e487e2504095ef8814d271",
+          "crop": [
+            0,
+            0,
+            128,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            128,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            128.046875,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            128.046875,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "key": "choosPart",
+      "label": "Story \u00b7 partner selection \u00b7 paper wall",
+      "parts": [
+        {
+          "id": "85a965889ad5c66d51d2c6d5d23b8f4162c8366d7232a9202407848a41e06ab9",
+          "crop": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            512.03125,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            512.03125,
+            480.0
+          ]
+        },
+        {
+          "id": "f924c4842d081a7d37d4112e64c7ce634380d8a2b4c3f172c0087942920a2aee",
+          "crop": [
+            0,
+            0,
+            128,
+            480
+          ],
+          "xy": [
+            512,
+            0,
+            640,
+            480
+          ],
+          "uv_exact": [
+            0.03125,
+            0.0,
+            128.0,
+            480.0
+          ],
+          "geometry_exact": [
+            512.03125,
+            0.0,
+            640.0,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "key": "charDec",
+      "label": "Story \u00b7 character details \u00b7 desktop",
+      "parts": [
+        {
+          "id": "e2cdef62ca33d5a1d862fab5bf352014cd309f48543968eaca81db7a264ea5a2",
+          "crop": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            512.03125,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            512.03125,
+            480.0
+          ]
+        },
+        {
+          "id": "4e14616005475a5f6ef45e94be97372ac82b202b9cd9a33b2f2c057db47952a4",
+          "crop": [
+            0,
+            0,
+            128,
+            480
+          ],
+          "xy": [
+            512,
+            0,
+            640,
+            480
+          ],
+          "uv_exact": [
+            0.03125,
+            0.0,
+            128.0,
+            480.0
+          ],
+          "geometry_exact": [
+            512.03125,
+            0.0,
+            640.0,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "key": "cribOptions",
+      "label": "Crib Options \u00b7 paper wall",
+      "parts": [
+        {
+          "id": "1c2de449c28536a5491ef5828f81d171544917f2238a18c8a1474ea8685edbae",
+          "crop": [
+            0,
+            0,
+            171,
+            487
+          ],
+          "xy": [
+            0,
+            0,
+            171,
+            487
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            171.0,
+            487.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            171.0,
+            487.0
+          ]
+        },
+        {
+          "id": "54845d31b4d5e066855854800aeea697144c022dfa6d27082ed6256488d46ddc",
+          "crop": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            512.031982421875,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            512.031982421875,
+            480.0
+          ]
+        },
+        {
+          "id": "0fbf5fd04abb0da6f5f3bf480edd362f68642c43551127b7f49a48e1ce425ea8",
+          "crop": [
+            0,
+            0,
+            59,
+            480
+          ],
+          "xy": [
+            512,
+            0,
+            571,
+            480
+          ],
+          "uv_exact": [
+            0.031982421875,
+            0.0,
+            59.0,
+            480.0
+          ],
+          "geometry_exact": [
+            512.031982421875,
+            0.0,
+            571.0,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left"
+      ]
+    },
+    {
+      "key": "matchLoa",
+      "label": "Pre-fight \u00b7 match loading plate",
+      "parts": [
+        {
+          "id": "7a5d6ce31c47aec8fdd9bbe11c9561a7d8cb833ded7058ab05cb229fad76d185",
+          "crop": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            640.0,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            640.0,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "key": "tips",
+      "label": "Pre-fight \u00b7 tips wall",
+      "parts": [
+        {
+          "id": "a021919997cc9a50b377c257f6afed472242e7281e3f9ba8ca691525bba8ea77",
+          "crop": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "xy": [
+            0,
+            0,
+            512,
+            480
+          ],
+          "uv_exact": [
+            0.0,
+            0.0,
+            512.03125,
+            480.0
+          ],
+          "geometry_exact": [
+            0.0,
+            0.0,
+            512.03125,
+            480.0
+          ]
+        },
+        {
+          "id": "cc76ce61906858b8da3d522063f4a8d2e3cce1de51d7375a4db519f110676afb",
+          "crop": [
+            0,
+            0,
+            128,
+            480
+          ],
+          "xy": [
+            512,
+            0,
+            640,
+            480
+          ],
+          "uv_exact": [
+            0.03125,
+            0.0,
+            128.0,
+            480.0
+          ],
+          "geometry_exact": [
+            512.03125,
+            0.0,
+            640.0,
+            480.0
+          ]
+        }
+      ],
+      "sides": [
+        "left",
+        "right"
+      ]
+    }
+  ],
+  "composition_notes": {
+    "crib_door_source_id": "1c2de449c28536a5491ef5828f81d171544917f2238a18c8a1474ea8685edbae",
+    "door_x": 469.3999938964844,
+    "door_layer": "under paper wall/tail",
+    "right_extension": "already approved options-softness-v4/options-wide-v4.png",
+    "crib_composite_center_exact": true,
+    "loading_overlay_source_id": "11b71080a3890bb179763083899791bd5ad7537e73a4f9d6f79a3c18979fae91",
+    "loading_overlay_policy": "proposed native stretch; review-only preview; runtime route/alpha/mask checks pending",
+    "runtime_installed": false
+  }
+}

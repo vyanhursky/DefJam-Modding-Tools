@@ -1,0 +1,144 @@
+{
+  "tool": "built-in image_gen",
+  "new_calls": 15,
+  "historical_total": 142,
+  "calls": [
+    {
+      "key": "platform-card",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY original shared popup/UI paper texture, Rich Original Detail restrained restoration.\nInput128x128 RGBA is the sole EDIT TARGET. Small worn cream paper memory-card diagram: preserve exact black outline, arrow, double rectangular diagram and original fibers.\nRestore subtle paper material detail only; keep original cream/gray colors exactly, no extra warmth/yellow, whitebalance/exposure/contrast/saturation change. Preserve exact printed paths, glyphs, scuffs, outlines, shadows, paper size/position, all source alpha/partial opacity, clear holes and full square canvas padding. Do not enlarge/recenter/rotate/crop the paper. Source green/red RGB in clear texels is hidden storage, not visible background; request true alpha, no opaque black/green or checker backdrop. No new letters, logos, cracks, objects or guessed detail. Final technical assembly protects source graphics/alpha/shape/padding and adopts tiny interior paper brightness detail only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/asset-b1cdc4d1ce95-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "platform-cube",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY original shared popup/UI paper texture, Rich Original Detail restrained restoration.\nInput128x128 RGBA is the sole EDIT TARGET. Small worn cream Nintendo GameCube memory-card label: preserve exact Nintendo GAMECUBE black wordmark, graphic outline and every fold.\nRestore subtle paper material detail only; keep original cream/gray colors exactly, no extra warmth/yellow, whitebalance/exposure/contrast/saturation change. Preserve exact printed paths, glyphs, scuffs, outlines, shadows, paper size/position, all source alpha/partial opacity, clear holes and full square canvas padding. Do not enlarge/recenter/rotate/crop the paper. Source green/red RGB in clear texels is hidden storage, not visible background; request true alpha, no opaque black/green or checker backdrop. No new letters, logos, cracks, objects or guessed detail. Final technical assembly protects source graphics/alpha/shape/padding and adopts tiny interior paper brightness detail only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/asset-acf9559da275-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "platform-paper",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY original shared popup/UI paper texture, Rich Original Detail restrained restoration.\nInput128x128 RGBA is the sole EDIT TARGET. Small horizontal folded pale paper card with original faint black scuffs at top right; preserve those fine scratch marks, folds and torn silhouette.\nRestore subtle paper material detail only; keep original cream/gray colors exactly, no extra warmth/yellow, whitebalance/exposure/contrast/saturation change. Preserve exact printed paths, glyphs, scuffs, outlines, shadows, paper size/position, all source alpha/partial opacity, clear holes and full square canvas padding. Do not enlarge/recenter/rotate/crop the paper. Source green/red RGB in clear texels is hidden storage, not visible background; request true alpha, no opaque black/green or checker backdrop. No new letters, logos, cracks, objects or guessed detail. Final technical assembly protects source graphics/alpha/shape/padding and adopts tiny interior paper brightness detail only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/asset-efdbaec32b07-source.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "profile-wall",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY User ID menu background, restrained Rich Original Detail restoration.\nThe supplied640x480image is the sole EDIT TARGET. Preserve exact framing, brown/olive/gray brick colors, mortar courses, all scratches, paper sheet/header and pale painted shield emblem. Restore only subtle low-resolution brick/paper material detail. Every paper edge/crease and shield stroke stays exactly in place. Original wall is fairly textured with diffuse game-art focus: do not sharpen one region disproportionately. No warming/yellowing, exposure lift, saturation/contrast change, new lighting, new objects/text, redesigned shield or paper. No crop/zoom/rotation. Technical assembly locks all geometry/graphics and source color, adopts only tiny interior fine brightness.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-source.png"
+      ],
+      "transparent_background": false,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "profile-wall-left",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Widescreen Def Jam User ID brick-wall background extension.\nImage1 is the exact790x480 EDIT TARGET. Image2 is full640x480original background, reference only. Fill ONLY the flat gray LEFT534columns x0..534; fixed original context is RIGHT256columns x534..790. Replace gray with a believable continuation of the SAME original old brick wall. Keep full790:480canvas, yregistration and original context unchanged, no crop/zoom/reframe. At the original boundary align EACH horizontal mortar course, staggered vertical brick joints, brick sizes/density, coarse weathering and gray-white deposits across FULL HEIGHT, top to bottom. Match original boundary color, brightness, contrast, sharpness/optical softness and grain so no vertical seam or change of material remains. No warm/yellow grading or vignette, no dark/bright vertical band at join, no independent relighting. Continue actual wear only where it meets join. Do not add/duplicate paper sheets, logos, shield emblems, doors, windows, floor, ceiling or other objects: this is plain wall extension only. Do not mirror/copy/tile a source strip. Generated context/core is discarded; final assembly preserves the original4:3center exactly. The added wall must look like the same photograph/art surface under the same light.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-left-edit-target.png",
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-source.png"
+      ],
+      "transparent_background": false,
+      "adoption": "New wall only outside original4:3; original context discarded"
+    },
+    {
+      "key": "profile-wall-right",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Widescreen Def Jam User ID brick-wall background extension.\nImage1 is the exact790x480 EDIT TARGET. Image2 is full640x480original background, reference only. Fill ONLY the flat gray RIGHT534columns x256..790; fixed original context is LEFT256columns x0..256. Replace gray with a believable continuation of the SAME original old brick wall. Keep full790:480canvas, yregistration and original context unchanged, no crop/zoom/reframe. At the original boundary align EACH horizontal mortar course, staggered vertical brick joints, brick sizes/density, coarse weathering and gray-white deposits across FULL HEIGHT, top to bottom. Match original boundary color, brightness, contrast, sharpness/optical softness and grain so no vertical seam or change of material remains. No warm/yellow grading or vignette, no dark/bright vertical band at join, no independent relighting. Continue actual wear only where it meets join. Do not add/duplicate paper sheets, logos, shield emblems, doors, windows, floor, ceiling or other objects: this is plain wall extension only. Do not mirror/copy/tile a source strip. Generated context/core is discarded; final assembly preserves the original4:3center exactly. The added wall must look like the same photograph/art surface under the same light.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-right-edit-target.png",
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-source.png"
+      ],
+      "transparent_background": false,
+      "adoption": "New wall only outside original4:3; original context discarded"
+    },
+    {
+      "key": "shared-popup",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY UI paper material restoration, restrained Rich Original Detail.\nSupplied RGBA image is the sole EDIT TARGET; keep exact full canvas/aspect/placement and any transparent padding. Shared wide torn cream paper sheet, gentle horizontal wrinkles, existing upper specks and original torn right rim; no printed words.\nRestore only subtle paper surface detail while preserving original folds/creases, source soft focus and cream/gray/red/black colors EXACT. No warmer/yellower grading, exposure/contrast/saturation lift, new lighting or glossy highlights. All original graphics, edges, outlines, stains, ink paths, partial alpha, clear holes and shadows remain at exact coordinates; no new text, designs or objects. Do not recenter/crop/zoom/rotate/stretch independent elements or fill unused storage as art. Green or black RGB in clear texels is not a background; output genuine alpha. Technical assembly retains original alpha, geometry, ink, tilejoin guards and padding; model supplies tiny interior fine paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/shared-popup-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "shared-header",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY UI paper material restoration, restrained Rich Original Detail.\nSupplied RGBA image is the sole EDIT TARGET; keep exact full canvas/aspect/placement and any transparent padding. Shallow cream header/control paper strip with black horizontal distressed band and original torn right cap. Keep exact band edges, stains and clear margin.\nRestore only subtle paper surface detail while preserving original folds/creases, source soft focus and cream/gray/red/black colors EXACT. No warmer/yellower grading, exposure/contrast/saturation lift, new lighting or glossy highlights. All original graphics, edges, outlines, stains, ink paths, partial alpha, clear holes and shadows remain at exact coordinates; no new text, designs or objects. Do not recenter/crop/zoom/rotate/stretch independent elements or fill unused storage as art. Green or black RGB in clear texels is not a background; output genuine alpha. Technical assembly retains original alpha, geometry, ink, tilejoin guards and padding; model supplies tiny interior fine paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/shared-header-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "profile-list",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Def Jam Fight for NY UI paper material restoration, restrained Rich Original Detail.\nSupplied RGBA image is the sole EDIT TARGET; keep exact full canvas/aspect/placement and any transparent padding. Tall cream profile list paper with bordered upper/lower writing fields and red middle selection band. All black outlines, red band, chips and field edges stay exact.\nRestore only subtle paper surface detail while preserving original folds/creases, source soft focus and cream/gray/red/black colors EXACT. No warmer/yellower grading, exposure/contrast/saturation lift, new lighting or glossy highlights. All original graphics, edges, outlines, stains, ink paths, partial alpha, clear holes and shadows remain at exact coordinates; no new text, designs or objects. Do not recenter/crop/zoom/rotate/stretch independent elements or fill unused storage as art. Green or black RGB in clear texels is not a background; output genuine alpha. Technical assembly retains original alpha, geometry, ink, tilejoin guards and padding; model supplies tiny interior fine paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-list-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "autosave-ps2-en",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY autosave/menu notice texture, restrained Rich Original Detail restoration.\nSupplied RGBA is the EDIT TARGET and sole authority for exact canvas/aspect, size, placement, all paper/ink/graphics. PS2 English memory-card warning paper: four small card diagrams, yellow warning triangles and exact English slot labels MEMORY CARD Slot 1, MEMORY CARD Slot 2, MEMORY CARD Slot 1-A, MEMORY CARD Slot 2-A.\nRestore tiny paper fibers only. Keep original cream/gray/black/yellow colors and spatial light EXACT, no extra warmth/yellowing, whitebalance, exposure, saturation or contrast change. Every baked glyph, numeral, icon, console edge, paper fold and distressed header path stays exactly at source coordinates. Do not guess/retype labels or add text/images. Keep original soft shadows and true alpha including partial coverage/clear areas; source green RGB in unused/clear texels is hidden storage, not a background to paint. No crop/zoom/rotate/reshape/recenter; output same full aspect and genuine transparency. Technical assembly discards generated lettering/icons/alpha and keeps source graphics/geometry/tileguards/padding exact; proposal supplies subtle interior paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/autosave-ps2-en-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "autosave-ps2-fr",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY autosave/menu notice texture, restrained Rich Original Detail restoration.\nSupplied RGBA is the EDIT TARGET and sole authority for exact canvas/aspect, size, placement, all paper/ink/graphics. PS2 French version of the four-card warning panel: preserve every French label and number verbatim, all four small card diagrams and yellow warning signs.\nRestore tiny paper fibers only. Keep original cream/gray/black/yellow colors and spatial light EXACT, no extra warmth/yellowing, whitebalance, exposure, saturation or contrast change. Every baked glyph, numeral, icon, console edge, paper fold and distressed header path stays exactly at source coordinates. Do not guess/retype labels or add text/images. Keep original soft shadows and true alpha including partial coverage/clear areas; source green RGB in unused/clear texels is hidden storage, not a background to paint. No crop/zoom/rotate/reshape/recenter; output same full aspect and genuine transparency. Technical assembly discards generated lettering/icons/alpha and keeps source graphics/geometry/tileguards/padding exact; proposal supplies subtle interior paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/autosave-ps2-fr-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "autosave-gc",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY autosave/menu notice texture, restrained Rich Original Detail restoration.\nSupplied RGBA is the EDIT TARGET and sole authority for exact canvas/aspect, size, placement, all paper/ink/graphics. GameCube two-slot A/B warning paper: preserve Nintendo GAMECUBE logos, Slot A and Slot B text, card diagrams and yellow warning triangles.\nRestore tiny paper fibers only. Keep original cream/gray/black/yellow colors and spatial light EXACT, no extra warmth/yellowing, whitebalance, exposure, saturation or contrast change. Every baked glyph, numeral, icon, console edge, paper fold and distressed header path stays exactly at source coordinates. Do not guess/retype labels or add text/images. Keep original soft shadows and true alpha including partial coverage/clear areas; source green RGB in unused/clear texels is hidden storage, not a background to paint. No crop/zoom/rotate/reshape/recenter; output same full aspect and genuine transparency. Technical assembly discards generated lettering/icons/alpha and keeps source graphics/geometry/tileguards/padding exact; proposal supplies subtle interior paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/autosave-gc-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "autosave-xbox",
+      "prompt": "Use case: precise-object-edit.\nAsset type: original Def Jam Fight for NY autosave/menu notice texture, restrained Rich Original Detail restoration.\nSupplied RGBA is the EDIT TARGET and sole authority for exact canvas/aspect, size, placement, all paper/ink/graphics. Xbox autosave notice paper with the original black Xbox console photograph/graphic at right, yellow warning triangle, black top/bottom ink strips and original creases. No recoloring/redesign of console or emblem.\nRestore tiny paper fibers only. Keep original cream/gray/black/yellow colors and spatial light EXACT, no extra warmth/yellowing, whitebalance, exposure, saturation or contrast change. Every baked glyph, numeral, icon, console edge, paper fold and distressed header path stays exactly at source coordinates. Do not guess/retype labels or add text/images. Keep original soft shadows and true alpha including partial coverage/clear areas; source green RGB in unused/clear texels is hidden storage, not a background to paint. No crop/zoom/rotate/reshape/recenter; output same full aspect and genuine transparency. Technical assembly discards generated lettering/icons/alpha and keeps source graphics/geometry/tileguards/padding exact; proposal supplies subtle interior paper brightness only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/autosave-xbox-edit-target.png"
+      ],
+      "transparent_background": true,
+      "adoption": "Tiny fine brightness only; original graphics/alpha/geometry retained"
+    },
+    {
+      "key": "profile-wall-left-bridge",
+      "prompt": "Use case: precise-object-edit.\nAsset type: full-height seam repair for widescreen Def Jam User ID brick wall.\nThe supplied384x480image is the EXACT EDIT TARGET. Fill ONLY its middle gray128columns x128..256 across ALL480rows. The left128columns and right128columns are fixed context; preserve their positions, colors and focus exactly. Right context is true original4:3image; left is accepted outerwall.\nConnect matching original horizontal mortar courses into outer brickwork smoothly, at exact y-phase, including all upper/lower rows. Continue staggered brick joints, rectangular brick sizes, weathered porous surface, white-gray deposits and existing diffuse focus. No extra courses or stretched/smeared bricks; no broad illumination/color step, vertical stripe, change in grain density or sharpness at either gap edge. Preserve original brown/olive/gray sourcepalette, no warming/yellow, brightening or contrast changes. No new paper, emblems, doors or objects in gap; continue only existing wall/wear at original boundary, no duplicated shield. Keep exact4:5fullcanvas; no zoom/crop/reframe/rotation. Only middlegap pixels are adopted; every original4:3pixel and fixedcontext is retained technically.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-left-bridge-target.png"
+      ],
+      "transparent_background": false,
+      "adoption": "Only128nativecolumnsoutsidecore; all fixed source/outercontext discarded"
+    },
+    {
+      "key": "profile-wall-right-bridge",
+      "prompt": "Use case: precise-object-edit.\nAsset type: full-height seam repair for widescreen Def Jam User ID brick wall.\nThe supplied384x480image is the EXACT EDIT TARGET. Fill ONLY its middle gray128columns x128..256 across ALL480rows. The left128columns and right128columns are fixed context; preserve their positions, colors and focus exactly. Left context is true original4:3image; right is accepted outerwall.\nConnect matching original horizontal mortar courses into outer brickwork smoothly, at exact y-phase, including all upper/lower rows. Continue staggered brick joints, rectangular brick sizes, weathered porous surface, white-gray deposits and existing diffuse focus. No extra courses or stretched/smeared bricks; no broad illumination/color step, vertical stripe, change in grain density or sharpness at either gap edge. Preserve original brown/olive/gray sourcepalette, no warming/yellow, brightening or contrast changes. No new paper, emblems, doors or objects in gap; continue only existing wall/wear at original boundary, no duplicated shield. Keep exact4:5fullcanvas; no zoom/crop/reframe/rotation. Only middlegap pixels are adopted; every original4:3pixel and fixedcontext is retained technically.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/popup-profile-v1-20261020/profile-wall-right-bridge-target.png"
+      ],
+      "transparent_background": false,
+      "adoption": "Only128nativecolumnsoutsidecore; all fixed source/outercontext discarded"
+    }
+  ]
+}

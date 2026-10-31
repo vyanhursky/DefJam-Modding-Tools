@@ -1,0 +1,14 @@
+{
+  "executed_calls": 1,
+  "historical_total": 118,
+  "tool": "built-in image_gen",
+  "calls": [
+    {
+      "prompt": "Use case: precise-object-edit. Asset type: original Def Jam Fight for NY Story message-center phone UI texture restoration, Rich Original Detail with restrained cleanup. The supplied640x480RGBA image is the EDIT TARGET and sole authority. Restore only low-resolution plastic/metal casing surface detail, keeping EXACT640:480 framing, phone size, crop, perspective, all screen borders, keyboard positions, panel grooves and original color accuracy. Do not expand, widen or redesign the phone. Preserve the original cool neutral gray/silver casing, muted brown keycaps, pale blue LCD, black shaded areas and diffuse2004 game-art focus. No warmer/yellower grading, exposure lift, new contrast, glow, reflections, whitebalance or saturation change. Keep ALL authored marks exactly: top upside-down T-Mobile Sidekick lettering stays upside down, lower T-Mobile Sidekick mark, MENU, CLOSE, key/battery/status icons, digit1..0 and every QWERTY keycap letter. No guessed new letters, phone text, messages, pictures, badges or overlays. The LCD remains the exact original blank UI with its blue header strip, icons and pale panels; do not invent screen content. Preserve every keycap graphic and lettering path, not just legibility. Keep exterior silhouette/holes/edge coverage at their original positions. This source has REAL PARTIAL ALPHA136..255 including semitransparent dark/black pixels outside the casing: black is NOT a transparency key and must not be deleted or converted into opaque fill. Ask for genuine alpha output, retaining the provided coverage rather than inventing a flat backdrop or checkerboard. No new texture beyond the original canvas, no crop/zoom/rotation, no resizing of independent elements, no new objects or text. The final technical assembly will retain the true source alpha, authored display/branding/keycap marks and geometry; generated pixels supply subtle casing material detail only.",
+      "referenced_image_paths": [
+        "/Users/vlad/.codex/worktrees/01c5/DefJamFFNY-recomp/logs/ui-restoration-20261017/pilot-v1/story-phone-v1-20261020/phone-source.png"
+      ],
+      "transparent_background": true
+    }
+  ]
+}

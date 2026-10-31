@@ -45,3 +45,8 @@ captures/
 *.exe
 *.dll
 *.log
+
+# Private numerical registration/evidence and local status history
+*.npz
+*.npy
+/docs/worklog/

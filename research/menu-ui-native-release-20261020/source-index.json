@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "status": "frozen source evidence; private paths and write side effects; not a batch command",
+  "files": [
+    {
+      "path": "source/register-loading-worlds.py",
+      "original_sha256": "cdf40bec1120b00cfeb73324b29973f466b603efeb73aec252a15db9d95699f9",
+      "published_sha256": "cdf40bec1120b00cfeb73324b29973f466b603efeb73aec252a15db9d95699f9"
+    },
+    {
+      "path": "source/update-native-gallery.py",
+      "original_sha256": "69f955d97646fc9e1b077528aec99eaf6bbc52751805b9beb4919fa98469b419",
+      "published_sha256": "69f955d97646fc9e1b077528aec99eaf6bbc52751805b9beb4919fa98469b419"
+    },
+    {
+      "path": "source/probe-rc2.py",
+      "original_sha256": "aba80cab06e34d2ef3598e486d500dda983490ec49ba7cfa17105d0dec9f8904",
+      "published_sha256": "aba80cab06e34d2ef3598e486d500dda983490ec49ba7cfa17105d0dec9f8904"
+    },
+    {
+      "path": "source/probe-intro-clean.py",
+      "original_sha256": "cfadf0161d3cc153ecbbac6ae6942d1fcfff0d7dc38f1170ea5d6b5bdb237e8f",
+      "published_sha256": "cfadf0161d3cc153ecbbac6ae6942d1fcfff0d7dc38f1170ea5d6b5bdb237e8f"
+    },
+    {
+      "path": "source/validate-candidate.py",
+      "original_sha256": "4fdda334238a092b067218dc85898bbec52d149bef23626332102002e5abdfd0",
+      "published_sha256": "4fdda334238a092b067218dc85898bbec52d149bef23626332102002e5abdfd0"
+    },
+    {
+      "path": "source/native-playtest.html",
+      "original_sha256": "7fdedf776397e1d18323ba65b2f98758c12c55357576b65379fdcd64291cc16c",
+      "published_sha256": "7fdedf776397e1d18323ba65b2f98758c12c55357576b65379fdcd64291cc16c"
+    },
+    {
+      "path": "source/native_playtest.mjs",
+      "original_sha256": "1d89c54e76870e7f272fc0097c3b08435e6ce27425487ba1298d58a37b2d5705",
+      "published_sha256": "1d89c54e76870e7f272fc0097c3b08435e6ce27425487ba1298d58a37b2d5705"
+    },
+    {
+      "path": "source/review.html",
+      "original_sha256": "33ddb231a3a8853d0389c0a533e693d24ac903f15f5a582fb213bf508de5d710",
+      "published_sha256": "33ddb231a3a8853d0389c0a533e693d24ac903f15f5a582fb213bf508de5d710"
+    },
+    {
+      "path": "source/wide-backgrounds.html",
+      "original_sha256": "0450fedb5fc092433fe5b1ed1bd8d264c26612d2ae6d97029037b4e508005cf3",
+      "published_sha256": "0450fedb5fc092433fe5b1ed1bd8d264c26612d2ae6d97029037b4e508005cf3"
+    },
+    {
+      "path": "source/wide_backgrounds.css",
+      "original_sha256": "3362ebaaff58e0ee3a5a0e4345e7e5279d36ce5d58eeb80153cfddc473bd1968",
+      "published_sha256": "3362ebaaff58e0ee3a5a0e4345e7e5279d36ce5d58eeb80153cfddc473bd1968"
+    },
+    {
+      "path": "source/review_navigation.mjs",
+      "original_sha256": "3884e6c4d79004843b6c51f7a14c9a1c39bc3087f4696ff0bb82710b63d4ae4d",
+      "published_sha256": "3884e6c4d79004843b6c51f7a14c9a1c39bc3087f4696ff0bb82710b63d4ae4d"
+    },
+    {
+      "path": "source/review_navigation.css",
+      "original_sha256": "bebb93809649848732f9528d41e37b468c04e3ab3d720b6c3d1b09cd27381938",
+      "published_sha256": "bebb93809649848732f9528d41e37b468c04e3ab3d720b6c3d1b09cd27381938"
+    }
+  ]
+}
