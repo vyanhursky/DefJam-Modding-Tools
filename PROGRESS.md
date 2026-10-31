@@ -2,6 +2,29 @@
 
 ## Current status
 
+**2026-10-31: HD Fighters1.0 authorized; immutable218-texture build in progress.**
+Owner approved Xzibit's whole-original ImageGen retry r-5714f48923784e36 and
+requested1.0 packaging, then explicitly approved Cloudflare/catalogue publication.
+Final Banner choice is existingLanczos4xUNCHANGED/no further edits, superseding
+plain-flag proposal (one outputsexual refusal c95625a1-ddbf-485b-8326-bcfc90421d09).
+CarmenB original512; seven named injury baselines plus four remaining Xzibit/
+Banner injury slots conservativelyLanczos4x, excludingALLlocal-neural trials.
+Recipe218IDs:200restorations+12Lanczos4x+6native originals (CarmenB+5sharedinputs).
+All218freshdumpidentity/hash/alpha checks and dualinstaller validation pass.
+ZIP669255742B/221files/SHA1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f.
+Cloudflarepublichash/size/range pass; cataloguePR10mergedab9dc9e, protected
+publish41223718965running bootstrapfalse. No
+native verification inferred. Bonecrusher queued for THIS pack playtest.
+Source research/hd-fighters-1-0-20261031; prior disposition records
+research/fighters-owner-disposition-20261031. Singlewriter PID46928 unchanged.
+
+
+2026-10-31: owner requested viewer/gallery restart. Previous writer had stopped;
+backed up workshop/model state, started one detached writer PID46928 at the
+same8768 origin/profile. Both routes200,76models; saved files byte-identical.
+Private backup: /Users/vlad/Code/defjam-data/hd-work/texture-workshop/backups/viewer-restart-20261031T145653Z.
+
+
 **2026-10-31:14 local-upscale comparison drafts staged; final review pending.**
 Owner accepted local upscaling/manual cleanup as the comparison path for the
 10refusals+4partial studies. Own-source RealESRNet FP32/MPS run locally in an
@@ -174,7 +197,7 @@ untouched. Prior complete state/handoffs archived under ignored docs/worklog/.
 
 1. Read .local-handoff.md and AGENTS.md. Persistent checkout is
  /Users/vlad/Code/DefJam-Modding-Tools-hd-fighters, codex/hd-fighters-beta.
- One live writer PID41733 / exec63770 at http://127.0.0.1:8768 with same local.json.
+ One live writer PID46928 / detached (owner restart2026-10-31) at http://127.0.0.1:8768 with same local.json.
  Preserve saved notes and writer lock; no second writer. Private source-recovery.json
  and persistent-environment.json document recovery after temporary-file cleanup.
 2. Review local14: Full texture library, clear filters, search

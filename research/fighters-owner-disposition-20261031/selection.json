@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "baseline_choices": [
+    {
+      "key": "d-mob-c-br02",
+      "source_id": "de0bf389e1c320248c70d49a2546c76a50861a943d1d7ef607098c91ea54e58b",
+      "sha256": "14b842b4ed89e3d6a0e3e75f83f34adb1899f7e0e91f13c09d0d8ce63fe75356",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "sticky-fingaz-br02",
+      "source_id": "197c467fc6d09cf6e2b439a109e88c164b5316aa7167dde77af618b9ed3dcf62",
+      "sha256": "428cff4f999d2f0de042f7a21adad27bf9c692d370a628f72a4cb1cec6922c41",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "sticky-fingaz-b-br02",
+      "source_id": "c3ccb012a59f8f6babf6262abdc67c2f4c131a71b470e03dbd6ceb1b6e469e42",
+      "sha256": "a949b01684a2235422bd262df78a81debf452a21591403134ee942db1465bcef",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "blaze-c-br01",
+      "source_id": "d67be9b5b1c0f9673fbd8c975e03809037e1d4df7ca434ac17f62a6d355136ab",
+      "sha256": "7812508673dd493c705ba43156a4e0a46f119e60bbabe14dd07011ea29712a2b",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "blaze-c-br02",
+      "source_id": "e7488160472144aea7ae48062272c1e44eb17f7c0c5dd3f19724802889a41ce8",
+      "sha256": "7dfb9f6de2e379c504b308e60b02c4b55c71d7d9a55505e84fe1d9293f77b713",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "memphis-bleek-br01",
+      "source_id": "525094982717d874e7bfb4bccefd9b08f0c685b04f87e0c41a8c8f7a526b10da",
+      "sha256": "071a468955c06341c0e86077af157008b6c364e95d2361d3d862c047632e61d8",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "memphis-bleek-br02",
+      "source_id": "8ba669cf8b530255f9f046010354e2afc56910837109f7c9dfa9f9a0f35676c7",
+      "sha256": "cfe436743db68ca00f06850be230c765dc2d834a2418770fda52b1bdd99fecea",
+      "kind": "Lanczos 4x injury fallback",
+      "owner_disposition": "Use baseline; include explicitly in future HD Fighters package independently of global HD Textures setup",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "carmen-electra-b",
+      "source_id": "1916eac6bcb3a1fcc183ba0be464bf385275543dcab889eb2ae7512809433d08",
+      "sha256": "9a1f395bcceea6fe628575f12eace055e8c9664a6b41c65332736e89bf1359f5",
+      "kind": "original native main",
+      "owner_disposition": "Leave alone; no upscale",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    },
+    {
+      "key": "david-banner",
+      "source_id": "b01045e0decbb534592cc6378412496742b00f2ae135e31b35763b3fbf793ef0",
+      "sha256": "c0101760e00b55491aa4e1634ebfe4c91dcf4b39194e379cd295bfe7ef8fad73",
+      "kind": "Lanczos 4x main fallback",
+      "owner_disposition": "Final instruction: existing Lanczos 4\u00d7 unchanged, no further edits/generation; supersedes proposed flag replacement. Include independently in future pack.",
+      "restored": false,
+      "packaged": false,
+      "game_verified": false
+    }
+  ],
+  "xzibit_restoration": {
+    "source_id": "93a8060dcf706b6328f124a58073c335313ba022bbdc9047f7a1596bf95b6d25",
+    "revision": "r-5714f48923784e36",
+    "sha256": "aaa89a5db7483de3877c57605d2828aadb483409aeb5c1fa28296ee27383da61",
+    "approved": false,
+    "selected": false,
+    "game_verified": false
+  },
+  "new_imagegen_calls": 2,
+  "successes": 1,
+  "refusals": 1,
+  "banner_final_disposition": "Original Lanczos4x unchanged; no further edits or generation",
+  "packaged": false
+}

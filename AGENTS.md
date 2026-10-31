@@ -116,6 +116,18 @@ missing decisions and preserve an active review session during changes.
   candidates, not automatic full-restoration/approval/native/pack completeness.
   Combinedcompletiontag108; localtag14. Preserve prior1131 candidates/notes/views.
   Bonecrusher reminder remains NEXT pack.
+  On2026-10-31 owner rejects local-neural detail loss: CarmenB original native,
+  seven named injury maps Lanczos4x. Xzibit whole-original ImageGen retry succeeds
+  r-5714f48923784e36 and is explicitly approved. Banner permanent plain-flag edit
+  refused outputsexual; owner FINAL choice existingLanczos4xunchanged, no further
+  changes/generation, superseding flag removal. Prior errors/trials retained.
+  Owner now approves HD Fighters1.0 and explicitly Cloudflare/catalogue publication.
+  Release selection218IDs:200RichOriginalDetail,12Lanczos4x,6native originals;
+  excludes ALL local-neural trials, including four remaining Xzibit/Banner injury
+  maps conservatively replaced by Lanczos. Five shared shader/tape inputs native.
+  No CAP/customization/portrait/menu/video completeness claim. Keep runtime/native
+  flags honest and remind Bonecrusher at this pack. Exact218recipe hashes authority;
+  bulk packageapproval receipt separate from historical per-candidate review flags.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
   Never infer new-child approval from a parent's acceptance. Check displayed
