@@ -78,6 +78,14 @@ mutable atlas replacement, mips or Story binding. Native fight/transition/Story
 acceptance required before release; prerecorded movies unaffected. Original injury
 40 visually approved still unselected/not native verified.
 
+Subsequent owner triage question: all10 saved refusals are OUTPUT-stage moderation
+(2sexual main,1abuse/other main,7violence injury); no affected output was returned.
+Fourpartial calls succeeded; incomplete classification reflects missing restored
+clean-reference detail. Four continuity studies already exist for rejected injury
+states. Proposed conventional restoration/continuity review and support review;
+no new generation, import, approval or packaging performed. Private exact-ID
+summary: experiments/fighters-completion108-20261030/rejection-triage.json.
+
 ## Coverage and earlier feedback
 
 Fixed core213 unique IDs:80 main/state (77drafted/3blocked),133 secondary
