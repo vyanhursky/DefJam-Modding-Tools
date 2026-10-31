@@ -8,6 +8,7 @@ import sys
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
@@ -67,6 +68,30 @@ def fixture(group='body',texture_ref=None,blend=False):
 
 def png():
     f=io.BytesIO();Image.new('RGBA',(2,2),(40,90,180,123)).save(f,format='PNG');return f.getvalue()
+
+
+class SourceRoutingTests(unittest.TestCase):
+    def test_gameplay_and_nested_story_routes_keep_exact_members(self):
+        with tempfile.TemporaryDirectory() as directory:
+            dump=Path(directory);(dump/'assets').mkdir()
+            (dump/'assets/v2ip.viv').write_bytes(b'gameplay archive')
+            (dump/'assets/v2ip_cin.viv').write_bytes(b'cinematic archive')
+            archives={b'gameplay archive':[('v2ip_112a.O',b'gameplay model')],
+                      b'cinematic archive':[('ASSETS/v2ip_014d.VIV',b'nested archive')],
+                      b'nested archive':[('v2ip_014d.O',b'story model')]}
+            with patch.object(m,'archive_entries',side_effect=lambda raw:archives[raw]):
+                self.assertEqual(m.source_model(dump,'trejo'),
+                                 (b'gameplay model','assets/v2ip.viv::V2IP_112A.o'))
+                self.assertEqual(m.source_model(dump,'d-mob-d'),
+                                 (b'story model','assets/v2ip_cin.viv::assets/V2IP_014D.viv::V2IP_014D.o'))
+
+    def test_missing_or_duplicate_member_rejected_before_decode(self):
+        with tempfile.TemporaryDirectory() as directory:
+            dump=Path(directory);(dump/'assets').mkdir();(dump/'assets/v2ip.viv').write_bytes(b'archive')
+            for members in ([],[('V2IP_112A.o',b'one'),('v2ip_112a.O',b'two')]):
+                with self.subTest(members=len(members)),patch.object(m,'archive_entries',return_value=members):
+                    with self.assertRaisesRegex(m.ModelError,'not unique'):
+                        m.source_model(dump,'trejo')
 
 
 class DecodeTests(unittest.TestCase):

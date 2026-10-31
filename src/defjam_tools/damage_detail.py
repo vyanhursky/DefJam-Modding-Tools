@@ -10,11 +10,12 @@ from PIL import Image, ImageFilter
 
 from .color_trial import rgb_to_lab, lab_to_rgb, box_blur
 
-VERSION = 1
+VERSION = 2
 
 
 def restore(original, clean_original, faithful, clean_faithful, clean_restored,
-            generated, held_source_boxes=(), detail_limit=3., strength=.8):
+            generated, held_source_boxes=(), detail_limit=3., strength=.8,
+            registration_rgb_tolerance=0):
     if (original.mode != 'RGBA' or clean_original.mode != 'RGBA'
             or original.size != clean_original.size
             or original.width != original.height or original.width < 8):
@@ -30,7 +31,15 @@ def restore(original, clean_original, faithful, clean_faithful, clean_restored,
     src, clean = np.asarray(original), np.asarray(clean_original)
     native = np.any(src[..., :3] != clean[..., :3], axis=-1)
     unchanged = float((~native).mean())
-    if unchanged < .75 or not native.any():
+    if type(registration_rgb_tolerance) is not int or not 0 <= registration_rgb_tolerance <= 3:
+        raise ValueError('Registration RGB tolerance must be an integer from 0 to 3')
+    # The opt-in gate recognizes audited palette quantization only. Literal
+    # RGB inequality above still defines every original changed source texel.
+    close = np.max(np.abs(src[..., :3].astype(int) - clean[..., :3].astype(int)),
+                   axis=-1) <= registration_rgb_tolerance
+    close_fraction = float(close.mean())
+    palette_registered = (registration_rgb_tolerance > 0 and unchanged >= .5 and close_fraction >= .8)
+    if (unchanged < .75 and not palette_registered) or not native.any():
         raise ValueError('Head registration is unproven or state has no RGB changes')
     scale = faithful.width // original.width
     expand = lambda a: np.repeat(np.repeat(a, scale, axis=0), scale, axis=1)
@@ -82,6 +91,9 @@ def restore(original, clean_original, faithful, clean_faithful, clean_restored,
         raise ValueError('No generated injury detail survived assembly')
     report = dict(version=VERSION, source_size=original.width, scale=scale,
         registration_unchanged_rgb_fraction=unchanged,
+        registration_rgb_tolerance=registration_rgb_tolerance,
+        registration_close_rgb_fraction=close_fraction,
+        registration_method=("audited small-palette-difference crop" if unchanged < .75 else "exact RGB majority crop"),
         source_changed_pixels=int(native.sum()), transition_native_texels=2,
         baseline_clipped_pixels=int(clipped.sum()),
         baseline_clipped_fraction=float(clipped.sum() / max(1, (band & ~held).sum())),

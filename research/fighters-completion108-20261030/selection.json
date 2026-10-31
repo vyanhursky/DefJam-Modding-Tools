@@ -1,0 +1,1744 @@
+{
+  "schema": 1,
+  "status": "owner final review pending; incomplete coverage",
+  "requested": 108,
+  "restoration_drafts": 94,
+  "partial_studies": 4,
+  "blocked": 10,
+  "mode": "built-in ImageGen edit tool",
+  "new_calls": 103,
+  "new_successes": 93,
+  "new_refusals": 10,
+  "prior_successful_raw_reuse": 5,
+  "textures": [
+    {
+      "source_id": "219a7ab28c2db0e729c73fe94292ebce24df12352687a099334ea3055f9726b0",
+      "name": "bo",
+      "role": "fixed main",
+      "stems": [
+        "012A"
+      ],
+      "completion": "draft",
+      "revision": "r-5a7847f01a8b4b79",
+      "output_sha256": "b196712347b5b264077881cc4f0b30a4dcb3883a019003f1e3ef7bdc56f228eb",
+      "partial_output_sha256": null,
+      "prompt_sha256": "661971fe3e76fcd9394329b9f9ab44819df59d4fb221a72b8fff6a89d617307c",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "93256b656fae07299bd850194894daa21b6dfe2fea12a06bbc0f183c93395bfb",
+      "name": "house",
+      "role": "fixed main",
+      "stems": [
+        "003A"
+      ],
+      "completion": "draft",
+      "revision": "r-1f054f1ea53e47a7",
+      "output_sha256": "d0a6ec8847b53af9640fec03e9990161c4fbcebc33d514b699f9f8058170dfab",
+      "partial_output_sha256": null,
+      "prompt_sha256": "d1880ace68da7d97516dfe449aa66ff301bcf29cd93c2a594f249298d0a95da9",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "0f8ff17c1df8fa85c4f5a0ba66d1351cb2a489aa27cbf80ed88a136cde459a6f",
+      "name": "lil-flip",
+      "role": "fixed main",
+      "stems": [
+        "307A"
+      ],
+      "completion": "draft",
+      "revision": "r-e455c7d5ca474425",
+      "output_sha256": "8ddd78145be5783408e0dbc0162a0ecd2e3c5945addaf11750c1b24ee5230460",
+      "partial_output_sha256": null,
+      "prompt_sha256": "8cb001db8cd1fbf3f23218b075fc954a75df9220259edb16a2823fdaf3aad4f3",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "93a8060dcf706b6328f124a58073c335313ba022bbdc9047f7a1596bf95b6d25",
+      "name": "xzibit",
+      "role": "fixed main",
+      "stems": [
+        "115A"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "a6f89129794ce4ab8f1a9b33f4fa44cf05292a6ae8d1f69cfd0c55edcd0b66de",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b01045e0decbb534592cc6378412496742b00f2ae135e31b35763b3fbf793ef0",
+      "name": "david-banner",
+      "role": "fixed main",
+      "stems": [
+        "124A"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "e50809b972c35b1ea6e67b2d0ccdbab9a3974ddcfb8ece7bee60463b064dd55a",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "17f6a830532cc2e3346b6f76b1d828a63070c2c8a850fef8bd47a15c5e9668fa",
+      "name": "santos",
+      "role": "fixed main",
+      "stems": [
+        "204A"
+      ],
+      "completion": "draft",
+      "revision": "r-f4c93f7e64d848ea",
+      "output_sha256": "58cdd19de27d85266536349998438ae26bafacecdbe47d4e2dc92f42d119eb37",
+      "partial_output_sha256": null,
+      "prompt_sha256": "6e8ef129571fe4b96ffe3549c3328f2e25cbf3f50760c6c52b3d21238145935d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "9e9099b6f62820273c384402c60a2dd83dce1919f44a5214d00b05e167eeb95a",
+      "name": "shaniqua",
+      "role": "fixed main",
+      "stems": [
+        "402A"
+      ],
+      "completion": "draft",
+      "revision": "r-fb3580f42bba4d58",
+      "output_sha256": "b313c7f375cfa85f426d5d5478641dfaef9d29a3b5000b2d7aed55df68fde61c",
+      "partial_output_sha256": null,
+      "prompt_sha256": "9bb48382aa83777bef80495a65f1fc1454e83f99c6c3fa5c70288bf927c26acb",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "9910286b7f5203dd4e027f9070425a05d0abfa76eb4fa67714bf0d56a2cd43d6",
+      "name": "suspect",
+      "role": "fixed main",
+      "stems": [
+        "501A"
+      ],
+      "completion": "draft",
+      "revision": "r-0b353cd72a664ff9",
+      "output_sha256": "b8d024e93b96105aa1b5ec1ab55cdf5122c897ce2df18eb6b87df0e38ad1ede4",
+      "partial_output_sha256": null,
+      "prompt_sha256": "3c9e0aee24bd40b94695f3dc0d15519735cd77a7ce957df77ed5dd6d15e8146b",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "0c65cd13d0cdf44b9c4b1af78f884629eb93a5696a1fd4eea0601674646199b2",
+      "name": "d-mob-d",
+      "role": "fixed main",
+      "stems": [
+        "014D"
+      ],
+      "completion": "draft",
+      "revision": "r-fbe478dbca3143ad",
+      "output_sha256": "f520e378207021605e6ebc35726230c53356b4e9ae2df5d4ac7759272d5522d6",
+      "partial_output_sha256": null,
+      "prompt_sha256": "f1621aa105bf049d354e8f76950ac5d64a22d0237358860e4b84b6ebe442a689",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "2ea9a0b3e28beed974042c06ae30fb478e759bd1a736e92690205f1f953e3075",
+      "name": "blaze-c",
+      "role": "fixed main",
+      "stems": [
+        "113C"
+      ],
+      "completion": "draft",
+      "revision": "r-47ff36f90d7f47a2",
+      "output_sha256": "d583889f0b8f0b3cba22d0c4bdca2ffe4e6b7ba4fb2d1c0c4c58d96178a65db1",
+      "partial_output_sha256": null,
+      "prompt_sha256": "e22070e4d7d05d8ef3523189119ffbfec2015d4aee72e70266e82ff3adcbc093",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "1916eac6bcb3a1fcc183ba0be464bf385275543dcab889eb2ae7512809433d08",
+      "name": "carmen-electra-b",
+      "role": "fixed main",
+      "stems": [
+        "401B"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "525020819e849d56e2924bb93bc939fd887b77b9e9c9c38afbe12e2b067dc008",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "de59649160969daadc987ed9a1fc083e533249f1b631038d8401c1d10e831d42",
+      "name": "cindy-j-b",
+      "role": "fixed main",
+      "stems": [
+        "403B"
+      ],
+      "completion": "draft",
+      "revision": "r-66654e8d7edb48dd",
+      "output_sha256": "0a13bfcd2050c09786716ba301f6e954214a943663575f5e32de8b42ffac08dd",
+      "partial_output_sha256": null,
+      "prompt_sha256": "ab659540fcb7792950f61a2fd82cd6caafab22eb344a5fdf00011206a02e152d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "77f9faf68ac7546003d0e77a9ee44baf5811e4a226c114cb7b8a74dccdc21d57",
+      "name": "crow-b",
+      "role": "fixed main",
+      "stems": [
+        "126B",
+        "126E"
+      ],
+      "completion": "draft",
+      "revision": "r-44fd734b70624bc0",
+      "output_sha256": "8f618e1ae3b48476ec57969fe0c7824a2af81e9e56ecdb338be7db568ace1983",
+      "partial_output_sha256": null,
+      "prompt_sha256": "137981085ed5887a92f65c75817f583340c9b579d9ba3af54ec8ca419f5641cd",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e5473d72ffed6694e62e9ae15405cde7aae5bc6a65046335c2f0537e93ba0fc6",
+      "name": "crow-d",
+      "role": "fixed main",
+      "stems": [
+        "126D"
+      ],
+      "completion": "draft",
+      "revision": "r-4e6951133e2c4096",
+      "output_sha256": "97ac7cbc0a14b2d620ab3787d237afef4dd636fcd127656cd80218dc9a975027",
+      "partial_output_sha256": null,
+      "prompt_sha256": "8c36540db101fc47c4af8800f6c812c9a5851726ca1088d17e9d3a17e99b89a1",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e7ad2682bd8bb4c97fdb4008b0492431fba04bf34d142aea8e8f33592c381afe",
+      "name": "pockets-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "001A"
+      ],
+      "completion": "draft",
+      "revision": "r-62f78164793e48a0",
+      "output_sha256": "f136bc7cc35bb018fbfba63e4892e64ca2bb94aa151f68b46019bfce9867715e",
+      "partial_output_sha256": null,
+      "prompt_sha256": "5176e8842aa7bd135512c23f8fe7418f46b8057e886bf739e7fbb45c74728745",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "7f653841fab4c0814141d26d3ee776f0bdb5e8720abed8c9d091175187dc3cb3",
+      "name": "pockets-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "001A"
+      ],
+      "completion": "draft",
+      "revision": "r-8b3b74d14e1148b6",
+      "output_sha256": "6d1e4e88239a08f9b1f13a12e86dac3a5b7134982f4b829cb35f8340d297a6ee",
+      "partial_output_sha256": null,
+      "prompt_sha256": "f04ef3770b9aa8467a7d3d6d7765f806e98575f30746837a4a8802be1af8e884",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "7b45ca99586c2add3bd98b698314ce5ae3234622720ec5aedc69f2790342cd2a",
+      "name": "masa-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "005A"
+      ],
+      "completion": "draft",
+      "revision": "r-415f84fe654348ff",
+      "output_sha256": "d95474e03ed8bdca2b4be56bf5a54aa0c33834de3e0e2bd30597e2e555707df4",
+      "partial_output_sha256": null,
+      "prompt_sha256": "09b1b6e8ef7d443e6a49eca1500455a693ccf8d8af5d72d2104d83be072b8732",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "4b283c741a60802adb4086e7fe83bfd1fd72e7264147c99ee604650a7312de54",
+      "name": "masa-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "005A"
+      ],
+      "completion": "draft",
+      "revision": "r-7bc745a36c12464d",
+      "output_sha256": "434c42621752820c14b82b1f94a6d12d2afaa1d30b228426426b0c1679d744fb",
+      "partial_output_sha256": null,
+      "prompt_sha256": "66dc64afcd2be42cc767191ee50539b71a2a43cce197783746e0c199df0a7e06",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "c2abb27e2d7a602c7c8eb194f6faa820dcf318e2a7e8693c805e5534e864e720",
+      "name": "cruz-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "007A"
+      ],
+      "completion": "draft",
+      "revision": "r-c450413da71742b2",
+      "output_sha256": "c1d13394bfc6ae3843070170a7337b7188350aac28620238d5b91c316619f8b7",
+      "partial_output_sha256": null,
+      "prompt_sha256": "33f582dd0e5ccf636bbb8a1ff5a0eed7e7be1a3fc86932ff80cd19baa0b74fb6",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "d03c1877cdfe995cb81236cafe389b7f8728e00f846067bfb576ac102515bbeb",
+      "name": "cruz-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "007A"
+      ],
+      "completion": "draft",
+      "revision": "r-8dd7fd8d8b064d14",
+      "output_sha256": "9701db85815252deeefe9a1d99897909b69b9792231d5adda79a27b438b8279b",
+      "partial_output_sha256": null,
+      "prompt_sha256": "283d26d569760d54187f20d7557077b1df6d56e0946523f741e141c882d8fe59",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "de0bf389e1c320248c70d49a2546c76a50861a943d1d7ef607098c91ea54e58b",
+      "name": "d-mob-c-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "014C"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "d3933728ae913a38c72f52cd9f2667b870b4cbef47d4c00b313e5b7d015d78a7",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5d5b6e059d0bbec2cc2f0155483bf591f4c28cfd40cce4a87da01a08c9a4060b",
+      "name": "rome-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "010A"
+      ],
+      "completion": "draft",
+      "revision": "r-88a476cdbba64861",
+      "output_sha256": "93a438f667d6776d6387865afd92531b11b005793dccf446e9023a4eb314097b",
+      "partial_output_sha256": null,
+      "prompt_sha256": "342e88309efc1e7d36cd0a57b1c6c59250070eadf75d4217daaf16961b48e3a9",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5d3194f1188b3b7bde1ea5e9437815ec9ab08f2429ad176f5fb14127ab8fc5dd",
+      "name": "rome-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "010A"
+      ],
+      "completion": "draft",
+      "revision": "r-abe930b34a104edf",
+      "output_sha256": "c31b37e6a6e8f11c6f569dffbce70922b4c0c203d7ed01117cd497c463da4264",
+      "partial_output_sha256": null,
+      "prompt_sha256": "df3cb71cdee4578419901fa96ac1051ce6f01b9d933add2820e3af8faf8efbff",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "ca1c047148a8191ca11dd73c29f6a3042fe3e068db3d2cd49999642575f344e4",
+      "name": "d-mob-c-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "014C"
+      ],
+      "completion": "draft",
+      "revision": "r-e953ed2e98284aa1",
+      "output_sha256": "11a071de75963330f248bc53435a7351aa99571c8c754ce5243b59ddae82d593",
+      "partial_output_sha256": null,
+      "prompt_sha256": "2d7467394fa161cf362bface930f871f3e9c48fc42bc89fc2815f214c16f57f3",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "6470db6692c80b1a57cc5bac6fd5504844a94eca77d4c99ae8312b9c59b8988c",
+      "name": "stingray-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "016A"
+      ],
+      "completion": "draft",
+      "revision": "r-cb19a245ce0b454f",
+      "output_sha256": "2d4c47a33326e82cabc8ec870fa67446eada050e94003836d1fb0418b9a6e758",
+      "partial_output_sha256": null,
+      "prompt_sha256": "16022b9b973f645f42002162e166a4437712c40c5ec94a8c2730b352d82f0e5a",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b2a9f5aa9895d3a3e41be3992c5e5089623103a9e2548d8570b5828a64d8b4a4",
+      "name": "stingray-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "016A"
+      ],
+      "completion": "draft",
+      "revision": "r-c981f1e981dc4dbe",
+      "output_sha256": "31550975b36d755ae45b8a00fad1ba4bafcfa064b7c4289e99bac17bef906df0",
+      "partial_output_sha256": null,
+      "prompt_sha256": "5e7457188602edbe71e5918a6983472d5fe23cf1bdd4cef5f80416f9d2784f77",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "deeefb3ce13b64586ffd4353dbe79d94a0ea08bb7db6c4a0add165efb1476943",
+      "name": "erick-sermon-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "102A"
+      ],
+      "completion": "draft",
+      "revision": "r-dfa16e847304499a",
+      "output_sha256": "d403d01a0442b5b1cae5ed1193e3fef3429644502e089866ddbe2f70054f55f6",
+      "partial_output_sha256": null,
+      "prompt_sha256": "5cd21e376898a8b3087eb592be73490fd70aa1f5205e892990afb438c9c1158d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "99228f4b1ec0bd6ccf02a27587e8514b5dd98ab85c19c688c6506dd927ae73d1",
+      "name": "erick-sermon-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "102A"
+      ],
+      "completion": "draft",
+      "revision": "r-ad871b1894eb4e01",
+      "output_sha256": "0f194728d28e7caa111f9675f3d90005fcd09cb3ba91ae399c972c7d15ad3695",
+      "partial_output_sha256": null,
+      "prompt_sha256": "b9d5ddef3a81184342ee202372e3438c91d1cc5003165a68549f102c4b869253",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "cbad36cf0c8e2c4d17c633b89f013ca0ca23a78d7a379cf0da50f2b471988de9",
+      "name": "d-mob-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "014A"
+      ],
+      "completion": "draft",
+      "revision": "r-a1f7c28b5d1144af",
+      "output_sha256": "f8f832acf1b75e4242ed12482561fcb32670b250cdf3024e30d9eed7dc0bbbd2",
+      "partial_output_sha256": null,
+      "prompt_sha256": "563710458604bb2d15d7c998000ce9cd5ebe0f4cb3e3298a8e414bbe79b09ef7",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "bfbd334b932f0a579ff34b42072614250125e2cbd17c89991b4960071d9c5144",
+      "name": "crack-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "106A"
+      ],
+      "completion": "draft",
+      "revision": "r-df1a78ebced74c98",
+      "output_sha256": "72ff0df0a700a701e77053cea3291282ba07bbc5d4fe2048f61fc98727cd8178",
+      "partial_output_sha256": null,
+      "prompt_sha256": "febaedc96092bfa103bcbfa8bd71bc95dd43068b52ff88f2d2799e88e2c535a6",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b3d01011cf2cf3bfb5b93c89d2fc2c2c37de323c08d33200dd928cec9100e595",
+      "name": "sean-paul-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "125A"
+      ],
+      "completion": "draft",
+      "revision": "r-d5a90eda2361499c",
+      "output_sha256": "efa1e8b43ad56533c173a1ead3eaf9e17af3686736c2c44a48d273275466dfdf",
+      "partial_output_sha256": null,
+      "prompt_sha256": "44ba2b81688358bb189033bb73746555646402dfb5299dfa1041682b1191c682",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "c3ccb012a59f8f6babf6262abdc67c2f4c131a71b470e03dbd6ceb1b6e469e42",
+      "name": "sticky-fingaz-b-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "114B"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "90829af443b2ea15556cc08e56d76ac51c9d06537faf12324b46fedf371cd45d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "c15de97866a718f9d38028565ead5e3602a98d389c64153a65aef84c7c2319f1",
+      "name": "ghostface-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "108A"
+      ],
+      "completion": "draft",
+      "revision": "r-2b3874cfd50249dc",
+      "output_sha256": "a022596c494c8d858d29ea0c7f0b7559027333b4eb5b782540d8e19a85812c4c",
+      "partial_output_sha256": null,
+      "prompt_sha256": "a2b8738aaf807514247cf8aa84cc6a6e00bc8301e8a71e3e76b2e8fcba0ba02f",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5397a75356c0062eda65a97a96780963f1596e45a46859538252d472904bd483",
+      "name": "ghostface-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "108A"
+      ],
+      "completion": "draft",
+      "revision": "r-119a88515b914bc7",
+      "output_sha256": "e7cc8449eb13765ccba5948b51a277decb4d4360fa2d311910d6cd484c5b74c8",
+      "partial_output_sha256": null,
+      "prompt_sha256": "ccfbb9cf44b7af8af58b1a542d6972accd6afa629f241cd1784de2d29e4860c4",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e77a859744ebb22305a242fbd2b72df2900cae6d36c7a06f93fd91de05396dcb",
+      "name": "sticky-fingaz-b-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "114B"
+      ],
+      "completion": "draft",
+      "revision": "r-5a97765782bc4618",
+      "output_sha256": "8529c80611f67500eb6412bd71c9f348078cae852bc7bf239159a0cd88b0d886",
+      "partial_output_sha256": null,
+      "prompt_sha256": "fd767eb43c08a3e6d994217a5f7d57ad7c1d6ca35502d572d02d13a4e8195ce1",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5bc0e2756963926e828b860b709efe2ec3085b929dcdc3ec7bb4ecc7a70a5b03",
+      "name": "slick-rick-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "130A"
+      ],
+      "completion": "draft",
+      "revision": "r-e6aa767e9bfc4eb8",
+      "output_sha256": "8b77d9ded29da01bbd3e2d61d78b26e7ab857931d77a915c37ef18904c189d91",
+      "partial_output_sha256": null,
+      "prompt_sha256": "9bc0e6ae5388c5b359e68c544f0e43230f23badc762334810de6e0482649ae7c",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "69bc275487236cdc2192381ae2f472c302a33a6b500ca96b2e63fbef63990270",
+      "name": "slick-rick-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "130A"
+      ],
+      "completion": "draft",
+      "revision": "r-7038045971e948ab",
+      "output_sha256": "eefba4f14e6b68b958139b8f6c875b428bdb69f03a5250f5e9b9688ecd8bbbce",
+      "partial_output_sha256": null,
+      "prompt_sha256": "f0c81fa0b3cbf27a0ea31a7c630b4a2c489b3221cd0ac4533b6dfb9708925b3d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "92d303d0d1062e087901557ae273593ab66974097f9b32fd846a75142770fee2",
+      "name": "house-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "003A"
+      ],
+      "completion": "draft",
+      "revision": "r-eca425a7c2df441f",
+      "output_sha256": "b3441e0da5c27aecabbbf9ab565d42bc51bf01567d543aef53306a63f01a3927",
+      "partial_output_sha256": null,
+      "prompt_sha256": "030f16d4799036bd154f78a998db5e87323e905de6d4a318781aa576cd7fb001",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "764aa3ebd00256190a8e76fe4415a3faabe29680b1f51f7ece5c226c2d79cf0d",
+      "name": "house-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "003A"
+      ],
+      "completion": "draft",
+      "revision": "r-0d368b09fcb746ec",
+      "output_sha256": "fb3973745e2e2eb927cadd4dc8408714c66199d0858d7893cf680175c595426d",
+      "partial_output_sha256": null,
+      "prompt_sha256": "916ff89dc303c03bce1afe92d60f98de41ccf6673eb2b81ec8d8d9c6d784b2c6",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "11bb403f3a61c752da054c3dcba31d71c108ccedb1d1e2e90c2634ca109777e7",
+      "name": "bo-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "012A"
+      ],
+      "completion": "draft",
+      "revision": "r-51f29485486b4a45",
+      "output_sha256": "aaabae18251395825a4b3c0a8f75f37254ddd6ecef14ce46c9ae1871d020acfe",
+      "partial_output_sha256": null,
+      "prompt_sha256": "f9fd8ca157f97a9d2691d552d922de9118e1cd6744c1828b22d61925693763b9",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "868a0134c6641ce7b6e9a77845d27d0bf339e73310e415989878153b8c50de8b",
+      "name": "bo-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "012A"
+      ],
+      "completion": "draft",
+      "revision": "r-e387f46837744370",
+      "output_sha256": "88d56cd01b636558ec17a157fc97b49514d446c3adca4d4c2fe8906da176ad10",
+      "partial_output_sha256": null,
+      "prompt_sha256": "9eed78e98c0b7e6f82b177a16e9479a8dfef1d1fbdac06d822b5a1c0a8ecfb33",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "eba789b155b0716e8072ce4f5f07ca51b222860772868e058c7f3fff89e14ac8",
+      "name": "santos-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "204A"
+      ],
+      "completion": "draft",
+      "revision": "r-c44cc6fc795e4212",
+      "output_sha256": "dfe792a7c23251522ad9e2b3a2efd4567b8caaee0ef7a1cd87feea65b7bb21ec",
+      "partial_output_sha256": null,
+      "prompt_sha256": "1c06eaa38ff058a2196f5b74d90a6d4b530e9ac0d4badcf36b212af8c2a0a801",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "daaf0c9397c775b16d2ca943d8b5f79038738efb4c56774aa69a5c2d1a8b813c",
+      "name": "santos-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "204A"
+      ],
+      "completion": "draft",
+      "revision": "r-6406293dc2894d80",
+      "output_sha256": "ca0996422885919bcdadfaa2574912e1851639eeb6eaf9dd70b47f26ea388cb1",
+      "partial_output_sha256": null,
+      "prompt_sha256": "44207768ac1f603969f631854ba1fc8c09bddf2fac159a518aaba0e16184a869",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "aa09073cbd56c31339717d61a8bf6ff092a926ae21ccc93d720284cf165e863b",
+      "name": "carmen-electra-b-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "401B"
+      ],
+      "completion": "draft",
+      "revision": "r-ad9262dc36eb4681",
+      "output_sha256": "c75b4992b4768e08704fae31c98a9f607fe0355106e9e92d5af17186b52e78c9",
+      "partial_output_sha256": null,
+      "prompt_sha256": "2f7d3ab59cc2c2db6a8a70bfa00368265d90f0cc2c232d827fe3c24eb296fcb1",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "d67be9b5b1c0f9673fbd8c975e03809037e1d4df7ca434ac17f62a6d355136ab",
+      "name": "blaze-c-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "113C"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "af2bc4abb82a68a1ac2b54f3300050cf77da0b92b895f1d76520eee672bbcde6",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e7488160472144aea7ae48062272c1e44eb17f7c0c5dd3f19724802889a41ce8",
+      "name": "blaze-c-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "113C"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "3e9eebc28ce6c93921b62e702340be7e8ebfb69ffeb228618e6c550b5d899ff0",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "d20fc88515632561889a06e96299a9a6d5102beb1fed03428b7e4fc3d73f63fd",
+      "name": "snowman-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "002A"
+      ],
+      "completion": "draft",
+      "revision": "r-db673553e0494759",
+      "output_sha256": "b05cba894f00b0bc2dd80ab9a85580b4985a43d18128e9a26084e49d2f8cc724",
+      "partial_output_sha256": null,
+      "prompt_sha256": "64f921d4a8213bd1fb77a1d18dad7445187c980265804ab50cb32f43d6b3ad72",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "19e53fa267a3f9293ed5d4dbe5117f5f77b98d78bfac731d7dddba3c1ecee98b",
+      "name": "snowman-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "002A"
+      ],
+      "completion": "draft",
+      "revision": "r-3eedd8ee8e054d6b",
+      "output_sha256": "0c75bc8aa0d47d16299b833f815a5bebbc2dd9198a2def41ff76c6531c486472",
+      "partial_output_sha256": null,
+      "prompt_sha256": "57217561e35c3fa91f969c6f9fd9a26df4b91fa1afa7b13df9ccc833ba4176dd",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "f9cfeba4c3c6bf7f8c2d65fb2ac92198d33ae9872f9c0d0c6fc918c33fec1218",
+      "name": "dan-g-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "004A"
+      ],
+      "completion": "draft",
+      "revision": "r-193d7c0c48a04843",
+      "output_sha256": "df33cf5f2290b3fa650a913e4bad601f04cd05702421a6fda182852bffbae2a0",
+      "partial_output_sha256": null,
+      "prompt_sha256": "605890bfe9e9bd4f8adafcdbf6f2a696cd1b551dd82fb7d4d6dd4bb659813975",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "2a2f5fd1dcdd664ca1645fafb336eb896f422091944b61e39b3f2813f17d199c",
+      "name": "dan-g-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "004A"
+      ],
+      "completion": "draft",
+      "revision": "r-660542a43de24661",
+      "output_sha256": "23a7ce66265bde226a301d3086408b1132a91ec7e643bdc0624e2a1e412689d7",
+      "partial_output_sha256": null,
+      "prompt_sha256": "35cbcda77df3a5ef49cbd2312905692f6568acc951f06275828d0a3f3c487cc0",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "121e3913e48b0a3f7d31bcd8082d3f9094bef50b38c8056dc5531f264bae261b",
+      "name": "chiang-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "006A"
+      ],
+      "completion": "draft",
+      "revision": "r-97a32d5c3bb8489c",
+      "output_sha256": "822b058dfcf54604639ff9e42cc355944a520e6e6f2d472520a9558ff230f7fa",
+      "partial_output_sha256": null,
+      "prompt_sha256": "cd5027a40e10bd0d29e994167c3fac2e6e713cfe716e30240426ecf4ed510a91",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "08fa12359e5a34bef26a7e21610e591da9780ccb6d8c2cc69f7e8bb231de6808",
+      "name": "chiang-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "006A"
+      ],
+      "completion": "draft",
+      "revision": "r-1887a850809f4849",
+      "output_sha256": "36fbb2aa8959572651744031740a4f10aa2044820f64843f51ffae01b41b2e29",
+      "partial_output_sha256": null,
+      "prompt_sha256": "798bf102ec86dfccc41954d7d3355f0e8a3b2880b7128969ea753e54122ed8de",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "98e338170c4cf0ee4eadbe75a573143eec9327623a09d1940cbaab2aeab3353c",
+      "name": "manny-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "008A"
+      ],
+      "completion": "draft",
+      "revision": "r-76da374c72964c3b",
+      "output_sha256": "53f06af5662f8da41225d817d3a7e3ef20443f139047610fcd0ced33a5b731ff",
+      "partial_output_sha256": null,
+      "prompt_sha256": "551a253d974e2c4a9225039081eae7813a7edb906fc3123daa923e86fd9d085a",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "f0491a29425c40443136c067082311ecca72c32fe605dd4f73786c283e195794",
+      "name": "manny-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "008A"
+      ],
+      "completion": "draft",
+      "revision": "r-5352dcbc68ba4097",
+      "output_sha256": "1efa281acea05401a5fb1553820bec3c5ac442fdb036ceb43fe63d7a5f74a9eb",
+      "partial_output_sha256": null,
+      "prompt_sha256": "e636930e54cc3baf9ddbf01b3815712bb94d64843cb12dd16693642f270eb6d6",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "ca928647ba4a43664941a81b529668ad4f9688843938d31a6a0d85ca4b4d452c",
+      "name": "solo-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "011A"
+      ],
+      "completion": "draft",
+      "revision": "r-2b16122d4b9b4be0",
+      "output_sha256": "c93c1ab777fbd8fa9a6d77fb45c8009aa7ed5a91c4b8ead9bb4ba638e444db8a",
+      "partial_output_sha256": null,
+      "prompt_sha256": "369a9dbf2cf72c7c5cd19b4b85b9c04a4e2a26b904ea31f44f4f55964a7c3e11",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "c4313690e39104ca3dc703c45462130b2869ad81c5f33f89d059a0e642a34cfa",
+      "name": "solo-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "011A"
+      ],
+      "completion": "draft",
+      "revision": "r-9e9e1c58cdea42ae",
+      "output_sha256": "93f5945fe027a10d87130f7300211e7ce77ce7f6ce5d89d837861d28ec9dbca8",
+      "partial_output_sha256": null,
+      "prompt_sha256": "b562734b49506459dce5a4fbbdf9571c19768a77be0962a4a7c84998698e9252",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "95c5efb369211c1c3438a75106f9423c7fc37339a9e3cf9344507137570955c5",
+      "name": "trick-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "013A"
+      ],
+      "completion": "draft",
+      "revision": "r-ff8421743abd43a6",
+      "output_sha256": "85a6517aea82d65044ca67f4233228707b3a4215dfe4a6bf6ba13632f0402cc2",
+      "partial_output_sha256": null,
+      "prompt_sha256": "774c88d054cb4d5d50bf9f3d583505404d17f30489a86748d2bcece6fb3c9ef5",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "05827859ddccdfa831a35e370a1f667d31362a35c65ad742d2d8d8dc974309f6",
+      "name": "trick-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "013A"
+      ],
+      "completion": "draft",
+      "revision": "r-89a7576321fb4ec0",
+      "output_sha256": "5c43874d8150821a49f187531627c789203836476d7eaa6b9f0cef348c447856",
+      "partial_output_sha256": null,
+      "prompt_sha256": "a7a6b988b21e0c1473d6e86aefeba6bff5de895e3b1f309fdc05d9761fb4af42",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "ec9b7c67ec4eae2e1a2c5d60ba758b383f6579b4a97d3a7cc173b867413edc07",
+      "name": "d-mob-b-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "014B"
+      ],
+      "completion": "draft",
+      "revision": "r-67bffe1a6c5340da",
+      "output_sha256": "3093b9f5b52029480d2d64fd34f0915eb8130b655162b7e393290644338e40bb",
+      "partial_output_sha256": null,
+      "prompt_sha256": "48c847fdaa5204287c8f42a908907774e467adb8166ab4bd76e76292a5e61cf2",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "c801bd941abcd1e70f00d8d0fdc6b078264b6bedd592fb0b0cb7bc5eb7190f1d",
+      "name": "d-mob-b-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "014B"
+      ],
+      "completion": "draft",
+      "revision": "r-8a51fc5ebc2e415f",
+      "output_sha256": "0d87c7d464e5d9f12c913cf6db3d1d894458747fead28b7e296c2665a76fdff4",
+      "partial_output_sha256": null,
+      "prompt_sha256": "9014f517e57435239dce0484cf6c87745193fa91098256db9a0fe6055c6bd456",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "78619791f160b69a84a3d45563c0055479d3fc533f46a572a5f393157262d8a9",
+      "name": "baxter-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "015A"
+      ],
+      "completion": "draft",
+      "revision": "r-7535fcdab96842a6",
+      "output_sha256": "dc0afd8052cbbec15a6b03d0abec0fac0bbc186afee46f72ac2718b54a138bb3",
+      "partial_output_sha256": null,
+      "prompt_sha256": "b28e03df549d4fe3e7bd1e430ec6ecd945f0295a6e0c1252ed5978d3f08bba79",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "70dc34ec42d50c1a7695af6b99ef2c82475fd37425d47889628d56c955844435",
+      "name": "baxter-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "015A"
+      ],
+      "completion": "draft",
+      "revision": "r-6ee8fffc59444671",
+      "output_sha256": "37e9d5b5936a3fc052ee1fa62bc859b0c48d2533c5497318985df8ed075db45f",
+      "partial_output_sha256": null,
+      "prompt_sha256": "d57561f3864f58fa1a052d5ec2365f084be5219858f88d1b2a4d67a90d5d42d7",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "04e5906cb15b0bc5d57c18b5015823dff9e831ff4531c9d5fe19f192809c316f",
+      "name": "skull-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "018A"
+      ],
+      "completion": "draft",
+      "revision": "r-8146e6798dc649ac",
+      "output_sha256": "891c544d807937fdaad3b1b5cfe5a17d0145669fd0e7a9ee096c06f8ad7cbe64",
+      "partial_output_sha256": null,
+      "prompt_sha256": "cf04988f0831a070fae3fe78deedf3b662473e00b48673f32124f58c79ee068d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "2e5c50339945e3bce54bd4b87d2c501dda6ff0882437ab9f95ad858c5182dda1",
+      "name": "skull-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "018A"
+      ],
+      "completion": "draft",
+      "revision": "r-97f5218809614769",
+      "output_sha256": "e5c3b8612b55188632bd4f9cff3d33f60260744cf3d4cc07023b036f30c85bbd",
+      "partial_output_sha256": null,
+      "prompt_sha256": "90ef645f5bc3eaa99ffd39b83f65985b80276e60790b6b144de25c4e56927284",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "525094982717d874e7bfb4bccefd9b08f0c685b04f87e0c41a8c8f7a526b10da",
+      "name": "memphis-bleek-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "103A"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "a3af64b53d2ac908c1a0a245353d9a6b6c94b19c771ba1ad212e8f7c609d9391",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "8ba669cf8b530255f9f046010354e2afc56910837109f7c9dfa9f9a0f35676c7",
+      "name": "memphis-bleek-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "103A"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "ba99acbb9fb4b9e15074fb3acad65ec48330569d3d27910b75da47e9c19d5b10",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "029ef80730a448503c5f12a5d85a1399b5d893006f57a35e4651efcecebcb7fa",
+      "name": "bubba-sparxxx-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "107A"
+      ],
+      "completion": "draft",
+      "revision": "r-6f253324553e45b5",
+      "output_sha256": "b7f60081b09bc56f7c9afb3e353798985e6c93cdc82615bdff0ba04c2de6e986",
+      "partial_output_sha256": null,
+      "prompt_sha256": "542aa0b775d40b7456cd6f5226f036c808951cc983a3b2daf784ce23d7be4b6e",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "77c087298e2d1338c98c7fbb06459114a8e453d3a3c6d9d061dd35c5be36bd44",
+      "name": "bubba-sparxxx-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "107A"
+      ],
+      "completion": "draft",
+      "revision": "r-38c0ed5086634d95",
+      "output_sha256": "86fe575163835d4b4ce98f3226ca7a72a335f4cd6c28243aa5ddcb3717726fd5",
+      "partial_output_sha256": null,
+      "prompt_sha256": "1bfb0222cdec5ad184846030246ac589044e06e3537861de09d794f1d8f630ba",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e9a4e5bac524c4f1a97dae6533ee367df03fe8a2282db6476cc7cfa7212c7a34",
+      "name": "blaze-b-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "113B"
+      ],
+      "completion": "draft",
+      "revision": "r-355d26f712c24cb4",
+      "output_sha256": "6d3a46bdcbf75f8df452c8d50ec8c3685ce67c114985ff849c855b8e49b324d0",
+      "partial_output_sha256": null,
+      "prompt_sha256": "e8e07ea3cf7662cdfd8ad38e55157a3ae04bde016cac802a5943966a240ab134",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "2e2e20c0db9b39795b88736579efc3e0f4c1f30f8268df61ce47c1a4eeef3c5e",
+      "name": "blaze-b-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "113B"
+      ],
+      "completion": "draft",
+      "revision": "r-1d5e04829af44ced",
+      "output_sha256": "b37235f364eb7dc0261e92c3c0907a5e34cbcd1d18ad24f86412b9ac00d506c2",
+      "partial_output_sha256": null,
+      "prompt_sha256": "8b7ecd64b11d0a96c3b1334dcbd415e45c548f1052384366e9b4901dc647b627",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "6efd753e02d3ff9b2bdbb4aab37905d49f0e7910a99a6cdd77ba7984feaee71e",
+      "name": "sticky-fingaz-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "114A"
+      ],
+      "completion": "draft",
+      "revision": "r-cd172e9015074bf8",
+      "output_sha256": "59ae496d16b3f91609e15808826f13e8ae91c0e03246a995e9983bed5e2dcbd6",
+      "partial_output_sha256": null,
+      "prompt_sha256": "081b00a2039596c512eca8b31f2ad529a550571ac1e05933b17c33af4414975d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "197c467fc6d09cf6e2b439a109e88c164b5316aa7167dde77af618b9ed3dcf62",
+      "name": "sticky-fingaz-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "114A"
+      ],
+      "completion": "blocked",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": null,
+      "prompt_sha256": "182e370ef9b7d1d37d640cd24ea95884915be76251609d23618546946d65511d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b63c654567977f7681cdb629b092057c501e53f276e2d267ea20f894bb72c5bc",
+      "name": "xzibit-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "115A"
+      ],
+      "completion": "partial-study",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": "a49650045ba8837128bb71f4a835ba7d307b2b7c3db3bb2e3dc76f6dd9912e02",
+      "prompt_sha256": "db3867c747ac8e073627e194d402ca9c14120185385e37fd130c8a52b8a07550",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "9e59987296a335da0537e94d7553573c09194618feb9bd3bbd16d56d72d35a05",
+      "name": "xzibit-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "115A"
+      ],
+      "completion": "partial-study",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": "cea4b06e978575c9a4bb5430864a677a1c33ab1e1ac571cd9eea3e90a6455b88",
+      "prompt_sha256": "1b08d6f9f33bc5064e205e6b5955c4dbff2cc9eda7b7580dc1d461e93116898b",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b0301eedfe2b62b48e21afa675c342924905431e5fb31abad9fdc6c1d5efdfdc",
+      "name": "prodigy-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "119A"
+      ],
+      "completion": "draft",
+      "revision": "r-6fa7884f344a49b8",
+      "output_sha256": "bd848c83dd6a3ffba52a46295b3633e1c4a7c0a1b78e57c274013fd3524f517a",
+      "partial_output_sha256": null,
+      "prompt_sha256": "6c61651df52b877c268c8a636ba0b06090a9231295e0d378ed67022f751f09b8",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e29fae0e03719dc18169a6df923f93f93d8b43559c46d48059bd06e86b2edca6",
+      "name": "prodigy-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "119A"
+      ],
+      "completion": "draft",
+      "revision": "r-389cf8d1437c4eae",
+      "output_sha256": "3343666c85a03390a4e8f838ca67345ab167b695f052abcc8be3916454c6cc53",
+      "partial_output_sha256": null,
+      "prompt_sha256": "d212e8bcc9bf709cc59fc8dd6a3458110e5477be32b817c3f01c890defeb20d5",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "585f8c036cf6f238e782a789cfa527f0fa4f72e9da1eb5cfc3da2eea6e16cf6b",
+      "name": "crazy-legs-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "121A"
+      ],
+      "completion": "draft",
+      "revision": "r-01346fb22d994bcf",
+      "output_sha256": "973c8e96b9df0533599e82388ae419a98e45bf8b2f063f03fab1c8c3e235ba1c",
+      "partial_output_sha256": null,
+      "prompt_sha256": "04f5b1f178fe5156e88906dd569f3f6077c35b6616f1120ccb47da5e15bfe1f9",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e0701e21c973864669416cd9a7559c4b3b844fca866ee79b6e4e27bafcc7f015",
+      "name": "crazy-legs-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "121A"
+      ],
+      "completion": "draft",
+      "revision": "r-dc2a2b7e67984183",
+      "output_sha256": "3edc1fac2f2f33ef1465ef25bf9ddd908f40c8b073dedaff45d2caeb6271dcd7",
+      "partial_output_sha256": null,
+      "prompt_sha256": "138a09dce180ffc96c599c0f66cee2b112a7511d44dc45ce9894c135478c1f42",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "33c37f8d92a7e1e8e4f1ebf165241e18efdda37dfaf600c03f3dc4f1b7a7d307",
+      "name": "david-banner-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "124A"
+      ],
+      "completion": "partial-study",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": "6664d9bd72e3d06fe99000afe9908f8e8b5350f424445a032b959405b8652ca0",
+      "prompt_sha256": "1e5967240ee22ef09875452de230396b20744096aaf51a4f2fb759af6faf1c44",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5522f5217a8596a5b482d2e391d85b1972e9841e9fa7faef2fc0e57d34a874dd",
+      "name": "david-banner-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "124A"
+      ],
+      "completion": "partial-study",
+      "revision": null,
+      "output_sha256": null,
+      "partial_output_sha256": "ab86056f3cc3db48fdaaeb82fd99399eca346afaf19029fe4937cb2268247b46",
+      "prompt_sha256": "9e3ff1da0f636173d716af6482e4d1cc7288bad685a6c795eaa87a133c47679c",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "6b1cc03c7ff111172453859e8cd05f3b0c2951300ce6d737a6fe86c86b9fe019",
+      "name": "jacob-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "129A"
+      ],
+      "completion": "draft",
+      "revision": "r-9ce88c3c52dd4b17",
+      "output_sha256": "e457077572922445a0f9ea716248391edda8eb8b6b15e4fc13a946df2bdf9d94",
+      "partial_output_sha256": null,
+      "prompt_sha256": "4685eef43c73e0e11a904ca1dadd5c0fe8fb262ead0573bb2acf6d11b2a36b8d",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "ec8acf0d4dfa476c3908c541e680c0603a402c12a10b76e4ed9791ecd463161b",
+      "name": "jacob-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "129A"
+      ],
+      "completion": "draft",
+      "revision": "r-5c0182ae92434622",
+      "output_sha256": "7ec988baa353d614536cb23f9de9f4bc52307c4c90a04d62f635727cddef1b6a",
+      "partial_output_sha256": null,
+      "prompt_sha256": "ec1ccc7c5cce1b6f347c68e20ecc5405b2d5470063af2f6cab0b6049b4874a6c",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "5cf49c2d6486856edebc2f5471489b2f74e12aec9840cc3e77f722b13556e07a",
+      "name": "meca-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "201A"
+      ],
+      "completion": "draft",
+      "revision": "r-08add20f2d3140dd",
+      "output_sha256": "f357b4cb5e70e1b757aabfe2e973fb58cbe820c3f6f9fc23457eec67adeaf8e2",
+      "partial_output_sha256": null,
+      "prompt_sha256": "25b5d3f3f84c8fac82becdb6057d3ec989630a56cebcfc02753a6d2244722106",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "79af032c1f21d275fc79d577c928b28f4523d6ee582d0020434a68ac5a2ce108",
+      "name": "meca-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "201A"
+      ],
+      "completion": "draft",
+      "revision": "r-2848fa74652a4cbf",
+      "output_sha256": "25e7d3b795671a773587ac40c5c2e29293f5dd62e502c8b294583ab3a6718a06",
+      "partial_output_sha256": null,
+      "prompt_sha256": "6517fef570c4ab8992a142335fc153034d838a99e0e5843b59f229c06374e8d4",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "1fb3a8da342cdbfee80cddc2506fdb48c437594d024280946e7fb02db5dd0112",
+      "name": "starks-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "203A"
+      ],
+      "completion": "draft",
+      "revision": "r-a486c8c8dd8f41b1",
+      "output_sha256": "e30b7e0e53a4d798cb9be21bc6c14fb829c3eb86daee333bf9692767a67b512a",
+      "partial_output_sha256": null,
+      "prompt_sha256": "36ab464418f326f1e455968e479281b51fce39d5b32a9389b498babf068067db",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "e153735e28df3d15c6b71f34d1a2856b90cca746e2272d89ca1ff6e4e718b241",
+      "name": "starks-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "203A"
+      ],
+      "completion": "draft",
+      "revision": "r-328d955c3bbf4539",
+      "output_sha256": "17f6f3211bb927e49baecc1eb427604d13932cb7e3ac9841bad546865fe665b5",
+      "partial_output_sha256": null,
+      "prompt_sha256": "144cf27990ca3c3a1cb917518880688d7fe856d364fb41265aea05f0438066ca",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "cef3bee8b3a0ea63bec2250f09adb3e72e19bd544a5cd2895f3a752f91367e8f",
+      "name": "joe-budden-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "302A"
+      ],
+      "completion": "draft",
+      "revision": "r-864f98374d7d4c63",
+      "output_sha256": "3ad6f8e08fe4233a4aae9a114cb0e3a53a59569715f2884da1a5355274300b85",
+      "partial_output_sha256": null,
+      "prompt_sha256": "94ccdfc7c27fbc2d2a40f9b089ab2a1e4e5e00f027cb4a83982db06530e9b2ef",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "7d3330bda7ff2ee4cceb3cc0e93d78d9ac973f6f80c709419cbeb7eb17734ac0",
+      "name": "joe-budden-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "302A"
+      ],
+      "completion": "draft",
+      "revision": "r-25987a1df6ad4d4e",
+      "output_sha256": "a6b1f79c8f7ffbabe772411fe64f6711f20bc9bea4abcc690960d42195434be5",
+      "partial_output_sha256": null,
+      "prompt_sha256": "514a0e67af3b0a8cbdf01108b0e2af2db38bb75f82bbade0e6c09da425dbec7f",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "eda7553a37823957cace5440a8e3b093849a134a53175f8d7d2f9ff383b48aff",
+      "name": "teck-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "305A"
+      ],
+      "completion": "draft",
+      "revision": "r-a66a6497ff1a493f",
+      "output_sha256": "0ee50769a55140ac484fcbb9cbdb996b97df8479d019df1f4fed4d81ac1dffaa",
+      "partial_output_sha256": null,
+      "prompt_sha256": "cf13e2721eb4110a65200e9563299cfb0eeb1a8d523f59ad65c2db380f5212ce",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "421609487065f1f9edf6a98bec05b70aef49bff94fe026f0b62f9a48d7e15b8c",
+      "name": "teck-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "305A"
+      ],
+      "completion": "draft",
+      "revision": "r-37b713e3b4b74f4e",
+      "output_sha256": "6ec3cce0b2f6034ded92a99b3f7401beb116d46cb4a675da1f9e25e1339cadac",
+      "partial_output_sha256": null,
+      "prompt_sha256": "3eddd48b6146a94bd97c42c2d0e9888289a4c3b425e0af5d687de75693faf61a",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "53c6c5ecaa21f660bc809a02b5b9bf48f1309a44ffb2159464027641e19d5a9f",
+      "name": "oe-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "308A"
+      ],
+      "completion": "draft",
+      "revision": "r-6fd3244094c54b64",
+      "output_sha256": "9d1ac8c4649265447691f69418eaa7f143e4a7ba311fd60933f72bf187196a1c",
+      "partial_output_sha256": null,
+      "prompt_sha256": "c6717bc0ad7fb9788f9460e17292f04d83f14a0433f92bc81c49c98a2226fb69",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b6402030951d47d3972ba3a4df98328a13089ffab0ed368b61d971e027c586d0",
+      "name": "oe-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "308A"
+      ],
+      "completion": "draft",
+      "revision": "r-d0660f7971e54fbc",
+      "output_sha256": "6b12877ae07e67edd5ec20f8b94e98926cdf37bae05f3b552ea9a64b5c78d271",
+      "partial_output_sha256": null,
+      "prompt_sha256": "bec235874a8107adc372c343692cb7d55bb14850d8ce0e525e7046813fce3b80",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "de94f3ba075d42ba8e0b0f271fac3cc3507b740a43b185862c772b2f5a0b183a",
+      "name": "havoc-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "118A"
+      ],
+      "completion": "draft",
+      "revision": "r-96333c7062044410",
+      "output_sha256": "c2f8339aabfa6e731802fdd930af91f644eac1db46aa15c4c5291a393b9855d1",
+      "partial_output_sha256": null,
+      "prompt_sha256": "1e36b910236ef2193e6fd942a1e4599ef16d9136e65d42c2eaf6fd9a851215a0",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "27722a34c7ef5a9cf7071aefc61a9463683a491dba5f842860066eebc1c58ec2",
+      "name": "havoc-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "118A"
+      ],
+      "completion": "draft",
+      "revision": "r-4a899bdb128c4880",
+      "output_sha256": "017ec4b55178e49911cbdb557842ff23bb8fe8f7adf5e1b0ba8fc6f19b830f13",
+      "partial_output_sha256": null,
+      "prompt_sha256": "b9415d1c03d8c00ecebed0ede2cd0540831f354e45bc899f609a6efe8f21158c",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "aaa1449cc0047c2aa1bff73127100b10f16fb6da6ded9826fb40753be54df2c9",
+      "name": "fam-lay-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "120A"
+      ],
+      "completion": "draft",
+      "revision": "r-7f06cdb266664da2",
+      "output_sha256": "229e7ed5728c0813c67cffcd42b4ada9d0ce68c4b1b3191afa55dd53430c33ee",
+      "partial_output_sha256": null,
+      "prompt_sha256": "0856d1863a7e99f80d619a5b368d20d95068a53c4acf988b0f2fcc96ca5aa2c2",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "bea07d0f645265749186ee03cec3a00fedf5b5e253f4be026fc014d5ced583ed",
+      "name": "fam-lay-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "120A"
+      ],
+      "completion": "draft",
+      "revision": "r-a74f321684634839",
+      "output_sha256": "b75354e1203feac33c2d596a2d969eddb2066616b9a8349413c8ea35d2bb03d4",
+      "partial_output_sha256": null,
+      "prompt_sha256": "a50fcbd88e4e26880b5cd81526f33744c9abdfe7af9769036db803c833bbc762",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "0d2c345ed90da833c1e2f72461bee3a484690eb9ef840b77865b6d930d6e7ac4",
+      "name": "chris-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "122A"
+      ],
+      "completion": "draft",
+      "revision": "r-d8fde53e08a949e8",
+      "output_sha256": "761c67cace609a9e7dc645b9c16d7ae297cc0e50e24ec765be6b4d96f7f08b82",
+      "partial_output_sha256": null,
+      "prompt_sha256": "a4ad2c64c92d85fe34c1148b61fc035f8d14744f32713012d1dfd6400666c0bb",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "156620fd750f8fcb1c6d8d7272a751738dd830f6f2289bd4f92e7bc7cd0c163c",
+      "name": "chris-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "122A"
+      ],
+      "completion": "draft",
+      "revision": "r-d2de8e9248f8495f",
+      "output_sha256": "368647a7664c8077f89601e89d39ae034263ce372b95eea723c3f669814706b2",
+      "partial_output_sha256": null,
+      "prompt_sha256": "bbab2bfe659c7b25e232e23da3ac5275fab8091d1d3ab87caf2dbf61f9ab5348",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "d6a07ccb35441dc4c8bc486a8359e4e21f22b7df2546239a808d7f557568a75d",
+      "name": "jervis-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "202A"
+      ],
+      "completion": "draft",
+      "revision": "r-1e6548fc71aa4b15",
+      "output_sha256": "016b3d1a5cb5a8fec921b04aeab66df80e6fb4b7c5f82c2401ce17800cba29ce",
+      "partial_output_sha256": null,
+      "prompt_sha256": "f49b8a0ddebe11f748de7f08cff203625a86f51974f1c264c513fc9122e326cf",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "79de205e278a3a5c103132a1813ae367c4cee1d566d24e4296b6ed945031b120",
+      "name": "jervis-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "202A"
+      ],
+      "completion": "draft",
+      "revision": "r-452b1f9f23974d9c",
+      "output_sha256": "8975bb78216e87087e700cd854869b41d60050147c6542077871421f46896316",
+      "partial_output_sha256": null,
+      "prompt_sha256": "b489229ed188c3631f3b1d916a03013a966dd1c1c00a19c68b5f4c160dd960f1",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "b6e1806a4d85155d51d2befd7061b0ac3c4212447995d6b2f89292114209e854",
+      "name": "comp-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "304A"
+      ],
+      "completion": "draft",
+      "revision": "r-2c0c398434694b4c",
+      "output_sha256": "ec881f93c7b5e519af0894819b1728a53489208ca9247d7f8995cfb1692fc4cf",
+      "partial_output_sha256": null,
+      "prompt_sha256": "b82fe3d86ecf8d96cfa5e19c7d6b09b609c7f641fcedb03937a196b506d277a5",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "ba7b9bfaf147007da1d1450c5a677c6487a3c7e67335f34bee261882675afbb4",
+      "name": "comp-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "304A"
+      ],
+      "completion": "draft",
+      "revision": "r-50d8333f2929447f",
+      "output_sha256": "2d81771a660c0123be5c29752d3fdade007cca2f93643f4b8c21471fcea3912a",
+      "partial_output_sha256": null,
+      "prompt_sha256": "2f9df3ec18574b90951295ac87eefc5014759306ba19bd506f27d1355def2568",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "445272fe820b0249e0bb20b156209db92bb1eeca2d5ba774d5f695bba19ef94c",
+      "name": "Magic \u2014 Story injury state B",
+      "role": "fixed main",
+      "stems": [
+        "128B"
+      ],
+      "completion": "draft",
+      "revision": "r-418ae6a9b63a4b47",
+      "output_sha256": "f3a7abf0b74ed8a2018e9b0041eb775f71e1857280530317364705b6e28ea3f5",
+      "partial_output_sha256": null,
+      "prompt_sha256": "c221a5ab83624922d38591e10ab4bc85d204d61c777eda1ff727d2962ed795fa",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "a146ff9aa2e8e15e64ae117d12780d59334b7605195f346ca2c6c084aa467002",
+      "name": "d-mob-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "014A"
+      ],
+      "completion": "draft",
+      "revision": "r-2dbd12465f584516",
+      "output_sha256": "b20e6a0f32164ceddc1c0ee2c9ed9c169314bc51206577922de8ffcfceb1c0ac",
+      "partial_output_sha256": null,
+      "prompt_sha256": "06c39bb43f71f468bb70dcb773f981003ba6e2bf6111289ca67eb3452e2e2693",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "89382ceb688a94004465e17ee484d71f44a9d4250f8ac377b4c5fc4f4647196d",
+      "name": "sean-paul-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "125A"
+      ],
+      "completion": "draft",
+      "revision": "r-dcb352751bd04c15",
+      "output_sha256": "3cbc8b0b057a6c9923654a4933d70a9bd48ee856430e41821721c8b8d36a3124",
+      "partial_output_sha256": null,
+      "prompt_sha256": "87b48da990b013835365fed310e856ee5dcf578792f07af1441f07c501069fab",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "ff45d3912e1e3a24442dd5b3a592f7addf34e6e031143566e12a416170366e7e",
+      "name": "crack-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "106A"
+      ],
+      "completion": "draft",
+      "revision": "r-09084af21a754c1e",
+      "output_sha256": "c6aec6418ce486e33208fbd1e3bf39023509b54b365a18f3fe55a787e0e07596",
+      "partial_output_sha256": null,
+      "prompt_sha256": "1ccfd8a5eb830a00c7f951e564d311de394997325bcffb9031e0c556ba6da342",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "7e168ab07900bb8147807423b7cf673cc8c6c8e3cf38f2b01f29c915d76b2cfd",
+      "name": "lil-flip-br01",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "307A"
+      ],
+      "completion": "draft",
+      "revision": "r-1ed3687cb45444a0",
+      "output_sha256": "ad3ffaa3df61ea12fce2799ab6aa5a1f25e8d71672dfd4a8009c57c9dd1079d7",
+      "partial_output_sha256": null,
+      "prompt_sha256": "84437d3f0db5fb02c07d0e766c5b62b53d5e06b088eabaf8a04101d89e8b25c8",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    },
+    {
+      "source_id": "d9a65f02f75667060c8d0365d775d5fd27b7facce3fd4650aece6ba191de8f8f",
+      "name": "lil-flip-br02",
+      "role": "fixed gameplay injury",
+      "stems": [
+        "307A"
+      ],
+      "completion": "draft",
+      "revision": "r-47d727d4505a44e1",
+      "output_sha256": "a14d5706b6d5fc6959b90464a296d74e4bd379dde08809ad4b42531ba654f6ea",
+      "partial_output_sha256": null,
+      "prompt_sha256": "24f7c5487efd27efe960a2bc9a0b54c30a64d13168975747fd439281cb8d76e9",
+      "approved": false,
+      "selected": false,
+      "game_verified": false
+    }
+  ]
+}

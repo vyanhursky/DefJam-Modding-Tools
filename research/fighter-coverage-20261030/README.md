@@ -7,7 +7,12 @@ resource presence is not proof every resource is used by a reached runtime draw.
 All corpus images already have a Faithful HD enlargement. Remaining below means
 no adopted richer restoration candidate, not a missing file or absent upscale.
 
-## Fixed-fighter core
+Follow-up: the [completion108 pass](../fighters-completion108-20261030/README.md)
+adds94 review drafts. Current fixed-core coverage is199/213;10 rejected sources
+and4 partial studies remain incomplete. The tables below preserve the original
+pre-generation audit snapshot and source-sharing evidence.
+
+## Fixed-fighter core (pre-generation snapshot)
 
 | Source images | Unique total | Restoration drafts | Without restoration |
 |---|---:|---:|---:|

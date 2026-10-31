@@ -96,3 +96,27 @@ native texture identity, state switching, UV treatment, alpha/material response,
 mips and continuity during actual fights. No runtime changes or release are part
 of this art batch. Remind the owner to playtest Bonecrusher when preparing the
 next HD Fighters test pack; visual approval is distinct from native verification.
+
+## Audited palette quantization exception (completion108)
+
+Lil Flip's own maps match the clean head layout but only52.67–55.07% of native
+RGB pixels exactly. Direct face/ear/braid/watch/neck-script inspection and
+81.70–85.56% correspondence within three channel values establish a small palette
+quantization difference, not a warped correspondence. An explicit optional
+`registration_rgb_tolerance=3` permits this case only with at least50% exact and
+80% close RGB pixels. The default remains the strict75% exact gate. Tolerance
+is bounded to integer0..3; it is not proof of correspondence by itself.
+
+The source change mask still uses literal RGB inequality; tolerance never erases
+small original marks. Alpha, holds, clean exterior and detail limits are unchanged.
+The immutable Lil Flip stages pin the private version2 processor and record both
+exact/close fractions. Broadly requantized Story main atlases use separately
+audited full-state correspondence and own RGB deltas; they do not silently relax
+this head-map gate.
+
+Carmen B's shared br01/br02/br03 source visibly has no injuries. Its independent
+head/hair restoration uses original layout and local source palette with actual
+eye/dental/gutter holds, rather than fabricating damage from a misleading name.
+Runtime purpose is unverified. Partial Xzibit/Banner injury-local studies retain
+unenhanced clean material, remain incomplete and are excluded from full-restoration
+counts. See `research/fighters-completion108-20261030/README.md`.

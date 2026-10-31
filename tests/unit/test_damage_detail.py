@@ -52,6 +52,29 @@ class DamageDetailTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'reference crops'):
             restore(*args)
 
+    def test_small_palette_registration_requires_explicit_bounded_opt_in(self):
+        args = self.inputs()
+        state = np.array(args[0]); state[9:, :, 0] += 1
+        args[0] = Image.fromarray(state)
+        args[2] = args[0].resize((64, 64), Image.Resampling.NEAREST)
+        with self.assertRaisesRegex(ValueError, 'registration'):
+            restore(*args)
+        out, report, masks = restore(*args, registration_rgb_tolerance=3)
+        self.assertLess(report['registration_unchanged_rgb_fraction'], .75)
+        self.assertGreaterEqual(report['registration_close_rgb_fraction'], .8)
+        self.assertTrue(masks['source_support'][40, 0])
+        np.testing.assert_array_equal(np.asarray(out)[..., 3],
+                                      np.asarray(args[2])[..., 3])
+
+    def test_palette_opt_in_does_not_accept_large_changes_or_unbounded_tolerance(self):
+        args = self.inputs(); state = np.array(args[0]); state[9:, :, 0] += 20
+        args[0] = Image.fromarray(state)
+        with self.assertRaisesRegex(ValueError, 'registration'):
+            restore(*args, registration_rgb_tolerance=3)
+        for invalid in (4, -1, True, 1.5):
+            with self.assertRaisesRegex(ValueError, 'tolerance'):
+                restore(*self.inputs(), registration_rgb_tolerance=invalid)
+
 
 if __name__ == '__main__':
     unittest.main()

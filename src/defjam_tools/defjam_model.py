@@ -84,6 +84,24 @@ FIGHTERS = {
     'd-mob-c': ('D-Mob — Costume C', 'V2IP_014C', 'e25435681ff9a692bf052051fd1bc04de5dbb07cf88d0ad299db0a3f9b0bff42'),
     'blaze-b': ('Blaze — Costume B', 'V2IP_113B', 'df031556e345c259b1d1c0ce054a04eda28fc96b356e849c3af3cd116236e52b'),
     'sticky-fingaz-b': ('Sticky Fingaz — Costume B', 'V2IP_114B', '7a0450588f199e1d379890739bbaafae99d00e20210d62883a4809a516dcfd58'),
+    'house': ('House', 'V2IP_003A', '93256b656fae07299bd850194894daa21b6dfe2fea12a06bbc0f183c93395bfb'),
+    'bo': ('Bo', 'V2IP_012A', '219a7ab28c2db0e729c73fe94292ebce24df12352687a099334ea3055f9726b0'),
+    'lil-flip': ('Lil Flip', 'V2IP_307A', '0f8ff17c1df8fa85c4f5a0ba66d1351cb2a489aa27cbf80ed88a136cde459a6f'),
+    'david-banner': ('David Banner', 'V2IP_124A', 'b01045e0decbb534592cc6378412496742b00f2ae135e31b35763b3fbf793ef0'),
+    'xzibit': ('Xzibit', 'V2IP_115A', '93a8060dcf706b6328f124a58073c335313ba022bbdc9047f7a1596bf95b6d25'),
+    'santos': ('Santos', 'V2IP_204A', '17f6a830532cc2e3346b6f76b1d828a63070c2c8a850fef8bd47a15c5e9668fa'),
+    'suspect': ('Suspect / Shadowy Figure', 'V2IP_501A', '9910286b7f5203dd4e027f9070425a05d0abfa76eb4fa67714bf0d56a2cd43d6'),
+    'blaze-c': ('Blaze — Story injury state C', 'V2IP_113C', '2ea9a0b3e28beed974042c06ae30fb478e759bd1a736e92690205f1f953e3075'),
+    'carmen-electra-b': ('Carmen Electra — State B', 'V2IP_401B', '1916eac6bcb3a1fcc183ba0be464bf385275543dcab889eb2ae7512809433d08'),
+    'd-mob-d': ('D-Mob — Story injury state D', 'V2IP_014D', '0c65cd13d0cdf44b9c4b1af78f884629eb93a5696a1fd4eea0601674646199b2'),
+    'magic-b': ('Magic — Story injury state B', 'V2IP_128B', '445272fe820b0249e0bb20b156209db92bb1eeca2d5ba774d5f695bba19ef94c'),
+}
+
+# Only these static resources live in a nested cinematic archive. Existing
+# gameplay source routes and decoder semantics remain unchanged.
+MODEL_ARCHIVES = {
+    "d-mob-d": ("assets/v2ip_cin.viv", "assets/V2IP_014D.viv"),
+    "magic-b": ("assets/v2ip_cin.viv", "assets/V2IP_128B.viv"),
 }
 
 
@@ -380,6 +398,24 @@ def make_glb(model, image, revision="original"):
             struct.pack("<II", len(binary), 0x004e4942) + binary)
 
 
+def source_model(dump, fighter):
+    """Read exactly one registered own-dump model, including nested Story VIVs."""
+    _, stem, _ = FIGHTERS[fighter]
+    route = MODEL_ARCHIVES.get(fighter, ("assets/v2ip.viv",))
+    raw = (Path(dump) / route[0]).read_bytes()
+    source = route[0]
+    for member in (*route[1:], stem + ".o"):
+        matches = [blob for name, blob in archive_entries(raw)
+                   if name.casefold() == member.casefold()]
+        if len(matches) != 1:
+            raise ModelError("Fighter member not unique: " + member)
+        raw = matches[0]
+        if int.from_bytes(raw[:2], "big") & 0x3eff == 0x10fb:
+            raw = unpack_refpack(raw)
+        source += "::" + member
+    return raw, source
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dump", type=Path, required=True)
@@ -393,14 +429,9 @@ def main():
     if dest.is_relative_to(source_tree):
         ap.error("Derived models must live outside the source tree")
     name, stem, ident = FIGHTERS[args.fighter]
-    archive = (args.dump / "assets/v2ip.viv").read_bytes()
-    matches = [raw for member, raw in archive_entries(archive) if member.lower() == (stem + ".o").lower()]
-    if len(matches) != 1:
-        raise ModelError("Fighter member not unique")
-    raw = matches[0]
-    if int.from_bytes(raw[:2], "big") & 0x3eff == 0x10fb: raw = unpack_refpack(raw)
+    raw, source_member = source_model(args.dump, args.fighter)
     model = decode(raw, name, ident)
-    model["source_member"] = "assets/v2ip.viv::" + stem + ".o"
+    model["source_member"] = source_member
     image = (args.corpus / "originals" / (ident + ".png")).read_bytes()
     glb = make_glb(model, image)
     dest.mkdir(parents=True, exist_ok=True)

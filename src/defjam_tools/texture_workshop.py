@@ -38,7 +38,7 @@ PILOT = {
     "v2ip_113a.xsh": ("Blaze", "Battle", True),
 
     'v2ip_113b.xsh': ('Blaze', 'Costume B', True),
-    "v2ip_113c.xsh": ("Blaze", "Bloody Blaze", False),
+    "v2ip_113c.xsh": ("Blaze", "Story injury state C", True),
     "v2ip_009a.xsh": ("Nyne", "Main", True),
     "v2ip_112a.xsh": ("Trejo", "Main", True),
     'v2ip_014a.xsh': ('D-Mob', 'Main', True),
@@ -100,6 +100,21 @@ PILOT = {
     'v2ip_014b.xsh': ('D-Mob', 'Costume B', True),
     'v2ip_014c.xsh': ('D-Mob', 'Costume C', True),
     'v2ip_114b.xsh': ('Sticky Fingaz', 'Costume B', True),
+    'v2ip_003a.xsh': ('House', 'Main', True),
+    'v2ip_012a.xsh': ('Bo', 'Main', True),
+    'v2ip_307a.xsh': ('Lil Flip', 'Main', True),
+    'v2ip_124a.xsh': ('David Banner', 'Main', True),
+    'v2ip_115a.xsh': ('Xzibit', 'Main', True),
+    'v2ip_204a.xsh': ('Santos', 'Main', True),
+    'v2ip_402a.xsh': ('Shaniqua', 'Main', True),
+    'v2ip_501a.xsh': ('Suspect / Shadowy Figure', 'Main', True),
+    'v2ip_126b.xsh': ('Crow', 'Costume B / Story E', True),
+    'v2ip_126e.xsh': ('Crow', 'Costume B / Story E', True),
+    'v2ip_401b.xsh': ('Carmen Electra', 'State B', True),
+    'v2ip_403b.xsh': ('Cindy J', 'State B', True),
+    'v2ip_014d.xsh': ('D-Mob', 'Story injury state D', True),
+    'v2ip_126d.xsh': ('Crow', 'Story state D', True),
+    'v2ip_128b.xsh': ('Magic', 'Story injury state B', True),
 }
 
 

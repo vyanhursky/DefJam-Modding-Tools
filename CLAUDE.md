@@ -96,6 +96,17 @@ missing decisions and preserve an active review session during changes.
   outfit/Story states, injury maps, shared materials and created-player dependencies.
   Count source IDs, not aliases; core213 is not an all-material grandtotal. Read
   research/fighter-coverage-20261030/README.md before choosing more work.
+  Owner then requests finishing all108 remaining fixed-core texture IDs before
+  final review and separate1.0 HD Fighters packaging approval. New108 outputs
+  stay unapproved/unselected/not native verified; no pack/push authorization yet.
+  Parallel disjoint private art workers are allowed; root is sole live importer.
+  Preserve failed requests honestly; technical continuity studies are distinct
+  from new generated injury detail and never a false completed-restoration claim.
+  Completion pass staged94unreviewed drafts,4privatepartial studies,10refusals;
+  14sources remain incomplete. Preserve failures; no silent retries/providerchange.
+  Live viewer76models;4additionalatlases2Donly,blockedmainsoriginalpreviewonly.
+  Seven immutable main receipts have a malformed editable_hair_groups metadata
+  field; actual pinned masks/plans/geometry/override define scope. Keep errata.
   Bonecrusher reminder remains NEXT pack.
   The earlier Rollins whole-atlas moderation failures and v5A/v5B studies are
   retained as history; final v6 used successful regional art/material inputs.
@@ -128,7 +139,7 @@ missing decisions and preserve an active review session during changes.
   deliberately with setup tests; do not maintain independent evolving copies.
 - New corpus builds fingerprint code and may produce a new recipe identity.
   Reading an existing corpus/workspace must not change it.
-- Model viewer supports 65static outfit previews covering61fighters: the accepted
+- Model viewer supports76static outfit/state previews (65prior+11new): the accepted
   five plus D-Mob, Sticky Fingaz, Ludacris, Ice-T, Crow, Sean Paul, Crack,
   Flava Flav, WC, Warren G, Freeway, Magic, Bonecrusher, Bubba Sparxxx, Capone,
   N.O.R.E., Mack 10, Scarface, Elephant Man, Bless, Havoc, Fam-Lay, Slick Rick,
@@ -136,6 +147,9 @@ missing decisions and preserve an active review session during changes.
   Trick, Skull, Solo, Chiang, Masa, Baxter, Rome, Snowman and Stingray; plus Cruz,
   Meca, Kimora, Shawnna, Cindy J, Carmen Electra, Lauren, Teck, Dan-G, Baby Chris,
   Ghostface Killah, Joe Budden, Jervis, Lil Kim, Manny, Prodigy and the four costumes.
+  Completion108 adds House, Bo, Lil Flip, David Banner, Xzibit, Santos, Suspect,
+  Blaze C, Carmen B, D-Mob D and Magic B. Blocked mains have original previews
+  only; Shaniqua/Cindy B/Crow B/D remain2D due strict source normal validation.
   Preserve source geometry/UVs/normals/material partitions; label lighting
   approximations and omitted effects. No rig, venue or game reimport claim.
 - Read-only independent investigations can be delegated while the main agent
