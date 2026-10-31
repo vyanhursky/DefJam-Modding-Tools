@@ -2,6 +2,19 @@
 
 ## Current status
 
+**2026-10-30 — Combined menu pack native assembly.** Vlad approved the final four
+held corrections and requested the combined release, exact size before Cloudflare
+upload, and all necessary PRs. `menu_native` adds shared-master registration,
+byte-exact material splits, proven repeated gutters, per-glyph cell registration
+and protected opaque RGB127 marks. Five synthetic tests cover joins, unrelated
+pixels, guards, layout and data preservation; full suite now 88 tests / 12 subtests
+passes. The private game candidate registers 95 glyphs and retains native 4×
+canvases; two existing 4× review references use scale 1. No new artwork generation,
+workspace migration or live 8768 cutover. See [registration procedure](docs/menu-native-registration.md).
+Release packaging, final native validation and exact-size approval remain in the
+game checkout; Cloudflare upload/signing is not authorized until the owner reviews
+that final artifact. This source change is for existing PR1; milestone v0.12.2.
+
 **2026-10-30 — Verified lossless PNG staging command (local, not pushed).**
 Vlad requested a menu/UI compression experiment and reusable procedure.
 `defjam-tools optimize-png` writes a fresh private PNG tree using Oxipng 10.2.1

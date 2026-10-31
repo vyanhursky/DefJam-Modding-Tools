@@ -58,6 +58,9 @@ Static mesh export has no rig, animation or game mesh replacement path. Lighting
 is approximate. Venue decoding is future work. Optional legacy audition commands
 retain their original platform/tool requirements, including CUDA for SwinIR.
 
+See [native menu registration](docs/menu-native-registration.md) for source-shaped
+atlas export, shared-master joins, glyph cells and protected runtime marks.
+
 ## Lossless pack compression
 
 Use `defjam-tools optimize-png --input /private/native-pack --out /private/new-png-stage`
