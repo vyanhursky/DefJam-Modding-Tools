@@ -2,6 +2,31 @@
 
 ## Current status
 
+**2026-10-30 — Verified lossless PNG staging command (local, not pushed).**
+Vlad requested a menu/UI compression experiment and reusable procedure.
+`defjam-tools optimize-png` writes a fresh private PNG tree using Oxipng 10.2.1
+(`-o4 --nx --interlace keep`, no alpha optimization or metadata stripping).
+Exact decoded RGBA (including hidden RGB), all non-IDAT chunks, input hashes and
+output writes are verified. Originals are retained for non-improvements/failures;
+APNG/16-bit inputs are explicitly skipped. Symlinks, unsafe paths, case collisions
+and existing/overlapping output trees are rejected. Per-file JSON receipts stay
+private. No live 8768 writer, corpus, raw master or game package changed.
+
+Full results: 1,704 published PNGs **682,774,940 → 573,469,182 bytes (16.01%)**;
+949 approved review crops **648,007,579 → 574,491,068 bytes (11.35%)**. Both passed
+exact RGBA/metadata verification with zero failures/skips. ZIP payload saving:
+108,045,093 bytes (15.90%); projection only, no archive/catalogue publication.
+Four fresh raw imagegen PNGs were retained unchanged when Oxipng dropped their
+caBX provenance chunks. Keep raw masters immutable; optimize final native exports.
+
+Validation: 16 focused tests, including real Oxipng; full suite 83 tests and
+12 subtests pass. Two sandbox localhost failures passed with host access.
+Wheel includes the exact module; source policy check: 475 files, zero failures.
+See [procedure and measurements](docs/lossless-png.md). Next: owner review of four
+new corrections, native atlas/UV/alpha/gutter validation, then optimization and
+new archive/catalogue hashes/signatures. This tools change does not migrate any
+workspace or change a frozen runtime/setup core.
+
 **2026-10-27 — Public repository approved and enabled.** Vlad explicitly authorized
 making DefJam-Modding-Tools public for community access. GitHub visibility is now
 PUBLIC; anonymous API and main-branch texture/model guide requests return HTTP200.

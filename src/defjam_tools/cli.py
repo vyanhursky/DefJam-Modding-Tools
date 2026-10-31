@@ -15,6 +15,7 @@ COMMANDS = {
     "corpus": "hd_corpus",
     "audition": "hd_review",
     "swinir": "hd_swinir_review",
+    "optimize-png": "png_optimize",
 }
 
 
@@ -61,7 +62,7 @@ def main(argv=None):
     default = os.environ.get("DEFJAM_TOOLS_PROFILE") or ("local.json" if Path("local.json").is_file() else None)
     ap.add_argument("--profile", type=Path, default=default, help="Private JSON paths; defaults to local.json or DEFJAM_TOOLS_PROFILE")
     ap.add_argument("--version", action="version", version="%(prog)s 0.1.0")
-    ap.add_argument("command", choices=COMMANDS, help="serve: resume gallery; workshop: import/export; model: private GLB; color-trial: private palette/seam drafts; assets/corpus: extraction; audition/swinir: optional legacy tools")
+    ap.add_argument("command", choices=COMMANDS, help="serve: resume gallery; workshop: import/export; model: private GLB; color-trial: private palette/seam drafts; assets/corpus: extraction; optimize-png: verified lossless copies; audition/swinir: optional legacy tools")
     ap.add_argument("arguments", nargs=argparse.REMAINDER)
     args = ap.parse_args(argv)
     try:

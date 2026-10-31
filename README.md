@@ -58,6 +58,13 @@ Static mesh export has no rig, animation or game mesh replacement path. Lighting
 is approximate. Venue decoding is future work. Optional legacy audition commands
 retain their original platform/tool requirements, including CUDA for SwinIR.
 
+## Lossless pack compression
+
+Use `defjam-tools optimize-png --input /private/native-pack --out /private/new-png-stage`
+to make smaller copies with exact RGBA and PNG metadata verification. See the
+[procedure and release checks](docs/lossless-png.md). Inputs and artwork masters
+stay unchanged; the output contains PNGs plus a receipt, not an installable pack.
+
 ## Development
 
 ```sh
