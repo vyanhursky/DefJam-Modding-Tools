@@ -2,6 +2,27 @@
 
 ## Current status
 
+2026-10-31 long-term integration review completed (no implementation/merge/push).
+Recommendation: curated authoring integration, then portable job/pack APIs and
+separate catalogue publishing automation. Preserve source-only historical recipes;
+local neural stays experimental. Fix archive filters changing saved comparisons,
+consolidate duplicated inventories and refresh stale docs before merging UX.
+Preserve currentmain losslessPNG/menu-native features; use a separate integration
+worktree, no live cutover. Evidence/PR scope:
+docs/research/tools-integration-review-20261031.md. Three bounded independent
+read-only reviews retained under ignored docs/worklog/tooling-integration-review-20261031/.
+
+
+2026-10-31 remote tooling audit: origin/main=f1477e3 (menu PR1 merged), includes
+core modelviewer and detail camera presets. Fighter branch338bbf0 contains23
+commits absent frommain;22 are not pushed (remote fighterbranch=f7722cc). No
+fighter integrationPR exists. Later decoder/review/material/region/injury tools,
+prompts and1.0builder are committed locally, not merged. R2upload and managed
+releaseverification runners remain private release recipes; should be generalized
+source-only before claiming all reusable release tooling captured. No integration
+or push performed for this status question; live viewer/workspace untouched.
+
+
 **2026-10-31: HD Fighters1.0.0 published stable and fresh-install verified.**
 Owner approved Xzibit's whole-original ImageGen result and all accepted fighter
 work for1.0, then explicitly authorized Cloudflare/catalogue publication.
