@@ -1,0 +1,77 @@
+FIGHTER RESTORATION — MANUAL PROMPT TEMPLATES
+
+Fill every bracket before submission. Keep actual submitted text privately with
+the inputs/raw output. Coordinates and hold masks come from that fighter's UVs.
+
+PRIMARY RESTORATION
+Use case: identity-preserve
+Asset type: [fighter/outfit] game UV texture [atlas/crop], Rich Original Detail.
+Input1: edit target, exact current accepted [revision/hash].
+Input2: original/Faithful source of the same region, layout/palette authority.
+Additional references: [specific detail and role, or none].
+Restore only [explicit coverage]. Required focal details: [each chest logo,
+script, pendant/clock, tattoo or prop, individually named; all repeated,
+rotated/mirrored copies and disconnected front/back UV fragments]. Reconstruct visible
+high-resolution feature detail; preserve design and placement, not pixel blur.
+Do not leave a named feature low-resolution because it contains lettering.
+Existing readable marks that MUST survive: [cap digits, garment words, repeated
+copies and any other source-confirmed inscriptions]. Keep all digits/letters at
+their source scale, spacing and seam positions; do not erase them while adding
+fabric detail. Prop identity: [actual observed figurine/watch/emblem], separately
+from any neighboring lettered jewelry tile. Do not substitute a different prop.
+Retain the original game's illustrated look,
+with slightly more realistic skin/hair and clear fine material detail.
+Keep every UV island's shape, position, orientation and scale, the same framing,
+likeness, expression, anatomy and baked lighting. Keep original broad skin hue,
+garment color and restrained contrast; no warmer skin or brighter clothing.
+Improve [observed pores/hair strands/fabric weave/seams/laces/engraving/ink edges].
+Exact source inscription: [verbatim text and original handwriting path/location].
+Uncertain detail: [only the specific undecipherable marks to hold; no invented
+lettering]. If uncertainty blocks a whole logo/prop, flag that feature PENDING
+and request a dedicated crop/reference pass; do not call the feature restored.
+Preserve tattoo silhouettes and existing animal/tree/line positions. Clarifying
+detail must not redesign a tattoo or change the source handwriting geometry.
+Hold [actual verified tiles/regions and approved parent areas]. Alpha is restored
+from source during assembly. Output the same flat atlas/crop; no render, montage,
+new objects, island rearrangement, labels, borders or watermark.
+
+LOCAL REVISION
+Use case: precise-object-edit
+Input1: current accepted [fighter/revision] region, edit target.
+Input2: original matching region, layout/palette authority.
+Change only [specific defect] within [verified region]. Preserve [already accepted
+details] exactly in design and position. Match existing source hue and shading.
+Keep [tattoo silhouettes/script paths/UV edges/likeness] unchanged. Restore
+[specific missing material detail] without adding other designs or lettering.
+Return the identical crop layout. Assembly will hold every parent pixel outside
+the verified edit mask and preserve material alpha exactly.
+
+FOCUSED LOGO / SCRIPT / PROP PASS
+Input1: current accepted crop; Input2: original matching crop, design authority.
+Reconstruct [named feature] with visibly sharper [ink/embroidery/dial/metal]
+detail. Verbatim known text: [exact spelling, line breaks and split UV islands].
+Keep the source feature bounds, typography paths, relative positions, scale,
+hand angles/tick placements, muted palette and baked shading. Preserve design,
+not the old pixel blur. Do not redesign, move, widen, merge UV islands or guess
+new words/brands. Hold only [small undecipherable marks], not the whole feature.
+Treat every split UV fragment as required; restore them consistently so the
+assembled design has no half-old/half-new boundary. Keep their source geometry.
+All accepted surrounding material/face/skin stays locked during masked assembly.
+Return the same crop framing, without a render, comparison or labels.
+
+REFERENCE RECORD (PRIVATE, PER FIGHTER)
+fighter / outfit / source_id / original_sha256 / faithful_sha256
+parent_revision / parent_sha256 / geometry_sha256
+inputs with roles + hashes / exact submitted prompt / output or error
+named focal-feature inventory with source/crop bounds + final detail comparison;
+every disconnected/repeated/rotated fragment + assembled Front/Back inspection;
+required feature restored/pending/owner-accepted-held (with exact reason)
+per-region coverage: head, hair, headwear, torso, arms/tattoos, garments, shoes,
+jewelry, eyes/mouth; restored/held/missing/blocked/pending + reason
+known text + source / uncertain detail + owner decision
+source feature survives final assembly: legible marks/prop identity, not just
+changed pixels; matching photo/video evidence for any interpreted tattoo words
+actual edit masks / paired seam evidence / palette diagnostics
+processor hashes + parameters / output_sha256 / child revision
+displayed left/right IDs / visual acceptance / unresolved notes
+channel/face checks / pack selection / native test / publication version

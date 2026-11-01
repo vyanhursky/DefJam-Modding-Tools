@@ -16,3 +16,9 @@ It is a manual prompt scaffold; the workshop queue does not automatically append
 The [approved skyline recipe and production gates](../docs/menu-art-workflow.md) retain the exact accepted workflow, failure cases and approval scope.
 
 - [Menu logo/emblem restoration](menu-logo-emblem-restoration.txt): source-faithful canvas, lettering, transparency and protected assembly.
+
+[Fighter templates](../docs/fighter-restoration-prompts.txt) cover full restoration,
+local repairs and named logos/props, including disconnected UV fragments. These
+are manual scaffolds; the gallery does not append them automatically. Include
+face/hair restoration explicitly in the job scope while preserving likeness and
+source skin/clothing color. Prompts do not replace technical alpha/hold masks.

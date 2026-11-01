@@ -17,12 +17,12 @@ import struct
 from PIL import Image
 from .hd_assets import archive_entries, unpack_refpack, MAX_BLOB
 
-VERSION = 1
-FIGHTERS = {
-    "trejo": ("Trejo", "V2IP_112A", "1900051b32443a33a745c088a08231d039d80c9eb96483f4b43456a2a3f68f24"),
-    "blaze": ("Blaze", "V2IP_113A", "5c9b3229151c2853656113a8df7e3f91effdef5ae68c9bdd567e5a71bbe9c91a"),
-    "nyne": ("Nyne", "V2IP_009A", "a25c4fdd4998993c94d18ad0f5169c7ad6e6b898c711482777303c7ba3a18517"),
-}
+VERSION = 2
+from .fighter_catalog import FIGHTERS, MODEL_ARCHIVES, preview_omission
+
+# Only these static resources live in a nested cinematic archive. Existing
+# gameplay source routes and decoder semantics remain unchanged.
+
 
 
 def sha(raw):
@@ -133,6 +133,28 @@ def triangles_from_strip(strip, count):
     return out
 
 
+def index_stream(e, at, vertex_count, first_vertex_array):
+    """Read the two audited strip layouts after an animation-buffer binding.
+
+    Long layout: one draw-count entry, total indices, index pointer.
+    Direct layout: index count/pointer, followed immediately by vertex fields.
+    Verify those vertex fields to reject arbitrary or multi-draw layouts rather
+    than interpreting unknown parameter bytes as index data.
+    """
+    tag=e.u(at+4)
+    if tag==1:
+        n,ip=e.u(at+12),e.ptr(at+16)
+        if e.u(e.ptr(at+8))!=n:
+            raise ModelError("Unsupported index header")
+    else:
+        n,ip=tag,e.ptr(at+8)
+        if e.u(at+12)!=vertex_count or e.ptr(at+16)!=first_vertex_array:
+            raise ModelError("Unsupported direct index header")
+    if not 3<=n<=1_000_000:
+        raise ModelError("Invalid index count")
+    return list(e.unpack("<"+str(n)+"H",ip))
+
+
 def decode(blob, name, source_id):
     e = ElfData(blob)
     vb = {}
@@ -174,6 +196,15 @@ def decode(blob, name, source_id):
         if parent == "ParentRM_DJFXSparkle_Skin" or label == "Direction":
             skipped.append(dict(group=label, rm=number, reason="Point-sprite sparkle" if "Sparkle" in parent else "Untextured direction helper"))
             continue
+        textures={match[1] for _,ref in refs
+                  if (match:=re.search(r"^__EAGL::TAR:::.*;SHAPENAME=([^;]+);",ref))}
+        omission=preview_omission(label,textures,source_id)
+        if omission:
+            skipped.append(dict(group=label,rm=number,texture_ref=omission['texture_ref'],
+                                reason=omission['reason'],limitation=omission['limitation']))
+            continue
+        if len(textures)>1:
+            raise ModelError("Ambiguous primary texture binding")
         if parent not in ("ParentRM_IrradTexture_Skin", *("ParentRM_DJIrradTextureEnvmap_Skin" + str(i) for i in range(1, 5))):
             raise ModelError("Unsupported material shader: " + parent)
         state = next((s for _, s in refs if "SetPrimitiveType=" in s), "")
@@ -203,10 +234,7 @@ def decode(blob, name, source_id):
         if len(animation) != 1:
             raise ModelError("Expected one animation-buffer binding")
         at = animation[0]
-        n, ip = e.u(at + 12), e.ptr(at + 16)
-        if n > 1_000_000 or e.u(at + 4) != 1 or e.u(e.ptr(at + 8)) != n:
-            raise ModelError("Unsupported index header")
-        indices = triangles_from_strip(list(e.unpack("<" + str(n) + "H", ip)), count)
+        indices = triangles_from_strip(index_stream(e, at, count, arrays[0]), count)
         for i in range(0, len(indices), 3):
             indices[i], indices[i + 1] = indices[i + 1], indices[i]
         if not indices or any(not math.isfinite(v) or abs(v) > 10000 for a in positions + uv for v in a):
@@ -215,14 +243,17 @@ def decode(blob, name, source_id):
         # once for glTF CCW; keep coordinates and top-left UV convention.
         meshes.append(dict(name=label + " / RM" + str(number), group=label, rm=number,
                            positions=positions, uv=uv, normals=normals, colors=colors,
-                           indices=indices, transparent="_ALPHA" in label))
+                           indices=indices, transparent="_ALPHA" in label or any("ABM_BLEND" in ref for _,ref in refs)))
+        if textures:meshes[-1]['texture_ref']=next(iter(textures))
     all_pos = [p for m in meshes for p in m["positions"]]
+    if not all_pos:raise ModelError("No retained primary-atlas meshes")
     bounds = [[min(p[i] for p in all_pos) for i in range(3)], [max(p[i] for p in all_pos) for i in range(3)]]
     return dict(schema=1, decoder=VERSION, name=name, source_id=source_id, source_sha256=sha(blob),
                 meshes=meshes, bounds=bounds, skipped=skipped,
                 vertices=len(all_pos), triangles=sum(len(m["indices"]) // 3 for m in meshes),
                 limitations=["Static source rest pose; no animation or rig export", "Unlit RGB reference; studio lighting is approximate",
-                             "Game specular/irradiance shaders and sparkle effects are not reproduced"])
+                             "Game specular/irradiance shaders and sparkle effects are not reproduced"]+
+                            list(dict.fromkeys(s['limitation'] for s in skipped if 'limitation' in s)))
 
 
 def make_glb(model, image, revision="original"):
@@ -281,6 +312,24 @@ def make_glb(model, image, revision="original"):
             struct.pack("<II", len(binary), 0x004e4942) + binary)
 
 
+def source_model(dump, fighter):
+    """Read exactly one registered own-dump model, including nested Story VIVs."""
+    _, stem, _ = FIGHTERS[fighter]
+    route = MODEL_ARCHIVES.get(fighter, ("assets/v2ip.viv",))
+    raw = (Path(dump) / route[0]).read_bytes()
+    source = route[0]
+    for member in (*route[1:], stem + ".o"):
+        matches = [blob for name, blob in archive_entries(raw)
+                   if name.casefold() == member.casefold()]
+        if len(matches) != 1:
+            raise ModelError("Fighter member not unique: " + member)
+        raw = matches[0]
+        if int.from_bytes(raw[:2], "big") & 0x3eff == 0x10fb:
+            raw = unpack_refpack(raw)
+        source += "::" + member
+    return raw, source
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dump", type=Path, required=True)
@@ -294,14 +343,9 @@ def main():
     if dest.is_relative_to(source_tree):
         ap.error("Derived models must live outside the source tree")
     name, stem, ident = FIGHTERS[args.fighter]
-    archive = (args.dump / "assets/v2ip.viv").read_bytes()
-    matches = [raw for member, raw in archive_entries(archive) if member.lower() == (stem + ".o").lower()]
-    if len(matches) != 1:
-        raise ModelError("Fighter member not unique")
-    raw = matches[0]
-    if int.from_bytes(raw[:2], "big") & 0x3eff == 0x10fb: raw = unpack_refpack(raw)
+    raw, source_member = source_model(args.dump, args.fighter)
     model = decode(raw, name, ident)
-    model["source_member"] = "assets/v2ip.viv::" + stem + ".o"
+    model["source_member"] = source_member
     image = (args.corpus / "originals" / (ident + ".png")).read_bytes()
     glb = make_glb(model, image)
     dest.mkdir(parents=True, exist_ok=True)

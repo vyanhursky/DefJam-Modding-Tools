@@ -1,3 +1,4 @@
+import {visibleCandidates, chooseRevision} from '/revision_choices.js';
 'use strict';
 const $ = id => document.getElementById(id);
 const state = {config:null, asset:null, target:'asset', review:null, page:0, total:0,
@@ -111,25 +112,29 @@ async function refreshCatalog(){
 }
 async function openAsset(ident,options={}){return exclusive(()=>loadAsset(ident,options));}
 async function loadAsset(ident,options={}){
-  await flush();const a=await api('/api/asset/'+ident);state.asset=a;state.pan=options.pan||[0,0];
-  $('empty').hidden=true;$('detail').hidden=false;$('asset-kicker').textContent=a.fighter?'PILOT / '+a.fighter.toUpperCase():a.browse_categories[0].toUpperCase();
+  await flush();const pinnedParent=state.asset?.id===ident?$('import-parent').value:'';
+  const a=await api('/api/asset/'+ident);state.asset=a;state.pan=options.pan||[0,0];
+  $('empty').hidden=true;$('detail').hidden=false;$('asset-kicker').textContent=a.fighter?'FIGHTER / '+a.fighter.toUpperCase():a.browse_categories[0].toUpperCase();
   $('asset-title').textContent=a.label;$('asset-meta').textContent=a.width+' × '+a.height+' source · '+a.candidates.length+' candidate revisions';
   $('source-size').textContent=a.width+' × '+a.height+' · original pixels';
   $('original-link').href=a.original;$('faithful-link').href=a.faithful;
   const reviewSelect=$('review-target');reviewSelect.replaceChildren(new Option('Texture / original','asset'));
   const parent=$('import-parent');parent.replaceChildren(new Option('Original / faithful baseline',''));
-  for(const c of a.candidates){reviewSelect.add(new Option(c.label,c.id));parent.add(new Option(c.label,c.id));}
-  for(const style of ['faithful','remaster']){const select=$('candidate-'+style),items=a.candidates.filter(c=>c.style===style);
+  const visible=visibleCandidates(a.candidates,{showArchived:$('show-history').checked,
+    pinned:[...Object.values(options.lanes||state.lanes),options.target,pinnedParent]});
+  for(const c of visible){const label=c.label+(c.review.tags?.includes('archived')?' · archived':'');reviewSelect.add(new Option(label,c.id));parent.add(new Option(label,c.id));}
+  if(pinnedParent)parent.value=pinnedParent;
+  for(const style of ['faithful','remaster']){const select=$('candidate-'+style),items=visible.filter(c=>c.style===style);
     select.replaceChildren(new Option(items.length?'Choose revision':'No candidate imported',''));
     for(const c of [...items].reverse())select.add(new Option(c.label+(c.review.selected?' · selected':''),c.id));
-    const wanted=options.lanes?.[style]||state.lanes[style];state.lanes[style]=items.some(c=>c.id===wanted)?wanted:(items.at(-1)?.id||'');select.value=state.lanes[style];
+    const wanted=options.lanes?.[style]??state.lanes[style];state.lanes[style]=chooseRevision(items.map(c=>c.id),wanted,items.filter(c=>!c.review.tags?.includes('archived')).at(-1)?.id||'');select.value=state.lanes[style];
   }
   $('source-info').textContent='Original source ID: '+a.id+'\nDecoded ID: '+(a.decoded_id||'unavailable')+'\n\n'+
     a.aliases.map(r=>r.source+' [slot '+r.index+', '+r.name+']').join('\n')+'\n\n'+
     a.candidates.map(c=>c.label+' · '+c.style+' · '+c.width+'×'+c.height+'\nRevision '+c.id+'\nSHA-256 '+c.sha256+'\nParent '+(c.parent||'original/baseline')+'\n'+
       (c.assembly?'Assembly: raw '+c.assembly.raw_size.join('×')+' → '+c.width+'×'+c.height+'; baseline alpha '+(c.assembly.preserve_alpha?'restored':'not restored')+'; '+c.assembly.protected_regions.length+' protected region(s) copied exactly.\n'+
         (c.assembly.edited_regions?.length?'Regional revision: '+c.assembly.edited_regions.length+' edit box(es); remaining pixels retained from parent, with the explicit baseline alpha/protection above.\nParent SHA-256 '+c.assembly.parent_sha256+'\n':'')+'Raw SHA-256 '+c.assembly.raw_sha256+'\n':'')+c.prompt).join('\n\n');
-  setReview(options.target||'asset');await loadImages();
+  setReview(visible.some(c=>c.id===options.target)?options.target:'asset');await loadImages();
   document.querySelectorAll('.asset-card').forEach(b=>b.classList.toggle('active',b.dataset.asset===ident));
 }
 async function loadImages(){
@@ -182,6 +187,8 @@ $('region-dialog').addEventListener('close',()=>{if($('region-dialog').returnVal
 $('mark-region').onclick=()=>{state.marking=!state.marking;$('mark-region').setAttribute('aria-pressed',String(state.marking));draw();};
 $('reset-view').onclick=()=>{state.pan=[0,0];$('zoom').value='fit';draw();saveSession();};
 for(const id of ['zoom','background'])$(id).onchange=()=>{draw();saveSession();};
+$('show-history').checked=localStorage.getItem('defjam-show-archived')==='true';
+$('show-history').onchange=()=>exclusive(async()=>{try{localStorage.setItem('defjam-show-archived',String($('show-history').checked));if(state.asset)await loadAsset(state.asset.id,{target:state.target,pan:state.pan,lanes:state.lanes});}catch(e){message(e.message,true);}});
 $('channel').onchange=()=>loadImages().catch(e=>message(e.message,true));
 function stopBlink(){state.blink=false;draw();}
 $('blink').onpointerdown=()=>{state.blink=true;draw();};$('blink').onpointerup=$('blink').onpointerleave=stopBlink;
@@ -250,6 +257,7 @@ window.addEventListener('beforeunload',event=>{
 window.addEventListener('resize',()=>{if(state.asset)draw();});
 (async()=>{try{
   state.config=await api('/api/config');$('workspace').textContent=state.config.workspace;$('queue-count').textContent=state.config.queued;
+  for(const fighter of state.config.fighters)$('fighter').add(new Option(fighter,fighter));
   for(const category of state.config.categories)$('category').add(new Option(category,category));
   const s=state.config.session;for(const [id,key]of [['scope','scope'],['fighter','fighter'],['category','category'],['review-filter','status'],['search','q'],['zoom','zoom'],['channel','channel'],['background','background']]){
     if(s[key]!==undefined)$(id).value=s[key];}

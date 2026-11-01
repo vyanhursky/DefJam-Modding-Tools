@@ -1,0 +1,1051 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "alias": "v2ip_109a.xsh",
+      "fighter": "Redman",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "redman",
+        "name": "Redman",
+        "resource": "V2IP_109A",
+        "source_id": "61ca4a5526f266aa676e52bff3ac615eff3bb85f8d32f6375e81cce2da374c6b",
+        "order": 0
+      }
+    },
+    {
+      "alias": "v2ip_131a.xsh",
+      "fighter": "Henry Rollins",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "rollins",
+        "name": "Henry Rollins",
+        "resource": "V2IP_131A",
+        "source_id": "4f1b25d80e683f2a80e7071d5a50c576066ec49831419048f5ff7f15dccdd31d",
+        "order": 1
+      }
+    },
+    {
+      "alias": "v2ip_113a.xsh",
+      "fighter": "Blaze",
+      "variant": "Battle",
+      "primary": true,
+      "preview": {
+        "slug": "blaze",
+        "name": "Blaze",
+        "resource": "V2IP_113A",
+        "source_id": "5c9b3229151c2853656113a8df7e3f91effdef5ae68c9bdd567e5a71bbe9c91a",
+        "order": 3
+      }
+    },
+    {
+      "alias": "v2ip_113b.xsh",
+      "fighter": "Blaze",
+      "variant": "Costume B",
+      "primary": true,
+      "preview": {
+        "slug": "blaze-b",
+        "name": "Blaze \u2014 Costume B",
+        "resource": "V2IP_113B",
+        "source_id": "df031556e345c259b1d1c0ce054a04eda28fc96b356e849c3af3cd116236e52b",
+        "order": 63
+      }
+    },
+    {
+      "alias": "v2ip_113c.xsh",
+      "fighter": "Blaze",
+      "variant": "Story injury state C",
+      "primary": true,
+      "preview": {
+        "slug": "blaze-c",
+        "name": "Blaze \u2014 Story injury state C",
+        "resource": "V2IP_113C",
+        "source_id": "2ea9a0b3e28beed974042c06ae30fb478e759bd1a736e92690205f1f953e3075",
+        "order": 72
+      }
+    },
+    {
+      "alias": "v2ip_009a.xsh",
+      "fighter": "Nyne",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "nyne",
+        "name": "Nyne",
+        "resource": "V2IP_009A",
+        "source_id": "a25c4fdd4998993c94d18ad0f5169c7ad6e6b898c711482777303c7ba3a18517",
+        "order": 4
+      }
+    },
+    {
+      "alias": "v2ip_112a.xsh",
+      "fighter": "Trejo",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "trejo",
+        "name": "Trejo",
+        "resource": "V2IP_112A",
+        "source_id": "1900051b32443a33a745c088a08231d039d80c9eb96483f4b43456a2a3f68f24",
+        "order": 2
+      }
+    },
+    {
+      "alias": "v2ip_014a.xsh",
+      "fighter": "D-Mob",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "d-mob",
+        "name": "D-Mob",
+        "resource": "V2IP_014A",
+        "source_id": "0463ab7e782b97c6de0232b2f3382e22769010e4ffccb6b4f651184382aa4969",
+        "order": 5
+      }
+    },
+    {
+      "alias": "v2ip_114a.xsh",
+      "fighter": "Sticky Fingaz",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "sticky-fingaz",
+        "name": "Sticky Fingaz",
+        "resource": "V2IP_114A",
+        "source_id": "3a81ec057bec2cbd5e853a670b102cb77111a9aef6ce88d10a8daefc3348f9a7",
+        "order": 6
+      }
+    },
+    {
+      "alias": "v2ip_123a.xsh",
+      "fighter": "Ludacris",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "ludacris",
+        "name": "Ludacris",
+        "resource": "V2IP_123A",
+        "source_id": "949af9177d65df1880bfadc753b63a9e35c3ec3594510134766ab86c2bf07476",
+        "order": 7
+      }
+    },
+    {
+      "alias": "v2ip_132a.xsh",
+      "fighter": "Ice-T",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "ice-t",
+        "name": "Ice-T",
+        "resource": "V2IP_132A",
+        "source_id": "c967f154df41f21005d5432660f8b2f04dcbf13df4360cbc5b1ba088463867a9",
+        "order": 8
+      }
+    },
+    {
+      "alias": "v2ip_126a.xsh",
+      "fighter": "Crow",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "crow",
+        "name": "Crow",
+        "resource": "V2IP_126A",
+        "source_id": "250a7396a0e3d7ef8b45d09b5abdfe5e1b7eabd3ffe18dde018121f4a9a94713",
+        "order": 9
+      }
+    },
+    {
+      "alias": "v2ip_125a.xsh",
+      "fighter": "Sean Paul",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "sean-paul",
+        "name": "Sean Paul",
+        "resource": "V2IP_125A",
+        "source_id": "7e73c842a6ad6b252e7762c4f58823011d1b35573855aa14f31ed0359da9d33b",
+        "order": 10
+      }
+    },
+    {
+      "alias": "v2ip_106a.xsh",
+      "fighter": "Crack",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "crack",
+        "name": "Crack",
+        "resource": "V2IP_106A",
+        "source_id": "6c14e433f615b6401295670c238b92e24994dd38ea37ab0ab7cc06c192f87f51",
+        "order": 11
+      }
+    },
+    {
+      "alias": "v2ip_110a.xsh",
+      "fighter": "Flava Flav",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "flava-flav",
+        "name": "Flava Flav",
+        "resource": "V2IP_110A",
+        "source_id": "f58429a6b89a6a31ec5038dc852d3e7dc029585cc06a2c329f49955d46345cc7",
+        "order": 12
+      }
+    },
+    {
+      "alias": "v2ip_303a.xsh",
+      "fighter": "WC",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "wc",
+        "name": "WC",
+        "resource": "V2IP_303A",
+        "source_id": "26048b0205f6f35bc6716bbc5dfb37fe6543ccdec70be2d59e80269f641ca41f",
+        "order": 13
+      }
+    },
+    {
+      "alias": "v2ip_306a.xsh",
+      "fighter": "Warren G",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "warren-g",
+        "name": "Warren G",
+        "resource": "V2IP_306A",
+        "source_id": "2eb0820cba3e88633bca5012077c74e7c16781ee6484f8a6871772ba2b0b5c83",
+        "order": 14
+      }
+    },
+    {
+      "alias": "v2ip_301a.xsh",
+      "fighter": "Freeway",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "freeway",
+        "name": "Freeway",
+        "resource": "V2IP_301A",
+        "source_id": "0e3909a900505ab99904b464fe40d08496300b2c5cdd02251ddd2e6496a05b49",
+        "order": 15
+      }
+    },
+    {
+      "alias": "v2ip_128a.xsh",
+      "fighter": "Magic",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "magic",
+        "name": "Magic",
+        "resource": "V2IP_128A",
+        "source_id": "abf06932e051feaeeff4bc4e9c5122067f4829465e629bae3b4194f3c6914146",
+        "order": 16
+      }
+    },
+    {
+      "alias": "v2ip_111a.xsh",
+      "fighter": "Bonecrusher",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "bonecrusher",
+        "name": "Bonecrusher",
+        "resource": "V2IP_111A",
+        "source_id": "c0a248ffa6105d05980cee7e437f91567a3e4c6aaf9d1a420c053d2b80a489dd",
+        "order": 17
+      }
+    },
+    {
+      "alias": "v2ip_107a.xsh",
+      "fighter": "Bubba Sparxxx",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "bubba-sparxxx",
+        "name": "Bubba Sparxxx",
+        "resource": "V2IP_107A",
+        "source_id": "5a973af22d60c16de7e13ba911bf9a7e9dcd4e932803eeab918fef4bdd0d5f42",
+        "order": 18
+      }
+    },
+    {
+      "alias": "v2ip_105a.xsh",
+      "fighter": "Capone",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "capone",
+        "name": "Capone",
+        "resource": "V2IP_105A",
+        "source_id": "8c8a131c7c9a0c4cb924aa3abdcb372f0ca1c5c872580c480f9a55a872f48d79",
+        "order": 19
+      }
+    },
+    {
+      "alias": "v2ip_104a.xsh",
+      "fighter": "N.O.R.E.",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "nore",
+        "name": "N.O.R.E.",
+        "resource": "V2IP_104A",
+        "source_id": "28798df3dc3cedd0e3ddd17c55340e2545fae47be1019303538a4415c25e25db",
+        "order": 20
+      }
+    },
+    {
+      "alias": "v2ip_117a.xsh",
+      "fighter": "Mack 10",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "mack-10",
+        "name": "Mack 10",
+        "resource": "V2IP_117A",
+        "source_id": "4530b6dfa373113e81e35039755e9d061a9c8a75a5f72a853c9d590777c9a9b3",
+        "order": 21
+      }
+    },
+    {
+      "alias": "v2ip_116a.xsh",
+      "fighter": "Scarface",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "scarface",
+        "name": "Scarface",
+        "resource": "V2IP_116A",
+        "source_id": "31ff1fe0325562b59bccba33c4108d5ccdd6c27ccd32bc74fc46e8bc71a3741e",
+        "order": 22
+      }
+    },
+    {
+      "alias": "v2ip_127a.xsh",
+      "fighter": "Elephant Man",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "elephant-man",
+        "name": "Elephant Man",
+        "resource": "V2IP_127A",
+        "source_id": "9420e8b7ef3b7dc42c28b0a17d6370516d2042a41eb556855fb551cda4529eca",
+        "order": 23
+      }
+    },
+    {
+      "alias": "v2ip_101a.xsh",
+      "fighter": "Bless",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "bless",
+        "name": "Bless",
+        "resource": "V2IP_101A",
+        "source_id": "d24f625333ec870323ec5b5a185684c69bfcb7e32ba47641fb69e22352956707",
+        "order": 24
+      }
+    },
+    {
+      "alias": "v2ip_118a.xsh",
+      "fighter": "Havoc",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "havoc",
+        "name": "Havoc",
+        "resource": "V2IP_118A",
+        "source_id": "43c403d1fb85ae45808b51ae4288d7f07f73501b4e2954e831a70cb1f9f62ada",
+        "order": 25
+      }
+    },
+    {
+      "alias": "v2ip_120a.xsh",
+      "fighter": "Fam-Lay",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "fam-lay",
+        "name": "Fam-Lay",
+        "resource": "V2IP_120A",
+        "source_id": "947f1d84cd0fa57f5126b1f01240591f2e0aa49a198d3f4dfc349a1641fef42f",
+        "order": 26
+      }
+    },
+    {
+      "alias": "v2ip_130a.xsh",
+      "fighter": "Slick Rick",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "slick-rick",
+        "name": "Slick Rick",
+        "resource": "V2IP_130A",
+        "source_id": "a95a975591bad4fbcfbae8eb42f41915690d776d557f2f2704c732dca2eb1615",
+        "order": 27
+      }
+    },
+    {
+      "alias": "v2ip_103a.xsh",
+      "fighter": "Memphis Bleek",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "memphis-bleek",
+        "name": "Memphis Bleek",
+        "resource": "V2IP_103A",
+        "source_id": "65cb1cc4a81fe427bb929837ca0e16dc1702e1fd0dbae698e6789272da0710d1",
+        "order": 28
+      }
+    },
+    {
+      "alias": "v2ip_304a.xsh",
+      "fighter": "Comp",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "comp",
+        "name": "Comp",
+        "resource": "V2IP_304A",
+        "source_id": "7a905ee4d0212c43ee603111d40ff26932c1e244e0d325a531dee9f93b00b77e",
+        "order": 29
+      }
+    },
+    {
+      "alias": "v2ip_308a.xsh",
+      "fighter": "O.E.",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "oe",
+        "name": "O.E.",
+        "resource": "V2IP_308A",
+        "source_id": "93a5512f8fcbbfcc417d352c07cde196c42039ec38e24847dcb650962e15bf3d",
+        "order": 30
+      }
+    },
+    {
+      "alias": "v2ip_121a.xsh",
+      "fighter": "Crazy Legs",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "crazy-legs",
+        "name": "Crazy Legs",
+        "resource": "V2IP_121A",
+        "source_id": "75ff0e46b2f0558f74c5f5bf0eaa5bc56d926a8e2d9caf52082a611c837894fe",
+        "order": 31
+      }
+    },
+    {
+      "alias": "v2ip_102a.xsh",
+      "fighter": "Erick Sermon",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "erick-sermon",
+        "name": "Erick Sermon",
+        "resource": "V2IP_102A",
+        "source_id": "54eec9f0ddb8a147d6a1474a9e6aa2f97df4bb3396f68485a92d497d5297f436",
+        "order": 32
+      }
+    },
+    {
+      "alias": "v2ip_013a.xsh",
+      "fighter": "Trick",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "trick",
+        "name": "Trick",
+        "resource": "V2IP_013A",
+        "source_id": "12c1fcf2ac0b8f6abdcbcc91676e068c12e7247ef53d76de3fa075b0f77b1c26",
+        "order": 33
+      }
+    },
+    {
+      "alias": "v2ip_018a.xsh",
+      "fighter": "Skull",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "skull",
+        "name": "Skull",
+        "resource": "V2IP_018A",
+        "source_id": "d8c60b8e0549510641a705daef5b7c4b904bad670db04d8862c640bf091e5ca2",
+        "order": 34
+      }
+    },
+    {
+      "alias": "v2ip_011a.xsh",
+      "fighter": "Solo",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "solo",
+        "name": "Solo",
+        "resource": "V2IP_011A",
+        "source_id": "a7338171f0627969a8b73264682ff2294508c4eea7705beeffd0b921ed0fd5d1",
+        "order": 35
+      }
+    },
+    {
+      "alias": "v2ip_006a.xsh",
+      "fighter": "Chiang",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "chiang",
+        "name": "Chiang",
+        "resource": "V2IP_006A",
+        "source_id": "f3460794f3fa9bf3b33f3722be4907845a80034946a533e98df9c4242b1d782e",
+        "order": 36
+      }
+    },
+    {
+      "alias": "v2ip_005a.xsh",
+      "fighter": "Masa",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "masa",
+        "name": "Masa",
+        "resource": "V2IP_005A",
+        "source_id": "cdfd7978607c31a38d4761390a57462e031c509aa5f04d2555f14e51817b97cd",
+        "order": 37
+      }
+    },
+    {
+      "alias": "v2ip_015a.xsh",
+      "fighter": "Baxter",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "baxter",
+        "name": "Baxter",
+        "resource": "V2IP_015A",
+        "source_id": "fdaa8f07bf7596c66a5a73d5e6f6adc4289caebb2d99103185e1f123617e040e",
+        "order": 38
+      }
+    },
+    {
+      "alias": "v2ip_010a.xsh",
+      "fighter": "Rome",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "rome",
+        "name": "Rome",
+        "resource": "V2IP_010A",
+        "source_id": "cd4ff188371a50644224a4cba0f7ae310c1e8a561a4eae82d0f8b365226640a6",
+        "order": 39
+      }
+    },
+    {
+      "alias": "v2ip_002a.xsh",
+      "fighter": "Snowman",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "snowman",
+        "name": "Snowman",
+        "resource": "V2IP_002A",
+        "source_id": "dd29023eebaab22449199a521ec09d11071e7675f4e35dc25129726cc45366cb",
+        "order": 40
+      }
+    },
+    {
+      "alias": "v2ip_016a.xsh",
+      "fighter": "Stingray",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "stingray",
+        "name": "Stingray",
+        "resource": "V2IP_016A",
+        "source_id": "bbafd1c4bafcc37407973f5891815a3f12126d89e8ccc1fe73c936506af07e0a",
+        "order": 41
+      }
+    },
+    {
+      "alias": "v2ip_001a.xsh",
+      "fighter": "Pockets",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "pockets",
+        "name": "Pockets",
+        "resource": "V2IP_001A",
+        "source_id": "61a41808040bafc000925d2404d1b55b28cd027ba012515e31fd93a3ad5d825d",
+        "order": 42
+      }
+    },
+    {
+      "alias": "v2ip_203a.xsh",
+      "fighter": "Starks",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "starks",
+        "name": "Starks",
+        "resource": "V2IP_203A",
+        "source_id": "936b7b65f2ecb08346302b6dcab16c3db1d48ab673bdae22d4efe128b937d50c",
+        "order": 43
+      }
+    },
+    {
+      "alias": "v2ip_129a.xsh",
+      "fighter": "Jacob",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "jacob",
+        "name": "Jacob",
+        "resource": "V2IP_129A",
+        "source_id": "c26a16a8374d050a8a091f1df8000a19df3775cfa73fbd4d21a885b3861873de",
+        "order": 44
+      }
+    },
+    {
+      "alias": "v2ip_007a.xsh",
+      "fighter": "Cruz",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "cruz",
+        "name": "Cruz",
+        "resource": "V2IP_007A",
+        "source_id": "ed4a82ec39715339682b716a869da76185ff2c93542776cf88ccff153e0e5cc4",
+        "order": 45
+      }
+    },
+    {
+      "alias": "v2ip_201a.xsh",
+      "fighter": "Meca",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "meca",
+        "name": "Meca",
+        "resource": "V2IP_201A",
+        "source_id": "80583d125d979983f258c5e30d16f463abfe0b10cb497219d8f348d32b8ae08e",
+        "order": 46
+      }
+    },
+    {
+      "alias": "v2ip_407a.xsh",
+      "fighter": "Kimora",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "kimora",
+        "name": "Kimora",
+        "resource": "V2IP_407A",
+        "source_id": "0c233032698b57f1455149737e01551ee87b2625f487313af2815cce9c1e80de",
+        "order": 47
+      }
+    },
+    {
+      "alias": "v2ip_406a.xsh",
+      "fighter": "Shawnna",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "shawnna",
+        "name": "Shawnna",
+        "resource": "V2IP_406A",
+        "source_id": "fb0cd2babfc0dbed20604db7587e22f51471a2e44ff0987fdc1a1b4c43d2563a",
+        "order": 48
+      }
+    },
+    {
+      "alias": "v2ip_403a.xsh",
+      "fighter": "Cindy J",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "cindy-j",
+        "name": "Cindy J",
+        "resource": "V2IP_403A",
+        "source_id": "ce13dde34046b73540217690840b80a7ba6fd901bbdec3a928ef7b58f3b23659",
+        "order": 49
+      }
+    },
+    {
+      "alias": "v2ip_401a.xsh",
+      "fighter": "Carmen Electra",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "carmen-electra",
+        "name": "Carmen Electra",
+        "resource": "V2IP_401A",
+        "source_id": "12c99396e3f3b286292af53ae56869a27b5bc1ce562b2adffd31273596dbea11",
+        "order": 50
+      }
+    },
+    {
+      "alias": "v2ip_405a.xsh",
+      "fighter": "Lauren",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "lauren",
+        "name": "Lauren",
+        "resource": "V2IP_405A",
+        "source_id": "598868911b428ea846e0f6fc6ce3d6eb4a0cf94004307f2484498620a4c49373",
+        "order": 51
+      }
+    },
+    {
+      "alias": "v2ip_305a.xsh",
+      "fighter": "Teck",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "teck",
+        "name": "Teck",
+        "resource": "V2IP_305A",
+        "source_id": "da8db4a6a832e85d22b1b2f6017136f8176c9544d558e7392a8bd8125d7100bc",
+        "order": 52
+      }
+    },
+    {
+      "alias": "v2ip_004a.xsh",
+      "fighter": "Dan-G",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "dan-g",
+        "name": "Dan-G",
+        "resource": "V2IP_004A",
+        "source_id": "4ad1c317e29b8e13ec983e93b0a6caa6ad64852c5825dafd9a3a50035ec75544",
+        "order": 53
+      }
+    },
+    {
+      "alias": "v2ip_122a.xsh",
+      "fighter": "Baby Chris",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "chris",
+        "name": "Baby Chris",
+        "resource": "V2IP_122A",
+        "source_id": "c22970480d8e2e06c6400b47207a38613cb5e134e17f54574bb671975ef93a38",
+        "order": 54
+      }
+    },
+    {
+      "alias": "v2ip_108a.xsh",
+      "fighter": "Ghostface Killah",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "ghostface",
+        "name": "Ghostface Killah",
+        "resource": "V2IP_108A",
+        "source_id": "1db2188a2573b0fc6163e90760e24dab2d1f9c55708bd8bcdd8d64e7316c6574",
+        "order": 55
+      }
+    },
+    {
+      "alias": "v2ip_302a.xsh",
+      "fighter": "Joe Budden",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "joe-budden",
+        "name": "Joe Budden",
+        "resource": "V2IP_302A",
+        "source_id": "7757c9bd6b5c016e226836b62f2e0aaa02e64ec49a108864c58fd65ede498f44",
+        "order": 56
+      }
+    },
+    {
+      "alias": "v2ip_202a.xsh",
+      "fighter": "Jervis",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "jervis",
+        "name": "Jervis",
+        "resource": "V2IP_202A",
+        "source_id": "b4f1087429773408acdc7daef6c90659b401aafcbcf3300d5c99801f7343505b",
+        "order": 57
+      }
+    },
+    {
+      "alias": "v2ip_404a.xsh",
+      "fighter": "Lil Kim",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "lil-kim",
+        "name": "Lil Kim",
+        "resource": "V2IP_404A",
+        "source_id": "44d7b4fc03d64580146c9f45393044cd400d28efa4bbf2c08ff8acc5ccfef336",
+        "order": 58
+      }
+    },
+    {
+      "alias": "v2ip_008a.xsh",
+      "fighter": "Manny",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "manny",
+        "name": "Manny",
+        "resource": "V2IP_008A",
+        "source_id": "d7d3dff45cc77f6efc0fb2690f72e3d5634ac574abb7498c875707b1a7ec7682",
+        "order": 59
+      }
+    },
+    {
+      "alias": "v2ip_119a.xsh",
+      "fighter": "Prodigy",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "prodigy",
+        "name": "Prodigy",
+        "resource": "V2IP_119A",
+        "source_id": "3a5c8f7b441aa4e23018a341ae05049f124c0ecabe0cdaaca286f0702b472253",
+        "order": 60
+      }
+    },
+    {
+      "alias": "v2ip_014b.xsh",
+      "fighter": "D-Mob",
+      "variant": "Costume B",
+      "primary": true,
+      "preview": {
+        "slug": "d-mob-b",
+        "name": "D-Mob \u2014 Costume B",
+        "resource": "V2IP_014B",
+        "source_id": "7dfa2af4c0005258aeefcff3ef52427b8906d511b9858c5f2bbf48ede7ab5f2a",
+        "order": 61
+      }
+    },
+    {
+      "alias": "v2ip_014c.xsh",
+      "fighter": "D-Mob",
+      "variant": "Costume C",
+      "primary": true,
+      "preview": {
+        "slug": "d-mob-c",
+        "name": "D-Mob \u2014 Costume C",
+        "resource": "V2IP_014C",
+        "source_id": "e25435681ff9a692bf052051fd1bc04de5dbb07cf88d0ad299db0a3f9b0bff42",
+        "order": 62
+      }
+    },
+    {
+      "alias": "v2ip_114b.xsh",
+      "fighter": "Sticky Fingaz",
+      "variant": "Costume B",
+      "primary": true,
+      "preview": {
+        "slug": "sticky-fingaz-b",
+        "name": "Sticky Fingaz \u2014 Costume B",
+        "resource": "V2IP_114B",
+        "source_id": "7a0450588f199e1d379890739bbaafae99d00e20210d62883a4809a516dcfd58",
+        "order": 64
+      }
+    },
+    {
+      "alias": "v2ip_003a.xsh",
+      "fighter": "House",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "house",
+        "name": "House",
+        "resource": "V2IP_003A",
+        "source_id": "93256b656fae07299bd850194894daa21b6dfe2fea12a06bbc0f183c93395bfb",
+        "order": 65
+      }
+    },
+    {
+      "alias": "v2ip_012a.xsh",
+      "fighter": "Bo",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "bo",
+        "name": "Bo",
+        "resource": "V2IP_012A",
+        "source_id": "219a7ab28c2db0e729c73fe94292ebce24df12352687a099334ea3055f9726b0",
+        "order": 66
+      }
+    },
+    {
+      "alias": "v2ip_307a.xsh",
+      "fighter": "Lil Flip",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "lil-flip",
+        "name": "Lil Flip",
+        "resource": "V2IP_307A",
+        "source_id": "0f8ff17c1df8fa85c4f5a0ba66d1351cb2a489aa27cbf80ed88a136cde459a6f",
+        "order": 67
+      }
+    },
+    {
+      "alias": "v2ip_124a.xsh",
+      "fighter": "David Banner",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "david-banner",
+        "name": "David Banner",
+        "resource": "V2IP_124A",
+        "source_id": "b01045e0decbb534592cc6378412496742b00f2ae135e31b35763b3fbf793ef0",
+        "order": 68
+      }
+    },
+    {
+      "alias": "v2ip_115a.xsh",
+      "fighter": "Xzibit",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "xzibit",
+        "name": "Xzibit",
+        "resource": "V2IP_115A",
+        "source_id": "93a8060dcf706b6328f124a58073c335313ba022bbdc9047f7a1596bf95b6d25",
+        "order": 69
+      }
+    },
+    {
+      "alias": "v2ip_204a.xsh",
+      "fighter": "Santos",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "santos",
+        "name": "Santos",
+        "resource": "V2IP_204A",
+        "source_id": "17f6a830532cc2e3346b6f76b1d828a63070c2c8a850fef8bd47a15c5e9668fa",
+        "order": 70
+      }
+    },
+    {
+      "alias": "v2ip_402a.xsh",
+      "fighter": "Shaniqua",
+      "variant": "Main",
+      "primary": true,
+      "preview_unavailable": "Alias-only or strict decoder validation unsupported; inspect the 2D atlas instead."
+    },
+    {
+      "alias": "v2ip_501a.xsh",
+      "fighter": "Suspect / Shadowy Figure",
+      "variant": "Main",
+      "primary": true,
+      "preview": {
+        "slug": "suspect",
+        "name": "Suspect / Shadowy Figure",
+        "resource": "V2IP_501A",
+        "source_id": "9910286b7f5203dd4e027f9070425a05d0abfa76eb4fa67714bf0d56a2cd43d6",
+        "order": 71
+      }
+    },
+    {
+      "alias": "v2ip_126b.xsh",
+      "fighter": "Crow",
+      "variant": "Costume B / Story E",
+      "primary": true,
+      "preview_unavailable": "Alias-only or strict decoder validation unsupported; inspect the 2D atlas instead."
+    },
+    {
+      "alias": "v2ip_126e.xsh",
+      "fighter": "Crow",
+      "variant": "Costume B / Story E",
+      "primary": true,
+      "preview_unavailable": "Alias-only or strict decoder validation unsupported; inspect the 2D atlas instead."
+    },
+    {
+      "alias": "v2ip_401b.xsh",
+      "fighter": "Carmen Electra",
+      "variant": "State B",
+      "primary": true,
+      "preview": {
+        "slug": "carmen-electra-b",
+        "name": "Carmen Electra \u2014 State B",
+        "resource": "V2IP_401B",
+        "source_id": "1916eac6bcb3a1fcc183ba0be464bf385275543dcab889eb2ae7512809433d08",
+        "order": 73
+      }
+    },
+    {
+      "alias": "v2ip_403b.xsh",
+      "fighter": "Cindy J",
+      "variant": "State B",
+      "primary": true,
+      "preview_unavailable": "Alias-only or strict decoder validation unsupported; inspect the 2D atlas instead."
+    },
+    {
+      "alias": "v2ip_014d.xsh",
+      "fighter": "D-Mob",
+      "variant": "Story injury state D",
+      "primary": true,
+      "preview": {
+        "slug": "d-mob-d",
+        "name": "D-Mob \u2014 Story injury state D",
+        "resource": "V2IP_014D",
+        "source_id": "0c65cd13d0cdf44b9c4b1af78f884629eb93a5696a1fd4eea0601674646199b2",
+        "order": 74,
+        "archive": [
+          "assets/v2ip_cin.viv",
+          "assets/V2IP_014D.viv"
+        ]
+      }
+    },
+    {
+      "alias": "v2ip_126d.xsh",
+      "fighter": "Crow",
+      "variant": "Story state D",
+      "primary": true,
+      "preview_unavailable": "Alias-only or strict decoder validation unsupported; inspect the 2D atlas instead."
+    },
+    {
+      "alias": "v2ip_128b.xsh",
+      "fighter": "Magic",
+      "variant": "Story injury state B",
+      "primary": true,
+      "preview": {
+        "slug": "magic-b",
+        "name": "Magic \u2014 Story injury state B",
+        "resource": "V2IP_128B",
+        "source_id": "445272fe820b0249e0bb20b156209db92bb1eeca2d5ba774d5f695bba19ef94c",
+        "order": 75,
+        "archive": [
+          "assets/v2ip_cin.viv",
+          "assets/V2IP_128B.viv"
+        ]
+      }
+    }
+  ],
+  "preview_omissions": [
+    {
+      "group": "tape",
+      "texture_ref": "tape,1",
+      "reason": "External shared tape texture; omitted from primary-atlas preview, game use unverified",
+      "limitation": "External shared tape mesh is omitted; its game appearance cannot be reviewed here"
+    },
+    {
+      "group": "tape",
+      "texture_ref": "A406,1",
+      "source_id": "fb0cd2babfc0dbed20604db7587e22f51471a2e44ff0987fdc1a1b4c43d2563a",
+      "reason": "Audited Shawnna mouth-tape auxiliary mesh; UV/shader use unresolved, omitted from static preview",
+      "limitation": "Shawnna mouth-tape auxiliary mesh is omitted; primary texture is retained, runtime mouth effect unverified"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ Fight for NY (Xbox)**. This is the authoring companion to
 - Browse and categorize a texture corpus; compare original, faithful HD and
   immutable restoration revisions with synchronized 25–400% atlas zoom.
 - Save flags, notes, regional instructions, approvals and revision requests.
-- Inspect Trejo, Blaze and Nyne on their original static meshes, with synchronized
+- Inspect supported fighters and outfits on their original static meshes, with synchronized
   3D cameras, material isolation and private Blender GLB downloads.
 - Preserve protected pixels/alpha during assembly and export selected schema 1
   texture packs for later testing in the game.
@@ -38,21 +38,25 @@ of that entire folder and its matching corpus. Only one server may write it.
 
 To use a profile elsewhere: `defjam-tools --profile /path/to/local.json serve`.
 Explicit flags override profile defaults. To make a model preview:
-`defjam-tools model --fighter trejo` (also `blaze`, `nyne`).
+`defjam-tools model --fighter trejo`. Run `defjam-tools model --help` for supported
+preview keys; the catalogue also retains atlas-only aliases.
 Advanced import/export retains the previous command arguments through
 `defjam-tools workshop import ...` and `defjam-tools workshop export ...`.
 
 ## Art workflow
 
-New work uses **Rich Original Detail**. Preserve faces, original UV layout,
+New work uses **Rich Original Detail**. Preserve likeness, original UV layout,
 palette, painted shading, tattoo silhouettes, tree/animal placement and existing
 handwriting. Use references and ask for approval of uncertain inscriptions.
-Earlier Stylized Remaster drafts remain review history.
+Face, hair and headwear detail can be restored when included in the job scope;
+keep identity, expression and source palette. Earlier Stylized Remaster drafts
+remain review history.
 
 Generation runs through ImageGen in the authoring conversation. The gallery
 saves briefs and imports results; queueing a request does not generate an image.
 See [the workflow](docs/WORKFLOW.md), [texture guide](docs/texture-workshop.md),
-[model guide](docs/model-viewer.md) and [prompt policy](prompts/README.md).
+[model guide](docs/model-viewer.md), [fighter workflow](docs/fighter-restoration.md)
+and [prompt policy](prompts/README.md).
 
 Static mesh export has no rig, animation or game mesh replacement path. Lighting
 is approximate. Venue decoding is future work. Optional legacy audition commands

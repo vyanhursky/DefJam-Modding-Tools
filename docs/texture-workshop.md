@@ -1,12 +1,11 @@
 # Local texture workshop
 
-The workshop reviews the existing texture corpus without changing it. The pilot
-is **Blaze, Nyne and Trejo**. Following the initial comparison, new generations
-use **Rich original detail** only (owner decision, 2026-10-16). Earlier
-**Stylized remaster** candidates remain available as history. Preserve faces and likeness; a specific
-low-resolution defect can be flagged for a separate correction. Use references
-for recognizable tattoos, logos and clothing inscriptions, and leave uncertain
-details for Vlad's approval.
+The workshop reviews an existing texture corpus without changing it. New work
+uses **Rich original detail**; earlier **Stylized remaster** revisions remain
+history. Preserve likeness, original UV layout and source color. Include face,
+hair and headwear restoration explicitly in the job scope, protecting accepted
+pixels elsewhere. Use references for tattoos, logos and inscriptions; uncertain
+details require owner approval. See the [fighter workflow](fighter-restoration.md).
 
 For recognized artwork, the original atlas controls composition: existing animal
 silhouettes, tree positions, handwriting paths, letter spacing and flourishes.
@@ -18,7 +17,7 @@ boxes; a perfectly preserved exterior does not establish interior fidelity.
 
 ## Open and resume
 
-Requires Python 3.10+ and Pillow. Use the same isolated Python environment as
+Requires Python 3.11+, Pillow and NumPy. Use the same isolated Python environment as
 the HD tools; no package installation or paid image API is needed by the gallery.
 
 ```sh
@@ -41,7 +40,7 @@ notes/history; it does not embed image files or make the corpus portable by itse
 Keep the matching corpus and the candidate PNGs as well.
 
 The [fighter model viewer](model-viewer.md) now provides synchronized 3D A/B
-comparison for Trejo, Blaze and Nyne, using the original mesh and UVs. Open it
+comparison for supported fighters/outfits, using original meshes and UVs. Open it
 from the sidebar, choose a revision, and inspect it in the source rest pose.
 Camera settings persist separately; notes and flags share the gallery reviews.
 It also downloads the selected texture on a static model as a private Blender
@@ -49,10 +48,10 @@ GLB. Animation, venue conversion and game mesh replacement remain future work.
 
 ## Browse and compare
 
-- **Pilot · main atlases** shows the three primary battle textures. **Pilot ·
-  all variants & maps** includes all fifteen source images across five models.
-  Blaze's story and bloody variants are labeled separately. Secondary-map
-  purposes are unverified; their names do not establish alpha/material semantics.
+- **Fighters · main atlases** shows recognized primary sources; **Fighters · all
+  variants & maps** includes recognized outfits and supplemental sources. The
+  packaged catalogue drives fighter filters. Names do not establish a secondary
+  map's runtime alpha/material purpose.
 - **Full texture library** browses the supported corpus, with categories, search,
   paging and filters for flags, notes, candidates and selections. Portraits,
   customization thumbnails and venue previews have extra provenance filters.
@@ -66,6 +65,10 @@ GLB. Animation, venue conversion and game mesh replacement remain future work.
   RGB/alpha views, checker/light/dark backgrounds and holding **Original** help
   inspect detail and masks. Open the full PNG for a separate unrestricted view.
 
+**Show archived revisions** hides unrelated archived history. Archived approved,
+selected and current/saved comparison or review revisions stay available. No
+approval or selection is inferred by retaining them.
+
 Choose **Reviewing** to attach notes to the original asset or an exact candidate
 revision. **Mark region** lets you drag a rectangle, choose protect/revise/reference
 and save a note. Rectangles use normalized atlas coordinates and are shared across
@@ -77,7 +80,8 @@ it does not alter the PNG or guarantee a generation model preserves that area.
 **Prepare imagegen brief** combines the art direction, saved notes and regional
 instructions. Save it to the Codex queue. Codex can read the workspace and use the
 built-in imagegen tool; the gallery itself makes no cloud/API calls. Queueing a
-request does not start generation. Both style directions can be queued separately.
+request does not start generation. Use Rich Original Detail for new work; retain
+older stylized requests as history.
 Original/baseline hashes are checked when queueing; a candidate-parent request
 names that exact PNG and its hash as the edit target.
 
@@ -113,7 +117,7 @@ This technical assembly retains the raw generated PNG under `raw/`, records its
 hash and dimensions, and records every copied pixel box and baseline hash.
 Resize preserves independent RGB and alpha channels. A mismatched aspect ratio
 is rejected. It does not fix shifted UV islands or invented artwork: those still
-need review and game tests. The pilot's raw outputs may be smaller than the
+need review and game tests. Historical pilot raw outputs may be smaller than the
 requested 2048 pixels; assembly records the actual generation resolution.
 
 For a targeted revision, add `--parent REVISION_ID` and repeat
