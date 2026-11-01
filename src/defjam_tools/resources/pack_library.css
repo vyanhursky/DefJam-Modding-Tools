@@ -3,3 +3,5 @@
 .viewport:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
 
 .viewport{touch-action:none;overscroll-behavior:contain;cursor:grab}.viewport img{user-select:none;-webkit-user-drag:none}#comparisons.dragging .viewport{cursor:grabbing}
+
+.inspect-nav{flex-wrap:wrap}

@@ -15,8 +15,10 @@ milestones below describe their original work.
 Validation: focused synthetic paging/camera tests and browser checks cover all
 five page sizes, actual wheel/drag input, all-four-pane synchronization and reset.
 Full suite: 181 tests / 51 subtests pass with Node; a clean wheel install includes
-the camera module and UI resources. Deployment retains the existing origin and
-private workspace; snapshot metadata before the restart.
+the camera module and UI resources. Saved notes were checked before cutover;
+review/model JSON remains byte-identical and old API snapshots match afterward.
+Browser tests also verify two-axis fighter panning; narrow Inspect controls wrap
+within their panel. Deployment retains the existing origin/private workspace.
 
 
 
