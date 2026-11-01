@@ -2,6 +2,64 @@
 
 ## Current status
 
+**2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
+and mouse/page-size refinements and requested merging PR4 into main. It retains
+milestone **v0.13.0**. Validation is 181 tests / 51 subtests plus passing macOS,
+Windows and Linux CI. The existing 8768 deployment already runs the reviewed
+implementation; preserve its private configuration, textures, reviews and model
+history. Next: continue the owner-led revision pass through `/packs`.
+
+**2026-10-31 — Viewer mouse controls and page sizes.** Owner requested Gallery
+sizes 10/25/50/100/200 and synchronized mouse zoom/pan in Inspect. Page size is
+remembered and used by the API, page counts and cross-page inspection navigation;
+the API bound is now 200. A shared original-canvas camera provides cursor-anchored
+wheel zoom, captured left-drag, scrollbar/keyboard synchronization and double-click
+Fit across all available panes, including late-added fourth comparisons. No
+review/approval schemas or image bytes changed. Owner moved current/future PRs
+to **v0.13.0**; viewer PR4 is retargeted accordingly. Existing historical release
+milestones below describe their original work.
+
+Validation: focused synthetic paging/camera tests and browser checks cover all
+five page sizes, actual wheel/drag input, all-four-pane synchronization and reset.
+Full suite: 181 tests / 51 subtests pass with Node; a clean wheel install includes
+the camera module and UI resources. Saved notes were checked before cutover;
+review/model JSON remains byte-identical and old API snapshots match afterward.
+Browser tests also verify two-axis fighter panning; narrow Inspect controls wrap
+within their panel. Deployment retains the existing origin/private workspace.
+
+
+
+**2026-10-31 — Published-pack texture library.** Owner requested a review pass over
+current menu/fighter releases rather than the old fighter pilot. `/packs` reads
+pinned immutable ZIPs, covers native/wide/supporting PNGs, and compares original,
+Faithful, published and optional candidate/older-release images. Search/category/
+component/status filters, gallery, shared scale/pan, source crops, RGB/alpha and
+contrast backdrops support review. A separate schema-1 review store uses artifact
+and PNG hashes, optimistic versions, atomic saves and browser draft recovery;
+old workshop approvals, candidates and model views are unchanged.
+
+Private setup indexes 1,522 menu native mappings (1,251 corpus references plus
+271 recovered originals), 222 widescreen PNGs, and 218 current fighter mappings.
+Recovered originals also have explicitly labelled Lanczos 4× preview baselines.
+An older menu release is available for optional comparison. No artwork or private
+index is tracked. Live cutover preserves the fighter branch's newer features;
+source-only feature branch integrates current main to avoid importing dated
+production history.
+
+Validation: after integrating current main (fighter PR3), 179 Python tests /
+46 subtests pass with bundled Node, including loopback auth, archive
+coverage/hash/path guards, stale saves, failed-write rollback and release-scoped
+reviews. Browser preview verifies real published comparisons and isolated note
+persistence, synchronized pan and optional old-release/candidate loading. The live
+fighter-source suite passes 133 tests / 39 subtests; old workshop/model JSON and
+API snapshots match exactly after cutover. Wheel packaging/source policy pass.
+Procedure: [published library](docs/published-texture-library.md).
+Machine-specific source, startup command, metadata and rollback pins belong to
+ignored `.local-handoff.md`. Next: use the new pass to flag revisions; no art is
+automatically re-approved, generated, installed or republished.
+
+
+
 2026-10-31: owner authorized the recommended reusable-tooling cleanup. Curated
 fighter integration is delivered through PR3 (`codex/fighter-tools-cleanup`), based on `b36f78b`
 (menu PR1 and authoring-boundary PR2 merged). Full fighter source history was
@@ -40,10 +98,12 @@ build and source-policy checks. PR3 retains milestone v0.12.2.
 
 ## Private workspace and releases
 
-The live port 8768 writer stays on the persistent `DefJam-Modding-Tools-hd-fighters`
-checkout and its existing private profile/workspace. This source integration did
-not restart it or alter art, notes, review versions, corpus, model caches, saves,
-active game install or the recomp's frozen setup snapshot. Exact local ownership
+The live port 8768 writer now includes the published-pack library alongside the
+fighter tools, using the existing private profile/workspace. The viewer cutover
+checked saved browser notes, backed up metadata and verified exact old review/model
+JSON. The separate fighter source cleanup itself did not restart that server.
+No art, review versions, corpus, model caches, saves, active game install or frozen
+setup snapshot changed. Exact local ownership
 and paths are in .local-handoff.md, not public source. Synthetic test workspace
 uses a separate port/root and is disposable.
 
