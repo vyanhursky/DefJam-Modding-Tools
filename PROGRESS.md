@@ -2,6 +2,13 @@
 
 ## Current status
 
+**2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
+and mouse/page-size refinements and requested merging PR4 into main. It retains
+milestone **v0.13.0**. Validation is 181 tests / 51 subtests plus passing macOS,
+Windows and Linux CI. The existing 8768 deployment already runs the reviewed
+implementation; preserve its private configuration, textures, reviews and model
+history. Next: continue the owner-led revision pass through `/packs`.
+
 **2026-10-31 — Viewer mouse controls and page sizes.** Owner requested Gallery
 sizes 10/25/50/100/200 and synchronized mouse zoom/pan in Inspect. Page size is
 remembered and used by the API, page counts and cross-page inspection navigation;
