@@ -2,6 +2,34 @@
 
 ## Current status
 
+**2026-10-31 — Published-pack texture library.** Owner requested a review pass over
+current menu/fighter releases rather than the old fighter pilot. `/packs` reads
+pinned immutable ZIPs, covers native/wide/supporting PNGs, and compares original,
+Faithful, published and optional candidate/older-release images. Search/category/
+component/status filters, gallery, shared scale/pan, source crops, RGB/alpha and
+contrast backdrops support review. A separate schema-1 review store uses artifact
+and PNG hashes, optimistic versions, atomic saves and browser draft recovery;
+old workshop approvals, candidates and model views are unchanged.
+
+Private setup indexes 1,522 menu native mappings (1,251 corpus references plus
+271 recovered originals), 222 widescreen PNGs, and 218 current fighter mappings.
+Recovered originals also have explicitly labelled Lanczos 4× preview baselines.
+An older menu release is available for optional comparison. No artwork or private
+index is tracked. Live cutover preserves the fighter branch's newer features;
+source-only feature branch stays based on main to avoid importing its history.
+
+Validation: 118 Python tests / 28 subtests pass, including loopback auth, archive
+coverage/hash/path guards, stale saves, failed-write rollback and release-scoped
+reviews. Browser preview verifies real published comparisons and isolated note
+persistence, synchronized pan and optional old-release/candidate loading. The live
+fighter-source suite passes 133 tests / 39 subtests; old workshop/model JSON and
+API snapshots match exactly after cutover. Wheel packaging/source policy pass.
+Procedure: [published library](docs/published-texture-library.md).
+Machine-specific source, startup command, metadata and rollback pins belong to
+ignored `.local-handoff.md`. Next: use the new pass to flag revisions; no art is
+automatically re-approved, generated, installed or republished.
+
+
 **2026-10-31 — Authoring/source boundary cleanup.** Owner approved moving pack
 production records out of the game repo while retaining the complete texture
 workspace. Tools PR1 is merged (`f1477e3`). Five former game-side menu exporters

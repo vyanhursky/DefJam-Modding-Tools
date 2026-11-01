@@ -2,3 +2,5 @@
 
 /* Keep library navigation and save status available while reviewing long notes. */
 header{position:sticky;top:0;z-index:10}.sidebar,.library{position:sticky;top:80px;align-self:start;max-height:calc(100vh - 80px);overflow:auto}@media(max-width:850px){.sidebar{position:static;max-height:none}.library{top:115px;max-height:calc(100vh - 115px)}}@media(max-width:600px){header{position:static}.library{position:static;max-height:none}}
+
+.published-nav{padding:8px 18px;font-size:13px}

@@ -89,3 +89,10 @@ accept explicit private inputs. Production review ledgers/checkpoint pointers re
 outside Git; release metadata belongs to the mod catalogue, runtime acceptance to
 the game. Historical source excerpts under `research/` are examples, not an active
 workspace or a replacement for its private production records.
+
+### Review what shipped
+
+The [published texture library](docs/published-texture-library.md) compares exact
+release ZIP images with originals, Faithful 4× and optional drafts/older releases.
+Filter by modpack and collect a separate, hash-scoped revision queue at `/packs`.
+Private artwork, releases and review notes stay outside Git.

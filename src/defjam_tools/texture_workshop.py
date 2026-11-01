@@ -465,7 +465,7 @@ class Workshop:
             return dict(path=str(output),packs=receipt["packs"],assets=len(chosen))
 
 
-def handler_for(store, token):
+def handler_for(store, token, library=None):
     class Handler(BaseHTTPRequestHandler):
         server_version="TextureWorkshop/1"
         def reply(self, status, data, mime="application/json"):
@@ -486,6 +486,8 @@ def handler_for(store, token):
                 if self.headers.get("Host") not in ("127.0.0.1:"+str(self.server.server_port),"localhost:"+str(self.server.server_port)):
                     return self.reply(403,dict(error="Use the loopback workshop address"))
                 parts,q=self.route()
+                from . import pack_library
+                if pack_library.route_get(self,library,token,parts,q,HERE): return
                 from . import model_workshop
                 model_static=model_workshop.static_file(parts,HERE)
                 if model_static: return self.reply(200,*model_static)
@@ -530,6 +532,8 @@ def handler_for(store, token):
                 length=int(self.headers.get("Content-Length","0"))
                 if not 0<length<MAX_UPLOAD*2: raise Invalid("Request too large")
                 req=json.loads(self.rfile.read(length)); parts,_=self.route()
+                from . import pack_library
+                if pack_library.route_post(self,library,parts,req): return
                 if parts==["api","model-view"]:
                     from .model_workshop import save_view
                     return self.reply(200,save_view(store,req,atomic_json))
@@ -556,6 +560,7 @@ def main():
     ap.add_argument("action",choices=("serve","import","export"))
     ap.add_argument("--corpus",type=Path); ap.add_argument("--workspace",type=Path)
     ap.add_argument("--server",help="Import/export through an already running loopback workshop")
+    ap.add_argument("--pack-library",type=Path,help="Private pinned published-pack config for /packs")
     ap.add_argument("--port",type=int,default=8768)
     ap.add_argument("--asset"); ap.add_argument("--image",type=Path); ap.add_argument("--label",default="Imported candidate")
     ap.add_argument("--style",choices=STYLES,default="faithful"); ap.add_argument("--parent",default="")
@@ -596,12 +601,20 @@ def main():
                 args.prompt_file.read_text(encoding="utf8") if args.prompt_file else "",assembly,args.request_id),indent=2)); return
         if args.action=="export": print(json.dumps(store.export_pack(),indent=2)); return
         if not 1024<=args.port<=65535: ap.error("Choose a port from 1024 through 65535")
-        server=ThreadingHTTPServer(("127.0.0.1",args.port),handler_for(store,secrets.token_urlsafe(32)))
-        print("Texture workshop: http://127.0.0.1:"+str(args.port),flush=True)
-        print("Saved reviews: "+str(store.file),flush=True)
-        try: server.serve_forever()
-        except KeyboardInterrupt: pass
-        finally: server.server_close()
+        from contextlib import ExitStack
+        with ExitStack() as locks:
+            library=None
+            if args.pack_library:
+                from .pack_library import PackLibrary
+                library=PackLibrary(args.pack_library,store)
+                locks.enter_context(WorkspaceLock(library.root))
+            server=ThreadingHTTPServer(("127.0.0.1",args.port),handler_for(store,secrets.token_urlsafe(32),library))
+            print("Texture workshop: http://127.0.0.1:"+str(args.port),flush=True)
+            print("Published packs: http://127.0.0.1:"+str(args.port)+"/packs",flush=True)
+            print("Saved reviews: "+str(store.file),flush=True)
+            try: server.serve_forever()
+            except KeyboardInterrupt: pass
+            finally: server.server_close()
 
 
 if __name__=="__main__": main()
