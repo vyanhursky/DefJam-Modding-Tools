@@ -2,6 +2,7 @@
 
 ## Current status
 
+
 **2026-10-31 — Published-pack texture library.** Owner requested a review pass over
 current menu/fighter releases rather than the old fighter pilot. `/packs` reads
 pinned immutable ZIPs, covers native/wide/supporting PNGs, and compares original,
@@ -16,9 +17,11 @@ Private setup indexes 1,522 menu native mappings (1,251 corpus references plus
 Recovered originals also have explicitly labelled Lanczos 4× preview baselines.
 An older menu release is available for optional comparison. No artwork or private
 index is tracked. Live cutover preserves the fighter branch's newer features;
-source-only feature branch stays based on main to avoid importing its history.
+source-only feature branch integrates current main to avoid importing dated
+production history.
 
-Validation: 118 Python tests / 28 subtests pass, including loopback auth, archive
+Validation: after integrating current main (fighter PR3), 179 Python tests /
+46 subtests pass with bundled Node, including loopback auth, archive
 coverage/hash/path guards, stale saves, failed-write rollback and release-scoped
 reviews. Browser preview verifies real published comparisons and isolated note
 persistence, synchronized pan and optional old-release/candidate loading. The live
@@ -30,392 +33,81 @@ ignored `.local-handoff.md`. Next: use the new pass to flag revisions; no art is
 automatically re-approved, generated, installed or republished.
 
 
-**2026-10-31 — Authoring/source boundary cleanup.** Owner approved moving pack
-production records out of the game repo while retaining the complete texture
-workspace. Tools PR1 is merged (`f1477e3`). Five former game-side menu exporters
-are now packaged `menu-verify`, `menu-pack`, `menu-wide`, `menu-branding` and
-`menu-release` commands with explicit private inputs. Synthetic preservation/path/
-registration tests moved with them; a new end-to-end builder test exercises the
-private recipe root, packaged wide-export child and immutable outputs.
 
-Seventeen historical prompt/index records previously mirrored here were copied
-byte-exactly to a private archive before removal. The original checkout, live
-8768 writer, corpus, review versions, exact prompts and artwork are unchanged.
-Reusable prompt/fidelity/backdrop guidance is in `docs/menu-text-restoration.md`;
-command/input migration is in `docs/menu-exporters.md`. A source-policy guard
-rejects those production record names in historical research folders. Actual
-archive locations/manifests are in the original menu workspace's private handoff.
+2026-10-31: owner authorized the recommended reusable-tooling cleanup. Curated
+fighter integration is delivered through PR3 (`codex/fighter-tools-cleanup`), based on `b36f78b`
+(menu PR1 and authoring-boundary PR2 merged). Full fighter source history was
+pushed at `d1c3de4` before cleanup. The maintained tree imports reusable source
+and synthetic tests, not dated production ledgers or batch runners.
 
-Validation: 107 Python tests / 10 subtests pass in the restricted environment;
-the two localhost permission failures pass separately with host access (2 tests /
-2 subtests), for 109 tests / 12 subtests overall. Published menu 1.4/catalogue
-metadata are unchanged. New source PRs retain owner-requested milestone v0.12.2.
-Next: review and merge the ownership cleanup PRs. Future authors should use the
-existing private workspace and these commands, without importing batch ledgers
-or checkpoint pointers into source or regenerating accepted art.
+- Decoder 2, nested Story sources and decoder-1 cache reads retained. Source
+  geometry/UVs/normals stay exact; tape omissions are explicit catalogue rules.
+- One packaged validated inventory drives 76 preview entries, 81 atlas aliases
+  and gallery filters. Compatibility FIGHTERS/PILOT imports and every existing
+  source ID, alias, label, route and preview order are checked against pinned
+  pre-refactor source contracts. Atlas-only aliases remain available in 2D.
+- Model/gallery history filtering retains archived approved/selected and saved/
+  current left/right/lane/review/parent choices. Hiding unrelated history no
+  longer silently substitutes and persists another comparison revision.
+- Scoped face/cloth/feature/region/palette/skin/injury operations and UV diagnostics
+  are maintained libraries. Local-neural code stays experimental; default app
+  adds neither Torch nor weights. Existing metadata schemas are unchanged.
+- Current guides/manual prompts replace stale pilot and approval chronology.
+  Frozen source history/release recipes remain pinned on the historical branch;
+  see docs/tooling-history.md. Agent mirrors now contain durable rules.
+- Main's menu exporter, registration, lossless PNG and private-input/source-policy
+  work is retained. Menu 1.4 and fighter 1.0 release metadata are unchanged.
 
-**2026-10-31 — Tooling PR1 approved for merge.** Vlad requested merging the
-menu review/native registration/lossless PNG tooling into `main`. The reviewed
-source passed macOS, Windows and Linux CI (88 Python tests / 12 subtests), wheel
-and source-policy checks. HD Widescreen Menus 1.4.0 is now published on Cloudflare
-and signed catalogue revision 9; the unchanged released 0.12.1 helper passed a real
-network 1.3→1.4 update and rollback with exact installed/backup hashes and untouched
-isolated saves. Publication records are in game PR152; catalogue PR9 is merged.
-PR1 retains milestone v0.12.2. This merge introduces source and synthetic fixtures
-only; no live 8768 server restart, workspace migration or artwork modification.
-Earlier pending-upload/local-only statements below are historical and superseded.
-Continue authoring in the existing private workspace; the reusable procedures are
-[lossless PNG staging](docs/lossless-png.md) and
-[native registration](docs/menu-native-registration.md).
+Validation: combined Python suite 169 passed +30 subtests (one Node-dependent
+pytest test skipped locally because node is not on shell PATH); the exact
+standalone JS regression passed separately in bundled Node. CI explicitly sets
+up Node 22 on macOS/Windows/Linux. Synthetic browser at port 8779 confirms saved
+archived gallery lanes/review and model left/right survive history on/off and
+reload, approved history remains available and unrelated history is hidden.
+Built wheel installed into an independent temp target imports all fighter/menu
+modules and includes the catalogue and browser resources from an unrelated cwd.
+Source policy: 505 files, zero failures; whitespace checks pass. Code commit
+47ffdbb passed all three hosted platforms (run 41270542085), including package
+build and source-policy checks. PR3 retains milestone v0.12.2.
 
-**2026-10-30 — Combined menu pack native assembly.** Vlad approved the final four
-held corrections and requested the combined release, exact size before Cloudflare
-upload, and all necessary PRs. `menu_native` adds shared-master registration,
-byte-exact material splits, proven repeated gutters, per-glyph cell registration
-and protected opaque RGB127 marks. Five synthetic tests cover joins, unrelated
-pixels, guards, layout and data preservation; full suite now 88 tests / 12 subtests
-passes. The private game candidate registers 95 glyphs and retains native 4×
-canvases; two existing 4× review references use scale 1. No new artwork generation,
-workspace migration or live 8768 cutover. See [registration procedure](docs/menu-native-registration.md).
-Release packaging, final native validation and exact-size approval remain in the
-game checkout; Cloudflare upload/signing is not authorized until the owner reviews
-that final artifact. This source change is for existing PR1; milestone v0.12.2.
+## Private workspace and releases
 
-**2026-10-30 — Verified lossless PNG staging command (local, not pushed).**
-Vlad requested a menu/UI compression experiment and reusable procedure.
-`defjam-tools optimize-png` writes a fresh private PNG tree using Oxipng 10.2.1
-(`-o4 --nx --interlace keep`, no alpha optimization or metadata stripping).
-Exact decoded RGBA (including hidden RGB), all non-IDAT chunks, input hashes and
-output writes are verified. Originals are retained for non-improvements/failures;
-APNG/16-bit inputs are explicitly skipped. Symlinks, unsafe paths, case collisions
-and existing/overlapping output trees are rejected. Per-file JSON receipts stay
-private. No live 8768 writer, corpus, raw master or game package changed.
+The live port 8768 writer now includes the published-pack library alongside the
+fighter tools, using the existing private profile/workspace. The viewer cutover
+checked saved browser notes, backed up metadata and verified exact old review/model
+JSON. The separate fighter source cleanup itself did not restart that server.
+No art, review versions, corpus, model caches, saves, active game install or frozen
+setup snapshot changed. Exact local ownership
+and paths are in .local-handoff.md, not public source. Synthetic test workspace
+uses a separate port/root and is disposable.
 
-Full results: 1,704 published PNGs **682,774,940 → 573,469,182 bytes (16.01%)**;
-949 approved review crops **648,007,579 → 574,491,068 bytes (11.35%)**. Both passed
-exact RGBA/metadata verification with zero failures/skips. ZIP payload saving:
-108,045,093 bytes (15.90%); projection only, no archive/catalogue publication.
-Four fresh raw imagegen PNGs were retained unchanged when Oxipng dropped their
-caBX provenance chunks. Keep raw masters immutable; optimize final native exports.
+HD Fighters 1.0.0 is published stable: 218 IDs (200 restored, 12 Lanczos, 6 native),
+ZIP SHA256 `1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f`.
+Catalogue PR10 and protected publication succeeded; fresh released-client install
+was verified. No immutable release rebuild/reupload. Bonecrusher, native injury/
+Story switching, alpha and distant mip playtests remain separate; no automatic
+native flags. Private approvals/selection receipts remain the art authority.
+Menu 1.4.0 and its signed catalogue publication remain unchanged as well.
 
-Validation: 16 focused tests, including real Oxipng; full suite 83 tests and
-12 subtests pass. Two sandbox localhost failures passed with host access.
-Wheel includes the exact module; source policy check: 475 files, zero failures.
-See [procedure and measurements](docs/lossless-png.md). Next: owner review of four
-new corrections, native atlas/UV/alpha/gutter validation, then optimization and
-new archive/catalogue hashes/signatures. This tools change does not migrate any
-workspace or change a frozen runtime/setup core.
+## Decisions and next steps
 
-**2026-10-27 — Public repository approved and enabled.** Vlad explicitly authorized
-making DefJam-Modding-Tools public for community access. GitHub visibility is now
-PUBLIC; anonymous API and main-branch texture/model guide requests return HTTP200.
-Publication audit covered all5mirrored refs (3heads plus2PR refs),20commits,
-475historical paths and523text blobs/5,797,431bytes: zero blocked asset paths,
-binary blobs or targeted credential-pattern matches. Current source policy472/0;
-no releases, Actions artifacts or PR attachments. Audit receipt remains private
-in the game checkout logs/mod-tools-public-audit-20261027.json. This changes source
-visibility only; local.json, corpus, artwork, models, reviews and live8768writer
-remain untouched. Both GitHub Wikis remain disabled; existing Markdown guides
-are public. Next documentation improvement: a public first-texture-pack entry
-point connecting these guides to the game's loader/install instructions.
+- Integrate reusable code and timeless guides, preserve dated fighter evidence on
+  its pinned remote branch. Do not add production selections/prompts to main.
+- No workspace migration, approval reset, new generations or live server cutover
+  is required for cleanup. Keep source development isolated from active reviews.
+- Portable job/pack APIs are a separate focused follow-up. Existing local sparse
+  schema-1 export remains supported; style/labels do not prove generation method.
+  A metadata change needs versioned migration/backup/rollback. Do not claim a
+  generic release runner exists or silently alter published recipes.
+- R2/public verification and catalogue automation belong in DefJamFFNY-mods;
+  runtime installation/native acceptance belong in DefJamFFNY-recomp.
 
-**Source publication restored:** GitHub sign-in recovered. Existing source-only
-branches are published, including the previously blocked commits; current gallery,
-navigation and census source is on the same branches/draftPRs. Artwork, index
-JSON/CSV, captures and owner shortlist data stay local.
-
-- 2026-10-20 D182–D185/UI — Separate menu-only RC2 tested on this Mac after
-  optional Faithful (library unbundled).157native/164slabs/62wideentries,
-  421.6MBZIP/423.4MBinstalled; all670artpins intact/zeroimggen. Actualloader4paper
-  variants/8technicalIDs registered from approved exterior, originalcores exact.
-  Native1v1loadingall5ratios,FFA4/menu-only/Options/Jukebox/HighScores/charDec32:9
-  pass; save guardsrestore, no runtime fault checks. Nested disposableAAAfixture
-  resolvesintro namecollision. Transitionblackfirsttile alsoinFaithful/original
-  controls; Crib/GF/partner/Tips/3-player/team coverage andowner signoffremain.
-  Diskfull recoveredbyteidentically inisolatedsave; nativeharnessAPFSclone/fallback
-  tested534unitpasses(2sandboxblockedchecks rerunwithhostaccess),32skip/1slowheld.
-  20run nativegallery, framebuttons/keys/zoom/fullwidth/nooverflow/load verified.
-  Source research/menu-ui-native-release-20261020/, privatefullarchive11716files/
-  5552616413B, manifestf93b80f023bee2b5d1e43348aa4a67327244017ad0e96f9e08d38e01054da3e6.
-  Ordinarygame/save/8768workshop unchanged; no public asset upload.
-
-- 2026-10-20 D181/UI — All7widebackgroundscenes APPROVED.70newpins/670total,
-  149reviewedsourceIDs(131unconditional+18conditional), registered121/core145.
-  No more new-art batch requiredforv1; held19detailIDs/shopdrafts deferred.
-  Review/inventorymarksartapproved, isolatedpackintegration/nativechecks pending.
-  Existing600pins unchanged; no generation/pixel/activepack/gamechange. Native
-  loadingroutes/live layers, fullpan/Mode/brandingderivatives/fiveaspects remain.
-  Approvaloverlay <data>/scratch/menu-ui-wide-backgrounds-approved-20261020/;
-  source approvalrecipe andcurrentreview preservedinwidebackgroundbundle.
-
-- 2026-10-20 D179/UI–D180/UI — Owner scopes first menu-mod release to mainmenus,
-  approved artwork and widescreen scenery/loading; leave other review candidates
-  held. Seven background drafts13newIDs through32:9,15builtin calls/162historical.
-  Exact35Faithful4:3cores;Cribdoorparent469.4/reusesapprovedrightscenery; tipsv3
-  both128pxjoins+Lgrainmatched. Loaderplate/tips mapped separatelyfrom portraits/
-  livetext/vignette; oldMLoad dynamicvenue remainsunprovenactive. Newreview
-  wide-backgrounds.html withOriginal/Faithful,5ratios,joincloseups,linkednavigation,
-  Prev/Next/keys/browsernotes, linkedfrominventory/artreviews. All600priorpins/
-  136approvedIDs unchanged; newartUNAPPROVED/uninstalled. Existingdetail19IDs/
-  shopraws held; currentgame/packs/saves/8768/workshop/Trejo untouched. Source
-  research/menu-ui-wide-backgrounds-20261020/, private additivearchive
-  <data>/scratch/menu-ui-wide-backgrounds-v1-20261020/. Nativeactive loading routes,
-  masks/fades/fiveaspects/fullmovingpan and priorModecondition remainreleasegates.
-
-- 2026-10-20 D175/UI–D178/UI — Scope changes to widescreen backgrounds and
-  owner-selected exceptions; stop routinepanel/button imagegen. Gym15/22
-  approved127newpins/600total/136IDs,22tile4xexport exact/uninstalled. Prior16/19
-  pending. Prepared30studies57sources deferred;3inflight rawshopproposals held,
-  noassembly/adoption,147historicalcalls. Sevenotherplannedcalls notstarted.
-  Fullimagebrowser51738/inventory.html:1323registered(115reviewed/1208outside),
-  optional1834core(132reviewed/1702outside). Original/Faithful/status/customwhere
-  available, search/screen/size/backgroundfilter, zoom/pan, Prev/Next/keys,
-  localshortlistnotes/download. Fiveknownwidegroups10tiles; nativeuse/clipunknown.
-  All1323IDs paginatedonce/28pages; comparison/mouse/arrow/shortlistreload pass,
-  zerooverflow/errors.8Node+22gamefocusedtests/600pins pass. Game/packs/saves/
-  8768writer/17workshop/Trejo untouched. Source research/menu-ui-inventory-20261020/,
-  privateoverlay <data>/scratch/menu-ui-inventory-widescreen-focus-20261020/.
-  Preserve browser selections, previousimmutablearchives and conditionalpan/Mode
-  checks. No moregenerationbeforeownerchoices. GitHub sign-in recovered; source-only branch/draftPR published.
-
-- 2026-10-20 D172/UI–D174/UI — Popup/profile15studies/22sources APPROVED.
-  Frozen130newpins/473total,114reviewedIDs(96unconditional+18conditional).
-  Separate22tile4xexport exact/uninstalled. Prior16/19remains pending.
-  New15Gym/controlstudies/22sources pending:2restrainedpapers+13Faithful;
-  complete Gymshapes50/60/64 with3narrowcompanions.2calls/144historical.
-  Originalalpha/marks/UVguards/padding exact,maxRGBdelta4;473pins/2439oldPNGs
-  unchanged;75isolatedaspectpairs. Review51738 nowlinkedmousewheel/drag/fit
-  on105images46groups, including legacy/wipe/tallpan.60refcases/75aspects
-  loaded,zerooverflow/errors,4Node+22gamefocusedtests pass. Authoring67tests
-  and12subtests pass (HTTP tests retried outside restricted loopback sandbox).
-  Game untouched.
-  Source resources under src/defjam_tools/resources/review_navigation.*;
-  recipe/prompt bundle research/menu-ui-controls-20261020/. Private additive
-  archive <data>/scratch/menu-ui-controls-v1-popup-approved-20261020/.
-  Native placement/clip/pan/platform validation remains pending; preserve8768,
-  17workshop/Trejo and existingpacks. GitHubauthstillinvalid; commitlocal and
-  publish existing branches after sign-in, then update PR62description.
-
-- 2026-10-20 D170/UI–D171/UI — Two batches pending; popup/profile first.
-  Vlad explicitly leaves the previous16-item/19-source batch for review. No
-  approval/pin/export inferred; all prior pixels unchanged. Catalogue343pins/
-  92reviewed IDs remains74unconditional+8Mode+10transition conditional.
-  New15-item/22-source popup/profile/autosave batch: ten paper restorations,
-  original-core widened profile wall, four Faithful stamps/effects.15new
-  built-in calls/142historical. Native wall admitted zero generated pixels;
-  source core, baked paper/emblem exact. Wide wall v3 repairs both128nativepx
-  joins, then fineLcontrast match(.625left/.885right median); v1/v2 retained.
-  Native UVs, header stretch, negative offsets, platform/language/live text
-  remain separate. PS2 French is under PS2bkg50, GC uses A/B, Xbox independent.
-  All343pins/2,044previousPNGs,22tilealpha/graphics/guards/padding,75centers exact.
-  Browser60reference/channelcases+75aspectpairs loadedafterrevisit,3BG/modes,
-  75%bounds,3wallversions/bothjoins,nooverflow/errors;22focused tests pass.
-  All15new studies UNAPPROVED, notinstalled/exported. Phone/Extras approved
-  source4xexports ready/uninstalled; ladder conditional pendingnativepan.
-  Running game untouched. Preserve8768writer/17candidates/Trejo.
-  Review51738: newbatch above previous16, original/Faithful/alpha/overview/
-  five ratios/bothjoins/history. Source-only bundle
-  research/menu-ui-popup-profile-20261020/; private additive archive
-  <data>/scratch/menu-ui-popup-profile-v1-pending-20261020/.
-  Next: explicit feedback on bothbatches, then bounded remaining Story/widget/
-  map classification. Native validation when serial game testing available.
-  Historical records below.
-
-- 2026-10-20 D168/UI–D169/UI — Phone APPROVED; sixteen-item Menu/UI batch IN REVIEW.
-  Phone frozen10files/2IDs; game catalogue343pins/92reviewed IDs(74approved+
-  8Modeconditional+10transitionconditional). Separate2tile4xexport exact,
-  uninstalled. Ladder v4 conditional pending native moving-pan playtest.
-  Larger batch16items/19sources:3venuecards+4Startstickers restrained papers;
-  6supporticons+2shadows+radialeffect Faithful-only. Two raw icon proposals
-  invented dots/halftone and rejected; no pixels adopted.9new built-in calls,
-  127historical. Sourcealpha/ink/geometry/UVguards/padding exact;343pins and
-  1,751priorPNGs unchanged.80isolated aspectpairs retain graphic size; not
-  game placements. Browser64ref/channelcases+80aspectpairs loaded,3BG/3modes,
-  75%bounds,nooverflow/zeroerrors.22focused game-side tests pass. All16batch
-  candidates UNAPPROVED, notcatalogued/exported/installed. Phone remains frozen.
-  Leave launcher-redesign game running; no game/build/runtime/default/pack edit.
-  Review51738 batch first, overview/selector/native/Faithful/alpha/wipe/5ratios.
-  Artwork/history local; source bundle research/menu-ui-details-20261020/.
-  Private additive archive <data>/scratch/menu-ui-details-v1-phone-approved-20261020/;
-  earlier complete/Extras/transition/phone archives immutable. Preserve8768/
-  17candidates/Trejo. Next: explicit batch feedback, then remaining UI
-  classification beyond17-ID prioritylist; native validation when serial game
-  testing available. Historical blocks below.
-
-- 2026-10-20 D166/UI–D167/UI — Transition v4 CONDITIONAL; Story phone v1 IN REVIEW.
-  Owner likes ladder art; full approval pending native moving-pan playtest.
-  Freeze56files/10IDs; catalogue333pins/90reviewed IDs(72approved+8Modeconditional
-  +10transitionconditional). No transition registrations/pack changes; bitmap9
-  stays Faithful-only. Leave launcher-redesign game running; no launch/stop.
-  Phone two native tiles, one built-in call/118historical; fine casing L only,
-  exact LCD/branding/keycaps/alpha136..255/UVguards/padding. Wide studies extend
-  identical native outer RGBA row profile, keep native device scale through32:9.
-  Phone UNAPPROVED, notcatalogued/exported/installed. Offstagepart2/live text
-  and actual clipping require game checks. Review51738 phone first with native/
-  Faithful/RGBA/alpha,4backgrounds,3modes,5layouts. Browser controls pass,nooverflow
-  at662px/zeroerrors; screenshot in private batch.333pins/1,725priorPNGs exact,
-  22focused game-side tests pass. Extras stays approved, separate9tile export
-  ready/uninstalled. Existingpacks/defaults/8768writer/17candidates/Trejo unchanged.
-  Source bundle research/menu-ui-story-phone-20261020/; private additive archive
-  <data>/scratch/menu-ui-story-phone-v1-transition-conditional-20261020/.
-  Next: phone feedback, then venueframes/Start/support art after mapping;
-  native transition and phone checks when serial game testing available.
-  Historical blocks below.
-
-- 2026-10-20 D163/UI–D165/UI — Extras APPROVED; fire-escape v4 IN REVIEW.
-  Six Extras studies/nine source IDs/51newpins; game catalogue277pins,80IDs
-  (72approved+8conditionalMode). Separate9-tile4xexport pixel-identical,notinstalled.
-  Owner says leave launcher-redesign game running; no further game launch/stop.
-  Transition ten-tile texel reconstruction,11new builtin calls/117historical;
-  rejected coarse material/framing retained. Source-guided bridges plus v4
-  L-only contrast matching; original/restored center,tilealpha/guards/padding
-  exact. Bitmap9 placement differs from texel reconstruction; keepFaithful-only
-  and defer actualpan/geometry/wideregistration. Alltransitionart UNAPPROVED.
-  Review51738 first:5aspects/play/scrub/wipe/bounds/bothjoins; browser30states/
-  3joinpairs pass,nooverflow/zeroerrors. 1,445oldPNGs/277pins exact,22focused
-  game-side tests pass. Existingpacks/defaults/8768writer/17candidates/Trejo
-  unchanged. Private archive menu-ui-transition-v4-extras-approved-20261020;
-  source recipes/prompts/review in research/menu-ui-transition-20261020/.
-  Next: transition art feedback/refinement, then guarded livepan/bitmap9 checks
-  when serial game testing is available. Old23-source shortlist now19; Story
-  phone/venueframes/Startgraphics remain. Historical blocks below.
-
-- 2026-10-20 D161/UI–D162/UI — RESTORATION RESUMED explicitly by Vlad.
-  PR62 already implements HD/wide menus and contains PR73's settings fix;
-  combined toolkit dd63e17. Owner playtest: menus/ultrawide look good.
-  New Extras batch: six unapproved studies over nine tiles (five generated
-  papers plus Faithful-only ribbon); 106 historical imagegen calls. Native
-  alpha/graphics/folds/UV padding/tile guards protected; at most four RGB levels
-  of fine detail. All 1,314 prior PNGs/226 approved pins unchanged. Browser24
-  reference/channel cases and30 five-aspect placement pairs pass. Review51738.
-  Game-side22 focused tests/226 artpins pass; new private overlay185files,
-  199,746,134bytes. No runtime changes in this iteration.
-  Existing tested packs, 8768 writer and17workshop/Trejo candidates unchanged.
-  Fire-escape transition: ten trans/t1 tiles, continuous master needed; no fix
-  delivered. First guarded32:9 probe missed actual pan, saves restored. Other
-  checkout's game active; owner asked before closing it for serial checks.
-  Source recipes/prompts/review: research/menu-ui-extras-20261020/. Private
-  overlay <data>/scratch/menu-ui-extras-v1-20261020/; old paused full snapshot
-  immutable. Next: Extras feedback and pan measurement/restoration; Story
-  phone/frames/Start graphics queue remains. Historical blocks below.
-
-- 2026-10-19 D157/UI — RESTORATION PAUSED at owner request until credits return.
-  Published source-only draftPR1(initialcommit3b0a0a2);gamehandover draftPR62(a130cfe). Remoteheads verified;14game focusedtests/226artpins and451game/319tools sourcechecks passed.
-  Do not generate/repaint or advance Extras/phone queue. Engineering handover:
-  game repo docs/menu-ui-modpack-handover.md;71sourceIDs(63approved+8conditional),
-  226pinnedartfiles/12scopes,101historicalcalls. Native-shaped sparse testpack first,
-  widescreengeometry/UV/scissor separately. Brandingv2approvedrawcanvases need
-  native-shape registration;do not use unapproved old source-safe alternate.
-  Fullprivate snapshot <data>/scratch/menu-ui-restoration-paused-20261019/
-  session/pilot-v1,manifest-bound. Existing8768writer/17candidates/Trejo untouched.
-  Source-only recipes/prompts/reviewcode preservedin research/menu-ui-pilot-20261017;
-  publicbranch codex/menu-ui-art-source;gamerepobranch codex/menu-ui-modpack-handoff.
-  Art/arrays/reviewJSON/captures staylocal. No newgeneration/import/install/game/
-  build/runtime change. Nextagent implementsplaytestpack;restoration resumes only
-  onVlad's explicitrequest. Previousstatusblocks beloware historical.
-
-- 2026-10-16: owner-approved Trejo v4 color pilot completed. Two new unapproved
-  child drafts: Gentle r-8125b0d8196d4f61 and Source palette r-342bd7dadb964b67.
-  Original v4 and all 11 prior candidate files/records/reviews preserved;
-  13 total candidates, 13 imagegen requests unchanged, zero queued.
-  67 tests +12 subtests pass. Browser Face/Chest, rear/arms, source comparison
-  and studio checks pass; zero console errors. Source palette visibly reduces
-  the neck color break; requires owner review, no game installation/acceptance.
-  Recipe/masks/input/processor hashes and pre-import review backup retained in
-  private experiments/trejo-color-v4-20261016-202427/. No new imagegen call.
-
-- 2026-10-16: verified model viewer source is on origin/main at e938889; all
-  three CI platforms passed. Added Face/Pants/Shoe detail camera presets; all
-  nine fighter/preset combinations visually checked in the live browser, with
-  synchronized framing and saved Nyne shoe view verified after reload.
-  56 tests + 12 subtests, JavaScript syntax and source/whitespace checks pass.
-  Investigated owner-reported warm body/face seam; see docs/color-preservation.md.
-  This investigation led to the subsequent Trejo pilot above.
-
-- Standalone version 0.1.0 established from DefJamFFNY-recomp `f71ab64`.
-- Repository: https://github.com/vyanhursky/DefJam-Modding-Tools (public since2026-10-27, explicitly approved by Vlad).
-- Local Python package/CLI/resources, prompts, documentation, focused agent
-  instructions, source hygiene and three-platform synthetic CI configured.
-- Live gallery/model viewer now runs from this checkout at 127.0.0.1:8768.
-  Existing private corpus, reviews, candidates and model caches stay in place.
-- 56 tests + 12 subtests pass in the final checkout and an independent fresh
-  clone. Installed wheel imports/resources/browser preview also pass.
-- Real-workspace compatibility: catalog/details equal, seven GLBs byte-identical
-  (three original/faithful pairs plus Trejo v4), selected pack keys/images/channel
-  policies identical. Review/camera files byte-identical immediately after
-  cutover; all 11 candidate hashes match. Browser confirms v4 and saved notes.
-- Recomp retains frozen offline HD setup helpers and runtime/mod-manager work;
-  authoring copies are retired there. Its focused HD/setup/pin/agent checks34/34.
-
-## Decisions
-
-- 2026-10-27: Vlad explicitly authorizes public visibility. Source/history and
-  repository artifact checks pass; visibility changed and anonymous access to
-  the repository and main-branch authoring guides verified. Local artwork and
-  review workspaces stay private; no asset publication or server change.
-
-- 2026-10-16: Vlad approved setting up this dedicated repository and will resume
-  texture/model review afterward. Initial remote is private and code-only.
-- Authoring lives here; runtime/mod-manager/setup stay in the recomp. Its shared
-  HD core remains a frozen byte-identical snapshot. One owner for new core work.
-- Existing private data stays in place. Preserve IDs, hashes, review versions,
-  schemas, relative image paths, browser origin and single-writer lock.
-- 2026-10-16: Vlad requested Face, Pants and Shoe detail presets and confirmed
-  publishing the viewer source. Added body-scaled, aspect-aware synchronized
-  crops. Source-side skin/seam correction is proposed for owner review; current
-  pixels and art approvals stayed unchanged at that stage.
-- 2026-10-16: Vlad approved the deterministic Trejo color trial using existing
-  v4 pixels. Retain two strengths as child drafts, keep face/alpha/other materials
-  exact, guard only proven neck UV edges, and preserve all old reviews. Suggest
-  Source palette for visual review; no automatic approval or rollout to others.
-- New art is Rich Original Detail only; older stylized drafts remain history.
-  Faces/protected pixels/alpha stay unchanged unless specifically approved.
-
-## Art review
-
-The fighter pilot (Blaze, Nyne, Trejo) retains13drafts plus4menu trials,17workshop candidates total. The13fighter drafts comprise11imagegen and two deterministic
-color trials;13imagegen request records, zero queued. Wide-art drafts are separate private experiments. Trejo A source-guided v4 `r-a74be693951f4617` awaits
-owner review of tattoo script/stroke paths, animal/tree/buckle placement and
-skin seams. Original script guidance: "Debbie Danielle". Exact exterior/face/alpha
-checks do not establish interior authenticity. No art is automatically approved.
-
-## Technical limits
-
-Three static main-outfit fighter meshes; original geometry, UVs, source normals
-and material partitions. Game lighting/reflections and sparkle effects are not
-reproduced. No rig/animation, venue decoder or game mesh replacement yet. GLBs
-validate in Khronos; Blender itself was unavailable for a native import test.
-Optional legacy auditions retain Windows font / isolated CUDA requirements.
-
-## Validation and handoff
-
-Read AGENTS.md, docs/WORKFLOW.md, docs/texture-workshop.md and docs/model-viewer.md.
-Resume the existing session with `.venv/bin/defjam-tools serve` from this checkout;
-local.json (ignored) contains exact machine paths. If the server is already live,
-use its browser or `workshop import --server http://127.0.0.1:8768`.
-Live owned PID10791 / exec54009; verify current ownership before stopping it.
-Machine-specific paths/backup location are in .local-handoff.md (ignored).
-
-A metadata backup was written under the private workspace's backups/ before
-cutover. Migration probes only approved/exported a disposable copied workspace;
-owner review data and all production approval flags were preserved. No art was
-generated, installed or published. No game runtime/save/installer behavior changed.
-The port's frozen core hashes are recorded in provenance.json and in its
-config/hd-tools-core-snapshot.json; deliberately review future synchronization.
-
-Next: compare Trejo color-trial Source palette (r-342bd7dadb964b67) with parent
-v4 (r-a74be693951f4617), Gentle (r-8125b0d8196d4f61) and Faithful HD, using Face/
-Chest presets and unlit RGB. Review/notes still bind to the selected right draft.
-Model tab9 is left v4/right Source palette; the owner's other model tab is intact.
-Private experiment experiments/trejo-color-v4-20261016-202427/ has receipt.json,
-verification.json, import-receipt.json, recipe text, masks and review-backup/.
-No art is approved/selected or installed. Tune after owner feedback, then in-game
-acceptance; extend to Blaze/Nyne only after their mask/seam checks. See
- docs/color-preservation.md for exact parameters and CLI. Keep source changes in
-this repo; the recomp's frozen HD setup helpers are unchanged.
-Run focused tests for changes; keep source and private artwork backups separate.
-
-Windows CI initially exposed default-codepage decoding of UTF-8 review JSON.
-All implicit module text reads now specify UTF-8; a simulated cp1252 roundtrip
-checks non-ASCII notes and queued prompts. Linux/macOS initial CI passed; the fix is covered by the three-platform CI
-regression suite. Source checkouts use LF to keep vendored hashes stable.
+1. Read AGENTS.md, docs/WORKFLOW.md and docs/tooling-history.md. Verify current
+   branch/remote and private writer ownership before editing or restarting.
+2. Pull main for future source work after PR3 integration. Keep other authoring
+   worktrees and the live 8768 server unchanged; no automatic source cutover.
+3. Continue art review through the existing workspace. Future live cutover needs
+   saved browser notes, metadata backup and compatibility checks first.
+4. Implement portable assembly jobs/offline release building separately, with
+   pinned inputs, collision/concurrency checks, exact-byte staging and synthetic
+   tests. Then extract configurable catalogue upload/smoke automation in its repo.

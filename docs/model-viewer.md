@@ -6,16 +6,23 @@ It reads exported models from the workshop's private data folder. The original
 game archives, faithful corpus, reviews and candidate images are not modified
 by conversion. The viewer needs no running game or external service.
 
-The first supported fighters are **Trejo, Blaze and Nyne**, main outfits only.
+Supported fighters, outfits and Story states are listed by `defjam-tools model
+--help` and the packaged `resources/profiles/fighters.json` catalogue. Only models
+already exported into the private workspace appear in the viewer. Atlas-only
+aliases with unsupported geometry remain available in the 2D gallery.
 Their original geometry, UV islands, normals and material partitions are used;
 this is not a generated replacement body. Textures can be compared in their
 original rest pose before choosing a revision for an in-game test.
 
 ## Use it
 
-1. Choose the fighter. The left pane starts with Original, the right pane with
-   the latest Rich Original Detail candidate. Both selectors also offer Faithful
+1. Choose the fighter. Saved left/right revision choices take precedence. A new
+   view starts with Original on the left and the latest unarchived Rich Original
+   Detail candidate on the right. Both selectors also offer Faithful
    HD and earlier revisions. Stylized drafts remain labelled as history.
+   Show archived revisions controls unrelated history; archived approved, selected
+   or saved/current comparison revisions stay available. Latest restoration is an
+   explicit choice and never establishes art approval or generation method.
 2. Drag either pane to orbit, scroll to zoom, right-drag to pan. Both cameras
    follow the same target and position. Front, Back, Fit model, Face detail,
    Chest detail, Belt detail, Pants detail and Shoe detail provide repeatable
@@ -108,8 +115,12 @@ Khronos' validator and the browser's glTF loader.
   remain in the private decode but are not applied without verified shader
   semantics. Studio lighting is a plain rough material, not game parity.
 - The Direction helper and additive point-sprite sparkle resources are omitted
-  and listed in the receipt. Jewelry triangles remain. Venues and other outfits
-  are not supported by this decoder version.
+  and listed in the receipt. Explicit catalogue exceptions also omit external tape
+  and the audited Shawnna auxiliary mouth-tape mesh with visible reasons. Jewelry
+  triangles remain. Venues, rigs and animations are not supported.
+- Decoder 2 validates direct index headers, source blend state and nested Story
+  archive routes. Existing schema-1/decoder-1 caches remain readable without a
+  rebuild. Source normals are never synthesized to bypass unsupported assets.
 
 Detailed measured offsets and winding evidence are in
 [Trejo pose/material research](research/trejo-pose-material-layout.md).

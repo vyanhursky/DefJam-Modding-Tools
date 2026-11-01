@@ -8,6 +8,7 @@ import sys
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
@@ -19,7 +20,7 @@ except ImportError:
 from defjam_tools import defjam_model as m, model_workshop as mw, texture_workshop as w
 
 
-def fixture():
+def fixture(group='body',texture_ref=None,blend=False):
     """Independent four-vertex plane with an ELF section-relative pointer graph."""
     data=bytearray(0x1400);rel=[]
     names=['','__Model:::synthetic','__RM:::__GP_RM_synthetic_0',
@@ -28,13 +29,17 @@ def fixture():
            '__EAGL::GeoPrimState:::SetPrimitiveType=EAGL::PT_TRIANGLESTRIP;']
     # Symbol0 is the section symbol (empty name). The fixture is hand-authored.
     values=[0,0x1000,0x200,*[0x600+i*0x30 for i in range(5)],0,0,0]
+    if blend:names[-1]+='SetAlphaBlendMethod=EAGL::ABM_BLEND;'
+    if texture_ref:
+        names.append('__EAGL::TAR:::UID=0;SHAPENAME='+texture_ref+';');values.append(0)
     def word(at,v):struct.pack_into('<I',data,at,v)
     def ptr(at,v):word(at,v);rel.append((at,2))
     def external(at,index):word(at,0);rel.append((at,(index<<8)|2))
     word(0x109c,1);ptr(0x10a0,0x1200);ptr(0x10cc,0x1240)
-    ptr(0x1200,0x1280);data[0x1280:0x1285]=b'body\0'
+    ptr(0x1200,0x1280);label=group.encode()+b'\0';data[0x1280:0x1280+len(label)]=label
     word(0x1240,0);word(0x1244,1);ptr(0x1248,0x238)
     external(0x21c,8);external(0x248,10);external(0x260,9)
+    if texture_ref:external(0x240,11)
     word(0x264,1);ptr(0x268,0x100);word(0x26c,4);ptr(0x270,0x120);word(0x100,4)
     struct.pack_into('<4H',data,0x120,0,1,2,3)
     arrays=[(12,0x800),(8,0x840),(4,0x870),(4,0x890),(2,0x8b0)]
@@ -65,7 +70,59 @@ def png():
     f=io.BytesIO();Image.new('RGBA',(2,2),(40,90,180,123)).save(f,format='PNG');return f.getvalue()
 
 
+class SourceRoutingTests(unittest.TestCase):
+    def test_gameplay_and_nested_story_routes_keep_exact_members(self):
+        with tempfile.TemporaryDirectory() as directory:
+            dump=Path(directory);(dump/'assets').mkdir()
+            (dump/'assets/v2ip.viv').write_bytes(b'gameplay archive')
+            (dump/'assets/v2ip_cin.viv').write_bytes(b'cinematic archive')
+            archives={b'gameplay archive':[('v2ip_112a.O',b'gameplay model')],
+                      b'cinematic archive':[('ASSETS/v2ip_014d.VIV',b'nested archive')],
+                      b'nested archive':[('v2ip_014d.O',b'story model')]}
+            with patch.object(m,'archive_entries',side_effect=lambda raw:archives[raw]):
+                self.assertEqual(m.source_model(dump,'trejo'),
+                                 (b'gameplay model','assets/v2ip.viv::V2IP_112A.o'))
+                self.assertEqual(m.source_model(dump,'d-mob-d'),
+                                 (b'story model','assets/v2ip_cin.viv::assets/V2IP_014D.viv::V2IP_014D.o'))
+
+    def test_missing_or_duplicate_member_rejected_before_decode(self):
+        with tempfile.TemporaryDirectory() as directory:
+            dump=Path(directory);(dump/'assets').mkdir();(dump/'assets/v2ip.viv').write_bytes(b'archive')
+            for members in ([],[('V2IP_112A.o',b'one'),('v2ip_112a.O',b'two')]):
+                with self.subTest(members=len(members)),patch.object(m,'archive_entries',return_value=members):
+                    with self.assertRaisesRegex(m.ModelError,'not unique'):
+                        m.source_model(dump,'trejo')
+
+
 class DecodeTests(unittest.TestCase):
+    def test_verified_tape_omissions_are_bound_to_exact_group_and_texture(self):
+        for texture in ('tape,1','A406,1'):
+            with self.subTest(texture=texture),self.assertRaisesRegex(m.ModelError,'No retained primary'):
+                m.decode(fixture(group='tape',texture_ref=texture),'Plane',m.FIGHTERS['shawnna'][2])
+        retained=m.decode(fixture(group='tape',texture_ref='A777,1'),'Plane','a'*64)
+        self.assertEqual(retained['meshes'][0]['texture_ref'],'A777,1')
+        retained=m.decode(fixture(group='body',texture_ref='tape,1'),'Plane','a'*64)
+        self.assertEqual(len(retained['meshes']),1)
+
+    def test_explicit_source_blend_state_is_detected_without_alpha_in_group_name(self):
+        mesh=m.decode(fixture(group='EyeShadows_MatAlph',blend=True),'Plane','a'*64)['meshes'][0]
+        self.assertTrue(mesh['transparent'])
+        self.assertFalse(m.decode(fixture(),'Plane','a'*64)['meshes'][0]['transparent'])
+
+    def test_direct_index_layout_matches_standard_strip_and_rejects_bad_vertex_binding(self):
+        original=fixture();e=m.ElfData(original)
+        raw=bytearray(original)
+        # Use the same existing local pointer relocations; direct indices are
+        # followed by the source vertex count and first vertex-array pointer.
+        for off,value in [(0x264,4),(0x268,0x120),(0x26c,4),(0x270,0x800)]:
+            struct.pack_into('<I',raw,52+off,value)
+        direct=m.decode(bytes(raw),'Plane','a'*64)
+        self.assertEqual(direct['meshes'],m.decode(original,'Plane','a'*64)['meshes'])
+        for off,value in [(0x26c,5),(0x270,0x840),(0x264,1_000_001),(0x268,len(e.data)-1)]:
+            bad=bytearray(raw);struct.pack_into('<I',bad,52+off,value)
+            with self.subTest(offset=off),self.assertRaises(m.ModelError):
+                m.decode(bytes(bad),'Plane','a'*64)
+
     def test_plane_keeps_top_left_uvs_normals_and_reverses_winding(self):
         model=m.decode(fixture(),'Plane','a'*64);mesh=model['meshes'][0]
         self.assertEqual(model['bounds'],[[0,0,0],[1,1,0]])
@@ -144,6 +201,12 @@ class ModelStoreTests(unittest.TestCase):
         path=self.store.root/'models/trejo/geometry.json';path.write_bytes(path.read_bytes()+b' ')
         with self.assertRaisesRegex(ValueError,'checksum'):mw.model_glb(self.store,'trejo')
 
+    def test_decoder2_receipt_preserves_old_schema_and_rejects_unknown_decoder(self):
+        path=self.store.root/'models/trejo/index.json';data=json.loads(path.read_text())
+        data['decoder']=2;path.write_text(json.dumps(data));self.assertEqual(mw.receipt(self.store,'trejo')[1]['decoder'],2)
+        data['decoder']=3;path.write_text(json.dumps(data))
+        with self.assertRaisesRegex(ValueError,'Incompatible'):mw.receipt(self.store,'trejo')
+
     def test_changed_candidate_bytes_cannot_reuse_an_immutable_revision_for_export(self):
         c=self.store.import_candidate(self.ident,png(),'Synthetic candidate','faithful')
         self.assertEqual(mw.model_glb(self.store,'trejo',c['id'])[:4],b'glTF')
@@ -156,6 +219,10 @@ class ModelStoreTests(unittest.TestCase):
         self.addCleanup(server.server_close);self.addCleanup(server.shutdown)
         base='http://127.0.0.1:'+str(server.server_port)
         with urlopen(base+'/model-viewer') as r:self.assertIn(b'Synchronized 3D comparison',r.read())
+        with urlopen(base+'/revision_choices.js') as r:
+            self.assertIn('javascript',r.headers['Content-Type']);self.assertIn(b'visibleCandidates',r.read())
+        with urlopen(base+'/api/config') as r:
+            self.assertIn('Shaniqua',json.load(r)['fighters'])
         with urlopen(base+'/vendor/loaders/GLTFLoader.js') as r:
             self.assertIn(b"from '/vendor/three.module.min.js'",r.read());self.assertIn("connect-src 'self' blob:",r.headers['Content-Security-Policy'])
         with urlopen(base+'/api/model/trejo/model.glb?revision=faithful') as r:self.assertEqual(r.read()[:4],b'glTF')

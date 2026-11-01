@@ -1,3 +1,4 @@
+import {visibleCandidates, chooseRevision} from '/revision_choices.js';
 import * as THREE from '/vendor/three.module.min.js';
 import {OrbitControls} from '/vendor/controls/OrbitControls.js';
 import {GLTFLoader} from '/vendor/loaders/GLTFLoader.js';
@@ -17,6 +18,14 @@ async function exclusive(action){
   try{return await action();}finally{state.busy=false;document.querySelectorAll('select,button,input,textarea').forEach(e=>e.disabled=!state.ready&&e.id!=='fighter');}
 }
 function textureLabel(rev){return rev==='original'?'Original':rev==='faithful'?'Faithful HD · Lanczos 4×':state.asset.candidates.find(c=>c.id===rev)?.label||rev;}
+function latestRestoration(){return state.asset.candidates.filter(c=>c.style==='faithful'&&!c.review.tags?.includes('archived')).at(-1);}
+function showRevisionNotice(revision){
+  const latest=latestRestoration(),candidate=state.asset.candidates.find(c=>c.id===revision);
+  const older=latest&&revision!==latest.id;
+  $('revision-notice').hidden=!older;
+  $('revision-notice').textContent=older?'Older texture on the right. Latest restoration: '+latest.label+' · '+latest.id+'. Use Latest restoration to review it.':'';
+  return candidate?' · '+candidate.id+' · '+candidate.review.status.replaceAll('_',' '):'';
+}
 function groupLabel(raw){const base=raw.split('~')[0].replace('_MatAlph','');return ({emc1_eye:'Eyes',emc2_skin:'Skin',emc3_jewelry:'Jewelry',emc4_cloth:'Clothing',emc3_jewelry_ALPHA:'Jewelry · transparent',eyelid_ALPHA:'Eyelids · transparent',nospec:'Unlit',nospec_ALPHA:'Unlit · transparent'})[base]||base;}
 function revisionTarget(){return ['original','faithful'].includes($('right').value)?'asset':$('right').value;}
 function draftKey(){return 'defjam-3d-draft:'+state.config.workspace+':'+state.asset.id+':'+revisionTarget();}
@@ -63,7 +72,7 @@ function preset(kind){
   let sign=kind==='back'?-1:1;
   if(kind==='chest'){center.set(0,height*.71,1);distance=11;}
   if(kind==='belt'){center.set(0,height*.535,1);distance=8;}
-  // Body proportions keep these review crops useful across the three fighters.
+  // Body proportions keep these review crops useful across supported fighters.
   // Fit both dimensions so a narrow viewport does not cut off the shoes.
   const detail={face:{y:.91,h:.20,w:.18},pants:{y:.30,h:.56,w:.38},shoes:{y:.065,h:.19,w:.36}}[kind];
   const direction=new THREE.Vector3(0,0,sign);
@@ -94,7 +103,7 @@ async function paint(v){
     const material=$('lighting').value==='studio'?new THREE.MeshStandardMaterial({...parameters,metalness:0,roughness:.8}):new THREE.MeshBasicMaterial(parameters);
     o.material.dispose();o.material=material;
   });
-  $('label-'+v.side).textContent=textureLabel(revision)+' · '+texture.image.width+' × '+texture.image.height;
+  $('label-'+v.side).textContent=textureLabel(revision)+' · '+texture.image.width+' × '+texture.image.height+(v.side==='right'?showRevisionNotice(revision):'');
   if(v.side==='right'){
     $('download').href='/api/model/'+state.fighter+'/model.glb?revision='+encodeURIComponent($('right').value);
     $('download').download=state.fighter+'-'+$('right').value+'.glb';
@@ -106,7 +115,7 @@ function loadReview(){
   const target=revisionTarget(),candidate=state.asset.candidates.find(c=>c.id===target);
   state.review=structuredClone(candidate?candidate.review:state.asset.review);state.dirty=false;state.reviewRevision=$('right').value;
   $('notes').value=state.review.notes;$('flag').checked=state.review.flag;
-  $('review-label').textContent=textureLabel($('right').value);
+  $('review-label').textContent=textureLabel($('right').value)+(candidate?' · '+candidate.id+' · '+candidate.review.status.replaceAll('_',' '):'');
   $('review-status').textContent='Saved notes loaded';$('restore-draft').hidden=!localStorage.getItem(draftKey());
 }
 function reviewChanged(){state.dirty=true;$('review-status').textContent='Unsaved · browser draft retained';localStorage.setItem(draftKey(),JSON.stringify({notes:$('notes').value,flag:$('flag').checked}));}
@@ -129,12 +138,14 @@ async function chooseFighter(fighter){
     if(previousView){await api('/api/model-view',{fighter:previous,view:previousView});state.saved.views[previous]=previousView;}
     state.fighter=fighter;
     state.model=state.models.find(m=>m.id===fighter);state.asset=await api('/api/asset/'+state.model.source_id);
-    const rich=state.asset.candidates.filter(c=>c.style==='faithful'),history=state.asset.candidates.filter(c=>c.style!=='faithful');
-    const choices=[['original','Original'],['faithful','Faithful HD · Lanczos 4×'],...[...rich].reverse().map(c=>[c.id,c.label]),...[...history].reverse().map(c=>[c.id,c.label+' · history'])];
-    for(const side of ['left','right'])$(side).replaceChildren(...choices.map(([value,label])=>new Option(label,value)));
     const saved=state.saved.views[fighter];
-    $('left').value=choices.some(([v])=>v===saved?.left)?saved.left:'original';
-    $('right').value=choices.some(([v])=>v===saved?.right)?saved.right:(rich.at(-1)?.id||'faithful');
+    const visible=visibleCandidates(state.asset.candidates,{showArchived:$('show-history').checked,pinned:[saved?.left,saved?.right]});
+    const rich=visible.filter(c=>c.style==='faithful'),history=visible.filter(c=>c.style!=='faithful');
+    const choices=[['original','Original'],['faithful','Faithful HD · Lanczos 4×'],...[...rich].reverse().map(c=>[c.id,c.label+(c.review.tags?.includes('archived')?' · archived':'')]),...[...history].reverse().map(c=>[c.id,c.label+' · history'])];
+    for(const side of ['left','right'])$(side).replaceChildren(...choices.map(([value,label])=>new Option(label,value)));
+    const ids=choices.map(([id])=>id);
+    $('left').value=chooseRevision(ids,saved?.left,'original');
+    $('right').value=chooseRevision(ids,saved?.right,latestRestoration()?.id||'faithful');
     $('lighting').value=saved?.lighting||'unlit';$('wireframe').checked=saved?.wireframe||false;
     $('groups').replaceChildren(...state.model.groups.map(group=>{const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.disabled=true;input.value=group;input.checked=saved?saved.groups.includes(group):true;input.addEventListener('change',updateView);label.title=group;label.append(input,' '+groupLabel(group));return label;}));
     const gltf=await new GLTFLoader().loadAsync('/api/model/'+fighter+'/model.glb');
@@ -156,10 +167,12 @@ async function chooseFighter(fighter){
 async function init(){
   document.querySelectorAll('select,button,input,textarea').forEach(el=>el.disabled=true);
   state.config=await api('/api/config');const listing=await api('/api/models');state.models=listing.models;state.saved=listing.state;
-  if(!state.models.length)throw Error('No fighter preview exported yet. Run scripts/defjam_model.py against your own dump.');
+  if(!state.models.length)throw Error('No fighter preview exported yet. Run defjam-tools model against your own dump.');
   $('fighter').replaceChildren(...state.models.map(m=>new Option(m.name,m.id)));
   state.views=['left','right'].map(createViewport);
   function render(){requestAnimationFrame(render);for(const v of state.views)v.renderer.render(v.scene,v.camera);}render();
+  $('show-history').checked=localStorage.getItem('defjam-show-archived')==='true';
+  $('show-history').addEventListener('change',()=>{localStorage.setItem('defjam-show-archived',String($('show-history').checked));chooseFighter(state.fighter).catch(error);});
   $('fighter').addEventListener('change',()=>chooseFighter($('fighter').value).catch(error));
   $('left').addEventListener('change',()=>paint(state.views[0]).catch(error));
   $('right').addEventListener('change',()=>exclusive(async()=>{
@@ -168,6 +181,7 @@ async function init(){
     const next=$('right').value;
     try{if(previous){$('right').value=previous;await saveNotes();}$('right').value=next;await paint(state.views[1]);loadReview();state.reviewRevision=next;}catch(e){$('right').value=previous;error(e);}
   }).catch(error));
+  $('latest').addEventListener('click',()=>exclusive(async()=>{await saveNotes();const candidate=latestRestoration();if(candidate){$('right').value=candidate.id;await paint(state.views[1]);loadReview();}}).catch(error));
   $('lighting').addEventListener('change',()=>Promise.all(state.views.map(paint)).catch(error));$('wireframe').addEventListener('change',updateView);
   for(const kind of ['front','back','fit','face','chest','belt','pants','shoes'])$(kind).addEventListener('click',()=>preset(kind));
   $('hold').addEventListener('pointerdown',e=>{e.preventDefault();$('hold').setPointerCapture(e.pointerId);state.hold=true;paint(state.views[1]).catch(error);});

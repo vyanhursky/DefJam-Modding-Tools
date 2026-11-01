@@ -32,13 +32,7 @@ from PIL import Image
 HERE = Path(__file__).resolve().parent / "resources"
 MAX_UPLOAD = 24 * 1024 * 1024
 STYLES = {"faithful": "Rich original detail", "remaster": "Stylized remaster"}
-PILOT = {
-    "v2ip_113a.xsh": ("Blaze", "Battle", True),
-    "v2ip_113b.xsh": ("Blaze", "Story variant", False),
-    "v2ip_113c.xsh": ("Blaze", "Bloody Blaze", False),
-    "v2ip_009a.xsh": ("Nyne", "Main", True),
-    "v2ip_112a.xsh": ("Trejo", "Main", True),
-}
+from .fighter_catalog import PILOT, FIGHTER_NAMES
 
 
 class Invalid(ValueError):
@@ -83,7 +77,7 @@ def brief(asset, style, note="", regions=(), parent=None):
             + ("Input: selected candidate revision "+parent["id"]+" as edit target; original atlas and faithful HD as references.\nParent SHA-256: "+parent["sha256"]+"\n" if parent else
                "Input: original texture atlas as edit target; faithful HD as comparison.\n") + direction + "\n"
             "Preserve every UV island, orientation, mirrored/split lettering, borders and atlas proportions. "
-            "Preserve faces and likeness; do not beautify or redesign faces. Apparent low-resolution face damage needs a separate reviewed request. "
+            "Preserve faces and likeness; do not beautify or redesign faces. Face-detail editing requires an explicit owner-authorized request below; even then preserve proportions and expression. "
             "Use references for tattoos, logos and clothing words. Flag uncertain details for Vlad instead of inventing inscriptions. "
             "Keep original alpha/material channels separately; do not reinterpret their meaning. "
             "No additional logos, objects, lighting or perspective.\n"
@@ -497,13 +491,14 @@ def handler_for(store, token, library=None):
                 if parts==[""]:
                     return self.reply(200,(HERE/"texture_workshop.html").read_bytes(),"text/html; charset=utf-8")
                 static={"workshop.js":("texture_workshop.js","text/javascript; charset=utf-8"),
+                        "revision_choices.js":("revision_choices.js","text/javascript; charset=utf-8"),
                         "workshop.css":("texture_workshop.css","text/css; charset=utf-8")}
                 if len(parts)==1 and parts[0] in static:
                     file,mime=static[parts[0]]; return self.reply(200,(HERE/file).read_bytes(),mime)
                 if parts==["api","config"]:
                     with store.lock:
                         return self.reply(200,dict(token=token,corpus_id=store.corpus_id,total=len(store.assets),
-                            categories=store.categories,styles=STYLES,session=store.data["session"],
+                            categories=store.categories,fighters=FIGHTER_NAMES,styles=STYLES,session=store.data["session"],
                             queued=sum(q["status"]=="queued" for q in store.data["requests"]),workspace=str(store.root)))
                 if parts==["api","catalog"]: return self.reply(200,store.catalog(q))
                 if len(parts)==3 and parts[:2]==["api","asset"]: return self.reply(200,store.detail(parts[2]))

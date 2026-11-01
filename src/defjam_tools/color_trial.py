@@ -203,7 +203,7 @@ def resize_float(array, size, resample=Image.Resampling.BILINEAR):
     return np.stack([resize_float(array[...,i],size,resample) for i in range(array.shape[-1])],axis=-1)
 
 
-def correct(reference, parent, geometry, protected_regions, variant, source_size=512, seam_height_range=None, seam_half_width=None):
+def correct(reference, parent, geometry, protected_regions, variant, source_size=512, seam_height_range=None, seam_half_width=None, require_seams=True):
     if variant not in VARIANTS:raise ValueError("Unknown trial variant")
     if reference.size!=parent.size or reference.width!=reference.height or reference.width%source_size or reference.width>4096:
         raise ValueError("Use equal square images at integer source scale, at most 4096")
@@ -211,7 +211,7 @@ def correct(reference, parent, geometry, protected_regions, variant, source_size
     ref=np.asarray(reference.convert("RGBA"));raw=np.asarray(parent.convert("RGBA"))
     if not np.array_equal(ref[...,3],raw[...,3]):raise ValueError("Parent alpha differs from baseline")
     mask,padded,seams,other,held=geometry_masks(geometry,source_size,protected_regions,seam_height_range,seam_half_width)
-    if not seams:raise ValueError("No proven protected/body UV seam; supply verified geometry and protected regions")
+    if not seams and require_seams:raise ValueError("No proven protected/body UV seam; supply verified geometry and protected regions")
     low_ref=np.asarray(reference.convert("RGB").resize((source_size,source_size),Image.Resampling.LANCZOS))
     low_raw=np.asarray(parent.convert("RGB").resize((source_size,source_size),Image.Resampling.LANCZOS))
     field,report=color_field(low_ref,low_raw,mask,padded,config["spatial"])
@@ -236,9 +236,10 @@ def correct(reference, parent, geometry, protected_regions, variant, source_size
     # Protected input must already be baseline-identical; do not silently fix a
     # different identity and call it a color correction.
     if not np.array_equal(raw[held_hd],ref[held_hd]):raise ValueError("Protected parent pixels differ from faithful baseline")
-    checks=dict(alpha_exact=bool(np.array_equal(out[...,3],raw[...,3])),protected_exact=bool(np.array_equal(out[held_hd],raw[held_hd])),other_materials_exact=bool(np.array_equal(out[other_hd],raw[other_hd])),outside_mask_exact=bool(np.array_equal(out[~editable],raw[~editable])),seam_core_exact=bool(np.array_equal(out[guard>=1],ref[guard>=1])))
+    checks=dict(alpha_exact=bool(np.array_equal(out[...,3],raw[...,3])),protected_exact=bool(np.array_equal(out[held_hd],raw[held_hd])),other_materials_exact=bool(np.array_equal(out[other_hd],raw[other_hd])),outside_mask_exact=bool(np.array_equal(out[~editable],raw[~editable])))
+    if seams:checks["seam_core_exact"]=bool(np.array_equal(out[guard>=1],ref[guard>=1]))
     if not all(checks.values()):raise ValueError("Color trial invariant failed")
-    report.update(variant=variant,parameters=config,version=VERSION,source_size=source_size,blur_radius_source=6,blur_passes=3,seam_inner_source=3,seam_outer_source=12,seam_edges=len(seams),seam_height_range=seam_height_range,seam_half_width=seam_half_width,edited_pixels=int(np.count_nonzero(np.any(out!=raw,axis=-1))),gamut_clipped_pixels=int(np.count_nonzero(clipped&editable)),checks=checks)
+    report.update(variant=variant,parameters=config,version=VERSION,source_size=source_size,blur_radius_source=6,blur_passes=3,seam_inner_source=3,seam_outer_source=12,seam_edges=len(seams),seam_guard_applied=bool(seams),seam_height_range=seam_height_range,seam_half_width=seam_half_width,edited_pixels=int(np.count_nonzero(np.any(out!=raw,axis=-1))),gamut_clipped_pixels=int(np.count_nonzero(clipped&editable)),checks=checks)
     masks=dict(editable=Image.fromarray(editable.astype(np.uint8)*255),seam_guard=Image.fromarray(np.rint(guard*255).astype(np.uint8)))
     return Image.fromarray(out),report,masks,seams
 
