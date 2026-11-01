@@ -4,7 +4,9 @@ This repository owns texture/model authoring. DefJamFFNY-recomp owns runtime
 replacement, launcher/mod management, setup and gameplay validation. The shared
 contract is files: versioned corpus metadata, texture IDs/runtime aliases, review
 schemas and supported pack manifests. The current exporter writes schema 1;
-future PR17 packaging needs an explicit tested adapter.
+published HD Fighters releases use separate frozen release recipes. Local export
+is not Cloudflare publication or catalogue registration. A portable release builder
+is a separate follow-up, not an automatic gallery action.
 
 The first extraction is from recomp commit recorded in provenance.json. Its
 installer retains byte-identical hd_assets.py, hd_corpus.py, hd_corpus.html and
@@ -34,6 +36,14 @@ source, even for a private GitHub repository. Git is not their backup.
   Lanczos corpus generation; imported legacy helpers retain their data contracts.
 - hd_review/hd_swinir_review: optional older local-upscaler auditions. Existing
   Windows font/CUDA assumptions remain; they are not the primary authoring UI.
+- fighter_catalog: one validated source-only inventory for previews, atlas aliases
+  and explicit preview omissions; old FIGHTERS/PILOT imports remain compatible.
+- face_detail, clothing_detail, feature_detail, region_detail, material_palette:
+  parameterized assembly strategies with exact exterior/alpha constraints.
+- fighter_scopes, skin_scope, uv_preview: material/UV masks and diagnostics.
+- damage_detail: offline registered state-difference assembly, not runtime emulation.
+- local_restoration: experimental local-neural assembly only, excluded from the
+  accepted HD Fighters 1.0 pipeline; no Torch/weights in the default installation.
 - cli: profile-aware commands; resources: browser files, FFNY aliases and Three.
 
 No code here installs a pack or changes game archives, saves or runtime settings.

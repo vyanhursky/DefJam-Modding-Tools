@@ -1,64 +1,71 @@
 # Agent instructions for Def Jam Modding Tools
 
-Read this file then PROGRESS.md at the start of a session. AGENTS.md and CLAUDE.md
-must remain byte-identical. This repository owns authoring tools, not the game
-runtime. The owner is Vlad. Implement authorized work fully; ask only for real
-missing decisions and preserve an active review session during changes.
+Read this file then PROGRESS.md at session start. Keep AGENTS.md and CLAUDE.md
+byte-identical. Vlad owns this authoring project. Implement authorized work fully;
+ask only for real missing decisions and preserve active review sessions.
 
-## State and data
+## State and private data
 
-- Update PROGRESS.md in the same turn: current status, decisions, tests, remaining
-  work and exact next steps. Keep it concise. Archive long history under ignored
-  docs/worklog/. local.json and .local-handoff.md carry machine-specific paths.
-- Game dumps, textures, generated artwork, references, models, Blender files,
-  review JSON and exports remain in the configured PRIVATE workspace outside Git.
-  Never commit them, captures, checkpoints, API keys or built game code. Use only
-  synthetic test fixtures. Run the source checker and git add -A --dry-run before
-  a source-only commit; push only when the owner requests it.
-- Preserve corpus/source/revision IDs, hashes, schemas, review versions, relative
-  image paths, parent provenance and the resolved workspace path. Schema changes
-  require explicit versioned migration and backup/rollback. Never reset an old
-  workspace, silently re-approve art or regenerate its accepted corpus.
-- There is one writer lock per workspace. The live review uses exactly
-  http://127.0.0.1:8768; changing host/port changes browser draft storage. Check
-  for unsaved browser notes before reload/restart. Never run two writers on the
-  same workspace. Preserve data, snapshot review JSON and verify compatibility
-  before a server cutover; leave the working server available afterward.
+- Update PROGRESS.md in the same turn with status, tests, decisions and exact
+  next steps. Keep dated history private under ignored docs/worklog/. local.json
+  and .local-handoff.md hold machine-specific paths and current writer ownership.
+- Never commit game dumps/art, generated references, models/Blender files, review
+  JSON, submitted production prompts/ledgers, captures, checkpoints, secrets or
+  release archives. Use synthetic fixtures. Run the source checker and
+  `git add -A --dry-run` before source-only commits; push when authorized.
+- Preserve corpus/source/revision IDs, hashes, relative image paths, provenance,
+  workspace paths, schemas and optimistic review versions. Schema changes need
+  explicit versioned migration and backup/rollback. Never silently reset reviews,
+  re-approve art or rebuild accepted corpora. Git is not the private data backup.
+- One writer per workspace. The live review origin is http://127.0.0.1:8768;
+  changing origin changes browser drafts. Check unsaved browser notes before any
+  live reload/restart. Back up metadata and verify compatibility before cutover.
+  Use separate synthetic workspaces for tooling tests; keep the live writer up.
 
-## Art direction
+## Art and review
 
-- New generations are Rich Original Detail only. Keep earlier stylized drafts
-  as history. Preserve faces/likeness unless Vlad specifically approves fixing a
-  demonstrated low-resolution defect.
-- Original atlases and faithful enlargements control composition, UVs, animal
-  silhouettes, tree positions and handwriting paths. Semantic descriptions do
-  not authorize redesign. Use references; have Vlad approve uncertain detail.
-- Exact prompts/reference notes/raw outputs belong to immutable candidate
-  history. Every import is a new revision. Keep alpha separate and technically
-  restore protected pixels; a prompt alone is not a pixel lock.
-- Trejo caption: owner says "Debbie Danielle". Buckle: bear left, deer right,
-  smaller deer middle. Latest v4 is a review draft; fidelity still needs owner
-  approval. No automatic selection, approval, game verification or installation.
+- New work uses Rich Original Detail. Preserve likeness, expression, UV geometry,
+  source palette/shading and the game's illustrated character. Faces, hair and
+  headwear may be restored when declared in scope; protect accepted pixels outside
+  that scope. Match clothing, footwear and headwear color as carefully as skin.
+- Original atlases control tattoo silhouettes, animal/tree positions, inscriptions
+  and handwriting paths. References can clarify details; uncertainty needs owner
+  approval. Do not invent words. Check named logos/props and every split, repeated
+  or mirrored UV fragment, including assembled Front/Back views.
+- Derive masks/seams from actual source geometry; never reuse another fighter's
+  coordinates. Alpha, material holds and exterior parent pixels need exact
+  technical enforcement after assembly. Prompts alone are not pixel locks.
+- New imports are immutable children, initially unapproved/unselected/not native
+  verified. Preserve exact submissions, raw outputs, errors, parents and hashes
+  privately. Keep failures honest; a baseline is not a generated restoration.
+- Archive unrelated history with the existing tag; keep all PNGs and notes.
+  Approved/selected and saved/current revisions remain available. Reconcile stale
+  notes only against explicit feedback with prior-note backups and review-version
+  checks. Never infer child approval from a parent's acceptance.
+- Art review, technical/channel review, selection, release authorization,
+  publication and actual game verification are distinct. Preserve published
+  bytes. [Tooling history](docs/tooling-history.md) links frozen fighter recipes;
+  do not replay dated import/review scripts into a current workspace. Current
+  private records, not old batch chronology, control ongoing art work.
 
-## Engineering
+## Engineering and ownership
 
-- Package code in src/defjam_tools; ship UI, aliases and pinned licensed browser
-  dependencies as resources. No CDN is needed at runtime. Keep optional Torch,
-  CUDA and neural-upscaler environments separate from the main app.
-- Use rg first. Make focused tests for logic and persistence changes. Existing
-  synthetic tests cover decoder bounds, source identity, protected assembly,
-  revisions, stale-review conflicts, hashes, HTTP auth and view persistence.
-  Use the browser to verify visible behavior after UI changes. Do not write
-  tests merely mirroring a trivial reversible edit.
-- Keep runtime loader/mod-manager/installer changes in DefJamFFNY-recomp.
-  Its HD setup modules are frozen at the hashes in provenance.json. This repo
-  owns future tool development. Synchronize a pinned compatibility snapshot
-  deliberately with setup tests; do not maintain independent evolving copies.
-- New corpus builds fingerprint code and may produce a new recipe identity.
-  Reading an existing corpus/workspace must not change it.
-- Model viewer currently decodes three static main-outfit fighter meshes only.
-  Preserve source geometry/UVs/normals/material partitions; label lighting
-  approximations and omitted effects. No rig, venue or game reimport claim.
-- Read-only independent investigations can be delegated while the main agent
-  owns edit/test/cutover operations. Report evidence and validate claims that
-  would change outputs. Do not delegate the serial migration or live writer.
+- Maintain code in src/defjam_tools with packaged resources, source-only validated
+  catalogue data and pinned licensed browser dependencies. No runtime CDN.
+  Optional Torch/CUDA/weights stay separate; local-neural assembly is experimental.
+- Use rg first. Test meaningful persistence/decoder/mask changes with synthetic
+  inputs and verify UI changes in the browser. Test installed package resources,
+  not just a checkout's editable import. Preserve decoder-1 cache compatibility,
+  original geometry/UVs/normals and explicit documented preview omissions.
+- Static GLB previews do not reproduce rigs, animation, game shaders or injury
+  switching. No venue decoding or game mesh reimport claim. Offline injury
+  correspondence is not runtime acceptance; native tests belong in the recomp.
+- Runtime loader/mod-manager/setup work belongs in DefJamFFNY-recomp. Its shared
+  HD core is a frozen snapshot: synchronize only via a reviewed pin and setup
+  tests. Do not maintain independent evolving authoring copies in that repo.
+- Modding Tools owns offline authoring/export; DefJamFFNY-mods owns catalogue,
+  R2 distribution and protected signing. Do not add publication/game installation
+  to the local gallery Export button. Menu exporters require explicit private
+  inputs; preserve current menu commands and source-boundary guards.
+- Read-only bounded independent investigations may be delegated. The main agent
+  owns serial edits/tests/cutovers and validates findings that change outputs.

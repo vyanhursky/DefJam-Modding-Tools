@@ -12,7 +12,7 @@ def receipt(store, fighter):
         raise ValueError("Unknown preview fighter")
     root = store.root / "models" / fighter
     data = json.loads((root / "index.json").read_text(encoding="utf8"))
-    if data.get("schema") != 1 or data.get("decoder") != 1 or data.get("source_id") != FIGHTERS[fighter][2]:
+    if data.get("schema") != 1 or data.get("decoder") not in (1, 2) or data.get("source_id") != FIGHTERS[fighter][2]:
         raise ValueError("Incompatible model preview; rebuild it with defjam-tools model")
     return root, data
 
