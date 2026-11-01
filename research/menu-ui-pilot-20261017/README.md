@@ -25,3 +25,8 @@ The full private snapshot, including originals, all101generation outputs, accept
 art, rejected attempts, registration fields, geometry and review receipts, is at
 `/Users/vlad/Code/defjam-data/scratch/menu-ui-restoration-paused-20261019/`.
 Artwork and game data remain local. Their existence is not an asset licence grant.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

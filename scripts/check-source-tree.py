@@ -16,7 +16,7 @@ def main():
     errors=[]
     for name in filter(None,files):
         p=Path(name)
-        if p.suffix.lower() in BLOCKED or p.parts[0] in PRIVATE or name=='local.json' or name.endswith('.local.json'):
+        if (p.parts[0]=='research' and p.name in {'prompt-specifications.json','source-index.json','prompts.txt','paused-prompts.txt'}) or p.suffix.lower() in BLOCKED or p.parts[0] in PRIVATE or name=='local.json' or name.endswith('.local.json'):
             errors.append(name+': private/binary artifact')
             continue
         raw=(ROOT/name).read_bytes()

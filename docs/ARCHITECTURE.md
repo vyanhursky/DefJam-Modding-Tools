@@ -38,3 +38,13 @@ source, even for a private GitHub repository. Git is not their backup.
 
 No code here installs a pack or changes game archives, saves or runtime settings.
 Art approval and in-game verification remain explicit separate steps.
+
+## Production records and release evidence
+
+Reusable prompt templates, export code and synthetic fixtures belong here. Exact
+submitted prompts, production indexes, approvals and backup pointers remain in
+the private project. The catalogue holds immutable released versions and concise
+release notes; the game holds native acceptance and runtime contracts. Preserve
+existing workspace schemas and paths during source-only repository cleanup.
+Menu authoring commands require explicit private JSON paths and do not search
+for bundled production tables.

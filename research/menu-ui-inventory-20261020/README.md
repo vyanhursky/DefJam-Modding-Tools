@@ -22,3 +22,8 @@ unverified. Exactreport hasgeometry/caveats. Leave running game unchanged.
 Tests: node --test tests/review-navigation.test.mjs tests/menu-inventory.test.mjs
 Browserproof/privatearchive: <data>/scratch/menu-ui-inventory-widescreen-focus-20261020/.
 GitHub sign-in recovered during finalization; source-only branches/draftPRs published.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

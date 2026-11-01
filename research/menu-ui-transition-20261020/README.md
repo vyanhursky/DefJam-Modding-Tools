@@ -24,3 +24,8 @@ archive is <data>/scratch/menu-ui-transition-v4-extras-approved-20261020/,
 additive to the prior full paused snapshot and Extras overlay. Color helpers
 are frozen there; bitmap9's runtime placement caveat is in references.json and
 the game report. Preserve the 8768 writer/17candidates/Trejo state.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

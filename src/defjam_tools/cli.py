@@ -16,6 +16,11 @@ COMMANDS = {
     "audition": "hd_review",
     "swinir": "hd_swinir_review",
     "optimize-png": "png_optimize",
+    "menu-verify": "menu_artwork",
+    "menu-pack": "menu_pack",
+    "menu-wide": "menu_wide",
+    "menu-branding": "menu_branding",
+    "menu-release": "menu_release",
 }
 
 

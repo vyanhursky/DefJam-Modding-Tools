@@ -26,3 +26,8 @@ review records stay local. Private additive archive:
 <data>/scratch/menu-ui-details-v1-phone-approved-20261020/.
 Apply to a COPY of full October19, Extras, transition and phone snapshots;
 earlier archives remain immutable. Color helpers frozen there.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

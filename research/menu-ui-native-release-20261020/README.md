@@ -30,3 +30,8 @@ No8768writer/corpus/Trejo/17fightercandidates or browser shortlist was modified.
 Final native pass: one-on-one loading all5ratios; FFA4, menu-only, Options/Jukebox/HighScores and Story character-decision at32:9. The new-ID route uses an outer complete-save guard to remove the existing AAA test profile temporarily; normal keyboard input then works and both guards restore. Transition artifact remains open; CribOptions/GF/partner/Tips and3-player/team loading lack native captures.534fast game unit checks pass overall(2required host-access reruns),32skip/1slowdeselected; native review framebuttons/keys/zoom/fullwidth/load/nooverflow verified. macOS save-guard cloning fix is sourcecommit69e0892 in the game repo.
 
 Full private frozen evidence: `<data>/scratch/menu-ui-native-release-rc2-20261020/`,11716files/5552616413logicalbytes; manifestSHA256f93b80f023bee2b5d1e43348aa4a67327244017ad0e96f9e08d38e01054da3e6. This includes approved masters, history, source metadata, native receipts/logs and the separate pack ZIP. Latest small native-review layout/proof changes have an additive review overlay; original archive remains immutable.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

@@ -24,3 +24,8 @@ are significant. The second game probe deliberately refuses to run while any
 game process is active; the complete-save guard is mandatory. No transition
 pan acceptance or wide transition fix is claimed. Do not autoapprove these
 studies or overwrite the live 8768 workspace/17candidates/Trejo state.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.
