@@ -2,6 +2,23 @@
 
 ## Current status
 
+**2026-10-31 — Viewer mouse controls and page sizes.** Owner requested Gallery
+sizes 10/25/50/100/200 and synchronized mouse zoom/pan in Inspect. Page size is
+remembered and used by the API, page counts and cross-page inspection navigation;
+the API bound is now 200. A shared original-canvas camera provides cursor-anchored
+wheel zoom, captured left-drag, scrollbar/keyboard synchronization and double-click
+Fit across all available panes, including late-added fourth comparisons. No
+review/approval schemas or image bytes changed. Owner moved current/future PRs
+to **v0.13.0**; viewer PR4 is retargeted accordingly. Existing historical release
+milestones below describe their original work.
+
+Validation: focused synthetic paging/camera tests and browser checks cover all
+five page sizes, actual wheel/drag input, all-four-pane synchronization and reset.
+Full suite: 181 tests / 51 subtests pass with Node; a clean wheel install includes
+the camera module and UI resources. Deployment retains the existing origin and
+private workspace; snapshot metadata before the restart.
+
+
 
 **2026-10-31 — Published-pack texture library.** Owner requested a review pass over
 current menu/fighter releases rather than the old fighter pilot. `/packs` reads

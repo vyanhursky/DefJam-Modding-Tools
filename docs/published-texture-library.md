@@ -11,13 +11,21 @@ It does not download, install, re-encode or select a replacement.
 
 Choose a collection, then search text, source IDs or archive/source paths. Filter
 by category, native/widescreen/supporting component and the new review status.
+Gallery offers 10, 25, 50, 100 or 200 items per page (default 50). The choice
+persists in this browser and applies to paging and J/K navigation across page
+boundaries. Changing it returns to the first matching page.
 The gallery pairs original and published thumbnails. Click a card for original,
 Faithful 4× and exact published comparisons. Add a workshop candidate or another
 configured release in **Additional comparison**. Candidates are explicitly drafts;
 only the Published panel represents the selected release.
 
-Use Fit, 1×, 3× (1440p reference) or 6×. Fixed scales register all panels to the
-original canvas; pan one panel to pan the others proportionally. Focus artwork
+Use Fit, 1×, 3× (1440p reference) or 6×. Roll the mouse wheel over an image
+to zoom around the cursor; left-drag to pan. Every pane shares the same zoom
+and original-canvas focus, including an optional fourth comparison. Double-click
+an image to restore Fit. Wheel zoom spans 0.1×–16× and displays a Custom percentage.
+The chosen scale persists; moving to another texture recenters its artwork.
+Fixed scales register all panels to the original canvas; scrollbars/keyboard
+panning also stay synchronized. Focus artwork
 uses an optional normalized source crop equally across panels. Full canvas is
 always available. Dark lettering can use pale paper, and light lettering a dark
 portrait approximation. These are inspection backdrops, not game captures.

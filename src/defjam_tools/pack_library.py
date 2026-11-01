@@ -227,7 +227,7 @@ class PackLibrary:
                         q.get("kind", [""])[0] in ("", r["kind"]) and
                         q.get("status", [""])[0] in ("", self.review(r)["status"]))
             matched = [r for r in rows if matches(r)]
-            offset = max(0, int(q.get("offset", [0])[0])); limit = min(100, max(1, int(q.get("limit", [60])[0])))
+            offset = max(0, int(q.get("offset", [0])[0])); limit = min(200, max(1, int(q.get("limit", [50])[0])))
             return dict(total=len(matched), all=len(rows), offset=offset, categories=categories, counts=counts,
                         items=[dict(id=r["id"], label=r["label"], category=r["category"], kind=r["kind"],
                                     size=r["size"], backdrop=r["backdrop"], baseline=list(r["baseline"]), source_id=r["source_id"], status=self.review(r)["status"]) for r in matched[offset:offset+limit]])
@@ -293,7 +293,7 @@ class PackLibrary:
 def route_get(handler, library, token, parts, q, resources):
     if parts == ["packs"]:
         handler.reply(200, (resources / "pack_library.html").read_bytes(), "text/html; charset=utf-8"); return True
-    static = {"packs.js": ("pack_library.js", "text/javascript; charset=utf-8"), "packs.css": ("pack_library.css", "text/css; charset=utf-8")}
+    static = {"packs-controls.js": ("pack_controls.js", "text/javascript; charset=utf-8"), "packs.js": ("pack_library.js", "text/javascript; charset=utf-8"), "packs.css": ("pack_library.css", "text/css; charset=utf-8")}
     if len(parts) == 1 and parts[0] in static:
         file, mime = static[parts[0]]; handler.reply(200, (resources / file).read_bytes(), mime); return True
     if parts[:2] != ["api", "packs"]: return False

@@ -46,6 +46,23 @@ class PackTests(unittest.TestCase):
         self.assertEqual(self.lib.image('menus-1',r['id'],'original'),self.original)
         self.assertEqual(set(r['baseline']),{'original','faithful'})
         wide=next(r for r in self.lib.entries.values() if r['kind']=='wide');self.assertEqual(wide['baseline'],{})
+    def test_requested_page_sizes_and_last_page_use_real_manifest_members(self):
+        with zipfile.ZipFile(self.zip,'w') as z:
+            lines=[]
+            for i in range(237):
+                sid=f'{i:064x}';name=f'textures/{sid}.png'
+                lines.append(sid+'='+name);z.writestr('pack/'+name,self.published)
+            z.writestr('pack/manifest.ini','[pack]\nschema=1\n[textures]\n'+'\n'.join(lines))
+        self.cfg['packs']=[self.spec()];self.write_config();lib=PackLibrary(self.config,self.store)
+        for limit in (10,25,50,100,200):
+            with self.subTest(limit=limit):
+                first=lib.catalog({'pack':['menus-1'],'limit':[str(limit)]})
+                tail=lib.catalog({'pack':['menus-1'],'limit':[str(limit)],'offset':[str(limit)]})
+                self.assertEqual(len(first['items']),limit)
+                self.assertEqual(len(tail['items']),min(limit,237-limit))
+                self.assertTrue({r['id'] for r in first['items']}.isdisjoint(r['id'] for r in tail['items']))
+        self.assertEqual(len(lib.catalog({'limit':['9999']})['items']),200)
+
     def test_search_filters_and_status_queue(self):
         r=self.native();self.lib.save('menus-1',r['id'],dict(version=0,status='needs_revision',notes='Keep the stencil cuts'))
         result=self.lib.catalog({'pack':['menus-1'],'kind':['native'],'status':['needs_revision'],'q':['heading']})
@@ -112,6 +129,7 @@ class PackHTTPTests(unittest.TestCase):
         self.addCleanup(server.server_close);self.addCleanup(server.shutdown)
         base='http://127.0.0.1:'+str(server.server_port)
         with urlopen(base+'/packs') as response:self.assertIn(b'Published texture library',response.read())
+        with urlopen(base+'/packs-controls.js') as response:self.assertIn(b'export class InspectCamera',response.read())
         with urlopen(base+'/api/packs/config') as response:self.assertEqual(json.load(response)['packs'][0]['pngs'],4)
         row=self.native();url=base+'/api/packs/menus-1/'+row['id']+'/review';body=json.dumps(dict(version=0,status='needs_revision',notes='Preserve stencil')).encode()
         for headers in [{},{'X-Workshop-Token':'test-token','Origin':'https://other.invalid'},{'X-Workshop-Token':'test-token','Host':'other.invalid'}]:
