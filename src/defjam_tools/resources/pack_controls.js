@@ -37,7 +37,7 @@ export class InspectCamera {
   }
   layout() {
     if(!this.ports().length)return;
-    const base=this.baseSize();
+    const base=this.baseSize();if(!base)return;
     for(const p of this.ports()) {
       const im=p.querySelector('img');p.classList.toggle('fit',this.factor===null);
       im.draggable=false;
@@ -52,7 +52,7 @@ export class InspectCamera {
     if(this.factor===null||!this.ports().includes(p))return;
     const expected=this.expected.get(p);
     if(!force&&expected&&Math.abs(expected[0]-p.scrollLeft)<1&&Math.abs(expected[1]-p.scrollTop)<1)return;
-    const base=this.baseSize();
+    const base=this.baseSize();if(!base)return;
     this.center=[p.clientWidth>=base[0]*this.factor ? .5 : (p.scrollLeft+p.clientWidth/2)/(base[0]*this.factor),
                  p.clientHeight>=base[1]*this.factor ? .5 : (p.scrollTop+p.clientHeight/2)/(base[1]*this.factor)];
     this.layout();
@@ -60,7 +60,8 @@ export class InspectCamera {
   wheel(event) {
     const p=this.port(event.target);if(!p||!event.deltaY)return;
     event.preventDefault();
-    const base=this.baseSize(),view=[p.clientWidth,p.clientHeight];
+    const base=this.baseSize();if(!base)return;
+    const view=[p.clientWidth,p.clientHeight];
     const before=this.factor??fitScale(base,view);
     const units=event.deltaMode===1?16:event.deltaMode===2?p.clientHeight:1;
     const after=clamp(before*Math.exp(-clamp(event.deltaY*units,-600,600)*(event.ctrlKey ? .01 : .002)),.1,16);

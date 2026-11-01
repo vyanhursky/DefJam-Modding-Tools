@@ -39,4 +39,5 @@ for(const p of panes){assert.equal(p.scrollLeft,panes[0].scrollLeft);assert.equa
 events.wheel({...wheel,target:panes[3],deltaY:-10000});assert.ok(camera.factor<=16);
 events.dblclick({target:panes[3],preventDefault(){}});assert.equal(camera.factor,null);assert.equal(lastScale,null);
 const empty=new InspectCamera({...root,querySelectorAll:()=>[]},()=>{throw new Error('No active texture');},()=>{});empty.layout();
+const inactive=new InspectCamera(root,()=>null,()=>{});inactive.setScale(3);inactive.scrolled(panes[0],true);inactive.wheel(wheel);
 console.log('Page sizes, cursor-anchored zoom, bounds, shared wheel/drag and late fourth pane pass');

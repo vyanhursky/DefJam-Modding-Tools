@@ -8,7 +8,7 @@ const params = new URLSearchParams(location.search);
 const initialSelection=location.hash.slice(1);
 let prefs={};try{prefs=JSON.parse(localStorage.getItem(prefKey)||'{}');}catch{}
 function perPage(){return pageSize($('per-page').value);}
-const camera=new InspectCamera($('comparisons'),()=>cropSize(state.detail.baseline.original?.size||state.detail.size),factor=>{state.customScale=factor;if(factor===null){$('scale').value='fit';}else{customOption(factor);$('scale').value='custom';}persist();});
+const camera=new InspectCamera($('comparisons'),()=>state.detail?cropSize(state.detail.baseline.original?.size||state.detail.size):null,factor=>{state.customScale=factor;if(factor===null){$('scale').value='fit';}else{customOption(factor);$('scale').value='custom';}persist();});
 function customOption(factor){let o=$('scale').querySelector('[value=custom]');if(!o){o=new Option('','custom');$('scale').append(o);}o.textContent='Custom · '+Math.round(factor*100)+'%';}
 function error(e){$('error').hidden=false;$('error').textContent=e.message||String(e);}
 function clearError(){$('error').hidden=true;}
