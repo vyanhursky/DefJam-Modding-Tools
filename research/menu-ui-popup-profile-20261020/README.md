@@ -22,3 +22,8 @@ additive archive <data>/scratch/menu-ui-popup-profile-v1-pending-20261020/;
 apply after earlier complete/Extras/transition/phone/details overlays to a COPY.
 Previous snapshots remain immutable; frozen color helpers included. Preserve
 8768writer/17candidates/Trejo. See reports for remaining native playtest limits.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

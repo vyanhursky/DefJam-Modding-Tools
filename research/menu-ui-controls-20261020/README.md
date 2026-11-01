@@ -20,3 +20,8 @@ Owner approved previous popup/profile15studies/22IDs; current Gym15/22 and
 prior16/19 remain pending. Private additive archive is
 <data>/scratch/menu-ui-controls-v1-popup-approved-20261020/; prior popup pending
 archive is the base. Restore source publication after GitHub sign-in is fixed.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

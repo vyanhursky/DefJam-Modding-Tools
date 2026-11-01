@@ -2,6 +2,30 @@
 
 ## Current status
 
+**2026-10-31 — Authoring/source boundary cleanup.** Owner approved moving pack
+production records out of the game repo while retaining the complete texture
+workspace. Tools PR1 is merged (`f1477e3`). Five former game-side menu exporters
+are now packaged `menu-verify`, `menu-pack`, `menu-wide`, `menu-branding` and
+`menu-release` commands with explicit private inputs. Synthetic preservation/path/
+registration tests moved with them; a new end-to-end builder test exercises the
+private recipe root, packaged wide-export child and immutable outputs.
+
+Seventeen historical prompt/index records previously mirrored here were copied
+byte-exactly to a private archive before removal. The original checkout, live
+8768 writer, corpus, review versions, exact prompts and artwork are unchanged.
+Reusable prompt/fidelity/backdrop guidance is in `docs/menu-text-restoration.md`;
+command/input migration is in `docs/menu-exporters.md`. A source-policy guard
+rejects those production record names in historical research folders. Actual
+archive locations/manifests are in the original menu workspace's private handoff.
+
+Validation: 107 Python tests / 10 subtests pass in the restricted environment;
+the two localhost permission failures pass separately with host access (2 tests /
+2 subtests), for 109 tests / 12 subtests overall. Published menu 1.4/catalogue
+metadata are unchanged. New source PRs retain owner-requested milestone v0.12.2.
+Next: review and merge the ownership cleanup PRs. Future authors should use the
+existing private workspace and these commands, without importing batch ledgers
+or checkpoint pointers into source or regenerating accepted art.
+
 **2026-10-31 — Tooling PR1 approved for merge.** Vlad requested merging the
 menu review/native registration/lossless PNG tooling into `main`. The reviewed
 source passed macOS, Windows and Linux CI (88 Python tests / 12 subtests), wheel

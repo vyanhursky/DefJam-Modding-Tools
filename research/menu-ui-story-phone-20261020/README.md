@@ -28,3 +28,8 @@ Private immutable additive archive:
 Apply overlays to a COPY of October19full snapshot, October20Extras and earlier
 transition overlay. Previous snapshots remain immutable; color helpers frozen
 with archive. See game reports for actual clipping/offstagepart2/bitmap9 limits.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

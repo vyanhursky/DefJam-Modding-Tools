@@ -25,3 +25,6 @@
 
 - [Paused menu artwork: modpack implementation handover](menu-ui-modpack-handover.md)
 - [Menu session recipe/prompt source archive](../research/menu-ui-pilot-20261017/README.md)
+
+- [Menu text restoration and private project records](menu-text-restoration.md)
+- [Menu exporters with explicit private inputs](menu-exporters.md)

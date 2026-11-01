@@ -32,3 +32,8 @@ portraits/text/masks/vignettes/fades, fiveaspects and the full fire-escape pan.
 Current game must remain running until owner permits otherwise. New integrity
 hashes are preservation only, never inferred artwork approval. See included
 research reports for exact limits and firstrelease scope.
+
+Production prompt/index records from this dated investigation are archived
+privately with the original workspace. They are not bundled in source. Existing
+project IDs, paths, hashes and approvals are preserved. Use the maintained menu
+commands and guides for new work; these historical scripts are reference material.

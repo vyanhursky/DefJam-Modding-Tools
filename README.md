@@ -80,3 +80,12 @@ Read [AGENTS.md](AGENTS.md) then [PROGRESS.md](PROGRESS.md) before changing the
 workflow. [Architecture](docs/ARCHITECTURE.md) defines the boundary with the recomp,
 the frozen installer core and data compatibility. `provenance.json` records the
 source extraction commit and the original shared-core hashes.
+
+## Menu authoring and project ownership
+
+[Lettering restoration](docs/menu-text-restoration.md) explains fidelity, prompts,
+review backdrops and private project retention. The relocated [menu exporters](docs/menu-exporters.md)
+accept explicit private inputs. Production review ledgers/checkpoint pointers remain
+outside Git; release metadata belongs to the mod catalogue, runtime acceptance to
+the game. Historical source excerpts under `research/` are examples, not an active
+workspace or a replacement for its private production records.
