@@ -14,6 +14,10 @@ def test_profile_paths_are_relative_to_profile_and_explicit_flags_win(tmp_path):
     assert parsed['workspace']==str(tmp_path/'work')
     assert cli.dispatch_args('serve',['--port','8769'],parsed)==['serve','--corpus',str(tmp_path/'corpus'),'--workspace',str(tmp_path/'work'),'--port','8768','--port','8769']
     assert cli.dispatch_args('workshop',['import','--asset','a'],parsed)[0]=='import'
+    caf=cli.dispatch_args('caf',['serve','--port','8780'],parsed)
+    assert caf==['serve','--corpus',str(tmp_path/'corpus'),'--workspace',str(tmp_path/'work'),'--port','8780']
+    # The gallery's port is never inherited by its separate CAF companion.
+    assert '--port' not in cli.dispatch_args('caf',['serve'],parsed)
 
 
 @pytest.mark.parametrize('value',[dict(schema=2),dict(schema=1,port=1),dict(schema=1,workspace=''),dict(schema=1,unexpected=True)])
@@ -32,7 +36,8 @@ def test_all_ui_and_vendor_resources_exist_without_recomp_checkout():
     here=texture_workshop.HERE
     for route in [('model-viewer',),('model-viewer.js',),('model-viewer.css',),('vendor','three.core.min.js'),('vendor','loaders','GLTFLoader.js'),('vendor','utils','BufferGeometryUtils.js')]:
         assert model_workshop.static_file(route,here)[0]
-    for name in ['texture_workshop.html','texture_workshop.js','texture_workshop.css','hd_corpus.html','profiles/hd-runtime-aliases.json']:
+    for name in ['texture_workshop.html','texture_workshop.js','texture_workshop.css','hd_corpus.html','profiles/hd-runtime-aliases.json',
+                 'caf_viewer.html','caf_viewer.js','caf_viewer.css']:
         assert (here/name).is_file()
 
 

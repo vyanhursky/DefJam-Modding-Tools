@@ -2,6 +2,39 @@
 
 ## Current status
 
+**2026-10-31 — Create-a-Fighter fitting room, local beta.** Owner requested a
+customization assembly/secondary-inspection tool. The separate `caf build/serve`
+commands index the own-dump parts XML and compose four source atlases from proven
+FSH placement/blend metadata. Source geometry, UVs and material groups are retained;
+A–F body deltas, full neck fits, accessory remaps and default facial-hair fits are
+implemented without changing the existing fighter decoder/cache contracts.
+
+The UI has a category hierarchy/search, independent equipped slots, design/color
+resources, per-source immutable revisions, synchronized split or single-view A/B,
+hold-to-compare, close-up/UV-derived decal framing, palettes, isolation/wireframe,
+saved outfits and a hash-pinned secondary-inspection queue with conflict-safe notes.
+The 2D gallery source adds an exact source/revision handoff to the separate CAF
+origin; the existing live writer is preserved. The standalone CAF service reads
+that workshop and its corpus; only its separate schema-1 inspection state is written.
+
+Validation: final own-dump cache **38 groups / 879 XML entries / 5,319 texture
+resources / 483 static model resources**, zero rejected mesh/build conversions;
+**842/842** first-variant equip/build composition cases. Synthetic suite **198
+passed / 51 subtests**; JS syntax, source policy and clean wheel resource checks
+pass. Browser checks cover actual mixed clothing/shoes/hair/jewelry, named hair
+palette, source C/F builds, revision selection, queue notes and outfit reload.
+Existing workshop/model metadata remains byte-identical. No art generation,
+approval, pack installation, game/runtime/setup change or source push.
+
+Use [the CAF guide](docs/create-a-fighter-viewer.md) and
+[assembly evidence](docs/research/caf-static-assembly.md). Machine paths/startup
+and private receipts belong in ignored `.local-handoff.md`. Native outfit parity
+is still pending: source A–F retail size labels, full hat/hair compatibility,
+face blend-shape editing, animation and game shader effects are not claimed.
+Next: owner inspection of the local fitting room, then representative native
+outfit/color/decal acceptance. Any PR uses the current **v0.13.0** milestone;
+keep the live review service and published art untouched.
+
 **2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
 and mouse/page-size refinements and requested merging PR4 into main. It retains
 milestone **v0.13.0**. Validation is 181 tests / 51 subtests plus passing macOS,
