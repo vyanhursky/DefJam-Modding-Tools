@@ -3,7 +3,7 @@
 ## Current status
 
 2026-10-31: owner authorized the recommended reusable-tooling cleanup. Curated
-fighter integration is on `codex/fighter-tools-cleanup`, based on `b36f78b`
+fighter integration is delivered through PR3 (`codex/fighter-tools-cleanup`), based on `b36f78b`
 (menu PR1 and authoring-boundary PR2 merged). Full fighter source history was
 pushed at `d1c3de4` before cleanup. The maintained tree imports reusable source
 and synthetic tests, not dated production ledgers or batch runners.
@@ -34,8 +34,9 @@ archived gallery lanes/review and model left/right survive history on/off and
 reload, approved history remains available and unrelated history is hidden.
 Built wheel installed into an independent temp target imports all fighter/menu
 modules and includes the catalogue and browser resources from an unrelated cwd.
-Source policy: 505 files, zero failures; whitespace checks pass. Hosted CI and
-source PR integration are pending.
+Source policy: 505 files, zero failures; whitespace checks pass. Code commit
+47ffdbb passed all three hosted platforms (run 41270542085), including package
+build and source-policy checks. PR3 retains milestone v0.12.2.
 
 ## Private workspace and releases
 
@@ -69,8 +70,8 @@ Menu 1.4.0 and its signed catalogue publication remain unchanged as well.
 
 1. Read AGENTS.md, docs/WORKFLOW.md and docs/tooling-history.md. Verify current
    branch/remote and private writer ownership before editing or restarting.
-2. Review/integrate this source change with combined CI and milestone v0.12.2.
-   Keep other authoring worktrees and the live 8768 server unchanged.
+2. Pull main for future source work after PR3 integration. Keep other authoring
+   worktrees and the live 8768 server unchanged; no automatic source cutover.
 3. Continue art review through the existing workspace. Future live cutover needs
    saved browser notes, metadata backup and compatibility checks first.
 4. Implement portable assembly jobs/offline release building separately, with
