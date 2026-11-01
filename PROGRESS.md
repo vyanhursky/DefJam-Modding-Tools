@@ -2,6 +2,37 @@
 
 ## Current status
 
+**2026-11-01 — CAF neck fits and retail clothing navigation.** Owner requested
+closing the E/F neck gap and replacing resource-only clothing cards with the
+actual game item names, colors and wearing styles. Cache decoder 2 applies the
+retail default face build morph to the base face for all A–F builds. The nine
+shared jaw/neck attachment positions now agree within 0.00002 source units on
+E/F (previous maximum gap 0.19862); source UVs, textures and scalp are retained.
+Decoder-1 caches and schema-1 outfits/inspection records remain readable.
+
+The own-dump SODB/English locale reader maps **326 shop clothing items**, including
+**123 Tops**, **1,454 colors**, **1,185 fittings** and all **4,634 combinations**.
+The sidebar shows garment names plus texture IDs, then named Color → Style
+buttons; the inspector mirrors those choices. Wearing styles change the actual
+model, color changes retain the style where available, and raw source controls
+remain accessible. Exact source names disambiguate distinct same-suffix textures;
+only identical references are treated as legacy aliases. No catalogue text or
+art is bundled. Left wristbands remain explicitly separate from right resources;
+automatic outfit conflicts/pairing and broader grooming/jewelry names are pending.
+
+Validation: **209 tests / 51 subtests**, synthetic malformed metadata/schema and
+alias checks, all 4,634 own-dump selection/resource joins, preserved old catalogue
+IDs and six mixed-outfit build compositions. Browser checks cover E/F seam close-ups,
+retail search, geometry/style and color persistence, reload and A/B. The native
+Story shop confirms the garment → color → fitting flow and representative labels
+on a disposable guarded save, restored byte-identically. This is representative
+menu verification, not exhaustive native outfit/render parity. Source/wheel
+checks and the backed-up local viewer cutover preserve existing reviews, outfits,
+queue records and artwork. No runtime/setup change, art approval or source push.
+Machine paths, receipts, restart/rollback commands belong in ignored
+`.local-handoff.md`. Next: owner review of the updated local CAF viewer; retain
+milestone **v0.13.0** for any PR.
+
 **2026-10-31 — Create-a-Fighter fitting room, local beta.** Owner requested a
 customization assembly/secondary-inspection tool. The separate `caf build/serve`
 commands index the own-dump parts XML and compose four source atlases from proven

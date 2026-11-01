@@ -1,9 +1,10 @@
 import * as THREE from '/vendor/three.module.min.js';
 import {OrbitControls} from '/vendor/controls/OrbitControls.js';
+import {findSelection,chooseSelection,selectionForChoice} from '/caf-wardrobe.js';
 
 const $=id=>document.getElementById(id);
 const state={catalog:null,stored:null,outfit:null,slot:null,asset:null,compare:null,views:[],scene:null,
-  syncing:false,generation:0,hold:false,showA:false,write:Promise.resolve(),queueEntry:null,noteDirty:false,noteEdit:0};
+  syncing:false,generation:0,hold:false,showA:false,write:Promise.resolve(),queueEntry:null,noteDirty:false,noteEdit:0,shopIds:{},sourceSlots:new Set()};
 let renderTimer,saveTimer;
 const draftKey=()=>`defjam-caf-notes:${state.catalog?.corpus_id}:${state.queueEntry?.id}`;
 function error(e){$('error').textContent=e.message||String(e);$('error').hidden=false;}
@@ -35,9 +36,15 @@ function resourceFor(slot){
 function primaryAsset(item){
   const name=item.styles[0]?.variants[0];return name&&state.catalog.resources[name.toLowerCase()]?.records[0]?.asset;
 }
-function itemName(item){
+function sourceName(item){
   const name=item.model==='NON_GEOM'?(item.styles[0]?.variants[0]||item.model):item.model;
   const m=name.match(/^V2CP_(\d+)_(\d+)_/);return m?`${m[1]} / ${m[2]}`:name.replace('V2CP_','');
+}
+function shopRows(slot){return state.catalog.shop?.groups[slot]||[];}
+function retailFor(slot){return state.sourceSlots.has(slot)?null:findSelection(shopRows(slot),state.outfit.slots[slot],state.shopIds[slot]);}
+function itemName(item){
+  const found=retailFor(item.id.split(':')[0]);
+  return found?.fitting.selection.item===item.id?found.garment.name:sourceName(item);
 }
 function imageURL(asset,revision){return `/api/caf/image/${encodeURIComponent(asset)}/${encodeURIComponent(revision)}`;}
 function revisionLabel(asset,revision){return state.catalog.revisions[asset]?.find(r=>r.id===revision)?.label||revision;}
@@ -53,6 +60,70 @@ function renderEquipped(){
     button.onclick=()=>focusSlot(slot);container.append(button);
   }
 }
+function renderSourceList(list,items,group){
+  let shown=0;
+  function addPage(count=30){
+    list.querySelector(':scope > .more')?.remove();
+    for(const item of items.slice(shown,shown+count)){
+      const button=document.createElement('button'),text=document.createElement('div'),title=document.createElement('strong'),meta=document.createElement('small');
+      button.className='item-card';button.classList.toggle('active',state.outfit.slots[group.id]?.item===item.id);button.dataset.item=item.id;
+      const asset=primaryAsset(item);
+      if(asset){const img=document.createElement('img');img.src=imageURL(asset,'original');img.loading='lazy';img.alt='';button.append(img);}
+      title.textContent=sourceName(item);meta.textContent=item.styles.length?`${item.styles.length} designs · ${item.styles.reduce((n,s)=>n+s.variants.length,0)} resources`:'Original body geometry';
+      text.append(title,meta);button.append(text);button.title=item.model==='NON_GEOM'?(item.styles[0]?.variants[0]||item.model):item.model;
+      button.disabled=Boolean(item.limitation);if(item.limitation)meta.textContent=item.limitation;
+      button.onclick=()=>equip(group.id,item.id);list.append(button);
+    }
+    shown+=count;
+    if(shown<items.length){const more=document.createElement('button');more.className='more';more.textContent=`Show more (${items.length-shown})`;more.onclick=()=>addPage();list.append(more);}
+  }
+  const active=state.sourceSlots.has(group.id)?items.findIndex(i=>i.id===state.outfit.slots[group.id]?.item):-1;
+  addPage(Math.max(30,Math.ceil((active+1)/30)*30));
+}
+function equipRetail(slot,choice){
+  if(!choice)return;
+  state.sourceSlots.delete(slot);
+  state.shopIds[slot]=choice.garment.id;
+  state.outfit.slots[slot]=structuredClone(selectionForChoice(choice,state.outfit.slots[slot]));
+  focusSlot(slot);renderCategories();renderEquipped();scheduleRender();
+}
+function renderRetailOptions(host,group,choice){
+  const options=document.createElement('div');options.className='garment-options';
+  const colors=document.createElement('div'),fits=document.createElement('div');colors.className='color-choices';fits.className='fitting-choices';
+  for(const [label,container] of [['Color',colors],['Style',fits]]){const title=document.createElement('p');title.className='option-title';title.textContent=label;options.append(title,container);}
+  for(const color of choice.garment.colors){
+    const button=document.createElement('button');button.textContent=color.name;button.setAttribute('aria-pressed',String(color.id===choice.color.id));
+    button.onclick=()=>equipRetail(group.id,chooseSelection(choice.garment,color.id,choice.fitting.id));colors.append(button);
+  }
+  for(const fit of choice.color.fittings){
+    const button=document.createElement('button');button.textContent=fit.name;button.title=fit.resource;button.setAttribute('aria-pressed',String(fit.id===choice.fitting.id));
+    button.onclick=()=>equipRetail(group.id,chooseSelection(choice.garment,choice.color.id,fit.id));fits.append(button);
+  }
+  host.append(options);
+}
+function renderRetailList(list,rows,group){
+  const current=retailFor(group.id);let shown=0;
+  const activeIndex=rows.findIndex(r=>r.id===current?.garment.id);
+  function addPage(count=30){
+    list.querySelector(':scope > .more')?.remove();
+    for(const row of rows.slice(shown,shown+count)){
+      const choice=chooseSelection(row),button=document.createElement('button'),text=document.createElement('div'),title=document.createElement('strong'),meta=document.createElement('small'),ids=document.createElement('small');
+      const selected=row.id===current?.garment.id;
+      button.className='item-card';button.classList.toggle('active',selected);button.dataset.garment=row.id;button.setAttribute('aria-expanded',String(selected));
+      const displayChoice=selected?current:choice;
+      const resource=displayChoice&&state.catalog.resources[displayChoice.fitting.resource.toLowerCase()];const asset=resource?.records[0]?.asset;
+      if(asset){const img=document.createElement('img');img.src=imageURL(asset,'original');img.loading='lazy';img.alt='';button.append(img);}
+      title.textContent=row.name;meta.textContent=`${row.category} · ${row.colors.length} colors · ${row.colors[0]?.fittings.length||0} styles`;
+      ids.className='resource-label';ids.textContent=displayChoice?.fitting.resource||'No supported resource';
+      text.append(title,meta,ids);button.append(text);button.title=displayChoice?.fitting.resource||row.name;button.disabled=!choice;
+      button.onclick=()=>equipRetail(group.id,selected?current:choice);list.append(button);
+      if(selected)renderRetailOptions(list,group,current);
+    }
+    shown+=count;
+    if(shown<rows.length){const more=document.createElement('button');more.className='more';more.textContent=`Show more (${rows.length-shown})`;more.onclick=()=>addPage();list.append(more);}
+  }
+  addPage(Math.max(30,Math.ceil((activeIndex+1)/30)*30));
+}
 function renderCategories(){
   const host=$('categories'),query=$('search').value.trim().toLowerCase();
   const opened=new Set([...host.querySelectorAll('details[open]')].map(x=>x.dataset.slot));host.replaceChildren();
@@ -60,36 +131,34 @@ function renderCategories(){
     const groups=state.catalog.groups.filter(g=>g.section===section && !['Template','Palette','BlendShape'].includes(g.kind));
     const heading=document.createElement('h3');heading.className='category-section';heading.textContent=section;host.append(heading);
     for(const group of groups){
+      const rows=shopRows(group.id).filter(row=>!query||[group.label,row.name,row.category,...row.colors.flatMap(c=>[c.name,...c.fittings.flatMap(f=>[f.name,f.resource,...(state.catalog.resources[f.resource.toLowerCase()]?.records.map(r=>r.asset)||[])])])].join(' ').toLowerCase().includes(query));
       const items=group.items.filter(item=>{
         if(!query)return true;
         const names=item.styles.flatMap(s=>s.variants);const ids=names.flatMap(n=>state.catalog.resources[n.toLowerCase()]?.records.map(r=>r.asset)||[]);
         return [group.label,item.model,...names,...ids].join(' ').toLowerCase().includes(query);
       });
-      if(!items.length)continue;
+      if(!items.length&&!rows.length)continue;
       const details=document.createElement('details'),summary=document.createElement('summary'),list=document.createElement('div');
-      details.className='category';details.dataset.slot=group.id;summary.textContent=`${group.label} · ${items.length}`;list.className='item-list';
-      let shown=0;
-      function addPage(){
-        list.querySelector('.more')?.remove();
-        for(const item of items.slice(shown,shown+30)){
-          const button=document.createElement('button'),text=document.createElement('div'),title=document.createElement('strong'),meta=document.createElement('small');
-          button.className='item-card';button.classList.toggle('active',state.outfit.slots[group.id]?.item===item.id);button.dataset.item=item.id;
-          const asset=primaryAsset(item);
-          if(asset){const img=document.createElement('img');img.src=imageURL(asset,'original');img.loading='lazy';img.alt='';button.append(img);}
-          title.textContent=itemName(item);meta.textContent=item.styles.length?`${item.styles.length} designs · ${item.styles.reduce((n,s)=>n+s.variants.length,0)} resources`:'Original body geometry';
-          text.append(title,meta);button.append(text);button.title=item.model==='NON_GEOM'?(item.styles[0]?.variants[0]||item.model):item.model;
-          button.disabled=Boolean(item.limitation);if(item.limitation)meta.textContent=item.limitation;
-          button.onclick=()=>equip(group.id,item.id);list.append(button);
-        }
-        shown+=30;
-        if(shown<items.length){const more=document.createElement('button');more.className='more';more.textContent=`Show more (${items.length-shown})`;more.onclick=addPage;list.append(more);}
-      }
-      details.addEventListener('toggle',()=>{if(details.open&&!shown)addPage();});details.append(summary,list);host.append(details);
+      details.className='category';details.dataset.slot=group.id;summary.textContent=`${group.label} · ${rows.length||items.length}`;list.className='item-list';
+      let populated=false;
+      details.addEventListener('toggle',()=>{
+        if(!details.open||populated)return;populated=true;
+        if(rows.length){
+          const retailList=document.createElement('div');retailList.className='item-list';list.append(retailList);renderRetailList(retailList,rows,group);
+          if(items.length){
+            const raw=document.createElement('details'),s=document.createElement('summary'),rawList=document.createElement('div');
+            raw.className='source-items';s.textContent=`Source resources · ${items.length}`;rawList.className='item-list';raw.append(s,rawList);list.append(raw);
+            let loaded=false;raw.ontoggle=()=>{if(raw.open&&!loaded){loaded=true;renderSourceList(rawList,items,group);}};
+            raw.open=state.sourceSlots.has(group.id);
+          }
+        }else renderSourceList(list,items,group);
+      });details.append(summary,list);host.append(details);
       details.open=Boolean(query)||opened.has(group.id)||state.slot===group.id;
     }
   }
 }
 function equip(slot,id){
+  state.sourceSlots.add(slot);
   const current=state.outfit.slots[slot];
   if(!current||current.item!==id)state.outfit.slots[slot]={item:id,style:0,color:0,palette:'default'};
   focusSlot(slot);renderCategories();renderEquipped();scheduleRender();
@@ -98,16 +167,30 @@ function focusSlot(slot,preferredAsset=null,preferredRevision=null){
   state.slot=slot;state.asset=null;state.compare=null;
   const item=itemFor(slot),selected=state.outfit.slots[slot],group=groupFor(slot);
   if(!item){$('item-controls').hidden=true;return;}
-  $('item-title').textContent=group.label+' · '+itemName(item);$('item-resource').textContent=item.model==='NON_GEOM'?'Skin decal · '+(item.styles[0]?.variants[0]||''):item.model;
+  const retail=retailFor(slot);
+  const mapped=findSelection(shopRows(slot),selected,state.shopIds[slot]);
+  $('source-controls').hidden=!mapped;
+  $('source-controls').textContent=state.sourceSlots.has(slot)?'Garment controls':'Source controls';
+  $('item-title').textContent=retail?retail.garment.name:group.label+' · '+itemName(item);
+  $('item-resource').textContent=retail?`${group.label} / ${retail.garment.category} · ${retail.fitting.resource}`:item.model==='NON_GEOM'?'Skin decal · '+(item.styles[0]?.variants[0]||''):item.model;
   $('item-controls').hidden=false;
+  $('style-label').textContent=retail?'Style':'Design';$('color-label').textContent=retail?'Color':'Color resource';
   $('style').replaceChildren();
-  for(const [i,style] of item.styles.entries()){
-    const name=style.variants[0].replace(/^V2CP_\d+_\d+_/,'');$('style').add(new Option(`Design ${i+1} · ${name}`,String(i)));
+  $('color').replaceChildren();
+  if(retail){
+    for(const color of retail.garment.colors)$('color').add(new Option(color.name,color.id));
+    for(const fit of retail.color.fittings)$('style').add(new Option(fit.name,fit.id));
+    $('color').value=retail.color.id;$('style').value=retail.fitting.id;
+    $('style').disabled=retail.color.fittings.length<2;$('color').disabled=retail.garment.colors.length<2;
+  }else{
+    for(const [i,style] of item.styles.entries()){
+      const name=style.variants[0].replace(/^V2CP_\d+_\d+_/,'');$('style').add(new Option(`Design ${i+1} · ${name}`,String(i)));
+    }
+    $('style').disabled=!item.styles.length;$('style').value=String(selected.style);
+    const style=item.styles[selected.style];
+    for(const [i,name] of (style?.variants||[]).entries())$('color').add(new Option(`Color ${i+1} · ${name.split('_').slice(-2).join('_')}`,String(i)));
+    $('color').disabled=!style;$('color').value=String(selected.color);
   }
-  $('style').disabled=!item.styles.length;$('style').value=String(selected.style);
-  $('color').replaceChildren();const style=item.styles[selected.style];
-  for(const [i,name] of (style?.variants||[]).entries())$('color').add(new Option(`Color ${i+1} · ${name.split('_').slice(-2).join('_')}`,String(i)));
-  $('color').disabled=!style;$('color').value=String(selected.color);
   const resource=resourceFor(slot);
   $('palette').replaceChildren(new Option('Authored RGB / default source palette','default'));
   for(const p of resource?.palettes||[])$('palette').add(new Option(p,p));$('palette').value=selected.palette;
@@ -322,9 +405,10 @@ async function main(){
   $('search').addEventListener('input',renderCategories);
   $('build').onchange=()=>{state.outfit.build=$('build').value;scheduleRender();remember();};
   $('skin').onchange=()=>{state.outfit.skin=$('skin').value;scheduleRender();remember();};
-  $('style').onchange=()=>{const s=state.outfit.slots[state.slot];s.style=Number($('style').value);s.color=0;s.palette='default';focusSlot(state.slot);};
-  $('color').onchange=()=>{const s=state.outfit.slots[state.slot];s.color=Number($('color').value);s.palette='default';focusSlot(state.slot);};
+  $('style').onchange=()=>{const retail=retailFor(state.slot);if(retail)return equipRetail(state.slot,chooseSelection(retail.garment,retail.color.id,$('style').value));const s=state.outfit.slots[state.slot];s.style=Number($('style').value);s.color=0;s.palette='default';focusSlot(state.slot);renderCategories();};
+  $('color').onchange=()=>{const retail=retailFor(state.slot);if(retail)return equipRetail(state.slot,chooseSelection(retail.garment,$('color').value,retail.fitting.id));const s=state.outfit.slots[state.slot];s.color=Number($('color').value);s.palette='default';focusSlot(state.slot);renderCategories();};
   $('palette').onchange=()=>{state.outfit.slots[state.slot].palette=$('palette').value;scheduleRender();remember();};
+  $('source-controls').onclick=()=>{const slot=state.slot;if(state.sourceSlots.has(slot))state.sourceSlots.delete(slot);else state.sourceSlots.add(slot);focusSlot(slot);renderCategories();};
   $('texture').onchange=()=>textureChanged();
   for(const id of ['revision-a','revision-b'])$(id).onchange=updateComparison;
   for(const side of ['a','b'])$('quick-'+side).onchange=()=>{$('revision-'+side).value=$('quick-'+side).value;updateComparison();};

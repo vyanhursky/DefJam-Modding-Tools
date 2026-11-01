@@ -37,7 +37,7 @@ def test_all_ui_and_vendor_resources_exist_without_recomp_checkout():
     for route in [('model-viewer',),('model-viewer.js',),('model-viewer.css',),('vendor','three.core.min.js'),('vendor','loaders','GLTFLoader.js'),('vendor','utils','BufferGeometryUtils.js')]:
         assert model_workshop.static_file(route,here)[0]
     for name in ['texture_workshop.html','texture_workshop.js','texture_workshop.css','hd_corpus.html','profiles/hd-runtime-aliases.json',
-                 'caf_viewer.html','caf_viewer.js','caf_viewer.css']:
+                 'caf_viewer.html','caf_viewer.js','caf_viewer.css','caf_wardrobe.js']:
         assert (here/name).is_file()
 
 

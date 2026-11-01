@@ -3,3 +3,5 @@
 .quick-revisions{display:flex;gap:12px;padding:0 17px 12px}.quick-revisions label{display:flex;gap:7px;align-items:center;min-width:0;flex:1;margin:0;color:var(--accent)}.quick-revisions select{width:100%;min-width:0;font-size:11px;padding:6px}
 
 .viewports.pending canvas{opacity:.45}.viewports.stale canvas{opacity:.15}.viewports.pending,.viewports.stale{cursor:progress}
+
+.garment-options{border-left:2px solid #697748;margin:0 0 10px 13px;padding:0 0 3px 12px}.option-title{font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin:9px 0 5px}.color-choices{display:flex;gap:4px;flex-wrap:wrap}.color-choices button,.fitting-choices button{font-size:11px;padding:6px 8px}.fitting-choices{display:grid;gap:4px}.fitting-choices button{text-align:left}.garment-options button[aria-pressed=true]{border-color:var(--accent);background:#343f28;color:var(--accent)}.item-card .resource-label{font-size:9px;opacity:.72;overflow-wrap:anywhere}.source-items{border-top:1px solid var(--line);padding:9px 0}.source-items>summary{color:var(--muted);font-size:11px;cursor:pointer}#item-resource{overflow-wrap:anywhere}

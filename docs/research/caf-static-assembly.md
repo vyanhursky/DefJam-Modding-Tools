@@ -51,6 +51,16 @@ with a suffix from face type modulo four. The initial viewer fixes face type 0
 and uses the corresponding suffix 1. Head C/C1 and Norm/Long template changes
 depend on face type rather than body build; other face types are not exposed.
 
+For default face type 0, `0x000989C2` through `0x00098A7F` constructs a separate
+slot4 face fit: `V2CP_531_0001_C` for builds A/B, `532_0001_C` for C/D and
+`533_0001_C` for E/F. The dispatch at `0x0009A910` applies slot4 to the slot2
+base face `V2CP_532_0004_C`. Initialization sets its weight to 1, then the morph
+setter clamps it to approximately 0.9999. This fit applies to C too; generic
+clothing-morph eligibility must not suppress it. Decoder 2 includes this default
+fit while leaving facial feature editing out of scope. On the measured nine
+shared face/neck boundary points, the maximum E/F gap falls from 0.19862 source
+units to under 0.00002. UVs, topology, source textures and scalp are unchanged.
+
 `0x00026140` sets the morph weight, clamps 1 to approximately 0.9999, and calls
 `0x001128D0`. The morph resource contains named semantic groups and channels;
 each chunk has a 16-byte header: packed payload size/format, vertex count,
@@ -66,3 +76,35 @@ The exact retail labels for the six source builds remain unproven. Static
 coordinates and decoded deltas do not prove full skeleton animation, cloth fit
 through poses, or hat/hair attachment compatibility. Native outfit comparison is
 still a separate acceptance step.
+
+## Retail wardrobe names and wearing styles
+
+The owner's `assets/djv2.sod` supplies the clothing table; English strings come
+from `cmusen.loc` inside `assets/misc.viv`. No extracted table or localization is
+bundled. `Shops.GetNextItem` uses `0x000514B0`; its fitting/color iterator is
+`0x00051620`. The SODB v2 clothing table hash is `0x912016DD`. Schema offsets are
+checked before reading model number, design string, color array, localized name,
+fitting array, order and category. Color and fitting IDs are zero-based array
+ordinals; resource color numbers and fitting model offsets are separate fields.
+
+Locale LOCT maps hashes to LOCL UTF-16 strings. Its 16-byte header includes two
+metadata words that are not string records. SODB string indices select STRT
+pairs; zero pointers request localization. `FIT_{part}_{model}` keys use the
+retail DJB2 routine including its terminating NUL. Display text removes the
+retail layout markers while retaining raw text privately.
+
+The join first selects geometry in the correct XML slot using base model plus
+fitting offset, then resolves the design/color suffix among that model's actual
+textures. This handles shared hat textures, authored shorts aliases and the
+143-to-142 taped-finger mesh alias. When a model lists several resources with
+the same suffix, the retail filename rule selects the exact resource first;
+distinct textures are never treated as aliases. Only identical XML references
+retain aliases, with the first matching style used for new choices and old saved
+aliases still recognized. The measured table has 326 items, 1,454 colors and 1,185
+fittings: all 4,634 combinations resolve. The shop name does not replace any
+outfit, source, texture revision or queue identifier.
+
+The original clothing movie addresses armbands through left slot16. The inspected
+path does not establish automatic right-slot17 pairing. The viewer labels that
+navigation Left wristbands and retains separate source controls on the right.
+This catalogue does not claim to reproduce the game's compatibility engine.

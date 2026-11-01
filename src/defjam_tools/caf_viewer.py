@@ -112,7 +112,7 @@ class CafViewer:
                 or self.state_root == self.root or self.state_root.is_relative_to(self.root)):
             raise Invalid("Use a separate CAF state folder outside the workshop, corpus and immutable cache")
         self.catalog = json.loads((self.root / "catalog.json").read_text(encoding="utf8"))
-        if self.catalog.get("schema") != 1 or self.catalog.get("decoder") != VERSION or self.catalog.get("corpus_id") != reader.corpus_id:
+        if self.catalog.get("schema") != 1 or self.catalog.get("decoder") not in (1, VERSION) or self.catalog.get("corpus_id") != reader.corpus_id:
             raise Invalid("Incompatible CAF cache/corpus; rebuild into a new private folder")
         self.groups = {g["id"]: g for g in self.catalog["groups"]}
         self.items = {item["id"]: (g, item) for g in self.groups.values() for item in g["items"]}
@@ -192,6 +192,7 @@ class CafViewer:
         # Paths and private decoded vertex arrays are never needed by the sidebar.
         result = {k: self.catalog[k] for k in ("builds", "groups", "limitations", "errors")}
         result = copy.deepcopy(result)
+        result["shop"] = copy.deepcopy(self.catalog.get("shop", dict(groups={}, unresolved=[])))
         snapshot = self.reader.snapshot()
         public_resources = {}
         for name, resource in self.catalog["resources"].items():
@@ -402,6 +403,7 @@ class CafViewer:
 def route_get(handler, viewer, token, parts, query):
     static = {"caf-viewer": ("caf_viewer.html", "text/html; charset=utf-8"),
               "caf-viewer.js": ("caf_viewer.js", "text/javascript; charset=utf-8"),
+              "caf-wardrobe.js": ("caf_wardrobe.js", "text/javascript; charset=utf-8"),
               "caf-viewer.css": ("caf_viewer.css", "text/css; charset=utf-8")}
     if len(parts) == 1 and parts[0] in static:
         file, mime = static[parts[0]]

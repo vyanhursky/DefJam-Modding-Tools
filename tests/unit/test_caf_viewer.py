@@ -119,6 +119,28 @@ def test_retail_fit_remaps_do_not_collapse_necklace_or_neck_builds():
         assert [a.fit_build(slot, c) for c in "ABCDEF"] == list("ABCDEF")
 
 
+def test_face_fits_apply_slot_four_to_face_for_all_builds_including_c():
+    objects = {}
+    for index in range(1, 4):
+        raw = bytearray(morph_fixture())
+        # First synthetic vertex in each shape has a different jaw offset.
+        struct.pack_into("<3f", raw, 52 + 0x54, index, -index, index / 2)
+        name = f"v2cp_53{index}_0001_c"
+        objects[name] = (name + ".o", bytes(raw))
+    original = model()
+    variants = a.face_fits(original, objects)
+    for index, pair in enumerate(("AB", "CD", "EF"), 1):
+        for build in pair:
+            assert variants[build]["meshes"][0]["positions"][0] == pytest.approx(
+                [index * .9999, -index * .9999, index * .9999 / 2])
+            assert variants[build]["meshes"][0]["uv"] == original["meshes"][0]["uv"]
+            assert variants[build]["caf_face_fit"] == f"v2cp_53{index}_0001_c"
+    assert original["meshes"][0]["positions"][0] == [0, 0, 0]
+    del objects["v2cp_533_0001_c"]
+    with pytest.raises(ValueError, match="Missing default CAF face fit"):
+        a.face_fits(original, objects)
+
+
 def test_color_morph_omission_does_not_discard_valid_geometry_shape():
     changed = a.apply_morph(model(), morph_fixture(with_colors=True))
     assert changed["meshes"][0]["positions"][0] == pytest.approx([.9999, 1.9998, 2.9997])
@@ -279,6 +301,8 @@ def test_loopback_host_origin_auth_and_read_only_routes(viewer):
                 urlopen(base + route)
         with urlopen(base + "/caf-viewer.js") as response:
             assert b"/vendor/three.module.min.js" in response.read()
+        with urlopen(base + "/caf-wardrobe.js") as response:
+            assert b"export function findSelection" in response.read()
         assert not viewer.file.exists()
     finally:
         server.shutdown()

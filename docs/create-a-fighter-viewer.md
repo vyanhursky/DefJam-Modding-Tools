@@ -11,9 +11,9 @@ Build a new private cache from your own extracted Xbox dump and existing corpus:
 
 ```sh
 defjam-tools caf build --dump /private/extracted --corpus /private/corpus \
-  --output /private/caf/cache-v1
+  --output /private/caf/cache-v2
 defjam-tools caf serve --corpus /private/corpus \
-  --workspace /private/texture-workshop --catalog /private/caf/cache-v1 \
+  --workspace /private/texture-workshop --catalog /private/caf/cache-v2 \
   --state-dir /private/caf/inspection --port 8780
 ```
 
@@ -32,20 +32,43 @@ locally and does not need a running game, network access or an image-generation 
 
 Choose a source body build and skin palette. Expand Clothing, Hair & grooming,
 Jewelry, Tattoos, or Body & face in the left sidebar. Search by category, resource
-name or exact source ID. Items retain their source identifiers; unverified retail
-garment names and shop-thumbnail relationships are not invented. Sidebar previews
-are the actual texture maps, rather than guessed shop thumbnails.
+name or exact source ID. Clothing entries use the game's own English item and
+color names, read from the owner's shop database and localization. The item name
+is prominent and the texture resource ID remains below it. Sidebar previews are
+the actual texture maps, rather than guessed shop thumbnails.
 
-Click an item to equip its slot. The inspector provides independent design,
-color-resource and texture-map choices. Tops, pants, shoes, scalp/hair, facial
+Expand Tops and choose a named garment, then a color and wearing style. The
+sidebar buttons and inspector selectors stay synchronized. Styles such as open,
+half buttoned and buttoned up select the corresponding source model. Changing
+color retains the wearing style where available. The same navigation covers
+pants, shoes, hats, left wristbands, gloves and eyewear. Items with one option
+show that option without inventing alternatives. If the original fitting text
+is missing or a technical placeholder, the tool labels it "Source style".
+
+Source resources remain available in an additional disclosure for each mapped
+category. **Source controls** also opens every original design/color choice on a
+retail-mapped model; **Garment controls** returns to the named options. Other
+customization groups keep their original design/color controls.
+Tops, pants, shoes, scalp/hair, facial
 hair, headwear, jewelry and the nine tattoo placements can be combined. Replacing
 a slot replaces that slot's geometry and texture choices. Body skin is composed
 under tattoos and clothing using the source atlas coordinates.
 
 The six source builds A–F use the game's actual mesh deltas and full neck fits.
+Cache decoder 2 also applies the default face's build-dependent fitting morph,
+which closes the A/B and E/F face-to-neck boundary without moving the head or
+editing the textures. Decoder-1 caches remain readable; build a fresh decoder-2
+cache to obtain the new fits and shop names. Existing outfits, queue entries and
+revision IDs use the same schema and require no migration.
 The tool deliberately retains these source names: correspondence with retail
 M/L/XL/XXL labels has not been established. Shoes, hands, rings and facial hair
 use the original shared-fit rules; necklaces retain independent build fits.
+
+The retail wardrobe is a navigation layer over the existing XML selections.
+It is independent of Story unlocks and purchases. Automatic shop compatibility
+rules, such as removing conflicting jewelry or pairing wrist accessories, are
+not simulated. Left and right wrists remain explicit separate slots; right-wrist
+resources keep the source controls until paired behavior is verified.
 
 Save named outfits to reuse the same context. Each stores the build, skin,
 equipped items, exact design/color resources, palette choices and per-source

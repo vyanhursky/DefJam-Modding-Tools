@@ -16,7 +16,7 @@ from .defjam_model import ElfData, ModelError, decode
 from .hd_assets import archive_entries, shpx_images, unpack_refpack
 from .paths import require_private_output
 
-VERSION = 1
+VERSION = 2
 BUILDS = tuple("ABCDEF")
 MORPH_SLOTS = {"12", "13", "14", "16", "17", "18", "22", "23", "24", "28"}
 
@@ -26,6 +26,25 @@ def fit_build(slot, build):
     if slot in ("14", "18", "21", "28"):
         return {"A": "A", "B": "A", "C": "C", "D": "C", "E": "F", "F": "F"}[build]
     return build
+
+
+def face_fits(model, objects):
+    """Default face_type=0: slot 4's build fit targets the slot 2 face.
+
+    Retail 98820 chooses 531/532/533 by build//2; 9A910 applies that
+    separate blend shape to the base face, including the default C build.
+    Keep this distinct from clothing morph eligibility and full neck models.
+    """
+    variants = {}
+    for index, pair in enumerate(("AB", "CD", "EF"), 1):
+        name = f"v2cp_53{index}_0001_c"
+        if name not in objects:
+            raise ModelError("Missing default CAF face fit: " + name)
+        fitted = apply_morph(model, objects[name][1])
+        fitted["caf_face_fit"] = name
+        for build in pair:
+            variants[build] = fitted
+    return variants
 
 # Original slot order and composite stages, from the game's CAF table. Geometry
 # labels come from the XML processing instructions, not filename guesses.
@@ -307,6 +326,8 @@ def build_catalog(dump, corpus, output):
                         source_name, blob = objects[name + "1"]
                     model = decode(blob, source_name, "caf:" + name)
                     variants = {"C": model}
+                    if group["id"] == "2" and name == "v2cp_532_0004_c":
+                        variants = face_fits(model, objects)
                     if name.endswith("_c") and group["id"] in MORPH_SLOTS | {"3", "21"}:
                         for letter in "ABDEF":
                             morph_name = name[:-1] + letter.lower()
@@ -354,13 +375,16 @@ def build_catalog(dump, corpus, output):
                 item["limitation"] = ("Face blend-shape editing is not yet supported" if group["kind"] == "BlendShape"
                                        else "" if item["geometry"] or item["model"] == "NON_GEOM"
                                        else "No supported static mesh")
+        from .caf_shop import read_shop
+        shop = read_shop(dump, groups)
         result = dict(schema=1, decoder=VERSION, corpus_id=corpus_data["corpus_id"],
                       corpus_sha256=sha(corpus_raw), parts_sha256=sha(xmls[0]), groups=groups,
-                      resources=resources, geometry=geometries, errors=errors,
+                      resources=resources, geometry=geometries, errors=errors, shop=shop,
                       builds=[dict(id=c, label="Source build " + c, meshes=build_counts[c]) for c in BUILDS],
                       limitations=["Static source rest pose; game lighting/reflections are approximated or omitted",
                                    "Source A–F builds are exposed without guessing retail size labels",
-                                   "Face blend shapes and game animation are not reproduced"])
+                                   "Default face build fit is applied; facial feature editing and game animation are not reproduced",
+                                   "Shop styles select source geometry; automatic outfit compatibility and paired wrist rules are not reproduced"])
         atomic_json(output / "catalog.json", result)
         return dict(path=str(output), groups=len(groups), items=sum(len(g["items"]) for g in groups),
                     models=len(geometries), resources=len(resources), builds=dict(build_counts), errors=errors)
