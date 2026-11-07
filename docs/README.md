@@ -4,6 +4,8 @@
 - [Architecture](ARCHITECTURE.md)
 - [Texture workshop](texture-workshop.md)
 - [Model viewer](model-viewer.md)
+- [Create-a-Fighter fitting room](create-a-fighter-viewer.md)
+- [CAF assembly evidence](research/caf-static-assembly.md)
 
 ## Historical research
 

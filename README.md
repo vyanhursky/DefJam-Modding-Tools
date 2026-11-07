@@ -9,6 +9,9 @@ Fight for NY (Xbox)**. This is the authoring companion to
 - Save flags, notes, regional instructions, approvals and revision requests.
 - Inspect supported fighters and outfits on their original static meshes, with synchronized
   3D cameras, material isolation and private Blender GLB downloads.
+- Assemble Create-a-Fighter outfits and inspect per-item texture revisions with
+  A/B controls and a separate secondary-inspection queue. See the
+  [CAF fitting room guide](docs/create-a-fighter-viewer.md).
 - Preserve protected pixels/alpha during assembly and export selected schema 1
   texture packs for later testing in the game.
 

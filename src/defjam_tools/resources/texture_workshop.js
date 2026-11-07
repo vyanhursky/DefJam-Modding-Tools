@@ -72,6 +72,8 @@ function setReview(target){
   $('review-saved').textContent=r.updated?'Saved '+new Date(r.updated).toLocaleString():'';
   const draft=getDraft();$('draft-recovery').hidden=!draft;
   $('asset-flag').setAttribute('aria-pressed',String(state.asset.review.flag));
+  const caf=$('caf-inspect');caf.hidden=!state.asset.aliases?.some(a=>a.source.toLowerCase().includes('v2cp_'));
+  caf.href='http://127.0.0.1:8780/caf-viewer?'+new URLSearchParams({asset:state.asset.id,revision:target==='asset'?'original':target});
   renderRegions();draw();saveSession();
 }
 function renderRegions(){

@@ -2,6 +2,109 @@
 
 ## Current status
 
+**2026-11-07 — CAF viewer accepted for main.** Owner approved merging
+[PR #5](https://github.com/vyanhursky/DefJam-Modding-Tools/pull/5) from
+`codex/create-fighter-viewer` into `main`, retaining milestone **v0.13.0**.
+The PR includes source assembly/secondary inspection, retail clothing navigation,
+default face build fits, hair colors and the batch handoff guide. This record
+captures owner approval before the merge; the final head must pass CI before
+merging. Private deployment/merge receipts belong in ignored `.local-handoff.md`.
+
+Validation: **211 tests / 51 subtests**, JS syntax, whitespace and **528 source
+files / zero policy failures**. Linux, Windows and macOS CI passed on implementation
+and publication head `c750e84` (run `42382528069`). Existing installed-wheel/browser
+and own-dump evidence is recorded below. No release is requested, and merging the
+source does not restart live services or write review/queue/outfit state.
+Next: the upscaling agent can use the handoff guide to preflight its existing
+batch, inspect one representative queued revision, then submit the remainder.
+
+**2026-11-06 — Hair color controls and upscaling-agent handoff.** Hair color is
+exposed beside the base controls in the left sidebar and synchronized with the
+focused hair inspector; facial hair's palette is labelled explicitly. The
+single texture-resource choice is no longer presented as an editable hair color.
+Indexed Original/Lanczos use the selected source palette; restored RGB revisions
+retain their authored pixels with a scene notice, so an A/B comparison no longer
+fails when a named palette is active. Saved selection IDs/schema remain unchanged.
+
+The [secondary-inspection agent guide](docs/caf-secondary-inspection-agent-handoff.md)
+covers existing-candidate reuse, immutable imports, source/corpus/hash identity,
+a batch manifest, executable read-only preflight/serial queue submission, direct
+links, optimistic conflicts, partial retry and separate review/approval states.
+The exact documented script is exercised against synthetic HTTP state, including
+409 retry, duplicate submission, note/status preservation and failed hash checks.
+Validation: **211 tests / 51 subtests**, JS syntax, installed wheel resources and
+browser source-palette/RGB comparisons. Existing production metadata, CAF queue,
+notes and named outfits are preserved during the CAF-only local update. No
+production batch import/queue submission, artwork generation/approval or push.
+A private machine-ready copy of the handoff and exact deployment paths belong in
+ignored `.local-handoff.md`. Next: owner gives the handoff to the upscaling agent;
+preflight its existing batch, inspect one representative entry, then queue the
+remaining exact revisions. Keep milestone **v0.13.0** for any PR.
+
+**2026-11-01 — CAF neck fits and retail clothing navigation.** Owner requested
+closing the E/F neck gap and replacing resource-only clothing cards with the
+actual game item names, colors and wearing styles. Cache decoder 2 applies the
+retail default face build morph to the base face for all A–F builds. The nine
+shared jaw/neck attachment positions now agree within 0.00002 source units on
+E/F (previous maximum gap 0.19862); source UVs, textures and scalp are retained.
+Decoder-1 caches and schema-1 outfits/inspection records remain readable.
+
+The own-dump SODB/English locale reader maps **326 shop clothing items**, including
+**123 Tops**, **1,454 colors**, **1,185 fittings** and all **4,634 combinations**.
+The sidebar shows garment names plus texture IDs, then named Color → Style
+buttons; the inspector mirrors those choices. Wearing styles change the actual
+model, color changes retain the style where available, and raw source controls
+remain accessible. Exact source names disambiguate distinct same-suffix textures;
+only identical references are treated as legacy aliases. No catalogue text or
+art is bundled. Left wristbands remain explicitly separate from right resources;
+automatic outfit conflicts/pairing and broader grooming/jewelry names are pending.
+
+Validation: **209 tests / 51 subtests**, synthetic malformed metadata/schema and
+alias checks, all 4,634 own-dump selection/resource joins, preserved old catalogue
+IDs and six mixed-outfit build compositions. Browser checks cover E/F seam close-ups,
+retail search, geometry/style and color persistence, reload and A/B. The native
+Story shop confirms the garment → color → fitting flow and representative labels
+on a disposable guarded save, restored byte-identically. This is representative
+menu verification, not exhaustive native outfit/render parity. Source/wheel
+checks and the backed-up local viewer cutover preserve existing reviews, outfits,
+queue records and artwork. No runtime/setup change, art approval or source push.
+Machine paths, receipts, restart/rollback commands belong in ignored
+`.local-handoff.md`. Next: owner review of the updated local CAF viewer; retain
+milestone **v0.13.0** for any PR.
+
+**2026-10-31 — Create-a-Fighter fitting room, local beta.** Owner requested a
+customization assembly/secondary-inspection tool. The separate `caf build/serve`
+commands index the own-dump parts XML and compose four source atlases from proven
+FSH placement/blend metadata. Source geometry, UVs and material groups are retained;
+A–F body deltas, full neck fits, accessory remaps and default facial-hair fits are
+implemented without changing the existing fighter decoder/cache contracts.
+
+The UI has a category hierarchy/search, independent equipped slots, design/color
+resources, per-source immutable revisions, synchronized split or single-view A/B,
+hold-to-compare, close-up/UV-derived decal framing, palettes, isolation/wireframe,
+saved outfits and a hash-pinned secondary-inspection queue with conflict-safe notes.
+The 2D gallery source adds an exact source/revision handoff to the separate CAF
+origin; the existing live writer is preserved. The standalone CAF service reads
+that workshop and its corpus; only its separate schema-1 inspection state is written.
+
+Validation: final own-dump cache **38 groups / 879 XML entries / 5,319 texture
+resources / 483 static model resources**, zero rejected mesh/build conversions;
+**842/842** first-variant equip/build composition cases. Synthetic suite **198
+passed / 51 subtests**; JS syntax, source policy and clean wheel resource checks
+pass. Browser checks cover actual mixed clothing/shoes/hair/jewelry, named hair
+palette, source C/F builds, revision selection, queue notes and outfit reload.
+Existing workshop/model metadata remains byte-identical. No art generation,
+approval, pack installation, game/runtime/setup change or source push.
+
+Use [the CAF guide](docs/create-a-fighter-viewer.md) and
+[assembly evidence](docs/research/caf-static-assembly.md). Machine paths/startup
+and private receipts belong in ignored `.local-handoff.md`. Native outfit parity
+is still pending: source A–F retail size labels, full hat/hair compatibility,
+face blend-shape editing, animation and game shader effects are not claimed.
+Next: owner inspection of the local fitting room, then representative native
+outfit/color/decal acceptance. Any PR uses the current **v0.13.0** milestone;
+keep the live review service and published art untouched.
+
 **2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
 and mouse/page-size refinements and requested merging PR4 into main. It retains
 milestone **v0.13.0**. Validation is 181 tests / 51 subtests plus passing macOS,
