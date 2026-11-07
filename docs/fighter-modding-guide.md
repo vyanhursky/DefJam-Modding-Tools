@@ -569,6 +569,23 @@ Compressed voice samples and explicit bank families have supported component
 paths, but explicitly absent voice categories still need a general adapter.
 Reusing a gameplay template must not discard custom animations or recordings.
 
+The research converter can now rebuild all five parts of a paired move: body
+motion, movement through the arena, its rotation helper, facial poses and hand
+poses. Think of these as coordinated tracks playing together. A faithful import
+must keep each track's timing and pose references, even when it animates different
+bones from a retail move. All94 supplied participant-motion banks now pass an
+offline rebuild/read-back check. That check does not establish that the complete
+mod plays correctly in the game.
+
+Technically, the internal `fighter-motion-graph-draft-1` preserves quantized
+values and time grids, reconstructs local references and uses verified template
+controls. Body/root evaluator tests now include cached playback and backward
+seeks. Native pose-reset tests also confirm that the working pose is refreshed
+from the skeleton before ordinary component evaluation. Package admission,
+full-graph blending/playback and all fighter-specific palette joins still need
+acceptance. This draft format is not yet accepted by the creator commands; keep
+using the documented supported formats above.
+
 A full converted pack is not yet a supported output of this draft. The conversion
 report must account for every changed component, including missing voice
 categories, ancillary portrait art and any unrelated global edits. New adapter

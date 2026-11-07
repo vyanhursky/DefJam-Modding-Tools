@@ -2,6 +2,20 @@
 
 ## Current status
 
+**2026-11-06 — M5 five-role motion R&D update.** Runtime now has an offline typed
+body/root/rotation-helper/face/hand graph writer. All94 supplied paired-role banks
+rebuild/read back exactly in one representative appearance context; other actor
+joins, behavior mapping and native playback remain separate gates. The type18
+full evaluator passes243 invented curves/32,562 fresh/retained evaluations;
+type20 and21 each pass405 curves/49,410 evaluations, all zero byte differences.
+Thirty original-body pose-reset cases verify full source-skeleton refresh before
+component evaluation. Runtime graph/curve suite83pass. Guide explains these
+results in beginner language before naming the internal draft format, which is
+not yet a creator-command/package input. No Tools code or installed-wheel behavior
+changed. Next: runtime admission/native full-graph tests, explicit absent voice
+categories, cinematic conversion and whole-pack acceptance; synchronize guide
+and creator commands only when those contracts are supported.
+
 **2026-11-06 — Fighter Mod Support M5 local creator workflow.** On
 `feature/fighter-authoring-m5`, added `defjam-tools fighter` catalog/new/validate/
 package/extract commands and a beginner-first [modding guide](docs/fighter-modding-guide.md),
