@@ -164,9 +164,19 @@ def main():
     command.add_argument('--archive', type=Path, required=True)
     command.add_argument('--member', required=True)
     command.add_argument('--out', type=Path, required=True)
+    command = sub.add_parser('audio', help='Export legacy EA R2 streams for editing or typed fighter resources')
+    command.add_argument('--source', type=Path, required=True)
+    command.add_argument('--header', type=Path, help='HDR for a DAT bank; omit for one ASF stream')
+    command.add_argument('--encoding', choices=('wav-pcm16', 'ea-adpcm-r2'), default='wav-pcm16')
+    command.add_argument('--ffmpeg', type=Path)
+    command.add_argument('--ffprobe', type=Path)
+    command.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == 'extract':
+        if args.command == 'audio':
+            from .fighter_audio import export_audio
+            result = export_audio(args.source, args.out, args.ffmpeg, args.ffprobe, args.header, args.encoding)
+        elif args.command == 'extract':
             result = extract(args.archive, args.member, args.out)
         elif args.command in ('catalog', 'new'):
             result = contract(args.recomp, args.game, 'catalog')

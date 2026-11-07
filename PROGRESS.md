@@ -30,6 +30,24 @@ Generic Blender mesh and PNG-to-portrait exporters are not currently supplied.
 Live gallery 8768 and private art/review workspaces remain untouched.
 
 
+**2026-11-06 — M5 audio export R&D.** Added `fighter audio` for explicit local
+FFmpeg/FFprobe conversion of EA revision3/ADPCM R2 streams and HDR/DAT banks to
+mono PCM16 WAV or exact R2 stream files. It preserves logical entry order, records unindexed ranges,
+refuses existing output, checks every packet/sample count and retains partial
+final blocks. All 2,865 referenced clips in 217 Vendetta files export successfully
+with 2,539 partial tails accounted for. The first decode audit exposed FFmpeg's
+48 kHz default vs the game's 24 kHz; corrected all-file evidence is
+`logs/m5-audio-export-native-rate.json` (the earlier WAV audit is superseded). Twenty-three
+focused creator/audio tests pass. Native decoder comparison proves tail handling
+but finds small float-vs-integer predictor differences: WAV output is an explicit
+transcode, not bit-identical native audio. Runtime typed R2 compilation preserves all original coded blocks and native
+header metadata; its in-game acceptance is running. source banks and metadata are never installed by this tool. Guide documents
+the command and qualification. Installed wheel commands also export exact R2 bytes and a 24 kHz/31,944-sample
+WAV from outside the checkout (`logs/m5-installed-r2-report.json`,
+`logs/m5-installed-wav-report.json`). Next: runtime R2
+adapter/native acceptance, event-template/fallback accounting, remaining M5
+animation/finisher work. No public push; gallery/workspaces remain untouched.
+
 **2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
 and mouse/page-size refinements and requested merging PR4 into main. It retains
 milestone **v0.13.0**. Validation is 181 tests / 51 subtests plus passing macOS,

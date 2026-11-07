@@ -315,6 +315,62 @@ stream; it does not accept arbitrary legacy speech banks. A single clip is also
 bounded by the native encoder's 4,000,000-sample limit. Do not normalize silence
 into noise or substitute another voice without stating it in your pack's notes.
 
+### Bring recordings out of an older mod
+
+An older mod may store dozens of lines together in a speech bank. The audio
+exporter separates them into editable WAV files and keeps their original slot
+numbers. This is useful for listening and editing; it does not decide which
+reaction each line belongs to or install the audio into a fighter.
+
+**Technical details.** Supply local FFmpeg and FFprobe executables explicitly.
+Obtain them through the [official FFmpeg download page](https://ffmpeg.org/download.html).
+The exporter supports bounded mono EA revision3/ADPCM R2 streams, at their
+original sample rate. It never downloads tools, resamples, downmixes or changes
+loudness. For a single `.asf` stream, omit `--header`. For an HDR/DAT bank:
+
+```powershell
+defjam-tools fighter audio --source .\legacy\600.dat --header .\legacy\600.hdr --ffmpeg C:\Tools\ffmpeg.exe --ffprobe C:\Tools\ffprobe.exe --out .\work\voice-600
+```
+
+The new output directory contains `000.wav`, `001.wav`, and so on, plus
+`audio-export.json`. The report records input/tool/output hashes, sample counts,
+logical ordinals, normalized event-metadata identity and unreferenced source
+ranges. Physical DAT order can differ from logical HDR order; assign WAVs by
+reported ordinal. Duplicate references remain distinct logical slots. No bank
+metadata is accepted into the game merely because this export succeeded.
+
+The decoder reads the whole final 28-sample ADPCM block and keeps exactly the
+source's declared samples, avoiding FFmpeg's otherwise truncated tail. PCM16 is
+a **transcode**, not bit-identical to the game's float predictor. The native
+comparison found small sample differences. Missing rate fields are explicitly
+set to the game's 24 kHz default, avoiding FFmpeg's different 48 kHz default.
+Do not describe WAV export alone as a fully faithful conversion.
+
+For the new typed R2 adapter, preserve the coded audio instead:
+
+```powershell
+defjam-tools fighter audio --source .\legacy\600.dat --header .\legacy\600.hdr --encoding ea-adpcm-r2 --out .\work\voice-600-r2
+```
+
+This mode requires no FFmpeg and writes the exact bounded source streams as
+`000.bin`, `001.bin`, etc. Keep `audio-export.json` outside the final pack, then
+reference the needed files using `fighter-voice-2`. This source version has the
+same resource fields as `fighter-voice-1`, but every file descriptor also states
+its format explicitly:
+
+```json
+{"path": "audio/reaction.bin", "sha256": "<64 lowercase hex digits>", "format": "ea-adpcm-r2"}
+```
+
+Use `wav-pcm16` for WAV descriptors in the same version2 resource. The runtime
+checks R2 block sizes, predictor indices, partial tails, packet counts and a
+specific mono revision3 header profile. It rebuilds its own header while keeping
+coded samples, the native 24 kHz default, and the source's software-decoder
+selection. It accepts neither arbitrary audio codecs nor bank/event metadata.
+All 2,865 source clips pass this typed rebuilding check; in-game R2 acceptance
+is still being tested. Match event templates separately before calling a fighter
+conversion faithful. Keep the original files.
+
 ## 10. Tune the CPU opponent
 
 AI settings change tendencies such as attacking versus defending. Start with
