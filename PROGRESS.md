@@ -2,6 +2,34 @@
 
 ## Current status
 
+**2026-11-06 — Fighter Mod Support M5 local creator workflow.** On
+`feature/fighter-authoring-m5`, added `defjam-tools fighter` catalog/new/validate/
+package/extract commands and a beginner-first [modding guide](docs/fighter-modding-guide.md),
+with one- and two-fighter game-free examples. Matching runtime checkout owns
+native validation via `fighter-authoring-api-1`; creator outputs preserve exact
+validated bytes, refuse existing destinations and never install or publish.
+Twelve focused creator tests pass. A wheel installed into an isolated environment
+successfully created/compiled/packaged a single fighter outside the checkout;
+the two-fighter starter also compiled/packaged. Actual runtime manager installed,
+enabled together and disabled both archives in disposable data without creating
+a profile. Compilation/activation is not a new native playtest.
+
+Owner explicitly extended M5 to general adapter R&D before faithful Vendetta
+conversion is considered complete. The runtime now compiles all 46 custom appearances, including bounded facial
+palette rebuilding, and has one partial native component probe. The 46 ordinary
+combat banks exactly equal their mapped retail donors. Remaining work includes
+per-slot finisher selection/independent motion, full cinematic helper conversion,
+compressed voice conversion and whole-pack native acceptance. Runtime type20/21
+numerical decoders have independent native-body oracle evidence; this does not
+admit arbitrary animation banks. No lossy donor substitution
+or completed Vendetta conversion is claimed. Runtime investigation and changes
+belong in `defjam-fighter-mods`; source remains local with no public PR/push.
+Next: finish repeatable component export/conversion tooling as runtime adapters
+are proved, keep the guide accurate, then package/playtest the ordinary conversion.
+Generic Blender mesh and PNG-to-portrait exporters are not currently supplied.
+Live gallery 8768 and private art/review workspaces remain untouched.
+
+
 **2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
 and mouse/page-size refinements and requested merging PR4 into main. It retains
 milestone **v0.13.0**. Validation is 181 tests / 51 subtests plus passing macOS,

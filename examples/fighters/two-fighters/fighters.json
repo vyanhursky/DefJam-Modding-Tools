@@ -1,0 +1,22 @@
+{
+  "schema": "fighter-registry-draft-1",
+  "id": "example-two-fighters",
+  "version": "1.0.0",
+  "requires": {},
+  "resources": [],
+  "fighters": [
+    {
+      "id": "river",
+      "name": "River",
+      "inherits": "retail/ludacris",
+      "components": {}
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "inherits": "retail/ludacris",
+      "components": {}
+    }
+  ],
+  "overrides": []
+}

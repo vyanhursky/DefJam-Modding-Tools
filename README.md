@@ -16,6 +16,14 @@ Game data, generated artwork, reference images, review workspaces and models liv
 outside this repository. An existing corpus/workspace can be opened in place;
 no regeneration or data move is required. The code license does not cover game art.
 
+## Fighter Mod Support (local v0.15.0 development)
+
+The [fighter modding guide](docs/fighter-modding-guide.md) starts with a
+single- or multi-fighter starter and explains each component before its technical
+format. `defjam-tools fighter` creates, validates and packages ordinary Fighter
+ZIPs against a matching recomp checkout. It does not install packs or convert
+arbitrary legacy bundles. See the guide for current exporter/adapter limitations.
+
 ## Install and resume
 
 Python 3.11+ is required. The main app uses Pillow and NumPy; it has no paid image
