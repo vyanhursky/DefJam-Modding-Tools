@@ -97,12 +97,18 @@ Original sampling is reconstructed with bilinear interpolation inside the common
 inspection atlas; Lanczos and imported pixels retain their own interpolation.
 This is an offline comparison, not a captured game rendering pipeline.
 
-Named `plNN` palettes reproduce the indexed source colors (and a Lanczos preview
-of that selected palette). Imported RGB revisions remain as authored. The service
-rejects applying an indexed palette to a restored RGB candidate instead of
-guessing a recoloring operation. Choose Authored RGB when inspecting those drafts.
+When hair is equipped, **Hair color** appears in the left sidebar. The same
+control is available when inspecting hair on the right; facial hair has its own
+color control. Named `plNN` palettes reproduce the indexed source colors (and a
+Lanczos preview of that selected palette). Imported RGB revisions remain as
+authored, with an explicit scene notice when a source palette is selected.
+Atlas thumbnails retain authored pixels. Choose Authored RGB for a comparison
+using the default source palette.
 
 ## Secondary inspection
+
+For batch imports and scripted queue submission, use the
+[upscaling-agent handoff](caf-secondary-inspection-agent-handoff.md).
 
 The updated 2D gallery has **Secondary inspection · CAF** for customization
 textures. It opens the separate service with the exact source and reviewed

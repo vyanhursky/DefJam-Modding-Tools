@@ -52,7 +52,25 @@ function renderOutfits(){
   const select=$('saved-outfit'),value=select.value;select.replaceChildren(new Option('Choose an outfit…',''));
   for(const name of Object.keys(state.stored.outfits))select.add(new Option(name,name));select.value=value;
 }
+function paletteOptions(select,resource,hair=false){
+  select.replaceChildren(new Option('Authored RGB / default source palette','default'));
+  for(const p of resource?.palettes||[])select.add(new Option(hair?`Hair color ${Number(p.slice(2))} · ${p}`:p,p));
+  select.disabled=!resource?.palettes?.length;
+}
+function renderHairColor(){
+  const resource=resourceFor('20'),selected=state.outfit.slots['20'];
+  $('hair-color-controls').hidden=!resource?.palettes?.length;
+  paletteOptions($('hair-color'),resource,true);
+  $('hair-color').value=selected?.palette||'default';
+}
+function changePalette(slot,palette){
+  state.outfit.slots[slot].palette=palette;
+  if(state.slot===slot)$('palette').value=palette;
+  $('hair-color').value=state.outfit.slots['20']?.palette||'default';
+  scheduleRender();remember();
+}
 function renderEquipped(){
+  renderHairColor();
   const container=$('equipped');container.replaceChildren();
   for(const slot of Object.keys(state.outfit.slots).sort((a,b)=>Number(a)-Number(b))){
     const item=itemFor(slot),button=document.createElement('button'),name=document.createElement('strong'),detail=document.createElement('span');
@@ -174,7 +192,7 @@ function focusSlot(slot,preferredAsset=null,preferredRevision=null){
   $('item-title').textContent=retail?retail.garment.name:group.label+' · '+itemName(item);
   $('item-resource').textContent=retail?`${group.label} / ${retail.garment.category} · ${retail.fitting.resource}`:item.model==='NON_GEOM'?'Skin decal · '+(item.styles[0]?.variants[0]||''):item.model;
   $('item-controls').hidden=false;
-  $('style-label').textContent=retail?'Style':'Design';$('color-label').textContent=retail?'Color':'Color resource';
+  $('style-label').textContent=retail?'Style':'Design';$('color-label').textContent=retail?'Color':['20','21'].includes(slot)?'Texture resource':'Color resource';
   $('style').replaceChildren();
   $('color').replaceChildren();
   if(retail){
@@ -189,12 +207,11 @@ function focusSlot(slot,preferredAsset=null,preferredRevision=null){
     $('style').disabled=!item.styles.length;$('style').value=String(selected.style);
     const style=item.styles[selected.style];
     for(const [i,name] of (style?.variants||[]).entries())$('color').add(new Option(`Color ${i+1} · ${name.split('_').slice(-2).join('_')}`,String(i)));
-    $('color').disabled=!style;$('color').value=String(selected.color);
+    $('color').disabled=!style||style.variants.length<2;$('color').value=String(selected.color);
   }
   const resource=resourceFor(slot);
-  $('palette').replaceChildren(new Option('Authored RGB / default source palette','default'));
-  for(const p of resource?.palettes||[])$('palette').add(new Option(p,p));$('palette').value=selected.palette;
-  $('palette').disabled=!resource?.palettes.length;
+  $('palette-label').textContent=['20','21'].includes(slot)?(slot==='20'?'Hair color':'Facial hair color'):'Palette';
+  paletteOptions($('palette'),resource,['20','21'].includes(slot));$('palette').value=selected.palette;
   const texture=$('texture');texture.replaceChildren();
   for(const record of resource?.records||[]){
     if(!record.asset)continue;
@@ -407,7 +424,8 @@ async function main(){
   $('skin').onchange=()=>{state.outfit.skin=$('skin').value;scheduleRender();remember();};
   $('style').onchange=()=>{const retail=retailFor(state.slot);if(retail)return equipRetail(state.slot,chooseSelection(retail.garment,retail.color.id,$('style').value));const s=state.outfit.slots[state.slot];s.style=Number($('style').value);s.color=0;s.palette='default';focusSlot(state.slot);renderCategories();};
   $('color').onchange=()=>{const retail=retailFor(state.slot);if(retail)return equipRetail(state.slot,chooseSelection(retail.garment,$('color').value,retail.fitting.id));const s=state.outfit.slots[state.slot];s.color=Number($('color').value);s.palette='default';focusSlot(state.slot);renderCategories();};
-  $('palette').onchange=()=>{state.outfit.slots[state.slot].palette=$('palette').value;scheduleRender();remember();};
+  $('palette').onchange=()=>changePalette(state.slot,$('palette').value);
+  $('hair-color').onchange=()=>changePalette('20',$('hair-color').value);
   $('source-controls').onclick=()=>{const slot=state.slot;if(state.sourceSlots.has(slot))state.sourceSlots.delete(slot);else state.sourceSlots.add(slot);focusSlot(slot);renderCategories();};
   $('texture').onchange=()=>textureChanged();
   for(const id of ['revision-a','revision-b'])$(id).onchange=updateComparison;

@@ -4,6 +4,8 @@ import io
 import json
 from pathlib import Path
 import struct
+import subprocess
+import sys
 import threading
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
@@ -243,6 +245,87 @@ def test_revision_checksum_and_path_escape_fail_before_render(viewer):
     metadata.write_text(json.dumps(data))
     with pytest.raises(Invalid, match="leaves"):
         viewer.image("a" * 64, "r-one")
+
+
+def test_palette_recolors_source_and_lanczos_without_recoloring_rgb_candidate(viewer):
+    resource = viewer.catalog["resources"]["cloth"]
+    resource.update(palettes=["pl01", "pl02"], palette_path="palette.xsh", sha256=v.sha(b"palette"))
+    (viewer.root / "palette.xsh").write_bytes(b"palette")
+    outfit = viewer.default_outfit()
+    outfit["slots"]["12"]["palette"] = "pl02"
+    with patch.object(v, "palette_images", return_value={"pl02": b"blue"}), patch.object(
+            v, "with_palette", return_value=Image.new("RGBA", (2, 2), (0, 0, 255, 255))):
+        for baseline in ("original", "faithful"):
+            scene = viewer.scene(dict(outfit=outfit, compare=dict(asset="a" * 64, a=baseline, b="r-one"), scale=1))
+            images = viewer.renders[scene["key"]]["images"]
+            assert Image.open(io.BytesIO(images["aa.png"])).getpixel((1, 1)) == (0, 0, 255, 255)
+            assert Image.open(io.BytesIO(images["ba.png"])).getpixel((1, 1)) == (10, 200, 30, 255)
+            assert any("r-one keeps authored RGB" in notice for notice in scene["notices"])
+    outfit["slots"]["12"]["palette"] = "pl99"
+    with pytest.raises(Invalid, match="does not belong"):
+        viewer.scene(dict(outfit=outfit, compare=dict(asset="a" * 64, a="r-one", b="r-one")))
+
+
+def test_documented_batch_handoff_preflights_retries_and_preserves_inspection(viewer, tmp_path):
+    # Execute the exact copy/paste script shipped in the agent guide.
+    doc = (Path(__file__).parents[2] / "docs/caf-secondary-inspection-agent-handoff.md").read_text()
+    script = doc.split("```python\n", 1)[1].split("```", 1)[0]
+    ident, revision = "a" * 64, "r-0123456789abcdef"
+    metadata = viewer.reader.root / "workshop.json"
+    data = json.loads(metadata.read_text())
+    candidate = data["candidates"][ident][0]
+    candidate["id"] = revision
+    metadata.write_text(json.dumps(data))
+    preserved = metadata.read_bytes()
+    handler = v.handler_for(viewer, "synthetic-token")
+
+    class FirstConflict(handler):
+        conflict = True
+
+        def do_POST(self):
+            if FirstConflict.conflict:
+                FirstConflict.conflict = False
+                self.reply(409, dict(error="Concurrent save"))
+            else:
+                super().do_POST()
+
+    server = ThreadingHTTPServer(("127.0.0.1", 0), FirstConflict)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        file = tmp_path / "send-caf-batch.py"
+        file.write_text(script.replace("http://127.0.0.1:8780", f"http://127.0.0.1:{server.server_port}"))
+        manifest = tmp_path / "batch.json"
+        batch = dict(batch="synthetic", corpus_id="synthetic", items=[dict(asset=ident, revision=revision, sha256=candidate["sha256"])])
+        manifest.write_text(json.dumps(batch))
+        def run(*args):
+            return subprocess.run([sys.executable, str(file), str(manifest), *args], text=True, capture_output=True)
+        dry = run()
+        assert dry.returncode == 0, dry.stderr
+        assert not json.loads(dry.stdout)["queued"]
+        assert not viewer.file.exists()
+        queued = run("--queue")
+        assert queued.returncode == 0, queued.stderr
+        receipt = json.loads(queued.stdout)
+        entry = viewer.state["queue"][0]
+        assert receipt["items"][0]["queue_id"] == entry["id"]
+        assert entry["status"] == "pending"
+        viewer.save(dict(action="inspection", version=viewer.state["version"], id=entry["id"], status="needs_work", notes="Preserve owner feedback"))
+        repeated = run("--queue")
+        assert repeated.returncode == 0, repeated.stderr
+        assert len(viewer.state["queue"]) == 1
+        assert viewer.state["queue"][0]["notes"] == "Preserve owner feedback"
+        assert json.loads(repeated.stdout)["items"][0]["status"] == "needs_work"
+        before = viewer.file.read_bytes()
+        batch["items"][0]["sha256"] = "0" * 64
+        manifest.write_text(json.dumps(batch))
+        assert run("--queue").returncode != 0
+        assert viewer.file.read_bytes() == before
+        assert metadata.read_bytes() == preserved
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join()
 
 
 def test_queue_outfits_notes_conflicts_and_disk_failure_preserve_owner_data(viewer):

@@ -284,14 +284,15 @@ class CafViewer:
                         image = Image.open(io.BytesIO(raw)).convert("RGBA")
                         palette = selected["palette"]
                         if palette != "default":
-                            if revision not in ("original", "faithful"):
-                                raise Invalid("Named palettes apply to indexed source/Lanczos only. Choose Authored RGB to inspect a restored revision.")
                             if palette not in res.get("palettes", []):
                                 raise Invalid("Named palette does not belong to this CAF resource")
-                            pal_raw = inside(self.root, res["palette_path"]).read_bytes()
-                            if sha(pal_raw) != res["sha256"]:
-                                raise Invalid("CAF palette source checksum changed")
-                            image = with_palette(pal_raw, record, palette_images(pal_raw)[palette])
+                            if revision in ("original", "faithful"):
+                                pal_raw = inside(self.root, res["palette_path"]).read_bytes()
+                                if sha(pal_raw) != res["sha256"]:
+                                    raise Invalid("CAF palette source checksum changed")
+                                image = with_palette(pal_raw, record, palette_images(pal_raw)[palette])
+                            else:
+                                notices.append(res["name"] + ": " + revision + " keeps authored RGB; " + palette + " applies only to Original/Lanczos")
                         source_pins.append(sha(raw))
                         if image.width * record["height"] != image.height * record["width"]:
                             raise Invalid("CAF revision changed its source aspect ratio")

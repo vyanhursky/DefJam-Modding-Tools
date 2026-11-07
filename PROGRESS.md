@@ -2,6 +2,29 @@
 
 ## Current status
 
+**2026-11-06 — Hair color controls and upscaling-agent handoff.** Hair color is
+exposed beside the base controls in the left sidebar and synchronized with the
+focused hair inspector; facial hair's palette is labelled explicitly. The
+single texture-resource choice is no longer presented as an editable hair color.
+Indexed Original/Lanczos use the selected source palette; restored RGB revisions
+retain their authored pixels with a scene notice, so an A/B comparison no longer
+fails when a named palette is active. Saved selection IDs/schema remain unchanged.
+
+The [secondary-inspection agent guide](docs/caf-secondary-inspection-agent-handoff.md)
+covers existing-candidate reuse, immutable imports, source/corpus/hash identity,
+a batch manifest, executable read-only preflight/serial queue submission, direct
+links, optimistic conflicts, partial retry and separate review/approval states.
+The exact documented script is exercised against synthetic HTTP state, including
+409 retry, duplicate submission, note/status preservation and failed hash checks.
+Validation: **211 tests / 51 subtests**, JS syntax, installed wheel resources and
+browser source-palette/RGB comparisons. Existing production metadata, CAF queue,
+notes and named outfits are preserved during the CAF-only local update. No
+production batch import/queue submission, artwork generation/approval or push.
+A private machine-ready copy of the handoff and exact deployment paths belong in
+ignored `.local-handoff.md`. Next: owner gives the handoff to the upscaling agent;
+preflight its existing batch, inspect one representative entry, then queue the
+remaining exact revisions. Keep milestone **v0.13.0** for any PR.
+
 **2026-11-01 — CAF neck fits and retail clothing navigation.** Owner requested
 closing the E/F neck gap and replacing resource-only clothing cards with the
 actual game item names, colors and wearing styles. Cache decoder 2 applies the
