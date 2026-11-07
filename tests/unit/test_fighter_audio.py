@@ -114,3 +114,77 @@ def test_original_r2_export_preserves_exact_stream_and_refuses_existing_output(t
     assert not report['runtime_ready']
     with pytest.raises(ValueError, match='already exists'):
         export_audio(source, destination, encoding='ea-adpcm-r2')
+
+
+def voice_fixture(tmp_path):
+    header = bytearray(16)
+    struct.pack_into('<2H', header, 0, 1, 626)
+    header[5] = 1
+    struct.pack_into('<H', header, 8, 1)
+    data = stream((28,))
+    padded = data + bytes(256 - len(data))
+    (tmp_path / 'character.hdr').write_bytes(header)
+    (tmp_path / 'character.dat').write_bytes(padded)
+    (tmp_path / 'line.asf').write_bytes(data)
+    metadata = bank_entries(bytes(header), padded)[1]
+    catalog = {'identity': 'fighter-voice-events-1', 'archive_sha256': 'a' * 64,
+               'templates': [{'category': 'Character', 'template_voice': 504,
+                              'entries': 1, 'event_identity': metadata['event_template_identity']}]}
+    return tmp_path / 'character.hdr', tmp_path / 'line.asf', catalog
+
+
+def test_voice_export_matches_event_templates_and_preserves_original_r2_and_absence(tmp_path, monkeypatch):
+    import json
+    from defjam_tools.fighter_audio import export_voice
+    bank, line, catalog = voice_fixture(tmp_path)
+    from defjam_tools.fighter_audio import digest
+    calls = []
+    def validate(recomp, game, command, *, voice_source):
+        assert command == 'validate-voice'
+        assert voice_source.is_file() and not (tmp_path / 'voice').exists()
+        calls.append(command)
+        return {'component_compilation': True, 'source_sha256': digest(voice_source.read_bytes())}
+    monkeypatch.setattr('defjam_tools.fighter_pack.contract', validate)
+    output = tmp_path / 'voice'
+    report = export_voice({'Character': bank}, {'Taunts', 'Enviro'}, line, line, output, catalog, recomp=tmp_path, game=tmp_path)
+    source = json.loads((output / 'voice-source.json').read_text())
+    assert source['format'] == 'fighter-voice-4'
+    assert source['banks']['Character']['template_voice'] == 504
+    assert source['banks']['Character']['family'] == 1
+    assert source['banks']['Taunts'] == source['banks']['Enviro'] == {'state': 'absent'}
+    assert (output / 'audio/Character/000.bin').read_bytes() == line.read_bytes()
+    assert not (output / 'audio/Taunts').exists()
+    assert not report['native_compilation'] and not report['native_playtest']
+    assert report['component_compilation'] and calls == ['validate-voice']
+    with pytest.raises(ValueError, match='already exists'):
+        export_voice({'Character': bank}, {'Taunts', 'Enviro'}, line, line, output, catalog, recomp=tmp_path, game=tmp_path)
+
+
+@pytest.mark.parametrize('failure', ['missing', 'overlap', 'template', 'codec'])
+def test_voice_export_preflights_without_creating_partial_output(tmp_path, failure):
+    from defjam_tools.fighter_audio import export_voice
+    bank, line, catalog = voice_fixture(tmp_path)
+    banks, absent = {'Character': bank}, {'Taunts', 'Enviro'}
+    if failure == 'missing':
+        absent.remove('Taunts')
+    elif failure == 'overlap':
+        absent.add('Character')
+    elif failure == 'template':
+        catalog['templates'][0]['event_identity'] = 'b' * 64
+    else:
+        line.write_bytes(b'not an EA stream')
+    with pytest.raises(ValueError):
+        export_voice(banks, absent, line, line, tmp_path / 'output', catalog, recomp=tmp_path, game=tmp_path)
+    assert not (tmp_path / 'output').exists()
+
+
+def test_voice_export_runtime_rejection_never_publishes_the_staged_folder(tmp_path, monkeypatch):
+    from defjam_tools.fighter_audio import export_voice
+    bank, line, catalog = voice_fixture(tmp_path)
+    def reject(*args, **kwargs):
+        raise ValueError('Native predictor or expanded bank budget rejected')
+    monkeypatch.setattr('defjam_tools.fighter_pack.contract', reject)
+    with pytest.raises(ValueError, match='predictor'):
+        export_voice({'Character': bank}, {'Taunts', 'Enviro'}, line, line, tmp_path / 'output', catalog,
+                     recomp=tmp_path, game=tmp_path)
+    assert not (tmp_path / 'output').exists()

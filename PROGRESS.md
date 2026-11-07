@@ -2,6 +2,35 @@
 
 ## Current status
 
+**2026-11-07 — Explicit voice absence and reusable source export.** Runtime
+`fighter-voice-4` requires present/absent declarations for all three banks and
+emits FVA2 presence masks; versions1–3 remain supported. New `fighter voice`
+matches source bank event metadata to the runtime's verified `voice-catalog`,
+exports exact R2 clips and an authoring fragment, and records unindexed data.
+It requires explicit missing categories and both cinematic streams. No donor
+recordings or empty banks fill missing content. Guide documents assignment,
+work reports vs package files, and native event-alternative/family-only semantics.
+Focused creator/audio tests32pass. The rebuilt installed wheel exports through
+the shared runtime's staged `validate-voice` compiler before publishing output;
+this catches native predictor/header/packet and expanded per-bank budget errors
+without duplicating validation. Installed CLI rejects an invalid predictor with
+no output folder. All44 supplied custom voices/129banks/2777clips/88cinematic
+streams exported; the46-fighter voice-component roster compiles with an
+independent starter (47added entries), using ordinary validation. Final staged
+component-corpus receipts remain in the runtime's ignored logs.
+The runtime also rebuilds94 paired roles against47exact behavior matches, with
+5734identity/bounds joins across121normal opponent contexts. All276supported
+portrait variants compile after matching UI layouts independently of combat
+donors. Full graph/native cinematic admission remains open. No completed
+Vendetta pack is claimed. Gallery8768
+and art/review workspaces remain untouched. Work stays local without publication.
+The owner asked to leave the other checkout's game running and continue offline;
+native absence requests/reload and further game/build/C-fixture work are deferred
+until the machine is available. Next: versioned full-graph runtime admission,
+cinematic constants/block/empty-parent/camera contexts, native acceptance and
+ordinary whole-pack conversion. Runtime source-accounting report covers all1883
+files, with remaining data/art/globals explicitly blocked rather than omitted.
+
 **2026-11-06 — M5 five-role motion R&D update.** Runtime now has an offline typed
 body/root/rotation-helper/face/hand graph writer. All94 supplied paired-role banks
 rebuild/read back exactly in one representative appearance context; other actor

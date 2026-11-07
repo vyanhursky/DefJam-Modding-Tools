@@ -31,7 +31,7 @@ def slug(value):
     return value
 
 
-def contract(recomp, game, command, packs=(), language=None):
+def contract(recomp, game, command, packs=(), language=None, *, voice_source=None):
     script = Path(recomp).resolve() / 'scripts/fighter-contract.py'
     if not script.is_file():
         raise ValueError('Choose the matching Fighter Mod Support recomp checkout (fighter-contract.py missing)')
@@ -40,6 +40,8 @@ def contract(recomp, game, command, packs=(), language=None):
         arguments += ['--pack', str(ordinary(pack))]
     if language:
         arguments += ['--language', str(ordinary(language))]
+    if voice_source is not None:
+        arguments += ['--voice-source', str(ordinary(voice_source))]
     result = subprocess.run(arguments, capture_output=True, text=True, timeout=600)
     if len(result.stdout) > 16 * 1024**2:
         raise ValueError('Runtime validation report exceeds budget')
@@ -171,9 +173,29 @@ def main():
     command.add_argument('--ffmpeg', type=Path)
     command.add_argument('--ffprobe', type=Path)
     command.add_argument('--out', type=Path, required=True)
+    command = sub.add_parser('voice', help='Export an explicit voice source matched to verified runtime event templates')
+    command.add_argument('--recomp', type=Path, required=True)
+    command.add_argument('--game', type=Path, required=True)
+    command.add_argument('--bank', action='append', default=[], metavar='CATEGORY=HDR')
+    command.add_argument('--absent', action='append', default=[], choices=('Character', 'Taunts', 'Enviro'))
+    command.add_argument('--intro', type=Path, required=True)
+    command.add_argument('--extro', type=Path, required=True)
+    command.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == 'audio':
+        if args.command == 'voice':
+            from .fighter_audio import export_voice
+            banks = {}
+            for entry in args.bank:
+                category, equals, path = entry.partition('=')
+                if not equals or not path or category not in ('Character', 'Taunts', 'Enviro') or category in banks:
+                    raise ValueError('Each --bank needs a unique Character, Taunts or Enviro=HDR assignment')
+                banks[category] = Path(path)
+            if len(set(args.absent)) != len(args.absent):
+                raise ValueError('Duplicate absent voice category')
+            result = export_voice(banks, set(args.absent), args.intro, args.extro, args.out,
+                                  contract(args.recomp, args.game, 'voice-catalog'), recomp=args.recomp, game=args.game)
+        elif args.command == 'audio':
             from .fighter_audio import export_audio
             result = export_audio(args.source, args.out, args.ffmpeg, args.ffprobe, args.header, args.encoding)
         elif args.command == 'extract':

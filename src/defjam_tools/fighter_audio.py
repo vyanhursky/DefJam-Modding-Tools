@@ -82,9 +82,95 @@ def bank_entries(header, data):
     return [streams[start] for start in starts], {
         'header_sha256': digest(header), 'data_sha256': digest(data),
         'event_metadata_sha256': digest(metadata), 'entry_count': count,
+        'event_template_identity': digest(bytes(2) + bytes(metadata[2:])),
         'source_offsets': starts, 'unindexed_prefix_bytes': ordered[0],
         'unindexed_suffix_bytes': len(data) - terminal, 'unindexed_gaps': gaps,
     }
+
+
+def export_voice(banks, absent, intro, extro, destination, catalog, *, recomp, game):
+    """Build an explicit voice4 source using exact, verified-template matches.
+
+    The output is an authoring fragment and audio files, not an installed pack.
+    Missing banks must be declared absent; no donor clips are synthesized.
+    """
+    categories = {'Character': (0, 1), 'Taunts': (16625, 16626), 'Enviro': (40962, 40963)}
+    require(type(banks) is dict and type(absent) is set and not banks.keys() & absent
+            and banks.keys() | absent == categories.keys(),
+            'Declare each category once with --bank or --absent')
+    require(catalog.get('identity') == 'fighter-voice-events-1'
+            and type(catalog.get('templates')) is list, 'Unsupported runtime voice catalog')
+    destination = ordinary(destination)
+    require(not destination.exists(), 'Voice destination already exists; choose a new folder')
+    files, specs, reports = {}, {}, {}
+
+    def audio(name, stream):
+        info = prepare_r2(stream)[1]
+        files[name] = stream
+        return {'path': name, 'sha256': digest(stream), 'format': 'ea-adpcm-r2'}, info
+
+    for category in categories:
+        if category in absent:
+            specs[category] = {'state': 'absent'}
+            reports[category] = {'state': 'absent'}
+            continue
+        header_path = ordinary(banks[category])
+        header = read_bounded(header_path, 65536)
+        streams, metadata = bank_entries(header, read_bounded(header_path.with_suffix('.dat'), MAX_BANK))
+        family = struct.unpack_from('<H', header)[0]
+        require(family in categories[category], 'Source voice family differs from category: ' + category)
+        matches = [row for row in catalog['templates'] if row['category'] == category
+                   and row['event_identity'] == metadata['event_template_identity']
+                   and row['entries'] == len(streams)]
+        require(matches, 'No verified event template matches source bank: ' + category)
+        chosen = min(matches, key=lambda row: row['template_voice'])
+        samples, rows = {}, []
+        for index, stream in enumerate(streams):
+            samples[str(index)], info = audio(f'audio/{category}/{index:03d}.bin', stream)
+            rows.append(info)
+        specs[category] = {'state': 'present', 'template_voice': chosen['template_voice'],
+                           'family': family, 'samples': samples}
+        reports[category] = {**metadata, 'state': 'present', 'template_voice': chosen['template_voice'],
+                             'family': family, 'entries': rows}
+    source = {'format': 'fighter-voice-4', 'banks': specs}
+    for purpose, path in (('intro', intro), ('extro', extro)):
+        data = read_bounded(path, MAX_STREAM)
+        exact = stream_span(data)
+        source[purpose], reports[purpose] = audio(f'audio/{purpose}.bin', exact)
+        reports[purpose]['input_sha256'] = digest(data)
+    require(sum(map(len, files.values())) <= 256 * 1024**2, 'Voice export exceeds aggregate budget')
+    report = {'schema': 'fighter-voice-export-1', 'archive_sha256': catalog['archive_sha256'],
+              'categories': reports, 'files': {name: digest(data) for name, data in files.items()},
+              'native_compilation': False, 'native_playtest': False,
+              'next': 'Copy source fragment into a voice resource, copy audio files, then run fighter validate/package'}
+    # Preflight all streams, templates and declarations before creating output.
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='.fighter-voice-', dir=destination.parent) as temporary:
+        stage = Path(temporary)
+        for name, data in files.items():
+            path = stage / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        (stage / 'voice-source.json').write_text(json.dumps(source, indent=2) + '\n', encoding='utf-8')
+        # Decoder-export preflight is intentionally broader than native R2
+        # admission. Use the shared compiler for predictor/header/packet and
+        # per-bank alignment/aggregate budgets before publishing any output.
+        from .fighter_pack import contract
+        checked = contract(recomp, game, 'validate-voice', voice_source=stage / 'voice-source.json')
+        require(checked.get('component_compilation') is True
+                and checked.get('source_sha256') == digest((stage / 'voice-source.json').read_bytes()),
+                'Runtime did not compile the exact exported voice source')
+        report['component_compilation'] = True
+        report['voice_validation'] = checked
+        (stage / 'voice-export.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+        destination.mkdir()
+        import shutil
+        for path in stage.iterdir():
+            if path.is_dir():
+                shutil.copytree(path, destination / path.name)
+            else:
+                shutil.copyfile(path, destination / path.name)
+    return report
 
 
 def prepare_r2(data):

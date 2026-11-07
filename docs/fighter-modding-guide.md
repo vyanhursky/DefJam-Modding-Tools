@@ -156,7 +156,7 @@ tested is the one in the pack. If you deliberately edit an asset, its old hash
 must be updated before validation. A mismatch can also mean a damaged download.
 
 **Technical details.** Authored file descriptors have `path` and `sha256`.
-The `fighter-voice-2` and `fighter-voice-3` sources additionally require `format` on every audio
+The `fighter-voice-2`, `fighter-voice-3` and `fighter-voice-4` sources additionally require `format` on every audio
 descriptor (`wav-pcm16` or `ea-adpcm-r2`); other descriptors retain their
 two-field shape. Paths are relative to the manifest folder, use `/`, and cannot
 escape it. Compute the digest after editing, for example:
@@ -406,7 +406,8 @@ and mandatory `intro`/`extro` descriptors. All descriptors use the explicit
 template in the player's original archive, keeps its event metadata, and changes
 only the declared family, allocated voice ID and bounded audio references.
 Missing sample overrides still retain template clips. Missing whole categories
-are not supported; do not invent silent banks to claim a faithful conversion.
+need the explicit version4 contract below; do not invent silent banks to claim
+a faithful conversion.
 
 The resource's `events` compatibility label must still match the fighter's
 moveset. Choosing a permitted family does not prove that a particular action
@@ -415,6 +416,49 @@ fallback between family0 and family1. All 129 supplied legacy banks (2,777
 banked clips) now rebuild with their normalized event metadata preserved,
 including 45 banks requiring an explicit family change. This is a compiler
 check; native playback and missing-category accounting are separate gates.
+
+### Preserve a deliberately missing category
+
+Some source voices have no taunt or environmental bank. State that absence
+explicitly so the game does not load a different fighter's recordings in its
+place. Omitting an assignment by accident is still an error.
+
+**Technical details.** `fighter-voice-4` has the same top-level fields as
+version3. All three categories are required. A present bank adds
+`"state": "present"` to its `template_voice`, `family`, `samples` fields. An
+absent bank is exactly `{"state":"absent"}`. The compiler emits no HDR/DAT
+for it, and the loader skips that category for the allocated owned voice ID.
+Intro and extro streams are still required, including when every bank is absent.
+Versions1–3 keep their existing behavior.
+
+Absence means that particular bank is absent. The game's event definitions can
+explicitly try other alternatives, and some lookups select a family shared by
+several banks. Those native rules still apply; this is not a universal mute.
+
+The installed Tools command can export a voice source and match its event
+metadata against verified templates in the matching recomp:
+
+```powershell
+& $tools fighter voice --recomp $recomp --game $game --bank Character=C:/legacy/Character/626.hdr --absent Taunts --absent Enviro --intro C:/legacy/intro/626.asf --extro C:/legacy/extro/626.asf --out C:/work/voice-626
+```
+
+Use `--bank Taunts=PATH.hdr` and `--bank Enviro=PATH.hdr` when present. Each HDR
+uses its adjacent same-basename DAT. Declare each category exactly once, using
+either `--bank` or `--absent`. Supply both source cinematic streams. Existing
+output folders are refused. A bank without a matching verified event template
+fails before output is created; choosing a similarly named donor is insufficient.
+
+The work folder contains `voice-source.json`, `voice-export.json` and `audio/`.
+Copy the object from `voice-source.json` into your voice resource's `source`,
+then copy `audio/` into your pack, preserving its relative paths. Keep both JSON
+work reports outside the final pack. The exporter retains exact R2 streams,
+logical clip order and family IDs; the report accounts for unreferenced bytes.
+Before publishing that work folder it asks the matching runtime to compile
+the staged voice through its actual R2 parser and bank builder. Unsupported
+predictors, packet/header profiles and expanded category-bank budgets fail
+without publishing output. This is voice-component compilation. Run ordinary
+`fighter validate` and `fighter package` afterward. Export alone
+does not establish event playback or a finished fighter conversion.
 
 ## 10. Tune the CPU opponent
 
@@ -565,8 +609,9 @@ support. Facial and hand tracks choose poses from separate palettes; their
 references must fit the particular fighter's face and the shared hand resource.
 A motion's timing also includes its parent duration and playback scale, beyond
 the visible list of animation keys. Those parts must survive conversion together.
-Compressed voice samples and explicit bank families have supported component
-paths, but explicitly absent voice categories still need a general adapter.
+Compressed voice samples, explicit bank families and explicitly absent categories
+have supported typed component paths. The template-matched `fighter voice`
+exporter does not remove the need for native playback acceptance.
 Reusing a gameplay template must not discard custom animations or recordings.
 
 The research converter can now rebuild all five parts of a paired move: body
@@ -581,10 +626,24 @@ Technically, the internal `fighter-motion-graph-draft-1` preserves quantized
 values and time grids, reconstructs local references and uses verified template
 controls. Body/root evaluator tests now include cached playback and backward
 seeks. Native pose-reset tests also confirm that the working pose is refreshed
-from the skeleton before ordinary component evaluation. Package admission,
-full-graph blending/playback and all fighter-specific palette joins still need
-acceptance. This draft format is not yet accepted by the creator commands; keep
+from the skeleton before ordinary component evaluation. A later audit rebuilds
+all94 roles against their actual47 matched behaviors, checking5734 output joins
+across46 rebuilt appearances and75 retail opponent contexts. Exact model,
+rig, face and shared-hand identities are recorded separately. These are bounded
+offline joins; dynamic created-fighter contexts and native blending/playback
+still need acceptance. This draft format is not yet accepted by creator commands; keep
 using the documented supported formats above.
+
+Portrait frames can use a different donor from combat or appearance. The layout
+donor supplies crop/material structure; your own pixels remain the content.
+The runtime's exact six-layout matcher now finds valid templates for all276
+source selector/results variants. It does not relax tile or crop validation and
+does not account for every ancillary picture/menu edit in the older pack.
+
+The other entrance/activation/victory bundles use additional animation profiles:
+constant channels, empty parents, compressed block deltas and camera scalar
+tracks. The paired-move writer does not yet cover these. Renaming those bundles
+or replacing their curves with a donor would not preserve the source performance.
 
 A full converted pack is not yet a supported output of this draft. The conversion
 report must account for every changed component, including missing voice
