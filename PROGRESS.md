@@ -2,20 +2,21 @@
 
 ## Current status
 
-**2026-11-07 — CAF viewer PR opened.** Owner authorized committing and publishing
-the CAF tooling to Modding Tools. The three implementation commits are pushed on
-`codex/create-fighter-viewer`; [PR #5](https://github.com/vyanhursky/DefJam-Modding-Tools/pull/5)
-targets `main`, ready for review under milestone **v0.13.0**. It includes source
-assembly/secondary inspection, retail clothing navigation, default face build
-fits, hair colors and the batch handoff guide. The source tree is clean apart
-from this publication record; game assets and private state remain excluded.
+**2026-11-07 — CAF viewer accepted for main.** Owner approved merging
+[PR #5](https://github.com/vyanhursky/DefJam-Modding-Tools/pull/5) from
+`codex/create-fighter-viewer` into `main`, retaining milestone **v0.13.0**.
+The PR includes source assembly/secondary inspection, retail clothing navigation,
+default face build fits, hair colors and the batch handoff guide. This record
+captures owner approval before the merge; the final head must pass CI before
+merging. Private deployment/merge receipts belong in ignored `.local-handoff.md`.
 
-Pre-publication validation: **211 tests / 51 subtests**, JS syntax, whitespace and
-**528 source files / zero policy failures**. Existing installed-wheel/browser and
-own-dump acceptance evidence is recorded below. GitHub checks were started for
-Linux, Windows and macOS; next: review their results and the PR. No merge or
-release was requested. This publication does not restart the live services or
-write review/queue/outfit state.
+Validation: **211 tests / 51 subtests**, JS syntax, whitespace and **528 source
+files / zero policy failures**. Linux, Windows and macOS CI passed on implementation
+and publication head `c750e84` (run `42382528069`). Existing installed-wheel/browser
+and own-dump evidence is recorded below. No release is requested, and merging the
+source does not restart live services or write review/queue/outfit state.
+Next: the upscaling agent can use the handoff guide to preflight its existing
+batch, inspect one representative queued revision, then submit the remainder.
 
 **2026-11-06 — Hair color controls and upscaling-agent handoff.** Hair color is
 exposed beside the base controls in the left sidebar and synchronized with the
