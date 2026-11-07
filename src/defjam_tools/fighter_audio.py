@@ -111,7 +111,9 @@ def prepare_r2(data):
         width = header[at]
         at += 1
         require(1 <= width <= 4 and at + width <= len(header), 'Invalid EA property span')
-        properties[key] = int.from_bytes(header[at:at + width], 'big')
+        # Native short count properties are signed; a high bit cannot be
+        # reinterpreted as a positive duration during an offline export.
+        properties[key] = int.from_bytes(header[at:at + width], 'big', signed=key == 0x85)
         at += width
     require(at < len(header) and header[at] == 255 and not any(header[at + 1:]),
             'Invalid EA property terminator')

@@ -27,7 +27,7 @@ the native archives itself. The original extracted game stays unchanged.
 |---|---|---|---|
 | Appearance | Body, face, clothes, materials and skinning | `appearance` | Model `.o`, textures `.xsh`, facial palette `.o` |
 | Moveset | Attacks, movement and their timing | `moveset` | Action selections and quaternion-track JSON |
-| Voice | Reactions, taunts and spoken entry/exit sounds | `voice` | Mono PCM16 WAV files and category assignments |
+| Voice | Reactions, taunts and spoken entry/exit sounds | `voice` | Mono PCM16 WAV, or supported compressed R2 streams, and category assignments |
 | AI | How the CPU chooses actions | `ai` | Named tendencies in the manifest |
 | Portrait | Pictures in selection and results | `portrait` | Six layout-specific SHPX `.xsh` files |
 | Intro | The fighter's entrance | `intro` | Supported cinematic template plus track JSON |
@@ -155,9 +155,11 @@ Think of a file hash as a fingerprint. It tells the validator that the file you
 tested is the one in the pack. If you deliberately edit an asset, its old hash
 must be updated before validation. A mismatch can also mean a damaged download.
 
-**Technical details.** Every authored file descriptor has exactly `path` and
-`sha256`. Paths are relative to the manifest folder, use `/`, and cannot escape
-it. Compute the digest after editing, for example:
+**Technical details.** Authored file descriptors have `path` and `sha256`.
+The `fighter-voice-2` source additionally requires `format` on every audio
+descriptor (`wav-pcm16` or `ea-adpcm-r2`); other descriptors retain their
+two-field shape. Paths are relative to the manifest folder, use `/`, and cannot
+escape it. Compute the digest after editing, for example:
 
 ```powershell
 (Get-FileHash 'C:/mods/my-roster/assets/river.wav' -Algorithm SHA256).Hash.ToLower()
@@ -367,8 +369,10 @@ checks R2 block sizes, predictor indices, partial tails, packet counts and a
 specific mono revision3 header profile. It rebuilds its own header while keeping
 coded samples, the native 24 kHz default, and the source's software-decoder
 selection. It accepts neither arbitrary audio codecs nor bank/event metadata.
-All 2,865 source clips pass this typed rebuilding check; in-game R2 acceptance
-is still being tested. Match event templates separately before calling a fighter
+All 2,865 source clips pass this typed rebuilding check, including native
+signed sample-count semantics. A synthetic compressed test sound has been
+identified in captured combat audio. Original predictive-clip playback probes
+remain inconclusive; this is not complete voice-event or whole-pack acceptance. Match event templates separately before calling a fighter
 conversion faithful. Keep the original files.
 
 ## 10. Tune the CPU opponent

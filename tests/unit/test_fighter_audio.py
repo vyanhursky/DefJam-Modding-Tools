@@ -39,6 +39,17 @@ def test_malformed_and_unsupported_streams_fail(data, message):
         prepare_r2(data)
 
 
+@pytest.mark.parametrize('encoded', [b'\x80', b'\x80\x00', b'\x80\x00\x00'])
+def test_native_negative_short_counts_are_not_positive_export_durations(encoded):
+    data = stream()
+    size, = struct.unpack_from('<I', data, 4)
+    changed = bytearray(data.replace(b'\x85\x04' + struct.pack('>I', 53),
+                                   bytes((0x85, len(encoded))) + encoded))
+    struct.pack_into('<I', changed, 4, size + len(encoded) - 4)
+    with pytest.raises(ValueError, match='bounded mono'):
+        prepare_r2(bytes(changed))
+
+
 def test_bank_preserves_logical_order_duplicates_and_accounts_for_unindexed_data():
     first, second = stream((28,)), stream((56,))
     data = first + bytes(256 - len(first)) + b'unreferenced' + bytes(256 - 12)

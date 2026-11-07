@@ -37,16 +37,23 @@ refuses existing output, checks every packet/sample count and retains partial
 final blocks. All 2,865 referenced clips in 217 Vendetta files export successfully
 with 2,539 partial tails accounted for. The first decode audit exposed FFmpeg's
 48 kHz default vs the game's 24 kHz; corrected all-file evidence is
-`logs/m5-audio-export-native-rate.json` (the earlier WAV audit is superseded). Twenty-three
-focused creator/audio tests pass. Native decoder comparison proves tail handling
+`logs/m5-audio-export-native-rate.json` (the earlier WAV audit is superseded). Twenty-six
+focused creator/audio tests pass after adding signed short-count rejection. Native decoder comparison proves tail handling
 but finds small float-vs-integer predictor differences: WAV output is an explicit
 transcode, not bit-identical native audio. Runtime typed R2 compilation preserves all original coded blocks and native
-header metadata; its in-game acceptance is running. source banks and metadata are never installed by this tool. Guide documents
+header metadata. A synthetic literal-block R2 test sound is positively identified
+in captured combat audio; original predictive-clip probes remain inconclusive.
+Source banks and metadata are never installed by this tool. Guide documents
 the command and qualification. Installed wheel commands also export exact R2 bytes and a 24 kHz/31,944-sample
 WAV from outside the checkout (`logs/m5-installed-r2-report.json`,
-`logs/m5-installed-wav-report.json`). Next: runtime R2
-adapter/native acceptance, event-template/fallback accounting, remaining M5
-animation/finisher work. No public push; gallery/workspaces remain untouched.
+`logs/m5-installed-wav-report.json`). The final rebuilt wheel was reinstalled
+into the disposable environment; its console exported the exact R2 source from
+outside the checkout, and its API rejected a negative short sample count
+(`logs/m5-installed-final-r2-report.json`). Next: runtime R2
+event-template/fallback accounting and predictive-clip playback acceptance, remaining M5
+animation/finisher work. The runtime also now has a type13 timed quaternion
+reader with 20,160 native-body oracle evaluations and zero byte differences;
+full motion/cinematic admission remains open. No public push; gallery/workspaces remain untouched.
 
 **2026-10-31 — PR4 approved for merge.** Vlad approved the published-pack viewer
 and mouse/page-size refinements and requested merging PR4 into main. It retains
