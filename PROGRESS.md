@@ -29,6 +29,22 @@ are proved, keep the guide accurate, then package/playtest the ordinary conversi
 Generic Blender mesh and PNG-to-portrait exporters are not currently supplied.
 Live gallery 8768 and private art/review workspaces remain untouched.
 
+**2026-11-06 — Explicit voice families and finisher slots.** Guide/reference
+now describe runtime `fighter-voice-3` (verified per-category templates/families,
+typed audio) and `fighter-blazin-2` (explicit slots0–3 with independent pairs).
+All129 supplied banks/2,777 banked clips rebuild with normalized event metadata
+preserved, including45 family-key differences. A native version3 probe resolves
+the custom voice's family1 and yields an original-line correlation0.408 in the
+mixed device recording; this is one observed line, not complete voice acceptance.
+Runtime focused Python/compiled-C suite164pass. Four-fighter slot acceptance
+hit a loading crash: a native texture swizzler receives an invalid source
+pointer and overwrites unrelated loading state. The source of that bad buffer
+is still under investigation; no motion-count limit or memory exhaustion is
+established. Saves restore identically. Missing voice categories and full motion/root/cinematic/helper
+conversion remain open. No Tools code changed in this update, so installed-wheel
+evidence below remains applicable. Keep the beginner guide synchronized with
+actual adapter evidence; do not claim a finished Vendetta conversion.
+
 
 **2026-11-06 — M5 audio export R&D.** Added `fighter audio` for explicit local
 FFmpeg/FFprobe conversion of EA revision3/ADPCM R2 streams and HDR/DAT banks to

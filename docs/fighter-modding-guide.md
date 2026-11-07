@@ -156,7 +156,7 @@ tested is the one in the pack. If you deliberately edit an asset, its old hash
 must be updated before validation. A mismatch can also mean a damaged download.
 
 **Technical details.** Authored file descriptors have `path` and `sha256`.
-The `fighter-voice-2` source additionally requires `format` on every audio
+The `fighter-voice-2` and `fighter-voice-3` sources additionally require `format` on every audio
 descriptor (`wav-pcm16` or `ea-adpcm-r2`); other descriptors retain their
 two-field shape. Paths are relative to the manifest folder, use `/`, and cannot
 escape it. Compute the digest after editing, for example:
@@ -371,9 +371,50 @@ coded samples, the native 24 kHz default, and the source's software-decoder
 selection. It accepts neither arbitrary audio codecs nor bank/event metadata.
 All 2,865 source clips pass this typed rebuilding check, including native
 signed sample-count semantics. A synthetic compressed test sound has been
-identified in captured combat audio. Original predictive-clip playback probes
-remain inconclusive; this is not complete voice-event or whole-pack acceptance. Match event templates separately before calling a fighter
+identified in captured combat audio. A version3 probe now also requests the
+original voice's explicit family and produces a matching original line in the
+device capture. This is one playback observation, not complete voice-event or
+whole-pack acceptance. Match event templates separately before calling a fighter
 conversion faithful. Keep the original files.
+
+### Choose a different event template for each category
+
+Some voices combine reaction, taunt and environmental banks from different
+templates. Their event-family numbers also matter: a valid clip will not play
+if the game requests a different family. The third voice format lets you name
+these choices separately, without importing an older mod's arbitrary metadata.
+
+**Technical details.** `fighter-voice-3` replaces the top-level `template_voice`
+and `samples` fields with `banks`. Supply exactly `Character`, `Taunts` and
+`Enviro`; each contains `template_voice`, `family` and `samples`. For example,
+the shape of a Character entry is:
+
+```json
+"Character": {
+  "template_voice": 0,
+  "family": 1,
+  "samples": {
+    "0": {"path": "audio/reaction.bin", "sha256": "<64 lowercase hex digits>", "format": "ea-adpcm-r2"}
+  }
+}
+```
+
+This is a fragment, not a complete voice source. Include the other two banks
+and mandatory `intro`/`extro` descriptors. All descriptors use the explicit
+`wav-pcm16` or `ea-adpcm-r2` format from version2. Allowed families are Character
+0/1, Taunts 16625/16626 and Enviro 40962/40963. The compiler verifies each
+template in the player's original archive, keeps its event metadata, and changes
+only the declared family, allocated voice ID and bounded audio references.
+Missing sample overrides still retain template clips. Missing whole categories
+are not supported; do not invent silent banks to claim a faithful conversion.
+
+The resource's `events` compatibility label must still match the fighter's
+moveset. Choosing a permitted family does not prove that a particular action
+requests it: test the relevant events in-game. There is no universal automatic
+fallback between family0 and family1. All 129 supplied legacy banks (2,777
+banked clips) now rebuild with their normalized event metadata preserved,
+including 45 banks requiring an explicit family change. This is a compiler
+check; native playback and missing-category accounting are separate gates.
 
 ## 10. Tune the CPU opponent
 
@@ -409,6 +450,34 @@ inherited finisher choices to both `subject` and `counterpart` track descriptors
 The runtime verifies ownership and matching timing; a pair is not a single
 attacker animation. Unsupported branches, camera programs and event graphs
 need general adapters rather than copied native dispatch code.
+
+### Give the four finishing-move slots separate animations
+
+A fighter has four finishing-move slots. Two slots may follow the same move
+rules while showing different animations. The second Blazin format identifies
+each slot separately, so one slot's animation does not replace every use of
+the same move template.
+
+**Technical details.** `fighter-blazin-2` has exactly `format`, `shots`, `slots`.
+The four activation shots follow the version1 rules. `slots` has one to four
+canonical string keys `"0"` through `"3"`. Each value contains exactly
+`template_choice` (integer 0–81), `subject` and `counterpart` quaternion-file
+descriptors. Unlike version1's `pairs`, these slots may select a different
+verified retail behavior from the inherited moveset's original choice. Omitted
+slots retain their inherited choice and animation. Do not include both `pairs`
+and `slots`.
+
+The compiler changes only the declared four packed choice fields and creates
+independently owned paired motions. Native validation reconstructs those fields,
+checks each binding against the actor's selected slot, and preserves the chosen
+template's parameters, camera behavior, timing and root motion. Choosing the
+same template for two slots does not merge their animation resources. The
+current track format still cannot represent every legacy motion/helper graph;
+slot support alone does not make those full animation banks importable. Focused
+compiled-C checks pass. Four-fighter playtesting currently encounters a texture
+loading crash under investigation, so this version is experimental and has not
+passed native acceptance. Do not treat a successful pack build as proof that
+all four slots work in a match.
 
 ## 12. Validate, package and test with other mods
 
