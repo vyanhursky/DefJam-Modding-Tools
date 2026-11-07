@@ -37,10 +37,24 @@ preserved, including45 family-key differences. A native version3 probe resolves
 the custom voice's family1 and yields an original-line correlation0.408 in the
 mixed device recording; this is one observed line, not complete voice acceptance.
 Runtime focused Python/compiled-C suite164pass. Four-fighter slot acceptance
-hit a loading crash: a native texture swizzler receives an invalid source
-pointer and overwrites unrelated loading state. The source of that bad buffer
-is still under investigation; no motion-count limit or memory exhaustion is
-established. Saves restore identically. Missing voice categories and full motion/root/cinematic/helper
+hit a loading crash. Subsequent native sampling proved arena fragmentation:
+a263,378byte texture allocation cannot fit the largest218,784byte free block.
+This is not a fixed motion-count limit. A bounded32MiB CPU animation pool is now
+implemented/built in the runtime, with52 focused CPU-pool/finisher C tests passing;
+the original16-pair four-fighter native acceptance run now passes. Saves from
+the diagnostic runs restore identically. Helper `_d` output is traced to a
+48byte native stack allocation. Normal paired face/hand palette provenance is
+now traced to the owned appearance and verified shared hand bank; native full-parent
+execution still needs proof. The first CPU-pool run safely stopped on ownership:
+uncompressed reads use a different callback, now covered by the corrected routing
+and52 passing focused tests. The corrected700-second native run passes8
+combat/result assertions, four menu identities and restored-identical saves;
+39 evaluated custom resources include12 paired roles with zero ownership
+mismatches. Slot1 playback remains a coverage gap. A separate native quit cycle
+releases all32 owned allocations and restores the original33,553,888-byte free
+block, returning to Battle. The runtime also has48 passing original-body parent
+scale/cache oracle cases. Full graph rebuilding and converted-pack acceptance
+remain open; no finished Vendetta pack is claimed. Missing voice categories and full motion/root/cinematic/helper
 conversion remain open. No Tools code changed in this update, so installed-wheel
 evidence below remains applicable. Keep the beginner guide synchronized with
 actual adapter evidence; do not claim a finished Vendetta conversion.

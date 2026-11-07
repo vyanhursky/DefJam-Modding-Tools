@@ -474,10 +474,12 @@ template's parameters, camera behavior, timing and root motion. Choosing the
 same template for two slots does not merge their animation resources. The
 current track format still cannot represent every legacy motion/helper graph;
 slot support alone does not make those full animation banks importable. Focused
-compiled-C checks pass. Four-fighter playtesting currently encounters a texture
-loading crash under investigation, so this version is experimental and has not
-passed native acceptance. Do not treat a successful pack build as proof that
-all four slots work in a match.
+compiled-C checks pass. A large four-fighter fixture exposed limited space in the
+original game's asset memory pool. A separate pool for custom animation data is
+implemented and has passed a full four-fighter match plus native exit-to-menu
+cleanup. Explicit playback coverage still needs slot1, so this version remains
+experimental. Do not treat a successful pack build as proof that every fighter
+and all four slots have been exercised in a match.
 
 ## 12. Validate, package and test with other mods
 
@@ -558,9 +560,14 @@ not just the 44 advertised in metadata. All 46 appearances now compile,
 including distinct facial palettes. Their ordinary combat animation banks
 and action tables exactly match mapped retail donors and can be inherited
 faithfully. Their four finisher selections differ, however, and the added
-finisher motion data, cinematic helpers and compressed voices need general
-conversion support. Reusing a gameplay template must not discard those custom
-animations or recordings.
+finisher motion data and cinematic helpers still need complete conversion
+support. Facial and hand tracks choose poses from separate palettes; their
+references must fit the particular fighter's face and the shared hand resource.
+A motion's timing also includes its parent duration and playback scale, beyond
+the visible list of animation keys. Those parts must survive conversion together.
+Compressed voice samples and explicit bank families have supported component
+paths, but explicitly absent voice categories still need a general adapter.
+Reusing a gameplay template must not discard custom animations or recordings.
 
 A full converted pack is not yet a supported output of this draft. The conversion
 report must account for every changed component, including missing voice
