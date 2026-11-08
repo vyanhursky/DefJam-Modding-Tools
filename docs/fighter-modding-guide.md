@@ -10,6 +10,11 @@ checkout containing `scripts/fighter-contract.py`; the published v0.13.0 game
 does not include this workflow. A file that passes validation still needs a
 playtest. Legacy `.mod` bundles are not automatically compatible.
 
+Updated November 8, 2026. The tools now export complete supported paired moves,
+entrances, victories, activation shots and deliberately absent voice categories.
+You can keep a simple donor-based pack; these more detailed formats are needed
+only when you want to preserve or change those components independently.
+
 ## 1. What you are building
 
 A fighter is a named character assembled from several pieces: its appearance,
@@ -29,16 +34,18 @@ the native archives itself. The original extracted game stays unchanged.
 | Moveset | Attacks, movement and their timing | `moveset` | Action selections and quaternion-track JSON |
 | Voice | Reactions, taunts and spoken entry/exit sounds | `voice` | Mono PCM16 WAV, or supported compressed R2 streams, and category assignments |
 | AI | How the CPU chooses actions | `ai` | Named tendencies in the manifest |
-| Portrait | Pictures in selection and results | `portrait` | Six layout-specific SHPX `.xsh` files |
+| Portrait | Selection, loading and result pictures/logos | `portrait` | Six, eighteen or twenty-four layout-specific SHPX `.xsh` files |
 | Intro | The fighter's entrance | `intro` | Supported cinematic template plus track JSON |
 | Victory | The winner's animation | `victory` | Supported cinematic template plus track JSON |
 | Blazin | Activation shots and paired finishing moves | `blazin` | Four shot definitions, optional paired tracks |
 | Stats | Health, speed, toughness and charisma | `stats` | Integer values in the manifest |
+| Tier | Which roster category contains the fighter | `tier` | One category value, inherited unless changed |
 
 Skeletons, skin weights, materials and texture coordinates are parts of the
-appearance resource, not independent top-level components. Motion events,
-camera helpers, damage rules and native AI programs currently come from
-verified templates; they are not arbitrary scripts supplied by a pack.
+appearance resource, not independent top-level components. Move rules and AI
+programs come from verified templates. Supported animation graphs can retain
+their own movement, facial/hand poses, cameras and event timing; packs cannot
+supply arbitrary native programs or callback arguments.
 
 ## 2. Set up your tools and folders
 
@@ -143,6 +150,10 @@ individual stat values with its inherited stats. For example,
 toughness and charisma. All four are integers from 0 to 100. A fighter authored
 without inheritance must supply the complete native-required bundle and stats.
 
+Roster `tier` is a separate inherited component. Its value is one of1,2,4or8;
+it selects a native roster category and does not change combat stats. Set it
+only when your fighter needs a different category from the donor.
+
 Do not put selection indexes or core IDs in your permanent names. More than
 255 logical entries are supported through a separate native participant window;
 four simultaneously active participants are still four participants. The
@@ -177,6 +188,22 @@ file. Manifest input is bounded separately at 8 MiB; combined manifest input is
 32 MiB. Additional appearance/portrait/behavior composition budgets also apply.
 The validator reports the limit actually hit; splitting a shared dependency does
 not evade the combined active-roster budgets.
+
+An export's `*-source.json` is an assignment fragment; `*-export.json` is a work
+report. Where the fragment belongs depends on the export:
+
+| Export | Where to copy the fragment |
+|---|---|
+| Voice | The voice resource's `source` |
+| Entrance or victory | The cinematic resource's `source` |
+| Paired finisher | One entry such as Blazin `source.slots["0"]` |
+| Activation shot | One entry in the four-element Blazin `source.shots` array |
+
+Copy referenced files into a separate subfolder for each export, and update the
+fragment's path prefixes. Exporters reuse names such as `graph.json`; copying two
+exports into the same folder can replace the first. The paths are relative to
+`fighters.json`, not to the fragment file. Keep work reports outside the pack.
+Changing a schema name does not convert an older track file.
 
 ## 6. Build the appearance: model, rig, skin and textures
 
@@ -226,6 +253,11 @@ component probe has reached combat with the rebuilt face data. Full facial
 expression/cinematic coverage and complete Vendetta conversion remain in
 progress; a compilation receipt is not a promise that every context was tested.
 
+The `eagl-appearance-2` variant adds an explicit `shape_names` map for verified
+texture-name isolation. It is useful when an appearance uses names that would
+collide with another fighter. It does not make unsupported mesh or material
+data safe, and a guessed map is not a replacement for inspecting the resource.
+
 Inspect components before composing the whole pack:
 
 ```powershell
@@ -267,6 +299,14 @@ use compatible native outputs and validate all six variants. Do not include
 replacement `chooseF2/3/4` movies: the runtime owns roster expansion and UI binding.
 The selector uses 2D portraits. Verify the actual 3D model in entrances/combat.
 
+For complete artwork, `eagl-portrait-2` adds loading portraits and
+selector/loading/result logos for each participant count: eighteen files total.
+`eagl-portrait-3` adds six independent normal/selected grid thumbnails, for
+twenty-four files total. Use this when the menu thumbnail differs from the large
+portrait. The older six-file format remains valid. Each file still needs its
+own verified layout and digest; a thumbnail is not made by renaming the large
+portrait. Source menu scripts and native drawable models stay outside the pack.
+
 ## 8. Author movement and attacks
 
 An animation shows a pose changing. A move also needs rules about when it starts,
@@ -295,6 +335,11 @@ Use `inspect-motion-index --check-links`, `inspect-motion-record`, and
 `inspect-animation-envelope --check-links --check-curves` to investigate a
 template. These are diagnostic commands, not a complete animation authoring UI.
 There is no supported “drop in main_all.dat/wres_all.viv” shortcut.
+
+Finishing moves have a fuller export path than these ordinary attack edits.
+The paired-move workflow in section14 retains five coordinated tracks for both
+participants, including their separate facial and hand palettes. It does not
+expand `fighter-moveset-1` into an arbitrary combat-animation importer.
 
 ## 9. Record and assign a voice
 
@@ -484,7 +529,10 @@ can leave the other floating, facing the wrong way or reacting at the wrong time
 `kind: "cinematic"`, skeleton/events compatibility, and `fighter-cinematic-1` source fields
 `format`, `template`, `track`. Supported templates are simple native `CI_XXXX`
 or `CE_XXXX` plans; the composer checks the actual plan and rig. The track is a
-complete quaternion JSON resource, not an opaque cinematic VIV.
+complete quaternion JSON resource, not an opaque cinematic VIV. For a complete
+supported entrance or victory, use `fighter-cinematic-2` and the `fighter
+cinematic` export workflow in section14. It preserves root motion, camera
+tracks, constants, empty channels and the event timeline as coordinated data.
 
 `fighter-blazin-1` has four `shots`, in native phase order. Each shot has
 `template` and optional `track`. Template names match `BT1_nn`, `BT2_nn`,
@@ -494,6 +542,11 @@ inherited finisher choices to both `subject` and `counterpart` track descriptors
 The runtime verifies ownership and matching timing; a pair is not a single
 attacker animation. Unsupported branches, camera programs and event graphs
 need general adapters rather than copied native dispatch code.
+
+The complete-graph `fighter-blazin-5` format can instead use the supplied camera
+for its fourth activation shot in absolute coordinates. The older format's
+venue policy is unchanged. Choose the camera policy from the intended source
+behavior; the presence of a camera file alone is insufficient evidence.
 
 ### Give the four finishing-move slots separate animations
 
@@ -521,7 +574,8 @@ slot support alone does not make those full animation banks importable. Focused
 compiled-C checks pass. A large four-fighter fixture exposed limited space in the
 original game's asset memory pool. A separate pool for custom animation data is
 implemented and has passed a full four-fighter match plus native exit-to-menu
-cleanup. Explicit playback coverage still needs slot1, so this version remains
+cleanup. Both participants of slot1 have now executed in a Windows human
+component fixture, with owned resources released afterward. The format remains
 experimental. Do not treat a successful pack build as proof that every fighter
 and all four slots have been exercised in a match.
 
@@ -595,73 +649,36 @@ make it supported.
 | Voice WAV rejected | Export mono signed PCM16 within the supported sample-rate/length bounds |
 | Pack changed after validation | Finish the editor write and package again to a new output |
 
-The Vendetta `.mod` is a ZIP containing loose assets and replacements for shared
-databases. A faithful conversion must recover each fighter's own components,
-preserve intended behavior, remap references and account for global edits.
-It must not replace retail databases wholesale or silently drop unsupported
-faces/moves/cinematics. Current investigation found 46 added SOD characters,
-not just the 44 advertised in metadata. All 46 appearances now compile,
-including distinct facial palettes. Their ordinary combat animation banks
-and action tables exactly match mapped retail donors and can be inherited
-faithfully. Their four finisher selections differ, however, and the added
-finisher motion data and cinematic helpers still need complete conversion
-support. Facial and hand tracks choose poses from separate palettes; their
-references must fit the particular fighter's face and the shared hand resource.
-A motion's timing also includes its parent duration and playback scale, beyond
-the visible list of animation keys. Those parts must survive conversion together.
-Compressed voice samples, explicit bank families and explicitly absent categories
-have supported typed component paths. The template-matched `fighter voice`
-exporter does not remove the need for native playback acceptance.
-Reusing a gameplay template must not discard custom animations or recordings.
+### Convert an older mod through supported components
 
-The research converter can now rebuild all five parts of a paired move: body
-motion, movement through the arena, its rotation helper, facial poses and hand
-poses. Think of these as coordinated tracks playing together. A faithful import
-must keep each track's timing and pose references, even when it animates different
-bones from a retail move. All94 supplied participant-motion banks now pass an
-offline rebuild/read-back check. That check does not establish that the complete
-mod plays correctly in the game.
+A legacy `.mod` ZIP is not the same thing as an ordinary Fighter package. It may
+replace shared databases, menu scripts and native assets for the whole game.
+Conversion must recover each fighter's components, preserve their intended
+behavior, remap references and account for global edits. Replacing retail
+files wholesale or dropping an unsupported face, move or voice is insufficient.
 
-Technically, the internal `fighter-motion-graph-draft-1` preserves quantized
-values and time grids, reconstructs local references and uses verified template
-controls. Body/root evaluator tests now include cached playback and backward
-seeks. Native pose-reset tests also confirm that the working pose is refreshed
-from the skeleton before ordinary component evaluation. A later audit rebuilds
-all94 roles against their actual47 matched behaviors, checking5734 output joins
-across46 rebuilt appearances and75 retail opponent contexts. Exact model,
-rig, face and shared-hand identities are recorded separately. These are bounded
-offline joins; dynamic created-fighter contexts and native blending/playback
-still need broader acceptance. The old draft JSON is not implicitly accepted;
-the explicit new `fighter-motion-graph-1` profile is exported by `fighter pair`.
+The supplied Vendetta archive contains 46 added fighters, despite advertising
+44. Its ordinary combat banks and AI exactly match verified retail donors and
+can be inherited faithfully. Its appearances, finishing moves, voices, artwork
+and cinematic performances require their own converted resources. An ordinary
+46-fighter candidate now compiles with those resources; broader native acceptance
+is still open. Treat it as a local playtest candidate, not a finished release.
 
-Portrait frames can use a different donor from combat or appearance. The layout
-donor supplies crop/material structure; your own pixels remain the content.
-The runtime's exact six-layout matcher now finds valid templates for all276
-source selector/results variants. It does not relax tile or crop validation and
-does not account for every ancillary picture/menu edit in the older pack.
+The paired-move exporter preserves both participants' body, arena movement,
+rotation helper, facial and hand tracks. Those tracks can have different timing
+and pose palettes from the gameplay template. Entrances and activation shots can
+also contain constants, empty channels and compressed camera curves. Their
+complete typed export paths preserve that information instead of substituting
+donor animation. The validator still rejects unsupported native controls and
+arbitrary callback code. Ordinary combat-track editing remains the narrower
+`fighter-moveset-1` workflow in section8.
 
-The other entrance/activation/victory bundles use additional animation profiles:
-constant channels, empty parents, compressed block deltas and camera scalar
-tracks. A new offline numeric writer preserves the original compressed blocks,
-constants, ordered destinations, time grids and nonzero header bytes. All1512
-numeric leaves in184source bundles pass reconstruction and174214pose/interpolation
-comparisons. The complete typed cinematic writer now compiles all184bundles;
-native camera scheduling and resource lifetime remain separate gates. Renaming those bundles
-or replacing their curves with a donor would not preserve the source performance.
+Voice conversion can retain exact supported compressed R2 samples, explicit
+family IDs and deliberately absent banks. Exporting WAV is a transcode; declaring
+absence does not suppress the game's explicit alternative-event rules. Follow
+section9 and test the actual reactions and entry/exit recordings in-game.
 
-On November8, the explicit voice-absence fixture reached native combat with its
-owned Character bank registered. Actual Taunts and Enviro requests resolved as
-absent;838read-only live checks confirmed presence mask1 with no unexpected
-nonzero mask. This proves bank omission in the running game. Positive Character
-playback, voice reload and device-audio checks still require their own evidence.
-
-The runtime accepts an explicit `fighter-blazin-3` source for full paired
-graphs, with `fighter-motion-graph-1` files in named slots. The compiler seals the
-rebuilt graph before native construction and checks actual participant resources.
-The current Windows CPU fixture executed both roles twice and released all owned
-allocations at teardown; other modes/platforms still require acceptance. Do not
-rename older quaternion files to these versions or describe an offline rebuild
-as a completed conversion.
+### Export a complete paired finishing move
 
 For a supplied paired native bank, export both participants together:
 
@@ -693,6 +710,8 @@ first-match lookup and reports shadowed schedules; it never silently chooses the
 last appended row. Installed-wheel validation covers all47source pairs/94roles.
 That is component compilation, not complete-pack native acceptance.
 
+### Keep the complete menu artwork
+
 For complete UI artwork, `eagl-portrait-2` adds selector/result/loading logos and
 loading portraits for2/3/4participants to the existing six files. All18files are
 pixels-only inputs against a verified UI layout. Authored logos replace generated
@@ -702,6 +721,8 @@ rasters for each participant count. These six single-image SHPX sources use
 verified grid geometry; they preserve menu-specific thumbnails that cannot be
 recreated faithfully from the large result portrait. Source menu scripts and
 models are never package input.
+
+### Export entrances, victories and activation shots
 
 To export a complete supplied entrance or victory, keep its model and tag table
 beside the bundle and use the matching runtime checkout:
@@ -717,22 +738,32 @@ payloads. Put the fragment from `cinematic-source.json` in a `cinematic` resourc
 and assign it as the fighter's `intro` or `victory`. Keep the export work report
 outside the package. `fighter-cinematic-2` requires exactly `format`, `template`,
 `graph` and `tags`. Use `--absent-tags` only when the source has no row: the
-exporter checks that fact and emits the explicit `{state: "absent"}` declaration.
+exporter checks that fact and emits the explicit `{"state":"absent"}` declaration.
 
 Activation export uses the same command with a phase template such as `BT1_01`.
-Use the returned shot fragment in `fighter-blazin-5`, whose four slots retain the
-version4 paired motion/timeline contract. Phases0–2 use owned relative cameras;
+Use the returned shot fragment as one of `fighter-blazin-5`'s four activation
+shots. Its zero to four owned finishing-move slots retain the version4 paired
+motion/timeline contract; `retail_slots` can assign exact original moves instead.
+Phases0–2 use owned relative cameras;
 phase3 can declare `owned-absolute`, using its supplied camera with native absolute
 coordinates, or `native-venue` to retain the venue camera. Vendetta conversion
 uses `owned-absolute`, following the author's additional runtime reference. The closed tag
 profiles admit only the verified intro, victory or activation callback families,
 not arbitrary effect scripts. The installed exporter covers all184source bundles.
+Manual fourth-shot exports default to `native-venue`. When the intended source
+uses its own absolute camera, edit that shot fragment's `camera_policy` to
+`owned-absolute` before assigning it. There is no camera-policy CLI switch;
+`convert-legacy` makes the Vendetta-specific assignment automatically.
 The behavioral reference is pinned to
 [Comoria aca317a0](https://github.com/comoria08/defjam_recomp/blob/aca317a0a84dd6522dd68f02ef7a5e82fb749989/src/recomp_manual.c#L1219-L1234).
 The dedicated Windows component test evaluated all four human activation phases,
 including the actual owned absolute camera, and released all32owned allocations.
-Its P2 damaging-hit assertion failed; this does not establish full two-human
-combat or every converted fighter's visual acceptance.
+A later normal managed-pack test also had both human players walk and land
+input-linked damaging hits, then returned to menus and released all24owned
+allocations. These are separate observations; they do not establish every
+converted fighter's visual, cinematic or audio acceptance.
+
+### Assemble the ordinary conversion
 
 `fighter convert-legacy` assembles sealed appearance,24-role artwork, voice, pair
 and cinematic export receipts into one ordinary registry. Its required inputs
@@ -769,15 +800,27 @@ overrides. Source menu scripts, global databases and native code stay outside th
 package. New adapter R&D remains part of extended M5 until its acceptance gates
 are closed.
 
+### What the current playtests establish
+
 The corrected candidate has booted through the ordinary installed-layout Manager
-helper with the independent starter enabled. Arrii and Briggs reached a result/
+helper with the independent starter enabled. Arii and Briggs reached a result/
 save cycle and a second match in one process, with verified resource release and
 reuse. A separate component fixture proves both participants of finisher slot1.
 These are specific Windows observations, not acceptance of every fighter,
 physical controller or platform. Expanded four-player selector testing found a
 thumbnail-model compiler defect; its correction passed a four-participant native
-retest with Arrii, Briggs, the independent starter and retail Blaze. All five
+retest with Arii, Briggs, the independent starter and retail Blaze. All five
 available combat assertions passed; that bounded run did not reach a result or
 prove owned paired evaluation for those participants.
-The full pack currently spends about two minutes preparing a warm launch. Keep
-compilation, native evidence and owner approval separate.
+The complete ordinary pack has now also passed six two-human combat assertions
+through the normal installed-layout helper, with Arii and Briggs selected and
+the independent starter enabled. Both players walked and landed damaging hits;
+native Quit returned to menus and released all24owned allocations. A transient
+native save-receipt access failure is covered by bounded retry and tests that
+still reject invalid or persistently unreadable saves. That run does not prove
+new owned activation/pair playback or a natural match result.
+
+The full pack currently spends about two minutes preparing after Play, even on
+a warm launch. Wait for that preparation before testing controls. Launch
+performance and broader acceptance remain open. Keep compilation, native
+evidence and owner approval separate.

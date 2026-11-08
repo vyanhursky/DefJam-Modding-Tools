@@ -2,6 +2,29 @@
 
 ## Current status
 
+**2026-11-08 — Owner requested continued work, playtest shortcut and guide review.**
+Confirmed the human-readable creation draft is `docs/fighter-modding-guide.md`.
+Updated its early capability table and component instructions for6/18/24artwork
+roles, full cinematic and paired graphs, explicit texture-name isolation, Tier
+and human slot1 evidence. Corrected fragment placement (whole voice/cinematic
+source versus one finisher slot/activation shot), separate exported asset paths,
+valid absence JSON and the manual phase4 camera-policy edit. Reorganized legacy
+conversion into actionable subsections and removed superseded unsupported-format
+claims. Native validation, compilation and actual playback remain distinct.
+Runtime commits203821a/aa35b4e reduce bounded decoder work and retry native
+receipt permission errors for at most0.9seconds. Malformed receipts, persistent
+denial and other I/O errors still fail without acknowledging a batch. Final
+focused fighter suite1424passes. Full pack/UI output stays byte-identical; warm
+preparation still takes126.49seconds and remains an open performance gate.
+Normal installed-layout full-pack run111731passes all six two-human combat checks
+with Arii/Briggs, reaches native Quit/menu return, releases24allocations and
+acknowledges one save; guard restores identically. No new activation/pair or
+natural-result claim from that run. Actual Desktop shortcut opens the normal
+launcher, both46fighter Vendetta and independent starter checkboxes verified.
+It uses disposable supervised saves; launcher was closed after verification.
+Guide starter/package commands were exercised through the installed creator.
+No publication, push, PR, merge or release is authorized.
+
 **2026-11-08 — Resolved fourth-shot camera and corrected mixed-four test.**
 The owner supplied Comoria's runtime as the additional legacy reference. Pinned
 aca317a0 establishes owned absolute phase4 cameras; the converter now emits that
@@ -16,7 +39,7 @@ d493f0aa580748a29a6a45bf99c34f8274d87049e5df70abd04e931c2cfe0c01.
 It supersedes the native-venue e288a716 draft below. Final exhaustive source
 accounting is `fighter-m5-source-accounting-absolute-1108.json`,1697converted/
 184inherited/2excluded, all1883hashes checked. Corrected four-participant native
-selection/combat passes with Arrii, independent Check, retail Blaze and Briggs;
+selection/combat passes with Arii, independent Check, retail Blaze and Briggs;
 that bounded run does not prove a result, owned pair evaluation or native Quit.
 Extended M5/M6 broader content/audio/lifetime/performance, physical input,
 platform, fresh installer and owner acceptance remain open. Warm preparation is
@@ -44,7 +67,7 @@ finished and packaged4651files, ZIP SHA256
 e288a716e7f77540e149dfc244a2fa1d8c2664a272f45b94ac1a8cce9552ad0a.
 Installed creator40tests pass; runtime1412focused+10bridge tests pass. Normal
 installed-layout helper boot passes with the actual isolated Setup Python;
-Arrii/Briggs reached two match epochs and the first result/save/quit.23owned
+Arii/Briggs reached two match epochs and the first result/save/quit.23owned
 allocations fully released and the same pool was reused for match2. A separate
 two-human fixture proves both roles of slot1 and releases30allocations, although
 its P2 damaging-hit assertion fails. Mixed4selector testing found a truncated
