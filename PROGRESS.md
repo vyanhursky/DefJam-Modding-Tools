@@ -2,6 +2,23 @@
 
 ## Current status
 
+**2026-11-08 — Source-only PR publication authorized.**
+The owner now authorizes source pushes and PRs, explicitly excluding every
+Vendetta modpack file. This supersedes earlier no-push/no-PR instructions below;
+merge, pack/asset publication and release remain unauthorized. Preparing draft
+runtime and companion creator PRs, with detailed runtime compatibility notes in
+`../defjam-fighter-mods/docs/fighter-mod-review-notes.md`. Current-main integration
+is still required: this branch conflicts in `PROGRESS.md` and `src/defjam_tools/cli.py`;
+preserve main's newer CAF/viewer commands when resolving. Runtime's newer launcher
+architecture also needs integration; the old Setup path is not a restoration plan.
+Full installed creator suite:218passed/3skipped/51subtests in4.99seconds, log
+`logs/fighter-pr-full-unit-b-1108.txt`, using a private test root outside this
+source tree. Runtime full unit suite:2209passed/27skipped in133.98seconds.
+Source-only outgoing-history audit checks every new blob version against source
+policy and all original/converted Vendetta file hashes, not just the final trees.
+Next: finish the publication audit, publish both draft source PRs, then integrate
+with current main and continue the explicitly open M5/M6 acceptance gates.
+
 **2026-11-08 — Owner requested continued work, playtest shortcut and guide review.**
 Confirmed the human-readable creation draft is `docs/fighter-modding-guide.md`.
 Updated its early capability table and component instructions for6/18/24artwork
