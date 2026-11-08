@@ -21,6 +21,11 @@ that bounded run does not prove a result, owned pair evaluation or native Quit.
 Extended M5/M6 broader content/audio/lifetime/performance, physical input,
 platform, fresh installer and owner acceptance remain open. Warm preparation is
 about123seconds. All work remains local; no push/PR/merge/publication/release.
+Final runtime complete focused fighter suite passes1416tests in42.16seconds;
+implementation commit4075ad3 includes224fd98's selector/harness corrections.
+The new ZIP was installed through the normal Manager transaction into the
+disposable owner test store. The latest bounded installed-layout smoke and final
+handover are recorded in runtime `docs/research/fighter-mod-handoff-2026-11-08.md`.
 
 **2026-11-08 — Complete cinematic export and ordinary conversion assembly.**
 New `fighter cinematic` calls shared runtime `export-cinematic`, retaining typed
