@@ -676,8 +676,22 @@ pairs now pass this installed export path. Copy the two graph files into your
 pack and assign `pair-source.json`'s object to a named version3 slot, adjusting
 its relative paths. Keep `pair-export.json` as a work report outside the pack,
 then run the usual full validate/package commands. Version3 deliberately inherits
-the template's camera and event timelines; retimed legacy camera/tag data needs
-the separate timeline adapter still being developed.
+the template's camera and event timelines. To preserve authored timing, supply
+both `--tags C:/work/animtags.dat --cameras C:/work/camera.xml` to the same command.
+The exporter then writes `subject_tags.json`, `counterpart_tags.json` and
+`camera.json` alongside the two motion graphs. Use the returned fragment in
+`fighter-blazin-4`; keep its camera template declaration. Each event references
+a complete verified original payload and supplies an authored tick. Packs cannot
+supply native opcodes, callback arguments or replacement XML. Paired tags retain
+their behavior template's payload order; camera schedules retain its non-shake
+sequence and may select verified shake events. Tags and cameras are admitted
+together because the native snapshot name selects both. Event ticks are an
+independent clock and may legitimately exceed an animation's key count.
+
+Legacy camera XML may contain duplicate names. The exporter follows the native
+first-match lookup and reports shadowed schedules; it never silently chooses the
+last appended row. Installed-wheel validation covers all47source pairs/94roles.
+That is component compilation, not complete-pack native acceptance.
 
 For complete UI artwork, `eagl-portrait-2` adds selector/result/loading logos and
 loading portraits for2/3/4participants to the existing six files. All18files are

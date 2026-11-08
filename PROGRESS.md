@@ -17,8 +17,14 @@ wheel exports all47pairs/94roles from outside the checkout; focused creator test
 37pass. Runtime CPU fixture executed both roles twice and released8owned banks
 at teardown. Broader native acceptance remains open. `eagl-portrait-2` adds all18
 UI artwork variants, with native acceptance pending. Pair camera/tag timing is
-known to differ from donors and needs a separate typed adapter, so version3
-explicitly inherits those timelines and is not a faithful complete Vendetta import.
+known to differ from donors. Optional paired `--tags`/`--cameras` now exports
+coupled typed timelines for `fighter-blazin-4`, keeping version3 inheritance
+explicit. Installed latest wheel exports/compiles all47timed pairs/94roles;
+focused creator tests38pass. Runtime native FTE1 metadata and owned-name lookup
+have loaded successfully; callback scheduling and complete pack acceptance remain
+open. Preserve native first-match camera behavior and report shadowed duplicates.
+Next: finish runtime cinematic admission, separate24-role artwork exporter and
+native acceptance, then build the full ordinary package. Everything stays local.
 
 **2026-11-07 — Explicit voice absence and reusable source export.** Runtime
 `fighter-voice-4` requires present/absent declarations for all three banks and

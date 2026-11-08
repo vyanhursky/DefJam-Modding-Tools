@@ -181,6 +181,8 @@ def main():
     for name in ('model','face','subject-data','subject-links','counterpart-data','counterpart-links'):
         command.add_argument('--'+name,type=Path,required=True)
     command.add_argument('--template-choice',type=int,required=True)
+    command.add_argument('--tags',type=Path,help='Source animtags.dat; requires --cameras')
+    command.add_argument('--cameras',type=Path,help='Source camera.xml; requires --tags')
     command.add_argument('--out',type=Path,required=True)
     command = sub.add_parser('voice', help='Export an explicit voice source matched to verified runtime event templates')
     command.add_argument('--recomp', type=Path, required=True)
@@ -195,7 +197,8 @@ def main():
         if args.command=='pair':
             from .fighter_motion import export_pair
             result=export_pair(args.recomp,args.game,args.model,args.face,args.subject_data,args.subject_links,
-                               args.counterpart_data,args.counterpart_links,args.template_choice,args.out)
+                               args.counterpart_data,args.counterpart_links,args.template_choice,args.out,
+                               tags=args.tags,cameras=args.cameras)
         elif args.command == 'voice':
             from .fighter_audio import export_voice
             banks = {}

@@ -52,3 +52,26 @@ def test_invalid_template_choice_leaves_no_output(tmp_path,choice):
     with pytest.raises(ValueError,match='template choice'):
         tool.export_pair('recomp','game',*files,choice,tmp_path/'export')
     assert not (tmp_path/'export').exists()
+
+
+def test_timeline_export_is_explicit_and_keeps_both_domains(tmp_path,monkeypatch):
+    files=inputs(tmp_path)
+    def shared(recomp,game,command,**options):
+        request=json.loads(options['pair_request'].read_text())
+        assert request['format']=='fighter-pair-export-request-2' and set(request)>={'tags','cameras'}
+        return {'protocol':'fighter-authoring-api-1','ok':True,'component_compilation':True,'native_playtest':False,
+                'required_source_format':'fighter-blazin-4',
+                'graphs':{role:{'format':'fighter-motion-graph-1'} for role in ('subject','counterpart')},
+                'timelines':{'subject_tags':{'format':'fighter-tag-timeline-1','events':[]},
+                             'counterpart_tags':{'format':'fighter-tag-timeline-1','events':[]},
+                             'camera':{'template':'N0001_A','timeline':{'format':'fighter-camera-timeline-1','events':[]}}}}
+    monkeypatch.setattr(tool,'contract',shared)
+    out=tmp_path/'export'
+    report=tool.export_pair('recomp','game',*files,21,out,tags=files[0],cameras=files[1])
+    assert report['required_source_format']=='fighter-blazin-4'
+    source=json.loads((out/'pair-source.json').read_text())
+    for role in ('subject_tags','counterpart_tags'):
+        assert (out/source[role]['path']).is_file()
+    assert (out/source['camera']['timeline']['path']).is_file()
+    with pytest.raises(ValueError,match='both tags and camera'):
+        tool.export_pair('recomp','game',*files,21,tmp_path/'partial',tags=files[0])
