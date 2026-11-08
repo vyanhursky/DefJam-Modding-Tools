@@ -722,11 +722,17 @@ exporter checks that fact and emits the explicit `{state: "absent"}` declaration
 Activation export uses the same command with a phase template such as `BT1_01`.
 Use the returned shot fragment in `fighter-blazin-5`, whose four slots retain the
 version4 paired motion/timeline contract. Phases0–2 use owned relative cameras;
-phase3 declares `native-venue`, preserving the reviewed native fourth-shot camera
-policy. Supplied unused phase3 camera helpers remain in the typed graph. Their
-presence alone does not prove that a legacy runtime used them. The closed tag
+phase3 can declare `owned-absolute`, using its supplied camera with native absolute
+coordinates, or `native-venue` to retain the venue camera. Vendetta conversion
+uses `owned-absolute`, following the author's additional runtime reference. The closed tag
 profiles admit only the verified intro, victory or activation callback families,
 not arbitrary effect scripts. The installed exporter covers all184source bundles.
+The behavioral reference is pinned to
+[Comoria aca317a0](https://github.com/comoria08/defjam_recomp/blob/aca317a0a84dd6522dd68f02ef7a5e82fb749989/src/recomp_manual.c#L1219-L1234).
+The dedicated Windows component test evaluated all four human activation phases,
+including the actual owned absolute camera, and released all32owned allocations.
+Its P2 damaging-hit assertion failed; this does not establish full two-human
+combat or every converted fighter's visual acceptance.
 
 `fighter convert-legacy` assembles sealed appearance,24-role artwork, voice, pair
 and cinematic export receipts into one ordinary registry. Its required inputs
@@ -742,9 +748,9 @@ native databases or unrelated legacy runtime patches.
 A local ordinary46fighter candidate now compiles with all24artwork roles, source
 voices/absence, complete cinematic graphs, all four finisher choices,47owned
 pairs, the source's retail Crow appearance edit and ten explicit global tag edits.
-This is a review/test candidate. The legacy archive does not establish whether
-its fourth activation shot used the supplied camera helpers; the current adapter
-retains the native venue policy. Whole-pack native, physical-input and platform
+This is a review/test candidate. The additional legacy runtime reference establishes
+that the fourth activation shot uses the supplied camera in absolute coordinates.
+The converter now preserves that policy. Whole-pack native, physical-input and platform
 acceptance remain separate gates. Do not call this a completed faithful release.
 
 Roster `tier` is an inline component with one integer value1,2,4or8. It controls
@@ -762,3 +768,16 @@ from ordinary typed timelines, including ten explicit hash-pinned existing-row
 overrides. Source menu scripts, global databases and native code stay outside the
 package. New adapter R&D remains part of extended M5 until its acceptance gates
 are closed.
+
+The corrected candidate has booted through the ordinary installed-layout Manager
+helper with the independent starter enabled. Arrii and Briggs reached a result/
+save cycle and a second match in one process, with verified resource release and
+reuse. A separate component fixture proves both participants of finisher slot1.
+These are specific Windows observations, not acceptance of every fighter,
+physical controller or platform. Expanded four-player selector testing found a
+thumbnail-model compiler defect; its correction passed a four-participant native
+retest with Arrii, Briggs, the independent starter and retail Blaze. All five
+available combat assertions passed; that bounded run did not reach a result or
+prove owned paired evaluation for those participants.
+The full pack currently spends about two minutes preparing a warm launch. Keep
+compilation, native evidence and owner approval separate.

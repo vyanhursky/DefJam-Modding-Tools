@@ -2,6 +2,26 @@
 
 ## Current status
 
+**2026-11-08 — Resolved fourth-shot camera and corrected mixed-four test.**
+The owner supplied Comoria's runtime as the additional legacy reference. Pinned
+aca317a0 establishes owned absolute phase4 cameras; the converter now emits that
+policy. Runtime FBZ3, actual camera member/context proof, relift and Release build
+pass;98focused runtime cases pass. A dedicated native fixture has evaluated the
+owned absolute fourth shot and released all32owned allocations; one save generation
+was acknowledged and user saves restored identically. Its P2 damaging-hit check
+still fails, so it is component/lifetime evidence. Installed creator40tests pass. The new ordinary
+46fighter/285resource candidate packages4651files:
+`../defjam-fighter-mods/logs/vendetta-roster-1.0.0-absolute-1108.zip`, SHA256
+d493f0aa580748a29a6a45bf99c34f8274d87049e5df70abd04e931c2cfe0c01.
+It supersedes the native-venue e288a716 draft below. Final exhaustive source
+accounting is `fighter-m5-source-accounting-absolute-1108.json`,1697converted/
+184inherited/2excluded, all1883hashes checked. Corrected four-participant native
+selection/combat passes with Arrii, independent Check, retail Blaze and Briggs;
+that bounded run does not prove a result, owned pair evaluation or native Quit.
+Extended M5/M6 broader content/audio/lifetime/performance, physical input,
+platform, fresh installer and owner acceptance remain open. Warm preparation is
+about123seconds. All work remains local; no push/PR/merge/publication/release.
+
 **2026-11-08 — Complete cinematic export and ordinary conversion assembly.**
 New `fighter cinematic` calls shared runtime `export-cinematic`, retaining typed
 body/root, camera, explicit empty face/hand graphs, native timing and tag state.
@@ -15,10 +35,19 @@ ownership; failed earlier probes remain recorded. Exhaustive accounting now has
 1697converted/184exactly inherited/2excluded files, with two dangling XML entries
 explicitly excluded at subrecord level. Subsequent audit added explicit source
 Tier8 and exact retail finisher-slot choices; installed-wheel candidate rebuild
-is underway. Installed creator40tests pass; runtime1399focused+10bridge tests pass.
-The ordinary managed bridge also needed new timeline/film-proof allowlist keys;
-its native retest is next. Phase4 legacy camera intent, broader native and M6
-platform/owner acceptance remain open. No publication authorized.
+finished and packaged4651files, ZIP SHA256
+e288a716e7f77540e149dfc244a2fa1d8c2664a272f45b94ac1a8cce9552ad0a.
+Installed creator40tests pass; runtime1412focused+10bridge tests pass. Normal
+installed-layout helper boot passes with the actual isolated Setup Python;
+Arrii/Briggs reached two match epochs and the first result/save/quit.23owned
+allocations fully released and the same pool was reused for match2. A separate
+two-human fixture proves both roles of slot1 and releases30allocations, although
+its P2 damaging-hit assertion fails. Mixed4selector testing found a truncated
+thumbnail Model tail before combat; runtime compiler correction passes22UItests
+and its native retest is underway. Phase4 legacy camera intent, broader native/
+audio and M6 platform/owner acceptance remain open. Warm full-pack preparation is
+about123seconds. No publication authorized. Private owner playtest/reproduction
+scripts are in runtime logs; runtimebb48186 and Tools4cbba85 carry implementation.
 
 **2026-11-08 — Native window resumed; numeric reconstruction.** Owner made the
 machine available for continued local work. Runtime explicit-absence voice626

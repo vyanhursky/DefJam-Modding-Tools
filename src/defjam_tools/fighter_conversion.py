@@ -104,7 +104,7 @@ def convert_roster(recomp,game,source,accounting,motion,portrait_report,voice_ro
             for phase,token in enumerate([activations[core][0]]+[activations[core][1]]*3):
                 fragment=refs(document(Path(film_root)/token/'cinematic-source.json'),Path(film_root)/token,'cinematics/'+token)
                 fragment['template']=f'BT{phase+1}_01' if phase<3 else 'BT4C01'
-                fragment['camera_policy']='native-venue' if phase==3 else 'owned-relative';fragment.pop('format',None);shots.append(fragment)
+                fragment['camera_policy']='owned-absolute' if phase==3 else 'owned-relative';fragment.pop('format',None);shots.append(fragment)
             blazin={'format':'fighter-blazin-5','shots':shots,'slots':{},'retail_slots':{}}
             for slot in range(4):
                 if (core,slot) not in choices:
@@ -169,7 +169,7 @@ def convert_roster(recomp,game,source,accounting,motion,portrait_report,voice_ro
             pack['overrides'].append({'target':donor,'components':{'appearance':key},'supersedes':[]})
         pack['resources']=[resources[key] for key in sorted(resources)]
         (stage/'fighters.json').write_text(json.dumps(pack,indent=2)+'\n',encoding='utf-8')
-        (stage/'README.txt').write_text('Local ordinary fighter conversion. Native acceptance and release approval are separate. Activation phase4 preserves the native venue-camera policy; supplied unused camera helpers remain in the typed graph.\n',encoding='utf-8')
+        (stage/'README.txt').write_text('Local ordinary fighter conversion. Native acceptance and release approval are separate. Activation phase4 uses the supplied camera through the reviewed native absolute-camera route.\n',encoding='utf-8')
         report=contract(recomp,game,'validate',[stage])
         # Recheck immutable source inputs before publishing the new folder.
         for relative,row in source_files.items():
