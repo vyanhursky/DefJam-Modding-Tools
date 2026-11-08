@@ -645,8 +645,8 @@ constant channels, empty parents, compressed block deltas and camera scalar
 tracks. A new offline numeric writer preserves the original compressed blocks,
 constants, ordered destinations, time grids and nonzero header bytes. All1512
 numeric leaves in184source bundles pass reconstruction and174214pose/interpolation
-comparisons. Native camera scheduling and complete cinematic compilation are
-still separate gates. Renaming those bundles
+comparisons. The complete typed cinematic writer now compiles all184bundles;
+native camera scheduling and resource lifetime remain separate gates. Renaming those bundles
 or replacing their curves with a donor would not preserve the source performance.
 
 On November8, the explicit voice-absence fixture reached native combat with its
@@ -697,9 +697,68 @@ For complete UI artwork, `eagl-portrait-2` adds selector/result/loading logos an
 loading portraits for2/3/4participants to the existing six files. All18files are
 pixels-only inputs against a verified UI layout. Authored logos replace generated
 name text only for their own fighter IDs. Existing six-file sources keep working.
+`eagl-portrait-3` adds independent `grid_normal_Np` and `grid_selected_Np`
+rasters for each participant count. These six single-image SHPX sources use
+verified grid geometry; they preserve menu-specific thumbnails that cannot be
+recreated faithfully from the large result portrait. Source menu scripts and
+models are never package input.
 
-A full converted pack is not yet a supported output of this draft. The conversion
-report must account for every changed component, including missing voice
-categories, ancillary portrait art and any unrelated global edits. New adapter
-R&D is part of M5; the creator commands above already work for the supported
-formats and remain useful independently of this legacy mod.
+To export a complete supplied entrance or victory, keep its model and tag table
+beside the bundle and use the matching runtime checkout:
+
+```powershell
+defjam-tools fighter cinematic --recomp C:/path/to/recomp --game C:/path/to/extracted --model C:/work/body.o --bundle C:/work/CI_610A.viv --tags C:/work/animtags.dat --template CI_201A --out C:/work/exported-intro
+```
+
+The template declares the native role; all numeric body/root, hand and camera
+content comes from the exported graph. `graph.json` retains quantized blocks,
+constants, empty parents and timing. `tags.json` references complete verified
+payloads. Put the fragment from `cinematic-source.json` in a `cinematic` resource
+and assign it as the fighter's `intro` or `victory`. Keep the export work report
+outside the package. `fighter-cinematic-2` requires exactly `format`, `template`,
+`graph` and `tags`. Use `--absent-tags` only when the source has no row: the
+exporter checks that fact and emits the explicit `{state: "absent"}` declaration.
+
+Activation export uses the same command with a phase template such as `BT1_01`.
+Use the returned shot fragment in `fighter-blazin-5`, whose four slots retain the
+version4 paired motion/timeline contract. Phases0–2 use owned relative cameras;
+phase3 declares `native-venue`, preserving the reviewed native fourth-shot camera
+policy. Supplied unused phase3 camera helpers remain in the typed graph. Their
+presence alone does not prove that a legacy runtime used them. The closed tag
+profiles admit only the verified intro, victory or activation callback families,
+not arbitrary effect scripts. The installed exporter covers all184source bundles.
+
+`fighter convert-legacy` assembles sealed appearance,24-role artwork, voice, pair
+and cinematic export receipts into one ordinary registry. Its required inputs
+are `--recomp`, `--game`, `--source`, `--accounting`, `--motion-report`,
+`--portrait-report`, `--voice-root`, `--pair-root`, `--cinematic-root`,
+`--portrait-root` and a new `--out` folder. It preserves the accounting report's
+stable fighter keys, verifies every original input hash, and runs shared ordinary
+package validation before publishing the local folder. Use normal `fighter
+package` afterward; this command neither installs nor publishes assets. It is
+a receipt-driven conversion workflow, not a promise to import arbitrary global
+native databases or unrelated legacy runtime patches.
+
+A local ordinary46fighter candidate now compiles with all24artwork roles, source
+voices/absence, complete cinematic graphs, all four finisher choices,47owned
+pairs, the source's retail Crow appearance edit and ten explicit global tag edits.
+This is a review/test candidate. The legacy archive does not establish whether
+its fourth activation shot used the supplied camera helpers; the current adapter
+retains the native venue policy. Whole-pack native, physical-input and platform
+acceptance remain separate gates. Do not call this a completed faithful release.
+
+Roster `tier` is an inline component with one integer value1,2,4or8. It controls
+native roster category ordering and is inherited; keep it separate from combat
+stats. Vendetta's added fighters explicitly use8. A version5 Blazin source may
+also contain `retail_slots`, mapping slot strings0–3 to original choices0–81.
+These slots are disjoint from owned `slots`. Use this when an exact original
+move is intended but differs from the fighter's ordinary-combat donor.
+
+The accounting report now rechecks every1883source file:1697convert through typed
+adapters,184are exactly inherited and2are nonfighter metadata/cover exclusions.
+It separately identifies two dangling606A/607A XML registrations with no Character
+or appearance payload. The complete animation-tag file reconstructs byte-for-byte
+from ordinary typed timelines, including ten explicit hash-pinned existing-row
+overrides. Source menu scripts, global databases and native code stay outside the
+package. New adapter R&D remains part of extended M5 until its acceptance gates
+are closed.

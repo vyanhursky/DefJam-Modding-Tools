@@ -2,6 +2,24 @@
 
 ## Current status
 
+**2026-11-08 — Complete cinematic export and ordinary conversion assembly.**
+New `fighter cinematic` calls shared runtime `export-cinematic`, retaining typed
+body/root, camera, explicit empty face/hand graphs, native timing and tag state.
+Installed wheel exports/compiles all184source bundles/1012members from outside
+the checkout. It verifies source controls, original payload references and source
+hashes. New `fighter convert-legacy` assembles the sealed component receipts into
+the ordinary46fighter registry, with stable identities from the accounting report;
+full package validation passed for46fighters/285resources. Representative native
+full cinematic playback passed7combat/result checks after fixing async final-copy
+ownership; failed earlier probes remain recorded. Exhaustive accounting now has
+1697converted/184exactly inherited/2excluded files, with two dangling XML entries
+explicitly excluded at subrecord level. Subsequent audit added explicit source
+Tier8 and exact retail finisher-slot choices; installed-wheel candidate rebuild
+is underway. Installed creator40tests pass; runtime1399focused+10bridge tests pass.
+The ordinary managed bridge also needed new timeline/film-proof allowlist keys;
+its native retest is next. Phase4 legacy camera intent, broader native and M6
+platform/owner acceptance remain open. No publication authorized.
+
 **2026-11-08 — Native window resumed; numeric reconstruction.** Owner made the
 machine available for continued local work. Runtime explicit-absence voice626
 probe passed native combat; actual missing Taunts/Enviro requests returnedFFFF,

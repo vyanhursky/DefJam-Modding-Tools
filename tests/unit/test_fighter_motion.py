@@ -75,3 +75,25 @@ def test_timeline_export_is_explicit_and_keeps_both_domains(tmp_path,monkeypatch
     assert (out/source['camera']['timeline']['path']).is_file()
     with pytest.raises(ValueError,match='both tags and camera'):
         tool.export_pair('recomp','game',*files,21,tmp_path/'partial',tags=files[0])
+
+
+@pytest.mark.parametrize('absent',[False,True])
+def test_cinematic_export_preserves_graph_and_explicit_tag_state(tmp_path,monkeypatch,absent):
+    files=inputs(tmp_path)
+    def shared(recomp,game,command,**options):
+        assert command=='export-cinematic'
+        request=json.loads(options['cinematic_request'].read_text())
+        assert request['absent_tags'] is absent and request['template']=='CE_201A'
+        return {'component_compilation':True,'native_playtest':False,'source_format':'fighter-cinematic-2',
+                'graph':{'format':'fighter-cinematic-graph-1'},
+                'tags':None if absent else {'format':'fighter-tag-timeline-1','events':[]}}
+    monkeypatch.setattr(tool,'contract',shared)
+    out=tmp_path/'cinematic'
+    report=tool.export_cinematic('recomp','game',files[0],files[1],files[2],'CE_201A',out,absent_tags=absent)
+    source=json.loads((out/'cinematic-source.json').read_text())
+    assert source['format']=='fighter-cinematic-2' and (out/source['graph']['path']).is_file()
+    if absent:assert source['tags']=={'state':'absent'}
+    else:assert (out/source['tags']['path']).is_file()
+    assert 'graph' not in {k:v for k,v in report.items() if k!='source'}
+    with pytest.raises(ValueError,match='already exists'):
+        tool.export_cinematic('recomp','game',files[0],files[1],files[2],'CE_201A',out)

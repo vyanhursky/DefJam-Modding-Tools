@@ -31,7 +31,7 @@ def slug(value):
     return value
 
 
-def contract(recomp, game, command, packs=(), language=None, *, voice_source=None,pair_request=None):
+def contract(recomp, game, command, packs=(), language=None, *, voice_source=None,pair_request=None,cinematic_request=None):
     script = Path(recomp).resolve() / 'scripts/fighter-contract.py'
     if not script.is_file():
         raise ValueError('Choose the matching Fighter Mod Support recomp checkout (fighter-contract.py missing)')
@@ -44,6 +44,7 @@ def contract(recomp, game, command, packs=(), language=None, *, voice_source=Non
         arguments += ['--voice-source', str(ordinary(voice_source))]
     if pair_request is not None:
         arguments += ['--pair-request',str(ordinary(pair_request))]
+    if cinematic_request is not None:arguments+=['--cinematic-request',str(ordinary(cinematic_request))]
     result = subprocess.run(arguments, capture_output=True, text=True, timeout=600)
     if len(result.stdout) > 16 * 1024**2:
         raise ValueError('Runtime validation report exceeds budget')
@@ -184,6 +185,13 @@ def main():
     command.add_argument('--tags',type=Path,help='Source animtags.dat; requires --cameras')
     command.add_argument('--cameras',type=Path,help='Source camera.xml; requires --tags')
     command.add_argument('--out',type=Path,required=True)
+    command=sub.add_parser('cinematic',help='Export a complete cinematic graph and explicit tag state')
+    for name in ('recomp','game','model','bundle','tags','out'):command.add_argument('--'+name,type=Path,required=True)
+    command.add_argument('--template',required=True)
+    command.add_argument('--absent-tags',action='store_true',help='Require that the source has no tag row for this bundle')
+    command=sub.add_parser('convert-legacy',help='Assemble an ordinary local roster from sealed component export receipts')
+    for name in ('recomp','game','source','accounting','motion-report','portrait-report','voice-root','pair-root','cinematic-root','portrait-root','out'):
+        command.add_argument('--'+name,type=Path,required=True)
     command = sub.add_parser('voice', help='Export an explicit voice source matched to verified runtime event templates')
     command.add_argument('--recomp', type=Path, required=True)
     command.add_argument('--game', type=Path, required=True)
@@ -199,6 +207,14 @@ def main():
             result=export_pair(args.recomp,args.game,args.model,args.face,args.subject_data,args.subject_links,
                                args.counterpart_data,args.counterpart_links,args.template_choice,args.out,
                                tags=args.tags,cameras=args.cameras)
+        elif args.command=='convert-legacy':
+            from .fighter_conversion import convert_roster
+            result=convert_roster(args.recomp,args.game,args.source,args.accounting,args.motion_report,args.portrait_report,
+                                  args.voice_root,args.pair_root,args.cinematic_root,args.portrait_root,args.out)
+        elif args.command=='cinematic':
+            from .fighter_motion import export_cinematic
+            result=export_cinematic(args.recomp,args.game,args.model,args.bundle,args.tags,args.template,args.out,
+                                    absent_tags=args.absent_tags)
         elif args.command == 'voice':
             from .fighter_audio import export_voice
             banks = {}

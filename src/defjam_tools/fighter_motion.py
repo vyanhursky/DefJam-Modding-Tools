@@ -64,3 +64,39 @@ def export_pair(recomp,game,model,face,subject_data,subject_links,counterpart_da
             with (destination/name).open('xb') as stream:
                 stream.write((stage/name).read_bytes())
     return report
+
+
+def export_cinematic(recomp,game,model,bundle,tags,template,destination,*,absent_tags=False):
+    """Publish only typed files after the shared runtime compiler succeeds."""
+    destination=ordinary(destination)
+    if destination.exists():raise ValueError('Cinematic destination already exists; choose a new folder')
+    def spec(path):
+        path=ordinary(path)
+        with path.open('rb') as stream:data=stream.read(MAX_FILE+1)
+        if not 0<len(data)<=MAX_FILE:raise ValueError('Cinematic input exceeds its file budget')
+        return {'path':str(path),'sha256':hashlib.sha256(data).hexdigest()}
+    request={'format':'fighter-cinematic-export-request-1','template':template,'model':spec(model),
+             'bundle':spec(bundle),'tags':spec(tags),'absent_tags':absent_tags}
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='.fighter-cinematic-',dir=destination.parent) as temporary:
+        stage=Path(temporary);path=stage/'request.json';path.write_text(json.dumps(request)+'\n',encoding='utf-8')
+        result=contract(recomp,game,'export-cinematic',cinematic_request=path)
+        if not result.get('component_compilation') or result.get('native_playtest') is not False:
+            raise ValueError('Runtime did not compile the cinematic component')
+        source={'template':template};outputs=[]
+        for role in ('graph','tags'):
+            value=result[role]
+            if value is None:
+                source[role]={'state':'absent'};continue
+            data=(json.dumps(value,separators=(',',':'))+'\n').encode('utf-8');name=role+'.json'
+            (stage/name).write_bytes(data);outputs.append(name)
+            source[role]={'path':name,'sha256':hashlib.sha256(data).hexdigest()}
+        if result['source_format']=='fighter-cinematic-2':source['format']=result['source_format']
+        else:source['camera_policy']=result['camera_policy']
+        report={k:v for k,v in result.items() if k not in ('graph','tags')};report.update(source=source)
+        (stage/'cinematic-source.json').write_text(json.dumps(source,indent=2)+'\n',encoding='utf-8')
+        (stage/'cinematic-export.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+        destination.mkdir()
+        for name in [*outputs,'cinematic-source.json','cinematic-export.json']:
+            with (destination/name).open('xb') as stream:stream.write((stage/name).read_bytes())
+    return report
