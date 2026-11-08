@@ -2,6 +2,24 @@
 
 ## Current status
 
+**2026-11-08 — Native window resumed; numeric reconstruction.** Owner made the
+machine available for continued local work. Runtime explicit-absence voice626
+probe passed native combat; actual missing Taunts/Enviro requests returnedFFFF,
+while838read-only checks confirmed owned Character-only mask1. Positive playback
+and reload are separate gates. New offline numeric18/20/21 writer rebuilt all1512
+source cinematic leaves in184bundles with174214pose/interpolation comparisons.
+Guide updated with evidence and remaining camera/scheduling limitations. Runtime
+full paired graph versioning/actual-resource checks are in progress; no complete
+Vendetta package or publication is claimed. New `fighter pair` exports explicit
+`fighter-motion-graph-1` files through shared runtime `export-pair`, matching source
+controls to the verified behavior template and sealing source hashes. Installed
+wheel exports all47pairs/94roles from outside the checkout; focused creator tests
+37pass. Runtime CPU fixture executed both roles twice and released8owned banks
+at teardown. Broader native acceptance remains open. `eagl-portrait-2` adds all18
+UI artwork variants, with native acceptance pending. Pair camera/tag timing is
+known to differ from donors and needs a separate typed adapter, so version3
+explicitly inherits those timelines and is not a faithful complete Vendetta import.
+
 **2026-11-07 — Explicit voice absence and reusable source export.** Runtime
 `fighter-voice-4` requires present/absent declarations for all three banks and
 emits FVA2 presence masks; versions1–3 remain supported. New `fighter voice`

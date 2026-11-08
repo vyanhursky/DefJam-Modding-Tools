@@ -631,8 +631,8 @@ all94 roles against their actual47 matched behaviors, checking5734 output joins
 across46 rebuilt appearances and75 retail opponent contexts. Exact model,
 rig, face and shared-hand identities are recorded separately. These are bounded
 offline joins; dynamic created-fighter contexts and native blending/playback
-still need acceptance. This draft format is not yet accepted by creator commands; keep
-using the documented supported formats above.
+still need broader acceptance. The old draft JSON is not implicitly accepted;
+the explicit new `fighter-motion-graph-1` profile is exported by `fighter pair`.
 
 Portrait frames can use a different donor from combat or appearance. The layout
 donor supplies crop/material structure; your own pixels remain the content.
@@ -642,8 +642,47 @@ does not account for every ancillary picture/menu edit in the older pack.
 
 The other entrance/activation/victory bundles use additional animation profiles:
 constant channels, empty parents, compressed block deltas and camera scalar
-tracks. The paired-move writer does not yet cover these. Renaming those bundles
+tracks. A new offline numeric writer preserves the original compressed blocks,
+constants, ordered destinations, time grids and nonzero header bytes. All1512
+numeric leaves in184source bundles pass reconstruction and174214pose/interpolation
+comparisons. Native camera scheduling and complete cinematic compilation are
+still separate gates. Renaming those bundles
 or replacing their curves with a donor would not preserve the source performance.
+
+On November8, the explicit voice-absence fixture reached native combat with its
+owned Character bank registered. Actual Taunts and Enviro requests resolved as
+absent;838read-only live checks confirmed presence mask1 with no unexpected
+nonzero mask. This proves bank omission in the running game. Positive Character
+playback, voice reload and device-audio checks still require their own evidence.
+
+The runtime accepts an explicit `fighter-blazin-3` source for full paired
+graphs, with `fighter-motion-graph-1` files in named slots. The compiler seals the
+rebuilt graph before native construction and checks actual participant resources.
+The current Windows CPU fixture executed both roles twice and released all owned
+allocations at teardown; other modes/platforms still require acceptance. Do not
+rename older quaternion files to these versions or describe an offline rebuild
+as a completed conversion.
+
+For a supplied paired native bank, export both participants together:
+
+```powershell
+defjam-tools fighter pair --recomp C:/path/to/recomp --game C:/path/to/extracted --model C:/work/body.o --face C:/work/body_F.o --subject-data C:/work/subject.ord --subject-links C:/work/subject.orl --counterpart-data C:/work/counterpart.ord --counterpart-links C:/work/counterpart.orl --template-choice 21 --out C:/work/exported-pair
+```
+
+Choose the verified behavior template that matches this move;21 is an example,
+not a universal donor. The command checks all five tracks and both participants
+through the runtime before creating the output folder. All47supplied source
+pairs now pass this installed export path. Copy the two graph files into your
+pack and assign `pair-source.json`'s object to a named version3 slot, adjusting
+its relative paths. Keep `pair-export.json` as a work report outside the pack,
+then run the usual full validate/package commands. Version3 deliberately inherits
+the template's camera and event timelines; retimed legacy camera/tag data needs
+the separate timeline adapter still being developed.
+
+For complete UI artwork, `eagl-portrait-2` adds selector/result/loading logos and
+loading portraits for2/3/4participants to the existing six files. All18files are
+pixels-only inputs against a verified UI layout. Authored logos replace generated
+name text only for their own fighter IDs. Existing six-file sources keep working.
 
 A full converted pack is not yet a supported output of this draft. The conversion
 report must account for every changed component, including missing voice

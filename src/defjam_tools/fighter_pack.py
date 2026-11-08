@@ -31,7 +31,7 @@ def slug(value):
     return value
 
 
-def contract(recomp, game, command, packs=(), language=None, *, voice_source=None):
+def contract(recomp, game, command, packs=(), language=None, *, voice_source=None,pair_request=None):
     script = Path(recomp).resolve() / 'scripts/fighter-contract.py'
     if not script.is_file():
         raise ValueError('Choose the matching Fighter Mod Support recomp checkout (fighter-contract.py missing)')
@@ -42,6 +42,8 @@ def contract(recomp, game, command, packs=(), language=None, *, voice_source=Non
         arguments += ['--language', str(ordinary(language))]
     if voice_source is not None:
         arguments += ['--voice-source', str(ordinary(voice_source))]
+    if pair_request is not None:
+        arguments += ['--pair-request',str(ordinary(pair_request))]
     result = subprocess.run(arguments, capture_output=True, text=True, timeout=600)
     if len(result.stdout) > 16 * 1024**2:
         raise ValueError('Runtime validation report exceeds budget')
@@ -173,6 +175,13 @@ def main():
     command.add_argument('--ffmpeg', type=Path)
     command.add_argument('--ffprobe', type=Path)
     command.add_argument('--out', type=Path, required=True)
+    command=sub.add_parser('pair',help='Export complete paired graphs through verified runtime templates')
+    command.add_argument('--recomp',type=Path,required=True)
+    command.add_argument('--game',type=Path,required=True)
+    for name in ('model','face','subject-data','subject-links','counterpart-data','counterpart-links'):
+        command.add_argument('--'+name,type=Path,required=True)
+    command.add_argument('--template-choice',type=int,required=True)
+    command.add_argument('--out',type=Path,required=True)
     command = sub.add_parser('voice', help='Export an explicit voice source matched to verified runtime event templates')
     command.add_argument('--recomp', type=Path, required=True)
     command.add_argument('--game', type=Path, required=True)
@@ -183,7 +192,11 @@ def main():
     command.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == 'voice':
+        if args.command=='pair':
+            from .fighter_motion import export_pair
+            result=export_pair(args.recomp,args.game,args.model,args.face,args.subject_data,args.subject_links,
+                               args.counterpart_data,args.counterpart_links,args.template_choice,args.out)
+        elif args.command == 'voice':
             from .fighter_audio import export_voice
             banks = {}
             for entry in args.bank:
