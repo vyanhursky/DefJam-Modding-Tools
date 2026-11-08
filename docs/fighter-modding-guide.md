@@ -1,19 +1,25 @@
 # Making a fighter modpack
 
-Draft for **Fighter Mod Support**, targeting recomp v0.15.0. Start with a copy
+Draft for **Fighter Mod Support**, under development in runtime PR209. Start with a copy
 of an existing fighter, get it into a match, then change one component at a
 time. You do not need to make a model, animations and a voice all at once.
 A pack can contain one fighter or an entire roster.
 
 This guide describes the local M5 development tools. Use a matching recomp
-checkout containing `scripts/fighter-contract.py`; the published v0.13.0 game
-does not include this workflow. A file that passes validation still needs a
+checkout containing `scripts/fighter-contract.py`; this workflow is not included
+in the published v1.1.0 game. The original v0.15.0 planning target is historical,
+not a release promise. A file that passes validation still needs a
 playtest. Legacy `.mod` bundles are not automatically compatible.
 
 Updated November 8, 2026. The tools now export complete supported paired moves,
 entrances, victories, activation shots and deliberately absent voice categories.
 You can keep a simple donor-based pack; these more detailed formats are needed
 only when you want to preserve or change those components independently.
+
+The tools also include a separate `caf` fitting-room viewer for inspecting
+created-fighter outfits and textures. Use `fighter` for this modpack workflow;
+the viewer's static preview does not establish in-game animation or export a
+complete playable fighter. Both command groups are available in the same install.
 
 ## 1. What you are building
 
