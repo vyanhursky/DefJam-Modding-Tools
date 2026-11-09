@@ -2,6 +2,20 @@
 
 ## Current status
 
+**2026-11-09 — Runtime experimental beta published; guide pinned to immutable tag.**
+Runtime v1.2.0-beta.1/e950a7f is published as prerelease, never Latest; stable1.1.1
+remains the automatic update target. Final Windows17/17 applicable checks,
+candidate CI35/35 and tagged Source37/37 pass. Exactly9game-free assets inspected
+with GitHub digests and exact source/toolkit; no Vendetta file published. Actual
+GUI GA install373.3s and candidate clean update204.6s preserve29protected files.
+Existing local fighter playtest upgrades in222.14s with all
+48protected hashes and old executable preserved. Guide uses
+the immutable beta tag and clarifies standalone Workshop CAF recipe PR213 is
+excluded pending mixed-pack integration. Tools PR6 remains draft/source-only;
+no Tools merge/release, broad M5/M6 completion, other-platform gameplay or asset
+publication is claimed. Documentation-only source/whitespace checks; no repeated
+native full regression. Runtime D382 now requires reuse of applicable full evidence.
+
 **2026-11-09 — Runtime experimental beta authorized; guide version pinned.**
 The owner authorizes full Windows regression followed by runtime v1.2.0-beta.1.
 Runtime candidate dca56f2/PR212 integrates Fighter PR209 on main482897f with

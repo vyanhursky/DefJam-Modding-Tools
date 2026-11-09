@@ -5,11 +5,9 @@ of an existing fighter, get it into a match, then change one component at a
 time. You do not need to make a model, animations and a voice all at once.
 A pack can contain one fighter or an entire roster.
 
-This guide targets **v1.2.0-beta.1**; candidate qualification and publication are
-tracked in [runtime PR212](https://github.com/vyanhursky/DefJamFFNY-recomp/pull/212).
-Use the matching runtime checkout containing `scripts/fighter-contract.py`:
-`release/v1.2.0-beta.1` while qualification is running, then the immutable
-`v1.2.0-beta.1` tag after publication. Stable v1.1.1 does not include this workflow.
+This guide targets the published experimental [v1.2.0-beta.1 runtime](https://github.com/vyanhursky/DefJamFFNY-recomp/releases/tag/v1.2.0-beta.1).
+Use its immutable `v1.2.0-beta.1` checkout containing
+`scripts/fighter-contract.py`. Stable v1.1.1 does not include this workflow.
 The authoring commands come from [Modding Tools PR6](https://github.com/vyanhursky/DefJam-Modding-Tools/pull/6),
 installed from source as described below; there is no separate authoring-tools
 release for this beta. The original v0.15.0 planning target is historical.
@@ -30,7 +28,9 @@ No Vendetta pack or converted assets are included in the runtime or these tools.
 The tools also include a separate `caf` fitting-room viewer for inspecting
 created-fighter outfits and textures. Use `fighter` for this modpack workflow;
 the viewer's static preview does not establish in-game animation or export a
-complete playable fighter. Both command groups are available in the same install.
+complete playable fighter. Both command groups are available in the same install. The
+Workshop's separate standalone CAF recipe extension (runtime PR213) is not in
+this beta; its mixed-pack compatibility still needs integration and testing.
 
 ## 1. What you are building
 
