@@ -2,6 +2,22 @@
 
 ## Current status
 
+**2026-11-08 — Native rematch routing verified; cinematic I/O admission bounded.**
+Runtime b859477 and this guide's3e67622 are pushed to the existing draft PRs;
+both current-head CI runs pass. Two actual DMX/Chukklez natural results include
+a real Rematch with owned615/627voice IDs retained without bank reload. The
+third setup hits an unlock-capacity guard before Proof/Flex; preserve exit1,
+not a three-bout pass. A private original-body oracle reproduces full32row
+I/O admission returning zero and later appearing complete with a NULL buffer.
+The runtime now serializes owned cinematic body/camera pairs and waits for
+capacity;94focused native cases and Windows build pass. Corrected fresh214322
+Inferno7/venue24 reaches a decisive result, native Quit,37allocation release,
+normal close/supervisor and exact guard restoration. Early loading capture
+visibly shows correct Proof/Flex portraits/logos. This is separate from original
+three-bout sequence and saturation stress acceptance.
+Guide explains the32request rows separately from the32MiB memory budget.
+Original assets/career unchanged; source pushes only, no merge/release/pack upload.
+
 **2026-11-08 — Owner playtest exposes loading IDs, rematch voices and Inferno crash.**
 The owner reports DMX/Chucklez loading as Arii/Briggs, correct first-bout voices
 changing on Rematch, and Proof/Funk Flex crashing at native camera parsing.

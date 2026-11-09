@@ -585,6 +585,20 @@ component fixture, with owned resources released afterward. The format remains
 experimental. Do not treat a successful pack build as proof that every fighter
 and all four slots have been exercised in a match.
 
+Custom activation scenes also share the game's file-loading queue. The runtime
+loads one custom body/camera pair at a time and waits for room, so a busy venue
+does not turn a rejected file request into a missing animation resource. This
+can add loading turns; creators do not need to split a valid pack or change its
+manifest to accommodate the queue.
+
+**Technical details.** The native queue has 32 asynchronous request rows. That
+count is independent of the 32 MiB custom animation pool above: one limits
+in-flight file requests, the other holds animation bytes. The adapter preserves
+the native table and loaders, checking capacity for each custom pair rather
+than enlarging the table. Retail loading retains its original path. Resource
+validation, ownership and memory limits still apply; this is not a guarantee
+that arbitrary assets fit or that all venue/match combinations have been tested.
+
 ## 12. Validate, package and test with other mods
 
 Validation catches structural problems before play. Playtesting catches things
