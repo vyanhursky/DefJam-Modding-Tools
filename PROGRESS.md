@@ -2,6 +2,16 @@
 
 ## Current status
 
+**2026-11-08 — Clear stale live unlock marks when selections change.**
+A separate repeated-match test hit the native80entry capacity guard while
+choosing retail placeholders after custom Rematch. The runtime now prunes only
+unbound custom/private live marks on ControllerSetup clear and KeepReady clear;
+retail/still-bound metadata and managed historical progress remain. Five
+actual-handler cases fail before correction;148focused unlock/window/save/UI
+cases and Windows build pass. Three-bout native revalidation is running on
+copied protected data. Guide adds custom Rematch→retail selection coverage;
+no schema, pack assets, save adoption or capacity guard is changed.
+
 **2026-11-08 — Native rematch routing verified; cinematic I/O admission bounded.**
 Runtime b859477 and this guide's3e67622 are pushed to the existing draft PRs;
 both current-head CI runs pass. Two actual DMX/Chukklez natural results include

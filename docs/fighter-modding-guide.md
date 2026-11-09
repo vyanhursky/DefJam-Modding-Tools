@@ -636,6 +636,11 @@ Check loading-screen portraits and logos against the fighters you selected,
 especially when choosing someone other than the first two custom roster entries.
 Include the exact venue and special match rule in a report; an ordinary bout at
 one venue does not establish Inferno, Subway or other venue-specific behavior.
+After a custom-fighter rematch, also return to selection and choose retail
+fighters. Changing selections should not accumulate temporary unlock entries or
+erase a custom fighter's saved progression. The runtime keeps only current
+participant marks in the native unlock set and retains historical custom marks
+in the managed save extension; this does not require a new pack format.
 Verify which device controls each actual participant after Play; a device list
 in the launcher alone does not establish in-game controller acceptance.
 Report the exact runtime version, pack versions, tested combinations and remaining
