@@ -2,6 +2,18 @@
 
 ## Current status
 
+**2026-11-08 — Owner playtest exposes loading IDs, rematch voices and Inferno crash.**
+The owner reports DMX/Chucklez loading as Arii/Briggs, correct first-bout voices
+changing on Rematch, and Proof/Funk Flex crashing at native camera parsing.
+The runtime traces the first two to presentation of private participant bank IDs
+and native rematch audio rebuilding without bank reload. Compiled regressions
+fail before the fixes and59focused cases now pass; native revalidation is still
+underway. A copied-profile Proof/Flex bout at the default venue reaches a result;
+the failed owner run instead selects Inferno/venue24. Do not mark that crash
+fixed from the default-venue test. Guide now explicitly tests Rematch, loading
+portraits and exact special-rule/venue combinations. Original career/pack stay
+unchanged. Source-only PR updates remain authorized; no merge/release/assets.
+
 **2026-11-08 — Corrected actual GUI update and Mods-to-Repair pass.**
 Runtime0fc3969 inspected app/payload passes71Fighter imports. Actual GUI Update
 Game rebuilds the disposable install in369.8s, then real Mods/Fighters inventory

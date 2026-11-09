@@ -616,6 +616,12 @@ Start another match after both a normal result/Continue cycle and pause-menu
 Quit. These are different native return paths; testing one does not prove the
 other releases participant ownership correctly. Also close the game normally
 and reopen it to check that the managed career resumes.
+Test the result screen's Rematch option as well. Listen to both fighters again:
+that path may reuse loaded speech banks while rebuilding participant audio state.
+Check loading-screen portraits and logos against the fighters you selected,
+especially when choosing someone other than the first two custom roster entries.
+Include the exact venue and special match rule in a report; an ordinary bout at
+one venue does not establish Inferno, Subway or other venue-specific behavior.
 Verify which device controls each actual participant after Play; a device list
 in the launcher alone does not establish in-game controller acceptance.
 Report the exact runtime version, pack versions, tested combinations and remaining
