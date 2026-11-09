@@ -2,6 +2,23 @@
 
 ## Current status
 
+**2026-11-08 — New integrated native combat; lifecycle remains open.**
+Runtime d6f7bac/toolkit4801dc1 passes all six two-human combat assertions with
+Arii/Briggs, both owned entrances and the composed33-song database. One native
+save batch is acknowledged; original save guard restores identically. The run
+ends at720seconds before final quit confirmation, so pool release/menu return
+and clean exit are not accepted from it. Source/native receipt is in runtime
+`logs/fighter-main-managed-native-1108.json`. CI42539843057 is green on d6f7bac.
+Main independently advanced to482897f/v1.1.1; runtime integration is in progress
+without source conflicts and retains the same toolkit. A current-source local
+app/payload has passed inspection; its short-path first install passes in407.2s
+at frozen runtime d6f7bac/toolkit4801dc1. Focused v1.1.1 setup integration tests
+pass141/10skips. Actual installed-runtime admission and newer payload update
+remain separate checks; the earlier deep-path failure is retained.
+The guide identifies the published1.1.1 exclusion and keeps full-data backup and
+bounded evidence limits. No Vendetta files are pushed; both PRs remain drafts,
+with no feature merge, pack publication or release authorized.
+
 **2026-11-08 — Integrated runtime follow-up and guide clarification.**
 Runtime PR209 integrates main15e366b and toolkit4801dc1; clean source-only CI is
 green on103b81e, including Linux strict native fixtures and three game-free setup

@@ -7,7 +7,7 @@ A pack can contain one fighter or an entire roster.
 
 This guide describes the local M5 development tools. Use a matching recomp
 checkout containing `scripts/fighter-contract.py`; this workflow is not included
-in the published v1.1.0 game. The original v0.15.0 planning target is historical,
+in the published v1.1.1 game. The original v0.15.0 planning target is historical,
 not a release promise. A file that passes validation still needs a
 playtest. Legacy `.mod` bundles are not automatically compatible.
 
@@ -838,6 +838,14 @@ A paired warm preparation comparison measured146.05seconds before and126.77after
 avoiding duplicate path checks and scans of byte-identical canonical audio. The
 compiled fighter-cache and UI hashes stayed identical. Expect roughly two minutes, rather
 than assuming this comparison guarantees a particular launch time on your PC.
+
+On the newer integrated build, both human players again passed the six combat
+checks and both owned entrances loaded alongside the composed music database.
+That run timed out before final Quit confirmation, so it adds no menu-return
+or clean-exit acceptance. A real first installation from the inspected local
+development payload also passed in407seconds in a short Windows test path.
+An earlier deep test path failed during the SDL/Ninja build. These observations
+do not establish every installation location or final release acceptance.
 
 Back up the complete game data folder to retain both your fighter career and
 music preferences. After managed Play adopts a career, disabling all fighter
