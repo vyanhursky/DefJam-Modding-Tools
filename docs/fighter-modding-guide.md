@@ -830,3 +830,22 @@ The full pack currently spends about two minutes preparing after Play, even on
 a warm launch. Wait for that preparation before testing controls. Launch
 performance and broader acceptance remain open. Keep compilation, native
 evidence and owner approval separate.
+
+The development runtime now includes the newer main launcher, songs and toolkit.
+The dated observations above belong to their recorded builds; new integration
+checks are tracked in the [runtime checkpoint](https://github.com/vyanhursky/DefJamFFNY-recomp/blob/research/custom-fighter-mods/docs/research/fighter-mod-main-integration-2026-11-08.md).
+A paired warm preparation comparison measured146.05seconds before and126.77after
+avoiding duplicate path checks and scans of byte-identical canonical audio. The
+compiled fighter-cache and UI hashes stayed identical. Expect roughly two minutes, rather
+than assuming this comparison guarantees a particular launch time on your PC.
+
+Back up the complete game data folder to retain both your fighter career and
+music preferences. After managed Play adopts a career, disabling all fighter
+packs still continues that managed career. Do not replace individual old save
+files or remove adoption markers to restore progress.
+
+**Technical details.** Verified native profiles and the Fighter extension commit
+together. Main's per-profile `song-state` preference files remain outside that
+transaction; the integration preserves their existing workflow. A complete data
+backup keeps both instead of treating the old import-time `save` folder as the
+only active state.

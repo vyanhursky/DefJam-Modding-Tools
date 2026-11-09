@@ -2,6 +2,22 @@
 
 ## Current status
 
+**2026-11-08 — Integrated runtime follow-up and guide clarification.**
+Runtime PR209 integrates main15e366b and toolkit4801dc1; clean source-only CI is
+green on103b81e, including Linux strict native fixtures and three game-free setup
+builds. Windows full integrated suite2356passed/56skipped predates the final
+helper-cleanup follow-up;140focused cases pass afterward. Runtime d6f7bac removes
+duplicate metadata/R2 scans with97manager/probe and69voice/resource checks passing.
+Paired warm prep146.05to126.77seconds retains exact runtime/UI hashes; two-minute
+preparation remains open. Guide now records the evidence boundary and complete
+data backups: native profiles/Fighter extension are transactional, while main's
+song-state preferences retain their separate workflow. A current-main native
+managed whole-pack two-human run is active; no new combat acceptance claimed yet.
+Fresh local app/payload inspection passes71fighter imports, but actual first
+setup still needs a successful short-path retry after environment/deep-path
+failures. Desktop visual access is awaiting approval. No live authoring state,
+Vendetta asset publication, PR merge or release. Keep source-only PRs6/209 draft.
+
 **2026-11-08 — Current-main integration, PR6 remains draft.**
 Owner authorized resolving the main conflicts and continuing M5/M6; no PR merge
 or release. Integrated main9bb5b83 into this feature branch, preserving the CAF
