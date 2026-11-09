@@ -2,6 +2,18 @@
 
 ## Current status
 
+**2026-11-09 — Runtime experimental beta authorized; guide version pinned.**
+The owner authorizes full Windows regression followed by runtime v1.2.0-beta.1.
+Runtime candidate dca56f2/PR212 integrates Fighter PR209 on main482897f with
+toolkit4801dc1 unchanged. All candidate CI jobs pass; local stock full regression
+and actual CI-app install/update qualification are in progress. Guide now names
+the matching runtime branch/tag, source-only companion PR6 commands, manual beta
+selection and preserved experimental/platform limits. No new gameplay acceptance
+is claimed here. This Tools PR remains draft; no Tools merge/release or Vendetta
+pack publication is included. Keep all pack bytes and private evidence local.
+Documentation-only verification: source checker and whitespace check; no new
+runtime/compiler implementation or test repetition required for these edits.
+
 **2026-11-08 — Clear stale live unlock marks when selections change.**
 A separate repeated-match test hit the native80entry capacity guard while
 choosing retail placeholders after custom Rematch. The runtime now prunes only

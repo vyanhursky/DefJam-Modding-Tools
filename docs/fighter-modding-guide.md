@@ -1,20 +1,31 @@
 # Making a fighter modpack
 
-Draft for **Fighter Mod Support**, under development in runtime PR209. Start with a copy
+Guide for experimental **Fighter Mod Support**, implemented in runtime PR209. Start with a copy
 of an existing fighter, get it into a match, then change one component at a
 time. You do not need to make a model, animations and a voice all at once.
 A pack can contain one fighter or an entire roster.
 
-This guide describes the local M5 development tools. Use a matching recomp
-checkout containing `scripts/fighter-contract.py`; this workflow is not included
-in the published v1.1.1 game. The original v0.15.0 planning target is historical,
-not a release promise. A file that passes validation still needs a
+This guide targets **v1.2.0-beta.1**; candidate qualification and publication are
+tracked in [runtime PR212](https://github.com/vyanhursky/DefJamFFNY-recomp/pull/212).
+Use the matching runtime checkout containing `scripts/fighter-contract.py`:
+`release/v1.2.0-beta.1` while qualification is running, then the immutable
+`v1.2.0-beta.1` tag after publication. Stable v1.1.1 does not include this workflow.
+The authoring commands come from [Modding Tools PR6](https://github.com/vyanhursky/DefJam-Modding-Tools/pull/6),
+installed from source as described below; there is no separate authoring-tools
+release for this beta. The original v0.15.0 planning target is historical.
+A file that passes validation still needs a
 playtest. Legacy `.mod` bundles are not automatically compatible.
 
-Updated November 8, 2026. The tools now export complete supported paired moves,
+Updated November 9, 2026. The tools now export complete supported paired moves,
 entrances, victories, activation shots and deliberately absent voice categories.
 You can keep a simple donor-based pack; these more detailed formats are needed
 only when you want to preserve or change those components independently.
+
+The beta is an opt-in prerelease and is not offered as an automatic stable
+update. Back up your complete data folder and use a separate playtest copy.
+Windows qualification does not establish macOS/Steam Deck gameplay, every
+fighter's fidelity, physical-controller behavior or long-session stability.
+No Vendetta pack or converted assets are included in the runtime or these tools.
 
 The tools also include a separate `caf` fitting-room viewer for inspecting
 created-fighter outfits and textures. Use `fighter` for this modpack workflow;
