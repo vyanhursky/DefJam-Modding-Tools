@@ -8,8 +8,19 @@ choosing retail placeholders after custom Rematch. The runtime now prunes only
 unbound custom/private live marks on ControllerSetup clear and KeepReady clear;
 retail/still-bound metadata and managed historical progress remain. Five
 actual-handler cases fail before correction;148focused unlock/window/save/UI
-cases and Windows build pass. Three-bout native revalidation is running on
-copied protected data. Guide adds custom Rematch→retail selection coverage;
+cases and Windows build pass. Corrected native215657 completes DMX/Chukklez,
+actual Rematch, retail selection past the former guard, then Proof/Flex Inferno
+with all seven combat/result checks. Three natural results;40/37allocation
+releases; normal close/supervisor and exact guard restoration. Both loading
+art pairs verified and87original hashes unchanged. First two idle-human bouts
+do not prove human damage or subjective listening. Runtime d811cda and Tools
+46f48a9 are pushed, CI42564807476/42564818857green. Local same-version installed
+Clean Rebuild passes398.19seconds, activates d811cda and preserves48protected
+hashes/old install. Safe Update refusal remains recorded. Installed freshness
+and existing Desktop shortcut target pass; actual Fighters UI retains46+1enabled
+packs. Normal Quit exits0, guard restores and48hashes remain unchanged. This
+shortcut check adds no installed combat claim; native sequence uses source build.
+No game/app remains. Guide adds custom Rematch→retail selection coverage;
 no schema, pack assets, save adoption or capacity guard is changed.
 
 **2026-11-08 — Native rematch routing verified; cinematic I/O admission bounded.**
