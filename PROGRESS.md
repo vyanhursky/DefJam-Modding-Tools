@@ -2,6 +2,79 @@
 
 ## Current status
 
+**2026-11-08 — Corrected actual GUI update and Mods-to-Repair pass.**
+Runtime0fc3969 inspected app/payload passes71Fighter imports. Actual GUI Update
+Game rebuilds the disposable install in369.8s, then real Mods/Fighters inventory
+use leaves the payload exact. GUI Repair passes in133.7s and shows Ready to Play.
+All47protected profile/progression/config/settings file hashes are unchanged
+after both operations; installed executable freshness passes. Source cache files
+are prevented by shared-helper Python-B; no allowlist weakening, format change
+or compiled-asset-cache disabling. The failed64pyc repair/payload remain evidence.
+Test app is closed. Owner closes Computer Use; continue offline. Desktop shortcut
+uses compiled installed launcher/active receipt, now corrected0fc3969; original
+shortcut/career preserved. Both initial and retried Linux setup CI fail at an
+Ubuntu mirror network fetch before app build; other source/native/setup jobs pass.
+Linux packaging at0fc3969 remains unresolved, without pin/config bypass. M5/M6
+still need broader content/soak, default placement, POSIX, physical and owner/RC.
+
+**2026-11-08 — Full GUI import passes; repair catches payload bytecode bug.**
+Corrected installed mixed-four run191803 passes five combat checks for Arii,
+independent Check, retail Blaze and Briggs. Native Quit releases24allocations,
+returns to Battle and normal close acknowledges saves; original guard restores.
+Full46ZIP import through actual Fighters GUI passes with38protected profile/
+adoption hashes, enabled packs and identity ledger unchanged. Actual GUI Repair
+then stops before mutation because64helper-created pyc files violate the payload
+inventory. All47protected hashes and the installed receipt remain unchanged.
+Runtime0fc3969 adds Python-B to the shared mod bridge, retaining strict inventory
+checks and ordinary compiled asset caches. Compiled regression fails before fix,
+then bridge/payload/handoff/update97tests pass with4skips; native build passes.
+Local app rebuild/clean-payload GUI retry remains pending. Failed payload and
+repair evidence are preserved. Desktop is free during offline work. No merge,
+release or publication of any Vendetta file.
+
+**2026-11-08 — Actual app Fighters import/Play and compiled shortcut pass.**
+Owner approved desktop access and actual game-free app GUI inspection succeeds:
+Fighters shows Vendetta46plus independent1 both enabled, with removal disabled.
+GUI reimport of the independent ZIP succeeds; all31profile/adoption hashes,
+enabled packs and identity ledger remain unchanged. Actual Play spawns installed
+0d7850d with--no-launcher, finds adjacent Python and reaches title/attract playback.
+Normal close completes supervisor/app at exit0 and restores the save guard.
+No combat or physical-control claim from this check. Actual device assignment
+differs after fresh enumeration; guide asks modders to verify in-game participants.
+New Desktop shortcut uses the compiled installed launcher instead of a policy-
+blocked PowerShell draft; exact target shows both packs and Quit/guard pass.
+Original shortcut/career preserved. Mixed-four route stopped at stock costume
+confirmation; calibrated retry with live pad input is in progress, no combat
+pass claimed yet. Full46GUI import/repair and wider M5/M6 remain separate gates.
+
+**2026-11-08 — Corrected real installed repeat and clean close pass.**
+Runtime0d7850d passes real first-install-derived CLI update in236.69s; all25
+protected profile/progression/config/settings hashes remain identical. Its two
+native human bouts each pass all six combat checks, with stable identities,
+two pause-Quit menu returns and24allocations fully released after each bout.
+The CPU pool registers once and is reused. Normal window close exits0 after
+supervisor acknowledgement; original save guard restores identically. The raw
+harness's unexpected-exit0 label is retained and adjudicated against the intended
+UI close and positive native completion. Earlier repeat failure remains recorded.
+Runtime CI42545347940 is green at0d7850d. Actual app GUI inspection is awaiting
+desktop access; owner now says proceed, retry after the serial mixed-four run.
+Both private packs remain local. The new installed-app playtest shortcut preserves
+the older shortcut and its career. Guide includes both native return-path tests.
+
+**2026-11-08 — Actual installed pause-Quit repeat regression under repair.**
+The real d6f7bac first installation admits both private packs using its adjacent
+Python without an override. First match passes six two-human combat checks;
+native pause Quit returns to Battle and releases all24owned allocations, with
+one acknowledged save and identical save-guard restoration. Second-match setup
+stops safely because selection remains frozen. Pause Quit bypasses front-end
+Game.Quit; runtime0d7850d finishes immutable selection only after actual native
+teardown and all adapter lifetime checks. Compiled ordering/reuse guards and
+window/probe/pool/finisher suite113pass; re-lift, Release build and game-free app
+inspection pass. Real CLI update to the corrected inspected payload is running;
+new native repeat/clean exit remains pending. Guide now asks creators to test
+both result/Continue and pause Quit, plus a normal close/reopen. Runtime CI is
+green at7c6394d; correction CI is separate. No assets pushed, merge or release.
+
 **2026-11-08 — New integrated native combat; lifecycle remains open.**
 Runtime d6f7bac/toolkit4801dc1 passes all six two-human combat assertions with
 Arii/Briggs, both owned entrances and the composed33-song database. One native

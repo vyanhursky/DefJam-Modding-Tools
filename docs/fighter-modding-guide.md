@@ -612,6 +612,12 @@ Test selection and Back/cancel in the native two-/three-/four-player layouts,
 human and CPU roles, entrances, movement, attacks, received hits, victory/result
 pictures, Blazin, repeated matches and Story's created fighter. Check languages
 and texture mods that touch related UI. Use a disposable test profile first.
+Start another match after both a normal result/Continue cycle and pause-menu
+Quit. These are different native return paths; testing one does not prove the
+other releases participant ownership correctly. Also close the game normally
+and reopen it to check that the managed career resumes.
+Verify which device controls each actual participant after Play; a device list
+in the launcher alone does not establish in-game controller acceptance.
 Report the exact runtime version, pack versions, tested combinations and remaining
 limits; do not turn “compiled” into a claim of native acceptance.
 
@@ -846,6 +852,32 @@ or clean-exit acceptance. A real first installation from the inspected local
 development payload also passed in407seconds in a short Windows test path.
 An earlier deep test path failed during the SDL/Ninja build. These observations
 do not establish every installation location or final release acceptance.
+
+The corrected installed runtime also passes a real local update with protected
+profiles, progression, pack state and settings unchanged. Two human matches in
+one process each pass all six combat checks; both pause-menu Quits release their
+owned allocations and return to Battle, followed by acknowledged normal window
+close. The test uncovered and corrected a return-path ownership bug; it was a
+runtime lifecycle fix, with no pack-format change or need to edit fighter IDs.
+The actual app now displays both complete and independent packs enabled, imports
+the independent ZIP through Fighters, and boots/closes the installed game through
+Play. These are local Windows development-build checks; broader content, final
+installation placement, platform, physical-control and owner acceptance remain separate.
+
+The complete 46-fighter ZIP also passes import through the actual Fighters UI
+with profile hashes and stable identities unchanged. A mixed four-participant
+match with an independent starter and retail Blaze passes its combat checks,
+native Quit, resource release and normal close. It adds no natural-result or
+owned-finisher claim. These checks matter even when the same pack already
+validated successfully from the command line.
+
+The matching development runtime now also passes real GUI Update Game and
+Repair after using Mods, with profile/progression/settings hashes unchanged.
+That maintenance test caught a helper creating Python cache files inside the
+verified app payload; the runtime fix preserves its inventory without changing
+your pack format or compiled asset cache. These remain local Windows checks in
+a short test path. Default placement, other platforms, broad content/audio
+review, physical controls and final owner/release acceptance are still open.
 
 Back up the complete game data folder to retain both your fighter career and
 music preferences. After managed Play adopts a career, disabling all fighter
